@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kageyoni"
+version = "11.0.0.dev0"
+description = "Persistent world/workspace engine with evidence-bound execution and Scar Saturation qualification."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
