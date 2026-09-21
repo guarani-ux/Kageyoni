@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "build_target": "v11 mechanical trustworthiness",
+  "target_rank": "Mid Yonko (project metaphor)",
+  "scars": [
+    {
+      "id": "SCAR-0001",
+      "class": "counterfeit-evidence",
+      "status": "open",
+      "requirement": "Lifecycle evidence must resolve to an engine-custodied real domain effect."
+    }
+  ]
+}
