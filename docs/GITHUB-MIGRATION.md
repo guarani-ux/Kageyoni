@@ -1,0 +1,1 @@
+Baseline migration record will be populated from the preserved v11 foundation. Binary campaign/world state remains outside GitHub; GitHub is authoritative for engine source, tests, migrations, Scar probes, and development history.
