@@ -60,7 +60,7 @@ class SituationRuntime:
 
     def promote_extension(self, extension_id:str, repeated_outcome_refs:tuple[str,...]):
         p=self.extensions[extension_id]
-        if len(set(repeated_outcome_refs)) < 2: raise SituationError("promotion requires repeated consequential evidence")
+        if len(set(repeated_outcome_refs)) < 2: raise SituationError("promotion requires repeated consequential evidence")\n        if self.evidence_resolver is None or any(not self.evidence_resolver(ref, None) for ref in repeated_outcome_refs): raise SituationError("promotion evidence must resolve through engine custody")
         return EvolutionProposal("promote:"+extension_id,"template",self.service.situations[p.situation_id].template_id,p.payload,repeated_outcome_refs,"qualified")
 
     def propose_evolution(self,p:EvolutionProposal):
