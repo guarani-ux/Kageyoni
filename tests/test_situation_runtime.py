@@ -6,7 +6,7 @@ from kageyoni.situations.service import SituationError
 
 class RuntimeTests(unittest.TestCase):
     def setUp(self):
-        self.s = install_defaults(SituationService())
+        self.s = install_defaults(SituationService(participant_evidence_resolver=lambda participant,ref,situation: (participant,ref) in {("sciel","m1"),("alexandra","m2")}))
         self.x = self.s.genesis("campaign", "launch", {"objective": "launch", "audience": "members"})
         self.s.bind_workflow(self.x.situation_id, "campaign.default")
         self.valid_evidence = {"obs:objective", "out:one", "out:two", "m1", "m2"}
