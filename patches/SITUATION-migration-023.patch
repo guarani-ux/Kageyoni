@@ -5,10 +5,16 @@
 +SITUATION_MIGRATION=schema_path('migration_023.sql')
 @@
  def install_v11(engine):
-@@
-     # existing v11 migrations through 022 remain unchanged
-+    version=engine.db.execute("SELECT version FROM schema_version").fetchone()[0]
-+    if version < 23:
-+        with open(SITUATION_MIGRATION,encoding='utf-8') as f:
-+            engine.db.executescript(f.read())
-+        engine.db.execute("UPDATE schema_version SET version=23")
+     install_composition(engine)
+     _install_component(engine,V11_MIGRATION,19,18,'v11_enforcement')
+     _install_component(engine,V11_RUNTIME_MIGRATION,20,19,'v11_runtime')
+     _install_component(engine,V11_ENFORCER_EVAL_MIGRATION,21,20,'v11_enforcer_eval')
+     _install_component(engine,V11_TRUST_MIGRATION,22,21,'v11_trust')
+ 
++def install_situations(engine):
++    install_v11(engine)
++    _install_component(engine,SITUATION_MIGRATION,23,22,'situation_architecture')
++
+ def install_all(engine):
+-    install_v11(engine)
++    install_situations(engine)
