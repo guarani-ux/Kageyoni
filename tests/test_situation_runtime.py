@@ -6,14 +6,17 @@ from kageyoni.situations.service import SituationError
 
 class RuntimeTests(unittest.TestCase):
  def setUp(self):
-  self.s=install_defaults(SituationService()); self.x=self.s.genesis("campaign","launch",{"objective":"launch","audience":"members"}); self.s.bind_workflow(self.x.situation_id,"campaign.default"); self.r=SituationRuntime(self.s)
+  self.s=install_defaults(SituationService()); self.x=self.s.genesis("campaign","launch",{"objective":"launch","audience":"members"}); self.s.bind_workflow(self.x.situation_id,"campaign.default"); self.valid_evidence={"obs:objective"}; self.r=SituationRuntime(self.s, lambda ref,run: ref in self.valid_evidence)
  def test_nested_cannot_replace_objective_or_authority(self):
   self.r.start(WorkflowRun("p",self.x.situation_id,"campaign.default",objective="launch",authority=("read","write")))
   with self.assertRaises(SituationError): self.r.start(WorkflowRun("c",self.x.situation_id,"campaign.default","p","different",("read",)))
   with self.assertRaises(SituationError): self.r.start(WorkflowRun("c2",self.x.situation_id,"campaign.default","p","launch",("admin",)))
  def test_stage_requires_observation(self):
   self.r.start(WorkflowRun("p",self.x.situation_id,"campaign.default",objective="launch"))
-  with self.assertRaises(SituationError): self.r.complete_stage("p","objective",{})
+  with self.assertRaises(SituationError): self.r.complete_stage("p","objective","forged")
+ def test_valid_engine_evidence_advances_stage(self):
+  self.r.start(WorkflowRun("p2",self.x.situation_id,"campaign.default",objective="launch"))
+  self.r.complete_stage("p2","objective","obs:objective"); self.assertIn("objective",self.r.runs["p2"].completed_stages)
  def test_extensions_start_local_and_need_repeat_for_promotion(self):
   p=ExtensionProposal("e",self.x.situation_id,"relation",{"from":"audience","relation":"interprets","to":"message"})
   self.r.propose_extension(p)
