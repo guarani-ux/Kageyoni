@@ -21,11 +21,20 @@ jobs:
         run: python tools/situation_mutation_check.py
       - name: Run A-E mechanical comparison
         run: python tools/run_situation_comparative.py > situation-comparative.json
-
-      - name: Package qualified Situation source
-        run: zip -qr situation-source.zip kageyoni/situations migrations/023_situation_architecture.sql tests/test_situation*.py tools/situation_mutation_check.py
+      - name: Require inherited engine for release qualification
+        run: |
+          test -f kageyoni/engine.py
+          test -f kageyoni/v11/runtime.py
+          test -f kageyoni/workspaces/pipeline.py
+          test -f tests/test_v11.py
+      - name: Run inherited and trust qualification
+        run: |
+          python -m unittest discover -s tests -p 'test_v11*.py' -v
+          python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Package qualified integrated source
+        run: zip -qr kageyoni-v11-candidate.zip kageyoni migrations tests tools docs
       - uses: actions/upload-artifact@v4
         with:
-          name: situation-source
-          path: situation-source.zip
+          name: kageyoni-v11-candidate
+          path: kageyoni-v11-candidate.zip
           if-no-files-found: error
