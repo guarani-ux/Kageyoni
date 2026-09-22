@@ -33,8 +33,9 @@ class EvolutionProposal:
     status: str = "candidate"
 
 class SituationRuntime:
-    def __init__(self, service: SituationService):
+    def __init__(self, service: SituationService, evidence_resolver=None):
         self.service=service; self.runs={}; self.extensions={}; self.evolution={}
+        self.evidence_resolver=evidence_resolver
 
     def start(self, run: WorkflowRun):
         s=self.service.situations[run.situation_id]
@@ -45,11 +46,11 @@ class SituationRuntime:
             if not set(run.authority).issubset(p.authority): raise SituationError("child workflow cannot expand authority")
         self.runs[run.run_id]=run
 
-    def complete_stage(self, run_id:str, stage_id:str, observed:dict[str,Any]):
+    def complete_stage(self, run_id:str, stage_id:str, evidence_ref:str):
         run=self.runs[run_id]; workflow=self.service.workflows[run.workflow_id]
         stage=next(x for x in workflow.stages if x.stage_id==stage_id)
         if any(r not in run.completed_stages for r in stage.requires): raise SituationError("stage dependency incomplete")
-        if not observed: raise SituationError("stage completion requires an observation")
+        if not evidence_ref or self.evidence_resolver is None or not self.evidence_resolver(evidence_ref, run): raise SituationError("stage completion requires engine-resolved evidence")
         if stage_id not in run.completed_stages: run.completed_stages.append(stage_id)
 
     def propose_extension(self, p:ExtensionProposal):
