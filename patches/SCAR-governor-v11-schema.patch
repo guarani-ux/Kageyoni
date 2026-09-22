@@ -1,0 +1,8 @@
+--- a/kageyoni/composition/governor.py
++++ b/kageyoni/composition/governor.py
+@@
+-    def __init__(self,engine):self.engine=engine;self.db=engine.db
++    def __init__(self,engine):
++        from ..persistence.migrations import install_v11
++        install_v11(engine)
++        self.engine=engine;self.db=engine.db
