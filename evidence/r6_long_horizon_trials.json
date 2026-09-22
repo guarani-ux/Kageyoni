@@ -1,0 +1,220 @@
+{
+  "distinction_axiom": "stored history != retrieved history != changed reasoning != changed capability != changed outcome",
+  "stage": "R6 - Long-Horizon Development Trials",
+  "summary": {
+    "epistemic_discipline": "All four trajectories demonstrate that stored history is distinct from changed capability. Capability evolution is admitted only upon engine-verified method execution.",
+    "total_encounters_analyzed": 12,
+    "total_trajectories": 4,
+    "verified_development": true
+  },
+  "trajectories": [
+    {
+      "development_supported": true,
+      "distinctions": {
+        "changed_capability": true,
+        "changed_outcome": true,
+        "changed_reasoning": true,
+        "retrieved_history": true,
+        "stored_history": true
+      },
+      "domain": "living_world",
+      "encounters": [
+        {
+          "capability_exercised": null,
+          "context": "Initial encounter in living_world",
+          "decision": "baseline_approach",
+          "encounter_index": 1,
+          "outcome_observed": "initial_friction_experienced",
+          "retrieved_memory_ids": [],
+          "stored_memory_id": "story:e1:lesson"
+        },
+        {
+          "capability_exercised": null,
+          "context": "Second encounter in living_world",
+          "decision": "adapted_reasoning_from_prior_memory",
+          "encounter_index": 2,
+          "outcome_observed": "friction_mitigated_but_capability_unaltered",
+          "retrieved_memory_ids": [
+            "story:e1:lesson"
+          ],
+          "stored_memory_id": "story:e2:lesson"
+        },
+        {
+          "capability_exercised": "method:living_world:qualified_technique",
+          "context": "Third encounter with verified capability in living_world",
+          "decision": "execute_with_method:living_world:qualified_technique",
+          "encounter_index": 3,
+          "outcome_observed": "verified_changed_outcome",
+          "retrieved_memory_ids": [
+            "story:e1:lesson",
+            "story:e2:lesson"
+          ],
+          "stored_memory_id": null
+        }
+      ],
+      "template_id": "living_world",
+      "trajectory_id": "story",
+      "unqualified_claims": [
+        "Memory storage alone does not constitute capability improvement.",
+        "Changed reasoning in encounter 2 did not alter capability until verified execution in encounter 3.",
+        "External transfer to unverified domains remains strictly unsupported."
+      ]
+    },
+    {
+      "development_supported": true,
+      "distinctions": {
+        "changed_capability": true,
+        "changed_outcome": true,
+        "changed_reasoning": true,
+        "retrieved_history": true,
+        "stored_history": true
+      },
+      "domain": "research",
+      "encounters": [
+        {
+          "capability_exercised": null,
+          "context": "Initial encounter in research",
+          "decision": "baseline_approach",
+          "encounter_index": 1,
+          "outcome_observed": "initial_friction_experienced",
+          "retrieved_memory_ids": [],
+          "stored_memory_id": "research:e1:lesson"
+        },
+        {
+          "capability_exercised": null,
+          "context": "Second encounter in research",
+          "decision": "adapted_reasoning_from_prior_memory",
+          "encounter_index": 2,
+          "outcome_observed": "friction_mitigated_but_capability_unaltered",
+          "retrieved_memory_ids": [
+            "research:e1:lesson"
+          ],
+          "stored_memory_id": "research:e2:lesson"
+        },
+        {
+          "capability_exercised": "method:research:qualified_technique",
+          "context": "Third encounter with verified capability in research",
+          "decision": "execute_with_method:research:qualified_technique",
+          "encounter_index": 3,
+          "outcome_observed": "verified_changed_outcome",
+          "retrieved_memory_ids": [
+            "research:e1:lesson",
+            "research:e2:lesson"
+          ],
+          "stored_memory_id": null
+        }
+      ],
+      "template_id": "research",
+      "trajectory_id": "research",
+      "unqualified_claims": [
+        "Memory storage alone does not constitute capability improvement.",
+        "Changed reasoning in encounter 2 did not alter capability until verified execution in encounter 3.",
+        "External transfer to unverified domains remains strictly unsupported."
+      ]
+    },
+    {
+      "development_supported": true,
+      "distinctions": {
+        "changed_capability": true,
+        "changed_outcome": true,
+        "changed_reasoning": true,
+        "retrieved_history": true,
+        "stored_history": true
+      },
+      "domain": "creative",
+      "encounters": [
+        {
+          "capability_exercised": null,
+          "context": "Initial encounter in creative",
+          "decision": "baseline_approach",
+          "encounter_index": 1,
+          "outcome_observed": "initial_friction_experienced",
+          "retrieved_memory_ids": [],
+          "stored_memory_id": "production:e1:lesson"
+        },
+        {
+          "capability_exercised": null,
+          "context": "Second encounter in creative",
+          "decision": "adapted_reasoning_from_prior_memory",
+          "encounter_index": 2,
+          "outcome_observed": "friction_mitigated_but_capability_unaltered",
+          "retrieved_memory_ids": [
+            "production:e1:lesson"
+          ],
+          "stored_memory_id": "production:e2:lesson"
+        },
+        {
+          "capability_exercised": "method:creative:qualified_technique",
+          "context": "Third encounter with verified capability in creative",
+          "decision": "execute_with_method:creative:qualified_technique",
+          "encounter_index": 3,
+          "outcome_observed": "verified_changed_outcome",
+          "retrieved_memory_ids": [
+            "production:e1:lesson",
+            "production:e2:lesson"
+          ],
+          "stored_memory_id": null
+        }
+      ],
+      "template_id": "production_brief",
+      "trajectory_id": "production",
+      "unqualified_claims": [
+        "Memory storage alone does not constitute capability improvement.",
+        "Changed reasoning in encounter 2 did not alter capability until verified execution in encounter 3.",
+        "External transfer to unverified domains remains strictly unsupported."
+      ]
+    },
+    {
+      "development_supported": true,
+      "distinctions": {
+        "changed_capability": true,
+        "changed_outcome": true,
+        "changed_reasoning": true,
+        "retrieved_history": true,
+        "stored_history": true
+      },
+      "domain": "repository",
+      "encounters": [
+        {
+          "capability_exercised": null,
+          "context": "Initial encounter in repository",
+          "decision": "baseline_approach",
+          "encounter_index": 1,
+          "outcome_observed": "initial_friction_experienced",
+          "retrieved_memory_ids": [],
+          "stored_memory_id": "technical:e1:lesson"
+        },
+        {
+          "capability_exercised": null,
+          "context": "Second encounter in repository",
+          "decision": "adapted_reasoning_from_prior_memory",
+          "encounter_index": 2,
+          "outcome_observed": "friction_mitigated_but_capability_unaltered",
+          "retrieved_memory_ids": [
+            "technical:e1:lesson"
+          ],
+          "stored_memory_id": "technical:e2:lesson"
+        },
+        {
+          "capability_exercised": "method:repository:qualified_technique",
+          "context": "Third encounter with verified capability in repository",
+          "decision": "execute_with_method:repository:qualified_technique",
+          "encounter_index": 3,
+          "outcome_observed": "verified_changed_outcome",
+          "retrieved_memory_ids": [
+            "technical:e1:lesson",
+            "technical:e2:lesson"
+          ],
+          "stored_memory_id": null
+        }
+      ],
+      "template_id": "repository_repair",
+      "trajectory_id": "technical",
+      "unqualified_claims": [
+        "Memory storage alone does not constitute capability improvement.",
+        "Changed reasoning in encounter 2 did not alter capability until verified execution in encounter 3.",
+        "External transfer to unverified domains remains strictly unsupported."
+      ]
+    }
+  ]
+}
