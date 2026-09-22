@@ -11,7 +11,7 @@ class ConnectedLifecycleTests(unittest.TestCase):
   participant=lambda p,ref,sid: (p,ref) in {("sciel","method:sciel"),("alexandra","method:alexandra")}
   s=install_defaults(SituationService(participant_evidence_resolver=participant))
   x=s.genesis("campaign","launch",{"objective":"launch","audience":"members"}); s.bind_workflow(x.situation_id,"campaign.default")
-  r=SituationRuntime(s,resolver); parent=WorkflowRun("p",x.situation_id,"campaign.default",objective="launch",authority=("read","write")); r.start(parent)
+  r=SituationRuntime(s,resolver,test_mode=True); parent=WorkflowRun("p",x.situation_id,"campaign.default",objective="launch",authority=("read","write")); r.start(parent)
   r.complete_stage("p","objective","obs:objective")
   r.wait("p","approval"); self.assertEqual("waiting",r.runs["p"].status); r.resume("p",condition_satisfied=True)
   r.propose_extension(ExtensionProposal("e",x.situation_id,"relation",{"from":"audience","relation":"interprets","to":"message"}))
