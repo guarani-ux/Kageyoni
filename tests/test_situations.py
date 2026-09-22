@@ -19,6 +19,12 @@ class SituationArchitectureTests(unittest.TestCase):
         x=self.s.genesis("campaign","c",{"objective":"o","audience":"a"})
         p=DomainProjection("p","sciel",x.situation_id,("relationships",),("what changes between elements?",))
         with self.assertRaises(SituationError): self.s.propose_projection(p,established_refs=set())
+    def test_reopen_from_shared_store(self):
+        from kageyoni.situations.storage import MemorySituationStore
+        store=MemorySituationStore(); a=install_defaults(SituationService(store)); x=a.genesis("research","q",{"question":"q"})
+        b=SituationService(store)
+        self.assertEqual(x.situation_id, b.snapshot(x.situation_id)["situation_id"])
+
     def test_domain_accepts_evidenced_projection(self):
         x=self.s.genesis("campaign","c",{"objective":"o","audience":"a"})
         p=DomainProjection("p","sciel",x.situation_id,("relationships",),("q",),method_refs=("method:composition",))
