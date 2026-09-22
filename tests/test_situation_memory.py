@@ -10,7 +10,9 @@ class MemoryTests(unittest.TestCase):
   c=TransferCandidate("x","m","dest","relationships->campaign")
   self.assertEqual("untested",qualify_transfer(c).status)
   d=TransferCandidate("y","m","dest","relationships->campaign",destination_evidence_refs=("trial:1",))
-  self.assertEqual("untested",qualify_transfer(d).status)\n  self.assertEqual("untested",qualify_transfer(d,lambda ref,sid: False).status)\n  self.assertEqual("supported_in_destination",qualify_transfer(d,lambda ref,sid: ref=="trial:1" and sid=="dest").status)
+  self.assertEqual("untested",qualify_transfer(d).status)
+  self.assertEqual("untested",qualify_transfer(d,lambda ref,sid: False).status)
+  self.assertEqual("supported_in_destination",qualify_transfer(d,lambda ref,sid: ref=="trial:1" and sid=="dest").status)
  def test_studio_creates_required_family(self):
   st=SituationStudio(); x=st.new("production_brief","video",objective="launch",audience="members",deliverables=["video"],constraints=[]); self.assertEqual([],x.unknowns)
 
