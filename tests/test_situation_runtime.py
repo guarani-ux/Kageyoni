@@ -19,6 +19,21 @@ class RuntimeTests(unittest.TestCase):
         with self.assertRaises(SituationError):
             self.r.start(WorkflowRun("c2", self.x.situation_id, "campaign.default", "p", "launch", ("admin",)))
 
+    def test_wait_requires_condition_and_resume_checks_it(self):
+        self.r.start(WorkflowRun("wait",self.x.situation_id,"campaign.default",objective="launch"))
+        with self.assertRaises(SituationError): self.r.wait("wait","")
+        self.r.wait("wait","human decision")
+        self.assertEqual("waiting",self.r.runs["wait"].status)
+        with self.assertRaises(SituationError): self.r.resume("wait",condition_satisfied=False)
+        self.r.resume("wait",condition_satisfied=True)
+        self.assertEqual("active",self.r.runs["wait"].status)
+
+    def test_failure_is_not_completion(self):
+        self.r.start(WorkflowRun("fail",self.x.situation_id,"campaign.default",objective="launch"))
+        self.r.fail("fail","tool error")
+        self.assertEqual("failed",self.r.runs["fail"].status)
+        self.assertEqual("tool error",self.r.runs["fail"].failure_reason)
+
     def test_stage_requires_engine_evidence(self):
         self.r.start(WorkflowRun("p", self.x.situation_id, "campaign.default", objective="launch"))
         with self.assertRaises(SituationError):
