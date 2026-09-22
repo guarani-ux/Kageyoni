@@ -1,5 +1,6 @@
 from __future__ import annotations
-import json
+import json, pathlib, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from kageyoni.situations.comparative import ComparativeLedger, ComparativeObservation, CONDITIONS, METRICS
 
 TASKS=("creative","research","technical","living_world")
