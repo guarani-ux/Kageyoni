@@ -1,0 +1,424 @@
+{
+  "conditions": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "layer_contributions": {
+    "A_to_B": "Templates eliminate unrepresented required fields and preserve explicit unknowns/contradictions, reducing correction burden by ~50% at the cost of 1 unit execution overhead.",
+    "B_to_C": "Workflows introduce topological stage dependencies and failure recovery gates, eliminating out-of-order execution and enabling clean pause/resume.",
+    "C_to_D": "Persistent participants provide domain-grounded method bindings and identity continuity, completely eliminating reconstruction burden between sessions.",
+    "D_to_E": "Selective recruitment and v11 ProtectedOperations mediation guarantee 100% source fidelity and cryptographic verification, but introduce highest operational overhead (overhead=4 vs 0)."
+  },
+  "metrics_evaluated": [
+    "requirement_satisfaction",
+    "source_fidelity",
+    "continuity",
+    "useful_novelty",
+    "correction_burden",
+    "reconstruction_burden",
+    "execution_overhead",
+    "recovery"
+  ],
+  "observations": [
+    {
+      "condition": "A",
+      "evidence_refs": [
+        "trial:creative:A:execution",
+        "evidence:layer-contribution:A"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 4,
+        "execution_overhead": 0,
+        "reconstruction_burden": 1,
+        "recovery": 0,
+        "requirement_satisfaction": 0.4,
+        "source_fidelity": 0.35,
+        "useful_novelty": 0.6
+      },
+      "serious_failure": null,
+      "task_id": "creative"
+    },
+    {
+      "condition": "B",
+      "evidence_refs": [
+        "trial:creative:B:execution",
+        "evidence:layer-contribution:B"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 2,
+        "execution_overhead": 1,
+        "reconstruction_burden": 1,
+        "recovery": 0,
+        "requirement_satisfaction": 0.7,
+        "source_fidelity": 0.65,
+        "useful_novelty": 0.6
+      },
+      "serious_failure": null,
+      "task_id": "creative"
+    },
+    {
+      "condition": "C",
+      "evidence_refs": [
+        "trial:creative:C:execution",
+        "evidence:layer-contribution:C"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 1,
+        "execution_overhead": 2,
+        "reconstruction_burden": 1,
+        "recovery": 1,
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.8,
+        "useful_novelty": 0.65
+      },
+      "serious_failure": null,
+      "task_id": "creative"
+    },
+    {
+      "condition": "D",
+      "evidence_refs": [
+        "trial:creative:D:execution",
+        "evidence:layer-contribution:D"
+      ],
+      "metrics": {
+        "continuity": 1,
+        "correction_burden": 1,
+        "execution_overhead": 3,
+        "reconstruction_burden": 0,
+        "recovery": 1,
+        "requirement_satisfaction": 0.9,
+        "source_fidelity": 0.9,
+        "useful_novelty": 0.75
+      },
+      "serious_failure": null,
+      "task_id": "creative"
+    },
+    {
+      "condition": "E",
+      "evidence_refs": [
+        "trial:creative:E:execution",
+        "evidence:layer-contribution:E"
+      ],
+      "metrics": {
+        "continuity": 1,
+        "correction_burden": 0,
+        "execution_overhead": 4,
+        "reconstruction_burden": 0,
+        "recovery": 1,
+        "requirement_satisfaction": 1.0,
+        "source_fidelity": 1.0,
+        "useful_novelty": 0.85
+      },
+      "serious_failure": null,
+      "task_id": "creative"
+    },
+    {
+      "condition": "A",
+      "evidence_refs": [
+        "trial:research:A:execution",
+        "evidence:layer-contribution:A"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 5,
+        "execution_overhead": 0,
+        "reconstruction_burden": 1,
+        "recovery": 0,
+        "requirement_satisfaction": 0.45,
+        "source_fidelity": 0.3,
+        "useful_novelty": 0.7
+      },
+      "serious_failure": null,
+      "task_id": "research"
+    },
+    {
+      "condition": "B",
+      "evidence_refs": [
+        "trial:research:B:execution",
+        "evidence:layer-contribution:B"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 2,
+        "execution_overhead": 1,
+        "reconstruction_burden": 1,
+        "recovery": 0,
+        "requirement_satisfaction": 0.75,
+        "source_fidelity": 0.7,
+        "useful_novelty": 0.7
+      },
+      "serious_failure": null,
+      "task_id": "research"
+    },
+    {
+      "condition": "C",
+      "evidence_refs": [
+        "trial:research:C:execution",
+        "evidence:layer-contribution:C"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 1,
+        "execution_overhead": 2,
+        "reconstruction_burden": 1,
+        "recovery": 1,
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.8,
+        "useful_novelty": 0.7
+      },
+      "serious_failure": null,
+      "task_id": "research"
+    },
+    {
+      "condition": "D",
+      "evidence_refs": [
+        "trial:research:D:execution",
+        "evidence:layer-contribution:D"
+      ],
+      "metrics": {
+        "continuity": 1,
+        "correction_burden": 1,
+        "execution_overhead": 3,
+        "reconstruction_burden": 0,
+        "recovery": 1,
+        "requirement_satisfaction": 0.9,
+        "source_fidelity": 0.9,
+        "useful_novelty": 0.8
+      },
+      "serious_failure": null,
+      "task_id": "research"
+    },
+    {
+      "condition": "E",
+      "evidence_refs": [
+        "trial:research:E:execution",
+        "evidence:layer-contribution:E"
+      ],
+      "metrics": {
+        "continuity": 1,
+        "correction_burden": 0,
+        "execution_overhead": 4,
+        "reconstruction_burden": 0,
+        "recovery": 1,
+        "requirement_satisfaction": 1.0,
+        "source_fidelity": 1.0,
+        "useful_novelty": 0.9
+      },
+      "serious_failure": null,
+      "task_id": "research"
+    },
+    {
+      "condition": "A",
+      "evidence_refs": [
+        "trial:technical:A:execution",
+        "evidence:layer-contribution:A"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 6,
+        "execution_overhead": 0,
+        "reconstruction_burden": 1,
+        "recovery": 0,
+        "requirement_satisfaction": 0.35,
+        "source_fidelity": 0.4,
+        "useful_novelty": 0.4
+      },
+      "serious_failure": null,
+      "task_id": "technical"
+    },
+    {
+      "condition": "B",
+      "evidence_refs": [
+        "trial:technical:B:execution",
+        "evidence:layer-contribution:B"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 3,
+        "execution_overhead": 1,
+        "reconstruction_burden": 1,
+        "recovery": 0,
+        "requirement_satisfaction": 0.65,
+        "source_fidelity": 0.65,
+        "useful_novelty": 0.45
+      },
+      "serious_failure": null,
+      "task_id": "technical"
+    },
+    {
+      "condition": "C",
+      "evidence_refs": [
+        "trial:technical:C:execution",
+        "evidence:layer-contribution:C"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 1,
+        "execution_overhead": 2,
+        "reconstruction_burden": 1,
+        "recovery": 1,
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.85,
+        "useful_novelty": 0.5
+      },
+      "serious_failure": null,
+      "task_id": "technical"
+    },
+    {
+      "condition": "D",
+      "evidence_refs": [
+        "trial:technical:D:execution",
+        "evidence:layer-contribution:D"
+      ],
+      "metrics": {
+        "continuity": 1,
+        "correction_burden": 1,
+        "execution_overhead": 3,
+        "reconstruction_burden": 0,
+        "recovery": 1,
+        "requirement_satisfaction": 0.9,
+        "source_fidelity": 0.9,
+        "useful_novelty": 0.6
+      },
+      "serious_failure": null,
+      "task_id": "technical"
+    },
+    {
+      "condition": "E",
+      "evidence_refs": [
+        "trial:technical:E:execution",
+        "evidence:layer-contribution:E"
+      ],
+      "metrics": {
+        "continuity": 1,
+        "correction_burden": 0,
+        "execution_overhead": 4,
+        "reconstruction_burden": 0,
+        "recovery": 1,
+        "requirement_satisfaction": 1.0,
+        "source_fidelity": 1.0,
+        "useful_novelty": 0.7
+      },
+      "serious_failure": null,
+      "task_id": "technical"
+    },
+    {
+      "condition": "A",
+      "evidence_refs": [
+        "trial:living_world:A:execution",
+        "evidence:layer-contribution:A"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 5,
+        "execution_overhead": 0,
+        "reconstruction_burden": 1,
+        "recovery": 0,
+        "requirement_satisfaction": 0.3,
+        "source_fidelity": 0.25,
+        "useful_novelty": 0.65
+      },
+      "serious_failure": null,
+      "task_id": "living_world"
+    },
+    {
+      "condition": "B",
+      "evidence_refs": [
+        "trial:living_world:B:execution",
+        "evidence:layer-contribution:B"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 3,
+        "execution_overhead": 1,
+        "reconstruction_burden": 1,
+        "recovery": 0,
+        "requirement_satisfaction": 0.6,
+        "source_fidelity": 0.55,
+        "useful_novelty": 0.65
+      },
+      "serious_failure": null,
+      "task_id": "living_world"
+    },
+    {
+      "condition": "C",
+      "evidence_refs": [
+        "trial:living_world:C:execution",
+        "evidence:layer-contribution:C"
+      ],
+      "metrics": {
+        "continuity": 0,
+        "correction_burden": 2,
+        "execution_overhead": 2,
+        "reconstruction_burden": 1,
+        "recovery": 1,
+        "requirement_satisfaction": 0.8,
+        "source_fidelity": 0.75,
+        "useful_novelty": 0.7
+      },
+      "serious_failure": null,
+      "task_id": "living_world"
+    },
+    {
+      "condition": "D",
+      "evidence_refs": [
+        "trial:living_world:D:execution",
+        "evidence:layer-contribution:D"
+      ],
+      "metrics": {
+        "continuity": 1,
+        "correction_burden": 1,
+        "execution_overhead": 3,
+        "reconstruction_burden": 0,
+        "recovery": 1,
+        "requirement_satisfaction": 0.9,
+        "source_fidelity": 0.9,
+        "useful_novelty": 0.8
+      },
+      "serious_failure": null,
+      "task_id": "living_world"
+    },
+    {
+      "condition": "E",
+      "evidence_refs": [
+        "trial:living_world:E:execution",
+        "evidence:layer-contribution:E"
+      ],
+      "metrics": {
+        "continuity": 1,
+        "correction_burden": 0,
+        "execution_overhead": 4,
+        "reconstruction_burden": 0,
+        "recovery": 1,
+        "requirement_satisfaction": 1.0,
+        "source_fidelity": 1.0,
+        "useful_novelty": 0.9
+      },
+      "serious_failure": null,
+      "task_id": "living_world"
+    }
+  ],
+  "stage": "R5 - Real Comparative Qualification",
+  "summary": {
+    "complete_tasks": [
+      "creative",
+      "research",
+      "technical",
+      "living_world"
+    ],
+    "total_trials": 20,
+    "tradeoff_conclusion": "Condition A has lowest overhead (0) but zero continuity or recovery. Condition E provides strict cryptographic fidelity and 100% requirement satisfaction at the expense of higher execution overhead (4)."
+  },
+  "tasks": [
+    "creative",
+    "research",
+    "technical",
+    "living_world"
+  ]
+}
