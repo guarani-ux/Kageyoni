@@ -11,7 +11,7 @@ FAMILY_FIXTURES={
 }
 
 def connected_family_check():
- st=SituationStudio(); st.service.register_workflow(SCAR_WORKFLOW); out={}
+ st=SituationStudio(test_mode=True); st.service.register_workflow(SCAR_WORKFLOW); out={}
  for family,(objective,data) in FAMILY_FIXTURES.items():
   s=st.new(family,objective,**data)
   recommended=st.service.templates[family].recommended_workflows[0]
@@ -20,7 +20,7 @@ def connected_family_check():
  return out
 
 def incomplete_genesis_check():
- st=SituationStudio(); out={}
+ st=SituationStudio(test_mode=True); out={}
  for family,(objective,data) in FAMILY_FIXTURES.items():
   required=st.service.templates[family].required
   if not required: continue
@@ -30,6 +30,6 @@ def incomplete_genesis_check():
  return out
 
 def contradiction_check():
- st=SituationStudio()
+ st=SituationStudio(test_mode=True)
  s=st.new("campaign","c",objective="awareness",audience={"__alternatives__":["members","nonmembers"]})
  return {"unknowns":list(s.unknowns),"contradictions":list(getattr(s,"contradictions",[]))}
