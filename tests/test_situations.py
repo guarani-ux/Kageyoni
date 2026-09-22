@@ -4,7 +4,7 @@ from kageyoni.situations.catalog import install_defaults
 from kageyoni.situations.service import SituationError
 
 class SituationArchitectureTests(unittest.TestCase):
-    def setUp(self): self.s=install_defaults(SituationService())
+    def setUp(self): self.s=install_defaults(SituationService(participant_evidence_resolver=lambda participant,ref,situation: participant=="sciel" and ref=="method:composition"))
     def test_genesis_preserves_unknowns(self):
         x=self.s.genesis("production_brief","make a video",{"objective":"launch","audience":None,"deliverables":["video"],"constraints":[]})
         self.assertIn("audience",x.unknowns)
