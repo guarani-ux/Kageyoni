@@ -1,0 +1,10 @@
+# Writing integration acceptance — fixed before implementation
+
+1. Reuse personality, Will, knowledge, scene, objective, history and decision state. No canonical source edits or guessed character traits. Back up the v7 campaign before migration; maintenance creates no story events.
+2. Executable versioned briefs cover narration, dialogue, situations/scenarios, events, history, discovery, reflection, recaps and descriptions. Audience, purpose, perspective, context and craft guidance are explicit. Quiet scenes and open choices remain valid.
+3. Separate world records, speaker knowledge/beliefs, listener interpretation and what has been presented. Hidden facts cannot enter audience deliveries through structured references. Prose meaning and artistic quality remain named GM review boundaries.
+4. Dialogue intention, strategy, subtext and fallible listener assumptions enter the existing decision judgment. Reception is explicitly recorded from actual hearing and feeds later character context; it does not automatically change objective truth, trust or Will.
+5. Versioned writing guidance shapes agent drafting/review without success bonuses, forced outcomes, changed dangers, compulsory rolls or automatic time passage. Publish records presentation only; world changes continue through ordinary decisions/events.
+6. Delivery records preserve exact text and private source/brief/review evidence, support explicit corrections, and reject forged/stale briefs, wrong scope, unsupported interfaces and changed retries atomically. Identical retries recover the receipt.
+7. Branches, snapshots, replay and reopening preserve delivery/reception history. Test fresh creation, actual-v7 upgrade, interrupted migration, old pending decision compatibility, hidden references and listener misunderstandings.
+8. Deliver coherent code, SQL/migration, source provenance, writing guidance surfaced at session opening, examples, campaign/fixture databases, evidence and recovery handoff. Reopen the packaged fixture; preserve originals and save the complete build. Do not claim automated prose quality or psychological inference from mechanical checks.

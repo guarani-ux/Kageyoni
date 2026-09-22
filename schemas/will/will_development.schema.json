@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kageyoni:will_development:0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "will-contract/0.1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "design_status": {
+      "enum": [
+        "proposed",
+        "accepted"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assertion": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "confirmed",
+              "reported",
+              "inferred",
+              "contested",
+              "unknown",
+              "proposed"
+            ]
+          }
+        },
+        "required": [
+          "source",
+          "assertion",
+          "status"
+        ]
+      }
+    },
+    "expression": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ]
+    },
+    "dimension": {
+      "enum": [
+        "perception",
+        "intention",
+        "understanding",
+        "embodiment",
+        "expression",
+        "relationship",
+        "integration",
+        "presence"
+      ]
+    },
+    "phase": {
+      "enum": [
+        "proposed",
+        "attempted",
+        "demonstrated",
+        "retained",
+        "revised",
+        "lost"
+      ]
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supporting_events": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "mechanical_unlocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "id",
+          "version"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "version",
+    "design_status",
+    "evidence",
+    "expression",
+    "dimension",
+    "phase",
+    "claim",
+    "supporting_events",
+    "limitations",
+    "mechanical_unlocks"
+  ]
+}

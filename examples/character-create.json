@@ -1,0 +1,26 @@
+{
+  "branch": "main",
+  "request_id": "fixture-character-introduction",
+  "expected_revision": 0,
+  "actor": "fixture-gm",
+  "narrative": "NONCANONICAL fixture: an unnamed visitor appears.",
+  "character_id": "visitor",
+  "label": "Unnamed visitor",
+  "existence": "established",
+  "visibility": "public",
+  "evidence": [{"note": "Synthetic acceptance fixture; never campaign canon."}],
+  "aspects": [
+    {
+      "id": "visitor.drive",
+      "visibility": "gm",
+      "data": {
+        "section": "interiority",
+        "kind": "drive",
+        "value_status": "known",
+        "statement": "Find the ferry before sunset.",
+        "phase": "active",
+        "change_basis": "established"
+      }
+    }
+  ]
+}

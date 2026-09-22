@@ -1,0 +1,22 @@
+{
+  "schema_version": "will-contract/0.1",
+  "id": "fixture.witness",
+  "version": 1,
+  "design_status": "proposed",
+  "evidence": [
+    {
+      "source": "fixture",
+      "assertion": "Noncanonical validation example",
+      "status": "proposed"
+    }
+  ],
+  "name": "Witness",
+  "classification": "primordial",
+  "nature": "Recover or preserve surviving traces.",
+  "ancestry": [],
+  "generative_boundary": "Requires a surviving carrier; does not invent missing facts.",
+  "inherent_limits": [
+    "A trace need not reveal intent."
+  ],
+  "invariants": []
+}

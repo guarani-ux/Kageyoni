@@ -1,0 +1,1410 @@
+[
+  {
+    "type_id": "principle",
+    "family": "governing",
+    "purpose_type": "governing",
+    "short_description": "Governing Principle slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "situational",
+      "action",
+      "consequence",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "world_rule",
+    "family": "governing",
+    "purpose_type": "governing",
+    "short_description": "World Rule slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "situational",
+      "action",
+      "consequence",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "arc_pressure",
+    "family": "governing",
+    "purpose_type": "governing",
+    "short_description": "Arc Pressure slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "situational",
+      "action",
+      "consequence",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "objective",
+    "family": "governing",
+    "purpose_type": "governing",
+    "short_description": "Objective slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "situational",
+      "action",
+      "consequence",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "invariant",
+    "family": "governing",
+    "purpose_type": "governing",
+    "short_description": "Invariant slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "situational",
+      "action",
+      "consequence",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "actor",
+    "family": "entity",
+    "purpose_type": "entity",
+    "short_description": "Actor slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "situational",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "audience",
+    "family": "entity",
+    "purpose_type": "entity",
+    "short_description": "Audience slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "situational",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "idea",
+    "family": "entity",
+    "purpose_type": "entity",
+    "short_description": "Idea slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "situational",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "product",
+    "family": "entity",
+    "purpose_type": "entity",
+    "short_description": "Product slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "situational",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "service",
+    "family": "entity",
+    "purpose_type": "entity",
+    "short_description": "Service slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "situational",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "subject",
+    "family": "entity",
+    "purpose_type": "entity",
+    "short_description": "Subject slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "situational",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "artifact",
+    "family": "entity",
+    "purpose_type": "entity",
+    "short_description": "Artifact slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "situational",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "organization",
+    "family": "entity",
+    "purpose_type": "entity",
+    "short_description": "Organization slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "situational",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "orientation",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Orientation / Named Will slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "capability",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Capability slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "trait",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Trait slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "resource",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Resource slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "method",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Method slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "perspective",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Perspective slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "interest",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Interest slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "value",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Value slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "commitment",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Commitment slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "vulnerability",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Vulnerability slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "affordance",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Affordance slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "equipment",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Equipment slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "internal_state",
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "knowledge_state",
+    "family": "epistemic",
+    "purpose_type": "epistemic",
+    "short_description": "Knowledge State slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development",
+      "evidence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "belief",
+    "family": "epistemic",
+    "purpose_type": "epistemic",
+    "short_description": "Belief slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development",
+      "evidence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "hypothesis",
+    "family": "epistemic",
+    "purpose_type": "epistemic",
+    "short_description": "Hypothesis slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development",
+      "evidence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "misconception",
+    "family": "epistemic",
+    "purpose_type": "epistemic",
+    "short_description": "Misconception slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development",
+      "evidence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "unknown_state",
+    "family": "epistemic",
+    "purpose_type": "epistemic",
+    "short_description": "Unknown slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development",
+      "evidence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "memory",
+    "family": "epistemic",
+    "purpose_type": "epistemic",
+    "short_description": "Memory slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development",
+      "evidence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "confidence",
+    "family": "epistemic",
+    "purpose_type": "epistemic",
+    "short_description": "Confidence slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development",
+      "evidence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "relationship_state",
+    "family": "relational",
+    "purpose_type": "relational",
+    "short_description": "Relationship State slottable aspect.",
+    "reacts_with": [
+      "internal_state",
+      "action",
+      "expression",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "trust",
+    "family": "relational",
+    "purpose_type": "relational",
+    "short_description": "Trust slottable aspect.",
+    "reacts_with": [
+      "internal_state",
+      "action",
+      "expression",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "authority_relation",
+    "family": "relational",
+    "purpose_type": "relational",
+    "short_description": "Authority Relation slottable aspect.",
+    "reacts_with": [
+      "internal_state",
+      "action",
+      "expression",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "obligation",
+    "family": "relational",
+    "purpose_type": "relational",
+    "short_description": "Obligation slottable aspect.",
+    "reacts_with": [
+      "internal_state",
+      "action",
+      "expression",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "rivalry",
+    "family": "relational",
+    "purpose_type": "relational",
+    "short_description": "Rivalry slottable aspect.",
+    "reacts_with": [
+      "internal_state",
+      "action",
+      "expression",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "dependency_relation",
+    "family": "relational",
+    "purpose_type": "relational",
+    "short_description": "Dependency Relation slottable aspect.",
+    "reacts_with": [
+      "internal_state",
+      "action",
+      "expression",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "reputation",
+    "family": "relational",
+    "purpose_type": "relational",
+    "short_description": "Reputation slottable aspect.",
+    "reacts_with": [
+      "internal_state",
+      "action",
+      "expression",
+      "history",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "situation",
+    "family": "situational",
+    "purpose_type": "situational",
+    "short_description": "Situation slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "internal_state",
+      "environmental",
+      "action",
+      "expression"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "intent",
+    "family": "situational",
+    "purpose_type": "situational",
+    "short_description": "Intent slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "internal_state",
+      "environmental",
+      "action",
+      "expression"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "constraint",
+    "family": "situational",
+    "purpose_type": "situational",
+    "short_description": "Constraint slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "internal_state",
+      "environmental",
+      "action",
+      "expression"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "opportunity",
+    "family": "situational",
+    "purpose_type": "situational",
+    "short_description": "Opportunity slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "internal_state",
+      "environmental",
+      "action",
+      "expression"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "stakes",
+    "family": "situational",
+    "purpose_type": "situational",
+    "short_description": "Stakes slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "internal_state",
+      "environmental",
+      "action",
+      "expression"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "pressure",
+    "family": "situational",
+    "purpose_type": "situational",
+    "short_description": "Pressure slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "internal_state",
+      "environmental",
+      "action",
+      "expression"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "location",
+    "family": "environmental",
+    "purpose_type": "environmental",
+    "short_description": "Location slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "action",
+      "expression",
+      "resource"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "environment",
+    "family": "environmental",
+    "purpose_type": "environmental",
+    "short_description": "Environment slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "action",
+      "expression",
+      "resource"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "time_context",
+    "family": "environmental",
+    "purpose_type": "environmental",
+    "short_description": "Time Context slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "action",
+      "expression",
+      "resource"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "platform",
+    "family": "environmental",
+    "purpose_type": "environmental",
+    "short_description": "Platform slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "action",
+      "expression",
+      "resource"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "medium",
+    "family": "environmental",
+    "purpose_type": "environmental",
+    "short_description": "Medium slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "action",
+      "expression",
+      "resource"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "context",
+    "family": "environmental",
+    "purpose_type": "environmental",
+    "short_description": "Context slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "action",
+      "expression",
+      "resource"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "device",
+    "family": "environmental",
+    "purpose_type": "environmental",
+    "short_description": "Device slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "action",
+      "expression",
+      "resource"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "deadline",
+    "family": "environmental",
+    "purpose_type": "environmental",
+    "short_description": "Deadline slottable aspect.",
+    "reacts_with": [
+      "situational",
+      "action",
+      "expression",
+      "resource"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "internal_pressure",
+    "family": "internal_state",
+    "purpose_type": "internal_state",
+    "short_description": "Internal Pressure slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "emotion",
+    "family": "internal_state",
+    "purpose_type": "internal_state",
+    "short_description": "Emotion slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "anxiety",
+    "family": "internal_state",
+    "purpose_type": "internal_state",
+    "short_description": "Anxiety slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "attention",
+    "family": "internal_state",
+    "purpose_type": "internal_state",
+    "short_description": "Attention slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "fatigue",
+    "family": "internal_state",
+    "purpose_type": "internal_state",
+    "short_description": "Fatigue slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "injury",
+    "family": "internal_state",
+    "purpose_type": "internal_state",
+    "short_description": "Injury slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "cognitive_load",
+    "family": "internal_state",
+    "purpose_type": "internal_state",
+    "short_description": "Cognitive Load slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "readiness",
+    "family": "internal_state",
+    "purpose_type": "internal_state",
+    "short_description": "Readiness slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "curiosity",
+    "family": "internal_state",
+    "purpose_type": "internal_state",
+    "short_description": "Curiosity slottable aspect.",
+    "reacts_with": [
+      "action",
+      "expression",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "experience",
+    "family": "history",
+    "purpose_type": "history",
+    "short_description": "Experience slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "relational",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "event",
+    "family": "history",
+    "purpose_type": "history",
+    "short_description": "Event slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "relational",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "decision_history",
+    "family": "history",
+    "purpose_type": "history",
+    "short_description": "Decision History slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "relational",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "failure",
+    "family": "history",
+    "purpose_type": "history",
+    "short_description": "Failure slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "relational",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "success",
+    "family": "history",
+    "purpose_type": "history",
+    "short_description": "Success slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "relational",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "discovery",
+    "family": "history",
+    "purpose_type": "history",
+    "short_description": "Discovery slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "relational",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "prior_exposure",
+    "family": "history",
+    "purpose_type": "history",
+    "short_description": "Prior Exposure slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "relational",
+      "development"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "evidence",
+    "family": "evidence",
+    "purpose_type": "evidence",
+    "short_description": "Evidence slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "development",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "research_source",
+    "family": "evidence",
+    "purpose_type": "evidence",
+    "short_description": "Research Source slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "development",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "report",
+    "family": "evidence",
+    "purpose_type": "evidence",
+    "short_description": "Report slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "development",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "news_source",
+    "family": "evidence",
+    "purpose_type": "evidence",
+    "short_description": "News Source slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "development",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "analytics",
+    "family": "evidence",
+    "purpose_type": "evidence",
+    "short_description": "Analytics slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "development",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "interview",
+    "family": "evidence",
+    "purpose_type": "evidence",
+    "short_description": "Interview slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "development",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "observation",
+    "family": "evidence",
+    "purpose_type": "evidence",
+    "short_description": "Observation slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "development",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "measurement",
+    "family": "evidence",
+    "purpose_type": "evidence",
+    "short_description": "Measurement slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "development",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "feedback",
+    "family": "evidence",
+    "purpose_type": "evidence",
+    "short_description": "Feedback slottable aspect.",
+    "reacts_with": [
+      "epistemic",
+      "development",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "operation",
+    "family": "action",
+    "purpose_type": "action",
+    "short_description": "Operation slottable aspect.",
+    "reacts_with": [
+      "consequence",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "action_affordance",
+    "family": "action",
+    "purpose_type": "action",
+    "short_description": "Action Affordance slottable aspect.",
+    "reacts_with": [
+      "consequence",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "dialogue_action",
+    "family": "action",
+    "purpose_type": "action",
+    "short_description": "Dialogue Action slottable aspect.",
+    "reacts_with": [
+      "consequence",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "experiment",
+    "family": "action",
+    "purpose_type": "action",
+    "short_description": "Experiment slottable aspect.",
+    "reacts_with": [
+      "consequence",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "edit_action",
+    "family": "action",
+    "purpose_type": "action",
+    "short_description": "Edit Action slottable aspect.",
+    "reacts_with": [
+      "consequence",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "search_action",
+    "family": "action",
+    "purpose_type": "action",
+    "short_description": "Search Action slottable aspect.",
+    "reacts_with": [
+      "consequence",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "synthesis_action",
+    "family": "action",
+    "purpose_type": "action",
+    "short_description": "Synthesis Action slottable aspect.",
+    "reacts_with": [
+      "consequence",
+      "history"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "consequence_contract",
+    "family": "consequence",
+    "purpose_type": "consequence",
+    "short_description": "Consequence Contract slottable aspect.",
+    "reacts_with": [
+      "history",
+      "development",
+      "relational",
+      "epistemic"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "outcome",
+    "family": "consequence",
+    "purpose_type": "consequence",
+    "short_description": "Outcome slottable aspect.",
+    "reacts_with": [
+      "history",
+      "development",
+      "relational",
+      "epistemic"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "world_change",
+    "family": "consequence",
+    "purpose_type": "consequence",
+    "short_description": "World Change slottable aspect.",
+    "reacts_with": [
+      "history",
+      "development",
+      "relational",
+      "epistemic"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "relationship_change",
+    "family": "consequence",
+    "purpose_type": "consequence",
+    "short_description": "Relationship Change slottable aspect.",
+    "reacts_with": [
+      "history",
+      "development",
+      "relational",
+      "epistemic"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "artifact_change",
+    "family": "consequence",
+    "purpose_type": "consequence",
+    "short_description": "Artifact Change slottable aspect.",
+    "reacts_with": [
+      "history",
+      "development",
+      "relational",
+      "epistemic"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "aftermath",
+    "family": "consequence",
+    "purpose_type": "consequence",
+    "short_description": "Aftermath slottable aspect.",
+    "reacts_with": [
+      "history",
+      "development",
+      "relational",
+      "epistemic"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "candidate_lesson",
+    "family": "development",
+    "purpose_type": "development",
+    "short_description": "Candidate Lesson slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "action"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "qualified_lesson",
+    "family": "development",
+    "purpose_type": "development",
+    "short_description": "Qualified Lesson slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "action"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "revised_belief",
+    "family": "development",
+    "purpose_type": "development",
+    "short_description": "Revised Belief slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "action"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "distinction",
+    "family": "development",
+    "purpose_type": "development",
+    "short_description": "Distinction slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "action"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "habit",
+    "family": "development",
+    "purpose_type": "development",
+    "short_description": "Habit slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "action"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "capability_change",
+    "family": "development",
+    "purpose_type": "development",
+    "short_description": "Capability Change slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "action"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "transfer_candidate",
+    "family": "development",
+    "purpose_type": "development",
+    "short_description": "Transfer Candidate slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "action"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "transfer_result",
+    "family": "development",
+    "purpose_type": "development",
+    "short_description": "Transfer Result slottable aspect.",
+    "reacts_with": [
+      "configuration",
+      "epistemic",
+      "relational",
+      "action"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "expression_contract",
+    "family": "expression",
+    "purpose_type": "expression",
+    "short_description": "Expression Contract slottable aspect.",
+    "reacts_with": [
+      "relational",
+      "history",
+      "consequence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "speech_pressure",
+    "family": "expression",
+    "purpose_type": "expression",
+    "short_description": "Speech Pressure slottable aspect.",
+    "reacts_with": [
+      "relational",
+      "history",
+      "consequence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "behavior_tendency",
+    "family": "expression",
+    "purpose_type": "expression",
+    "short_description": "Behavior Tendency slottable aspect.",
+    "reacts_with": [
+      "relational",
+      "history",
+      "consequence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "tone_range",
+    "family": "expression",
+    "purpose_type": "expression",
+    "short_description": "Tone Range slottable aspect.",
+    "reacts_with": [
+      "relational",
+      "history",
+      "consequence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "attention_priority",
+    "family": "expression",
+    "purpose_type": "expression",
+    "short_description": "Attention Priority slottable aspect.",
+    "reacts_with": [
+      "relational",
+      "history",
+      "consequence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "pacing_pressure",
+    "family": "expression",
+    "purpose_type": "expression",
+    "short_description": "Pacing Pressure slottable aspect.",
+    "reacts_with": [
+      "relational",
+      "history",
+      "consequence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "disclosure_constraint",
+    "family": "expression",
+    "purpose_type": "expression",
+    "short_description": "Disclosure Constraint slottable aspect.",
+    "reacts_with": [
+      "relational",
+      "history",
+      "consequence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "population_cohort",
+    "family": "entity",
+    "purpose_type": "entity",
+    "short_description": "Aggregated population represented without direct per-entity resolution.",
+    "reacts_with": [
+      "situational",
+      "environmental",
+      "action",
+      "consequence"
+    ],
+    "status": "active"
+  },
+  {
+    "type_id": "demographic",
+    "family": "configuration",
+    "purpose_type": "configuration",
+    "short_description": "Evidence-bounded demographic descriptor; contributes pressures but cannot encode an action gate as its own conclusion.",
+    "reacts_with": [
+      "situational",
+      "environmental",
+      "expression"
+    ],
+    "status": "active",
+    "effect_policy": {
+      "allowed_operations": [
+        "pressure"
+      ]
+    }
+  }
+]

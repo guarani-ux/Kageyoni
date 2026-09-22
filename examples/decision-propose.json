@@ -1,0 +1,111 @@
+{
+  "branch": "main",
+  "spec": {
+    "id": "repair",
+    "expected_revision": 2,
+    "actor": "a",
+    "intent": "Repair the bridge",
+    "method": "Use repair skill and tools",
+    "stakes": "Effort and the crossing opportunity",
+    "modules": [
+      "travel",
+      "social"
+    ],
+    "agency_state": "voluntary",
+    "adjudication": {
+      "by": "fixture-gm",
+      "rationale": "Tools and demonstrated repair practice support this attempt. Repair opens this route.",
+      "basis": [
+        "skill",
+        "tools",
+        "bridge"
+      ]
+    },
+    "capabilities": [
+      "skill"
+    ],
+    "equipment": [
+      "tools"
+    ],
+    "requirements": [
+      {
+        "record_id": "bridge",
+        "field": "condition",
+        "equals": "damaged"
+      }
+    ],
+    "rules": [
+      {
+        "id": "repair-roll",
+        "version": 1,
+        "subject": "a",
+        "stage": "probability",
+        "unit": "bonus"
+      }
+    ],
+    "uncertainty": {
+      "mode": "d20",
+      "difficulty": 12
+    },
+    "costs": [
+      {
+        "resource": "stamina",
+        "amount": 2,
+        "unit": "effort"
+      }
+    ],
+    "outcomes": {
+      "success": {
+        "changes": [
+          {
+            "op": "patch",
+            "id": "bridge",
+            "expected_version": 1,
+            "data": {
+              "condition": "repaired"
+            },
+            "evidence": [
+              {
+                "note": "Synthetic test fixture; not Kageyoni canon."
+              }
+            ]
+          },
+          {
+            "op": "patch",
+            "id": "route",
+            "expected_version": 1,
+            "data": {
+              "access": "open"
+            },
+            "evidence": [
+              {
+                "note": "Synthetic test fixture; not Kageyoni canon."
+              }
+            ]
+          }
+        ]
+      },
+      "failure": {
+        "changes": [
+          {
+            "op": "patch",
+            "id": "bridge",
+            "expected_version": 1,
+            "data": {
+              "condition": "damaged"
+            },
+            "evidence": [
+              {
+                "note": "Synthetic test fixture; not Kageyoni canon."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "time": {
+      "clock": "clock",
+      "duration": 1
+    }
+  }
+}

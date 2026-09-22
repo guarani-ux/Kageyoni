@@ -1,0 +1,14 @@
+interface:
+  display_name: Kageyoni Play
+  short_description: Run coordinated Kageyoni scenes
+  default_prompt: Use $kageyoni-play to run this Kageyoni scene through the world-state
+    engine.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

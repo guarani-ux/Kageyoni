@@ -9,4 +9,7 @@ build/
 *.zip
 *.sqlite
 *.sqlite-*
+*.bak
+state/
+recovery/
 .DS_Store

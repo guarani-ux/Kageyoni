@@ -1,0 +1,8 @@
+{
+  "api_version":1,"branch":"sandbox","expected_revision":0,
+  "request_id":"synthetic-rest-001","kind":"action","actor":"test-gm",
+  "narrative":"SYNTHETIC TEST ONLY: Alexandra pauses to rest. Her wounded shoulder remains injured. This is not a canonical continuation.",
+  "changes":[{"op":"patch","id":"alexandra","expected_version":1,
+    "data":{"condition":"resting; shoulder remains wounded"},
+    "evidence":[{"note":"Synthetic test outcome, isolated from main."}]}]
+}

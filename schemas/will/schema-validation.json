@@ -1,0 +1,53 @@
+{
+  "scope": "Local subset validator covers emitted type/required/additionalProperties/enum/const/anyOf/minimum/minLength/items keywords; no full JSON Schema metaschema validator installed. Additive DDL tested; no Will mechanics implemented or gameplay tested.",
+  "checks": [
+    {
+      "check": "schema will_definition",
+      "passed": true
+    },
+    {
+      "check": "schema will_expression",
+      "passed": true
+    },
+    {
+      "check": "schema will_technique",
+      "passed": true
+    },
+    {
+      "check": "schema will_awakening",
+      "passed": true
+    },
+    {
+      "check": "schema will_development",
+      "passed": true
+    },
+    {
+      "check": "schema will_effect",
+      "passed": true
+    },
+    {
+      "check": "schema will_attempt",
+      "passed": true
+    },
+    {
+      "check": "reject unexpected field",
+      "passed": true
+    },
+    {
+      "check": "reject invalid classification",
+      "passed": true
+    },
+    {
+      "check": "reject missing nature",
+      "passed": true
+    },
+    {
+      "check": "reject zero version",
+      "passed": true
+    },
+    {
+      "check": "additive SQL on baseline copy; existing record count preserved; integrity and foreign keys",
+      "passed": true
+    }
+  ]
+}

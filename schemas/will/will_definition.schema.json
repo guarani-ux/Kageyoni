@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kageyoni:will_definition:0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "will-contract/0.1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "design_status": {
+      "enum": [
+        "proposed",
+        "accepted"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assertion": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "confirmed",
+              "reported",
+              "inferred",
+              "contested",
+              "unknown",
+              "proposed"
+            ]
+          }
+        },
+        "required": [
+          "source",
+          "assertion",
+          "status"
+        ]
+      }
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "enum": [
+        "primordial",
+        "derivative",
+        "independent",
+        "false",
+        "unknown"
+      ]
+    },
+    "nature": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ancestry": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "parent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "id",
+              "version"
+            ]
+          },
+          "relation": {
+            "enum": [
+              "derived_from",
+              "shares_principle",
+              "claimed_descent"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "source": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "assertion": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "status": {
+                  "enum": [
+                    "confirmed",
+                    "reported",
+                    "inferred",
+                    "contested",
+                    "unknown",
+                    "proposed"
+                  ]
+                }
+              },
+              "required": [
+                "source",
+                "assertion",
+                "status"
+              ]
+            }
+          }
+        },
+        "required": [
+          "parent",
+          "relation",
+          "evidence"
+        ]
+      }
+    },
+    "generative_boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inherent_limits": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "mode": {
+            "enum": [
+              "rule",
+              "judgment"
+            ]
+          },
+          "rule": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "missing_policy": {
+            "enum": [
+              "block",
+              "request_judgment"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "mode",
+          "rule",
+          "statement",
+          "missing_policy"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "version",
+    "design_status",
+    "evidence",
+    "name",
+    "classification",
+    "nature",
+    "ancestry",
+    "generative_boundary",
+    "inherent_limits",
+    "invariants"
+  ]
+}

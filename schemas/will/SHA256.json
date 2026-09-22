@@ -1,0 +1,14 @@
+{
+  "fixture-witness.json": "adbd9d5a5142db7fddd8c2182cdcbcfb04be93f5e79e77a478a4405d26563999",
+  "will_technique.schema.json": "9cab49a16a492ef01ba5e528f89db16393d9602e6dae43986ebf6315018a8ef5",
+  "will_effect.schema.json": "aed72157b3545d890d12b5a2859c72a39d3234affd0d45037d04c059202b682d",
+  "will_expression.schema.json": "b1fd2d6b9b9d7f09bae398c30ac5527810b92d45ca5359caa198fcb31048d62e",
+  "will_development.schema.json": "0b77dbd9e680f0eab6b124c60c626315f160708408c855f346b5eb4da967fc37",
+  "IMPLEMENTATION-ANALYSIS.md": "694082e131f4a7ad80358e1881aab0ed4ac11a08ffa2c2f3af7766d326f9ba8d",
+  "domain-additions.json": "bfd644ffa7d5110f1f428abe5434c27fd303684edfd6e70e9a6606c496712c1b",
+  "will_attempt.schema.json": "c7b30a2a53cf79532a7dac9eff0b8b49448b38e882139e06479e14cf21141c1e",
+  "will_awakening.schema.json": "c3164be02b720fbd6ba327f1fd338b5cc3a8f055be454c177c18f7c09bb55332",
+  "proposed-will-tables.sql": "d9d8911c6b045ca45af1b1ad0ff777ac450b982af219885a73a134c9a23ac611",
+  "schema-validation.json": "a754bc98f8d00011d785f4f535a467384c61c633b8b527dbd9b828e77900edaa",
+  "will_definition.schema.json": "fa56555ec8f3a4c3071362d3fc2bcf6c7958e1ebb0747773089478ec3f0225a2"
+}

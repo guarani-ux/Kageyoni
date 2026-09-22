@@ -1,0 +1,880 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kageyoni:will_technique:0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "will-contract/0.1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "design_status": {
+      "enum": [
+        "proposed",
+        "accepted"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assertion": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "confirmed",
+              "reported",
+              "inferred",
+              "contested",
+              "unknown",
+              "proposed"
+            ]
+          }
+        },
+        "required": [
+          "source",
+          "assertion",
+          "status"
+        ]
+      }
+    },
+    "expression": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "derivation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "practice_status": {
+      "enum": [
+        "proposed",
+        "experimental",
+        "demonstrated",
+        "retained",
+        "unavailable"
+      ]
+    },
+    "activation": {
+      "enum": [
+        "deliberate",
+        "passive",
+        "reactive",
+        "sustained"
+      ]
+    },
+    "trigger": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "enum": [
+            "rule",
+            "judgment"
+          ]
+        },
+        "rule": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "version": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "id",
+                "version"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "missing_policy": {
+          "enum": [
+            "block",
+            "request_judgment"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "mode",
+        "rule",
+        "statement",
+        "missing_policy"
+      ]
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "medium": {
+            "type": "string",
+            "minLength": 1
+          },
+          "access": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "mode": {
+                "enum": [
+                  "rule",
+                  "judgment"
+                ]
+              },
+              "rule": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "version": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "version"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "statement": {
+                "type": "string",
+                "minLength": 1
+              },
+              "missing_policy": {
+                "enum": [
+                  "block",
+                  "request_judgment"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "mode",
+              "rule",
+              "statement",
+              "missing_policy"
+            ]
+          },
+          "break_conditions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "mode": {
+                  "enum": [
+                    "rule",
+                    "judgment"
+                  ]
+                },
+                "rule": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "version": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "version"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "statement": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "missing_policy": {
+                  "enum": [
+                    "block",
+                    "request_judgment"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "mode",
+                "rule",
+                "statement",
+                "missing_policy"
+              ]
+            }
+          }
+        },
+        "required": [
+          "medium",
+          "access",
+          "break_conditions"
+        ]
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "operation": {
+            "enum": [
+              "create",
+              "alter",
+              "connect",
+              "sever",
+              "reveal",
+              "preserve",
+              "transfer",
+              "suppress"
+            ]
+          },
+          "target_role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "mechanism": {
+            "type": "string",
+            "minLength": 1
+          },
+          "preconditions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "mode": {
+                  "enum": [
+                    "rule",
+                    "judgment"
+                  ]
+                },
+                "rule": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "version": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "version"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "statement": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "missing_policy": {
+                  "enum": [
+                    "block",
+                    "request_judgment"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "mode",
+                "rule",
+                "statement",
+                "missing_policy"
+              ]
+            }
+          },
+          "scope": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "target_kinds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "range": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "number"
+                      },
+                      "unit": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "unit"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "area": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "number"
+                      },
+                      "unit": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "unit"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "duration": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "value": {
+                        "type": "number"
+                      },
+                      "unit": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "unit"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "unknowns": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "target_kinds",
+              "range",
+              "area",
+              "duration",
+              "unknowns"
+            ]
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "property_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "definition_version": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "subject_role": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "stage": {
+                  "enum": [
+                    "permission",
+                    "probability",
+                    "magnitude",
+                    "cost",
+                    "timing",
+                    "stability"
+                  ]
+                },
+                "contribution_id": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "property_id",
+                "definition_version",
+                "subject_role",
+                "stage",
+                "contribution_id"
+              ]
+            }
+          },
+          "resolver": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "authority": {
+            "enum": [
+              "mechanical",
+              "gm_judgment"
+            ]
+          },
+          "resistance": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "mode": {
+                  "enum": [
+                    "rule",
+                    "judgment"
+                  ]
+                },
+                "rule": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "version": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "version"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "statement": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "missing_policy": {
+                  "enum": [
+                    "block",
+                    "request_judgment"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "mode",
+                "rule",
+                "statement",
+                "missing_policy"
+              ]
+            }
+          },
+          "postconditions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "mode": {
+                  "enum": [
+                    "rule",
+                    "judgment"
+                  ]
+                },
+                "rule": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "version": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "version"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "statement": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "missing_policy": {
+                  "enum": [
+                    "block",
+                    "request_judgment"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "mode",
+                "rule",
+                "statement",
+                "missing_policy"
+              ]
+            }
+          }
+        },
+        "required": [
+          "operation",
+          "target_role",
+          "mechanism",
+          "preconditions",
+          "scope",
+          "inputs",
+          "resolver",
+          "authority",
+          "resistance",
+          "postconditions"
+        ]
+      }
+    },
+    "costs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resource": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "property_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "definition_version": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "subject_role": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stage": {
+                "enum": [
+                  "permission",
+                  "probability",
+                  "magnitude",
+                  "cost",
+                  "timing",
+                  "stability"
+                ]
+              },
+              "contribution_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "property_id",
+              "definition_version",
+              "subject_role",
+              "stage",
+              "contribution_id"
+            ]
+          },
+          "amount": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "type": "number"
+              },
+              "unit": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "value",
+              "unit"
+            ]
+          },
+          "when": {
+            "enum": [
+              "attempt",
+              "success",
+              "failure",
+              "upkeep",
+              "release"
+            ]
+          },
+          "insufficient_policy": {
+            "enum": [
+              "block",
+              "interrupt",
+              "declared_overdraw"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "resource",
+          "amount",
+          "when",
+          "insufficient_policy"
+        ]
+      }
+    },
+    "resolution_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ]
+    },
+    "termination": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "mode": {
+            "enum": [
+              "rule",
+              "judgment"
+            ]
+          },
+          "rule": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "missing_policy": {
+            "enum": [
+              "block",
+              "request_judgment"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "mode",
+          "rule",
+          "statement",
+          "missing_policy"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "version",
+    "design_status",
+    "evidence",
+    "expression",
+    "name",
+    "derivation",
+    "practice_status",
+    "activation",
+    "trigger",
+    "channels",
+    "effects",
+    "costs",
+    "resolution_policy",
+    "termination"
+  ]
+}

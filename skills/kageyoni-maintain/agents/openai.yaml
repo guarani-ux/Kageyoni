@@ -1,0 +1,14 @@
+interface:
+  display_name: Kageyoni Maintain
+  short_description: Maintain Kageyoni world state
+  default_prompt: Use $kageyoni-maintain to verify or evolve the Kageyoni engine and
+    campaign safely.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

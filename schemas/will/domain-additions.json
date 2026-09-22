@@ -1,0 +1,65 @@
+{
+  "DOMAINS": {
+    "will_definition": {
+      "name": "text",
+      "classification": "enum:primordial|derivative|independent|false|unknown",
+      "contract": "json"
+    },
+    "will_expression": {
+      "definition": "ref:will_definition",
+      "bearer": "ref:character|location|faction",
+      "legacy_will": "ref:will",
+      "contract": "json"
+    },
+    "will_technique": {
+      "expression": "ref:will_expression",
+      "ability": "ref:ability",
+      "name": "text",
+      "contract": "json"
+    },
+    "will_awakening": {
+      "expression": "ref:will_expression",
+      "contract": "json"
+    },
+    "will_development": {
+      "expression": "ref:will_expression",
+      "progression": "ref:progression",
+      "contract": "json"
+    },
+    "will_effect": {
+      "expression": "ref:will_expression",
+      "technique": "ref:will_technique",
+      "contract": "json"
+    }
+  },
+  "REQUIRED": {
+    "will_definition": [
+      "name",
+      "classification",
+      "contract"
+    ],
+    "will_expression": [
+      "definition",
+      "bearer",
+      "contract"
+    ],
+    "will_technique": [
+      "expression",
+      "name",
+      "contract"
+    ],
+    "will_awakening": [
+      "expression",
+      "contract"
+    ],
+    "will_development": [
+      "expression",
+      "contract"
+    ],
+    "will_effect": [
+      "expression",
+      "technique",
+      "contract"
+    ]
+  }
+}

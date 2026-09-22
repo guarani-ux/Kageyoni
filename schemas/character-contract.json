@@ -1,0 +1,129 @@
+{
+  "schema": "kageyoni.character",
+  "version": "1",
+  "domains": {
+    "character_identity": {
+      "character": "ref:character",
+      "existence": "enum:established|provisional|alleged",
+      "canonical_name": "text",
+      "name_status": "enum:known|unknown|absent|not_applicable",
+      "continuity": "enum:established|disputed|unresolved|transformed"
+    },
+    "character_aspect": {
+      "character": "ref:character",
+      "section": "enum:nature|interiority|portrayal|condition|perspective|development",
+      "kind": "enum:facet|embodiment|constituent|principle|drive|commitment|preference|boundary|conflict|description|voice|mannerism|habit|pleasure|attachment|injury|fatigue|memory_disruption|recognition_disruption|intention_impairment|agency_constraint|communication|memory|question",
+      "value_status": "enum:known|unknown|absent|not_applicable",
+      "statement": "text",
+      "related_character": "ref:character",
+      "related_item": "ref:item",
+      "clock": "ref:clock",
+      "valid_from": "number",
+      "valid_until": "number",
+      "ending_condition": "text",
+      "phase": "enum:active|ended",
+      "change_basis": "enum:established|voluntary|compelled|deceived|disrupted|recovered|unknown",
+      "supersedes": "ref:character_aspect"
+    },
+    "character_presence": {
+      "character": "ref:character",
+      "location": "ref:location",
+      "embodiment": "ref:character_aspect",
+      "mode": "enum:physical|projected|distributed|unknown",
+      "phase": "enum:present|departed|uncertain"
+    },
+    "character_lineage": {
+      "predecessor": "ref:character",
+      "successor": "ref:character",
+      "relation": "enum:origin|split|merge|succession|copy|fragment|disputed",
+      "explanation": "text"
+    }
+  },
+  "required": {
+    "character_identity": [
+      "character",
+      "existence",
+      "name_status",
+      "continuity"
+    ],
+    "character_aspect": [
+      "character",
+      "section",
+      "kind",
+      "value_status",
+      "phase",
+      "change_basis"
+    ],
+    "character_presence": [
+      "character",
+      "location",
+      "mode",
+      "phase"
+    ],
+    "character_lineage": [
+      "predecessor",
+      "successor",
+      "relation",
+      "explanation"
+    ]
+  },
+  "sections": {
+    "nature": [
+      "constituent",
+      "embodiment",
+      "facet"
+    ],
+    "interiority": [
+      "boundary",
+      "commitment",
+      "conflict",
+      "drive",
+      "preference",
+      "principle"
+    ],
+    "portrayal": [
+      "attachment",
+      "description",
+      "habit",
+      "mannerism",
+      "pleasure",
+      "voice"
+    ],
+    "condition": [
+      "agency_constraint",
+      "communication",
+      "fatigue",
+      "injury",
+      "intention_impairment",
+      "memory_disruption",
+      "recognition_disruption"
+    ],
+    "perspective": [
+      "memory"
+    ],
+    "development": [
+      "question"
+    ]
+  },
+  "record_envelope": [
+    "id",
+    "domain",
+    "branch",
+    "version",
+    "status",
+    "visibility",
+    "audience",
+    "evidence",
+    "updated_event"
+  ],
+  "commands": [
+    "character-create",
+    "character-read",
+    "character-readiness"
+  ],
+  "compatibility": {
+    "runtime_schema": "4",
+    "workflow_api": "3",
+    "character_schema": "1"
+  }
+}

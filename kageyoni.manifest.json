@@ -1,0 +1,19 @@
+{
+  "engine_version": "11.0.0",
+  "protocol_version": "0.1.0",
+  "schema_migration": 22,
+  "entrypoint": "KAGEYONI.md",
+  "handoff": "V11-HANDOFF.md",
+  "state_default": "build/kageyoni.sqlite",
+  "composition_frames": "kageyoni/composition/data",
+  "commands": {
+    "initialize": "python -m kageyoni --db <db> engine-init",
+    "verify": "python -m kageyoni --db <db> verify",
+    "operate": "python -m kageyoni --db <db> operate --input <json>",
+    "preflight": "python scripts/v10/preflight.py --db <db>",
+    "fast_check": "python scripts/v10/check_fast.py",
+    "full_check": "python scripts/v10/check_full.py"
+  },
+  "canonical_mutation": "Existing Engine.apply path only; composition governor previews and binds inputs before commit.",
+  "status": "scar_saturation_candidate"
+}

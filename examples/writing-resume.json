@@ -1,0 +1,31 @@
+{
+  "branch": "main",
+  "request_id": "resume-writing",
+  "expected_revision": 8,
+  "brief_spec": {
+    "form": "recap",
+    "audience": "mira",
+    "purpose": "Recall the unresolved question and leave the next decision open",
+    "perspective": null,
+    "scene": null,
+    "focus": [
+      "clarification",
+      "water"
+    ],
+    "event_ids": []
+  },
+  "brief_hash": "239ca266da68a5e67e6dffb869304b1e9c8562ecbe4da399a40b9e6e6eead94b",
+  "text": "Oren\u2019s question is still yours to answer. The crossing remains unresolved.",
+  "claims": [],
+  "review": {
+    "by": "fixture-gm",
+    "rationale": "Checked source fidelity, distinct voice, private perspective, agency and pacing. This is an authored example, not proof of literary quality.",
+    "checks": {
+      "grounding": true,
+      "perspective": true,
+      "voice": true,
+      "agency": true,
+      "pacing": true
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kageyoni:will_expression:0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "will-contract/0.1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "design_status": {
+      "enum": [
+        "proposed",
+        "accepted"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assertion": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "confirmed",
+              "reported",
+              "inferred",
+              "contested",
+              "unknown",
+              "proposed"
+            ]
+          }
+        },
+        "required": [
+          "source",
+          "assertion",
+          "status"
+        ]
+      }
+    },
+    "definition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ]
+    },
+    "bearer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "legacy_will_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "interpretation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "stat_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "property_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "definition_version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "subject_role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stage": {
+            "enum": [
+              "permission",
+              "probability",
+              "magnitude",
+              "cost",
+              "timing",
+              "stability"
+            ]
+          },
+          "contribution_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "property_id",
+          "definition_version",
+          "subject_role",
+          "stage",
+          "contribution_id"
+        ]
+      }
+    },
+    "learned_techniques": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "id",
+          "version"
+        ]
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "awakening_access": {
+      "enum": [
+        "unknown",
+        "unavailable",
+        "latent",
+        "accessed",
+        "repeatable",
+        "lost"
+      ]
+    },
+    "awakening_mastery": {
+      "enum": [
+        "unknown",
+        "unstable",
+        "practiced",
+        "stable"
+      ]
+    },
+    "awakening_definition": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "id",
+            "version"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "version",
+    "design_status",
+    "evidence",
+    "definition",
+    "bearer",
+    "legacy_will_id",
+    "interpretation",
+    "channels",
+    "stat_bindings",
+    "learned_techniques",
+    "conditions",
+    "awakening_access",
+    "awakening_mastery",
+    "awakening_definition"
+  ]
+}
