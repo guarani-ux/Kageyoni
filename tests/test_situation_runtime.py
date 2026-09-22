@@ -34,6 +34,17 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual("failed",self.r.runs["fail"].status)
         self.assertEqual("tool error",self.r.runs["fail"].failure_reason)
 
+    def test_effectful_stage_requires_and_uses_v11_mediator(self):
+        self.r.start(WorkflowRun("effect",self.x.situation_id,"campaign.default",objective="launch"))
+        with self.assertRaises(SituationError): self.r.begin_effectful_stage("effect","objective")
+        class M:
+            def __init__(self): self.calls=[]
+            def begin(self,**kw): self.calls.append(("begin",kw)); return {"m":"1"}
+            def complete(self,mediation,**kw): self.calls.append(("complete",kw)); return {"state":"COMPLETED"}
+        m=M(); rr=SituationRuntime(self.s,lambda ref,run: True,m,test_mode=True); rr.start(WorkflowRun("effect2",self.x.situation_id,"campaign.default",objective="launch"))
+        med=rr.begin_effectful_stage("effect2","objective"); rr.complete_effectful_stage("effect2","objective",med,evidence_type="artifact-result",evidence_ref="artifact:1",outcome={"artifact_id":"artifact:1"},verification={"ok":True})
+        self.assertIn("objective",rr.runs["effect2"].completed_stages); self.assertEqual(["begin","complete"],[x[0] for x in m.calls])
+
     def test_stage_requires_engine_evidence(self):
         self.r.start(WorkflowRun("p", self.x.situation_id, "campaign.default", objective="launch"))
         with self.assertRaises(SituationError):
