@@ -1,0 +1,15 @@
+--- a/kageyoni/v11/runtime.py
++++ b/kageyoni/v11/runtime.py
+@@
+         elif evidence_type=='pipeline-result':
+             row=self.db.execute('SELECT payload_json FROM pipeline_runs WHERE pipeline_id=?',(evidence_ref,)).fetchone(); require(row is not None,'pipeline execution evidence does not exist')
+             pipeline=json.loads(row['payload_json']); require(pipeline.get('phase')=='completed','pipeline execution evidence is not completed')
+             require(isinstance(effect,dict) and effect.get('pipeline_id')==evidence_ref and effect.get('phase')=='completed','pipeline execution evidence binding mismatch')
++        elif evidence_type=='artifact-result':
++            row=self.db.execute('SELECT artifact_id,digest,size FROM artifacts WHERE artifact_id=?',(evidence_ref,)).fetchone()
++            require(row is not None,'artifact execution evidence does not exist')
++            require(isinstance(effect,dict) and effect.get('artifact_id')==evidence_ref,'artifact execution evidence binding mismatch')
++            if effect.get('digest') is not None:
++                require(effect.get('digest')==row['digest'],'artifact execution digest mismatch')
+         else:
+             require(False,'unsupported execution evidence type')
