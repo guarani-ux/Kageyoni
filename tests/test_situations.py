@@ -29,6 +29,6 @@ class SituationArchitectureTests(unittest.TestCase):
         x=self.s.genesis("campaign","c",{"objective":"o","audience":"a"})
         p=DomainProjection("p","sciel",x.situation_id,("relationships",),("q",),method_refs=("method:composition",))
         self.s.propose_projection(p,established_refs={"method:composition"})
-        self.assertIn("p",self.s.projections)
+        self.assertIn("p",self.s.projections)\n\n    def test_domain_cannot_borrow_other_participant_evidence(self):\n        x=self.s.genesis("campaign","c",{"objective":"o","audience":"a"})\n        p=DomainProjection("borrowed","alexandra",x.situation_id,("relationships",),("q",),method_refs=("method:composition",))\n        with self.assertRaises(SituationError): self.s.propose_projection(p,established_refs={"method:composition"})
 
 if __name__=="__main__": unittest.main()
