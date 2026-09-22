@@ -21,7 +21,8 @@ class Situation:
     relations: list[dict[str, Any]] = field(default_factory=list)
     participants: list[str] = field(default_factory=list)
     constraints: list[str] = field(default_factory=list)
-    unknowns: list[str] = field(default_factory=list)\n    contradictions: list[dict[str, Any]] = field(default_factory=list)
+    unknowns: list[str] = field(default_factory=list)
+    contradictions: dict[str, list[Any]] = field(default_factory=dict)
     artifacts: list[str] = field(default_factory=list)
     workflow_id: str | None = None
     status: str = "active"
