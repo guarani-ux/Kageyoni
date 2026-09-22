@@ -57,6 +57,20 @@ class SituationRuntime:
         if not condition_satisfied: raise SituationError("resume condition not satisfied")
         run.status="active"; run.resume_condition=None; self.runs[run.run_id]=run; self.service.store.put("workflow_run",run.run_id,run)
 
+    def begin_effectful_stage(self,run_id,stage_id,*,requirement_version="situation.v1"):
+        if self.mediator is None: raise SituationError("effectful stage requires v11 mediator")
+        run=self._run(run_id)
+        return self.mediator.begin(situation_id=run.situation_id,workflow_id=run.workflow_id,stage_id=stage_id,objective=run.objective,requirement_version=requirement_version)
+
+    def complete_effectful_stage(self,run_id,stage_id,mediation,*,evidence_type,evidence_ref,outcome,verification):
+        if self.mediator is None: raise SituationError("effectful stage requires v11 mediator")
+        completed=self.mediator.complete(mediation,evidence_type=evidence_type,evidence_ref=evidence_ref,outcome=outcome,verification=verification)
+        if completed.get("state")!="COMPLETED": raise SituationError("v11 mediated effect did not complete")
+        run=self._run(run_id)
+        if stage_id not in run.completed_stages: run.completed_stages.append(stage_id)
+        self.service.store.put("workflow_run",run.run_id,run)
+        return completed
+
     def complete_stage(self,run_id,stage_id,evidence_ref):
         run=self._run(run_id); workflow=self.service.workflows.get(run.workflow_id) or self.service.store.get("workflow",run.workflow_id)
         stage=next(x for x in workflow.stages if x.stage_id==stage_id)
