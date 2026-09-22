@@ -27,8 +27,9 @@ class EvolutionProposal:
     outcome_refs:tuple[str,...]; status:str="candidate"
 
 class SituationRuntime:
-    def __init__(self,service:SituationService,evidence_resolver=None):
-        self.service=service; self.runs={}; self.extensions={}; self.evolution={}; self.evidence_resolver=evidence_resolver
+    def __init__(self,service:SituationService,evidence_resolver=None,mediator=None,*,test_mode=False):
+        self.service=service; self.runs={}; self.extensions={}; self.evolution={}; self.evidence_resolver=evidence_resolver; self.mediator=mediator; self.test_mode=test_mode
+        if not test_mode and mediator is None: raise SituationError("production SituationRuntime requires v11 mediator")
 
     def _run(self,run_id):
         return self.runs.get(run_id) or self.service.store.get("workflow_run",run_id)
