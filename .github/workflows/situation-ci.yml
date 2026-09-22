@@ -1,5 +1,7 @@
 name: Situation CI
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [v11-situation-build]
   workflow_dispatch:
