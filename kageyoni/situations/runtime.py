@@ -12,7 +12,7 @@ class WorkflowRun:
     objective: str = ""
     authority: tuple[str, ...] = ()
     completed_stages: list[str] = field(default_factory=list)
-    status: str = "active"
+    status: str = "active"\n    resume_condition: str | None = None\n    failure_reason: str | None = None
 
 @dataclass(frozen=True)
 class ExtensionProposal:
@@ -52,6 +52,22 @@ class SituationRuntime:
                 raise SituationError("child workflow cannot expand authority")
         self.runs[run.run_id] = run
         self.service.store.put("workflow_run", run.run_id, run)
+
+    def wait(self,run_id:str,resume_condition:str):
+        if not resume_condition: raise SituationError("waiting requires resume condition")
+        run=self.runs.get(run_id) or self.service.store.get("workflow_run",run_id)
+        run.status="waiting"; run.resume_condition=resume_condition; self.service.store.put("workflow_run",run.run_id,run)
+
+    def fail(self,run_id:str,reason:str):
+        if not reason: raise SituationError("failure requires reason")
+        run=self.runs.get(run_id) or self.service.store.get("workflow_run",run_id)
+        run.status="failed"; run.failure_reason=reason; self.service.store.put("workflow_run",run.run_id,run)
+
+    def resume(self,run_id:str,*,condition_satisfied:bool):
+        run=self.runs.get(run_id) or self.service.store.get("workflow_run",run_id)
+        if run.status!="waiting": raise SituationError("only waiting workflow can resume")
+        if not condition_satisfied: raise SituationError("resume condition not satisfied")
+        run.status="active"; run.resume_condition=None; self.runs[run.run_id]=run; self.service.store.put("workflow_run",run.run_id,run)
 
     def complete_stage(self, run_id: str, stage_id: str, evidence_ref: str):
         run = self.runs.get(run_id) or self.service.store.get("workflow_run", run_id)
