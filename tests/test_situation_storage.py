@@ -13,9 +13,9 @@ class SQLiteSituationStoreTests(unittest.TestCase):
   fd,path=tempfile.mkstemp(); os.close(fd)
   try:
    c1=sqlite3.connect(path); c1.execute(MIGRATION)
-   s1=SQLiteSituationStore(c1,{"situation":lambda p:Situation(**p)})
+   s1=SQLiteSituationStore(c1)
    x=Situation("s1","research","research","q",objects={"question":"q"}); s1.put("situation","s1",x); c1.commit(); c1.close()
-   c2=sqlite3.connect(path); s2=SQLiteSituationStore(c2,{"situation":lambda p:Situation(**p)})
+   c2=sqlite3.connect(path); s2=SQLiteSituationStore(c2)
    y=s2.get("situation","s1"); self.assertEqual("q",y.objective); self.assertEqual({"question":"q"},y.objects); c2.close()
   finally: os.unlink(path)
 
