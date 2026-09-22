@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-09-22T14:12:15Z",
+  "foundation_path": "C:\\Users\\flowe\\OneDrive\\Desktop\\Kageyoni-v11.0.0-Foundation",
+  "git_repository": "guarani-ux/Kageyoni",
+  "git_branch": "v11-situation-build",
+  "classification_counts": {
+    "inherited_source": 270,
+    "newer_branch_implementation": 32,
+    "generated_artifacts_excluded": 18,
+    "duplicates_reconciled": 4,
+    "superseded_source": 2,
+    "unresolved_conflicts": 0
+  },
+  "lineage_mapping": {
+    "inherited_foundation_modules": [
+      "kageyoni/engine.py",
+      "kageyoni/operations.py",
+      "kageyoni/terminal.py",
+      "kageyoni/characters/*",
+      "kageyoni/composition/*",
+      "kageyoni/decisions/*",
+      "kageyoni/development/*",
+      "kageyoni/expression/*",
+      "kageyoni/learning/*",
+      "kageyoni/methods/*",
+      "kageyoni/nodes/*",
+      "kageyoni/persistence/*",
+      "kageyoni/personality/*",
+      "kageyoni/will/*",
+      "kageyoni/workflows/*",
+      "kageyoni/workspaces/*",
+      "kageyoni/world/*",
+      "kageyoni/writing/*",
+      "migrations/migration_002.sql through migration_022.sql"
+    ],
+    "newer_branch_implementations": [
+      "kageyoni/v11/* (adaptive, context, enforcement, frontier, integration, runtime)",
+      "kageyoni/situations/* (catalog, comparative, integration, long_horizon, memory, models, qualification, runtime, scar, service, storage, studio, v11_adapter)",
+      "migration_023.sql (situation_architecture)",
+      ".agents/* (skills, workflows, governance)",
+      "evidence/* (audits, raw, comparative, horizon, qualification)",
+      "experiments/* (r5, r6)",
+      "tests/test_situation*.py",
+      "tests/test_v11*.py"
+    ],
+    "excluded_artifacts": [
+      "*.sqlite, *.sqlite-wal, *.sqlite-shm",
+      "*.bak, *.pre-v*.bak",
+      "dist/*, build/*, *.egg-info/*",
+      "__pycache__/*",
+      "state/*, recovery/*"
+    ],
+    "reconciliation_notes": "Lineage unified into single authoritative repository tree. Zero unapplied patches remain. Zero unresolved conflicts remain."
+  },
+  "exit_condition_satisfied": true
+}

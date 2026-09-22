@@ -1,0 +1,31 @@
+{
+  "condition": "C",
+  "fixture_id": "r5-fixture-research-planning",
+  "domain": "research_planning",
+  "prompt": "Workflow: research.default\nObjective: Produce a structured technical inquiry into SQLite WAL concurrency boundaries under high-frequency multithreaded readers.",
+  "raw_response": {
+    "domain": "research_planning",
+    "situation_id": "59af471f-0f6c-4dda-b7b5-e2e72d995f9e",
+    "workflow_id": "research.default",
+    "stages_executed": [
+      "question",
+      "evidence",
+      "contradictions",
+      "synthesis"
+    ],
+    "delivered_sections": {
+      "failure_mechanism_analysis": "Workflow stage output for failure_mechanism_analysis with dependency gates verified.",
+      "lock_state_diagram": "Workflow stage output for lock_state_diagram with dependency gates verified.",
+      "mitigation_strategies": "Workflow stage output for mitigation_strategies with dependency gates verified.",
+      "unresolved_edge_cases": "Workflow stage output for unresolved_edge_cases with dependency gates verified."
+    }
+  },
+  "tool_operations": [
+    "service.genesis",
+    "service.bind_workflow",
+    "workflow.execute:4_stages"
+  ],
+  "mediation_events": [],
+  "overhead_units": 2,
+  "latency_ms": 6.385499989846721
+}

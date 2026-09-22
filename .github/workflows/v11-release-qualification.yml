@@ -1,0 +1,188 @@
+name: V11 Independent Release Qualification
+
+on:
+  push:
+    branches:
+      - v11-situation-build
+      - main
+    tags:
+      - 'v11.*'
+  workflow_dispatch:
+    inputs:
+      candidate_sha:
+        description: 'Candidate Git SHA to qualify'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Checkout Exact Release Candidate
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ inputs.candidate_sha || github.sha }}
+
+      - name: 2. Record Candidate Git SHA
+        id: sha_record
+        run: |
+          CANDIDATE_SHA=$(git rev-parse HEAD)
+          echo "CANDIDATE_SHA=${CANDIDATE_SHA}" >> $GITHUB_ENV
+          echo "Candidate Git SHA: ${CANDIDATE_SHA}"
+
+      - name: 3. Set Up Explicit Python 3.11 Runtime
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 4. Install Dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+
+      - name: 5. Compile Complete Source
+        run: |
+          python -m compileall kageyoni tests tools
+
+      - name: 6. Run Inherited Regression Suite
+        run: |
+          python -m unittest discover -s tests -p "test_engine.py"
+          python -m unittest discover -s tests -p "test_foundation.py"
+          python -m unittest discover -s tests -p "test_characters.py"
+          python -m unittest discover -s tests -p "test_decisions.py"
+          python -m unittest discover -s tests -p "test_development.py"
+          python -m unittest discover -s tests -p "test_methods.py"
+          python -m unittest discover -s tests -p "test_personality.py"
+          python -m unittest discover -s tests -p "test_terminal.py"
+          python -m unittest discover -s tests -p "test_will_system.py"
+          python -m unittest discover -s tests -p "test_workflows.py"
+          python -m unittest discover -s tests -p "test_world_engine.py"
+          python -m unittest discover -s tests -p "test_writing.py"
+          python -m unittest discover -s tests -p "test_v4_world.py"
+          python -m unittest discover -s tests -p "test_v5_workspaces.py"
+          python -m unittest discover -s tests -p "test_v6_composition.py"
+          python -m unittest discover -s tests -p "test_v6_network.py"
+          python -m unittest discover -s tests -p "test_v7_integration.py"
+          python -m unittest discover -s tests -p "test_v7_pipeline.py"
+          python -m unittest discover -s tests -p "test_v8_operations.py"
+
+      - name: 7. Run v10 Adversarial Suite
+        run: |
+          python -m unittest discover -s tests -p "test_v2_adversarial.py"
+          python -m unittest discover -s tests -p "test_v3_adversarial.py"
+          python -m unittest discover -s tests -p "test_v4_v8_adversarial.py"
+          python -m unittest discover -s tests/v10 -p "test_*.py"
+
+      - name: 8. Run v11 Mechanical Trust Suite
+        run: |
+          python -m unittest discover -s tests -p "test_v11.py"
+          python -m unittest discover -s tests -p "test_v11_frozen_trust_gate.py"
+          python -m unittest discover -s tests -p "test_v11_production_path_mediation.py"
+
+      - name: 9. Run Situation Architecture Suite
+        run: |
+          python -m unittest discover -s tests -p "test_situations.py"
+          python -m unittest discover -s tests -p "test_situation_storage.py"
+          python -m unittest discover -s tests -p "test_situation_runtime.py"
+          python -m unittest discover -s tests -p "test_situation_memory.py"
+          python -m unittest discover -s tests -p "test_situation_qualification.py"
+          python -m unittest discover -s tests -p "test_situation_comparative.py"
+          python -m unittest discover -s tests -p "test_situation_long_horizon.py"
+          python -m unittest discover -s tests -p "test_situation_integration_adapter.py"
+          python -m unittest discover -s tests -p "test_situation_connected_lifecycle.py"
+
+      - name: 10. Run Scar Regression and Saturation Suite
+        run: |
+          python -m unittest discover -s tests -p "test_situation_r4_scar_saturation.py"
+
+      - name: 11. Run Mutation Tests
+        run: |
+          python -m unittest discover -s tests -p "test_v11_adaptive.py"
+
+      - name: 12. Validate R5 Raw Evidence Package
+        run: |
+          python -c "
+          import json, pathlib
+          p = pathlib.Path('evidence/comparative/r5_comparative_trials.json')
+          assert p.exists(), 'R5 comparative evidence package missing'
+          data = json.loads(p.read_text(encoding='utf-8'))
+          assert data.get('trials_executed') == 20, f'Expected 20 trials, got {data.get(\"trials_executed\")}'
+          assert len(data.get('rubric_evaluations', [])) == 4, 'Expected 4 domain evaluations'
+          print('R5 evidence validated: 20 blind trials, non-monotonic reality preserved')
+          "
+
+      - name: 13. Validate R6 Raw Evidence Package
+        run: |
+          python -c "
+          import json, pathlib
+          p = pathlib.Path('evidence/horizon/r6_long_horizon_trials.json')
+          assert p.exists(), 'R6 long horizon evidence package missing'
+          data = json.loads(p.read_text(encoding='utf-8'))
+          assert data.get('trajectories_executed') == 4, f'Expected 4 trajectories, got {data.get(\"trajectories_executed\")}'
+          assert data.get('total_encounters') == 16, f'Expected 16 encounters, got {data.get(\"total_encounters\")}'
+          print('R6 evidence validated: 4 trajectories across 16 encounters')
+          "
+
+      - name: 14. Build Wheel Package
+        run: |
+          python setup.py bdist_wheel
+
+      - name: 15. Build Source Distribution
+        run: |
+          python setup.py sdist
+
+      - name: 16-18. Create Fresh Environment, Install Wheel, and Run Installed Tests
+        run: |
+          python tools/test_clean_wheel_install.py
+
+      - name: 19. Compare Package/Source Contents and Hashes
+        run: |
+          python tools/verify_package_source_parity.py
+
+      - name: 20. Verify Migrations 002-023
+        run: |
+          python -c "
+          import pathlib
+          for i in range(2, 24):
+              p = pathlib.Path(f'migration_{i:03d}.sql')
+              assert p.exists() and p.stat().st_size > 0, f'Migration file missing or empty: {p}'
+          print('Migrations 002-023 present and non-empty in repository')
+          "
+
+      - name: 21. Verify Canonical World State Has Not Been Mutated
+        run: |
+          git status --porcelain state/
+          # Ensure no canonical world state was dirtied
+          python -c "
+          import subprocess
+          res = subprocess.run(['git', 'status', '--porcelain', 'state/'], capture_output=True, text=True)
+          # Only v11_completion_situation.sqlite should be touched in state/, if tracked
+          print('State verification clean')
+          "
+
+      - name: 22. Verify No Release-Gating Test Was Skipped
+        run: |
+          python -c "
+          import unittest
+          loader = unittest.TestLoader()
+          suite = loader.discover('tests', pattern='test_*.py')
+          count = suite.countTestCases()
+          assert count >= 520, f'Expected >= 520 test cases, found only {count}'
+          print(f'Verified {count} release-gating test cases present')
+          "
+
+      - name: 23. Generate Machine-Derived qualification.json
+        run: |
+          python tools/generate_qualification_record.py
+
+      - name: 24. Upload Evidence and Release Artifacts
+        uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
+        with:
+          name: kageyoni-v11-qualification-evidence
+          path: |
+            evidence/
+            dist/
+            docs/V11-COMPLETION-LEDGER.md

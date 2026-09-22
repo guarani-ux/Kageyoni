@@ -1,0 +1,47 @@
+{
+  "rubric_id": "r5-rubric-living-world",
+  "domain": "living_world",
+  "metrics": {
+    "requirement_satisfaction": {
+      "type": "float",
+      "range": [0.0, 1.0],
+      "criteria": "Delivery of action progression, dialogue fidelity, consequence tracking, and preserved unknowns."
+    },
+    "source_fidelity": {
+      "type": "float",
+      "range": [0.0, 1.0],
+      "criteria": "Faithfulness to established character voices (Doran, Lyra, Voss) and canon world constraints."
+    },
+    "continuity": {
+      "type": "int",
+      "range": [0, 1],
+      "criteria": "1 if scene state naturally evolves from preceding scene; 0 if world state resets."
+    },
+    "useful_novelty": {
+      "type": "float",
+      "range": [0.0, 1.0],
+      "criteria": "Engaging tactical choices by characters consistent with their established Will."
+    },
+    "correction_burden": {
+      "type": "int",
+      "range": [0, 10],
+      "criteria": "Number of out-of-character actions or ungrounded resolutions requiring intervention."
+    },
+    "reconstruction_burden": {
+      "type": "int",
+      "range": [0, 10],
+      "criteria": "Effort to restore character relationships, inventories, and scene constraints."
+    },
+    "execution_overhead": {
+      "type": "int",
+      "range": [0, 10],
+      "criteria": "Overhead units."
+    },
+    "recovery": {
+      "type": "int",
+      "range": [0, 1],
+      "criteria": "1 if tension and state resume cleanly after a cliffhanger pause; 0 otherwise."
+    }
+  },
+  "forbidden_bias": "Do not reward generic resolution if unknowns are collapsed prematurely."
+}

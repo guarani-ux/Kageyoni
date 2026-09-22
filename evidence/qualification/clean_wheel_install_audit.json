@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "wheel_file": "kageyoni_engine-11.0.0-py3-none-any.whl",
+  "wheel_sha256": "55ac9194e69d74b26a52f78d4afec1252d7c07d67f76d3f1c3e9fb50c39cb39d",
+  "python_executable": "C:\\Users\\flowe\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "isolated_env": "C:\\Users\\flowe\\AppData\\Local\\Temp\\tmpchx9sm06\\test_venv",
+  "assertions": {
+    "no_repository_on_sys_path": true,
+    "imported_from_site_packages": true,
+    "migrations_002_023_present": true,
+    "engine_install_all_and_verify": true,
+    "situation_templates_loaded": 6,
+    "v11_protected_operations_functional": true
+  }
+}

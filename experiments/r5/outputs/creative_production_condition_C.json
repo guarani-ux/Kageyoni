@@ -1,0 +1,31 @@
+{
+  "condition": "C",
+  "fixture_id": "r5-fixture-creative-production",
+  "domain": "creative_production",
+  "prompt": "Workflow: production_brief.default\nObjective: Draft an authoritative multi-character production brief for the 'Shadows of Guarani' audio drama episode 4.",
+  "raw_response": {
+    "domain": "creative_production",
+    "situation_id": "0b126e90-afe3-4c46-9c08-de8681e24509",
+    "workflow_id": "production_brief.default",
+    "stages_executed": [
+      "objective",
+      "audience",
+      "requirements",
+      "brief"
+    ],
+    "delivered_sections": {
+      "scene_breakdown": "Workflow stage output for scene_breakdown with dependency gates verified.",
+      "character_objectives": "Workflow stage output for character_objectives with dependency gates verified.",
+      "technical_acoustic_constraints": "Workflow stage output for technical_acoustic_constraints with dependency gates verified.",
+      "explicit_unknowns": "Workflow stage output for explicit_unknowns with dependency gates verified."
+    }
+  },
+  "tool_operations": [
+    "service.genesis",
+    "service.bind_workflow",
+    "workflow.execute:4_stages"
+  ],
+  "mediation_events": [],
+  "overhead_units": 2,
+  "latency_ms": 7.424799987347797
+}

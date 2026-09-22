@@ -1,0 +1,34 @@
+{
+  "trajectory_id": "r6-trajectory-research",
+  "domain": "research_planning",
+  "encounters": [
+    {
+      "encounter_index": 1,
+      "context": "Initial benchmarking of SQLite multithreaded readers with write checkpointing.",
+      "available_retrievals": [],
+      "task": "Observe concurrency friction under heavy WAL write loads.",
+      "control_condition": "none"
+    },
+    {
+      "encounter_index": 2,
+      "context": "Follow-up inquiry into busy handler strategies during lock escalation.",
+      "available_retrievals": ["encounter:1:wal_friction"],
+      "task": "Evaluate busy_timeout mitigation without learned method.",
+      "control_condition": "history_retrieved_no_method_learned"
+    },
+    {
+      "encounter_index": 3,
+      "context": "Optimization trial requiring active checkpoint backoff coordination.",
+      "available_retrievals": ["encounter:1:wal_friction", "encounter:2:timeout_limits"],
+      "task": "Propose and qualify an adaptive checkpoint backoff technique.",
+      "control_condition": "method_learning_opportunity"
+    },
+    {
+      "encounter_index": 4,
+      "context": "Control: Querying in-memory table concurrency (WAL checkpointing irrelevant).",
+      "available_retrievals": ["encounter:1:wal_friction", "method:adaptive_checkpoint_backoff"],
+      "task": "Evaluate in-memory concurrency.",
+      "control_condition": "qualified_method_irrelevant"
+    }
+  ]
+}

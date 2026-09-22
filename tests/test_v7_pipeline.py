@@ -14,8 +14,9 @@ ROOT=Path(__file__).resolve().parents[1]
 class PipelineTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name);self.path=self.root/'engine.sqlite';self.e=Engine(self.path)
-        self.e.db.executescript((ROOT/'migration_016.sql').read_text())
-        self.e.db.execute("INSERT INTO migration_checks VALUES(16,15,'migration_016.sql',?,'4',CURRENT_TIMESTAMP)",(hashlib.sha256((ROOT/'migration_016.sql').read_bytes()).hexdigest(),));self.e.db.commit();self.p=Pipelines(self.e)
+        from kageyoni.persistence.migrations import install_v11
+        install_v11(self.e)
+        self.p=Pipelines(self.e)
     def tearDown(self):self.e.close();self.temp.cleanup()
     def write(self,id='write',deps=None):
         content='exact value';return dict(id=id,kind='write_file',config=dict(root=str(self.root),path=id+'.txt',content=content,expected_sha256=hashlib.sha256(content.encode()).hexdigest()),dependencies=deps or [])

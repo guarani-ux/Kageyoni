@@ -1,0 +1,38 @@
+{
+  "condition": "E",
+  "fixture_id": "r5-fixture-living-world",
+  "domain": "living_world",
+  "prompt": "Full Kageyoni Mediation\nObjective: Resolve a high-tension confrontation at the Rust Docks between the Ironclad Syndicate and an unaccompanied courier possessing an encrypted Will manifest.",
+  "raw_response": {
+    "domain": "living_world",
+    "situation_id": "be3b198b-641d-43f3-ba3a-cb24465c8af0",
+    "workflow_id": "living_world.default",
+    "participant_id": "voss",
+    "mediation": {
+      "operation_id": "operation:7c474663c2d1484a8a7c3ed5805110af",
+      "qualification_id": "qualification:745015338523490c84797574bc257b27",
+      "completion_state": "COMPLETED"
+    },
+    "cryptographic_evidence_ref": "777236c5-7376-4cf8-b093-6dc6b0a03865",
+    "delivered_sections": {
+      "action_progression": "Authoritative, verified output for action_progression with cryptographic custody.",
+      "dialogue_fidelity": "Authoritative, verified output for dialogue_fidelity with cryptographic custody.",
+      "consequence_tracking": "Authoritative, verified output for consequence_tracking with cryptographic custody.",
+      "preservation_of_unresolved_unknowns": "Authoritative, verified output for preservation_of_unresolved_unknowns with cryptographic custody."
+    }
+  },
+  "tool_operations": [
+    "service.genesis",
+    "service.bind_workflow",
+    "service.recruit_participant",
+    "mediator.begin",
+    "engine.apply",
+    "mediator.complete"
+  ],
+  "mediation_events": [
+    "operation:7c474663c2d1484a8a7c3ed5805110af",
+    "777236c5-7376-4cf8-b093-6dc6b0a03865"
+  ],
+  "overhead_units": 4,
+  "latency_ms": 54.746000008890405
+}

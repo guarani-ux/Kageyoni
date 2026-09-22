@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-09-22T14:38:00Z",
+  "audit_scope": "Full Repository Mechanical Baseline Run (Slice 2)",
+  "total_tests_discovered": 529,
+  "initial_failures_observed": {
+    "failures": 1,
+    "errors": 16,
+    "affected_module": "tests/test_v7_pipeline.py"
+  },
+  "root_cause_analysis": {
+    "cluster_id": "MIGRATION_PREDECESSOR_GAP_V7_PIPELINE",
+    "mechanism": "PipelineTests.setUp bypassed official migration installer by manually executing migration_016.sql without predecessor migrations 009-015. When mandatory v11 mediation (SCAR-pipeline-v11-mediation) was invoked in pipeline.run, install_v11 failed-closed due to predecessor check on migration 009 (MAX(version) was 16 instead of 8) and component version mismatch.",
+    "classification": "migration gap / test-only bypass exposed by mandatory production mediation"
+  },
+  "repair": {
+    "target_file": "tests/test_v7_pipeline.py",
+    "action": "Migrated setUp to invoke install_v11(self.e), establishing legitimate predecessor chain and version records.",
+    "verification_result": "Ran 15 tests in 38.947s: 15/15 OK (0 failures, 0 errors)"
+  },
+  "status": "FROZEN_RESOLVED"
+}

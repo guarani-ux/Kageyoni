@@ -1,0 +1,72 @@
+{
+  "git_sha": "297bfcd76b1657353d3a7a9268a3df688c6ced4f",
+  "mechanical": {
+    "inherited": "pass",
+    "trust": "pass",
+    "situations": "pass",
+    "scar": "pass",
+    "mutation": "pass",
+    "package_parity": "pass"
+  },
+  "comparative": {
+    "status": "qualified",
+    "evidence": [
+      {
+        "artifact": "evidence/comparative/r5_comparative_trials.json",
+        "manifest": "experiments/r5/FIXTURE_MANIFEST.json",
+        "total_trials": 20,
+        "domains": [
+          "creative_production",
+          "research_planning",
+          "repository_technical",
+          "living_world"
+        ],
+        "conditions": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "key_findings": {
+          "overhead_tradeoff": "Condition A (raw LLM baseline) strictly outperforms Condition E on execution overhead (0 vs 4). Full Kageyoni introduces non-zero computational overhead for state management and cryptographic checks.",
+          "continuity_boundary": "Condition B (Situation Template alone) delivers zero continuity improvement over Condition A without persistent participants.",
+          "reconstruction_boundary": "Topological workflows (Condition C) eliminate ordering failures but do not eliminate the reconstruction burden between sessions without persistent participants (Condition D).",
+          "fidelity_and_custody": "Condition E is the sole condition achieving 1.0 source fidelity, zero reconstruction burden, and cryptographic evidence custody in the append-only event log."
+        }
+      }
+    ]
+  },
+  "long_horizon": {
+    "status": "qualified",
+    "evidence": [
+      {
+        "artifact": "evidence/horizon/r6_long_horizon_trials.json",
+        "total_trajectories": 4,
+        "total_encounters": 16,
+        "distinction_enforced": "stored history != retrieved history != changed reasoning != changed capability != changed outcome",
+        "key_findings": {
+          "memory_vs_reasoning": "Encounter 2 in every trajectory proves that retrieving stored history alters reasoning parameters without altering underlying capability.",
+          "reasoning_vs_capability": "Encounter 3 proves that capability growth requires an engine-held qualified method registered and verified through EnforcerRegistry.",
+          "control_validation": "Encounter 4 proves that qualified methods are not falsely transferred to irrelevant contexts."
+        }
+      }
+    ]
+  },
+  "open_frontiers": [],
+  "open_scars": [],
+  "limitations": [
+    "Condition E mediation imposes a measurable execution overhead penalty (4 vs 0 on raw baseline) on trivial tasks.",
+    "Kageyoni verifies mechanical and structural invariants, not subjective aesthetic prose quality.",
+    "Local Windows filesystem file locks require explicit engine.close() lifecycle management.",
+    "Qualification authority is bound to exact SHA; uncommitted changes invalidate release eligibility."
+  ],
+  "release_eligible": true,
+  "derivation_proof": {
+    "all_mechanical_pass": true,
+    "no_blocking_frontiers": true,
+    "no_open_scars": true,
+    "r5_satisfied": true,
+    "r6_satisfied": true
+  }
+}

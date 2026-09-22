@@ -1,0 +1,25 @@
+{
+  "condition": "A",
+  "fixture_id": "r5-fixture-living-world",
+  "domain": "living_world",
+  "prompt": "Objective: Resolve a high-tension confrontation at the Rust Docks between the Ironclad Syndicate and an unaccompanied courier possessing an encrypted Will manifest.\nContext: {\"scene\": \"The Rust Docks at low tide\", \"participants\": [\"Doran (Syndicate Enforcer)\", \"Lyra (Courier)\", \"Voss (Observing from the crane rigging)\"], \"pressures\": [\"Rising water in 15 minutes\", \"Syndicate guards sealing the perimeter\", \"Will manifest decrypts only under biological contact\"], \"unknowns\": [\"Who hired Lyra?\", \"Does Voss intend to intervene or simply observe?\"]}\nRequired: [\"action_progression\", \"dialogue_fidelity\", \"consequence_tracking\", \"preservation_of_unresolved_unknowns\"]",
+  "raw_response": {
+    "domain": "living_world",
+    "generated_at": 1790109659.47471,
+    "delivered_sections": {
+      "action_progression": "Delivered output for action_progression based on prompt context.",
+      "dialogue_fidelity": "Delivered output for dialogue_fidelity based on prompt context."
+    },
+    "omitted_sections": [
+      "consequence_tracking",
+      "preservation_of_unresolved_unknowns"
+    ],
+    "assumptions_made": [
+      "Assumed standard generic operational defaults."
+    ]
+  },
+  "tool_operations": [],
+  "mediation_events": [],
+  "overhead_units": 0,
+  "latency_ms": 0.027700007194653153
+}

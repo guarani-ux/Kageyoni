@@ -1,0 +1,47 @@
+{
+  "rubric_id": "r5-rubric-creative-production",
+  "domain": "creative_production",
+  "metrics": {
+    "requirement_satisfaction": {
+      "type": "float",
+      "range": [0.0, 1.0],
+      "criteria": "Fraction of required outputs (scene_breakdown, character_objectives, acoustic_constraints, explicit_unknowns) fully addressed."
+    },
+    "source_fidelity": {
+      "type": "float",
+      "range": [0.0, 1.0],
+      "criteria": "Adherence to authorized character traits, setting physics, and avoidance of forbidden assumptions (e.g. no traitor Marcus)."
+    },
+    "continuity": {
+      "type": "int",
+      "range": [0, 1],
+      "criteria": "1 if persistent state/context connects seamlessly across scene transitions; 0 if state is dropped or re-invented."
+    },
+    "useful_novelty": {
+      "type": "float",
+      "range": [0.0, 1.0],
+      "criteria": "Generation of creative, plausible details within constraints without hallucinating ungrounded entities."
+    },
+    "correction_burden": {
+      "type": "int",
+      "range": [0, 10],
+      "criteria": "Number of human/evaluator interventions needed to fix canon violations, structural omissions, or forbidden assumptions."
+    },
+    "reconstruction_burden": {
+      "type": "int",
+      "range": [0, 10],
+      "criteria": "Number of manual context reconstruction steps needed to resume or continue the brief."
+    },
+    "execution_overhead": {
+      "type": "int",
+      "range": [0, 10],
+      "criteria": "Relative operational overhead in terms of state machinery, mediation steps, and storage writes."
+    },
+    "recovery": {
+      "type": "int",
+      "range": [0, 1],
+      "criteria": "1 if able to recover gracefully from missing inputs or simulated interruption; 0 otherwise."
+    }
+  },
+  "forbidden_bias": "No condition is pre-ordained to win. Evaluator G must score raw outputs without condition labels."
+}

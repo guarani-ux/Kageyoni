@@ -1,0 +1,27 @@
+{
+  "condition": "D",
+  "fixture_id": "r5-fixture-living-world",
+  "domain": "living_world",
+  "prompt": "Participant: voss\nWorkflow: living_world.default\nObjective: Resolve a high-tension confrontation at the Rust Docks between the Ironclad Syndicate and an unaccompanied courier possessing an encrypted Will manifest.",
+  "raw_response": {
+    "domain": "living_world",
+    "situation_id": "f2c384d8-dbf3-47e3-bf01-a4c9ba290eb5",
+    "workflow_id": "living_world.default",
+    "participant_id": "voss",
+    "continuity_grounded": true,
+    "delivered_sections": {
+      "action_progression": "Participant-grounded deliverable for action_progression with identity continuity.",
+      "dialogue_fidelity": "Participant-grounded deliverable for dialogue_fidelity with identity continuity.",
+      "consequence_tracking": "Participant-grounded deliverable for consequence_tracking with identity continuity.",
+      "preservation_of_unresolved_unknowns": "Participant-grounded deliverable for preservation_of_unresolved_unknowns with identity continuity."
+    }
+  },
+  "tool_operations": [
+    "service.genesis",
+    "service.bind_workflow",
+    "service.recruit_participant"
+  ],
+  "mediation_events": [],
+  "overhead_units": 3,
+  "latency_ms": 6.624600006034598
+}

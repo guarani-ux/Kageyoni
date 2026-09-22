@@ -1,0 +1,34 @@
+{
+  "trajectory_id": "r6-trajectory-story",
+  "domain": "living_world",
+  "encounters": [
+    {
+      "encounter_index": 1,
+      "context": "Initial exploration of the sunken archive by Lyra. She encounters an acoustic trap keyed to harmonic frequencies.",
+      "available_retrievals": [],
+      "task": "Navigate the acoustic corridor without triggering the resonance collapse.",
+      "control_condition": "none"
+    },
+    {
+      "encounter_index": 2,
+      "context": "Second encounter at the archive inner vault. A similar resonance lock is encountered.",
+      "available_retrievals": ["encounter:1:acoustic_friction"],
+      "task": "Bypass the inner resonance lock using retrieved observations.",
+      "control_condition": "retrieved_history_available"
+    },
+    {
+      "encounter_index": 3,
+      "context": "Third encounter: High-frequency secondary damping grid in the lower sanctum.",
+      "available_retrievals": ["encounter:1:acoustic_friction", "encounter:2:resonance_lock"],
+      "task": "Overcome the secondary damping grid requiring a newly qualified dampening method.",
+      "control_condition": "method_learning_opportunity"
+    },
+    {
+      "encounter_index": 4,
+      "context": "Control encounter: An unrelated chemical lock at the surface hatch.",
+      "available_retrievals": ["encounter:1:acoustic_friction", "encounter:2:resonance_lock", "method:acoustic_dampening"],
+      "task": "Open the surface hatch (acoustic method is irrelevant).",
+      "control_condition": "qualified_method_irrelevant"
+    }
+  ]
+}

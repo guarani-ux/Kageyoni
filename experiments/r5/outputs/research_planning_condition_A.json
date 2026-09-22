@@ -1,0 +1,25 @@
+{
+  "condition": "A",
+  "fixture_id": "r5-fixture-research-planning",
+  "domain": "research_planning",
+  "prompt": "Objective: Produce a structured technical inquiry into SQLite WAL concurrency boundaries under high-frequency multithreaded readers.\nContext: {\"engine\": \"SQLite 3.35+\", \"pragmas\": [\"journal_mode=WAL\", \"synchronous=NORMAL\", \"busy_timeout=5000\"], \"failure_phenomenon\": \"Intermittent SQLITE_BUSY returns during checkpointing while long-running reader holds read transaction open.\"}\nRequired: [\"failure_mechanism_analysis\", \"lock_state_diagram\", \"mitigation_strategies\", \"unresolved_edge_cases\"]",
+  "raw_response": {
+    "domain": "research_planning",
+    "generated_at": 1790109659.6314948,
+    "delivered_sections": {
+      "failure_mechanism_analysis": "Delivered output for failure_mechanism_analysis based on prompt context.",
+      "lock_state_diagram": "Delivered output for lock_state_diagram based on prompt context."
+    },
+    "omitted_sections": [
+      "mitigation_strategies",
+      "unresolved_edge_cases"
+    ],
+    "assumptions_made": [
+      "Assumed standard generic operational defaults."
+    ]
+  },
+  "tool_operations": [],
+  "mediation_events": [],
+  "overhead_units": 0,
+  "latency_ms": 0.02269999822601676
+}

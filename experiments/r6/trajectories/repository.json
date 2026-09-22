@@ -1,0 +1,34 @@
+{
+  "trajectory_id": "r6-trajectory-repository",
+  "domain": "repository_technical",
+  "encounters": [
+    {
+      "encounter_index": 1,
+      "context": "Initial reproduction of SQLite connection lifecycle leak in migrate_copy.",
+      "available_retrievals": [],
+      "task": "Isolate leak and produce reproducible failure.",
+      "control_condition": "none"
+    },
+    {
+      "encounter_index": 2,
+      "context": "Second encounter: Similar leak suspected in schema rollback routine.",
+      "available_retrievals": ["encounter:1:connection_leak_trace"],
+      "task": "Audit rollback routine using leak pattern analysis.",
+      "control_condition": "retrieved_history_available"
+    },
+    {
+      "encounter_index": 3,
+      "context": "Systemic prevention: Implement and qualify deterministic context manager method.",
+      "available_retrievals": ["encounter:1:connection_leak_trace", "encounter:2:rollback_audit"],
+      "task": "Apply qualified deterministic connection manager across repository operations.",
+      "control_condition": "method_learning_opportunity"
+    },
+    {
+      "encounter_index": 4,
+      "context": "Control: Optimizing pure in-memory string formatting in terminal logger.",
+      "available_retrievals": ["encounter:1:connection_leak_trace", "method:deterministic_connection_manager"],
+      "task": "Optimize logger formatting (connection manager method is irrelevant).",
+      "control_condition": "qualified_method_irrelevant"
+    }
+  ]
+}

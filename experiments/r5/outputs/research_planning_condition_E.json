@@ -1,0 +1,38 @@
+{
+  "condition": "E",
+  "fixture_id": "r5-fixture-research-planning",
+  "domain": "research_planning",
+  "prompt": "Full Kageyoni Mediation\nObjective: Produce a structured technical inquiry into SQLite WAL concurrency boundaries under high-frequency multithreaded readers.",
+  "raw_response": {
+    "domain": "research_planning",
+    "situation_id": "516dbc4b-16ee-4bd5-bfd6-22b2a426d90b",
+    "workflow_id": "research.default",
+    "participant_id": "systems_analyst",
+    "mediation": {
+      "operation_id": "operation:270ec9042bdf4808aa84207b3f3a34c7",
+      "qualification_id": "qualification:745015338523490c84797574bc257b27",
+      "completion_state": "COMPLETED"
+    },
+    "cryptographic_evidence_ref": "e3757974-c00d-4b1c-b15f-9c649e9511b5",
+    "delivered_sections": {
+      "failure_mechanism_analysis": "Authoritative, verified output for failure_mechanism_analysis with cryptographic custody.",
+      "lock_state_diagram": "Authoritative, verified output for lock_state_diagram with cryptographic custody.",
+      "mitigation_strategies": "Authoritative, verified output for mitigation_strategies with cryptographic custody.",
+      "unresolved_edge_cases": "Authoritative, verified output for unresolved_edge_cases with cryptographic custody."
+    }
+  },
+  "tool_operations": [
+    "service.genesis",
+    "service.bind_workflow",
+    "service.recruit_participant",
+    "mediator.begin",
+    "engine.apply",
+    "mediator.complete"
+  ],
+  "mediation_events": [
+    "operation:270ec9042bdf4808aa84207b3f3a34c7",
+    "e3757974-c00d-4b1c-b15f-9c649e9511b5"
+  ],
+  "overhead_units": 4,
+  "latency_ms": 57.59829998714849
+}

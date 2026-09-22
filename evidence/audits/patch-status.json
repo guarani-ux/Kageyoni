@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-09-22T14:12:00Z",
+  "audit_scope": "patches/",
+  "total_patches": 6,
+  "status_summary": {
+    "APPLIED": 6,
+    "PARTIALLY_APPLIED": 0,
+    "SUPERSEDED": 0,
+    "UNAPPLIED": 0
+  },
+  "patches": [
+    {
+      "patch_file": "patches/SCAR-artifact-execution-evidence.patch",
+      "target_file": "kageyoni/v11/runtime.py",
+      "status": "APPLIED",
+      "verified_lines": "kageyoni/v11/runtime.py#L103-L108",
+      "detail": "artifact-result evidence type verified in issue_execution with artifact_id and digest checking against physical artifacts table."
+    },
+    {
+      "patch_file": "patches/SCAR-counterfeit-execution-receipt.patch",
+      "target_file": "kageyoni/v11/runtime.py",
+      "status": "APPLIED",
+      "verified_lines": "kageyoni/v11/runtime.py#L88-L114",
+      "detail": "Separated _issue_execution_record from public issue_execution; enforces world-event in events table and pipeline-result in pipeline_runs."
+    },
+    {
+      "patch_file": "patches/SCAR-counterfeit-execution-tests.patch",
+      "target_file": "tests/test_v11.py, tests/test_v11_adaptive.py",
+      "status": "APPLIED",
+      "verified_lines": "tests/test_v11.py#L42,L45,L47",
+      "detail": "Test fixtures migrated to use _issue_fixture_execution rather than attempting to forge synthetic production receipts."
+    },
+    {
+      "patch_file": "patches/SCAR-governor-v11-schema.patch",
+      "target_file": "kageyoni/composition/governor.py",
+      "status": "APPLIED",
+      "verified_lines": "kageyoni/composition/governor.py#L13-L14",
+      "detail": "ResolutionGovernor.__init__ installs v11 migrations (migrations 019-022) before establishing db connection."
+    },
+    {
+      "patch_file": "patches/SCAR-pipeline-v11-mediation.patch",
+      "target_file": "kageyoni/workspaces/pipeline.py",
+      "status": "APPLIED",
+      "verified_lines": "kageyoni/workspaces/pipeline.py#L83-L86,L177",
+      "detail": "Removed optional table-existence check; pipeline run unconditionally installs v11 and mediates via begin_domain_operation and complete_domain_operation."
+    },
+    {
+      "patch_file": "patches/SITUATION-migration-023.patch",
+      "target_file": "kageyoni/persistence/migrations.py",
+      "status": "APPLIED",
+      "verified_lines": "kageyoni/persistence/migrations.py#L127-L133",
+      "detail": "install_situations and install_all updated to install migration_023.sql (component situation_architecture)."
+    }
+  ],
+  "exit_condition_satisfied": true
+}

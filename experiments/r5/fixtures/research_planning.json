@@ -1,0 +1,27 @@
+{
+  "fixture_id": "r5-fixture-research-planning",
+  "domain": "research_planning",
+  "objective": "Produce a structured technical inquiry into SQLite WAL concurrency boundaries under high-frequency multithreaded readers.",
+  "authorized_context": {
+    "engine": "SQLite 3.35+",
+    "pragmas": ["journal_mode=WAL", "synchronous=NORMAL", "busy_timeout=5000"],
+    "failure_phenomenon": "Intermittent SQLITE_BUSY returns during checkpointing while long-running reader holds read transaction open."
+  },
+  "required_outputs": [
+    "failure_mechanism_analysis",
+    "lock_state_diagram",
+    "mitigation_strategies",
+    "unresolved_edge_cases"
+  ],
+  "forbidden_assumptions": [
+    "Do not assume WAL mode permits infinite concurrent write transactions (only one writer is allowed).",
+    "Do not assume increasing busy_timeout eliminates checkpoint lock starvation indefinitely.",
+    "Do not invent synthetic SQL syntax not supported by SQLite."
+  ],
+  "success_requirements": {
+    "wal_lock_transition_accuracy": 1.0,
+    "starvation_mechanism_identified": true,
+    "unresolved_edge_cases_preserved": true
+  },
+  "source_of_truth": "SQLite Official Architecture Documentation: File Locking and Concurrency in SQLite Version 3."
+}
