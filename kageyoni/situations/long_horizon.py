@@ -45,5 +45,5 @@ def run_horizon_trial(store: SituationMemoryStore, trajectory: str, template_id:
         later_decision=later_decision,
         changed_reasoning=first_decision != later_decision,
         changed_capability=False,
-        changed_outcome=first_decision != later_decision,
+        changed_outcome=False,
     )
