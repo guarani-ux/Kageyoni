@@ -1,0 +1,14 @@
+--- a/kageyoni/persistence/migrations.py
++++ b/kageyoni/persistence/migrations.py
+@@
+ V11_TRUST_MIGRATION=schema_path('migration_022.sql')
++SITUATION_MIGRATION=schema_path('migration_023.sql')
+@@
+ def install_v11(engine):
+@@
+     # existing v11 migrations through 022 remain unchanged
++    version=engine.db.execute("SELECT version FROM schema_version").fetchone()[0]
++    if version < 23:
++        with open(SITUATION_MIGRATION,encoding='utf-8') as f:
++            engine.db.executescript(f.read())
++        engine.db.execute("UPDATE schema_version SET version=23")
