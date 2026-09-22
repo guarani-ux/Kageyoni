@@ -6,7 +6,7 @@ from kageyoni.situations.service import SituationError
 
 class RuntimeTests(unittest.TestCase):
  def setUp(self):
-  self.s=install_defaults(SituationService()); self.x=self.s.genesis("campaign","launch",{"objective":"launch","audience":"members"}); self.s.bind_workflow(self.x.situation_id,"campaign.default"); self.valid_evidence={"obs:objective"}; self.r=SituationRuntime(self.s, lambda ref,run: ref in self.valid_evidence)
+  self.s=install_defaults(SituationService()); self.x=self.s.genesis("campaign","launch",{"objective":"launch","audience":"members"}); self.s.bind_workflow(self.x.situation_id,"campaign.default"); self.valid_evidence={"obs:objective","out:one","out:two"}; self.r=SituationRuntime(self.s, lambda ref,run: ref in self.valid_evidence)
  def test_nested_cannot_replace_objective_or_authority(self):
   self.r.start(WorkflowRun("p",self.x.situation_id,"campaign.default",objective="launch",authority=("read","write")))
   with self.assertRaises(SituationError): self.r.start(WorkflowRun("c",self.x.situation_id,"campaign.default","p","different",("read",)))
@@ -21,12 +21,12 @@ class RuntimeTests(unittest.TestCase):
   p=ExtensionProposal("e",self.x.situation_id,"relation",{"from":"audience","relation":"interprets","to":"message"})
   self.r.propose_extension(p)
   with self.assertRaises(SituationError): self.r.promote_extension("e",("one",))
-  q=self.r.promote_extension("e",("one","two")); self.assertEqual("qualified",q.status)
+  with self.assertRaises(SituationError): self.r.promote_extension("e",("fake:one","fake:two"))\n  q=self.r.promote_extension("e",("out:one","out:two")); self.assertEqual("qualified",q.status)
  def test_recruitment_can_choose_nobody(self): self.assertEqual([],self.r.recruit(self.x.situation_id,[{"participant_id":"sciel","covers":["composition"],"evidence_refs":["m"]}],[]))
  def test_recruitment_requires_evidenced_relevance(self): self.assertEqual([],self.r.recruit(self.x.situation_id,[{"participant_id":"x","covers":["audience"]}],["audience"]))
  def test_collision_preserves_difference_and_detects_redundancy(self):
   a=DomainProjection("a","sciel",self.x.situation_id,("relationships","composition"),("q",),method_refs=("m1",)); b=DomainProjection("b","alexandra",self.x.situation_id,("relationships","commitment"),("q",),method_refs=("m2",)); self.s.propose_projection(a,established_refs={"m1"}); self.s.propose_projection(b,established_refs={"m2"}); z=self.r.collide(["a","b"]); self.assertEqual(["relationships"],z["shared"]); self.assertFalse(z["redundant"])
  def test_evolution_cannot_be_learned_from_completion_alone(self):
-  with self.assertRaises(SituationError): self.r.propose_evolution(EvolutionProposal("p","workflow","campaign.default",{"add":"audience_validation"},()))
+  with self.assertRaises(SituationError): self.r.propose_evolution(EvolutionProposal("p","workflow","campaign.default",{"add":"audience_validation"},()))\n  with self.assertRaises(SituationError): self.r.propose_evolution(EvolutionProposal("p2","workflow","campaign.default",{"add":"audience_validation"},("fake",)))\n  self.r.propose_evolution(EvolutionProposal("p3","workflow","campaign.default",{"add":"audience_validation"},("out:one",))); self.assertIn("p3",self.r.evolution)
 
 if __name__=="__main__": unittest.main()
