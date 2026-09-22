@@ -14,6 +14,6 @@ class MemoryTests(unittest.TestCase):
   self.assertEqual("untested",qualify_transfer(d,lambda ref,sid: False).status)
   self.assertEqual("supported_in_destination",qualify_transfer(d,lambda ref,sid: ref=="trial:1" and sid=="dest").status)
  def test_studio_creates_required_family(self):
-  st=SituationStudio(); x=st.new("production_brief","video",objective="launch",audience="members",deliverables=["video"],constraints=[]); self.assertEqual([],x.unknowns)
+  st=SituationStudio(test_mode=True); x=st.new("production_brief","video",objective="launch",audience="members",deliverables=["video"],constraints=[]); self.assertEqual([],x.unknowns)
 
 if __name__=="__main__": unittest.main()
