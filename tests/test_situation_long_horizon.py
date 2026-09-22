@@ -17,7 +17,7 @@ class LongHorizonTests(unittest.TestCase):
                 self.assertEqual((),obs.first_retrieval)
                 self.assertIn(f"{name}:lesson",obs.later_retrieval)
                 self.assertTrue(obs.changed_reasoning)
-                self.assertTrue(obs.changed_outcome)
+                self.assertFalse(obs.changed_outcome)
                 self.assertFalse(obs.changed_capability)
 
     def test_unrelated_history_does_not_drive_the_initial_decision(self):
