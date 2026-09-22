@@ -23,6 +23,9 @@ class SituationMemoryStore:
 class TransferCandidate:
     candidate_id:str; source_memory_id:str; destination_situation_id:str; mapping:str; assumptions:tuple[str,...]=(); destination_evidence_refs:tuple[str,...]=(); status:str="candidate"
 
-def qualify_transfer(c:TransferCandidate):
-    if not c.destination_evidence_refs: return TransferCandidate(**{**c.__dict__,"status":"untested"})
+def qualify_transfer(c:TransferCandidate, evidence_resolver=None):
+    if not c.destination_evidence_refs:
+        return TransferCandidate(**{**c.__dict__,"status":"untested"})
+    if evidence_resolver is None or any(not evidence_resolver(ref,c.destination_situation_id) for ref in c.destination_evidence_refs):
+        return TransferCandidate(**{**c.__dict__,"status":"untested"})
     return TransferCandidate(**{**c.__dict__,"status":"supported_in_destination"})
