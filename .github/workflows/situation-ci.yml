@@ -19,3 +19,5 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_situation*.py' -v
       - name: Run Situation mutation sensitivity
         run: python tools/situation_mutation_check.py
+      - name: Run A-E mechanical comparison
+        run: python tools/run_situation_comparative.py > situation-comparative.json
