@@ -1,4 +1,4 @@
-name: Situation CI
+name: Kageyoni v11 Qualification
 on:
   pull_request:
     branches: [main]
@@ -6,35 +6,67 @@ on:
     branches: [v11-situation-build]
   workflow_dispatch:
 jobs:
-  situation:
+  qualify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Compile Situation package
-        run: python -m compileall -q kageyoni/situations tests/test_situation*.py
-      - name: Run Situation tests
-        run: python -m unittest discover -s tests -p 'test_situation*.py' -v
-      - name: Run Situation mutation sensitivity
-        run: python tools/situation_mutation_check.py
-      - name: Run A-E mechanical comparison
-        run: python tools/run_situation_comparative.py > situation-comparative.json
-      - name: Require inherited engine for release qualification
+      - name: Compile source
+        run: python -m compileall -q kageyoni tests
+      - name: Require integrated engine
         run: |
           test -f kageyoni/engine.py
           test -f kageyoni/v11/runtime.py
           test -f kageyoni/workspaces/pipeline.py
           test -f tests/test_v11.py
-      - name: Run inherited and trust qualification
+      - name: Run complete test suite
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Run Situation mutation sensitivity
+        run: python tools/situation_mutation_check.py
+      - name: Verify R5 cannot self-certify
         run: |
-          python -m unittest discover -s tests -p 'test_v11*.py' -v
-          python -m unittest discover -s tests -p 'test_*.py' -v
-      - name: Package qualified integrated source
-        run: zip -qr kageyoni-v11-candidate.zip kageyoni migrations tests tools docs
+          python - <<'PY'
+          from kageyoni.situations.comparative_runner import run_comparative_suite
+          try:
+              run_comparative_suite()
+          except RuntimeError:
+              pass
+          else:
+              raise SystemExit("R5 self-certified without observed executor")
+          PY
+      - name: Verify R6 cannot self-certify
+        run: |
+          python - <<'PY'
+          from kageyoni.situations.long_horizon import export_long_horizon_evidence
+          from pathlib import Path
+          try:
+              export_long_horizon_evidence(Path("evidence/_invalid_r6.json"))
+          except RuntimeError:
+              pass
+          else:
+              raise SystemExit("R6 self-certified without observed executor")
+          PY
+      - name: Build distributions
+        run: python setup.py sdist bdist_wheel
+      - name: Fresh installed-package smoke test
+        run: |
+          python -m venv .release-venv
+          .release-venv/bin/pip install --upgrade pip
+          .release-venv/bin/pip install dist/*.whl
+          .release-venv/bin/python - <<'PY'
+          import kageyoni, kageyoni.v11, kageyoni.situations
+          print(kageyoni.__file__)
+          PY
+      - name: Record exact candidate SHA
+        run: |
+          mkdir -p evidence
+          printf '%s\n' "$GITHUB_SHA" > evidence/qualified-candidate-sha.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: kageyoni-v11-candidate
-          path: kageyoni-v11-candidate.zip
+          name: kageyoni-v11-qualification-evidence
+          path: |
+            dist/*
+            evidence/qualified-candidate-sha.txt
           if-no-files-found: error
