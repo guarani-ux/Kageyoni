@@ -1,0 +1,26 @@
+--- a/kageyoni/v11/runtime.py
++++ b/kageyoni/v11/runtime.py
+@@
+-    def issue_execution(self,oid,*,evidence_type,evidence_ref,payload=None):
++    def _issue_execution_record(self,oid,*,evidence_type,evidence_ref,payload=None):
+         cur=self.read(oid); require(cur['state']=='AUTHORIZED','execution receipt requires authorized operation'); self._effective_authority(cur['payload'],cur['scope'])
+-        require(isinstance(evidence_type,str) and evidence_type.strip(),'execution evidence type required'); require(isinstance(evidence_ref,str) and evidence_ref.strip(),'execution evidence ref required')
+         rid='execution:'+uuid.uuid4().hex; body={'operation_id':oid,'evidence_type':evidence_type,'evidence_ref':evidence_ref,'payload':dict(payload or {})}
+         with UnitOfWork(self.db): self.db.execute('INSERT INTO v11_execution_receipts VALUES(?,?,?,?,?,?,CURRENT_TIMESTAMP)',(rid,oid,evidence_type,evidence_ref,encoded(body['payload']),digest(body)))
+         return self.transition(oid,'EXECUTED',patch={'execution_receipt_id':rid})
++    def issue_execution(self,oid,*,evidence_type,evidence_ref,payload=None):
++        require(isinstance(evidence_type,str) and evidence_type.strip(),'execution evidence type required'); require(isinstance(evidence_ref,str) and evidence_ref.strip(),'execution evidence ref required')
++        body=dict(payload or {}); effect=body.get('domain_effect') if isinstance(body,dict) else None
++        if evidence_type=='world-event':
++            require(self.db.execute('SELECT 1 FROM events WHERE id=?',(evidence_ref,)).fetchone() is not None,'world execution evidence does not exist')
++            require(isinstance(effect,dict) and effect.get('event_id')==evidence_ref,'world execution evidence binding mismatch')
++        elif evidence_type=='pipeline-result':
++            row=self.db.execute('SELECT payload_json FROM pipeline_runs WHERE pipeline_id=?',(evidence_ref,)).fetchone(); require(row is not None,'pipeline execution evidence does not exist')
++            pipeline=json.loads(row['payload_json']); require(pipeline.get('phase')=='completed','pipeline execution evidence is not completed')
++            require(isinstance(effect,dict) and effect.get('pipeline_id')==evidence_ref and effect.get('phase')=='completed','pipeline execution evidence binding mismatch')
++        else:
++            require(False,'unsupported execution evidence type')
++        return self._issue_execution_record(oid,evidence_type=evidence_type,evidence_ref=evidence_ref,payload=body)
++    def _issue_fixture_execution(self,oid,*,evidence_ref='fixture:execution',payload=None):
++        require(isinstance(evidence_ref,str) and evidence_ref.startswith('fixture:'),'fixture evidence ref required')
++        return self._issue_execution_record(oid,evidence_type='fixture',evidence_ref=evidence_ref,payload=payload)
