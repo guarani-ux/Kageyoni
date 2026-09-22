@@ -10,7 +10,7 @@ class RuntimeTests(unittest.TestCase):
         self.x = self.s.genesis("campaign", "launch", {"objective": "launch", "audience": "members"})
         self.s.bind_workflow(self.x.situation_id, "campaign.default")
         self.valid_evidence = {"obs:objective", "out:one", "out:two", "m1", "m2"}
-        self.r = SituationRuntime(self.s, lambda ref, run: ref in self.valid_evidence)
+        self.r = SituationRuntime(self.s, lambda ref, run: ref in self.valid_evidence, test_mode=True)
 
     def test_nested_cannot_replace_objective_or_authority(self):
         self.r.start(WorkflowRun("p", self.x.situation_id, "campaign.default", objective="launch", authority=("read", "write")))
