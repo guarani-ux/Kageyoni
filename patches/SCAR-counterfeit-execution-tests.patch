@@ -1,0 +1,16 @@
+--- a/tests/test_v11.py
++++ b/tests/test_v11.py
+@@
+-  ops,o,q=self.assessed();o=ops.transition(o['operation_id'],'AUTHORIZED',qualification_id=q['qualification_id']);o=ops.issue_execution(o['operation_id'],evidence_type='fixture',evidence_ref='fixture:execution',payload={'test':True})
++  ops,o,q=self.assessed();o=ops.transition(o['operation_id'],'AUTHORIZED',qualification_id=q['qualification_id']);o=ops._issue_fixture_execution(o['operation_id'],evidence_ref='fixture:execution',payload={'test':True})
+@@
+-  ops,o,q=self.assessed();o=ops.transition(o['operation_id'],'AUTHORIZED',qualification_id=q['qualification_id']);o=ops.issue_execution(o['operation_id'],evidence_type='fixture',evidence_ref='fixture:execution',payload={'test':True});o=ops.observe(o['operation_id'],outcome={'ok':True});o=ops.verify_observation(o['operation_id'],receipt={'check':'pass'});o=ops.complete(o['operation_id']);self.assertEqual(o['state'],'COMPLETED')
++  ops,o,q=self.assessed();o=ops.transition(o['operation_id'],'AUTHORIZED',qualification_id=q['qualification_id']);o=ops._issue_fixture_execution(o['operation_id'],evidence_ref='fixture:execution',payload={'test':True});o=ops.observe(o['operation_id'],outcome={'ok':True});o=ops.verify_observation(o['operation_id'],receipt={'check':'pass'});o=ops.complete(o['operation_id']);self.assertEqual(o['state'],'COMPLETED')
+@@
+-  ops,o,q=self.assessed();ops.transition(o['operation_id'],'AUTHORIZED',qualification_id=q['qualification_id']);o=ops.issue_execution(o['operation_id'],evidence_type='fixture',evidence_ref='fixture:execution');o=ops.transition(o['operation_id'],'UNCERTAIN')
++  ops,o,q=self.assessed();ops.transition(o['operation_id'],'AUTHORIZED',qualification_id=q['qualification_id']);o=ops._issue_fixture_execution(o['operation_id'],evidence_ref='fixture:execution');o=ops.transition(o['operation_id'],'UNCERTAIN')
+--- a/tests/test_v11_adaptive.py
++++ b/tests/test_v11_adaptive.py
+@@
+-  ops=ProtectedOperations(self.e);ops.transition(oid,'AUTHORIZED',qualification_id=q['qualification_id']);ops.issue_execution(oid,evidence_type='fixture',evidence_ref='fixture:execution',payload={'checked':True});ops.observe(oid,outcome={'ok':True});ops.verify_observation(oid,receipt={'ok':True});return ops.complete(oid)
++  ops=ProtectedOperations(self.e);ops.transition(oid,'AUTHORIZED',qualification_id=q['qualification_id']);ops._issue_fixture_execution(oid,evidence_ref='fixture:execution',payload={'checked':True});ops.observe(oid,outcome={'ok':True});ops.verify_observation(oid,receipt={'ok':True});return ops.complete(oid)
