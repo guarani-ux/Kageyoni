@@ -15,3 +15,5 @@ jobs:
         run: python -m compileall -q kageyoni/situations tests
       - name: Run Situation tests
         run: python -m unittest discover -s tests -p 'test_situation*.py' -v
+      - name: Run Situation mutation sensitivity
+        run: python tools/situation_mutation_check.py
