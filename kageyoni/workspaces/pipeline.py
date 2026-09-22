@@ -80,10 +80,10 @@ class Pipelines:
         return changed
     def run(self,branch,pipeline_id,max_steps=10,timeout_seconds=30,viewer=None):
         p=self.read(branch,pipeline_id,viewer)
-        mediation=None
-        if self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='v11_operations'").fetchone():
-            from ..v11.integration import begin_domain_operation
-            mediation=begin_domain_operation(self.engine,scope='pipeline',objective='Run pipeline '+pipeline_id,requirement_version='pipeline-run/1',basis={'branch':branch,'revision':self.engine.branch(branch)['revision'],'pipeline_id':pipeline_id,'pipeline_phase':p.get('phase')})
+        from ..persistence.migrations import install_v11
+        from ..v11.integration import begin_domain_operation
+        install_v11(self.engine)
+        mediation=begin_domain_operation(self.engine,scope='pipeline',objective='Run pipeline '+pipeline_id,requirement_version='pipeline-run/1',basis={'branch':branch,'revision':self.engine.branch(branch)['revision'],'pipeline_id':pipeline_id,'pipeline_phase':p.get('phase')})
         current_versions={r['component']:r['version'] for r in self.db.execute('SELECT component,version FROM engine_versions') if not r['component'].startswith('v11_')}
         recorded_versions={k:v for k,v in p['versions'].items() if not k.startswith('v11_')}
         require(recorded_versions==current_versions,'workflow component versions changed; migration/review required')
@@ -174,7 +174,7 @@ class Pipelines:
         p['phase']=self._phase(p)
         if count>=max_steps and p['phase']!='completed':p['stop_reason']='step budget exhausted; resume run'
         self._save(p,dict(event='run_stopped',phase=p['phase'],executed=count))
-        if p['phase']=='completed' and mediation is not None:
+        if p['phase']=='completed':
             from ..v11.integration import complete_domain_operation
             complete_domain_operation(self.engine,mediation,evidence_type='pipeline-result',evidence_ref=pipeline_id,outcome={'pipeline_id':pipeline_id,'phase':'completed','tasks':sorted(p['tasks'])},verification={'pipeline_phase':'completed','outputs_audited':True})
         return p
