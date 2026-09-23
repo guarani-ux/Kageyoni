@@ -110,7 +110,8 @@ class DecisionTests(unittest.TestCase):
     def test_replay_snapshot_and_actual_upgrade(self):
         d.propose(self.e,'main',self.spec()); self.commit(); self.e.register_snapshot('main','decision-snapshot')
         self.assertEqual(self.e.replay('main')['records'],sorted(self.e.state(),key=lambda r:r['id']))
-        dst=Path(self.t.name)/'upgrade.sqlite'; shutil.copy2(ROOT/'build/recovery/pre-decisions-v1.sqlite',dst)
+        from kageyoni.resources import fixture_path
+        dst=Path(self.t.name)/'upgrade.sqlite'; shutil.copy2(fixture_path('recovery/pre-decisions-v1.sqlite'),dst)
         e=Engine(dst)
         try: self.assertTrue(e.verify()['ok']); self.assertEqual(len(e.state()),165); self.assertEqual(e.branch('main')['revision'],1)
         finally: e.close()
@@ -166,7 +167,8 @@ class DecisionTests(unittest.TestCase):
 
     def test_interrupted_decision_migration(self):
         import sqlite3
-        dst=Path(self.t.name)/'interrupted.sqlite'; shutil.copy2(ROOT/'build/recovery/pre-decisions-v1.sqlite',dst)
+        from kageyoni.resources import fixture_path
+        dst=Path(self.t.name)/'interrupted.sqlite'; shutil.copy2(fixture_path('recovery/pre-decisions-v1.sqlite'),dst)
         original=Path.read_text
         def bad(path,*args,**kw):
             content=original(path,*args,**kw)

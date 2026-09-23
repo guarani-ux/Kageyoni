@@ -202,9 +202,9 @@ class RecoveryTests(unittest.TestCase):
         import shutil
         from kageyoni.application import Application
         from kageyoni.decisions import fingerprint
-        root=Path(__file__).resolve().parents[1]
+        from kageyoni.resources import fixture_path
         with tempfile.TemporaryDirectory() as temp:
-            p=Path(temp)/'previous.sqlite';shutil.copy2(root/'build/personality-fixture.sqlite',p)
+            p=Path(temp)/'previous.sqlite';shutil.copy2(fixture_path('personality-fixture.sqlite'),p)
             e=Engine(p)
             try:
                 names=[r[0] for r in e.db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")]

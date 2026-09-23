@@ -127,7 +127,8 @@ class CharacterTests(unittest.TestCase):
         self.assertEqual(self.e.get('main','visitor')['data']['name'],'Traveler'); self.assertTrue(self.e.verify()['ok'])
 
     def test_upgrade_actual_previous_campaign_and_backup(self):
-        src=ROOT/'build/recovery/pre-character-v1.sqlite'
+        from kageyoni.resources import fixture_path
+        src=fixture_path('recovery/pre-character-v1.sqlite')
         dst=Path(self.temp.name)/'upgrade.sqlite'; shutil.copy2(src,dst)
         old=sqlite3.connect(src); before=old.execute('SELECT id,revision,event_hash FROM events ORDER BY id').fetchall(); old.close()
         e=Engine(dst)
@@ -138,7 +139,8 @@ class CharacterTests(unittest.TestCase):
         finally: e.close()
 
     def test_interrupted_migration_rolls_back_and_can_retry(self):
-        dst=Path(self.temp.name)/'interrupted.sqlite'; shutil.copy2(ROOT/'build/recovery/pre-character-v1.sqlite',dst)
+        from kageyoni.resources import fixture_path
+        dst=Path(self.temp.name)/'interrupted.sqlite'; shutil.copy2(fixture_path('recovery/pre-character-v1.sqlite'),dst)
         original=Path.read_text
         def broken(path,*args,**kw):
             content=original(path,*args,**kw)

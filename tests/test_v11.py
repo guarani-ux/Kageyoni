@@ -6,7 +6,8 @@ from kageyoni.v11 import EnforcerRegistry,AssessmentLedger,FrontierManager,Prote
 
 class V11Tests(unittest.TestCase):
  def setUp(self):
-  self.t=tempfile.TemporaryDirectory();self.db=Path(self.t.name)/'v11.sqlite';shutil.copy2('build/kageyoni.sqlite',self.db);self.e=Engine(self.db);install_all(self.e)
+  from kageyoni.resources import campaign_db_path
+  self.t=tempfile.TemporaryDirectory();self.db=Path(self.t.name)/'v11.sqlite';shutil.copy2(campaign_db_path(),self.db);self.e=Engine(self.db);install_all(self.e)
  def tearDown(self):self.e.close();self.t.cleanup()
  def qualify(self,scope='story'):
   r=EnforcerRegistry(self.e)

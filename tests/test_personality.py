@@ -245,7 +245,8 @@ class PersonalityTests(unittest.TestCase):
         finally: e.close()
 
     def test_failed_migration_recovers_actual_previous_campaign(self):
-        old=Path(self.tmp.name)/'old.sqlite'; shutil.copy2(ROOT/'build/recovery/pre-personality-v1.sqlite',old)
+        from kageyoni.resources import fixture_path
+        old=Path(self.tmp.name)/'old.sqlite'; shutil.copy2(fixture_path('recovery/pre-personality-v1.sqlite'),old)
         read=Path.read_text
         def broken(path,*args,**kw):
             text=read(path,*args,**kw)
@@ -263,15 +264,16 @@ class PersonalityTests(unittest.TestCase):
 
     def test_real_v6_pending_decision_survives_supported_upgrade(self):
         # Create an authentic pending decision with the delivered older code.
+        from kageyoni.resources import fixture_path
         archive=ROOT/'build/Kageyoni-Connected-Play-v6.zip'
-        portable=ROOT/'build/recovery/legacy-personality-pending.sqlite'
+        portable=fixture_path('recovery/legacy-personality-pending.sqlite')
         if archive.exists():
             with zipfile.ZipFile(archive) as z:
                 for name in z.namelist():
                     if name.startswith('kageyoni-local-dev/kageyoni/') or name.endswith('.sql'):
                         z.extract(name,self.tmp.name)
             previous=Path(self.tmp.name)/'kageyoni-local-dev'
-            dst=Path(self.tmp.name)/'pending.sqlite'; shutil.copy2(ROOT/'build/recovery/pre-personality-v1.sqlite',dst)
+            dst=Path(self.tmp.name)/'pending.sqlite'; shutil.copy2(fixture_path('recovery/pre-personality-v1.sqlite'),dst)
             script="""from kageyoni.engine import Engine
 from kageyoni import decisions as d
 e=Engine(DST)

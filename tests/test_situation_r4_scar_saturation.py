@@ -54,7 +54,8 @@ class SituationR4ScarSaturationTests(unittest.TestCase):
     def setUp(self):
         self.temp_dir = tempfile.TemporaryDirectory()
         self.db_path = Path(self.temp_dir.name) / 'situation_r4.sqlite'
-        shutil.copy2('build/kageyoni.sqlite', self.db_path)
+        from kageyoni.resources import campaign_db_path
+        shutil.copy2(campaign_db_path(), self.db_path)
         self.engine = Engine(self.db_path)
         install_all(self.engine)
         self.adapter = KageyoniSituationAdapter(self.engine)

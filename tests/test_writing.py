@@ -103,7 +103,8 @@ class WritingTests(unittest.TestCase):
   self.assertIsNone(self.e.get('main','delivery:present'))
   self.publish(b);self.assertTrue(self.publish(b)['replayed'])
  def test_upgrade_actual_v7_and_interrupted_migration(self):
-  old=Path(self.tmp.name)/'old.sqlite';shutil.copy2(ROOT/'build/recovery/pre-writing-v1.sqlite',old)
+  from kageyoni.resources import fixture_path
+  old=Path(self.tmp.name)/'old.sqlite';shutil.copy2(fixture_path('recovery/pre-writing-v1.sqlite'),old)
   read=Path.read_text
   def bad(path,*a,**kw):
    s=read(path,*a,**kw);return s+'\nINVALID SQL;' if path.name=='migration_008.sql' else s
@@ -113,7 +114,8 @@ class WritingTests(unittest.TestCase):
   try:self.assertEqual(len(e.state()),165);self.assertEqual(e.branch('main')['revision'],1);self.assertTrue(e.verify()['ok'])
   finally:e.close()
  def test_v7_pending_fixture_survives_upgrade(self):
-  old=Path(self.tmp.name)/'pending.sqlite';shutil.copy2(ROOT/'build/personality-fixture.sqlite',old)
+  from kageyoni.resources import fixture_path
+  old=Path(self.tmp.name)/'pending.sqlite';shutil.copy2(fixture_path('personality-fixture.sqlite'),old)
   e=Engine(old)
   try:
    result=d.commit(e,'main','resume-fixture','mira',True,'NONCANONICAL old decision resumed')

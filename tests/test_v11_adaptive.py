@@ -5,7 +5,8 @@ from kageyoni.v11 import AdaptiveLoop,EnforcerRegistry,ProtectedOperations
 
 class AdaptiveV11Tests(unittest.TestCase):
  def setUp(self):
-  self.t=tempfile.TemporaryDirectory();self.db=Path(self.t.name)/'db.sqlite';shutil.copy2('build/kageyoni.sqlite',self.db);self.e=Engine(self.db);from kageyoni.persistence.migrations import install_all;install_all(self.e);self.loop=AdaptiveLoop(self.e)
+  from kageyoni.resources import campaign_db_path
+  self.t=tempfile.TemporaryDirectory();self.db=Path(self.t.name)/'db.sqlite';shutil.copy2(campaign_db_path(),self.db);self.e=Engine(self.db);from kageyoni.persistence.migrations import install_all;install_all(self.e);self.loop=AdaptiveLoop(self.e)
  def tearDown(self):self.e.close();self.t.cleanup()
  def qualify(self,scope):
   r=EnforcerRegistry(self.e)

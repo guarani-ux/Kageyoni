@@ -10,7 +10,8 @@ ROOT=Path(__file__).resolve().parents[2]
 class RegistryEffectsKnowledgeTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory(); self.db=Path(self.tmp.name)/'db.sqlite'
-        shutil.copy2(ROOT/'build/kageyoni.sqlite',self.db)
+        from kageyoni.resources import campaign_db_path
+        shutil.copy2(campaign_db_path(),self.db)
         self.engine=Engine(self.db); install_composition(self.engine)
         self.registry=CompositionRegistry(self.engine)
     def tearDown(self): self.engine.close(); self.tmp.cleanup()

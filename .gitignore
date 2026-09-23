@@ -8,6 +8,8 @@ build/
 *.whl
 *.zip
 *.sqlite
+!fixtures/historical/*.sqlite
+!fixtures/historical/**/*.sqlite
 *.sqlite-*
 *.bak
 state/
