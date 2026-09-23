@@ -1,0 +1,187 @@
+{
+  "contract": "CP-01: Responsibility Mapping and Survivor Selection",
+  "generated_at": "2026-09-23T17:52:00-06:00",
+  "baseline_commit": "24e16c5b3321681022ff9bfcc42932f50f48fde1",
+  "current_branch": "refactor/capability-compression",
+  "inspection_lenses": [
+    "State",
+    "Epistemic",
+    "Transition",
+    "Consequence",
+    "Experience"
+  ],
+  "candidate_clusters": {
+    "epistemic_representation": {
+      "components": [
+        "contracts/epistemic_ledger.py",
+        "kageyoni/research_compiler/claims.py",
+        "kageyoni/v11/enforcement.py"
+      ],
+      "deficit": "Dual epistemic taxonomy (9 ledger statuses vs 9 research compiler categories) with parallel storage (v11_warrants vs agency_claims).",
+      "resolution": "Fold contracts/epistemic_ledger.py into kageyoni/research_compiler/claims.py. Compose Warrant to point directly to ClaimNode in ClaimGraph.",
+      "survivor": "kageyoni/research_compiler/claims.py"
+    },
+    "runtime_governance_and_gates": {
+      "components": [
+        "kageyoni/v11/runtime.py",
+        "kageyoni/gate_runner.py",
+        "kageyoni/situations/v11_adapter.py"
+      ],
+      "deficit": "Potential conflation between build/release qualification gates (G0-G9) and live runtime operation lifecycle (DECLARED -> PREPARED -> ASSESSED -> AUTHORIZED -> COMPLETED).",
+      "resolution": "Keep ProtectedOperations as the single runtime domain mediator. Retain GateRunner strictly for external build qualification. Situation operations route through v11_adapter.",
+      "survivor": "kageyoni/v11/runtime.py"
+    },
+    "invalidation_propagation": {
+      "components": [
+        "kageyoni/research_compiler/invalidation_engine.py"
+      ],
+      "deficit": "Relies on JSON string substring matching (cid in json_str) to identify affected packages and projects.",
+      "resolution": "Refactor to use relational graph edges in ClaimGraph and foreign key tables, deprecating substring matching.",
+      "survivor": "kageyoni/research_compiler/invalidation_engine.py (refactored)"
+    },
+    "situation_memory_and_transfer": {
+      "components": [
+        "kageyoni/situations/memory.py",
+        "kageyoni/intelligence/transfer.py"
+      ],
+      "deficit": "SituationMemoryStore performs in-memory linear scan over all memories for retrieval; qualify_transfer performs ad-hoc checks bypassing canonical Transfers service.",
+      "resolution": "Compose situation transfer through kageyoni/intelligence/transfer.py:Transfers. Index situation memory queries in SQLite.",
+      "survivor": "kageyoni/intelligence/transfer.py (composed with SQLite indexed memory)"
+    },
+    "transaction_and_persistence": {
+      "components": [
+        "kageyoni/engine.py",
+        "kageyoni/decisions.py",
+        "kageyoni/v11/runtime.py",
+        "kageyoni/agency_workflows.py"
+      ],
+      "deficit": "Multiple modules manage individual raw SQLite cursor transactions and commits independently, risking torn state across complex multi-table mutations.",
+      "resolution": "Introduce UnitOfWork pattern in CP-04 to coordinate atomic multi-table mutations under engine custody.",
+      "survivor": "kageyoni/engine.py with UnitOfWork"
+    }
+  },
+  "component_classifications": [
+    {
+      "component": "kageyoni.engine.Engine",
+      "file": "kageyoni/engine.py",
+      "classification": "KEEP",
+      "rationale": "Authoritative immutable append-only SQLite causal engine."
+    },
+    {
+      "component": "kageyoni.model",
+      "file": "kageyoni/model.py",
+      "classification": "KEEP",
+      "rationale": "Authoritative schema definitions, DOMAINS, and REQUIRED constraints."
+    },
+    {
+      "component": "kageyoni.resources",
+      "file": "kageyoni/resources.py",
+      "classification": "KEEP",
+      "rationale": "Resolves pinned fixtures and on-demand campaign DB seeding."
+    },
+    {
+      "component": "kageyoni.persistence.migrations",
+      "file": "kageyoni/persistence/migrations.py",
+      "classification": "KEEP",
+      "rationale": "Ordered sequential database migrations guaranteeing backwards compatibility."
+    },
+    {
+      "component": "contracts.epistemic_ledger",
+      "file": "contracts/epistemic_ledger.py",
+      "classification": "FOLD",
+      "rationale": "Folded into kageyoni/research_compiler/claims.py to eliminate dual taxonomy."
+    },
+    {
+      "component": "kageyoni.research_compiler.claims.ClaimGraph",
+      "file": "kageyoni/research_compiler/claims.py",
+      "classification": "KEEP",
+      "rationale": "Canonical typed graph for claims, sources, modalities, and quantifier scopes."
+    },
+    {
+      "component": "kageyoni.v11.enforcement.Warrant",
+      "file": "kageyoni/v11/enforcement.py",
+      "classification": "COMPOSE",
+      "rationale": "Bound directly to ClaimGraph nodes."
+    },
+    {
+      "component": "kageyoni.research_compiler.invalidation_engine.InvalidationEngine",
+      "file": "kageyoni/research_compiler/invalidation_engine.py",
+      "classification": "COMPOSE",
+      "rationale": "Refactored to traverse typed ClaimGraph relations instead of JSON text-search."
+    },
+    {
+      "component": "kageyoni.research_compiler.semantic_casting.SemanticCaster",
+      "file": "kageyoni/research_compiler/semantic_casting.py",
+      "classification": "COMPOSE",
+      "rationale": "Directly integrated into ClaimGraph transition validation gates."
+    },
+    {
+      "component": "kageyoni.decisions",
+      "file": "kageyoni/decisions.py",
+      "classification": "KEEP",
+      "rationale": "Core voluntary/involuntary decision lifecycle and roll preservation."
+    },
+    {
+      "component": "kageyoni.v11.runtime.ProtectedOperations",
+      "file": "kageyoni/v11/runtime.py",
+      "classification": "KEEP",
+      "rationale": "Mandatory state machine for domain operation lifecycle."
+    },
+    {
+      "component": "kageyoni.gate_runner.GateRunner",
+      "file": "kageyoni/gate_runner.py",
+      "classification": "RETAIN_WITH_REASON",
+      "rationale": "Retained strictly for CI build qualification and G0-G9 repair order verification."
+    },
+    {
+      "component": "kageyoni.situations.v11_adapter",
+      "file": "kageyoni/situations/v11_adapter.py",
+      "classification": "ADAPTER",
+      "rationale": "Maintains backwards compatibility for situation actions routing to ProtectedOperations."
+    },
+    {
+      "component": "kageyoni.characters",
+      "file": "kageyoni/characters.py",
+      "classification": "KEEP",
+      "rationale": "Core character identity, readiness, and aspects."
+    },
+    {
+      "component": "kageyoni.personality",
+      "file": "kageyoni/personality.py",
+      "classification": "KEEP",
+      "rationale": "Character interiority, weights, and dialogue grounding."
+    },
+    {
+      "component": "kageyoni.writing",
+      "file": "kageyoni/writing.py",
+      "classification": "KEEP",
+      "rationale": "Private presentation briefs, deliveries, and receptions."
+    },
+    {
+      "component": "kageyoni.intelligence.transfer.Transfers",
+      "file": "kageyoni/intelligence/transfer.py",
+      "classification": "KEEP",
+      "rationale": "Canonical cross-domain transfer qualification service."
+    },
+    {
+      "component": "kageyoni.situations.memory.SituationMemoryStore",
+      "file": "kageyoni/situations/memory.py",
+      "classification": "COMPOSE",
+      "rationale": "Replaced linear memory scan with indexed queries and routed transfer to Transfers service."
+    },
+    {
+      "component": "kageyoni.workflows.Workflows",
+      "file": "kageyoni/workflows.py",
+      "classification": "ADAPTER",
+      "rationale": "Unified facade coordinating domain operations."
+    },
+    {
+      "component": "kageyoni.__main__",
+      "file": "kageyoni/__main__.py",
+      "classification": "KEEP",
+      "rationale": "Preserves all 58 CLI operation entry points."
+    }
+  ],
+  "public_entry_points_count": 58,
+  "status": "OWNERSHIP_MAP_ACCEPTED"
+}
