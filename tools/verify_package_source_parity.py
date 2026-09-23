@@ -123,9 +123,15 @@ def main():
 
     passed = (len(missing_files) == 0) and all(r["hash_parity"] for r in parity_records)
     
+    try:
+        git_sha = subprocess.run(["git", "rev-parse", "HEAD"], cwd=root, capture_output=True, text=True, check=True).stdout.strip()
+    except Exception:
+        git_sha = "UNKNOWN_COMMIT"
+
     audit_report = {
         "title": "Kageyoni v11 Package / Source Parity Audit",
         "agent": "Agent I (Release Reproducer)",
+        "git_sha": git_sha,
         "timestamp": "2026-09-22T14:41:00Z",
         "wheel_file": wheel_path.name,
         "wheel_sha256": wheel_hash,

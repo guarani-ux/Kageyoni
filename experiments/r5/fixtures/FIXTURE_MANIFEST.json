@@ -1,0 +1,27 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_at": "2026-09-23T14:48:00Z",
+  "description": "Cryptographically frozen fixtures for R5 Comparative Trials across 5 mediation conditions",
+  "fixtures": {
+    "creative": {
+      "file": "creative.json",
+      "sha256": "43013d332675971485c2c77f0c11beee48ca9a6d09325ea7a4087192dc04df60",
+      "task_id": "creative_01"
+    },
+    "research": {
+      "file": "research.json",
+      "sha256": "df0e61d8a0cb8b4fbe48e028b14caeb3f350c2d3cae890c5039fbeaa7150a00d",
+      "task_id": "research_01"
+    },
+    "technical": {
+      "file": "technical.json",
+      "sha256": "d05eb4c36c64188b495e865f121df41dcfcefb54a4aaee5110eb675c97fce454",
+      "task_id": "technical_01"
+    },
+    "living_world": {
+      "file": "living_world.json",
+      "sha256": "e30537be74e64f7df2b678c1b3f7bf308365851ce329158c8577583a54d76f80",
+      "task_id": "living_world_01"
+    }
+  }
+}

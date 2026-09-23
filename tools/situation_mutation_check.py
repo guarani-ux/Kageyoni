@@ -13,7 +13,8 @@ def main():
  killed=[]; inconclusive=[]
  for name,path,old,new,test in MUTATIONS:
   with tempfile.TemporaryDirectory() as td:
-   dst=pathlib.Path(td)/"repo"; shutil.copytree(ROOT,dst)
+   dst=pathlib.Path(td)/"repo"
+   shutil.copytree(ROOT,dst,ignore=shutil.ignore_patterns(".git","__pycache__","build","dist","state","*.sqlite*",".venv",".agents"))
    p=dst/path; text=p.read_text()
    if old not in text: inconclusive.append((name,"anchor missing")); continue
    p.write_text(text.replace(old,new,1))

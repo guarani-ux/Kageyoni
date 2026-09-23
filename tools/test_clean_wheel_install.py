@@ -109,10 +109,14 @@ with tempfile.TemporaryDirectory() as td:
         
         # Save audit record
         audit_file = root / "evidence" / "qualification" / "clean_wheel_install_audit.json"
-        import json
-        import hashlib
+        try:
+            git_sha = subprocess.run(["git", "rev-parse", "HEAD"], cwd=root, capture_output=True, text=True, check=True).stdout.strip()
+        except Exception:
+            git_sha = "UNKNOWN_COMMIT"
+
         audit_record = {
             "status": "PASS",
+            "git_sha": git_sha,
             "wheel_file": wheel_path.name,
             "wheel_sha256": hashlib.sha256(wheel_path.read_bytes()).hexdigest(),
             "python_executable": sys.executable,

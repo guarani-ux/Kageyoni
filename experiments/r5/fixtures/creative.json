@@ -1,0 +1,17 @@
+{
+  "task_id": "creative_01",
+  "domain": "creative",
+  "title": "Newcomer Library Card Campaign Video",
+  "objective": "Drive library card registration among newly arrived immigrant families",
+  "input_context": {
+    "target_audience": "New permanent residents and language learners",
+    "core_benefit": "Free ESL learning resources, multilingual books, and child literacy coaching",
+    "constraints": ["60-second duration", "no academic jargon", "explicit branch action step"]
+  },
+  "rubric": {
+    "requirement_satisfaction": "All 3 benefits and the action step are included without jargon",
+    "source_fidelity": "Only verified library program features are cited",
+    "continuity": "Consistent persona and tone throughout 60s structure",
+    "useful_novelty": "Original communicative hook addressing intimidating library perception"
+  }
+}

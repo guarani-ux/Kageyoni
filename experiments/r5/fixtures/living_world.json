@@ -1,0 +1,20 @@
+{
+  "task_id": "living_world_01",
+  "domain": "living_world",
+  "title": "Participant Perspective and Contradiction Tracking Across Multi-Event Sequence",
+  "objective": "Track three library branch stakeholders across a budget cut event without collapsing their divergent viewpoints",
+  "input_context": {
+    "stakeholders": [
+      {"name": "Branch Manager", "priority": "Staff retention"},
+      {"name": "Youth Programmer", "priority": "Preserving drop-in studio hours"},
+      {"name": "Patron Committee", "priority": "Weekend access and materials budget"}
+    ],
+    "constraints": ["Contradictions must remain explicit in state", "No synthesized pseudo-consensus"]
+  },
+  "rubric": {
+    "requirement_satisfaction": "All 3 perspectives tracked with respective unresolved priorities",
+    "source_fidelity": "No invented stakeholder positions",
+    "continuity": "Stakeholder identities maintained across successive turns",
+    "useful_novelty": "Structured conflict mapping without artificial closure"
+  }
+}

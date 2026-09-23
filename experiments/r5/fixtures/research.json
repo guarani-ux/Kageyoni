@@ -1,0 +1,17 @@
+{
+  "task_id": "research_01",
+  "domain": "research",
+  "title": "Canadian Urban Public Library Digital Circulation Benchmarking",
+  "objective": "Compare digital circulation per capita across Calgary, Edmonton, and Ottawa",
+  "input_context": {
+    "peers": ["Calgary Public Library", "Edmonton Public Library", "Ottawa Public Library"],
+    "metrics": ["Digital Circulation", "Population Served", "Digital Circulation Per Capita"],
+    "constraints": ["Every metric must cite an authoritative provenance source", "No hallucinated statistics"]
+  },
+  "rubric": {
+    "requirement_satisfaction": "Exact metrics provided for all 3 peer systems with per-capita derivation",
+    "source_fidelity": "Data matches primary annual reports without quantifier inflation",
+    "continuity": "Consistent analytical framework across peers",
+    "useful_novelty": "Reveals meaningful per-capita circulation differences"
+  }
+}

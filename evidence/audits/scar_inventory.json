@@ -1,0 +1,148 @@
+{
+  "scars": [
+    {
+      "scar_id": "SCAR-0001",
+      "class": "counterfeit-evidence",
+      "provenance_branch": "origin/v11-scar-saturation",
+      "requirement": "Lifecycle evidence must resolve to an engine-custodied real domain effect.",
+      "verifying_test": "tests/test_v11_production_path_mediation.py::test_counterfeit_receipt_rejected",
+      "status": "closed",
+      "repair_ref": "b73a38b / SCAR-counterfeit-execution-receipt.patch",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SCAR-SIT-001",
+      "class": "unauthorized_authority_expansion",
+      "provenance_branch": "reality-grounding-audit",
+      "requirement": "Child run permitted unconstrained authority tuple; must fail closed.",
+      "verifying_test": "tests/test_situation_r4_scar_saturation.py::test_scar_ledger_lifecycle_enforces_reprobe_and_positive_control",
+      "status": "closed",
+      "repair_ref": "commit:55a1dad",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SCAR-artifact-execution-evidence",
+      "class": "missing_artifact_verification",
+      "provenance_branch": "patches/",
+      "requirement": "artifact-result evidence type verified in issue_execution with artifact_id and digest checking against physical artifacts table.",
+      "verifying_test": "tests/test_v11.py",
+      "status": "closed",
+      "repair_ref": "patches/SCAR-artifact-execution-evidence.patch",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SCAR-counterfeit-execution-receipt",
+      "class": "forged_receipt",
+      "provenance_branch": "patches/",
+      "requirement": "Separated _issue_execution_record from public issue_execution; enforces world-event in events table and pipeline-result in pipeline_runs.",
+      "verifying_test": "tests/test_v11_production_path_mediation.py",
+      "status": "closed",
+      "repair_ref": "patches/SCAR-counterfeit-execution-receipt.patch",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SCAR-governor-v11-schema",
+      "class": "unmigrated_governor_connection",
+      "provenance_branch": "patches/",
+      "requirement": "ResolutionGovernor.__init__ installs v11 migrations (migrations 019-022) before establishing db connection.",
+      "verifying_test": "tests/test_composition_governor.py",
+      "status": "closed",
+      "repair_ref": "patches/SCAR-governor-v11-schema.patch",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SCAR-pipeline-v11-mediation",
+      "class": "optional_trust_bypass",
+      "provenance_branch": "patches/",
+      "requirement": "Pipeline run unconditionally installs v11 and mediates via begin_domain_operation and complete_domain_operation.",
+      "verifying_test": "tests/test_v11_production_path_mediation.py",
+      "status": "closed",
+      "repair_ref": "b73a38b / patches/SCAR-pipeline-v11-mediation.patch",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SITUATION-migration-023",
+      "class": "missing_situation_schema",
+      "provenance_branch": "patches/",
+      "requirement": "install_situations and install_all updated to install migration_023.sql.",
+      "verifying_test": "tests/test_situation_integration_adapter.py",
+      "status": "closed",
+      "repair_ref": "patches/SITUATION-migration-023.patch",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "MIGRATION_PREDECESSOR_GAP_V7_PIPELINE",
+      "class": "test_setup_bypass",
+      "provenance_branch": "evidence/audits/baseline_failure_map.json",
+      "requirement": "PipelineTests.setUp must invoke install_v11 establishing legitimate predecessor chain.",
+      "verifying_test": "tests/test_v7_pipeline.py",
+      "status": "closed",
+      "repair_ref": "evidence/audits/baseline_failure_map.json",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SUCCESSOR-Q08",
+      "class": "one_sided_supported_reference",
+      "provenance_branch": "docs/V11-TRUST-SUCCESSOR-PROBES.md",
+      "requirement": "One-sided supported-only reference cases cannot qualify an enforcer.",
+      "verifying_test": "tests/test_v11_frozen_trust_gate.py",
+      "status": "closed",
+      "repair_ref": "kageyoni/v11/enforcement.py",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SUCCESSOR-O08",
+      "class": "counterfeit_assessment_injection",
+      "provenance_branch": "docs/V11-TRUST-SUCCESSOR-PROBES.md",
+      "requirement": "A caller cannot inject a fake assessment id to move PREPARED -> ASSESSED.",
+      "verifying_test": "tests/test_v11_production_path_mediation.py",
+      "status": "closed",
+      "repair_ref": "kageyoni/v11/enforcement.py",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SUCCESSOR-F07",
+      "class": "unauthorized_frontier_jump",
+      "provenance_branch": "docs/V11-TRUST-SUCCESSOR-PROBES.md",
+      "requirement": "A frontier cannot jump directly from open -> resolved without observation.",
+      "verifying_test": "tests/test_v11_frontier.py",
+      "status": "closed",
+      "repair_ref": "kageyoni/v11/frontier.py",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SUCCESSOR-N01",
+      "class": "concurrent_acknowledgment_conflict",
+      "provenance_branch": "docs/V11-TRUST-SUCCESSOR-PROBES.md",
+      "requirement": "Concurrent acknowledged operation history is retained or rejected under strict ordering.",
+      "verifying_test": "tests/test_v11_adaptive.py",
+      "status": "closed",
+      "repair_ref": "kageyoni/v11/adaptive.py",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    },
+    {
+      "scar_id": "SCAR-DOMAIN-PROJECTION",
+      "class": "unbound_method_evidence",
+      "provenance_branch": "docs/SCAR-REGRESSION-RULE.md",
+      "requirement": "Domain Projection evidence must remain bound to participant and Situation; method reference alone is insufficient.",
+      "verifying_test": "tests/test_situations.py",
+      "status": "closed",
+      "repair_ref": "kageyoni/situations/service.py",
+      "reprobe_passed": true,
+      "positive_control_passed": true
+    }
+  ],
+  "count": 13
+}

@@ -1,0 +1,17 @@
+{
+  "task_id": "technical_01",
+  "domain": "technical",
+  "title": "State Migration Rollback and Atomic Commit Safety",
+  "objective": "Execute a schema migration adding a column with foreign key constraints while preserving existing records",
+  "input_context": {
+    "target_table": "v11_frontiers",
+    "migration_step": "ALTER TABLE / recreate with foreign key verification",
+    "constraints": ["Rolls back automatically on failure", "Zero data loss on existing records"]
+  },
+  "rubric": {
+    "requirement_satisfaction": "Schema updated with verified integrity and zero broken references",
+    "source_fidelity": "Pre-existing rows match bit-for-bit after migration",
+    "continuity": "Database connection remains valid without locks",
+    "useful_novelty": "Atomic transitional staging preventing torn state"
+  }
+}

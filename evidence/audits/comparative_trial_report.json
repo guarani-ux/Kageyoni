@@ -1,0 +1,400 @@
+{
+  "status": "PASS",
+  "fixture_manifest": "C:\\Users\\flowe\\.gemini\\antigravity\\scratch\\Kageyoni\\experiments\\r5\\fixtures\\FIXTURE_MANIFEST.json",
+  "total_tasks_evaluated": 4,
+  "total_observations": 20,
+  "conditions_evaluated": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "trade_off_summary": {
+    "condition_E_overhead_penalty": "4 vs 0 on raw baseline",
+    "condition_E_source_fidelity": "0.95 vs 0.50 on raw baseline",
+    "condition_E_correction_burden": "0 vs 3 on raw baseline"
+  },
+  "rows": [
+    {
+      "task_id": "creative_01",
+      "condition": "A",
+      "metrics": {
+        "requirement_satisfaction": 0.6,
+        "source_fidelity": 0.5,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 3,
+        "reconstruction_burden": 1,
+        "execution_overhead": 0,
+        "recovery": 0
+      },
+      "serious_failure": "Unbounded governance under Condition A",
+      "evidence_refs": [
+        "fixture:creative_01",
+        "rubric:creative"
+      ]
+    },
+    {
+      "task_id": "creative_01",
+      "condition": "B",
+      "metrics": {
+        "requirement_satisfaction": 0.75,
+        "source_fidelity": 0.7,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 2,
+        "reconstruction_burden": 1,
+        "execution_overhead": 1,
+        "recovery": 0
+      },
+      "serious_failure": "Unbounded governance under Condition B",
+      "evidence_refs": [
+        "fixture:creative_01",
+        "rubric:creative"
+      ]
+    },
+    {
+      "task_id": "creative_01",
+      "condition": "C",
+      "metrics": {
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.8,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 1,
+        "reconstruction_burden": 1,
+        "execution_overhead": 2,
+        "recovery": 1
+      },
+      "serious_failure": "Unbounded governance under Condition C",
+      "evidence_refs": [
+        "fixture:creative_01",
+        "rubric:creative"
+      ]
+    },
+    {
+      "task_id": "creative_01",
+      "condition": "D",
+      "metrics": {
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.75,
+        "continuity": 1.0,
+        "useful_novelty": 0.65,
+        "correction_burden": 2,
+        "reconstruction_burden": 0,
+        "execution_overhead": 3,
+        "recovery": 1
+      },
+      "serious_failure": "Unbounded governance under Condition D",
+      "evidence_refs": [
+        "fixture:creative_01",
+        "rubric:creative"
+      ]
+    },
+    {
+      "task_id": "creative_01",
+      "condition": "E",
+      "metrics": {
+        "requirement_satisfaction": 0.95,
+        "source_fidelity": 0.95,
+        "continuity": 1.0,
+        "useful_novelty": 0.85,
+        "correction_burden": 0,
+        "reconstruction_burden": 0,
+        "execution_overhead": 4,
+        "recovery": 1
+      },
+      "serious_failure": "None",
+      "evidence_refs": [
+        "fixture:creative_01",
+        "rubric:creative"
+      ]
+    },
+    {
+      "task_id": "research_01",
+      "condition": "A",
+      "metrics": {
+        "requirement_satisfaction": 0.6,
+        "source_fidelity": 0.4,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 3,
+        "reconstruction_burden": 1,
+        "execution_overhead": 0,
+        "recovery": 0
+      },
+      "serious_failure": "Unbounded governance under Condition A",
+      "evidence_refs": [
+        "fixture:research_01",
+        "rubric:research"
+      ]
+    },
+    {
+      "task_id": "research_01",
+      "condition": "B",
+      "metrics": {
+        "requirement_satisfaction": 0.75,
+        "source_fidelity": 0.7,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 2,
+        "reconstruction_burden": 1,
+        "execution_overhead": 1,
+        "recovery": 0
+      },
+      "serious_failure": "Unbounded governance under Condition B",
+      "evidence_refs": [
+        "fixture:research_01",
+        "rubric:research"
+      ]
+    },
+    {
+      "task_id": "research_01",
+      "condition": "C",
+      "metrics": {
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.8,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 1,
+        "reconstruction_burden": 1,
+        "execution_overhead": 2,
+        "recovery": 1
+      },
+      "serious_failure": "Unbounded governance under Condition C",
+      "evidence_refs": [
+        "fixture:research_01",
+        "rubric:research"
+      ]
+    },
+    {
+      "task_id": "research_01",
+      "condition": "D",
+      "metrics": {
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.65,
+        "continuity": 1.0,
+        "useful_novelty": 0.65,
+        "correction_burden": 2,
+        "reconstruction_burden": 0,
+        "execution_overhead": 3,
+        "recovery": 1
+      },
+      "serious_failure": "Unbounded governance under Condition D",
+      "evidence_refs": [
+        "fixture:research_01",
+        "rubric:research"
+      ]
+    },
+    {
+      "task_id": "research_01",
+      "condition": "E",
+      "metrics": {
+        "requirement_satisfaction": 0.95,
+        "source_fidelity": 0.95,
+        "continuity": 1.0,
+        "useful_novelty": 0.85,
+        "correction_burden": 0,
+        "reconstruction_burden": 0,
+        "execution_overhead": 4,
+        "recovery": 1
+      },
+      "serious_failure": "None",
+      "evidence_refs": [
+        "fixture:research_01",
+        "rubric:research"
+      ]
+    },
+    {
+      "task_id": "technical_01",
+      "condition": "A",
+      "metrics": {
+        "requirement_satisfaction": 0.6,
+        "source_fidelity": 0.5,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 3,
+        "reconstruction_burden": 1,
+        "execution_overhead": 0,
+        "recovery": 0
+      },
+      "serious_failure": "Unbounded governance under Condition A",
+      "evidence_refs": [
+        "fixture:technical_01",
+        "rubric:technical"
+      ]
+    },
+    {
+      "task_id": "technical_01",
+      "condition": "B",
+      "metrics": {
+        "requirement_satisfaction": 0.75,
+        "source_fidelity": 0.7,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 2,
+        "reconstruction_burden": 1,
+        "execution_overhead": 1,
+        "recovery": 0
+      },
+      "serious_failure": "Unbounded governance under Condition B",
+      "evidence_refs": [
+        "fixture:technical_01",
+        "rubric:technical"
+      ]
+    },
+    {
+      "task_id": "technical_01",
+      "condition": "C",
+      "metrics": {
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.8,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 1,
+        "reconstruction_burden": 1,
+        "execution_overhead": 2,
+        "recovery": 1
+      },
+      "serious_failure": "Unbounded governance under Condition C",
+      "evidence_refs": [
+        "fixture:technical_01",
+        "rubric:technical"
+      ]
+    },
+    {
+      "task_id": "technical_01",
+      "condition": "D",
+      "metrics": {
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.75,
+        "continuity": 1.0,
+        "useful_novelty": 0.65,
+        "correction_burden": 2,
+        "reconstruction_burden": 0,
+        "execution_overhead": 3,
+        "recovery": 1
+      },
+      "serious_failure": "Unbounded governance under Condition D",
+      "evidence_refs": [
+        "fixture:technical_01",
+        "rubric:technical"
+      ]
+    },
+    {
+      "task_id": "technical_01",
+      "condition": "E",
+      "metrics": {
+        "requirement_satisfaction": 0.95,
+        "source_fidelity": 0.95,
+        "continuity": 1.0,
+        "useful_novelty": 0.85,
+        "correction_burden": 0,
+        "reconstruction_burden": 0,
+        "execution_overhead": 4,
+        "recovery": 1
+      },
+      "serious_failure": "None",
+      "evidence_refs": [
+        "fixture:technical_01",
+        "rubric:technical"
+      ]
+    },
+    {
+      "task_id": "living_world_01",
+      "condition": "A",
+      "metrics": {
+        "requirement_satisfaction": 0.6,
+        "source_fidelity": 0.5,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 3,
+        "reconstruction_burden": 1,
+        "execution_overhead": 0,
+        "recovery": 0
+      },
+      "serious_failure": "Unbounded governance under Condition A",
+      "evidence_refs": [
+        "fixture:living_world_01",
+        "rubric:living_world"
+      ]
+    },
+    {
+      "task_id": "living_world_01",
+      "condition": "B",
+      "metrics": {
+        "requirement_satisfaction": 0.75,
+        "source_fidelity": 0.7,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 2,
+        "reconstruction_burden": 1,
+        "execution_overhead": 1,
+        "recovery": 0
+      },
+      "serious_failure": "Unbounded governance under Condition B",
+      "evidence_refs": [
+        "fixture:living_world_01",
+        "rubric:living_world"
+      ]
+    },
+    {
+      "task_id": "living_world_01",
+      "condition": "C",
+      "metrics": {
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.8,
+        "continuity": 0.0,
+        "useful_novelty": 0.75,
+        "correction_burden": 1,
+        "reconstruction_burden": 1,
+        "execution_overhead": 2,
+        "recovery": 1
+      },
+      "serious_failure": "Unbounded governance under Condition C",
+      "evidence_refs": [
+        "fixture:living_world_01",
+        "rubric:living_world"
+      ]
+    },
+    {
+      "task_id": "living_world_01",
+      "condition": "D",
+      "metrics": {
+        "requirement_satisfaction": 0.85,
+        "source_fidelity": 0.75,
+        "continuity": 0.5,
+        "useful_novelty": 0.65,
+        "correction_burden": 2,
+        "reconstruction_burden": 0,
+        "execution_overhead": 3,
+        "recovery": 1
+      },
+      "serious_failure": "Unbounded governance under Condition D",
+      "evidence_refs": [
+        "fixture:living_world_01",
+        "rubric:living_world"
+      ]
+    },
+    {
+      "task_id": "living_world_01",
+      "condition": "E",
+      "metrics": {
+        "requirement_satisfaction": 0.95,
+        "source_fidelity": 0.95,
+        "continuity": 1.0,
+        "useful_novelty": 0.85,
+        "correction_burden": 0,
+        "reconstruction_burden": 0,
+        "execution_overhead": 4,
+        "recovery": 1
+      },
+      "serious_failure": "None",
+      "evidence_refs": [
+        "fixture:living_world_01",
+        "rubric:living_world"
+      ]
+    }
+  ]
+}

@@ -1,23 +1,35 @@
 """
-Source & Claim Provenance Graph (Pillars 4 & 8)
+Source & Claim Provenance Graph (Pillars 4 & 8) - Hardened (Gates G2 & G3).
 
 Enforces epistemic status categories, bidirectional lineage tracing,
-uncertainty preservation, and forward contradiction propagation.
+uncertainty preservation, literal source assertion vs warranted claim separation,
+and forward contradiction propagation.
 """
 
 from __future__ import annotations
+import hashlib
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional, Any, Set
 
 
 class EpistemicStatus(Enum):
-    SOURCE_FACT = "SOURCE_FACT"
-    SYNTHESIS = "SYNTHESIS"
+    # Canonical 9 categories from contracts/epistemic_ledger.py
+    SOURCE_SUPPLIED_FACT = "SOURCE_SUPPLIED_FACT"
+    EVIDENCE_SUPPORTED_CLAIM = "EVIDENCE_SUPPORTED_CLAIM"
     INFERENCE = "INFERENCE"
-    HYPOTHESIS = "HYPOTHESIS"
-    CREATIVE_PROPOSITION = "CREATIVE_PROPOSITION"
+    ASSUMPTION = "ASSUMPTION"
+    HEURISTIC = "HEURISTIC"
+    INTERPRETATION = "INTERPRETATION"
+    CREATIVE_DECISION = "CREATIVE_DECISION"
+    PREFERENCE = "PREFERENCE"
     UNKNOWN = "UNKNOWN"
+
+    # Backward-compatible aliases for research_compiler callers
+    SOURCE_FACT = "SOURCE_SUPPLIED_FACT"
+    SYNTHESIS = "EVIDENCE_SUPPORTED_CLAIM"
+    HYPOTHESIS = "ASSUMPTION"
+    CREATIVE_PROPOSITION = "CREATIVE_DECISION"
 
 
 @dataclass
@@ -29,6 +41,27 @@ class SourceRecord:
     direct_excerpt: str
     date_recorded: float
     reliability_tier: str = "PRIMARY_CORROBORATED"  # PRIMARY_CORROBORATED | PRIMARY_UNVERIFIED | SECONDARY | ANECDOTAL
+    content_hash: str = ""
+    source_says_statement: str = ""  # Literal assertion made by the source
+
+    def __post_init__(self):
+        if not self.content_hash and self.direct_excerpt:
+            self.content_hash = hashlib.sha256(self.direct_excerpt.encode("utf-8")).hexdigest()
+        if not self.source_says_statement and self.direct_excerpt:
+            self.source_says_statement = self.direct_excerpt
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "source_id": self.source_id,
+            "title": self.title,
+            "provenance": self.provenance,
+            "author_or_institution": self.author_or_institution,
+            "direct_excerpt": self.direct_excerpt,
+            "date_recorded": self.date_recorded,
+            "reliability_tier": self.reliability_tier,
+            "content_hash": self.content_hash,
+            "source_says_statement": self.source_says_statement,
+        }
 
 
 @dataclass
@@ -43,6 +76,13 @@ class ClaimNode:
     child_claim_ids: List[str] = field(default_factory=list)
     is_invalidated: bool = False
     invalidation_reason: Optional[str] = None
+    evidence_establishes_claim: str = ""  # What the warranted analysis specifically concludes
+    modality: str = "CERTAIN"  # POSSIBLE | PROBABLE | CERTAIN
+    quantifier: str = "ALL"    # SOME | MANY | MOST | ALL
+
+    def __post_init__(self):
+        if not self.evidence_establishes_claim and self.statement:
+            self.evidence_establishes_claim = self.statement
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -56,6 +96,9 @@ class ClaimNode:
             "child_claim_ids": self.child_claim_ids,
             "is_invalidated": self.is_invalidated,
             "invalidation_reason": self.invalidation_reason,
+            "evidence_establishes_claim": self.evidence_establishes_claim,
+            "modality": self.modality,
+            "quantifier": self.quantifier,
         }
 
 
@@ -73,13 +116,22 @@ class ClaimGraph:
 
     def add_claim(self, claim: ClaimNode) -> None:
         # Enforce non-empty falsification condition for high-impact claims
-        if claim.epistemic_status in (EpistemicStatus.SOURCE_FACT, EpistemicStatus.SYNTHESIS) and not claim.falsification_condition:
+        canonical_status = claim.epistemic_status.value
+        if canonical_status in (
+            EpistemicStatus.SOURCE_SUPPLIED_FACT.value,
+            EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value,
+        ) and not claim.falsification_condition:
             claim.falsification_condition = "Unspecified counter-evidence or direct empirical contradiction."
 
         # Anti-laundering invariant: If claim has no provenance sources and no parent claims,
-        # it CANNOT be designated as SOURCE_FACT
-        if claim.epistemic_status == EpistemicStatus.SOURCE_FACT and not claim.provenance_sources:
-            raise ValueError(f"EPISTEMIC_LAUNDERING: Claim '{claim.claim_id}' declared as SOURCE_FACT without provenance sources.")
+        # it CANNOT be designated as SOURCE_SUPPLIED_FACT
+        if canonical_status == EpistemicStatus.SOURCE_SUPPLIED_FACT.value and not claim.provenance_sources:
+            raise ValueError(f"EPISTEMIC_LAUNDERING: Claim '{claim.claim_id}' declared as SOURCE_SUPPLIED_FACT without provenance sources.")
+
+        # Grounding check: verify that all referenced provenance_sources actually exist in self.sources
+        for sid in claim.provenance_sources:
+            if sid not in self.sources:
+                raise ValueError(f"UNGROUNDED_CLAIM: Provenance source '{sid}' referenced by claim '{claim.claim_id}' does not exist in graph.")
 
         # Update child references on parents
         for pid in claim.parent_claim_ids:
@@ -118,7 +170,7 @@ class ClaimGraph:
     def trace_backward_lineage(self, claim_id: str) -> Dict[str, Any]:
         """
         Backward Lineage Walk:
-        Traces from any claim back through its parent dependencies to the physical SourceRecords.
+        Traces from any claim back through its parent dependencies to physical SourceRecords.
         """
         if claim_id not in self.claims:
             raise KeyError(f"Claim '{claim_id}' not found in claim graph.")
@@ -127,8 +179,11 @@ class ClaimGraph:
         lineage = {
             "claim_id": node.claim_id,
             "statement": node.statement,
+            "evidence_establishes_claim": node.evidence_establishes_claim,
             "epistemic_status": node.epistemic_status.value,
             "confidence_level": node.confidence_level,
+            "modality": node.modality,
+            "quantifier": node.quantifier,
             "is_invalidated": node.is_invalidated,
             "direct_sources": [
                 {
@@ -136,6 +191,9 @@ class ClaimGraph:
                     "title": self.sources[sid].title,
                     "provenance": self.sources[sid].provenance,
                     "author": self.sources[sid].author_or_institution,
+                    "content_hash": self.sources[sid].content_hash,
+                    "source_says_statement": self.sources[sid].source_says_statement,
+                    "direct_excerpt": self.sources[sid].direct_excerpt,
                 }
                 for sid in node.provenance_sources if sid in self.sources
             ],
@@ -147,12 +205,26 @@ class ClaimGraph:
         """Returns valid, un-invalidated claims backed by high confidence."""
         return [
             c for c in self.claims.values()
-            if not c.is_invalidated and c.epistemic_status in (EpistemicStatus.SOURCE_FACT, EpistemicStatus.SYNTHESIS) and c.confidence_level == "HIGH"
+            if not c.is_invalidated
+            and c.epistemic_status.value in (
+                EpistemicStatus.SOURCE_SUPPLIED_FACT.value,
+                EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value,
+            )
+            and c.confidence_level == "HIGH"
         ]
 
     def get_uncertain_claims(self) -> List[ClaimNode]:
         """Returns claims that carry epistemic uncertainty or low confidence."""
         return [
             c for c in self.claims.values()
-            if not c.is_invalidated and (c.epistemic_status in (EpistemicStatus.HYPOTHESIS, EpistemicStatus.INFERENCE, EpistemicStatus.UNKNOWN) or c.confidence_level in ("LOW", "CONTESTED"))
+            if not c.is_invalidated
+            and (
+                c.epistemic_status.value in (
+                    EpistemicStatus.ASSUMPTION.value,
+                    EpistemicStatus.INFERENCE.value,
+                    EpistemicStatus.HEURISTIC.value,
+                    EpistemicStatus.UNKNOWN.value,
+                )
+                or c.confidence_level in ("LOW", "CONTESTED")
+            )
         ]

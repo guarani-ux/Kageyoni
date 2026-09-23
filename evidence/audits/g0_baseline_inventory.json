@@ -1,0 +1,61 @@
+{
+  "gate": "G0",
+  "candidate_sha": "2ead5b59bf17819bcbc51d98881d9345cb77f2b9",
+  "branches": [
+    "* reality-grounding-audit",
+    "v11-situation-build",
+    "remotes/origin/HEAD -> origin/main",
+    "remotes/origin/import/v11-foundation-exact",
+    "remotes/origin/main",
+    "remotes/origin/reality-grounding-audit",
+    "remotes/origin/v11-scar-saturation",
+    "remotes/origin/v11-situation-build"
+  ],
+  "historical_scars_count": 13,
+  "requirements_mapped": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8"
+  ],
+  "total_tests_discovered": 569,
+  "tests_passed": 569,
+  "tests_failed": 0,
+  "tests_errored": 0,
+  "tests_skipped": 0,
+  "execution_time_seconds": 1354.752,
+  "open_deficits": [
+    {
+      "code": "G1_DEFICIT",
+      "detail": "tools/generate_qualification_record.py treats missing frontier db as 0 frontiers and applied patches as closed scars."
+    },
+    {
+      "code": "G2_DEFICIT",
+      "detail": "claims.py does not separate literal source assertion from warranted claim; lacks excerpt relevance checking."
+    },
+    {
+      "code": "G3_DEFICIT",
+      "detail": "Disconnected claim vocabularies across epistemic_ledger.py, claims.py, and enforcement.py; lacks semantic casting."
+    },
+    {
+      "code": "G4_DEFICIT",
+      "detail": "treatment_generator.py hardcodes youth literacy hypotheses and fixed scores for all 9 archetypes."
+    },
+    {
+      "code": "G5_DEFICIT",
+      "detail": "invalidate_claim does not propagate forward into downstream agency_projects, section records, or Kageyoni warrants."
+    },
+    {
+      "code": "G6_DEFICIT",
+      "detail": "Situation memory retrieval lacks workspace isolation and Method revocation filtering; transfer does not route through Transfers."
+    },
+    {
+      "code": "G7_DEFICIT",
+      "detail": "Comparative runner uses mock condition-based scores instead of real task executions against frozen fixtures."
+    }
+  ]
+}

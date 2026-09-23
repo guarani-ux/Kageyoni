@@ -1,0 +1,112 @@
+{
+  "contract_id": "MAGNET-AND-STATE-CONTRACT-V1",
+  "pinned_candidate_sha": "2ead5b59bf17819bcbc51d98881d9345cb77f2b9",
+  "established_at": "2026-09-23T14:15:00Z",
+  "status": "APPROVED_FROZEN",
+  "purpose": "Find failures we did not anticipate and prevent unsupported completion. Preserve meaning from original request through delivered result.",
+  "original_request": "MAGNET-AND-STATE VERIFICATION: Establish read-only contract, define what must be observable, build the magnet test families A-E, check every transition, trace cascades, make advancement depend on physical evidence, pass gates G1-G6 in order, enforce scar loop and saturation.",
+  "approved_requirements": [
+    {
+      "req_id": "REQ-G1-CONTRACT-COVERAGE",
+      "gate": "G1",
+      "title": "Contract and Coverage",
+      "specification": "Every consequential behavior maps to physical state, permitted transitions, observable results, and invalidating dependencies. Missing mappings block qualification.",
+      "state_representation": "docs/MAGNET-AND-STATE-CONTRACT.json and state/kageyoni_gates.sqlite",
+      "governing_operation": "tools/verify_magnet_contract.py",
+      "permitted_transitions": ["PENDING -> TESTING -> PASSED | FAILED | BLOCKED"],
+      "observable_result": "Zero verification gaps; 100% of consequential requirements mapped to observable states."
+    },
+    {
+      "req_id": "REQ-G2-SEMANTIC-PRESERVATION",
+      "gate": "G2",
+      "title": "Semantic Preservation (The Magnet)",
+      "specification": "Validated paraphrases preserve relevant meaning (Family A). Decisive semantic changes (Family B) trigger appropriate reassessment. Underlying state changes (Family C) alter decisions. Irrelevant changes (Family D) leave permissions stable. Uncertainty, attribution, identity, time, and scope survive transformations.",
+      "state_representation": "kageyoni/research_compiler/claims.py:ClaimGraph, contracts/epistemic_ledger.py",
+      "governing_operation": "tests/test_magnet_verification.py:TestMagnetFamilyA, TestMagnetFamilyB, TestMagnetFamilyC, TestMagnetFamilyD",
+      "permitted_transitions": ["UNTESTED -> TESTING -> PASSED | FAILED"],
+      "observable_result": "Paraphrase equivalence passes; modality/quantifier shifts rejected; state changes alter decisions; formatting changes do not alter decisions."
+    },
+    {
+      "req_id": "REQ-G3-EFFECT-RECOVERY",
+      "gate": "G3",
+      "title": "Effect and Recovery",
+      "specification": "Authorized effects occur correctly. Prohibited effects are prevented or detected. Partial execution, process restart, and retry preserve state integrity without lost obligations or duplicate effects (Family E).",
+      "state_representation": "kageyoni/situations/runtime.py:WorkflowRun, SQLite WAL/UOW",
+      "governing_operation": "tests/test_magnet_verification.py:TestMagnetFamilyE",
+      "permitted_transitions": ["active -> waiting -> active | failed"],
+      "observable_result": "Interrupted workflows resume without duplicate stage completions; partial effects remain visible and recoverable."
+    },
+    {
+      "req_id": "REQ-G4-DOWNSTREAM-INTEGRITY",
+      "gate": "G4",
+      "title": "Downstream Integrity & Cascades",
+      "specification": "Corrections reach affected decisions, artifacts, memories, and Methods across the full cascade: source -> claim -> decision -> action -> result -> artifact -> memory -> learning -> retrieval -> later behavior. Unrelated state remains intact. Stale evidence cannot regain authority.",
+      "state_representation": "kageyoni/research_compiler/invalidation_engine.py, agency_projects, agency_claim_retractions",
+      "governing_operation": "tests/test_g5_invalidation_cascade.py, tests/test_g8_end_to_end_saturation.py",
+      "permitted_transitions": ["valid -> invalidated / STALE / REVISION_REQUIRED"],
+      "observable_result": "Downstream records marked REVISION_REQUIRED; history preserved in append-only retractions table."
+    },
+    {
+      "req_id": "REQ-G5-VERIFIER-SENSITIVITY",
+      "gate": "G5",
+      "title": "Verifier Sensitivity & Mutation Saturation",
+      "specification": "Deliberately weaken a safeguard in an isolated test copy; the relevant test must detect the weakened behavior. Restore the safeguard; valid neighboring behavior must still pass.",
+      "state_representation": "tools/situation_mutation_check.py, evidence/qualification/mutation_audit.json",
+      "governing_operation": "tools/situation_mutation_check.py",
+      "permitted_transitions": ["mutant_generated -> mutant_killed (100%)"],
+      "observable_result": "All 4 canonical mutants killed; 0 surviving mutants; clean control passes."
+    },
+    {
+      "req_id": "REQ-G6-WHOLE-SYSTEM-QUALIFICATION",
+      "gate": "G6",
+      "title": "Whole-System Qualification & Exact Release",
+      "specification": "Run complete required trajectories and regressions. Verify required test identities, not merely a total test count. Release test verifies installed wheel artifact from exact candidate commit in clean isolated environment without local repository on sys.path.",
+      "state_representation": "evidence/qualification/qualification.json, evidence/qualification/package_parity_audit.json, evidence/qualification/clean_wheel_install_audit.json",
+      "governing_operation": "tools/generate_qualification_record.py --verify",
+      "permitted_transitions": ["TESTING -> release_eligible: true"],
+      "observable_result": "qualification.json release_eligible: true bound to exact commit SHA."
+    }
+  ],
+  "mandatory_constraints": [
+    "Use Kageyoni's existing state, evidence, dependency, and Scar mechanisms. Do not create a separate verification engine.",
+    "The verifier derives gate states strictly from physical execution results. The builder cannot clear a gate by submitting passed=true.",
+    "Never equate: missing = false; unknown = absent; not tested = passed; not applicable = passed.",
+    "Every test case must declare expected relationship before execution.",
+    "Failure at any gate blocks dependent advancement.",
+    "All subprocess payloads must execute within isolated execution boundaries."
+  ],
+  "authorized_effects": [
+    "Creation and execution of adversarial test cases and physical execution records in Kageyoni SQLite.",
+    "Updates to existing kageyoni modules, tests, and qualification tools.",
+    "Generation of authoritative qualification and audit dossiers in evidence/."
+  ],
+  "prohibited_effects": [
+    "Creating an external parallel verification engine.",
+    "Skipping or caching gate executions without live physical verification.",
+    "Modality promotions ('may' -> 'does') or quantifier expansions ('some' -> 'all').",
+    "Laundering hypotheses or assumptions into established facts without empirical warrant.",
+    "Cross-workspace situation memory leakage.",
+    "Overwriting or erasing historical retraction records (append-only enforcement)."
+  ],
+  "acceptance_cases": {
+    "family_A": "Paraphrase equivalence preserves decision and authority.",
+    "family_B": "Consequential linguistic distinctions trigger appropriate boundary reassessment.",
+    "family_C": "Underlying state changes alter decisions despite unchanged prompt text.",
+    "family_D": "Formatting and irrelevant metadata changes preserve decisions stably.",
+    "family_E": "Process interruption and retry preserve state integrity with zero duplicate effects."
+  },
+  "required_evidence": [
+    "candidate_sha",
+    "test_case_ids",
+    "command_identity",
+    "exit_code",
+    "failures_and_skips",
+    "input_and_output_hashes",
+    "evidence_references",
+    "evaluator_identity_and_authority"
+  ],
+  "what_remains_uncertain": [
+    "Live empirical evaluation against external black-box LLMs remains unexecuted (explicitly flagged as VERIFIER_DEFICIT).",
+    "Windows local filesystem file lock release requires explicit connection closing."
+  ]
+}
