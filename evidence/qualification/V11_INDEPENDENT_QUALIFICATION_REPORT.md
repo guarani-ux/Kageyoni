@@ -1,9 +1,9 @@
 # Kageyoni v11 Independent Qualification Report
 **Authority**: Machine-Derived from `evidence/qualification/qualification.json`  
-**Candidate Working Branch**: `v11-situation-build`  
-**Candidate Commit**: Current Qualified Working Tree  
-**Package Parity**: 100% Hash Match across 47 components; Clean Virtual Environment Installation Verified  
-**Date**: September 22, 2026  
+**Candidate Working Branch**: `reality-grounding-audit`  
+**Candidate Commit**: `b54963a25e4a3efb3201c1f00483dc8c10f2344f`  
+**Package Parity**: 100% Hash Match across 48 audited components; Clean Virtual Environment Installation Verified  
+**Date**: September 23, 2026  
 
 ---
 
@@ -12,12 +12,12 @@ Based strictly on physical execution telemetry, database receipts, blind experim
 
 | Qualification Gate | Status | Evidence Citation |
 | :--- | :--- | :--- |
-| **Mechanical Inherited Regression** | **PASS** | 529 passing unit tests across inherited engine modules (`test_engine`, `test_foundation`, etc.) |
+| **Mechanical Inherited Regression** | **PASS** | 603 passing unit tests (0 failures, 0 errors, 0 skips) across all engine, situation, trust, and research compiler modules |
 | **Mechanical Trust & Mediation** | **PASS** | `tests/test_v11_production_path_mediation.py` (6/6 pass); `tests/test_v11_frozen_trust_gate.py` |
 | **Situation Architecture (22 Slices)** | **PASS** | `tests/test_situation*.py` (34/34 pass); `tests/test_situation_connected_lifecycle.py` |
-| **Scar Saturation** | **PASS** | `tests/test_situation_r4_scar_saturation.py`; `evidence/audits/patch-status.json` (6/6 applied) |
-| **Mutation Testing** | **PASS** | `tests/test_v11_adaptive.py` (optimistic concurrency and revision divergence guards) |
-| **Package / Source Parity** | **PASS** | `evidence/qualification/package_parity_audit.json` (47/47 match); `evidence/qualification/clean_wheel_install_audit.json` |
+| **Scar Saturation** | **PASS** | `tests/test_situation_r4_scar_saturation.py`; `evidence/audits/scar_inventory.json` (13/13 scars reprobed and closed with positive controls) |
+| **Mutation Testing** | **PASS** | `tools/situation_mutation_check.py` (4/4 mutants killed: `borrowed-domain`, `stage-evidence`, `transfer-evidence`, `promotion-evidence`) |
+| **Package / Source Parity** | **PASS** | `evidence/qualification/package_parity_audit.json` (48/48 match); `evidence/qualification/clean_wheel_install_audit.json` |
 | **R5 Comparative Qualification** | **QUALIFIED** | `evidence/comparative/r5_comparative_trials.json` (20 blind trials; Agent F runner / Agent G evaluator) |
 | **R6 Long-Horizon Development** | **QUALIFIED** | `evidence/horizon/r6_long_horizon_trials.json` (4 trajectories, 16 encounters, EnforcerRegistry) |
 | **Initial Blocking Frontiers** | **0 OPEN** | 10/10 resolved with engine-held observations in `state/v11_completion_situation.sqlite` |
@@ -32,7 +32,7 @@ $$\text{release\_eligible} = \mathbf{TRUE}$$
 ### 2. Built Release Distribution Artifacts
 Built and validated from qualified source:
 - **Wheel Package**: `dist/kageyoni_engine-11.0.0-py3-none-any.whl`
-  - SHA-256: `55ac9194e69d74b26a52f78d4afec1252d7c07d67f76d3f1c3e9fb50c39cb39d`
+  - SHA-256: `0283970d39becadb6aa570d2c2449a64832af127c2573da64bc02eaab48ea83c`
 - **Source Distribution**: `dist/kageyoni_engine-11.0.0.tar.gz`
   - SHA-256: `67b06d2cb8c9ad5edad51beae6b7e8e58e82e04768c77e40823af2ce89070ec7`
 

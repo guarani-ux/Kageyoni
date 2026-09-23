@@ -1,10 +1,11 @@
 {
   "title": "Kageyoni v11 Package / Source Parity Audit",
   "agent": "Agent I (Release Reproducer)",
+  "git_sha": "b54963a25e4a3efb3201c1f00483dc8c10f2344f",
   "timestamp": "2026-09-22T14:41:00Z",
   "wheel_file": "kageyoni_engine-11.0.0-py3-none-any.whl",
-  "wheel_sha256": "55ac9194e69d74b26a52f78d4afec1252d7c07d67f76d3f1c3e9fb50c39cb39d",
-  "total_files_in_wheel": 109,
+  "wheel_sha256": "0283970d39becadb6aa570d2c2449a64832af127c2573da64bc02eaab48ea83c",
+  "total_files_in_wheel": 120,
   "total_audited_targets": 48,
   "missing_files_count": 0,
   "missing_files": [],
@@ -196,16 +197,16 @@
       "path": "kageyoni/v11/__init__.py",
       "category": "v11_modules",
       "in_wheel": true,
-      "wheel_sha256": "b5c69e22033503c837e9f48b6b3934a1431638ade5ce57fa83cbf7460f4f4f7b",
-      "source_sha256": "b5c69e22033503c837e9f48b6b3934a1431638ade5ce57fa83cbf7460f4f4f7b",
+      "wheel_sha256": "25371fa1230d129852c962d8c45ae7a3d49ec3a1d295dab2098417dc2add43cb",
+      "source_sha256": "25371fa1230d129852c962d8c45ae7a3d49ec3a1d295dab2098417dc2add43cb",
       "hash_parity": true
     },
     {
       "path": "kageyoni/v11/adaptive.py",
       "category": "v11_modules",
       "in_wheel": true,
-      "wheel_sha256": "34843e4a8a1da63f357b56b5495cfe5193094e0edef03cfd75671fd7e3e1d400",
-      "source_sha256": "34843e4a8a1da63f357b56b5495cfe5193094e0edef03cfd75671fd7e3e1d400",
+      "wheel_sha256": "a74f256b537b134857d136588485feb1fafd40f21ca027a275ef011d901eecaa",
+      "source_sha256": "a74f256b537b134857d136588485feb1fafd40f21ca027a275ef011d901eecaa",
       "hash_parity": true
     },
     {
@@ -220,8 +221,8 @@
       "path": "kageyoni/v11/enforcement.py",
       "category": "v11_modules",
       "in_wheel": true,
-      "wheel_sha256": "e9f057bcfe74b55ad773c2a2fa3f88ae348d94d47817bfd354b7db2be5dd9e70",
-      "source_sha256": "e9f057bcfe74b55ad773c2a2fa3f88ae348d94d47817bfd354b7db2be5dd9e70",
+      "wheel_sha256": "8381d447c57a75f1ce8a0328130c131f1541f5d8165095bed6b510ee1b7eebb4",
+      "source_sha256": "8381d447c57a75f1ce8a0328130c131f1541f5d8165095bed6b510ee1b7eebb4",
       "hash_parity": true
     },
     {
@@ -284,16 +285,16 @@
       "path": "kageyoni/situations/long_horizon.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "d650cfbdbbf3ebb1a7e45ecf852b8d8c673d4cd43ae82edc807fb4318635501c",
-      "source_sha256": "d650cfbdbbf3ebb1a7e45ecf852b8d8c673d4cd43ae82edc807fb4318635501c",
+      "wheel_sha256": "ab02fea84261dd94d14e8df1d41ff16f1520b27b6182ce86ff27ed562cab9eeb",
+      "source_sha256": "ab02fea84261dd94d14e8df1d41ff16f1520b27b6182ce86ff27ed562cab9eeb",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/memory.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "77aba9331fe0bf3f7e363cfe53819b87e7d6fa666e50afa2b558ae4990e887fc",
-      "source_sha256": "77aba9331fe0bf3f7e363cfe53819b87e7d6fa666e50afa2b558ae4990e887fc",
+      "wheel_sha256": "3b993758f34e8c2efef92fc7d800ea9096631b57369dd4179d8d6e09b88fdfe3",
+      "source_sha256": "3b993758f34e8c2efef92fc7d800ea9096631b57369dd4179d8d6e09b88fdfe3",
       "hash_parity": true
     },
     {
@@ -372,8 +373,8 @@
       "path": "kageyoni/engine.py",
       "category": "core_modules",
       "in_wheel": true,
-      "wheel_sha256": "4002796ebcb2fd35da7818b06cb75493c6b24ae563e7fbb8d2219f0617e50c5a",
-      "source_sha256": "4002796ebcb2fd35da7818b06cb75493c6b24ae563e7fbb8d2219f0617e50c5a",
+      "wheel_sha256": "e063d3d84ce7dabf51ed2752e3e82b9a156a7f6cbf9b15eb7561eb9c079906ba",
+      "source_sha256": "e063d3d84ce7dabf51ed2752e3e82b9a156a7f6cbf9b15eb7561eb9c079906ba",
       "hash_parity": true
     },
     {

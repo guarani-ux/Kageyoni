@@ -1,9 +1,10 @@
 {
   "status": "PASS",
+  "git_sha": "b54963a25e4a3efb3201c1f00483dc8c10f2344f",
   "wheel_file": "kageyoni_engine-11.0.0-py3-none-any.whl",
-  "wheel_sha256": "55ac9194e69d74b26a52f78d4afec1252d7c07d67f76d3f1c3e9fb50c39cb39d",
+  "wheel_sha256": "0283970d39becadb6aa570d2c2449a64832af127c2573da64bc02eaab48ea83c",
   "python_executable": "C:\\Users\\flowe\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
-  "isolated_env": "C:\\Users\\flowe\\AppData\\Local\\Temp\\tmpchx9sm06\\test_venv",
+  "isolated_env": "C:\\Users\\flowe\\AppData\\Local\\Temp\\tmpl6j9n5qb\\test_venv",
   "assertions": {
     "no_repository_on_sys_path": true,
     "imported_from_site_packages": true,

@@ -142,9 +142,11 @@ class ScriptReadyCompiler:
         # Evidence Map
         evidence_map = {
             "claims_count": len(graph.claims),
+            "sources_count": len(graph.sources),
             "established_facts_count": len(graph.get_established_facts()),
             "uncertain_claims_count": len(uncertain_claims),
             "claims": [c.to_dict() for c in graph.claims.values()],
+            "sources": [s.to_dict() for s in graph.sources.values()],
         }
 
         # Pillar 9 & Traceability: Build Lineage Chains

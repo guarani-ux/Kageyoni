@@ -1,5 +1,5 @@
 {
-  "git_sha": "4142ecf3759849daad2d07202fb3f17ac7a0c3d1",
+  "git_sha": "b54963a25e4a3efb3201c1f00483dc8c10f2344f",
   "mechanical": {
     "inherited": "pass",
     "trust": "pass",
@@ -7,6 +7,15 @@
     "scar": "pass",
     "mutation": "pass",
     "package_parity": "pass"
+  },
+  "mutation_details": {
+    "killed": [
+      "borrowed-domain",
+      "stage-evidence",
+      "transfer-evidence",
+      "promotion-evidence"
+    ],
+    "inconclusive": []
   },
   "comparative": {
     "status": "harness_qualified",
@@ -32,9 +41,11 @@
     "all_mechanical_pass": true,
     "no_blocking_frontiers": true,
     "no_open_scars": true,
-    "tests_executed": 542,
+    "tests_executed": 603,
     "tests_failed": 0,
     "tests_errored": 0,
-    "tests_skipped": 0
+    "tests_skipped": 0,
+    "mutation_pass": true,
+    "package_parity_pass": true
   }
 }

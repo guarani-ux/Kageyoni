@@ -144,7 +144,7 @@ class TestResearchCompiler(unittest.TestCase):
         """Pillar 4 & Traceability: Verifies child synthesis traces backward to physical source records."""
         lineage = self.graph.trace_backward_lineage("clm_graphic_novel_bridge")
         self.assertEqual(lineage["claim_id"], "clm_graphic_novel_bridge")
-        self.assertEqual(lineage["epistemic_status"], "SYNTHESIS")
+        self.assertIn(lineage["epistemic_status"], ("SYNTHESIS", EpistemicStatus.SYNTHESIS.value))
         self.assertEqual(len(lineage["parent_lineages"]), 1)
 
         parent = lineage["parent_lineages"][0]

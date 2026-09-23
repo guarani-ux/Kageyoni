@@ -581,6 +581,35 @@ class AgencyWorkflows:
 
         # Reconstruct graph from stored evidence map
         graph = ClaimGraph()
+        for src_dict in pkg_data["evidence_map"].get("sources", []):
+            src = SourceRecord(
+                source_id=src_dict["source_id"],
+                title=src_dict.get("title", ""),
+                provenance=src_dict.get("provenance", ""),
+                author_or_institution=src_dict.get("author_or_institution", ""),
+                direct_excerpt=src_dict.get("direct_excerpt", ""),
+                date_recorded=src_dict.get("date_recorded", time.time()),
+                reliability_tier=src_dict.get("reliability_tier", "PRIMARY_CORROBORATED"),
+                content_hash=src_dict.get("content_hash", ""),
+                source_says_statement=src_dict.get("source_says_statement", ""),
+            )
+            graph.add_source(src)
+
+        # For any provenance sources referenced in claims not yet in graph
+        for clm_dict in pkg_data["evidence_map"].get("claims", []):
+            for sid in clm_dict.get("provenance_sources", []):
+                if sid not in graph.sources:
+                    graph.add_source(
+                        SourceRecord(
+                            source_id=sid,
+                            title=f"Source {sid}",
+                            provenance="persisted_evidence_map",
+                            author_or_institution="UNKNOWN",
+                            direct_excerpt=f"Persisted reference {sid}",
+                            date_recorded=time.time(),
+                        )
+                    )
+
         for clm_dict in pkg_data["evidence_map"]["claims"]:
             clm = ClaimNode(
                 claim_id=clm_dict["claim_id"],

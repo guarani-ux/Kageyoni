@@ -7,6 +7,8 @@ and that all core components can be imported and initialized without local path 
 """
 from __future__ import annotations
 import glob
+import hashlib
+import json
 import os
 from pathlib import Path
 import subprocess
