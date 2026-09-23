@@ -1,0 +1,97 @@
+{
+  "upstream_model": "AUDIENCE x PURPOSE x CONTEXT (Rhetorical Situation Model)",
+  "downstream_model": "STRUCTURE + PACING (Information & Experience Control over Time)",
+  "skill_dimensions": [
+    "cognitive",
+    "rhetorical",
+    "technical",
+    "genre_conventions",
+    "audience_analysis",
+    "voice_tone",
+    "structure",
+    "pacing",
+    "research",
+    "legal_ethical"
+  ],
+  "importance_scale": {
+    "1": "supporting",
+    "2": "useful",
+    "3": "important",
+    "4": "highly important",
+    "5": "mission-critical"
+  },
+  "matrix": {
+    "marketing": {
+      "character_anchor": "Scribe / Prometheus",
+      "dominant_outcome": "Behaviour / value exchange",
+      "audience_contract": "Show why this matters to me.",
+      "scores": {"cognitive": 4, "rhetorical": 5, "technical": 4, "genre_conventions": 4, "audience_analysis": 5, "voice_tone": 5, "structure": 4, "pacing": 5, "research": 4, "legal_ethical": 5}
+    },
+    "communications": {
+      "character_anchor": "Valkyrie",
+      "dominant_outcome": "Understanding / trust / response",
+      "audience_contract": "Tell me what is true, relevant and happening.",
+      "scores": {"cognitive": 4, "rhetorical": 5, "technical": 4, "genre_conventions": 4, "audience_analysis": 5, "voice_tone": 5, "structure": 5, "pacing": 4, "research": 5, "legal_ethical": 5}
+    },
+    "scriptwriting": {
+      "character_anchor": "Scribe / Forge",
+      "dominant_outcome": "Audiovisual dramatic experience",
+      "audience_contract": "Make me see/hear the story.",
+      "scores": {"cognitive": 5, "rhetorical": 5, "technical": 5, "genre_conventions": 5, "audience_analysis": 4, "voice_tone": 5, "structure": 5, "pacing": 5, "research": 4, "legal_ethical": 4}
+    },
+    "product_marketing": {
+      "character_anchor": "Oracle",
+      "dominant_outcome": "Product-market understanding / adoption",
+      "audience_contract": "Show why this solution fits and differs.",
+      "scores": {"cognitive": 5, "rhetorical": 5, "technical": 4, "genre_conventions": 4, "audience_analysis": 5, "voice_tone": 5, "structure": 5, "pacing": 4, "research": 5, "legal_ethical": 5}
+    },
+    "content_marketing": {
+      "character_anchor": "Oracle / Scribe",
+      "dominant_outcome": "Useful relationship over time",
+      "audience_contract": "Help me before asking me to buy.",
+      "scores": {"cognitive": 4, "rhetorical": 5, "technical": 5, "genre_conventions": 4, "audience_analysis": 5, "voice_tone": 5, "structure": 5, "pacing": 4, "research": 5, "legal_ethical": 5}
+    },
+    "corporate_writing": {
+      "character_anchor": "Valkyrie / Warden",
+      "dominant_outcome": "Decision / coordination / governance",
+      "audience_contract": "Help me decide or act correctly.",
+      "scores": {"cognitive": 5, "rhetorical": 5, "technical": 4, "genre_conventions": 5, "audience_analysis": 5, "voice_tone": 4, "structure": 5, "pacing": 3, "research": 5, "legal_ethical": 5}
+    },
+    "youtube": {
+      "character_anchor": "Prometheus / Radar / Forge",
+      "dominant_outcome": "Continued voluntary attention",
+      "audience_contract": "Deliver the promise that made me click.",
+      "scores": {"cognitive": 4, "rhetorical": 5, "technical": 5, "genre_conventions": 5, "audience_analysis": 5, "voice_tone": 5, "structure": 5, "pacing": 5, "research": 4, "legal_ethical": 5}
+    },
+    "rpg_storytelling": {
+      "character_anchor": "Kageyoni World Master",
+      "dominant_outcome": "Collaborative play / shared narrative",
+      "audience_contract": "My decisions can meaningfully change events.",
+      "scores": {"cognitive": 5, "rhetorical": 5, "technical": 5, "genre_conventions": 5, "audience_analysis": 5, "voice_tone": 5, "structure": 5, "pacing": 5, "research": 4, "legal_ethical": 5}
+    },
+    "fantasy": {
+      "character_anchor": "Prometheus (World Genesis)",
+      "dominant_outcome": "Speculative immersion & coherence",
+      "audience_contract": "Make the impossible meaningfully coherent.",
+      "scores": {"cognitive": 5, "rhetorical": 5, "technical": 4, "genre_conventions": 5, "audience_analysis": 4, "voice_tone": 5, "structure": 5, "pacing": 5, "research": 5, "legal_ethical": 4}
+    },
+    "drama": {
+      "character_anchor": "Scribe / Prometheus",
+      "dominant_outcome": "Emotional / relational change",
+      "audience_contract": "Make these choices and feelings credible.",
+      "scores": {"cognitive": 5, "rhetorical": 5, "technical": 4, "genre_conventions": 5, "audience_analysis": 4, "voice_tone": 5, "structure": 5, "pacing": 5, "research": 4, "legal_ethical": 4}
+    },
+    "comedy": {
+      "character_anchor": "Prometheus / Scribe",
+      "dominant_outcome": "Amusement via benign violation",
+      "audience_contract": "Surprise me in a way I can accept/read as funny.",
+      "scores": {"cognitive": 5, "rhetorical": 5, "technical": 4, "genre_conventions": 5, "audience_analysis": 5, "voice_tone": 5, "structure": 5, "pacing": 5, "research": 4, "legal_ethical": 5}
+    },
+    "thriller": {
+      "character_anchor": "Prometheus / Cipher",
+      "dominant_outcome": "Sustained consequential uncertainty",
+      "audience_contract": "Keep outcomes uncertain but causally credible.",
+      "scores": {"cognitive": 5, "rhetorical": 5, "technical": 4, "genre_conventions": 5, "audience_analysis": 4, "voice_tone": 5, "structure": 5, "pacing": 5, "research": 5, "legal_ethical": 4}
+    }
+  }
+}

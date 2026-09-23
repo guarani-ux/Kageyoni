@@ -1,0 +1,545 @@
+{
+  "package_id": "pkg_d57f49c068",
+  "compiled_at": 1790179397.9015658,
+  "subject_title": "Calgary Youth Literacy & Cognitive Reading Bridge",
+  "topic_model": {
+    "topic_id": "cpl_youth_literacy_2026",
+    "subject_title": "Calgary Public Library Grade 3-6 Cognitive Reading Bridge",
+    "core_state_of_affairs": "Calgary elementary students experience reading resistance at the Grade 3-4 transition point due to visual intimidation caused by the removal of illustrations from standard curriculum texts. Calgary Public Library deploys graphic novel collections and free reading coaches across 21 branches to eliminate this friction.",
+    "established_facts_count": 4,
+    "established_facts": [
+      {
+        "claim_id": "clm_reach",
+        "statement": "CPL literacy programs reached over 26,600 student participants across 12 programs.",
+        "sources": [
+          "src_cpl_audit"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "claim_id": "clm_friction",
+        "statement": "Grade 4 reading resistance is triggered by the sudden elimination of visual illustrations in school texts.",
+        "sources": [
+          "src_reading_transition"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "claim_id": "clm_bridge",
+        "statement": "Graphic novels act as an evidence-based cognitive bridge restoring reading fluency for struggling 4th graders.",
+        "sources": [
+          "src_reading_transition"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "claim_id": "clm_free_access",
+        "statement": "All Calgary Public Library reading coaches, tutoring programs, and digital tools are 100% free with a library card.",
+        "sources": [
+          "src_cpl_audit",
+          "src_cpl_audio_studios"
+        ],
+        "confidence": "HIGH"
+      }
+    ],
+    "concepts_and_relationships": [
+      {
+        "entity_a": "Curriculum Text Transition",
+        "relation": "TRIGGERS",
+        "entity_b": "Visual Intimidation in Grade 4 Readers"
+      },
+      {
+        "entity_a": "Graphic Novel Bridge",
+        "relation": "SCAFFOLDS",
+        "entity_b": "Situation Model Comprehension"
+      },
+      {
+        "entity_a": "Free Library Card",
+        "relation": "PROVIDES_ACCESS_TO",
+        "entity_b": "Drop-in Reading Coaches"
+      }
+    ],
+    "chronology_and_causality": [],
+    "stakeholders_and_perspectives": [
+      {
+        "name": "Grade 3-6 Students",
+        "stance": "Intimidated by unillustrated chapter books, shame around reading speed."
+      },
+      {
+        "name": "Parents",
+        "stance": "Anxious about academic decline; harbor misconception that graphic novels are 'cheating'."
+      },
+      {
+        "name": "Children's Librarians",
+        "stance": "Trained in scaffolding; advocate for graphic novel reading bridges."
+      },
+      {
+        "name": "Elementary Teachers",
+        "stance": "Constrained by standardized testing; looking for outside reading support."
+      }
+    ],
+    "disagreements_and_uncertainties": [
+      {
+        "claim_id": "clm_audiobook",
+        "statement": "Audiobook listening produces identical vocabulary retention as silent text reading for Grade 4 children.",
+        "epistemic_status": "HYPOTHESIS",
+        "confidence": "CONTESTED",
+        "falsification_condition": "Standardized vocabulary retention tests across audio vs print cohorts."
+      }
+    ],
+    "misconceptions": [
+      {
+        "misconception": "Graphic novels don't count as real reading.",
+        "correction": "Cognitive studies confirm graphic novels build complex situation models and equal vocabulary."
+      },
+      {
+        "misconception": "Public library coaching requires paid appointments.",
+        "correction": "Library cardholders receive free drop-in access."
+      }
+    ],
+    "contradictions": [
+      {
+        "contradiction": "Parents want children to love reading, but restrict them to unillustrated books that cause reading anxiety."
+      }
+    ],
+    "consequences": [],
+    "active_tensions": [
+      {
+        "tension": "Academic pressure (forcing 30-min chapter book drills) vs. Cognitive joy (graphic novel fluency)."
+      }
+    ],
+    "known_unknowns": [
+      "Exact percentage of Calgary elementary schools with active library partnership programs in 2026."
+    ],
+    "information_value_score": 0.39
+  },
+  "evidence_map": {
+    "claims_count": 5,
+    "established_facts_count": 4,
+    "uncertain_claims_count": 1,
+    "claims": [
+      {
+        "claim_id": "clm_reach",
+        "statement": "CPL literacy programs reached over 26,600 student participants across 12 programs.",
+        "epistemic_status": "SOURCE_FACT",
+        "provenance_sources": [
+          "src_cpl_audit"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If audited attendance logs report fewer than 20,000 unique students.",
+        "parent_claim_ids": [],
+        "child_claim_ids": [],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_friction",
+        "statement": "Grade 4 reading resistance is triggered by the sudden elimination of visual illustrations in school texts.",
+        "epistemic_status": "SOURCE_FACT",
+        "provenance_sources": [
+          "src_reading_transition"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If eye-tracking and comprehension latency show identical friction on illustrated vs unillustrated texts.",
+        "parent_claim_ids": [],
+        "child_claim_ids": [
+          "clm_bridge"
+        ],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_bridge",
+        "statement": "Graphic novels act as an evidence-based cognitive bridge restoring reading fluency for struggling 4th graders.",
+        "epistemic_status": "SYNTHESIS",
+        "provenance_sources": [
+          "src_reading_transition"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If reading fluency scores fail to increase after 60 days of graphic novel intervention.",
+        "parent_claim_ids": [
+          "clm_friction"
+        ],
+        "child_claim_ids": [],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_free_access",
+        "statement": "All Calgary Public Library reading coaches, tutoring programs, and digital tools are 100% free with a library card.",
+        "epistemic_status": "SOURCE_FACT",
+        "provenance_sources": [
+          "src_cpl_audit",
+          "src_cpl_audio_studios"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If any fee or financial barrier is required to access programs.",
+        "parent_claim_ids": [],
+        "child_claim_ids": [],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_audiobook",
+        "statement": "Audiobook listening produces identical vocabulary retention as silent text reading for Grade 4 children.",
+        "epistemic_status": "HYPOTHESIS",
+        "provenance_sources": [],
+        "confidence_level": "CONTESTED",
+        "falsification_condition": "Standardized vocabulary retention tests across audio vs print cohorts.",
+        "parent_claim_ids": [],
+        "child_claim_ids": [],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      }
+    ]
+  },
+  "audience_model": {
+    "target_segment": "Calgary parents of Grade 3-6 children showing reading resistance or declining school grades.",
+    "prior_knowledge_baseline": "Parents believe reading difficulties stem from screen addiction or lack of effort.",
+    "active_misconceptions": [
+      "Graphic novels are comic junk food",
+      "Library resources are outdated books"
+    ],
+    "practical_and_emotional_stakes": "Fear of long-term academic failure and childhood embarrassment.",
+    "reception_friction": "Parents are exhausted by homework battles and skeptical of another reading lecture."
+  },
+  "communication_problem": {
+    "current_state": "Parents enforce painful reading drills on intimidating chapter books, unaware of the CPL graphic novel bridge.",
+    "desired_shift": "Shift from conflict-driven reading drills to empowered library visits using graphic novels and free coaching.",
+    "decision_to_enable": "Parent visits Calgary Public Library branch with student and checks out 3 graphic novels from the curated reading bridge."
+  },
+  "story_territory": {
+    "core_frictions": [
+      "The invisible wall: when a fluent reader suddenly freezes on page 3 of a chapter book."
+    ],
+    "transformations": [
+      "From bedtime homework tears to a child voluntarily reading under the covers with a flashlight."
+    ],
+    "human_stakes": [
+      "Academic confidence, parent-child bonding, lifelong literacy."
+    ],
+    "scenes_and_locales": [
+      "Kitchen table homework frustration",
+      "Central Library children's commons",
+      "Close-up of graphic novel visual panels"
+    ]
+  },
+  "competing_treatments": [
+    {
+      "archetype": "PROBLEM_SOLUTION",
+      "hypothesis": "Frame literacy friction as a solvable design problem: moving from book intimidation to the 3-step reading bridge.",
+      "strengths": [
+        "High practical utility",
+        "Direct audience action",
+        "Low cognitive resistance"
+      ],
+      "vulnerabilities": [
+        "Can feel dry or transactional if emotional stakes are omitted"
+      ],
+      "scores": {
+        "evidence_warrant": 0.95,
+        "audience_fit": 0.9,
+        "objective_fit": 0.95,
+        "medium_feasibility": 0.9,
+        "composite": 0.731
+      },
+      "mandatory_flip_condition": "If audience retention drops by >30% during the solution steps, pivot to a character-driven struggle."
+    },
+    {
+      "archetype": "CHARACTER_DRIVEN",
+      "hypothesis": "Follow one struggling Grade 4 reader confronting chapter books and discovering their voice through graphic novels.",
+      "strengths": [
+        "High emotional empathy",
+        "Strong narrative transportation",
+        "Relatable identification"
+      ],
+      "vulnerabilities": [
+        "Requires willing student participant and parental consent under Alberta PIPA"
+      ],
+      "scores": {
+        "evidence_warrant": 0.85,
+        "audience_fit": 0.95,
+        "objective_fit": 0.85,
+        "medium_feasibility": 0.8,
+        "composite": 0.5491
+      },
+      "mandatory_flip_condition": "If authentic on-camera talent is unavailable, drop character-driven treatment immediately."
+    },
+    {
+      "archetype": "TENSION_REVELATION",
+      "hypothesis": "Open on the paradox: Why do children stop reading right when they become fluent in speech? Reveal the hidden barrier.",
+      "strengths": [
+        "High click-through curiosity",
+        "Powerful opening retention",
+        "Intellectually arresting"
+      ],
+      "vulnerabilities": [
+        "Risk of feeling like clickbait if revelation under-delivers on the promise"
+      ],
+      "scores": {
+        "evidence_warrant": 0.8,
+        "audience_fit": 0.85,
+        "objective_fit": 0.85,
+        "medium_feasibility": 0.85,
+        "composite": 0.4913
+      },
+      "mandatory_flip_condition": "If the reveal feels anticlimactic to test viewers, restructure as straightforward explanatory."
+    },
+    {
+      "archetype": "PROCESS_ORIENTED",
+      "hypothesis": "Walk through the physical journey of a library card: from registration to free studio booking and coach checkouts.",
+      "strengths": [
+        "Clear procedural clarity",
+        "Direct conversion to library cards"
+      ],
+      "vulnerabilities": [
+        "Lacks dramatic tension or emotional stakes"
+      ],
+      "scores": {
+        "evidence_warrant": 0.9,
+        "audience_fit": 0.7,
+        "objective_fit": 0.8,
+        "medium_feasibility": 0.9,
+        "composite": 0.4536
+      },
+      "mandatory_flip_condition": "If viewer feedback flags procedural boredom, blend with problem-solution framing."
+    },
+    {
+      "archetype": "EXPLANATORY",
+      "hypothesis": "Deconstruct the cognitive science of reading transition between Grades 3 and 4 using visual diagrams.",
+      "strengths": [
+        "Authoritative and credible",
+        "High educator utility"
+      ],
+      "vulnerabilities": [
+        "Too academic for struggling parents and students; risks lecture tone"
+      ],
+      "scores": {
+        "evidence_warrant": 0.9,
+        "audience_fit": 0.6,
+        "objective_fit": 0.7,
+        "medium_feasibility": 0.85,
+        "composite": 0.3213
+      },
+      "mandatory_flip_condition": "If watch time indicates early drop-off from general viewers, demote academic explanations."
+    },
+    {
+      "archetype": "ARGUMENTATIVE",
+      "hypothesis": "Make the case against reading drills: Why forcing 30 minutes of silent chapter book reading backfires.",
+      "strengths": [
+        "High provocation",
+        "Challenges conventional parenting habits"
+      ],
+      "vulnerabilities": [
+        "Can polarize educators or seem confrontational"
+      ],
+      "scores": {
+        "evidence_warrant": 0.75,
+        "audience_fit": 0.7,
+        "objective_fit": 0.65,
+        "medium_feasibility": 0.8,
+        "composite": 0.273
+      },
+      "mandatory_flip_condition": "If child psychology claims cannot be verified by secondary review, reject argumentative."
+    },
+    {
+      "archetype": "INVESTIGATIVE",
+      "hypothesis": "Investigate why public library usage drops off among teenagers and pre-teens in urban Calgary.",
+      "strengths": [
+        "Exposes hidden institutional disparity",
+        "High journalistic merit"
+      ],
+      "vulnerabilities": [
+        "May create defensive stakeholder response or politicized friction"
+      ],
+      "scores": {
+        "evidence_warrant": 0.75,
+        "audience_fit": 0.65,
+        "objective_fit": 0.6,
+        "medium_feasibility": 0.7,
+        "composite": 0.2048
+      },
+      "mandatory_flip_condition": "If stakeholder sign-off is refused, terminate investigative line."
+    },
+    {
+      "archetype": "EXPERIENTIAL",
+      "hypothesis": "An atmospheric, observational portrait of Central Library during afternoon drop-in reading clubs.",
+      "strengths": [
+        "Cinematic beauty",
+        "High institutional prestige"
+      ],
+      "vulnerabilities": [
+        "Low information transfer; does not directly instruct parents how to solve their child's reading problem"
+      ],
+      "scores": {
+        "evidence_warrant": 0.8,
+        "audience_fit": 0.5,
+        "objective_fit": 0.6,
+        "medium_feasibility": 0.85,
+        "composite": 0.204
+      },
+      "mandatory_flip_condition": "If objective requires measurable program attendance, experiential format is rejected."
+    },
+    {
+      "archetype": "HISTORICAL",
+      "hypothesis": "Trace the 112-year evolution of Calgary Public Library's literacy programs from 1912 to the digital age.",
+      "strengths": [
+        "Archival depth",
+        "Civic heritage interest"
+      ],
+      "vulnerabilities": [
+        "Zero urgency for a parent whose child is failing reading class today"
+      ],
+      "scores": {
+        "evidence_warrant": 0.85,
+        "audience_fit": 0.3,
+        "objective_fit": 0.4,
+        "medium_feasibility": 0.8,
+        "composite": 0.0816
+      },
+      "mandatory_flip_condition": "Historical model is rejected for active program outreach."
+    }
+  ],
+  "creative_decision": {
+    "selected_archetype": "PROBLEM_SOLUTION",
+    "composite_score": 0.731,
+    "strategic_rationale": "Frame literacy friction as a solvable design problem: moving from book intimidation to the 3-step reading bridge.",
+    "mandatory_flip_condition": "If audience retention drops by >30% during the solution steps, pivot to a character-driven struggle."
+  },
+  "narrative_ingredients": {
+    "essential_facts": [
+      "26,600 Calgary students supported in 2024",
+      "100% free with Calgary Public Library card",
+      "3-step reading bridge method"
+    ],
+    "compulsory_scenes_or_proofs": [
+      "Side-by-side demonstration: wall of unillustrated text vs illustrated panel cognitive processing",
+      "Physical library coach showing parent how to select the right bridge book"
+    ],
+    "voices_and_perspectives": [
+      "Struggling 4th grade student",
+      "Relieved parent",
+      "Calgary Children's Librarian"
+    ],
+    "visual_metaphors": [
+      "The scaffold: graphic novels as training wheels that build real muscle rather than cheating"
+    ],
+    "unanswered_dramatic_questions": [
+      "Will the student finish their first book independently?"
+    ]
+  },
+  "constraints": {
+    "must_not_claim": [
+      "Do not claim graphic novels permanently replace text novels.",
+      "Do not promise overnight grade improvements without regular practice."
+    ],
+    "must_not_omit": [
+      "Must state clearly that all cards, programs, and coaching are completely free."
+    ],
+    "ethical_and_privacy_boundaries": [
+      "Parental consent and Alberta PIPA compliance for any student likeness or story."
+    ]
+  },
+  "open_questions": {
+    "research_gaps": [
+      "Collect 2026 branch borrowing metrics for graphic novel categories."
+    ],
+    "field_discovery_requirements": [
+      "Identify 2 Calgary families willing to share their reading bridge breakthrough on record."
+    ]
+  },
+  "uncertainty_warnings": [
+    "UNCERTAINTY_PROPAGATED: Claim 'clm_audiobook' (Audiobook listening produces identical vocabulary retention as silent text reading for Grade 4 children.) has status HYPOTHESIS with CONTESTED confidence. Must NOT be presented as settled fact in script."
+  ],
+  "lineage_chains": {
+    "clm_reach": {
+      "claim_id": "clm_reach",
+      "statement": "CPL literacy programs reached over 26,600 student participants across 12 programs.",
+      "epistemic_status": "SOURCE_FACT",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_cpl_audit",
+          "title": "Calgary Public Library Services Ecosystem Audit (2024)",
+          "provenance": "Desktop/Calgary Public Library Services Ecosystem Audit.docx",
+          "author": "Calgary Public Library Operations"
+        }
+      ],
+      "parent_lineages": []
+    },
+    "clm_friction": {
+      "claim_id": "clm_friction",
+      "statement": "Grade 4 reading resistance is triggered by the sudden elimination of visual illustrations in school texts.",
+      "epistemic_status": "SOURCE_FACT",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_reading_transition",
+          "title": "Cognitive Reading Transitions and Illustrated Scaffolding",
+          "provenance": "Kintsch Construction-Integration Model & Canadian Literacy Framework",
+          "author": "Reading Psychology Research"
+        }
+      ],
+      "parent_lineages": []
+    },
+    "clm_bridge": {
+      "claim_id": "clm_bridge",
+      "statement": "Graphic novels act as an evidence-based cognitive bridge restoring reading fluency for struggling 4th graders.",
+      "epistemic_status": "SYNTHESIS",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_reading_transition",
+          "title": "Cognitive Reading Transitions and Illustrated Scaffolding",
+          "provenance": "Kintsch Construction-Integration Model & Canadian Literacy Framework",
+          "author": "Reading Psychology Research"
+        }
+      ],
+      "parent_lineages": [
+        {
+          "claim_id": "clm_friction",
+          "statement": "Grade 4 reading resistance is triggered by the sudden elimination of visual illustrations in school texts.",
+          "epistemic_status": "SOURCE_FACT",
+          "confidence_level": "HIGH",
+          "is_invalidated": false,
+          "direct_sources": [
+            {
+              "source_id": "src_reading_transition",
+              "title": "Cognitive Reading Transitions and Illustrated Scaffolding",
+              "provenance": "Kintsch Construction-Integration Model & Canadian Literacy Framework",
+              "author": "Reading Psychology Research"
+            }
+          ],
+          "parent_lineages": []
+        }
+      ]
+    },
+    "clm_free_access": {
+      "claim_id": "clm_free_access",
+      "statement": "All Calgary Public Library reading coaches, tutoring programs, and digital tools are 100% free with a library card.",
+      "epistemic_status": "SOURCE_FACT",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_cpl_audit",
+          "title": "Calgary Public Library Services Ecosystem Audit (2024)",
+          "provenance": "Desktop/Calgary Public Library Services Ecosystem Audit.docx",
+          "author": "Calgary Public Library Operations"
+        },
+        {
+          "source_id": "src_cpl_audio_studios",
+          "title": "Central Library Audio & Creative Studio Inventory",
+          "provenance": "Desktop/CPL Media Systems Playbook Specification.pdf",
+          "author": "CPL Media Production"
+        }
+      ],
+      "parent_lineages": []
+    }
+  },
+  "is_falsified": false,
+  "falsification_notes": []
+}

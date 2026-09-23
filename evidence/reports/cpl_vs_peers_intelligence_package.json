@@ -1,0 +1,655 @@
+{
+  "package_id": "pkg_843d3e17d0",
+  "compiled_at": 1790181156.585977,
+  "subject_title": "Canadian Public Libraries Competitive Media Strategy & CPL Opportunity",
+  "topic_model": {
+    "topic_id": "top_374f3d73",
+    "subject_title": "Canadian Public Libraries Competitive Media Strategy & CPL Opportunity",
+    "core_state_of_affairs": "Comparative digital media landscape across Canadian metropolitan public library systems (Calgary, Toronto, Edmonton, Vancouver).",
+    "established_facts_count": 6,
+    "established_facts": [
+      {
+        "claim_id": "clm_tpl_archival_model",
+        "statement": "Toronto Public Library operates an 'Institutional Literary Vault' archetype prioritizing formal author lectures with low mobile adaptation.",
+        "sources": [
+          "src_tpl_telemetry_2026"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "claim_id": "clm_epl_catalog_dilution",
+        "statement": "Edmonton Public Library suffers from severe catalog bloat (5.56 subs/video) due to uncurated program room uploads outside its viral puppet shows.",
+        "sources": [
+          "src_epl_telemetry_2026"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "claim_id": "clm_vpl_short_form_adaptation",
+        "statement": "Vancouver Public Library leads in humorous lifestyle shorts but demonstrates a structural conversion gap to library service utilization.",
+        "sources": [
+          "src_vpl_telemetry_2026"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "claim_id": "clm_cpl_subscriber_efficiency",
+        "statement": "Calgary Public Library achieves highest subscriber efficiency (16.09 subs/video) among Canadian peer libraries by avoiding catalog bloat and focusing on targeted civic utility.",
+        "sources": [
+          "src_cpl_telemetry_2026"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "claim_id": "clm_peer_communicative_gap",
+        "statement": "Canadian public libraries either position themselves as elite academic archives (TPL) or children's puppet rooms (EPL), leaving the empowering creative engine space unoccupied.",
+        "sources": [
+          "src_tpl_telemetry_2026",
+          "src_epl_telemetry_2026",
+          "src_vpl_telemetry_2026"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "claim_id": "clm_cpl_opportunity",
+        "statement": "CPL's optimal strategic positioning is the 'High-Agency Cognitive & Creative Engine', showcasing audio recording studios, graphic novel literacy bridges, and digital makerspaces.",
+        "sources": [
+          "src_cpl_telemetry_2026",
+          "src_cognitive_literacy_bridges"
+        ],
+        "confidence": "HIGH"
+      }
+    ],
+    "concepts_and_relationships": [],
+    "chronology_and_causality": [],
+    "stakeholders_and_perspectives": [
+      {
+        "name": "Calgary urban families, students (Grades 3-9), aspiring creative producers, and newcomers.",
+        "stance": "Target audience"
+      }
+    ],
+    "disagreements_and_uncertainties": [
+      {
+        "claim_id": "clm_short_form_conversion_hypothesis",
+        "statement": "Short-form vertical video (60s) directly converts to in-branch creative studio bookings when paired with a single tangible physical artifact.",
+        "epistemic_status": "HYPOTHESIS",
+        "confidence": "CONTESTED",
+        "falsification_condition": "If pilot shorts produce zero studio booking uplift over a 60-day tracking window."
+      }
+    ],
+    "misconceptions": [],
+    "contradictions": [],
+    "consequences": [],
+    "active_tensions": [
+      {
+        "tension": "Silence vs Sonic Creation: The expectation of the 'quiet library' colliding with high-end soundproof recording booths."
+      },
+      {
+        "tension": "Visual Intimidation vs Fluency: The Grade 4 reading drop bridged by graphic novel visual scaffolding."
+      },
+      {
+        "tension": "Subscription Paywalls vs Civic Wealth: Expensive software suites provided 100% free with a library card."
+      }
+    ],
+    "known_unknowns": [],
+    "information_value_score": 0.39
+  },
+  "evidence_map": {
+    "claims_count": 7,
+    "established_facts_count": 6,
+    "uncertain_claims_count": 1,
+    "claims": [
+      {
+        "claim_id": "clm_tpl_archival_model",
+        "statement": "Toronto Public Library operates an 'Institutional Literary Vault' archetype prioritizing formal author lectures with low mobile adaptation.",
+        "epistemic_status": "SOURCE_FACT",
+        "provenance_sources": [
+          "src_tpl_telemetry_2026"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If TPL uploads majority short-form mobile-first content with high engagement.",
+        "parent_claim_ids": [],
+        "child_claim_ids": [
+          "clm_peer_communicative_gap"
+        ],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_epl_catalog_dilution",
+        "statement": "Edmonton Public Library suffers from severe catalog bloat (5.56 subs/video) due to uncurated program room uploads outside its viral puppet shows.",
+        "epistemic_status": "SOURCE_FACT",
+        "provenance_sources": [
+          "src_epl_telemetry_2026"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If average view velocity on EPL program room recordings exceeds 1,000 views within 30 days.",
+        "parent_claim_ids": [],
+        "child_claim_ids": [
+          "clm_peer_communicative_gap"
+        ],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_vpl_short_form_adaptation",
+        "statement": "Vancouver Public Library leads in humorous lifestyle shorts but demonstrates a structural conversion gap to library service utilization.",
+        "epistemic_status": "SYNTHESIS",
+        "provenance_sources": [
+          "src_vpl_telemetry_2026"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If VPL shorts demonstrate >15% documented click-through conversion to catalog holds.",
+        "parent_claim_ids": [],
+        "child_claim_ids": [],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_cpl_subscriber_efficiency",
+        "statement": "Calgary Public Library achieves highest subscriber efficiency (16.09 subs/video) among Canadian peer libraries by avoiding catalog bloat and focusing on targeted civic utility.",
+        "epistemic_status": "SOURCE_FACT",
+        "provenance_sources": [
+          "src_cpl_telemetry_2026"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If audited subscriber counts drop below 5,000 or video count exceeds 600 without proportional sub growth.",
+        "parent_claim_ids": [],
+        "child_claim_ids": [
+          "clm_cpl_opportunity"
+        ],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_peer_communicative_gap",
+        "statement": "Canadian public libraries either position themselves as elite academic archives (TPL) or children's puppet rooms (EPL), leaving the empowering creative engine space unoccupied.",
+        "epistemic_status": "SYNTHESIS",
+        "provenance_sources": [
+          "src_tpl_telemetry_2026",
+          "src_epl_telemetry_2026",
+          "src_vpl_telemetry_2026"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If peer libraries actively showcase hands-on creative technology and youth empowerment suites in primary programming.",
+        "parent_claim_ids": [
+          "clm_tpl_archival_model",
+          "clm_epl_catalog_dilution"
+        ],
+        "child_claim_ids": [],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_cpl_opportunity",
+        "statement": "CPL's optimal strategic positioning is the 'High-Agency Cognitive & Creative Engine', showcasing audio recording studios, graphic novel literacy bridges, and digital makerspaces.",
+        "epistemic_status": "SYNTHESIS",
+        "provenance_sources": [
+          "src_cpl_telemetry_2026",
+          "src_cognitive_literacy_bridges"
+        ],
+        "confidence_level": "HIGH",
+        "falsification_condition": "If audience surveys reveal stronger engagement with passive lecture broadcasts than hands-on technology demonstrations.",
+        "parent_claim_ids": [
+          "clm_cpl_subscriber_efficiency",
+          "clm_peer_gap"
+        ],
+        "child_claim_ids": [],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      },
+      {
+        "claim_id": "clm_short_form_conversion_hypothesis",
+        "statement": "Short-form vertical video (60s) directly converts to in-branch creative studio bookings when paired with a single tangible physical artifact.",
+        "epistemic_status": "HYPOTHESIS",
+        "provenance_sources": [],
+        "confidence_level": "CONTESTED",
+        "falsification_condition": "If pilot shorts produce zero studio booking uplift over a 60-day tracking window.",
+        "parent_claim_ids": [],
+        "child_claim_ids": [],
+        "is_invalidated": false,
+        "invalidation_reason": null
+      }
+    ]
+  },
+  "audience_model": {
+    "target_segment": "Calgary urban families, students (Grades 3-9), aspiring creative producers, and newcomers.",
+    "prior_knowledge_baseline": "Libraries are quiet repositories for physical books or children's storytime.",
+    "active_misconceptions": [
+      "'Libraries are obsolete in the age of YouTube and AI'",
+      "'Professional creative tools (sound studios, 3D printers) require expensive private studio rental'",
+      "'Library digital content is boring institutional archives or toddler puppets'"
+    ],
+    "practical_and_emotional_stakes": "Parents worried about youth reading loss and screen addiction; young creators blocked by paywalls for creative tools.",
+    "reception_friction": "Cynicism toward civic marketing; expectation that public sector video is dry, patronizing, or low quality."
+  },
+  "communication_problem": {
+    "current_state": "The public perceives public libraries as either academic lecture archives (TPL model) or early-childhood puppet theaters (EPL model), failing to recognize CPL's advanced production suites and youth literacy bridges.",
+    "desired_shift": "Reframe Calgary Public Library as a dynamic, high-agency creative and cognitive workshop where patrons produce rather than just consume.",
+    "decision_to_enable": "Trigger library card activation and immediate booking of Central Library audio suites or enrollment in youth literacy bridge programs."
+  },
+  "story_territory": {
+    "core_frictions": [
+      "Silence vs Sonic Creation: The expectation of the 'quiet library' colliding with high-end soundproof recording booths.",
+      "Visual Intimidation vs Fluency: The Grade 4 reading drop bridged by graphic novel visual scaffolding.",
+      "Subscription Paywalls vs Civic Wealth: Expensive software suites provided 100% free with a library card."
+    ],
+    "transformations": [
+      "From passive screen consumer to hands-on audio/video creator.",
+      "From discouraged reader to engaged graphic novel explorer."
+    ],
+    "human_stakes": [
+      "Youth confidence in language, storytelling, and technological literacy.",
+      "Democratized access to media production tools for all socioeconomic backgrounds."
+    ],
+    "potential_scenes_and_locales": [
+      "Central Library Audio Studio (plugging in studio microphone, soundboard lighting up).",
+      "Graphic Novel Stacks (contrasting wall of text with visual storytelling panels).",
+      "Teen Tech Lab (3D printing in progress, young creators collaborating)."
+    ]
+  },
+  "competing_treatments": [
+    {
+      "archetype": "PROBLEM_SOLUTION",
+      "hypothesis": "Frame literacy friction as a solvable design problem: moving from book intimidation to the 3-step reading bridge.",
+      "strengths": [
+        "High practical utility",
+        "Direct audience action",
+        "Low cognitive resistance"
+      ],
+      "vulnerabilities": [
+        "Can feel dry or transactional if emotional stakes are omitted"
+      ],
+      "scores": {
+        "evidence_warrant": 0.95,
+        "audience_fit": 0.9,
+        "objective_fit": 0.95,
+        "medium_feasibility": 0.9,
+        "composite": 0.731
+      },
+      "mandatory_flip_condition": "If audience retention drops by >30% during the solution steps, pivot to a character-driven struggle."
+    },
+    {
+      "archetype": "CHARACTER_DRIVEN",
+      "hypothesis": "Follow one struggling Grade 4 reader confronting chapter books and discovering their voice through graphic novels.",
+      "strengths": [
+        "High emotional empathy",
+        "Strong narrative transportation",
+        "Relatable identification"
+      ],
+      "vulnerabilities": [
+        "Requires willing student participant and parental consent under Alberta PIPA"
+      ],
+      "scores": {
+        "evidence_warrant": 0.85,
+        "audience_fit": 0.95,
+        "objective_fit": 0.85,
+        "medium_feasibility": 0.8,
+        "composite": 0.5491
+      },
+      "mandatory_flip_condition": "If authentic on-camera talent is unavailable, drop character-driven treatment immediately."
+    },
+    {
+      "archetype": "TENSION_REVELATION",
+      "hypothesis": "Open on the paradox: Why do children stop reading right when they become fluent in speech? Reveal the hidden barrier.",
+      "strengths": [
+        "High click-through curiosity",
+        "Powerful opening retention",
+        "Intellectually arresting"
+      ],
+      "vulnerabilities": [
+        "Risk of feeling like clickbait if revelation under-delivers on the promise"
+      ],
+      "scores": {
+        "evidence_warrant": 0.8,
+        "audience_fit": 0.85,
+        "objective_fit": 0.85,
+        "medium_feasibility": 0.85,
+        "composite": 0.4913
+      },
+      "mandatory_flip_condition": "If the reveal feels anticlimactic to test viewers, restructure as straightforward explanatory."
+    },
+    {
+      "archetype": "PROCESS_ORIENTED",
+      "hypothesis": "Walk through the physical journey of a library card: from registration to free studio booking and coach checkouts.",
+      "strengths": [
+        "Clear procedural clarity",
+        "Direct conversion to library cards"
+      ],
+      "vulnerabilities": [
+        "Lacks dramatic tension or emotional stakes"
+      ],
+      "scores": {
+        "evidence_warrant": 0.9,
+        "audience_fit": 0.7,
+        "objective_fit": 0.8,
+        "medium_feasibility": 0.9,
+        "composite": 0.4536
+      },
+      "mandatory_flip_condition": "If viewer feedback flags procedural boredom, blend with problem-solution framing."
+    },
+    {
+      "archetype": "EXPLANATORY",
+      "hypothesis": "Deconstruct the cognitive science of reading transition between Grades 3 and 4 using visual diagrams.",
+      "strengths": [
+        "Authoritative and credible",
+        "High educator utility"
+      ],
+      "vulnerabilities": [
+        "Too academic for struggling parents and students; risks lecture tone"
+      ],
+      "scores": {
+        "evidence_warrant": 0.9,
+        "audience_fit": 0.6,
+        "objective_fit": 0.7,
+        "medium_feasibility": 0.85,
+        "composite": 0.3213
+      },
+      "mandatory_flip_condition": "If watch time indicates early drop-off from general viewers, demote academic explanations."
+    },
+    {
+      "archetype": "ARGUMENTATIVE",
+      "hypothesis": "Make the case against reading drills: Why forcing 30 minutes of silent chapter book reading backfires.",
+      "strengths": [
+        "High provocation",
+        "Challenges conventional parenting habits"
+      ],
+      "vulnerabilities": [
+        "Can polarize educators or seem confrontational"
+      ],
+      "scores": {
+        "evidence_warrant": 0.75,
+        "audience_fit": 0.7,
+        "objective_fit": 0.65,
+        "medium_feasibility": 0.8,
+        "composite": 0.273
+      },
+      "mandatory_flip_condition": "If child psychology claims cannot be verified by secondary review, reject argumentative."
+    },
+    {
+      "archetype": "INVESTIGATIVE",
+      "hypothesis": "Investigate why public library usage drops off among teenagers and pre-teens in urban Calgary.",
+      "strengths": [
+        "Exposes hidden institutional disparity",
+        "High journalistic merit"
+      ],
+      "vulnerabilities": [
+        "May create defensive stakeholder response or politicized friction"
+      ],
+      "scores": {
+        "evidence_warrant": 0.75,
+        "audience_fit": 0.65,
+        "objective_fit": 0.6,
+        "medium_feasibility": 0.7,
+        "composite": 0.2048
+      },
+      "mandatory_flip_condition": "If stakeholder sign-off is refused, terminate investigative line."
+    },
+    {
+      "archetype": "EXPERIENTIAL",
+      "hypothesis": "An atmospheric, observational portrait of Central Library during afternoon drop-in reading clubs.",
+      "strengths": [
+        "Cinematic beauty",
+        "High institutional prestige"
+      ],
+      "vulnerabilities": [
+        "Low information transfer; does not directly instruct parents how to solve their child's reading problem"
+      ],
+      "scores": {
+        "evidence_warrant": 0.8,
+        "audience_fit": 0.5,
+        "objective_fit": 0.6,
+        "medium_feasibility": 0.85,
+        "composite": 0.204
+      },
+      "mandatory_flip_condition": "If objective requires measurable program attendance, experiential format is rejected."
+    },
+    {
+      "archetype": "HISTORICAL",
+      "hypothesis": "Trace the 112-year evolution of Calgary Public Library's literacy programs from 1912 to the digital age.",
+      "strengths": [
+        "Archival depth",
+        "Civic heritage interest"
+      ],
+      "vulnerabilities": [
+        "Zero urgency for a parent whose child is failing reading class today"
+      ],
+      "scores": {
+        "evidence_warrant": 0.85,
+        "audience_fit": 0.3,
+        "objective_fit": 0.4,
+        "medium_feasibility": 0.8,
+        "composite": 0.0816
+      },
+      "mandatory_flip_condition": "Historical model is rejected for active program outreach."
+    }
+  ],
+  "creative_decision": {
+    "selected_archetype": "PROBLEM_SOLUTION",
+    "composite_score": 0.731,
+    "strategic_rationale": "Frame literacy friction as a solvable design problem: moving from book intimidation to the 3-step reading bridge.",
+    "mandatory_flip_condition": "If audience retention drops by >30% during the solution steps, pivot to a character-driven struggle."
+  },
+  "narrative_ingredients": {
+    "essential_facts": [
+      "CPL has highest subscriber efficiency (16.09 subs/video) among major Canadian peers.",
+      "Central Library houses professional, soundproof audio suites and podcast facilities.",
+      "Over 26,600 students reached in youth literacy programs with audited 37% CTR improvement.",
+      "All facilities, software, and loans are 100% free with a Calgary Public Library card."
+    ],
+    "compulsory_scenes_or_proofs": [
+      "Tactile proof: Card swipe unlocking studio doors and powering studio monitors.",
+      "Cognitive proof: Side-by-side demonstration of reading barrier solved by graphic novel format.",
+      "Peer comparison: Contrasting the dusty institutional archive with living civic creation."
+    ],
+    "voices_and_perspectives": [
+      "Youth media specialist / audio engineer.",
+      "Relatable Grade 4-6 student finding their creative voice.",
+      "Parent discovering that graphic novels count as legitimate literacy."
+    ],
+    "visual_metaphors": [
+      "The library card as a master access key.",
+      "The transition from black-and-white text to vibrant visual sequence."
+    ],
+    "unanswered_dramatic_questions": [
+      "What will you create once the barrier of cost is eliminated?",
+      "Can an ancient civic institution become the city's most cutting-edge media lab?"
+    ]
+  },
+  "constraints": {
+    "must_not_claim": [
+      "Must not claim that reading graphic novels completely replaces traditional prose instruction.",
+      "Must not promise commercial studio certification or guaranteed recording contracts.",
+      "Must not disparage peer libraries; focus strictly on CPL's distinctive service offering."
+    ],
+    "must_not_omit": [
+      "Must explicitly state that studio booking and card membership are completely free for Calgary residents.",
+      "Must include clear, frictionless call-to-action for online card registration."
+    ],
+    "ethical_and_privacy_boundaries": [
+      "Strict adherence to minor media release protocol for any youth appearing on camera.",
+      "Respect patron privacy in public branch spaces."
+    ]
+  },
+  "open_questions": {
+    "research_gaps": [
+      "Exact conversion latency from YouTube viewer to library card registration.",
+      "Branch equipment distribution outside Central Library (e.g. Seton, Crowfoot)."
+    ],
+    "field_discovery_requirements": [
+      "Verify current wait times and booking window policy for Central Library audio suites.",
+      "Confirm current inventory count of graphic novel titles across Calgary branch network."
+    ]
+  },
+  "uncertainty_warnings": [
+    "UNCERTAINTY_PROPAGATED: Claim 'clm_short_form_conversion_hypothesis' (Short-form vertical video (60s) directly converts to in-branch creative studio bookings when paired with a single tangible physical artifact.) has status HYPOTHESIS with CONTESTED confidence. Must NOT be presented as settled fact in script."
+  ],
+  "lineage_chains": {
+    "clm_tpl_archival_model": {
+      "claim_id": "clm_tpl_archival_model",
+      "statement": "Toronto Public Library operates an 'Institutional Literary Vault' archetype prioritizing formal author lectures with low mobile adaptation.",
+      "epistemic_status": "SOURCE_FACT",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_tpl_telemetry_2026",
+          "title": "Toronto Public Library YouTube Telemetry Audit",
+          "provenance": "YouTube Channel @torontopubliclibrary / Public Video Audit",
+          "author": "Toronto Public Library Communications"
+        }
+      ],
+      "parent_lineages": []
+    },
+    "clm_epl_catalog_dilution": {
+      "claim_id": "clm_epl_catalog_dilution",
+      "statement": "Edmonton Public Library suffers from severe catalog bloat (5.56 subs/video) due to uncurated program room uploads outside its viral puppet shows.",
+      "epistemic_status": "SOURCE_FACT",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_epl_telemetry_2026",
+          "title": "Edmonton Public Library YouTube Telemetry Audit",
+          "provenance": "YouTube Channel @EPLdotCA / Public Video Audit",
+          "author": "Edmonton Public Library Marketing"
+        }
+      ],
+      "parent_lineages": []
+    },
+    "clm_vpl_short_form_adaptation": {
+      "claim_id": "clm_vpl_short_form_adaptation",
+      "statement": "Vancouver Public Library leads in humorous lifestyle shorts but demonstrates a structural conversion gap to library service utilization.",
+      "epistemic_status": "SYNTHESIS",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_vpl_telemetry_2026",
+          "title": "Vancouver Public Library YouTube Telemetry Audit",
+          "provenance": "YouTube Channel @vancouverpubliclibrary / Public Video Audit",
+          "author": "Vancouver Public Library Digital Media"
+        }
+      ],
+      "parent_lineages": []
+    },
+    "clm_cpl_subscriber_efficiency": {
+      "claim_id": "clm_cpl_subscriber_efficiency",
+      "statement": "Calgary Public Library achieves highest subscriber efficiency (16.09 subs/video) among Canadian peer libraries by avoiding catalog bloat and focusing on targeted civic utility.",
+      "epistemic_status": "SOURCE_FACT",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_cpl_telemetry_2026",
+          "title": "Calgary Public Library YouTube Telemetry & Service Audit",
+          "provenance": "Desktop/Calgary Public Library Services Ecosystem Audit.docx",
+          "author": "Calgary Public Library Digital Communications"
+        }
+      ],
+      "parent_lineages": []
+    },
+    "clm_peer_communicative_gap": {
+      "claim_id": "clm_peer_communicative_gap",
+      "statement": "Canadian public libraries either position themselves as elite academic archives (TPL) or children's puppet rooms (EPL), leaving the empowering creative engine space unoccupied.",
+      "epistemic_status": "SYNTHESIS",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_tpl_telemetry_2026",
+          "title": "Toronto Public Library YouTube Telemetry Audit",
+          "provenance": "YouTube Channel @torontopubliclibrary / Public Video Audit",
+          "author": "Toronto Public Library Communications"
+        },
+        {
+          "source_id": "src_epl_telemetry_2026",
+          "title": "Edmonton Public Library YouTube Telemetry Audit",
+          "provenance": "YouTube Channel @EPLdotCA / Public Video Audit",
+          "author": "Edmonton Public Library Marketing"
+        },
+        {
+          "source_id": "src_vpl_telemetry_2026",
+          "title": "Vancouver Public Library YouTube Telemetry Audit",
+          "provenance": "YouTube Channel @vancouverpubliclibrary / Public Video Audit",
+          "author": "Vancouver Public Library Digital Media"
+        }
+      ],
+      "parent_lineages": [
+        {
+          "claim_id": "clm_tpl_archival_model",
+          "statement": "Toronto Public Library operates an 'Institutional Literary Vault' archetype prioritizing formal author lectures with low mobile adaptation.",
+          "epistemic_status": "SOURCE_FACT",
+          "confidence_level": "HIGH",
+          "is_invalidated": false,
+          "direct_sources": [
+            {
+              "source_id": "src_tpl_telemetry_2026",
+              "title": "Toronto Public Library YouTube Telemetry Audit",
+              "provenance": "YouTube Channel @torontopubliclibrary / Public Video Audit",
+              "author": "Toronto Public Library Communications"
+            }
+          ],
+          "parent_lineages": []
+        },
+        {
+          "claim_id": "clm_epl_catalog_dilution",
+          "statement": "Edmonton Public Library suffers from severe catalog bloat (5.56 subs/video) due to uncurated program room uploads outside its viral puppet shows.",
+          "epistemic_status": "SOURCE_FACT",
+          "confidence_level": "HIGH",
+          "is_invalidated": false,
+          "direct_sources": [
+            {
+              "source_id": "src_epl_telemetry_2026",
+              "title": "Edmonton Public Library YouTube Telemetry Audit",
+              "provenance": "YouTube Channel @EPLdotCA / Public Video Audit",
+              "author": "Edmonton Public Library Marketing"
+            }
+          ],
+          "parent_lineages": []
+        }
+      ]
+    },
+    "clm_cpl_opportunity": {
+      "claim_id": "clm_cpl_opportunity",
+      "statement": "CPL's optimal strategic positioning is the 'High-Agency Cognitive & Creative Engine', showcasing audio recording studios, graphic novel literacy bridges, and digital makerspaces.",
+      "epistemic_status": "SYNTHESIS",
+      "confidence_level": "HIGH",
+      "is_invalidated": false,
+      "direct_sources": [
+        {
+          "source_id": "src_cpl_telemetry_2026",
+          "title": "Calgary Public Library YouTube Telemetry & Service Audit",
+          "provenance": "Desktop/Calgary Public Library Services Ecosystem Audit.docx",
+          "author": "Calgary Public Library Digital Communications"
+        },
+        {
+          "source_id": "src_cognitive_literacy_bridges",
+          "title": "Cognitive Reading Transitions & Multimodal Scaffolding",
+          "provenance": "Kintsch Construction-Integration Model & Canadian Literacy Framework",
+          "author": "Academic Reading Studies"
+        }
+      ],
+      "parent_lineages": [
+        {
+          "claim_id": "clm_cpl_subscriber_efficiency",
+          "statement": "Calgary Public Library achieves highest subscriber efficiency (16.09 subs/video) among Canadian peer libraries by avoiding catalog bloat and focusing on targeted civic utility.",
+          "epistemic_status": "SOURCE_FACT",
+          "confidence_level": "HIGH",
+          "is_invalidated": false,
+          "direct_sources": [
+            {
+              "source_id": "src_cpl_telemetry_2026",
+              "title": "Calgary Public Library YouTube Telemetry & Service Audit",
+              "provenance": "Desktop/Calgary Public Library Services Ecosystem Audit.docx",
+              "author": "Calgary Public Library Digital Communications"
+            }
+          ],
+          "parent_lineages": []
+        }
+      ]
+    }
+  },
+  "is_falsified": false,
+  "falsification_notes": []
+}

@@ -1,0 +1,137 @@
+name: Video Structure Intelligence Contract
+version: 1.0
+status: reusable working contract
+artifact_type: machine-readable video-analysis-and-development protocol
+valid_modes:
+  - DECONSTRUCT_EXISTING_VIDEO
+  - DEVELOP_NEW_VIDEO
+  - COMPARE_VIDEOS
+human_authority:
+  - objective
+  - values_and_risk_tolerance
+  - factual_approval
+  - creative_approval
+  - publication_approval
+
+governing_laws:
+  1_observable_is_not_intended: "A video can establish what appears, is heard, and is sequenced. It cannot independently prove the creator's intention, strategy, budget, audience data, or production conditions. Label those as INFERENCE, HYPOTHESIS, or UNKNOWN."
+  2_exact_material_outranks_recollection: "Preserve supplied transcripts, on-screen copy, timecodes, names, figures, and quotations exactly. Do not invent missing dialogue, visual details, sources, rights, statistics, or audience outcomes."
+  3_structure_before_evaluation: "Map what the video does before deciding whether it works, why it works, or how to improve it."
+  4_function_organizes_sections: "A section is defined by the job it performs for the viewer—e.g., hook, orient, establish stakes, demonstrate, substantiate, reframe, resolve, or invite action—not only by its subject matter."
+  5_elements_must_earn_their_role: "Audio and visuals should clarify, prove, orient, demonstrate, create tension, release tension, establish credibility, sustain attention, or enable the next structural move. Otherwise mark the role UNRESOLVED."
+  6_evidence_is_claim_relative: "A visible statistic, quotation, testimonial, or demonstration may establish only the bounded claim it actually supports. Do not upgrade it into proof of broader effectiveness or truth."
+  7_unknown_is_not_pass: "Missing footage, transcript gaps, unclear source material, ambiguous transitions, uncertain intent, and inaccessible links must remain explicit unknowns."
+  8_counter_reading_survives: "Preserve plausible alternative interpretations of a section or video when they materially change the analysis. Do not flatten ambiguity into certainty."
+  9_human_approval_required: "The analyst/agent may propose structure, critique, and alternatives. A human owns objectives, factual acceptance, creative choice, rights clearance, and publication."
+
+operating_modes:
+  DECONSTRUCT_EXISTING_VIDEO:
+    condition: "A finished or rough video, transcript, shot list, or detailed description is supplied."
+    output: "Observable structure map and transferable production logic."
+  DEVELOP_NEW_VIDEO:
+    condition: "A brief, idea, interview material, research, or approved messaging is supplied."
+    output: "Complete editable A/V script ready for review and production."
+  COMPARE_VIDEOS:
+    condition: "Two or more videos are supplied for reference, benchmarking, or pattern extraction."
+    output: "Comparable structure maps, pattern findings, and a recommended synthesis."
+
+canonical_schemas:
+  video_task_input:
+    mode: "DECONSTRUCT_EXISTING_VIDEO | DEVELOP_NEW_VIDEO | COMPARE_VIDEOS"
+    task_id: "human-readable-id"
+    requested_by: "name-or-role"
+    decision_to_enable: "string"
+    deliverable: "structure map | A/V script | comparison memo"
+    deadline: "ISO-8601 or null"
+    constraints:
+      platform: "string"
+      target_duration_seconds: "integer"
+      aspect_ratio: "16:9 | 9:16 | 1:1 | 4:5"
+      budget_or_access_limits: "string or null"
+      brand_or_editorial_rules: []
+      accessibility_requirements: []
+      rights_or_consent_constraints: []
+    source_material:
+      videos: []
+      brief_or_messaging: null
+      research_sources: []
+      interview_material: []
+      reference_videos: []
+    known_context:
+      intended_audience: "string"
+      desired_audience_change: "string"
+      core_message: "string"
+      call_to_action: "string"
+    approval_state:
+      factual_owner: null
+      creative_owner: null
+      publication_owner: null
+
+  canonical_section_record:
+    section_id: "S01"
+    start_timecode: "00:00:00"
+    end_timecode: "00:00:00"
+    duration_seconds: 0
+    section_label: "string"
+    structural_function:
+      primary: "HOOK | ORIENTATION | STAKES | QUESTION | CONTEXT | DEMONSTRATION | PROOF | TESTIMONIAL | COMPLICATION | CONTRAST | REFLECTION | RESOLUTION | CTA | TRANSITION | OTHER"
+      secondary: []
+    audience_movement:
+      starting_state: "string"
+      intended_change: "string"
+      evidence_of_intent: []
+      confidence: "HIGH | MEDIUM | LOW | UNKNOWN"
+    section_summary: "What this section does, not only what it says."
+    audio:
+      speakers:
+        - speaker_id: "string"
+          name_or_role: "string"
+          exact_or_faithful_content: "string"
+          content_type: "VO | HOST | INTERVIEW | DIALOGUE | NAT_SOUND | MUSIC | SFX | SILENCE"
+      music_and_sound:
+        - cue: "string"
+          timing: "string"
+          function: "string"
+      pacing_and_delivery: "string"
+    video:
+      primary_visual: "string"
+      supporting_visuals: []
+      graphics_and_on_screen_copy:
+        - exact_copy: "string"
+          type: "LOWER_THIRD | TITLE | STATISTIC | QUOTE | CAPTION | CTA | OTHER"
+          source_or_owner: null
+      visual_grammar:
+        framing_and_camera: "string"
+        edit_rhythm: "string"
+        visual_audio_relationship: "ILLUSTRATES | PROVES | CONTRASTS | EXTENDS | ORIENTS | DECORATES | CONTRADICTS | UNKNOWN"
+    claims_and_evidence:
+      - claim: "string"
+        claim_type: "EMPIRICAL | CAUSAL | COMPARATIVE | FORECAST | FEASIBILITY | NORMATIVE"
+        support_in_video: "direct quote, visual, supplied source, or NONE"
+        evidence_state: "SUPPORTED | PARTIALLY_SUPPORTED | CONTESTED | UNKNOWN | CONTRADICTED | NOT_APPLICABLE"
+        required_follow_up: null
+    transition:
+      entry: "string"
+      exit: "string"
+      bridge_logic: "why this follows from the previous/into the next section"
+    production:
+      accessibility_notes: []
+      rights_and_consent_notes: []
+      asset_dependencies: []
+    analyst_assessment:
+      strengths: []
+      structural_risks: []
+      alternative_readings: []
+      unknowns: []
+
+failure_conditions:
+  - "summarizes a video without mapping its structural functions"
+  - "claims creator intent as fact from the finished video alone"
+  - "invents dialogue, visual details, sources, performance results, rights, or participant consent"
+  - "treats each cut as a separate section or uses arbitrary time blocks"
+  - "leaves audio and video as undifferentiated prose"
+  - "omits exact on-screen copy when it is legible and consequential"
+  - "treats a visible statistic or testimonial as automatically verified"
+  - "removes alternative readings or unknowns to make the analysis look cleaner"
+  - "produces generic improvement notes instead of a specific structural diagnosis"
+  - "declares a development script ready when facts, rights, accessibility, or approval gates remain unresolved"

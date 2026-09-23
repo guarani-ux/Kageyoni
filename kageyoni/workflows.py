@@ -11,6 +11,8 @@ from .engine import Rejected, require
 class Workflows:
     def __init__(self, engine):
         self.engine = engine
+        from .agency_workflows import AgencyWorkflows
+        self.agency = AgencyWorkflows(engine)
 
     def coliseum_open(self, **params):
         from .coliseum import open_match
