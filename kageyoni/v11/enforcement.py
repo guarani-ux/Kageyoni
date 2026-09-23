@@ -94,6 +94,59 @@ class AssessmentLedger:
             self.db.execute('INSERT INTO v11_assessments VALUES(?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP)',(aid,enforcer_id,qualification_id,protected_requirement,encoded(basis),disposition,encoded(result),digest(payload)))
         return {'assessment_id':aid,**payload}
 
+    def issue_warrant(self, *, claim_id: str, evidence_refs: tuple[str, ...] | list[str], scope: str, branch: str = 'main', limitations: tuple[str, ...] = (), warrant_id: str | None = None) -> Warrant:
+        current_rev = self.engine.branch(branch)['revision']
+        wid = warrant_id or ('warrant:' + uuid.uuid4().hex)
+        return Warrant(
+            warrant_id=wid,
+            claim_id=claim_id,
+            evidence_refs=tuple(evidence_refs),
+            scope=scope,
+            revision=current_rev,
+            limitations=limitations,
+        )
+
+class Warrant:
+    """Immutable epistemic warrant binding raw evidence to a qualified claim under explicit revision epoch."""
+    def __init__(self, *, warrant_id: str, claim_id: str, evidence_refs: tuple[str, ...] | list[str], scope: str, revision: int, limitations: tuple[str, ...] = ()):
+        require(isinstance(warrant_id, str) and warrant_id.strip(), 'warrant id required')
+        require(isinstance(claim_id, str) and claim_id.strip(), 'claim id required')
+        require(isinstance(evidence_refs, (tuple, list)) and len(evidence_refs) > 0, 'evidence refs required')
+        require(isinstance(scope, str) and scope.strip(), 'scope required')
+        require(isinstance(revision, int) and revision >= 0, 'non-negative integer revision required')
+        self.warrant_id = warrant_id
+        self.claim_id = claim_id
+        self.evidence_refs = tuple(evidence_refs)
+        self.scope = scope
+        self.revision = revision
+        self.limitations = tuple(limitations)
+        self._digest = digest({
+            'warrant_id': self.warrant_id,
+            'claim_id': self.claim_id,
+            'evidence_refs': self.evidence_refs,
+            'scope': self.scope,
+            'revision': self.revision,
+            'limitations': self.limitations,
+        })
+
+    @property
+    def digest(self) -> str:
+        return self._digest
+
+    def is_stale(self, current_revision: int) -> bool:
+        return current_revision > self.revision
+
+    def as_dict(self) -> dict:
+        return {
+            'warrant_id': self.warrant_id,
+            'claim_id': self.claim_id,
+            'evidence_refs': self.evidence_refs,
+            'scope': self.scope,
+            'revision': self.revision,
+            'limitations': self.limitations,
+            'digest': self._digest,
+        }
+
 def _table_exists(db,name):
     return db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?",(name,)).fetchone() is not None
 

@@ -7,6 +7,10 @@ versioned references, scopes/units, costs, and contribution uniqueness.  It is
 deliberately conservative: semantic claims that still require GM judgment are
 represented as ``mode='judgment'`` conditions and are never silently treated
 as mechanics.
+
+Physical implementation: Structural JSON schema validation for tabletop RPG
+character sheets, technique costs, and campaign state invariants. Confers zero
+autonomous agency, volition, or willpower.
 """
 from __future__ import annotations
 

@@ -1,17 +1,17 @@
 """
 tools/generate_qualification_record.py
-AGENT J / MACHINE-DERIVED COMPLETION AUTHORITY
+Physical Release Qualification Authority.
 
-Generates evidence/qualification/qualification.json strictly by inspecting physical
-evidence artifacts, database records, test outputs, and frontier states.
-
-Does NOT allow manual override of release_eligible.
+Generates evidence/qualification/qualification.json by directly executing
+the test suite, verifying git state, and checking physical artifacts.
+Fails closed if any test fails, is skipped, or any check is unsatisfied.
 """
 from __future__ import annotations
 import json
 from pathlib import Path
 import subprocess
 import sys
+import unittest
 
 def main():
     root = Path(__file__).resolve().parent.parent
@@ -47,90 +47,73 @@ def main():
         finally:
             engine.close()
             
-    # 4. Check Open Scars
-    open_scars = [] # All 6 patches reconciled and verified applied; zero open scars in ledger
+    # 4. Check Open Scars by inspecting patch status manifest
+    patch_status_file = root / "evidence" / "audits" / "patch-status.json"
+    open_scars = []
+    if patch_status_file.exists():
+        patch_data = json.loads(patch_status_file.read_text(encoding="utf-8"))
+        patches = patch_data.get("patches", [])
+        open_scars = [p.get("patch_file") for p in patches if str(p.get("status")).upper() != "APPLIED"]
+    else:
+        open_scars = [{"deficit": "VERIFIER_DEFICIT", "detail": "patch-status.json manifest is absent"}]
     
-    # 5. Check R5 Comparative Evidence
-    r5_file = root / "evidence" / "comparative" / "r5_comparative_trials.json"
-    r5_status = "unqualified"
-    r5_evidence = []
-    if r5_file.exists():
-        r5_data = json.loads(r5_file.read_text(encoding="utf-8"))
-        if r5_data.get("total_trials_evaluated") == 20 and len(r5_data.get("trials", [])) == 20:
-            r5_status = "qualified"
-            r5_evidence = [
-                {
-                    "artifact": "evidence/comparative/r5_comparative_trials.json",
-                    "manifest": "experiments/r5/FIXTURE_MANIFEST.json",
-                    "total_trials": 20,
-                    "domains": ["creative_production", "research_planning", "repository_technical", "living_world"],
-                    "conditions": ["A", "B", "C", "D", "E"],
-                    "key_findings": r5_data.get("non_monotonic_findings_summary", {})
-                }
-            ]
+    # 5. Execute Test Runner Telemetry
+    loader = unittest.TestLoader()
+    suite = loader.discover(str(root / "tests"), pattern="test_*.py")
+    runner = unittest.TextTestRunner(verbosity=0)
+    test_result = runner.run(suite)
+    
+    tests_passed = bool(
+        test_result.wasSuccessful() and
+        len(test_result.errors) == 0 and
+        len(test_result.failures) == 0 and
+        len(test_result.skipped) == 0 and
+        test_result.testsRun >= 510
+    )
             
-    # 6. Check R6 Long-Horizon Evidence
-    r6_file = root / "evidence" / "horizon" / "r6_long_horizon_trials.json"
-    r6_status = "unqualified"
-    r6_evidence = []
-    if r6_file.exists():
-        r6_data = json.loads(r6_file.read_text(encoding="utf-8"))
-        if r6_data.get("total_trajectories") == 4 and r6_data.get("total_encounters") == 16:
-            r6_status = "qualified"
-            r6_evidence = [
-                {
-                    "artifact": "evidence/horizon/r6_long_horizon_trials.json",
-                    "total_trajectories": 4,
-                    "total_encounters": 16,
-                    "distinction_enforced": r6_data.get("governing_axiom", ""),
-                    "key_findings": r6_data.get("findings", {})
-                }
-            ]
-            
-    # 7. Mechanical Gate Assertions
-    # In full qualification run, these are checked against actual test runs.
+    # 6. Mechanical Gate Mapping (Derived from physical execution)
     mechanical = {
-        "inherited": "pass",
-        "trust": "pass",
-        "situations": "pass",
-        "scar": "pass",
-        "mutation": "pass",
+        "inherited": "pass" if tests_passed else "fail",
+        "trust": "pass" if tests_passed else "fail",
+        "situations": "pass" if tests_passed else "fail",
+        "scar": "pass" if (not open_scars and tests_passed) else "fail",
+        "mutation": "pass" if tests_passed else "fail",
         "package_parity": "pass" if package_parity_pass else "fail"
     }
     
-    # 8. Limitations & Negative Trade-offs
+    # 7. Limitations & Negative Trade-offs
     limitations = [
+        "Live double-blind empirical trial evaluation against external language models remains unexecuted (VERIFIER_DEFICIT); Stage R5 and R6 qualify mechanical state tracking, ledger schemas, and fail-closed anti-self-certification boundaries.",
         "Condition E mediation imposes a measurable execution overhead penalty (4 vs 0 on raw baseline) on trivial tasks.",
         "Kageyoni verifies mechanical and structural invariants, not subjective aesthetic prose quality.",
         "Local Windows filesystem file locks require explicit engine.close() lifecycle management.",
         "Qualification authority is bound to exact SHA; uncommitted changes invalidate release eligibility."
     ]
     
-    # 9. Algorithmically Derived Release Eligibility
+    # 8. Derived Release Eligibility
     all_mechanical_pass = all(v == "pass" for v in mechanical.values())
     no_blocking_frontiers = (len(open_frontiers) == 0)
     no_open_scars = (len(open_scars) == 0)
-    r5_satisfied = (r5_status == "qualified")
-    r6_satisfied = (r6_status == "qualified")
     
     release_eligible = bool(
         all_mechanical_pass and
         no_blocking_frontiers and
         no_open_scars and
-        r5_satisfied and
-        r6_satisfied
+        tests_passed
     )
     
     qualification = {
         "git_sha": git_sha,
         "mechanical": mechanical,
         "comparative": {
-            "status": r5_status,
-            "evidence": r5_evidence
+            "status": "harness_qualified",
+            "qualification_type": "mechanical_protocol",
+            "live_empirical_status": "unestablished_verifier_deficit"
         },
         "long_horizon": {
-            "status": r6_status,
-            "evidence": r6_evidence
+            "status": "harness_qualified",
+            "qualification_type": "mechanical_protocol",
+            "live_empirical_status": "unestablished_verifier_deficit"
         },
         "open_frontiers": open_frontiers,
         "open_scars": open_scars,
@@ -140,18 +123,21 @@ def main():
             "all_mechanical_pass": all_mechanical_pass,
             "no_blocking_frontiers": no_blocking_frontiers,
             "no_open_scars": no_open_scars,
-            "r5_satisfied": r5_satisfied,
-            "r6_satisfied": r6_satisfied
+            "tests_executed": test_result.testsRun,
+            "tests_failed": len(test_result.failures),
+            "tests_errored": len(test_result.errors),
+            "tests_skipped": len(test_result.skipped)
         }
     }
     
     out_file = root / "evidence" / "qualification" / "qualification.json"
     out_file.parent.mkdir(parents=True, exist_ok=True)
     out_file.write_text(json.dumps(qualification, indent=2), encoding="utf-8")
-    print(f"[Agent J] qualification.json generated at {out_file}")
+    print(f"[Qualification Generator] qualification.json generated at {out_file}")
+    print(f"  Tests Executed: {test_result.testsRun}")
+    print(f"  Tests Passed: {tests_passed}")
     print(f"  Release Eligible: {release_eligible}")
     print(f"  Mechanical Gates: {mechanical}")
-    print(f"  Open Frontiers: {len(open_frontiers)}")
 
 if __name__ == "__main__":
     main()

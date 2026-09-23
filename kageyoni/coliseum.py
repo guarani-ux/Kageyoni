@@ -1,4 +1,8 @@
-"""Opt-in, deterministic arena prototype. Synthetic fixtures, not campaign balance."""
+"""Opt-in, deterministic arena prototype. Synthetic fixtures, not campaign balance.
+
+Physical implementation: 60-line deterministic turn-based damage calculation
+arithmetic for two tabletop fighters. Not an autonomous AI arena or LLM benchmark.
+"""
 from .engine import require
 RULE='coliseum-prototype/1'
 RULE_TEXT='Opt-in deterministic prototype: strike costs 1, finisher costs 2 and adds 2 power; reach 1; dodge costs 1 stamina and requires mobility and reaction >= speed; guard costs 1 and needs intact guard; absorbed guard damage uses guard value; penetrating guard damage disables guard. Health 0 ends participation. No automatic killing or undefined Will.'

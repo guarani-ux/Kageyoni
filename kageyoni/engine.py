@@ -59,6 +59,10 @@ _AUX_TABLES = {"property", "process", "facet", "consequence", "run", "resolution
 class Engine:
     """SQLite-backed, branch-local, append-only event engine."""
 
+    @classmethod
+    def create(cls, path: str | Path, *, seed: Any = None, read_only: bool = False) -> Engine:
+        return cls(path, read_only=read_only)
+
     def __init__(self, path: str | Path, *, read_only: bool = False):
         self.path = str(path)
         if read_only:
@@ -761,8 +765,9 @@ class Engine:
                 [r["branch"], r["id"]] + vals,
             )
         else:
+            set_clause = ",".join(f'"{f}"=?' for f in fields)
             self.db.execute(
-                f'UPDATE "{r["domain"]}" SET {",".join(f"""\"{f}\"=?""" for f in fields)} WHERE branch=? AND id=?',
+                f'UPDATE "{r["domain"]}" SET {set_clause} WHERE branch=? AND id=?',
                 vals + [r["branch"], r["id"]],
             )
 

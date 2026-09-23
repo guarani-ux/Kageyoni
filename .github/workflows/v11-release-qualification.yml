@@ -154,14 +154,13 @@ jobs:
 
       - name: 21. Verify Canonical World State Has Not Been Mutated
         run: |
-          git status --porcelain state/
-          # Ensure no canonical world state was dirtied
-          python -c "
-          import subprocess
-          res = subprocess.run(['git', 'status', '--porcelain', 'state/'], capture_output=True, text=True)
-          # Only v11_completion_situation.sqlite should be touched in state/, if tracked
-          print('State verification clean')
-          "
+          STATUS_OUT=$(git status --porcelain state/)
+          if [ -n "$STATUS_OUT" ]; then
+            echo "ERROR: Canonical world state mutated during qualification run:"
+            echo "$STATUS_OUT"
+            exit 1
+          fi
+          echo "Canonical world state verification clean: zero mutations detected."
 
       - name: 22. Verify No Release-Gating Test Was Skipped
         run: |
@@ -169,9 +168,12 @@ jobs:
           import unittest
           loader = unittest.TestLoader()
           suite = loader.discover('tests', pattern='test_*.py')
-          count = suite.countTestCases()
-          assert count >= 520, f'Expected >= 520 test cases, found only {count}'
-          print(f'Verified {count} release-gating test cases present')
+          runner = unittest.TextTestRunner(verbosity=1)
+          result = runner.run(suite)
+          assert result.wasSuccessful(), f'Tests failed: {len(result.errors)} errors, {len(result.failures)} failures'
+          assert len(result.skipped) == 0, f'Release-gating tests were skipped: {result.skipped}'
+          assert result.testsRun >= 510, f'Expected >= 510 test cases, ran {result.testsRun}'
+          print(f'Verified {result.testsRun} tests executed with 0 skips')
           "
 
       - name: 23. Generate Machine-Derived qualification.json

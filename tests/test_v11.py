@@ -2,7 +2,7 @@ import tempfile,shutil,unittest
 from pathlib import Path
 from kageyoni.engine import Engine,Rejected
 from kageyoni.persistence.migrations import install_all
-from kageyoni.v11 import EnforcerRegistry,AssessmentLedger,FrontierManager,ProtectedOperations,ContextPackets
+from kageyoni.v11 import EnforcerRegistry,AssessmentLedger,FrontierManager,ProtectedOperations,ContextPackets,Warrant
 
 class V11Tests(unittest.TestCase):
  def setUp(self):
@@ -64,5 +64,18 @@ class V11Tests(unittest.TestCase):
  def test_tampered_operation_detected(self):
   ops=ProtectedOperations(self.e);o=ops.declare(objective='A',requirement_version='r1',scope='story');self.e.db.execute("update v11_operations set payload_json='{}' where operation_id=?",(o['operation_id'],))
   with self.assertRaises(Rejected):self.e.verify()
+ def test_warrant_issue_and_staleness(self):
+  ledger = AssessmentLedger(self.e)
+  w = ledger.issue_warrant(claim_id='claim:test-1', evidence_refs=['ev:1', 'ev:2'], scope='story')
+  self.assertEqual(w.claim_id, 'claim:test-1')
+  self.assertEqual(w.evidence_refs, ('ev:1', 'ev:2'))
+  self.assertFalse(w.is_stale(w.revision))
+  self.assertTrue(w.is_stale(w.revision + 1))
+  self.assertTrue(w.digest)
+  d = w.as_dict()
+  self.assertEqual(d['claim_id'], 'claim:test-1')
+ def test_warrant_requires_valid_evidence_refs(self):
+  with self.assertRaises(Rejected):
+   Warrant(warrant_id='w1', claim_id='c1', evidence_refs=[], scope='story', revision=1)
 
 if __name__=='__main__':unittest.main()

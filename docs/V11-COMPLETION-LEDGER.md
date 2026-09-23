@@ -191,30 +191,25 @@ B + Situation Template
 C + saved Workflow
 D + one relevant persistent participant
 E full selective Kageyoni
-- [x] source-constrained/creative task
-- [x] research/planning task
-- [x] repository/technical task
-- [x] continuity-sensitive living-world task
+- [x] Mechanical trial harness and ledger verification
+- [ ] Live empirical external model trials (UNESTABLISHED - VERIFIER_DEFICIT)
 Record requirement satisfaction, source fidelity, continuity, novelty, correction burden, reconstruction burden, overhead, recovery and valued creative experience where applicable. Preserve negative results.
-  - Runner: Agent F (`tools/run_r5_blind_trials.py`)
-  - Evaluator: Agent G (`tools/evaluate_r5_trials.py`)
-  - Evidence: `evidence/comparative/r5_comparative_trials.json` (20 blind trials, non-monotonic reality preserved)
-  - Git SHA: Candidate HEAD
-  - Gate: `comparative` (STATUS: QUALIFIED)
+  - Mechanical Harness: `kageyoni/situations/comparative_runner.py` (verified fail-closed without external executor)
+  - Unit Verification: `tests/test_situation_r5_comparative_qualification.py` (passes with mock test harness)
+  - Limitation: Offline reference simulation only. Live LLM/human double-blind trials are unestablished.
+  - Gate: `comparative` (STATUS: HARNESS QUALIFIED / LIVE EMPIRICAL UNESTABLISHED)
 
 ======================================================================
 ## G. Long-horizon development
 ======================================================================
 Repeated trials:
-- [x] living-world/story trajectory
-- [x] research/planning trajectory
-- [x] creative/production trajectory
-- [x] technical/repository trajectory
+- [x] Mechanical trajectory distinction verification
+- [ ] Live multi-turn model adaptation trials (UNESTABLISHED - VERIFIER_DEFICIT)
 For each distinguish stored history, retrieved history, changed reasoning, changed capability and changed outcome. Do not call storage development.
-  - Runner: Agent H (`tools/run_r6_horizon_runner.py`)
-  - Evidence: `evidence/horizon/r6_long_horizon_trials.json` (4 trajectories, 16 encounters, EnforcerRegistry methods)
-  - Git SHA: Candidate HEAD
-  - Gate: `long_horizon` (STATUS: QUALIFIED)
+  - Mechanical Harness: `kageyoni/situations/long_horizon.py` (verified fail-closed without encounter executor)
+  - Unit Verification: `tests/test_situation_r6_long_horizon_qualification.py` & `tests/test_situation_long_horizon.py`
+  - Limitation: Mechanical invariant verification only. Real autonomous long-horizon LLM adaptation is unestablished.
+  - Gate: `long_horizon` (STATUS: HARNESS QUALIFIED / LIVE EMPIRICAL UNESTABLISHED)
 
 ======================================================================
 ## H. Release qualification

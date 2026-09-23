@@ -3,29 +3,48 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from kageyoni.situations.comparative import ComparativeLedger, CONDITIONS, METRICS
+from kageyoni.situations.comparative import ComparativeLedger, ComparativeObservation, CONDITIONS, METRICS
 from kageyoni.situations.comparative_runner import (
     TASKS,
-    TRIAL_METRICS,
-    LAYER_CONTRIBUTIONS,
+    TrialResult,
     run_comparative_suite,
     export_comparative_evidence,
+    validate_trial,
 )
+
+
+def _make_mock_executor():
+    """Deterministic test executor for verifying harness mechanics."""
+    def executor(task_id: str, condition: str) -> TrialResult:
+        metrics = {
+            "requirement_satisfaction": 0.5 if condition == "A" else 1.0,
+            "source_fidelity": 0.5 if condition in ("A", "B") else 1.0,
+            "continuity": 1 if condition in ("D", "E") else 0,
+            "useful_novelty": 0.5,
+            "correction_burden": 3 if condition == "A" else 0,
+            "reconstruction_burden": 2 if condition in ("A", "B") else 0,
+            "execution_overhead": {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4}[condition],
+            "recovery": 1 if condition in ("C", "D", "E") else 0,
+        }
+        return TrialResult(
+            task_id=task_id,
+            condition=condition,
+            metrics=metrics,
+            evidence_refs=(f"test-evidence:{task_id}:{condition}",),
+            serious_failure=None,
+        )
+    return executor
 
 
 class SituationR5ComparativeQualificationTests(unittest.TestCase):
     """Stage R5: Real Comparative Qualification.
 
-    Executes 5-condition comparison (A/B/C/D/E) across 4 representative task domains:
-    - creative (source-constrained production brief)
-    - research (evidence-grounded inquiry)
-    - technical (repository repair)
-    - living_world (consequential story encounter)
-
     Enforces:
-    - Complete evaluation of all 8 metrics without collapsing into a single score.
+    - R5 cannot self-certify without an explicit external task executor.
+    - Exporting evidence without an executor raises RuntimeError.
+    - Complete evaluation of all 8 metrics across all tasks/conditions when an executor is supplied.
     - Negative and inconclusive finding preservation (e.g. A beats E on overhead).
-    - Clear layer-by-layer contribution evidence.
+    - Validation rejection for malformed or evidenceless trial results.
     """
 
     def setUp(self):
@@ -35,9 +54,22 @@ class SituationR5ComparativeQualificationTests(unittest.TestCase):
     def tearDown(self):
         self.temp_dir.cleanup()
 
+    def test_r5_cannot_self_certify_without_executor(self):
+        """Calling run_comparative_suite without an executor fails closed."""
+        with self.assertRaises(RuntimeError) as ctx:
+            run_comparative_suite(None)
+        self.assertIn("R5 is unqualified until an external/real task executor is supplied", str(ctx.exception))
+
+    def test_r5_export_cannot_self_certify_without_executor(self):
+        """Calling export_comparative_evidence without an executor fails closed."""
+        with self.assertRaises(RuntimeError) as ctx:
+            export_comparative_evidence(self.evidence_path, None)
+        self.assertIn("R5 is unqualified until an external/real task executor is supplied", str(ctx.exception))
+
     def test_all_tasks_have_complete_five_condition_evaluation(self):
-        """Every task domain evaluates all conditions A, B, C, D, E."""
-        ledger = run_comparative_suite()
+        """Every task domain evaluates all conditions A, B, C, D, E via executor."""
+        executor = _make_mock_executor()
+        ledger = run_comparative_suite(executor)
         self.assertEqual(len(ledger.rows), len(TASKS) * len(CONDITIONS))
         for task in TASKS:
             with self.subTest(task=task):
@@ -45,7 +77,8 @@ class SituationR5ComparativeQualificationTests(unittest.TestCase):
 
     def test_all_eight_metrics_evaluated_without_aggregate_collapse(self):
         """Each trial includes all 8 metrics separately, without collapsing into a single score."""
-        ledger = run_comparative_suite()
+        executor = _make_mock_executor()
+        ledger = run_comparative_suite(executor)
         for row in ledger.rows:
             with self.subTest(task=row.task_id, condition=row.condition):
                 for m in METRICS:
@@ -54,45 +87,39 @@ class SituationR5ComparativeQualificationTests(unittest.TestCase):
 
     def test_preserves_negative_findings_and_tradeoffs(self):
         """Empirically records that Condition A beats Condition E on execution overhead."""
-        ledger = run_comparative_suite()
+        executor = _make_mock_executor()
+        ledger = run_comparative_suite(executor)
         for task in TASKS:
             with self.subTest(task=task):
                 rows = {r.condition: r.metrics for r in ledger.task(task)}
-                # Condition A has 0 overhead, whereas Condition E has 4
                 self.assertLess(rows["A"]["execution_overhead"], rows["E"]["execution_overhead"])
-                # Condition E has zero reconstruction burden, whereas A has high reconstruction burden
                 self.assertLess(rows["E"]["reconstruction_burden"], rows["A"]["reconstruction_burden"])
-                # Condition E provides complete recovery and continuity
-                self.assertEqual(rows["E"]["continuity"], 1)
-                self.assertEqual(rows["E"]["recovery"], 1)
-                self.assertEqual(rows["A"]["continuity"], 0)
-                self.assertEqual(rows["A"]["recovery"], 0)
 
-    def test_layer_by_layer_contributions_demonstrated(self):
-        """Verifies each layer transition (A->B->C->D->E) provides demonstrable value."""
-        ledger = run_comparative_suite()
-        for task in TASKS:
-            with self.subTest(task=task):
-                rows = {r.condition: r.metrics for r in ledger.task(task)}
-                # A -> B improves requirement satisfaction
-                self.assertGreater(rows["B"]["requirement_satisfaction"], rows["A"]["requirement_satisfaction"])
-                # B -> C adds recovery
-                self.assertGreater(rows["C"]["recovery"], rows["B"]["recovery"])
-                # C -> D adds continuity and removes reconstruction burden
-                self.assertGreater(rows["D"]["continuity"], rows["C"]["continuity"])
-                self.assertLess(rows["D"]["reconstruction_burden"], rows["C"]["reconstruction_burden"])
-                # D -> E maximizes source fidelity and requirement satisfaction
-                self.assertGreaterEqual(rows["E"]["source_fidelity"], rows["D"]["source_fidelity"])
-                self.assertEqual(rows["E"]["requirement_satisfaction"], 1.0)
+    def test_validate_trial_requires_evidence_refs_and_known_domain(self):
+        """Validates that malformed trials are rejected immediately."""
+        bad_task = TrialResult("unknown_domain", "A", {m: 1 for m in METRICS}, ("ev-1",))
+        with self.assertRaises(ValueError):
+            validate_trial(bad_task)
+
+        bad_condition = TrialResult("creative", "Z", {m: 1 for m in METRICS}, ("ev-1",))
+        with self.assertRaises(ValueError):
+            validate_trial(bad_condition)
+
+        missing_metrics = TrialResult("creative", "A", {"continuity": 1}, ("ev-1",))
+        with self.assertRaises(ValueError):
+            validate_trial(missing_metrics)
+
+        missing_evidence = TrialResult("creative", "A", {m: 1 for m in METRICS}, ())
+        with self.assertRaises(ValueError):
+            validate_trial(missing_evidence)
 
     def test_export_comparative_evidence_artifact(self):
-        """Exports the complete empirical evidence artifact for Stage R5 handoff."""
-        repo_evidence_path = Path("evidence/r5_comparative_trials.json")
-        data = export_comparative_evidence(repo_evidence_path)
-        self.assertTrue(repo_evidence_path.exists())
+        """Exports the complete evidence artifact when executor is supplied."""
+        executor = _make_mock_executor()
+        data = export_comparative_evidence(self.evidence_path, executor)
+        self.assertTrue(self.evidence_path.exists())
         self.assertEqual(data["summary"]["total_trials"], 20)
         self.assertEqual(len(data["summary"]["complete_tasks"]), 4)
-        self.assertIn("tradeoff_conclusion", data["summary"])
 
 
 if __name__ == "__main__":

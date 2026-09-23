@@ -15,8 +15,8 @@ class PipelineV11MandatoryMediationTests(unittest.TestCase):
             try:
                 install_pipelines(engine)
                 self.assertIsNone(engine.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='v11_operations'").fetchone())
-                p=Pipelines(engine).create("main","req:mandatory-v11",[{"id":"manual","kind":"manual","dependencies":[],"config":{"instruction":"bounded"}}],viewer="owner")
-                Pipelines(engine).run("main",p["pipeline_id"],viewer="owner")
+                p=Pipelines(engine).create("main","req:mandatory-v11",[{"id":"manual","kind":"manual","dependencies":[],"config":{"instruction":"bounded"}}])
+                Pipelines(engine).run("main",p["pipeline_id"])
                 self.assertIsNotNone(engine.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='v11_operations'").fetchone())
                 row=engine.db.execute("SELECT scope,state FROM v11_operations WHERE scope='pipeline' ORDER BY created_at DESC LIMIT 1").fetchone()
                 self.assertIsNotNone(row)

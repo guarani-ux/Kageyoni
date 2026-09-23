@@ -7,7 +7,12 @@ from .frontier import FrontierManager
 from .enforcement import AssessmentLedger
 
 class AdaptiveLoop:
-    """Bounded adaptive control plane. A frontier can change route, never the parent contract."""
+    """Bounded adaptive control plane. A frontier can change route, never the parent contract.
+
+    Physical implementation: Procedural finite state machine transitioning operations through
+    PREPARED, BLOCKED, ASSESSED, and COMMITTED states. Confers zero autonomous adaptation,
+    online learning, or neural adjustment.
+    """
     def __init__(self,engine):
         self.engine=engine; self.ops=ProtectedOperations(engine); self.contexts=ContextPackets(engine); self.frontiers=FrontierManager(engine); self.assessments=AssessmentLedger(engine)
     def begin(self,*,objective,requirement_version,scope,basis,included,unresolved=None,payload=None):

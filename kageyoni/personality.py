@@ -3,6 +3,10 @@
 No model calls, diagnostic claims, inferred MBTI assignments or automatic Will
 grants. Existing records remain authoritative; exact input images are recorded
 with decisions. The GM supplies semantic interpretation and the actual prose.
+
+Physical implementation: Regex validation for MBTI type codes ([EI][SN][TF][JP])
+and relational SQLite storage for GM character notes. Confers zero psychological
+AI modeling, mental simulation, or persona generation.
 """
 from __future__ import annotations
 import copy

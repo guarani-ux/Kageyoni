@@ -2,6 +2,10 @@
 
 Outcomes retain exact later observations. Their interpretation, relevance and
 proposed intervention remain attributed owner judgments, never automatic skill.
+
+Physical implementation: Relational SQLite persistence of text observations,
+operator notes, and parameter substitution records. Confers zero neural,
+probabilistic, or machine-learning model capability.
 """
 from __future__ import annotations
 

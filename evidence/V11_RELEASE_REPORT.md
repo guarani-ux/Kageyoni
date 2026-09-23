@@ -24,10 +24,10 @@ This release integrates the 270 inherited foundation engine components, migratio
 | **Stage R2 Frozen Trust** | `tests/test_v11_frozen_trust_gate.py` | 15 | 15 | 0 | **100% PASS** |
 | **Stage R3 Integration** | `tests/test_situation_r3_integration.py` (6 families, 22 contracts) | 14 | 14 | 0 | **100% PASS** |
 | **Stage R4 Scar Saturation** | `tests/test_situation_r4_scar_saturation.py` | 12 | 12 | 0 | **100% PASS** |
-| **Stage R5 Comparative** | `tests/test_situation_r5_comparative_qualification.py` (20 trials) | 5 | 5 | 0 | **100% PASS** |
-| **Stage R6 Long-Horizon** | `tests/test_situation_r6_long_horizon_qualification.py` (4 trajectories) | 5 | 5 | 0 | **100% PASS** |
+| **Stage R5 Comparative** | `tests/test_situation_r5_comparative_qualification.py` (fail-closed harness) | 7 | 7 | 0 | **HARNESS PASS (Live Empirical: Unestablished)** |
+| **Stage R6 Long-Horizon** | `tests/test_situation_r6_long_horizon_qualification.py` (distinction invariants) | 5 | 5 | 0 | **HARNESS PASS (Live Adaptation: Unestablished)** |
 | **Stage R7 Qualification** | `tests/test_v11_r7_release_qualification.py` (10 release gates + Red Team) | 11 | 11 | 0 | **100% PASS** |
-| **Total Engine Tests** | **All Combined Test Suites** | **>512** | **>512** | **0** | **100% PASS** |
+| **Total Engine Tests** | **All Combined Test Suites** | **>514** | **>514** | **0** | **100% PASS (Mechanically Verified)** |
 
 ---
 
@@ -76,26 +76,27 @@ The Scar Saturation attack suite expanded the adversarial frontier and permanent
 
 ---
 
-## 5. Real Comparative Evaluation (Stage R5)
+## 5. Comparative Evaluation Harness & Protocol (Stage R5)
 
-The empirical comparative trials evaluated 20 empirical trials across 4 task classes and 5 progressive conditions:
+The Stage R5 framework establishes the mechanical testing harness, validation schemas, and metric ledger (`ComparativeLedger`) for progressive A-E evaluation:
 - **Condition A:** Base host + equivalent context
 - **Condition B:** A + Situation Template
 - **Condition C:** B + Saved Workflow
 - **Condition D:** C + Persistent Participant
 - **Condition E:** Full Selective Kageyoni
 
-Raw telemetry preserved in `evidence/r5_comparative_trials.json`:
+### Mechanical Gating & Offline Reference Profiles
+The harness enforces that R5 cannot self-certify: calling `run_comparative_suite()` without an external executor raises `RuntimeError`. The reference numbers previously recorded in `evidence/r5_comparative_trials.json` represent **offline structural reference controls** generated to verify metric parsing and non-monotonic tradeoffs:
 
 ```
-Task Domain: Creative / Production
+Reference Scenario: Creative / Production
 - Cond A: Req Satisfied=0.40, Fidelity=0.35, Correction Burden=4, Overhead=0, Continuity=0
 - Cond B: Req Satisfied=0.70, Fidelity=0.65, Correction Burden=2, Overhead=1, Continuity=0
 - Cond C: Req Satisfied=0.85, Fidelity=0.80, Correction Burden=1, Overhead=2, Continuity=0
 - Cond D: Req Satisfied=0.90, Fidelity=0.90, Correction Burden=1, Overhead=3, Continuity=1
 - Cond E: Req Satisfied=1.00, Fidelity=1.00, Correction Burden=0, Overhead=4, Continuity=1
 
-Task Domain: Repository / Technical
+Reference Scenario: Repository / Technical
 - Cond A: Req Satisfied=0.50, Fidelity=0.45, Correction Burden=3, Overhead=0, Continuity=0
 - Cond B: Req Satisfied=0.75, Fidelity=0.70, Correction Burden=2, Overhead=1, Continuity=0
 - Cond C: Req Satisfied=0.90, Fidelity=0.85, Correction Burden=1, Overhead=2, Continuity=0
@@ -103,26 +104,26 @@ Task Domain: Repository / Technical
 - Cond E: Req Satisfied=1.00, Fidelity=1.00, Correction Burden=0, Overhead=4, Continuity=1
 ```
 
-### Negative & Inconclusive Findings Preserved
-1. **Execution Overhead:** Condition A is superior to Condition E in raw computational overhead (overhead 0 vs 4). For trivial, single-turn prompts with no persistence requirements, Full Kageyoni introduces non-zero state-tracking latency.
-2. **Intermediate Layer Incompleteness:** Condition B (Templates alone) reduces structural omission but provides zero session-to-session continuity. Condition C (Workflows) enforces topological ordering but requires Condition D (Persistent Participants) to eliminate the reconstruction burden.
-3. **No Magic Synthesis:** Full Kageyoni (Condition E) eliminates drift and counterfeit outputs, but does not autonomously invent unstated user requirements.
+### Invariant & Tradeoff Preservation
+1. **Execution Overhead:** Condition A is superior to Condition E in raw computational overhead (overhead 0 vs 4). Full Kageyoni introduces non-zero state-tracking latency.
+2. **Intermediate Layer Incompleteness:** Condition B (Templates alone) reduces structural omission but provides zero session-to-session continuity. Condition C (Workflows) enforces topological ordering but requires Condition D (Persistent Participants) to eliminate reconstruction burden.
+3. **No Self-Certification:** The engine verifies ledger and metric mechanics, but does not assert live LLM empirical superiority without external trial execution.
 
 ---
 
-## 6. Long-Horizon Developmental Trajectories (Stage R6)
+## 6. Long-Horizon Trajectory Distinction Harness (Stage R6)
 
-Multi-turn longitudinal trajectories evaluated development across 4 domains (Story/Living World, Research, Creative, Repository).
+Multi-turn longitudinal trajectory mechanics evaluate developmental state transitions across 4 domains (Story/Living World, Research, Creative, Repository).
 
-Raw telemetry preserved in `evidence/r6_long_horizon_trials.json` rigorously enforcing the epistemic axiom:
+The physical engine and `assess_trajectory` evaluate and strictly enforce the epistemic axiom:
 $$\text{stored history} \neq \text{retrieved history} \neq \text{changed reasoning} \neq \text{changed capability} \neq \text{changed outcome}$$
 
 - **Encounter 1:** Initial problem presented. Memory recorded. Capability: `None`.
 - **Encounter 2:** Memory retrieved. Reasoning adapted (`decision changed`). Outcome: friction mitigated, but underlying capability remains unaltered.
 - **Encounter 3:** Engine-qualified method executed (`method:<domain>:qualified_technique`). Outcome: verified changed outcome via physical execution.
 
-### Empirical Finding
-Storing memory alters context; context alters reasoning. However, developmental capability growth requires physical, qualified Method execution held by the engine runtime.
+### Empirical Finding & Boundary
+Storing memory alters context; context alters reasoning. However, developmental capability growth requires physical, qualified Method execution held by the engine runtime. The harness fails closed without an observed encounter executor.
 
 ---
 
@@ -132,6 +133,7 @@ To maintain anti-sycophantic operational integrity, the following boundaries are
 1. **Semantic Judgment vs. Mechanical Proof:** An enforcer or schema can mechanically verify that an artifact exists and meets format invariants; it cannot convert model text generation into absolute physical truth without an external verifier.
 2. **Cross-Domain Competence:** Competence established in a living-world or creative simulation provides zero guarantee of capability in repository or systems engineering. Transfer is blocked without domain-grounded evidence.
 3. **LLM Self-Assessment:** Model assertions of correctness or completion are treated as untrusted hypotheses until verified against physical tests and state invariants.
+4. **Live Empirical Model Evaluation Deficit (VERIFIER_DEFICIT):** Stages R5 and R6 qualify mechanical state tracking, ledger schemas, and fail-closed anti-self-certification boundaries. Live double-blind trials evaluating real external language model generations against baselines remain unexecuted. The system does not claim unmeasured empirical performance superiority over raw LLM hosts.
 
 ---
 
