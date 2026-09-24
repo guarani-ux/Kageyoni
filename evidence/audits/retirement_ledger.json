@@ -1,0 +1,30 @@
+{
+  "audit_version": "1.0.0",
+  "retired_components": [
+    {
+      "component": "contracts/epistemic_ledger.py (standalone taxonomy)",
+      "action": "FOLDED_INTO_SURVIVOR",
+      "survivor": "kageyoni/research_compiler/claims.py",
+      "adapter_retained": "contracts/epistemic_ledger.py",
+      "rationale": "Directly delegates to canonical ClaimGraph, preventing dual truth models while preserving backward compatibility for external callers."
+    },
+    {
+      "component": "migrations/023_situation_architecture.sql",
+      "action": "RETIRED",
+      "survivor": "migration_023.sql",
+      "rationale": "Redundant partial duplicate of canonical root migration_023.sql loaded by schema_path()."
+    },
+    {
+      "component": "kageyoni/situations/v11_adapter.py (raw state mediator)",
+      "action": "ADAPTER_RETAINED",
+      "survivor": "kageyoni/v11/runtime.py:ProtectedOperations",
+      "rationale": "Adapter retained for backwards compatibility, strictly mediating situation lifecycle calls into canonical ProtectedOperations."
+    }
+  ],
+  "active_adapters": [
+    "contracts/epistemic_ledger.py",
+    "kageyoni/situations/v11_adapter.py",
+    "kageyoni/workflows.py"
+  ],
+  "status": "RETIREMENT_AUDIT_PASSED"
+}
