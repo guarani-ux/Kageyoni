@@ -1,10 +1,10 @@
 {
   "title": "Kageyoni v11 Package / Source Parity Audit",
   "agent": "Agent I (Release Reproducer)",
-  "git_sha": "b54963a25e4a3efb3201c1f00483dc8c10f2344f",
+  "git_sha": "31181550db14a7da895bd30a337f2864731eda9f",
   "timestamp": "2026-09-22T14:41:00Z",
   "wheel_file": "kageyoni_engine-11.0.0-py3-none-any.whl",
-  "wheel_sha256": "0283970d39becadb6aa570d2c2449a64832af127c2573da64bc02eaab48ea83c",
+  "wheel_sha256": "3bd1a12a1c711ce25d5ab8a7213f2a53b7994b5212d91f5fd3e78938e655e3f1",
   "total_files_in_wheel": 120,
   "total_audited_targets": 48,
   "missing_files_count": 0,
@@ -12,7 +12,7 @@
   "hash_mismatch_count": 0,
   "parity_audit_passed": true,
   "provenance": {
-    "source_root": "C:\\Users\\flowe\\.gemini\\antigravity\\scratch\\Kageyoni",
+    "source_root": "C:\\Kageyoni",
     "python_executable": "C:\\Users\\flowe\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
     "platform": "win32"
   },
@@ -189,8 +189,8 @@
       "path": "kageyoni/data/migration_023.sql",
       "category": "migrations",
       "in_wheel": true,
-      "wheel_sha256": "8deb527108c1584b331e43e90de59f0f080611c8ecca1f5f46a96d7d310ba05d",
-      "source_sha256": "8deb527108c1584b331e43e90de59f0f080611c8ecca1f5f46a96d7d310ba05d",
+      "wheel_sha256": "9bb9419c5f1d0e5050b77a5faa613d98e74467991d8d079fd186f3f2fdd5bd3e",
+      "source_sha256": "9bb9419c5f1d0e5050b77a5faa613d98e74467991d8d079fd186f3f2fdd5bd3e",
       "hash_parity": true
     },
     {
@@ -205,8 +205,8 @@
       "path": "kageyoni/v11/adaptive.py",
       "category": "v11_modules",
       "in_wheel": true,
-      "wheel_sha256": "a74f256b537b134857d136588485feb1fafd40f21ca027a275ef011d901eecaa",
-      "source_sha256": "a74f256b537b134857d136588485feb1fafd40f21ca027a275ef011d901eecaa",
+      "wheel_sha256": "caeaa34bcdd7c6035089a3e27f5a344880637a8474d882b30b60eb32b7c8bcca",
+      "source_sha256": "caeaa34bcdd7c6035089a3e27f5a344880637a8474d882b30b60eb32b7c8bcca",
       "hash_parity": true
     },
     {
@@ -237,8 +237,8 @@
       "path": "kageyoni/v11/integration.py",
       "category": "v11_modules",
       "in_wheel": true,
-      "wheel_sha256": "d0d93f09e839e04471832e5f8faebded270a3f6671764e4e66857a72d7ef3cae",
-      "source_sha256": "d0d93f09e839e04471832e5f8faebded270a3f6671764e4e66857a72d7ef3cae",
+      "wheel_sha256": "74957ce5bf8c5650b53e8b5f48e83f6711fb0fb3580b47a359189f0f30917410",
+      "source_sha256": "74957ce5bf8c5650b53e8b5f48e83f6711fb0fb3580b47a359189f0f30917410",
       "hash_parity": true
     },
     {
@@ -253,112 +253,112 @@
       "path": "kageyoni/situations/__init__.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "9d5212844a3078544e75b3b08b32f520d3e731e22ad15f3e2bbdd2ec2641a7d2",
-      "source_sha256": "9d5212844a3078544e75b3b08b32f520d3e731e22ad15f3e2bbdd2ec2641a7d2",
+      "wheel_sha256": "392578f86b718fe36ee099b7b02807628038e834ecd58df89ccb94c63a6c1bcf",
+      "source_sha256": "392578f86b718fe36ee099b7b02807628038e834ecd58df89ccb94c63a6c1bcf",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/catalog.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "c85fb6dc0f0acec527046b8c5ad4f03ad30550070c571b163163b39c33cdd7c2",
-      "source_sha256": "c85fb6dc0f0acec527046b8c5ad4f03ad30550070c571b163163b39c33cdd7c2",
+      "wheel_sha256": "0b0db3d35ca16fc19859fe0a6618c6e4b009ff9d99b09bc8bac1f050226e9215",
+      "source_sha256": "0b0db3d35ca16fc19859fe0a6618c6e4b009ff9d99b09bc8bac1f050226e9215",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/comparative.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "b2b2fef8ea389efa8866cba31b06407fd27a4f3f671e9b479109770df32e3ada",
-      "source_sha256": "b2b2fef8ea389efa8866cba31b06407fd27a4f3f671e9b479109770df32e3ada",
+      "wheel_sha256": "24792e5b1cc1230dc53a5ddb372f3b51c1543fad1ec266d1a9b58ff3185ae26a",
+      "source_sha256": "24792e5b1cc1230dc53a5ddb372f3b51c1543fad1ec266d1a9b58ff3185ae26a",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/integration.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "b45ba21c1f82379678d500706ac0a22d773c6383d5e53761d1beb974310990db",
-      "source_sha256": "b45ba21c1f82379678d500706ac0a22d773c6383d5e53761d1beb974310990db",
+      "wheel_sha256": "e9ed7cb17b834439b7b33169bff477841d5e79ce9f6a0576ce4444af472f208f",
+      "source_sha256": "e9ed7cb17b834439b7b33169bff477841d5e79ce9f6a0576ce4444af472f208f",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/long_horizon.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "ab02fea84261dd94d14e8df1d41ff16f1520b27b6182ce86ff27ed562cab9eeb",
-      "source_sha256": "ab02fea84261dd94d14e8df1d41ff16f1520b27b6182ce86ff27ed562cab9eeb",
+      "wheel_sha256": "76165c9860d4587de51d2af97c6afd1fab20041bd857590f6c1ea1cbc936af1f",
+      "source_sha256": "76165c9860d4587de51d2af97c6afd1fab20041bd857590f6c1ea1cbc936af1f",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/memory.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "3b993758f34e8c2efef92fc7d800ea9096631b57369dd4179d8d6e09b88fdfe3",
-      "source_sha256": "3b993758f34e8c2efef92fc7d800ea9096631b57369dd4179d8d6e09b88fdfe3",
+      "wheel_sha256": "7026e92b60c38a3266256a92ac9bdc892d1cf92f61f709fea252fd892d5b98f5",
+      "source_sha256": "7026e92b60c38a3266256a92ac9bdc892d1cf92f61f709fea252fd892d5b98f5",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/models.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "427ff28624d7d45b9308d6831ca4e108bae2953a599d1445f10580d9646bf9ce",
-      "source_sha256": "427ff28624d7d45b9308d6831ca4e108bae2953a599d1445f10580d9646bf9ce",
+      "wheel_sha256": "b21564aaf48272a90f2a4d3f0c9e278071bbebf04e86f9a19b9aeeda6a9410f9",
+      "source_sha256": "b21564aaf48272a90f2a4d3f0c9e278071bbebf04e86f9a19b9aeeda6a9410f9",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/qualification.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "664e9f7b0b1d8eb716b0675ceac91b33a67a82c8337ce1ca2b3ed5b949f7a0ef",
-      "source_sha256": "664e9f7b0b1d8eb716b0675ceac91b33a67a82c8337ce1ca2b3ed5b949f7a0ef",
+      "wheel_sha256": "7ef8b224cf25c0c23ffaa07733124855d5eb06d91204c6007b27d11435db5a29",
+      "source_sha256": "7ef8b224cf25c0c23ffaa07733124855d5eb06d91204c6007b27d11435db5a29",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/runtime.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "0dd9110fc798f0d441f7f6257222a872f89d82fd5f996a1af68ca16efdf40ff1",
-      "source_sha256": "0dd9110fc798f0d441f7f6257222a872f89d82fd5f996a1af68ca16efdf40ff1",
+      "wheel_sha256": "1ec4346d438ccfc9af5dc0ddda8662377d51538d3f4589acbf01406c035ebb61",
+      "source_sha256": "1ec4346d438ccfc9af5dc0ddda8662377d51538d3f4589acbf01406c035ebb61",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/scar.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "5420a560a1759f24ff92755830c641ebb3e75114e46d45daec3250cf4c2047f6",
-      "source_sha256": "5420a560a1759f24ff92755830c641ebb3e75114e46d45daec3250cf4c2047f6",
+      "wheel_sha256": "e6a7b980e3340743b1deea0a05f3cf74d45cec1fd50ec87d55de3cf7240966bc",
+      "source_sha256": "e6a7b980e3340743b1deea0a05f3cf74d45cec1fd50ec87d55de3cf7240966bc",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/service.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "15fa17af1e6eefa95a3feacf1fbc2bcea55a33d4408ea3f808a5285b3214e268",
-      "source_sha256": "15fa17af1e6eefa95a3feacf1fbc2bcea55a33d4408ea3f808a5285b3214e268",
+      "wheel_sha256": "53f14f7b11cb4ee695654ce583104c15be1490675df557594f3d1739a6c446a6",
+      "source_sha256": "53f14f7b11cb4ee695654ce583104c15be1490675df557594f3d1739a6c446a6",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/storage.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "2296e084a8041ef193ba52d73ff024df09eeb6c212aa9fc9145ac6ffc9cd857b",
-      "source_sha256": "2296e084a8041ef193ba52d73ff024df09eeb6c212aa9fc9145ac6ffc9cd857b",
+      "wheel_sha256": "b19785a702c419082302781b0b5261befcdf792a85e25dc74ca4ac3ec7b804fe",
+      "source_sha256": "b19785a702c419082302781b0b5261befcdf792a85e25dc74ca4ac3ec7b804fe",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/studio.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "79448e49645b6ec1d65e36eff6da5ef2d3f6d9669036e77aae552414c02d9257",
-      "source_sha256": "79448e49645b6ec1d65e36eff6da5ef2d3f6d9669036e77aae552414c02d9257",
+      "wheel_sha256": "3e6e81d7a1e65afdb80fd05c182dd4259602dd8676a99bcbc9492978f41555f6",
+      "source_sha256": "3e6e81d7a1e65afdb80fd05c182dd4259602dd8676a99bcbc9492978f41555f6",
       "hash_parity": true
     },
     {
       "path": "kageyoni/situations/v11_adapter.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "0ae550bd7753005cb41e5c68223c1f0e6eadd06a01b1977ef3b8e4741cb56aff",
-      "source_sha256": "0ae550bd7753005cb41e5c68223c1f0e6eadd06a01b1977ef3b8e4741cb56aff",
+      "wheel_sha256": "42be706f212f4c2cbf8f1c920320da654caaea777d270cae5fddc72138efdc9d",
+      "source_sha256": "42be706f212f4c2cbf8f1c920320da654caaea777d270cae5fddc72138efdc9d",
       "hash_parity": true
     },
     {
@@ -373,8 +373,8 @@
       "path": "kageyoni/engine.py",
       "category": "core_modules",
       "in_wheel": true,
-      "wheel_sha256": "e063d3d84ce7dabf51ed2752e3e82b9a156a7f6cbf9b15eb7561eb9c079906ba",
-      "source_sha256": "e063d3d84ce7dabf51ed2752e3e82b9a156a7f6cbf9b15eb7561eb9c079906ba",
+      "wheel_sha256": "e98a230fe5cbc028ef331d573002096bc02013576dfc4e217995427500c952dd",
+      "source_sha256": "e98a230fe5cbc028ef331d573002096bc02013576dfc4e217995427500c952dd",
       "hash_parity": true
     },
     {
