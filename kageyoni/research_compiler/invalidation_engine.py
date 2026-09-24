@@ -45,6 +45,31 @@ class InvalidationReport:
         }
 
 
+def _extract_references(raw: Optional[str]) -> Set[str]:
+    """Extracts exact string reference tokens from structured JSON, eliminating substring false positives."""
+    if not raw:
+        return set()
+    try:
+        data = json.loads(raw)
+    except Exception:
+        return set()
+
+    refs: Set[str] = set()
+
+    def _walk(item: Any):
+        if isinstance(item, str):
+            refs.add(item)
+        elif isinstance(item, dict):
+            for v in item.values():
+                _walk(v)
+        elif isinstance(item, (list, tuple, set)):
+            for v in item:
+                _walk(v)
+
+    _walk(data)
+    return refs
+
+
 class InvalidationEngine:
     """
     Cascading Invalidation Engine with durable SQLite history and cycle detection.
@@ -119,59 +144,62 @@ class InvalidationEngine:
 
         # 2. Cascade into Durable SQLite Engine State if DB available
         if self.db:
+            from ..persistence.unit_of_work import UnitOfWork
             all_affected_claim_ids = set(invalidated_ids)
 
-            # Check agency_research_packages
-            try:
-                cur = self.db.cursor()
-                cur.execute("SELECT package_id, topic_model_json FROM agency_research_packages")
-                rows = cur.fetchall()
-                for row in rows:
-                    pkg_id = row[0]
-                    model_str = row[1]
-                    if any(cid in model_str for cid in all_affected_claim_ids):
-                        report.impacted_packages.append(pkg_id)
-            except Exception:
-                pass
+            with UnitOfWork(self.db):
+                # Check agency_research_packages
+                try:
+                    cur = self.db.cursor()
+                    cur.execute("SELECT package_id, topic_model_json FROM agency_research_packages")
+                    rows = cur.fetchall()
+                    for row in rows:
+                        pkg_id = row[0]
+                        model_str = row[1]
+                        refs = _extract_references(model_str)
+                        if refs & all_affected_claim_ids:
+                            report.impacted_packages.append(pkg_id)
+                except Exception:
+                    pass
 
-            # Check agency_projects
-            try:
-                cur = self.db.cursor()
-                cur.execute("SELECT project_id, metadata_json FROM agency_projects")
-                prows = cur.fetchall()
-                for prow in prows:
-                    proj_id = prow[0]
-                    meta_str = prow[1] or ""
-                    if any(cid in meta_str for cid in all_affected_claim_ids) or any(pkg in meta_str for pkg in report.impacted_packages):
-                        report.impacted_projects.append(proj_id)
-                        # Mark project as requiring revision
-                        cur.execute(
-                            "UPDATE agency_projects SET current_stage = 'REVISION_REQUIRED', updated_at = ? WHERE project_id = ?",
-                            (time.time(), proj_id),
-                        )
-                self.db.commit()
-            except Exception:
-                pass
+                # Check agency_projects
+                try:
+                    cur = self.db.cursor()
+                    cur.execute("SELECT project_id, metadata_json FROM agency_projects")
+                    prows = cur.fetchall()
+                    impacted_pkgs_set = set(report.impacted_packages)
+                    for prow in prows:
+                        proj_id = prow[0]
+                        meta_str = prow[1] or ""
+                        refs = _extract_references(meta_str)
+                        if (refs & all_affected_claim_ids) or (refs & impacted_pkgs_set):
+                            report.impacted_projects.append(proj_id)
+                            # Mark project as requiring revision
+                            cur.execute(
+                                "UPDATE agency_projects SET current_stage = 'REVISION_REQUIRED', updated_at = ? WHERE project_id = ?",
+                                (time.time(), proj_id),
+                            )
+                except Exception:
+                    pass
 
-            # Record Retraction in Append-Only Audit Table
-            retraction_id = f"retract_{uuid.uuid4().hex[:12]}"
-            self.db.execute(
-                """
-                INSERT INTO agency_claim_retractions
-                (retraction_id, root_claim_id, reason, impacted_claims_json,
-                 impacted_packages_json, impacted_projects_json, retracted_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-                """,
-                (
-                    retraction_id,
-                    root_claim_id,
-                    reason,
-                    json.dumps(report.invalidated_child_claims),
-                    json.dumps(report.impacted_packages),
-                    json.dumps(report.impacted_projects),
-                    report.timestamp,
-                ),
-            )
-            self.db.commit()
+                # Record Retraction in Append-Only Audit Table
+                retraction_id = f"retract_{uuid.uuid4().hex[:12]}"
+                self.db.execute(
+                    """
+                    INSERT INTO agency_claim_retractions
+                    (retraction_id, root_claim_id, reason, impacted_claims_json,
+                     impacted_packages_json, impacted_projects_json, retracted_at)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        retraction_id,
+                        root_claim_id,
+                        reason,
+                        json.dumps(report.invalidated_child_claims),
+                        json.dumps(report.impacted_packages),
+                        json.dumps(report.impacted_projects),
+                        report.timestamp,
+                    ),
+                )
 
         return report
