@@ -21,12 +21,14 @@ class SemanticCastingError(ValueError):
 
 
 MODALITY_RANKS: Dict[str, int] = {
+    "UNSPECIFIED": 0,
     "POSSIBLE": 1,
     "PROBABLE": 2,
     "CERTAIN": 3,
 }
 
 QUANTIFIER_RANKS: Dict[str, int] = {
+    "UNSPECIFIED": 0,
     "SOME": 1,
     "MANY": 2,
     "MOST": 3,
@@ -48,7 +50,7 @@ QUANTIFIER_PATTERNS = [
 ]
 
 
-def infer_modality(text: str, default: str = "CERTAIN") -> str:
+def infer_modality(text: str, default: str = "UNSPECIFIED") -> str:
     """Infers the modality tier from statement text."""
     # Check lowest rank first to be conservative
     for pattern, tier in MODALITY_PATTERNS:
@@ -57,7 +59,7 @@ def infer_modality(text: str, default: str = "CERTAIN") -> str:
     return default
 
 
-def infer_quantifier(text: str, default: str = "ALL") -> str:
+def infer_quantifier(text: str, default: str = "UNSPECIFIED") -> str:
     """Infers the quantifier tier from statement text."""
     for pattern, tier in QUANTIFIER_PATTERNS:
         if pattern.search(text):
@@ -155,5 +157,6 @@ def cast_claim_safely(
         evidence_establishes_claim=target_statement,
         modality=t_mod,
         quantifier=t_quant,
+        uncertainties=list(source_claim.uncertainties),
     )
     return child

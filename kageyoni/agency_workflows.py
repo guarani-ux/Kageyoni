@@ -616,9 +616,12 @@ class AgencyWorkflows:
                 statement=clm_dict["statement"],
                 epistemic_status=ResearchEpistemicStatus(clm_dict["epistemic_status"]),
                 provenance_sources=clm_dict.get("provenance_sources", []),
-                confidence_level=clm_dict.get("confidence_level", "HIGH"),
+                confidence_level=clm_dict.get("confidence_level", "UNSPECIFIED"),
                 falsification_condition=clm_dict.get("falsification_condition", ""),
                 parent_claim_ids=clm_dict.get("parent_claim_ids", []),
+                modality=clm_dict.get("modality", "UNSPECIFIED"),
+                quantifier=clm_dict.get("quantifier", "UNSPECIFIED"),
+                uncertainties=clm_dict.get("uncertainties", []),
             )
             graph.add_claim(clm)
 

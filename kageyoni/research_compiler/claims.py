@@ -75,15 +75,16 @@ class ClaimNode:
     statement: str
     epistemic_status: EpistemicStatus
     provenance_sources: List[str] = field(default_factory=list)  # IDs of SourceRecords
-    confidence_level: str = "HIGH"  # HIGH | MEDIUM | LOW | CONTESTED
+    confidence_level: str = "UNSPECIFIED"  # HIGH | MEDIUM | LOW | CONTESTED | UNSPECIFIED
     falsification_condition: str = ""  # What specific evidence would break this claim?
     parent_claim_ids: List[str] = field(default_factory=list)
     child_claim_ids: List[str] = field(default_factory=list)
     is_invalidated: bool = False
     invalidation_reason: Optional[str] = None
     evidence_establishes_claim: str = ""  # What the warranted analysis specifically concludes
-    modality: str = "CERTAIN"  # POSSIBLE | PROBABLE | CERTAIN
-    quantifier: str = "ALL"    # SOME | MANY | MOST | ALL
+    modality: str = "UNSPECIFIED"  # POSSIBLE | PROBABLE | CERTAIN | UNSPECIFIED
+    quantifier: str = "UNSPECIFIED"  # SOME | MANY | MOST | ALL | UNSPECIFIED
+    uncertainties: List[str] = field(default_factory=list)
 
     def __post_init__(self):
         if not self.evidence_establishes_claim and self.statement:
@@ -104,6 +105,7 @@ class ClaimNode:
             "evidence_establishes_claim": self.evidence_establishes_claim,
             "modality": self.modality,
             "quantifier": self.quantifier,
+            "uncertainties": list(self.uncertainties),
         }
 
 
@@ -189,6 +191,7 @@ class ClaimGraph:
             "confidence_level": node.confidence_level,
             "modality": node.modality,
             "quantifier": node.quantifier,
+            "uncertainties": list(node.uncertainties),
             "is_invalidated": node.is_invalidated,
             "direct_sources": [
                 {
@@ -206,16 +209,74 @@ class ClaimGraph:
         }
         return lineage
 
+    @staticmethod
+    def validate_transition(
+        current_status: str | EpistemicStatus,
+        new_status: str | EpistemicStatus,
+        warrant_or_reasoning: Optional[str] = None,
+        provenance_sources: Optional[List[str]] = None,
+        dependencies: Optional[List[str]] = None,
+    ) -> None:
+        """
+        Validates transition between epistemic statuses enforcing strict warrants.
+        Replaces keyword-based heuristics with structural verification.
+        """
+        curr = current_status.value if isinstance(current_status, EpistemicStatus) else str(current_status)
+        target = new_status.value if isinstance(new_status, EpistemicStatus) else str(new_status)
+
+        warranted = {
+            EpistemicStatus.SOURCE_SUPPLIED_FACT.value,
+            EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value,
+        }
+
+        # 1. Assumption promotion gate
+        if curr == EpistemicStatus.ASSUMPTION.value and target in warranted:
+            raise EpistemicLaunderingError(
+                f"Laundering detected: Cannot promote ASSUMPTION to {target} without external warrant and empirical provenance."
+            )
+
+        # 2. Creative decision promotion gate
+        if curr == EpistemicStatus.CREATIVE_DECISION.value and target in warranted:
+            raise EpistemicLaunderingError(
+                f"Laundering detected: CREATIVE_DECISION cannot be promoted to {target}."
+            )
+
+        # 3. Unknown resolution gate (replaces keyword heuristics with structural warrants)
+        if curr == EpistemicStatus.UNKNOWN.value and target != EpistemicStatus.UNKNOWN.value:
+            if not warrant_or_reasoning or len(warrant_or_reasoning.strip()) < 10:
+                raise EpistemicLaunderingError(
+                    "Laundering detected: UNKNOWN state cannot be resolved without explicit, substantive warrant."
+                )
+            if target in warranted and not provenance_sources:
+                raise EpistemicLaunderingError(
+                    f"Laundering detected: UNKNOWN state cannot be promoted to {target} without verified provenance sources."
+                )
+            if target == EpistemicStatus.INFERENCE.value and (not dependencies or len(dependencies) == 0):
+                raise EpistemicLaunderingError(
+                    "Laundering detected: INFERENCE cannot be derived without declared valid dependencies."
+                )
+
+        # 4. Target requirement gates
+        if target == EpistemicStatus.SOURCE_SUPPLIED_FACT.value and not provenance_sources:
+            raise EpistemicLaunderingError("SOURCE_SUPPLIED_FACT requires an identifiable provenance_source.")
+        if target == EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value and not warrant_or_reasoning:
+            raise EpistemicLaunderingError("EVIDENCE_SUPPORTED_CLAIM requires an identifiable warrant_or_reasoning.")
+
     def get_established_facts(self) -> List[ClaimNode]:
-        """Returns valid, un-invalidated claims backed by high confidence."""
+        """Returns valid, un-invalidated claims backed by high confidence or verified source facts."""
         return [
             c for c in self.claims.values()
             if not c.is_invalidated
-            and c.epistemic_status.value in (
-                EpistemicStatus.SOURCE_SUPPLIED_FACT.value,
-                EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value,
+            and (
+                (
+                    c.epistemic_status.value == EpistemicStatus.SOURCE_SUPPLIED_FACT.value
+                    and c.confidence_level not in ("LOW", "CONTESTED")
+                )
+                or (
+                    c.epistemic_status.value == EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value
+                    and c.confidence_level == "HIGH"
+                )
             )
-            and c.confidence_level == "HIGH"
         ]
 
     def get_uncertain_claims(self) -> List[ClaimNode]:
@@ -231,5 +292,6 @@ class ClaimGraph:
                     EpistemicStatus.UNKNOWN.value,
                 )
                 or c.confidence_level in ("LOW", "CONTESTED")
+                or len(c.uncertainties) > 0
             )
         ]

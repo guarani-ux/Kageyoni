@@ -87,6 +87,7 @@ class EpistemicStatement:
             provenance_sources=[self.provenance_source] if self.provenance_source else [],
             parent_claim_ids=list(self.dependencies),
             evidence_establishes_claim=self.warrant_or_reasoning or self.proposition,
+            uncertainties=list(self.uncertainties),
         )
 
     @classmethod
@@ -99,6 +100,7 @@ class EpistemicStatement:
             status=node.epistemic_status.value,
             provenance_source=prov,
             warrant_or_reasoning=node.evidence_establishes_claim,
+            uncertainties=tuple(node.uncertainties),
             dependencies=tuple(node.parent_claim_ids),
         )
 
@@ -120,8 +122,10 @@ class EpistemicLedger:
                 title=statement.provenance_source,
                 provenance=statement.provenance_source,
                 author_or_institution="ledger_adapter",
-                direct_excerpt=statement.proposition,
+                direct_excerpt="",
                 date_recorded=0.0,
+                reliability_tier="PRIMARY_UNVERIFIED",
+                source_says_statement="",
             )
             self.graph.add_source(src)
 
@@ -139,38 +143,33 @@ class EpistemicLedger:
         new_proposition: str,
         new_status: EpistemicStatus,
         reasoning: str,
+        provenance_source: str | None = None,
+        uncertainties: tuple[str, ...] | None = None,
     ) -> EpistemicStatement:
         """Derives a downstream statement while preventing illegal status promotions."""
         parent = self._statements.get(source_id)
         if not parent:
             raise KeyError(f"Parent statement '{source_id}' not found in ledger.")
 
-        # PROHIBITION 1: Assumption Laundering
-        if parent.status == "ASSUMPTION" and new_status in ("SOURCE_SUPPLIED_FACT", "EVIDENCE_SUPPORTED_CLAIM"):
-            raise EpistemicLaunderingError(
-                f"Laundering detected: Cannot promote ASSUMPTION '{source_id}' to {new_status} without external warrant."
-            )
+        target_prov = provenance_source or parent.provenance_source
+        prov_sources = [target_prov] if target_prov else []
 
-        # PROHIBITION 2: Creative Decision Laundering
-        if parent.status == "CREATIVE_DECISION" and new_status == "EVIDENCE_SUPPORTED_CLAIM":
-            raise EpistemicLaunderingError(
-                f"Laundering detected: CREATIVE_DECISION '{source_id}' cannot be promoted to EVIDENCE_SUPPORTED_CLAIM."
-            )
-
-        # PROHIBITION 3: Unknown Amnesia
-        if parent.status == "UNKNOWN" and new_status != "UNKNOWN":
-            if not reasoning or "verified" not in reasoning.lower():
-                raise EpistemicLaunderingError(
-                    f"Laundering detected: UNKNOWN state '{source_id}' cannot be completed by model inference alone."
-                )
+        # Delegate transition validation to ClaimGraph canonical rules
+        self.graph.validate_transition(
+            current_status=parent.status,
+            new_status=new_status,
+            warrant_or_reasoning=reasoning,
+            provenance_sources=prov_sources,
+            dependencies=[parent.statement_id],
+        )
 
         child = EpistemicStatement(
             statement_id=target_id,
             proposition=new_proposition,
             status=new_status,
-            provenance_source=parent.provenance_source,
+            provenance_source=target_prov,
             warrant_or_reasoning=reasoning,
-            uncertainties=parent.uncertainties,
+            uncertainties=uncertainties if uncertainties is not None else parent.uncertainties,
             dependencies=(parent.statement_id,),
         )
         return self.record(child)

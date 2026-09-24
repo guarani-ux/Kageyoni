@@ -28,7 +28,16 @@ class KageyoniSituationAdapter:
         if kind=="artifact":
             return self.db.execute("SELECT 1 FROM artifacts WHERE artifact_id=?",(value,)).fetchone() is not None
         if kind=="method":
-            return self.db.execute("SELECT 1 FROM method_revisions WHERE method_id=?",(value,)).fetchone() is not None
+            row = self.db.execute("SELECT 1 FROM method_revisions WHERE method_id=?",(value,)).fetchone()
+            if not row:
+                return False
+            try:
+                assignments = self.db.execute("SELECT qualification FROM node_method_assignments WHERE method_id=?",(value,)).fetchall()
+                if assignments:
+                    return any(q[0] != "revoked" for q in assignments)
+            except Exception:
+                pass
+            return True
         if kind=="pipeline":
             row=self.db.execute("SELECT payload_json FROM pipeline_runs WHERE pipeline_id=?",(value,)).fetchone()
             return bool(row and json.loads(row[0]).get("phase")=="completed")
