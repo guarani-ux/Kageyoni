@@ -2,17 +2,23 @@
 contracts/epistemic_ledger.py
 Foundational Epistemic Integrity Ledger for Reliable Communication.
 
-Enforces the 9 Epistemic Status categories and prevents Epistemic-Status Laundering:
-- A statement in a source is NOT thereby a fact (it is SOURCE_SUPPLIED_FACT).
-- An assumption may NOT lose its assumption marker during compression.
-- An unknown must remain explicitly marked UNKNOWN, never filled with plausible fiction.
-- Creative decisions cannot be laundered into 'empirically demanded' facts.
+Folded into kageyoni.research_compiler.claims (Slice CP-03).
+Provides full backward compatibility while delegating all graph operations,
+anti-laundering checks, and epistemic category validations to the canonical ClaimGraph.
 """
 from __future__ import annotations
 from dataclasses import dataclass, field
 import hashlib
 import json
 from typing import Any, Literal
+
+from kageyoni.research_compiler.claims import (
+    EpistemicStatus as CanonicalEpistemicStatus,
+    EpistemicLaunderingError,
+    ClaimGraph,
+    ClaimNode,
+    SourceRecord,
+)
 
 EPISTEMIC_STATUSES = (
     "SOURCE_SUPPLIED_FACT",
@@ -38,9 +44,6 @@ EpistemicStatus = Literal[
     "UNKNOWN",
 ]
 
-class EpistemicLaunderingError(ValueError):
-    """Raised when an assertion illegally sheds uncertainty, assumption, or provenance."""
-    pass
 
 @dataclass(frozen=True)
 class EpistemicStatement:
@@ -74,12 +77,57 @@ class EpistemicStatement:
         }
         return hashlib.sha256(json.dumps(payload, sort_keys=True).encode("utf-8")).hexdigest()
 
+    def to_claim_node(self) -> ClaimNode:
+        """Converts an EpistemicStatement to a canonical ClaimNode."""
+        status = CanonicalEpistemicStatus(self.status)
+        return ClaimNode(
+            claim_id=self.statement_id,
+            statement=self.proposition,
+            epistemic_status=status,
+            provenance_sources=[self.provenance_source] if self.provenance_source else [],
+            parent_claim_ids=list(self.dependencies),
+            evidence_establishes_claim=self.warrant_or_reasoning or self.proposition,
+        )
+
+    @classmethod
+    def from_claim_node(cls, node: ClaimNode, provenance_source: str | None = None) -> EpistemicStatement:
+        """Constructs an EpistemicStatement from a canonical ClaimNode."""
+        prov = provenance_source or (node.provenance_sources[0] if node.provenance_sources else None)
+        return cls(
+            statement_id=node.claim_id,
+            proposition=node.statement,
+            status=node.epistemic_status.value,
+            provenance_source=prov,
+            warrant_or_reasoning=node.evidence_establishes_claim,
+            dependencies=tuple(node.parent_claim_ids),
+        )
+
+
 class EpistemicLedger:
-    """Tracks propositions across transformations, ensuring uncertainty and provenance are preserved."""
-    def __init__(self):
+    """
+    Tracks propositions across transformations, ensuring uncertainty and provenance are preserved.
+    Delegates graph custody to the canonical ClaimGraph.
+    """
+    def __init__(self, graph: ClaimGraph | None = None):
+        self.graph = graph or ClaimGraph()
         self._statements: dict[str, EpistemicStatement] = {}
 
     def record(self, statement: EpistemicStatement) -> EpistemicStatement:
+        # Ensure provenance source exists in canonical graph
+        if statement.provenance_source and statement.provenance_source not in self.graph.sources:
+            src = SourceRecord(
+                source_id=statement.provenance_source,
+                title=statement.provenance_source,
+                provenance=statement.provenance_source,
+                author_or_institution="ledger_adapter",
+                direct_excerpt=statement.proposition,
+                date_recorded=0.0,
+            )
+            self.graph.add_source(src)
+
+        # Mirror statement in canonical ClaimGraph
+        claim_node = statement.to_claim_node()
+        self.graph.add_claim(claim_node)
         self._statements[statement.statement_id] = statement
         return statement
 
@@ -98,21 +146,18 @@ class EpistemicLedger:
             raise KeyError(f"Parent statement '{source_id}' not found in ledger.")
 
         # PROHIBITION 1: Assumption Laundering
-        # An assumption cannot become a fact or supported claim without physical evidence
         if parent.status == "ASSUMPTION" and new_status in ("SOURCE_SUPPLIED_FACT", "EVIDENCE_SUPPORTED_CLAIM"):
             raise EpistemicLaunderingError(
                 f"Laundering detected: Cannot promote ASSUMPTION '{source_id}' to {new_status} without external warrant."
             )
 
         # PROHIBITION 2: Creative Decision Laundering
-        # A creative aesthetic choice cannot be framed as an empirically required fact
         if parent.status == "CREATIVE_DECISION" and new_status == "EVIDENCE_SUPPORTED_CLAIM":
             raise EpistemicLaunderingError(
                 f"Laundering detected: CREATIVE_DECISION '{source_id}' cannot be promoted to EVIDENCE_SUPPORTED_CLAIM."
             )
 
         # PROHIBITION 3: Unknown Amnesia
-        # An unknown cannot be silently converted to a fact
         if parent.status == "UNKNOWN" and new_status != "UNKNOWN":
             if not reasoning or "verified" not in reasoning.lower():
                 raise EpistemicLaunderingError(

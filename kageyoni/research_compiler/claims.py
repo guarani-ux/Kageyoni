@@ -13,6 +13,11 @@ from enum import Enum
 from typing import Dict, List, Optional, Any, Set
 
 
+class EpistemicLaunderingError(ValueError):
+    """Raised when an assertion illegally sheds uncertainty, assumption, or provenance."""
+    pass
+
+
 class EpistemicStatus(Enum):
     # Canonical 9 categories from contracts/epistemic_ledger.py
     SOURCE_SUPPLIED_FACT = "SOURCE_SUPPLIED_FACT"
@@ -126,7 +131,7 @@ class ClaimGraph:
         # Anti-laundering invariant: If claim has no provenance sources and no parent claims,
         # it CANNOT be designated as SOURCE_SUPPLIED_FACT
         if canonical_status == EpistemicStatus.SOURCE_SUPPLIED_FACT.value and not claim.provenance_sources:
-            raise ValueError(f"EPISTEMIC_LAUNDERING: Claim '{claim.claim_id}' declared as SOURCE_SUPPLIED_FACT without provenance sources.")
+            raise EpistemicLaunderingError(f"EPISTEMIC_LAUNDERING: Claim '{claim.claim_id}' declared as SOURCE_SUPPLIED_FACT without provenance sources.")
 
         # Grounding check: verify that all referenced provenance_sources actually exist in self.sources
         for sid in claim.provenance_sources:
