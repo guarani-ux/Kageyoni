@@ -14,6 +14,7 @@ def default_decoders():
     from .models import Situation, SituationTemplate, Workflow, WorkflowStage, DomainProjection
     from .runtime import WorkflowRun, ExtensionProposal, EvolutionProposal
     from .memory import SituationMemory
+    from .scar import Scar
     return {
         "situation": lambda p: Situation(**p),
         "template": lambda p: SituationTemplate(**{**p,"required":tuple(p.get("required",())), "optional":tuple(p.get("optional",())), "relations":tuple(tuple(x) for x in p.get("relations",())), "recommended_workflows":tuple(p.get("recommended_workflows",()))}),
@@ -23,6 +24,7 @@ def default_decoders():
         "extension": lambda p: ExtensionProposal(**{**p,"evidence_refs":tuple(p.get("evidence_refs",()))}),
         "evolution": lambda p: EvolutionProposal(**{**p,"outcome_refs":tuple(p.get("outcome_refs",()))}),
         "memory": lambda p: SituationMemory(**{k: tuple(v) if isinstance(v, list) else v for k, v in p.items()}),
+        "scar": lambda p: Scar(**{k: tuple(v) if isinstance(v, list) else v for k, v in p.items()}),
     }
 
 class SQLiteSituationStore:

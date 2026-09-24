@@ -35,6 +35,20 @@ class SituationRuntime:
         return self.runs.get(run_id) or self.service.store.get("workflow_run",run_id)
 
     def start(self,run:WorkflowRun):
+        # Negative constraint check: block start if active open scar matches authority
+        if hasattr(self.service.store, "values"):
+            try:
+                open_scars = self.service.store.values("scar")
+                for sc in open_scars:
+                    if getattr(sc, "status", None) == "open":
+                        scopes = getattr(sc, "affected_scopes", ())
+                        if run.authority and any(scope in scopes for scope in run.authority):
+                            raise SituationError(f"NEGATIVE_CONSTRAINT_VIOLATION: Active scar '{sc.scar_id}' blocks execution pattern for authority.")
+            except SituationError:
+                raise
+            except Exception:
+                pass
+
         s=self.service.situations.get(run.situation_id) or self.service.store.get("situation",run.situation_id)
         if s.workflow_id!=run.workflow_id: raise SituationError("workflow not bound to situation")
         if run.parent_run_id:
@@ -47,9 +61,37 @@ class SituationRuntime:
         if not resume_condition: raise SituationError("waiting requires resume condition")
         run=self._run(run_id); run.status="waiting"; run.resume_condition=resume_condition; self.service.store.put("workflow_run",run.run_id,run)
 
-    def fail(self,run_id,reason):
+    def fail(self,run_id,reason,*,failure_class="runtime_failure",trigger_condition=""):
         if not reason: raise SituationError("failure requires reason")
         run=self._run(run_id); run.status="failed"; run.failure_reason=reason; self.service.store.put("workflow_run",run.run_id,run)
+        from .scar import Scar
+        scar = Scar(
+            scar_id=f"scar:{run.situation_id}:{run.run_id}",
+            failure_class=failure_class,
+            root_cause=reason,
+            probe_refs=(f"workflow_run:{run.run_id}",),
+            trigger_condition=trigger_condition,
+            affected_scopes=tuple(run.authority) if run.authority else (run.workflow_id,),
+            status="open",
+        )
+        self.service.store.put("scar", scar.scar_id, scar)
+        return scar
+
+    def complete_workflow(self,run_id,*,outcome_refs=()):
+        run=self._run(run_id); run.status="completed"; self.service.store.put("workflow_run",run.run_id,run)
+        from .memory import SituationMemory
+        s=self.service.situations.get(run.situation_id) or self.service.store.get("situation",run.situation_id)
+        mem=SituationMemory(
+            memory_id=f"exp:{run.situation_id}:{run.run_id}",
+            situation_id=run.situation_id,
+            template_id=s.template_id,
+            objective=run.objective or s.objective,
+            outcome_refs=tuple(outcome_refs),
+            decisions=tuple(run.completed_stages),
+            workspace_id=s.workspace,
+        )
+        self.service.store.put("memory",mem.memory_id,mem)
+        return mem
 
     def resume(self,run_id,*,condition_satisfied):
         run=self._run(run_id)
