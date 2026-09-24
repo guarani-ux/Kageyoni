@@ -26,6 +26,8 @@ class Situation:
     artifacts: list[str] = field(default_factory=list)
     workflow_id: str | None = None
     status: str = "active"
+    origin: str = "catalog"
+    local_extensions: dict[str, Any] = field(default_factory=dict)
 
 @dataclass(frozen=True)
 class WorkflowStage:
