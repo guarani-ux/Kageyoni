@@ -1,9 +1,9 @@
 # Kageyoni v11 Independent Qualification Report
 **Authority**: Machine-Derived from `evidence/qualification/qualification.json`  
-**Candidate Working Branch**: `reality-grounding-audit`  
-**Candidate Commit**: `b54963a25e4a3efb3201c1f00483dc8c10f2344f`  
+**Candidate Working Branch**: `refactor/capability-compression`  
+**Candidate Commit**: `ac5ec3ff9ef32c5f44ca8e4a00254c76bb18a26f`  
 **Package Parity**: 100% Hash Match across 48 audited components; Clean Virtual Environment Installation Verified  
-**Date**: September 23, 2026  
+**Date**: September 24, 2026  
 
 ---
 
@@ -12,7 +12,7 @@ Based strictly on physical execution telemetry, database receipts, blind experim
 
 | Qualification Gate | Status | Evidence Citation |
 | :--- | :--- | :--- |
-| **Mechanical Inherited Regression** | **PASS** | 603 passing unit tests (0 failures, 0 errors, 0 skips) across all engine, situation, trust, and research compiler modules |
+| **Mechanical Inherited Regression** | **PASS** | 632 passing unit tests (0 failures, 0 errors, 0 skips) across all engine, situation, trust, research compiler, and capability compression modules |
 | **Mechanical Trust & Mediation** | **PASS** | `tests/test_v11_production_path_mediation.py` (6/6 pass); `tests/test_v11_frozen_trust_gate.py` |
 | **Situation Architecture (22 Slices)** | **PASS** | `tests/test_situation*.py` (34/34 pass); `tests/test_situation_connected_lifecycle.py` |
 | **Scar Saturation** | **PASS** | `tests/test_situation_r4_scar_saturation.py`; `evidence/audits/scar_inventory.json` (13/13 scars reprobed and closed with positive controls) |
@@ -32,9 +32,10 @@ $$\text{release\_eligible} = \mathbf{TRUE}$$
 ### 2. Built Release Distribution Artifacts
 Built and validated from qualified source:
 - **Wheel Package**: `dist/kageyoni_engine-11.0.0-py3-none-any.whl`
-  - SHA-256: `0283970d39becadb6aa570d2c2449a64832af127c2573da64bc02eaab48ea83c`
+  - SHA-256: `6d60dffa3215ad2ae020dff3fb616ab3071bbad15506f2f5209a1761ed107eb7`
 - **Source Distribution**: `dist/kageyoni_engine-11.0.0.tar.gz`
-  - SHA-256: `67b06d2cb8c9ad5edad51beae6b7e8e58e82e04768c77e40823af2ce89070ec7`
+  - SHA-256: `0ae29e44eb1dd006b667e13b5ef9bd2292dc6df31c87d36dcac9c38a72c7b54e`
+
 
 Clean-room verification confirmed:
 1. Wheel installs cleanly into a fresh virtual environment using `pip install`.

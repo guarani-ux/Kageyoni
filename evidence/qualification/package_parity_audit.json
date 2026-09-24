@@ -1,10 +1,10 @@
 {
   "title": "Kageyoni v11 Package / Source Parity Audit",
   "agent": "Agent I (Release Reproducer)",
-  "git_sha": "9163ff5d3316628114ee14467a7a192f0f02cfa2",
+  "git_sha": "ac5ec3ff9ef32c5f44ca8e4a00254c76bb18a26f",
   "timestamp": "2026-09-22T14:41:00Z",
   "wheel_file": "kageyoni_engine-11.0.0-py3-none-any.whl",
-  "wheel_sha256": "3293fa4822c63a0d49f30da3fb4d274dab96e667423fa0faa864d109198b6fb4",
+  "wheel_sha256": "6d60dffa3215ad2ae020dff3fb616ab3071bbad15506f2f5209a1761ed107eb7",
   "total_files_in_wheel": 120,
   "total_audited_targets": 48,
   "missing_files_count": 0,
