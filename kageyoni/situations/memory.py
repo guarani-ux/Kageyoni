@@ -99,7 +99,7 @@ def create_transfer_from_memory(
 def qualify_transfer(c: TransferCandidate, evidence_resolver=None, engine=None, target_workspace_checker=None):
     if not c.destination_evidence_refs:
         return TransferCandidate(**{**c.__dict__, "status": "untested"})
-    if evidence_resolver is None or any(not evidence_resolver(ref, c.destination_situation_id) for ref in c.destination_evidence_refs):
+    if evidence_resolver is None or any(not evidence_resolver(ref,c.destination_situation_id) for ref in c.destination_evidence_refs):
         return TransferCandidate(**{**c.__dict__, "status": "untested"})
 
     # Target workspace validation
