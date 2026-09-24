@@ -141,11 +141,7 @@ def qualify_transfer(c: TransferCandidate, evidence_resolver=None, engine=None, 
             if transfer_rec.get("status") == "blocked":
                 return TransferCandidate(**{**c.__dict__, "status": "blocked"})
         except Exception:
-            try:
-                row = engine.db.execute("SELECT status FROM method_transfers WHERE transfer_id=?", (c.candidate_id,)).fetchone()
-                if row and row["status"] == "blocked":
-                    return TransferCandidate(**{**c.__dict__, "status": "blocked"})
-            except Exception:
-                pass
+            pass
+
 
     return TransferCandidate(**{**c.__dict__, "status": "supported_in_destination"})

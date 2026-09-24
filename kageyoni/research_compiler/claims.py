@@ -315,3 +315,20 @@ class ClaimGraph:
                 or len(c.uncertainties) > 0
             )
         ]
+
+    def verify_no_laundering(self) -> bool:
+        """Audits the full graph to ensure no assumption or ungrounded proposition was laundered into factual truth."""
+        warranted = {
+            EpistemicStatus.SOURCE_SUPPLIED_FACT.value,
+            EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value,
+        }
+        for claim in self.claims.values():
+            if claim.epistemic_status.value in warranted:
+                for pid in claim.parent_claim_ids:
+                    parent = self.claims.get(pid)
+                    if parent and parent.epistemic_status.value in (
+                        EpistemicStatus.ASSUMPTION.value,
+                        EpistemicStatus.UNKNOWN.value,
+                    ):
+                        return False
+        return True

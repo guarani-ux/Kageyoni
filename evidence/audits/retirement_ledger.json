@@ -19,6 +19,30 @@
       "action": "ADAPTER_RETAINED",
       "survivor": "kageyoni/v11/runtime.py:ProtectedOperations",
       "rationale": "Adapter retained for backwards compatibility, strictly mediating situation lifecycle calls into canonical ProtectedOperations."
+    },
+    {
+      "component": "contracts/epistemic_ledger.py (in-memory laundering audit traversal)",
+      "action": "FOLDED_INTO_SURVIVOR",
+      "survivor": "kageyoni/research_compiler/claims.py:ClaimGraph.verify_no_laundering",
+      "rationale": "Graph-wide anti-laundering audit logic consolidated onto canonical ClaimGraph. EpistemicLedger.verify_no_laundering delegates directly."
+    },
+    {
+      "component": "kageyoni/agency_workflows.py (dead self.ledger instance)",
+      "action": "RETIRED",
+      "survivor": "kageyoni/research_compiler/claims.py",
+      "rationale": "Removed dead self.ledger state and unused epistemic imports in AgencyWorkflows."
+    },
+    {
+      "component": "kageyoni/situations/memory.py (qualify_transfer direct SQL bypass)",
+      "action": "RETIRED",
+      "survivor": "kageyoni/intelligence/transfer.py:Transfers",
+      "rationale": "Removed redundant SQL bypass on method_transfers; transfer status queries route through canonical Transfers service."
+    },
+    {
+      "component": "kageyoni/research_compiler/invalidation_engine.py (bare commit in _ensure_schema)",
+      "action": "REFACTORED",
+      "survivor": "kageyoni/persistence/unit_of_work.py:UnitOfWork",
+      "rationale": "Replaced bare self.db.commit() in constructor with UnitOfWork transaction custody."
     }
   ],
   "active_adapters": [

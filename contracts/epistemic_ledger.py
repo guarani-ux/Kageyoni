@@ -176,9 +176,5 @@ class EpistemicLedger:
 
     def verify_no_laundering(self) -> bool:
         """Audits the full graph to ensure no assumption or creative preference was promoted to factual truth."""
-        for s in self._statements.values():
-            for dep_id in s.dependencies:
-                dep = self._statements.get(dep_id)
-                if dep and dep.status in ("ASSUMPTION", "UNKNOWN") and s.status in ("SOURCE_SUPPLIED_FACT", "EVIDENCE_SUPPORTED_CLAIM"):
-                    return False
-        return True
+        return self.graph.verify_no_laundering()
+

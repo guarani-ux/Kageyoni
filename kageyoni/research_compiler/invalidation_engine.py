@@ -85,18 +85,20 @@ class InvalidationEngine:
     def _ensure_schema(self) -> None:
         if not self.db:
             return
-        self.db.execute("""
-            CREATE TABLE IF NOT EXISTS agency_claim_retractions (
-                retraction_id TEXT PRIMARY KEY,
-                root_claim_id TEXT NOT NULL,
-                reason TEXT NOT NULL,
-                impacted_claims_json TEXT NOT NULL,
-                impacted_packages_json TEXT NOT NULL,
-                impacted_projects_json TEXT NOT NULL,
-                retracted_at REAL NOT NULL
-            );
-        """)
-        self.db.commit()
+        from ..persistence.unit_of_work import UnitOfWork
+        with UnitOfWork(self.db):
+            self.db.execute("""
+                CREATE TABLE IF NOT EXISTS agency_claim_retractions (
+                    retraction_id TEXT PRIMARY KEY,
+                    root_claim_id TEXT NOT NULL,
+                    reason TEXT NOT NULL,
+                    impacted_claims_json TEXT NOT NULL,
+                    impacted_packages_json TEXT NOT NULL,
+                    impacted_projects_json TEXT NOT NULL,
+                    retracted_at REAL NOT NULL
+                );
+            """)
+
 
     def invalidate_claim_with_cascade(
         self,

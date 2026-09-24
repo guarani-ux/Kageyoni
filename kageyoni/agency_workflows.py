@@ -18,12 +18,10 @@ import uuid
 from typing import Any, Dict, List, Optional
 
 from contracts.production_gates import ProductionGatekeeper, GateStatus, GateResult
-from contracts.epistemic_ledger import EpistemicLedger, EpistemicStatus
 from kageyoni.research_compiler.claims import (
     ClaimGraph,
     ClaimNode,
     SourceRecord,
-    EpistemicStatus as ResearchEpistemicStatus,
 )
 from kageyoni.research_compiler.topic_modeler import TopicModeler, TopicModel
 from kageyoni.research_compiler.adversarial import AdversarialAuditor
@@ -48,8 +46,8 @@ class AgencyWorkflows:
     def __init__(self, engine):
         self.engine = engine
         self.db = engine.db
-        self.ledger = EpistemicLedger()
         self._ensure_schema()
+
 
     def _ensure_schema(self) -> None:
         """Initialize durable tables for media agency state."""

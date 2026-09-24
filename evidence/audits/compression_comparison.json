@@ -1,10 +1,10 @@
 {
   "contract": "CP-02: Compression Test Surface Verification",
-  "timestamp": 1790208124.1655424,
-  "total_suites": 5,
-  "passed_suites": 5,
+  "timestamp": 1790229761.506019,
+  "total_suites": 10,
+  "passed_suites": 10,
   "failed_suites": 0,
-  "total_duration": 234.391,
+  "total_duration": 127.644,
   "all_passed": true,
   "suites": [
     {
@@ -12,40 +12,80 @@
       "path": "tests/test_foundation.py",
       "status": "PASSED",
       "exit_code": 0,
-      "duration": 71.577,
-      "output_snippet": "Adds persistent node tables; retains the world and creates a recovery copy.\n.........................\n----------------------------------------------------------------------\nRan 25 tests in 70.993s\n\nOK"
+      "duration": 31.396,
+      "output_snippet": "Adds persistent node tables; retains the world and creates a recovery copy.\n.........................\n----------------------------------------------------------------------\nRan 25 tests in 31.187s\n\nOK"
     },
     {
       "name": "characters",
       "path": "tests/test_characters.py",
       "status": "PASSED",
       "exit_code": 0,
-      "duration": 37.548,
-      "output_snippet": "...............\n----------------------------------------------------------------------\nRan 15 tests in 36.860s\n\nOK"
+      "duration": 19.879,
+      "output_snippet": "...............\n----------------------------------------------------------------------\nRan 15 tests in 19.602s\n\nOK"
     },
     {
       "name": "decisions",
       "path": "tests/test_decisions.py",
       "status": "PASSED",
       "exit_code": 0,
-      "duration": 42.646,
-      "output_snippet": "...............\n----------------------------------------------------------------------\nRan 15 tests in 41.988s\n\nOK"
+      "duration": 21.229,
+      "output_snippet": "...............\n----------------------------------------------------------------------\nRan 15 tests in 20.956s\n\nOK"
     },
     {
       "name": "personality",
       "path": "tests/test_personality.py",
       "status": "PASSED",
       "exit_code": 0,
-      "duration": 57.179,
-      "output_snippet": "....................\n----------------------------------------------------------------------\nRan 20 tests in 56.508s\n\nOK"
+      "duration": 32.548,
+      "output_snippet": "....................\n----------------------------------------------------------------------\nRan 20 tests in 32.274s\n\nOK"
     },
     {
       "name": "writing",
       "path": "tests/test_writing.py",
       "status": "PASSED",
       "exit_code": 0,
-      "duration": 25.441,
-      "output_snippet": "............\n----------------------------------------------------------------------\nRan 12 tests in 24.945s\n\nOK"
+      "duration": 16.905,
+      "output_snippet": "............\n----------------------------------------------------------------------\nRan 12 tests in 16.611s\n\nOK"
+    },
+    {
+      "name": "situations",
+      "path": "tests/test_situation_r3_integration.py",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration": 2.446,
+      "output_snippet": "..............\n----------------------------------------------------------------------\nRan 14 tests in 2.225s\n\nOK"
+    },
+    {
+      "name": "semantic_integrity",
+      "path": "tests/test_g2_g3_semantic_integrity.py",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration": 0.221,
+      "output_snippet": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.001s\n\nOK"
+    },
+    {
+      "name": "treatment_generator",
+      "path": "tests/test_g4_treatment_generator.py",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration": 0.206,
+      "output_snippet": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK"
+    },
+    {
+      "name": "invalidation_cascade",
+      "path": "tests/test_g5_invalidation_cascade.py",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration": 0.217,
+      "output_snippet": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.006s\n\nOK"
+    },
+    {
+      "name": "v11_trust_gate",
+      "path": "tests/test_v11_frozen_trust_gate.py",
+      "status": "PASSED",
+      "exit_code": 0,
+      "duration": 2.597,
+      "output_snippet": "...............\n----------------------------------------------------------------------\nRan 15 tests in 2.332s\n\nOK"
     }
   ]
 }
