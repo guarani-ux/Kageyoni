@@ -6,6 +6,11 @@ from .context import ContextPackets
 from .frontier import FrontierManager
 from .enforcement import AssessmentLedger
 
+class AdaptiveBudgetExceededError(RuntimeError):
+    """Raised when an adaptive pass exceeds its bounded execution budget."""
+    pass
+
+
 class AdaptiveLoop:
     """Bounded adaptive control plane. A frontier can change route, never the parent contract.
 
@@ -13,6 +18,10 @@ class AdaptiveLoop:
     PREPARED, BLOCKED, ASSESSED, and COMMITTED states. Confers zero autonomous adaptation,
     online learning, or neural adjustment.
     """
+    MAX_STEPS = 10
+    MAX_RETRIES = 3
+    MAX_TIME_SECONDS = 300.0
+
     def __init__(self,engine):
         self.engine=engine; self.ops=ProtectedOperations(engine); self.contexts=ContextPackets(engine); self.frontiers=FrontierManager(engine); self.assessments=AssessmentLedger(engine)
     def begin(self,*,objective,requirement_version,scope,basis,included,unresolved=None,payload=None):
@@ -68,3 +77,51 @@ class AdaptiveLoop:
         state='ASSESSED' if disposition=='supported' else 'BLOCKED'
         op=self.ops.transition(operation_id,state,patch={'assessment_id':a['assessment_id'],'assessment_disposition':disposition})
         return {'operation':op,'assessment':a}
+
+    def record_adaptive_receipt(self, operation_id, *, evidence_ref, payload=None):
+        """Records a verifiable, immutable adaptive step receipt into v11_execution_receipts."""
+        import uuid
+        from ..engine import encoded, digest
+        rid = 'execution:' + uuid.uuid4().hex
+        body = {'operation_id': operation_id, 'evidence_type': 'adaptive-step', 'evidence_ref': evidence_ref, 'payload': dict(payload or {})}
+        with UnitOfWork(self.engine.db):
+            self.engine.db.execute(
+                'INSERT INTO v11_execution_receipts VALUES(?,?,?,?,?,?,CURRENT_TIMESTAMP)',
+                (rid, operation_id, 'adaptive-step', evidence_ref, encoded(body['payload']), digest(body))
+            )
+        return {'receipt_id': rid, 'operation_id': operation_id, 'evidence_type': 'adaptive-step', 'evidence_ref': evidence_ref, 'payload': body['payload'], 'source_hash': digest(body)}
+
+    def execute_bounded_pass(self, operation_id, step_callbacks, *, max_steps=MAX_STEPS, max_retries=MAX_RETRIES):
+        """
+        Executes a bounded adaptation sequence without background daemons or infinite loops.
+        Enforces step and retry budget ceilings, and emits verifiable execution receipts.
+        """
+        op = self.ops.read(operation_id)
+        executed_receipts = []
+        retries = 0
+
+        for step_idx, step_fn in enumerate(step_callbacks):
+            if step_idx >= max_steps:
+                raise AdaptiveBudgetExceededError(
+                    f"ADAPTIVE_BUDGET_EXCEEDED: Step budget ceiling of {max_steps} reached without completion."
+                )
+
+            success = False
+            while not success:
+                try:
+                    result = step_fn(op)
+                    receipt = self.record_adaptive_receipt(
+                        operation_id,
+                        evidence_ref=f"adaptive:step:{step_idx}",
+                        payload={'step_index': step_idx, 'result': result}
+                    )
+                    executed_receipts.append(receipt)
+                    success = True
+                except Exception as e:
+                    retries += 1
+                    if retries > max_retries:
+                        raise AdaptiveBudgetExceededError(
+                            f"ADAPTIVE_BUDGET_EXCEEDED: Retry budget ceiling of {max_retries} exceeded: {e}"
+                        )
+
+        return {'operation_id': operation_id, 'steps_executed': len(executed_receipts), 'receipts': executed_receipts}
