@@ -22,7 +22,9 @@ from kageyoni.research_compiler.claims import (
     ClaimGraph,
     ClaimNode,
     SourceRecord,
+    EpistemicStatus,
 )
+
 from kageyoni.research_compiler.topic_modeler import TopicModeler, TopicModel
 from kageyoni.research_compiler.adversarial import AdversarialAuditor
 from kageyoni.research_compiler.treatment_generator import (
@@ -613,7 +615,7 @@ class AgencyWorkflows:
             clm = ClaimNode(
                 claim_id=clm_dict["claim_id"],
                 statement=clm_dict["statement"],
-                epistemic_status=ResearchEpistemicStatus(clm_dict["epistemic_status"]),
+                epistemic_status=EpistemicStatus(clm_dict["epistemic_status"]),
                 provenance_sources=clm_dict.get("provenance_sources", []),
                 confidence_level=clm_dict.get("confidence_level", "UNSPECIFIED"),
                 falsification_condition=clm_dict.get("falsification_condition", ""),

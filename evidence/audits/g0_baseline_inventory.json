@@ -1,13 +1,13 @@
 {
   "gate": "G0",
-  "candidate_sha": "2ead5b59bf17819bcbc51d98881d9345cb77f2b9",
+  "candidate_sha": "ebf4d8a18bb3c16e28dddc7f8bc4c9076606e017",
   "branches": [
-    "* reality-grounding-audit",
-    "v11-situation-build",
+    "* refactor/capability-compression",
     "remotes/origin/HEAD -> origin/main",
     "remotes/origin/import/v11-foundation-exact",
     "remotes/origin/main",
     "remotes/origin/reality-grounding-audit",
+    "remotes/origin/refactor/capability-compression",
     "remotes/origin/v11-scar-saturation",
     "remotes/origin/v11-situation-build"
   ],
@@ -22,12 +22,12 @@
     "R7",
     "R8"
   ],
-  "total_tests_discovered": 569,
-  "tests_passed": 569,
+  "total_tests_discovered": 632,
+  "tests_passed": 631,
   "tests_failed": 0,
-  "tests_errored": 0,
+  "tests_errored": 1,
   "tests_skipped": 0,
-  "execution_time_seconds": 1354.752,
+  "execution_time_seconds": 801.548,
   "open_deficits": [
     {
       "code": "G1_DEFICIT",
