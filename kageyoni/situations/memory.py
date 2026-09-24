@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass
+import json
 from typing import Any
 
 @dataclass(frozen=True)
@@ -16,7 +17,27 @@ class SituationMemoryStore:
     def retrieve(self,*,template_id:str|None=None,dependency_keys:tuple[str,...]=(),limit:int=10,workspace_id:str|None=None,revoked_methods:set[str]|None=None):
         keys=set(dependency_keys); scored=[]
         revoked = revoked_methods or set()
-        for m in self.store.values("memory"):
+        candidates = None
+        if hasattr(self.store, "conn"):
+            try:
+                query = "SELECT payload_json FROM situation_records WHERE kind='memory'"
+                params = []
+                query += " AND (json_extract(payload_json, '$.revoked') IS NULL OR json_extract(payload_json, '$.revoked') = 0)"
+                if workspace_id is not None:
+                    query += " AND (json_extract(payload_json, '$.workspace_id') = ? OR (? = 'default' AND json_extract(payload_json, '$.workspace_id') IS NULL))"
+                    params.extend([workspace_id, workspace_id])
+                query += " ORDER BY record_key"
+                rows = self.store.conn.execute(query, params).fetchall()
+                decoder = getattr(self.store, "decoders", {}).get("memory")
+                raw_vals = [json.loads(r[0]) for r in rows]
+                candidates = [decoder(v) for v in raw_vals] if decoder else raw_vals
+            except Exception:
+                candidates = None
+
+        if candidates is None:
+            candidates = self.store.values("memory")
+
+        for m in candidates:
             if getattr(m, "revoked", False): continue
             if workspace_id is not None and getattr(m, "workspace_id", "default") != workspace_id: continue
             if any(r in revoked for r in getattr(m, "method_refs", ())): continue
@@ -35,9 +56,16 @@ def qualify_transfer(c:TransferCandidate, evidence_resolver=None, engine=None):
         return TransferCandidate(**{**c.__dict__,"status":"untested"})
     if engine is not None:
         try:
-            row = engine.db.execute("SELECT status FROM method_transfers WHERE transfer_id=?", (c.candidate_id,)).fetchone()
-            if row and row["status"] == "blocked":
+            from ..intelligence.transfer import Transfers
+            t = Transfers(engine)
+            transfer_rec = t.read(c.candidate_id)
+            if transfer_rec.get("status") == "blocked":
                 return TransferCandidate(**{**c.__dict__,"status":"blocked"})
         except Exception:
-            pass
+            try:
+                row = engine.db.execute("SELECT status FROM method_transfers WHERE transfer_id=?", (c.candidate_id,)).fetchone()
+                if row and row["status"] == "blocked":
+                    return TransferCandidate(**{**c.__dict__,"status":"blocked"})
+            except Exception:
+                pass
     return TransferCandidate(**{**c.__dict__,"status":"supported_in_destination"})
