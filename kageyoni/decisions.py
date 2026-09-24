@@ -6,6 +6,7 @@ import secrets
 from .engine import Rejected, require, digest, encoded
 from .characters import read as character_read
 from .resources import schema_path
+from .persistence.unit_of_work import UnitOfWork
 
 
 def install(e):
@@ -269,10 +270,9 @@ def propose(e, branch, spec):
                 e._coordinated_decision=digest(c)
                 try: e.apply(c,preview=True)
                 finally: e._coordinated_decision=None
-        e.db.execute('BEGIN IMMEDIATE')
-        require(fingerprint(e,branch)==state_hash,'state changed during proposal validation')
-        e.db.execute('INSERT INTO decision_proposals VALUES(?,?,?,?,?,?,NULL)',(branch,spec['id'],digest(spec),state_hash,encoded(spec),encoded(assessment)))
-        e.db.commit()
+        with UnitOfWork(e.db):
+            require(fingerprint(e,branch)==state_hash,'state changed during proposal validation')
+            e.db.execute('INSERT INTO decision_proposals VALUES(?,?,?,?,?,?,NULL)',(branch,spec['id'],digest(spec),state_hash,encoded(spec),encoded(assessment)))
         return inspect(e,branch,spec['id'])
     except Exception:
         e.db.rollback(); raise
@@ -281,28 +281,26 @@ def propose(e, branch, spec):
 def commit(e, branch, proposal_id, actor, accept, narrative):
     require(accept is True,'explicit commitment required')
     require(isinstance(narrative,str) and narrative.strip(),'narrative required')
-    e.db.execute('BEGIN IMMEDIATE')
-    try:
+    with UnitOfWork(e.db):
         row=e.db.execute('SELECT * FROM decision_proposals WHERE branch=? AND id=?',(branch,proposal_id)).fetchone()
         require(row is not None,'proposal unavailable')
         spec=json.loads(row['spec_json']); c=json.loads(row['compiled_json'])
         require(actor==spec['actor'],'decision actor mismatch')
         previous=e.db.execute('SELECT receipt_json FROM events WHERE branch=? AND request_id=?',(branch,'decision:'+proposal_id)).fetchone()
         if previous:
-            e.db.rollback(); return json.loads(previous[0])|{'replayed':True}
+            return json.loads(previous[0])|{'replayed':True}
         require(c['status']=='available','decision requires changed conditions or judgment')
         require(fingerprint(e,branch,legacy='personality_interface' not in c,writing_legacy='writing_interface' not in c)==row['state_hash'],'stale decision; reassess with a new ID')
         result=row['roll']
         if spec['uncertainty']['mode']=='d20' and result is None:
             result=secrets.randbelow(20)+1
             e.db.execute('UPDATE decision_proposals SET roll=? WHERE branch=? AND id=?',(result,branch,proposal_id))
-        # Randomness is durable before attempting story commit. An interrupted
-        # apply recovers this exact result; no result is exposed by inspect.
-        e.db.commit()
-        e.db.execute('BEGIN IMMEDIATE')
+    # Randomness is durable before attempting story commit. An interrupted
+    # apply recovers this exact result; no result is exposed by inspect.
+    with UnitOfWork(e.db):
         previous=e.db.execute('SELECT receipt_json FROM events WHERE branch=? AND request_id=?',(branch,'decision:'+proposal_id)).fetchone()
         if previous:
-            e.db.rollback(); return json.loads(previous[0])|{'replayed':True}
+            return json.loads(previous[0])|{'replayed':True}
         require(fingerprint(e,branch,legacy='personality_interface' not in c,writing_legacy='writing_interface' not in c)==row['state_hash'],'stale decision; saved roll retained')
         success=result is None or result+c['modifier']>=spec['uncertainty']['difficulty']
         command=copy.deepcopy(c['commands']['success' if success else 'failure'])
@@ -311,11 +309,8 @@ def commit(e, branch, proposal_id, actor, accept, narrative):
         e._coordinated_decision=digest(command)
         try:
             receipt=e.apply(command)
-            e.db.commit()  # This workflow owns the transaction opened above.
             return receipt
         finally: e._coordinated_decision=None
-    except Exception:
-        e.db.rollback(); raise
 
 
 def due_consequences(e, branch):

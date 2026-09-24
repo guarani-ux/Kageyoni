@@ -86,6 +86,11 @@ class Engine:
             self.db.close()
             raise
 
+    def transaction(self):
+        """Context manager providing an atomic UnitOfWork transaction boundary."""
+        from .persistence.unit_of_work import UnitOfWork
+        return UnitOfWork(self.db)
+
     def _open_or_upgrade(self) -> None:
         exists = self.db.execute(
             "SELECT 1 FROM sqlite_master WHERE name='schema_version'"
@@ -1584,8 +1589,7 @@ class Engine:
 
     def fork(self, parent: str, child: str, expected_revision: int) -> dict:
         require(isinstance(child, str) and child, "branch name required")
-        self.db.execute("BEGIN IMMEDIATE")
-        try:
+        with self.transaction():
             require(self.branch(parent)["revision"] == expected_revision, "stale fork revision")
             self.db.execute("INSERT INTO branches VALUES(?,?,?,0)", (child, parent, expected_revision))
             for r in self.state(parent):
@@ -1657,11 +1661,7 @@ class Engine:
                 self.db.execute('INSERT INTO decision_proposals VALUES(?,?,?,?,?,?,?)',(child,row['id'],row['spec_hash'],row['state_hash'],row['spec_json'],row['compiled_json'],row['roll']))
             state = self._snapshot_payload(child)
             self.db.execute("INSERT INTO snapshots VALUES(?,?,?,?,?)", ("fork:"+child, child, 0, encoded(state), digest(state)))
-            self.db.commit()
             return {"branch": child, "parent": parent, "fork_revision": expected_revision, "revision": 0}
-        except Exception:
-            self.db.rollback()
-            raise
 
     def _snapshot_payload(self, branch: str) -> dict:
         return {
