@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "fixture_manifest": "C:\\Users\\flowe\\.gemini\\antigravity\\scratch\\Kageyoni\\experiments\\r5\\fixtures\\FIXTURE_MANIFEST.json",
+  "fixture_manifest": "C:\\Kageyoni\\experiments\\r5\\fixtures\\FIXTURE_MANIFEST.json",
   "total_tasks_evaluated": 4,
   "total_observations": 20,
   "conditions_evaluated": [

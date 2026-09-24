@@ -1,6 +1,6 @@
 {
   "gate": "G0",
-  "candidate_sha": "ebf4d8a18bb3c16e28dddc7f8bc4c9076606e017",
+  "candidate_sha": "95fbea6eca232fd6ce2fb3afb5ceac4363450c5b",
   "branches": [
     "* refactor/capability-compression",
     "remotes/origin/HEAD -> origin/main",
@@ -23,11 +23,11 @@
     "R8"
   ],
   "total_tests_discovered": 632,
-  "tests_passed": 631,
+  "tests_passed": 632,
   "tests_failed": 0,
-  "tests_errored": 1,
+  "tests_errored": 0,
   "tests_skipped": 0,
-  "execution_time_seconds": 801.548,
+  "execution_time_seconds": 785.906,
   "open_deficits": [
     {
       "code": "G1_DEFICIT",
