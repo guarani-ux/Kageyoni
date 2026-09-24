@@ -13,10 +13,9 @@ FAMILY_FIXTURES={
 def connected_family_check():
  st=SituationStudio(test_mode=True); st.service.register_workflow(SCAR_WORKFLOW); out={}
  for family,(objective,data) in FAMILY_FIXTURES.items():
-  s=st.new(family,objective,**data)
-  recommended=st.service.templates[family].recommended_workflows[0]
-  st.service.bind_workflow(s.situation_id,recommended)
-  out[family]={"unknowns":list(s.unknowns),"contradictions":list(getattr(s,"contradictions",[])),"workflow":recommended,"workspace":s.workspace}
+  s=st.create_and_bind(family,objective,**data)
+  info=st.summary(s.situation_id)
+  out[family]={"unknowns":info["unknowns"],"contradictions":info["contradictions"],"workflow":info["workflow_id"],"workspace":info["workspace"]}
  return out
 
 def incomplete_genesis_check():
