@@ -152,27 +152,47 @@ class ClaimGraph:
         """
         Forward Contradiction Propagation:
         Recursively invalidates the target claim and all downstream dependent child claims.
+        Guarantees cycle detection and safe propagation without infinite loops.
         Returns the list of all invalidated claim IDs.
         """
         if claim_id not in self.claims:
             return []
 
         invalidated_ids: List[str] = []
+        visited: Set[str] = set()
         stack = [(claim_id, reason)]
 
         while stack:
             current_id, current_reason = stack.pop()
-            node = self.claims[current_id]
-            if not node.is_invalidated:
+            if current_id in visited:
+                continue
+            visited.add(current_id)
+
+            if current_id in self.claims:
+                node = self.claims[current_id]
                 node.is_invalidated = True
                 node.invalidation_reason = current_reason
                 invalidated_ids.append(current_id)
 
                 # Propagate to all dependent child claims
                 for cid in node.child_claim_ids:
-                    stack.append((cid, f"Upstream dependency '{current_id}' invalidated: {current_reason}"))
+                    if cid not in visited and cid in self.claims:
+                        stack.append((cid, f"Upstream dependency '{current_id}' invalidated: {current_reason}"))
 
         return invalidated_ids
+
+    def invalidate_claim_with_cascade(
+        self,
+        claim_id: str,
+        reason: str,
+        db: Optional[Any] = None,
+    ) -> Any:
+        """
+        Consolidates graph invalidation with downstream store cascading and UnitOfWork protection.
+        """
+        from .invalidation_engine import InvalidationEngine
+        engine = InvalidationEngine(db)
+        return engine.invalidate_claim_with_cascade(self, claim_id, reason)
 
     def trace_backward_lineage(self, claim_id: str) -> Dict[str, Any]:
         """

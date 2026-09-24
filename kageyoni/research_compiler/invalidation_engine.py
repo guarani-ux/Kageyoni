@@ -29,6 +29,7 @@ class InvalidationReport:
     impacted_packages: List[str] = field(default_factory=list)
     impacted_projects: List[str] = field(default_factory=list)
     impacted_sections: List[str] = field(default_factory=list)
+    impacted_situations: List[str] = field(default_factory=list)
     cycle_detected: bool = False
     timestamp: float = field(default_factory=time.time)
 
@@ -40,6 +41,7 @@ class InvalidationReport:
             "impacted_packages": self.impacted_packages,
             "impacted_projects": self.impacted_projects,
             "impacted_sections": self.impacted_sections,
+            "impacted_situations": self.impacted_situations,
             "cycle_detected": self.cycle_detected,
             "timestamp": self.timestamp,
         }
@@ -148,9 +150,10 @@ class InvalidationEngine:
             all_affected_claim_ids = set(invalidated_ids)
 
             with UnitOfWork(self.db):
-                # Check agency_research_packages
+                cur = self.db.cursor()
+
+                # 1. Check agency_research_packages
                 try:
-                    cur = self.db.cursor()
                     cur.execute("SELECT package_id, topic_model_json FROM agency_research_packages")
                     rows = cur.fetchall()
                     for row in rows:
@@ -159,15 +162,18 @@ class InvalidationEngine:
                         refs = _extract_references(model_str)
                         if refs & all_affected_claim_ids:
                             report.impacted_packages.append(pkg_id)
+                            try:
+                                cur.execute("UPDATE agency_research_packages SET is_falsified = 1 WHERE package_id = ?", (pkg_id,))
+                            except Exception:
+                                pass
                 except Exception:
                     pass
 
-                # Check agency_projects
+                # 2. Check agency_projects
+                impacted_pkgs_set = set(report.impacted_packages)
                 try:
-                    cur = self.db.cursor()
                     cur.execute("SELECT project_id, metadata_json FROM agency_projects")
                     prows = cur.fetchall()
-                    impacted_pkgs_set = set(report.impacted_packages)
                     for prow in prows:
                         proj_id = prow[0]
                         meta_str = prow[1] or ""
@@ -182,7 +188,42 @@ class InvalidationEngine:
                 except Exception:
                     pass
 
-                # Record Retraction in Append-Only Audit Table
+                # 3. Check agency_section_records
+                impacted_projs_set = set(report.impacted_projects)
+                try:
+                    cur.execute("SELECT record_id, project_id, spoken_audio, visual_proof FROM agency_section_records")
+                    srows = cur.fetchall()
+                    for srow in srows:
+                        rec_id, proj_id, spoken, visual = srow
+                        if proj_id in impacted_projs_set or any(cid in (spoken or "") or cid in (visual or "") for cid in all_affected_claim_ids):
+                            report.impacted_sections.append(rec_id)
+                except Exception:
+                    pass
+
+                # 4. Check situation_records
+                try:
+                    cur.execute("SELECT record_key, payload_json FROM situation_records WHERE kind='situation'")
+                    sit_rows = cur.fetchall()
+                    for sit_row in sit_rows:
+                        s_key = sit_row[0]
+                        s_payload_str = sit_row[1]
+                        refs = _extract_references(s_payload_str)
+                        if refs & all_affected_claim_ids:
+                            report.impacted_situations.append(s_key)
+                            try:
+                                s_data = json.loads(s_payload_str)
+                                s_data["status"] = "invalidated"
+                                s_data.setdefault("contradictions", {})[root_claim_id] = [reason]
+                                cur.execute(
+                                    "UPDATE situation_records SET payload_json=? WHERE kind='situation' AND record_key=?",
+                                    (json.dumps(s_data, sort_keys=True), s_key)
+                                )
+                            except Exception:
+                                pass
+                except Exception:
+                    pass
+
+                # 5. Record Retraction in Append-Only Audit Table
                 retraction_id = f"retract_{uuid.uuid4().hex[:12]}"
                 self.db.execute(
                     """

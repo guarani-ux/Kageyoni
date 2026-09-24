@@ -37,6 +37,7 @@ from kageyoni.research_compiler.package_compiler import (
     ScriptReadyPackage,
     AudienceModel,
 )
+from kageyoni.persistence.unit_of_work import UnitOfWork
 
 
 class AgencyWorkflows:
@@ -625,27 +626,28 @@ class AgencyWorkflows:
             )
             graph.add_claim(clm)
 
-        # Invalidate claim
-        affected = graph.invalidate_claim(invalidated_claim_id, reason)
-        falsification_note = f"CONTRADICTION_PROPAGATED: Claim '{invalidated_claim_id}' and {len(affected)-1} dependent nodes invalidated: {reason}"
-        pkg_data["is_falsified"] = True
-        pkg_data["falsification_notes"].append(falsification_note)
-        pkg_data["evidence_map"]["claims"] = [c.to_dict() for c in graph.claims.values()]
-        pkg_data["evidence_map"]["uncertain_claims_count"] = len(graph.get_uncertain_claims())
+        # Invalidate claim under atomic UnitOfWork
+        with UnitOfWork(self.db):
+            affected = graph.invalidate_claim(invalidated_claim_id, reason)
+            falsification_note = f"CONTRADICTION_PROPAGATED: Claim '{invalidated_claim_id}' and {len(affected)-1} dependent nodes invalidated: {reason}"
+            pkg_data["is_falsified"] = True
+            pkg_data["falsification_notes"].append(falsification_note)
+            pkg_data["evidence_map"]["claims"] = [c.to_dict() for c in graph.claims.values()]
+            pkg_data["evidence_map"]["uncertain_claims_count"] = len(graph.get_uncertain_claims())
 
-        # Update SQLite record
-        self.db.execute(
-            """
-            UPDATE agency_research_packages
-            SET evidence_map_json = ?, is_falsified = 1, falsification_notes_json = ?
-            WHERE package_id = ?
-            """,
-            (
-                json.dumps(pkg_data["evidence_map"]),
-                json.dumps(pkg_data["falsification_notes"]),
-                package_id,
-            ),
-        )
+            # Update SQLite record
+            self.db.execute(
+                """
+                UPDATE agency_research_packages
+                SET evidence_map_json = ?, is_falsified = 1, falsification_notes_json = ?
+                WHERE package_id = ?
+                """,
+                (
+                    json.dumps(pkg_data["evidence_map"]),
+                    json.dumps(pkg_data["falsification_notes"]),
+                    package_id,
+                ),
+            )
 
         return {
             "package_id": package_id,
