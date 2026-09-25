@@ -32,11 +32,40 @@ class EpistemicCategory(str, Enum):
 
 
 @dataclass
+class StructuredPredicate:
+    """Predicate evaluating whether world state satisfies a prerequisite."""
+    target_id: Optional[str] = None
+    domain: Optional[str] = None
+    field: str = "condition"
+    expected_value: Any = None
+    operator: str = "=="  # "==", "!=", "in", "active"
+
+    def is_satisfied_by(self, records: list[dict[str, Any]]) -> bool:
+        for r in records:
+            if self.target_id and r.get("id") != self.target_id:
+                continue
+            if self.domain and r.get("domain") != self.domain:
+                continue
+            data = r.get("data", r)
+            val = data.get(self.field)
+            if self.operator == "==" and val == self.expected_value:
+                return True
+            if self.operator == "!=" and val != self.expected_value:
+                return True
+            if self.operator == "in" and isinstance(self.expected_value, (list, set, tuple)) and val in self.expected_value:
+                return True
+            if self.operator == "active" and val in ("active", "applied_active", "operational", "unlocked", "open"):
+                return True
+        return False
+
+
+@dataclass
 class DynamicConstraint:
     """An engine rejection that can become obsolete when prerequisite world state changes."""
     message: str
     rejection_class: str
     prerequisite_needed: Optional[str] = None
+    required_predicate: Optional[StructuredPredicate] = None
     is_obsolete: bool = False
     obsoleted_by_event: Optional[str] = None
 
@@ -116,6 +145,7 @@ class EpistemicFirewall:
         message: str,
         rejection_class: str,
         prerequisite_hint: Optional[str] = None,
+        details: Optional[dict[str, Any]] = None,
     ) -> DynamicConstraint | None:
         """
         Metabolize an engine rejection.
@@ -123,10 +153,23 @@ class EpistemicFirewall:
         - If HARD_INVARIANT_VIOLATION: store as Hard Invariant and immutable scar.
         """
         if rejection_class in ("PREREQUISITE_MISSING", "TEMPORARY_STATE_BLOCK"):
+            predicate = None
+            if details:
+                target_id = details.get("required_record") or details.get("target_id")
+                field = details.get("field", "condition")
+                expected = details.get("expected") or details.get("required_equals")
+                if target_id or expected:
+                    predicate = StructuredPredicate(
+                        target_id=target_id,
+                        field=field,
+                        expected_value=expected,
+                        operator="==" if expected is not None else "active",
+                    )
             dc = DynamicConstraint(
                 message=message,
                 rejection_class=rejection_class,
                 prerequisite_needed=prerequisite_hint or message,
+                required_predicate=predicate,
             )
             self.dynamic_constraints.append(dc)
             self.entries.append(EpistemicEntry(
@@ -147,27 +190,42 @@ class EpistemicFirewall:
             ))
             return None
 
-    def reconcile_world_state(self, newly_discovered_items: list[dict[str, Any]], granted_permissions: list[str]):
+    def reconcile_world_state(
+        self,
+        newly_discovered_items: Optional[list[dict[str, Any]]] = None,
+        granted_permissions: Optional[list[str]] = None,
+        observations: Optional[list[dict[str, Any]]] = None,
+    ):
         """
-        Check if any active DynamicConstraints are obsoleted by new inventory or granted permissions.
-        Requirement 7: Do NOT permanently seal dynamic constraints that might change when world state changes.
+        Check if any active DynamicConstraints are obsoleted by new inventory, world state, or permissions.
+        Evaluates structured predicates without scenario-specific lexical matching.
         """
+        records = list(observations or []) + list(newly_discovered_items or [])
+        granted = set(granted_permissions or [])
+
         for dc in self.dynamic_constraints:
             if dc.is_obsolete:
                 continue
-            prereq = (dc.prerequisite_needed or "").lower()
 
-            # Check if sterilization or decontamination prerequisite is satisfied
-            if "steriliz" in prereq or "quarantine" in prereq:
-                applied = any(item.get("condition") == "applied_active" for item in newly_discovered_items)
-                if applied:
-                    dc.mark_obsolete("Sterilization decontaminant applied and active")
+            # 1. Structured Predicate evaluation against physical observations
+            if dc.required_predicate and dc.required_predicate.is_satisfied_by(records):
+                dc.mark_obsolete(f"Predicate satisfied: {dc.required_predicate.target_id}.{dc.required_predicate.field}=={dc.required_predicate.expected_value}")
+                continue
 
-            # Check if authorization prerequisite is satisfied
-            if "authoriz" in prereq or "certif" in prereq or "permission" in prereq:
-                has_permission = bool(granted_permissions)
-                if has_permission:
-                    dc.mark_obsolete(f"Granted authorization by NPC: {granted_permissions[0]}")
+            # 2. Check if granted permissions satisfy authorization requirements
+            if granted and dc.required_predicate and dc.required_predicate.target_id in granted:
+                dc.mark_obsolete(f"Granted authorization by: {dc.required_predicate.target_id}")
+                continue
+
+            # 3. Fallback: if any observed record changed state to active/applied_active/operational/unlocked
+            for r in records:
+                data = r.get("data", r)
+                cond = str(data.get("condition", ""))
+                rid = r.get("id", "")
+                if cond in ("applied_active", "operational", "unlocked", "open", "active"):
+                    if rid and (rid in dc.message or (dc.prerequisite_needed and rid in dc.prerequisite_needed)):
+                        dc.mark_obsolete(f"Prerequisite state transition observed: {rid}.condition='{cond}'")
+                        break
 
     def get_active_constraints(self) -> list[str]:
         """Return list of active, non-obsolete constraints."""

@@ -24,6 +24,7 @@ if str(REPO_ROOT) not in sys.path:
 from benchmarks.collapsing_city.scenario import init_collapsing_city_world
 from benchmarks.collapsing_city.agents import LeviSimAgent, GenericAgent, AblatedAgent
 from benchmarks.collapsing_city.scoring import BenchmarkScores
+from benchmarks.collapsing_city.evaluator import CollapsingCityEvaluator
 from benchmarks.collapsing_city.transfer_scenario import metabolize_scenario_1_history, run_scenario_2_transfer
 
 
@@ -66,10 +67,19 @@ def run_benchmark_for_condition(condition: str, base_db_dir: Path) -> BenchmarkS
         # PHASE 8 — TIME PRESSURE & BOUNDED EXECUTION (Trap 1 Target)
         agent.decide_phase_8_time_pressure(scores)
 
-        # PHASE 10 — TRANSFER SCENARIO 2
-        scores.structural_transfer = run_scenario_2_transfer(condition)
+        # INDEPENDENT EVALUATOR DERIVES ALL 14 DIMENSIONS & TRAP METRICS (Phase 9)
+        evaluator = CollapsingCityEvaluator(engine)
+        evaluated_scores = evaluator.evaluate(
+            agent_id=f"agent-{condition}",
+            condition=condition,
+            event_hashes=scores.event_hashes,
+        )
+        evaluated_scores.observations = list(scores.observations)
 
-        return scores
+        # PHASE 10 — TRANSFER SCENARIO 2
+        evaluated_scores.structural_transfer = run_scenario_2_transfer(condition)
+
+        return evaluated_scores
     finally:
         engine.close()
 

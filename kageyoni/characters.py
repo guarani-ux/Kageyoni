@@ -175,3 +175,90 @@ def active(engine, branch, data, viewer=None):
         tick = clock['data']['tick']
         return (data.get('valid_from') is None or tick >= data['valid_from']) and (data.get('valid_until') is None or tick < data['valid_until'])
     return data.get('valid_from') is None and data.get('valid_until') is None
+
+
+def resolve_interaction(engine, branch, character_id, initiator_id, proposal):
+    """
+    Sovereign NPC decision resolution.
+    Evaluates an external proposal or dialogue action against the NPC's authoritative
+    character aspects (boundaries, drives, commitments), knowledge, and relationships.
+    """
+    view = read(engine, branch, character_id, viewer=initiator_id)
+    character = view['character']
+    linked = view['linked_records']
+
+    aspects = [r for r in linked if r['domain'] == 'character_aspect' and active(engine, branch, r['data'], initiator_id)]
+    boundaries = [a for a in aspects if a['data'].get('kind') == 'boundary']
+    drives = [a for a in aspects if a['data'].get('kind') == 'drive']
+    principles = [a for a in aspects if a['data'].get('kind') == 'principle']
+
+    if isinstance(proposal, str):
+        proposal = {"statement": proposal, "dialogue_act": "inquire"}
+
+    stmt = proposal.get("statement", "").lower()
+    act = proposal.get("dialogue_act", "inquire")
+    context_items = proposal.get("context_items", [])
+
+    # 1. Evaluate boundaries (hard non-negotiables)
+    for b in boundaries:
+        b_stmt = b['data'].get('statement', '').lower()
+        if any(k in b_stmt for k in ["reject", "prohibit", "unauthorized", "uncertified", "unsterilized", "ward", "boundary"]):
+            # Check if attempting force / breach without authorization
+            if any(k in stmt or k in act for k in ["force", "override", "demand", "breach"]):
+                return {
+                    "status": "refusal",
+                    "speaker": character_id,
+                    "response": f"{character['data'].get('name', character_id)} refuses: Procedural boundary triggered ('{b['data'].get('statement')}').",
+                    "boundary_triggered": b['data'].get('statement', b['id']),
+                    "boundary_statement": b['data'].get('statement'),
+                    "boundary_id": b['id'],
+                    "granted_permission": False,
+                }
+            # Check if prerequisite condition is met in perceived records or context items
+            if act not in ("negotiate_alignment", "propose_cooperation", "offer_assistance"):
+                records = engine.context(branch, viewer=character_id).get("records", [])
+                cond_satisfied = False
+                if "unsterilized" in b_stmt or "steriliz" in b_stmt or "quarantine" in b_stmt:
+                    cond_satisfied = any(
+                        r["domain"] == "item" and r["data"].get("condition") in ("applied_active", "operational", "sterilized")
+                        for r in records
+                    ) or any("steriliz" in str(x).lower() for x in context_items)
+                elif "unauthorized" in b_stmt or "uncertified" in b_stmt:
+                    cond_satisfied = any(k in stmt for k in ["permit", "authorize", "verify", "exchange", "credential"])
+
+                if not cond_satisfied:
+                    return {
+                        "status": "conditional",
+                        "speaker": character_id,
+                        "response": f"{character['data'].get('name', character_id)} conditionally halts access: Boundary requires '{b['data'].get('statement')}'.",
+                        "boundary_triggered": b['data'].get('statement', b['id']),
+                        "boundary_statement": b['data'].get('statement'),
+                        "boundary_id": b['id'],
+                        "granted_permission": False,
+                        "prerequisite_needed": b['data'].get('statement'),
+                    }
+
+    # 2. Evaluate drives & principles (alignment)
+    aligned_aspect = None
+    for d in drives + principles:
+        d_stmt = d['data'].get('statement', '').lower()
+        words = [w for w in d_stmt.replace('.', ' ').split() if len(w) > 4]
+        if any(w in stmt for w in words) or act in ("negotiate_alignment", "propose_cooperation", "offer_assistance"):
+            aligned_aspect = d
+            break
+
+    if aligned_aspect:
+        return {
+            "status": "agreement",
+            "speaker": character_id,
+            "response": f"{character['data'].get('name', character_id)} agrees: Proposal aligns with active drive ('{aligned_aspect['data'].get('statement')}').",
+            "aligned_drive": aligned_aspect['data'].get('statement'),
+            "granted_permission": True,
+        }
+
+    return {
+        "status": "neutral",
+        "speaker": character_id,
+        "response": f"{character['data'].get('name', character_id)} listens carefully: State purpose and demonstrate authorization.",
+        "granted_permission": False,
+    }

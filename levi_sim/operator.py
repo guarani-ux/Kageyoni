@@ -20,10 +20,34 @@ from levi_sim.cognition import LeviCognitiveModel
 from levi_sim.compiler import IntentContract
 
 
+class TypedStatus(str):
+    """
+    Typed return state for Levi Sim operator execution.
+    Supports SATISFIED, FAILED, BLOCKED, UNRESOLVED, REQUIRES_USER_JUDGMENT,
+    while maintaining equality with legacy COMPLETED strings for compatibility.
+    """
+    def __eq__(self, other):
+        s = str(self)
+        o = str(other) if other is not None else ""
+        if s == "SATISFIED" and o == "COMPLETED":
+            return True
+        if s == "COMPLETED" and o == "SATISFIED":
+            return True
+        return super().__eq__(other)
+
+
+class ObjectiveStatus:
+    SATISFIED = TypedStatus("COMPLETED")
+    FAILED = TypedStatus("FAILED")
+    BLOCKED = TypedStatus("BLOCKED")
+    UNRESOLVED = TypedStatus("UNRESOLVED")
+    REQUIRES_USER_JUDGMENT = TypedStatus("REQUIRES_USER_JUDGMENT")
+
+
 @dataclass
 class UserReport:
     """Concise executive report returned to the user at the completion of an operation."""
-    status: str  # "COMPLETED", "IN_PROGRESS", "AWAITING_USER_AUTHORIZATION", "HARD_BLOCKED"
+    status: str  # SATISFIED (COMPLETED), FAILED, BLOCKED, UNRESOLVED, REQUIRES_USER_JUDGMENT
     objective: str
     raw_intent: str
     executive_summary: str
@@ -33,10 +57,12 @@ class UserReport:
     active_constraints: list[str]
     next_recommendation: str
     post_mortem: dict[str, Any]
+    typed_status: str = "SATISFIED"
 
     def to_dict(self) -> dict[str, Any]:
         return {
-            "status": self.status,
+            "status": str(self.status),
+            "typed_status": self.typed_status,
             "objective": self.objective,
             "raw_intent": self.raw_intent,
             "executive_summary": self.executive_summary,
@@ -86,7 +112,7 @@ class LeviOperator:
         intent_contract = self.cognition.set_intent(user_message)
         objective = intent_contract.derived_objective
 
-        status = "IN_PROGRESS"
+        status = ObjectiveStatus.UNRESOLVED
         for turn in range(1, max_turns + 1):
             step = self.execute_autonomous_step(objective, step_num=turn)
 
@@ -96,20 +122,20 @@ class LeviOperator:
                 if rej_class == "HARD_INVARIANT_VIOLATION":
                     # If all alternatives exhausted, check if we must escalate
                     if len(self.cognition.firewall.hard_invariants) >= 3:
-                        status = "HARD_BLOCKED"
+                        status = ObjectiveStatus.BLOCKED
                         break
 
-            # Check for objective achievement
-            if step.get("type") == "ACTION_SUCCESS":
-                decision = step.get("decision", {})
-                target_id = decision.get("target_id", "")
-                # If target system was restored or primary goal advanced
-                if any(k in target_id.lower() for k in ["relay", "conduit", "fuse", "vault", "ledger", "terminal"]):
-                    status = "COMPLETED"
-                    break
+            # Evaluate objective state using structured state transitions
+            eval_state = self._evaluate_objective_state(objective, step)
+            if eval_state == "SATISFIED":
+                status = ObjectiveStatus.SATISFIED
+                break
+            elif eval_state in ("FAILED", "BLOCKED", "REQUIRES_USER_JUDGMENT"):
+                status = getattr(ObjectiveStatus, eval_state, ObjectiveStatus.UNRESOLVED)
+                break
 
-        if status == "IN_PROGRESS":
-            status = "COMPLETED" if self.verified_receipts else "IN_PROGRESS"
+        if status == ObjectiveStatus.UNRESOLVED:
+            status = ObjectiveStatus.SATISFIED if self.verified_receipts else ObjectiveStatus.UNRESOLVED
 
         # 2. Persist post-mortem learning
         post_mortem = self.cognition.extract_post_mortem()
@@ -129,9 +155,38 @@ class LeviOperator:
             actions_taken=list(self.action_history),
             cryptographic_receipts=list(self.verified_receipts),
             active_constraints=self.cognition.firewall.get_active_constraints(),
-            next_recommendation="Operational state verified. Maintain normal observation." if status == "COMPLETED" else "Awaiting guidance.",
+            next_recommendation="Operational state verified. Maintain normal observation." if status == ObjectiveStatus.SATISFIED else "Awaiting guidance.",
             post_mortem=post_mortem,
+            typed_status="SATISFIED" if status == ObjectiveStatus.SATISFIED else str(status),
         )
+
+    def _evaluate_objective_state(self, objective: str, last_step: dict[str, Any]) -> str:
+        """
+        Evaluate objective state using structured predicates and world state verification,
+        not lexical target heuristics.
+        Returns one of: SATISFIED, FAILED, BLOCKED, UNRESOLVED, REQUIRES_USER_JUDGMENT.
+        """
+        # 1. Check if Kageyoni world state contains closed scenes or satisfied objectives
+        perception = self.gateway.inspect_environment(self.avatar_id)
+        scene = perception.get("perceived_scene")
+        if scene and scene.get("phase") == "closed":
+            return "SATISFIED"
+
+        # 2. Check if a successful action restored an impaired system or engaged a mechanism
+        if last_step.get("type") == "ACTION_SUCCESS":
+            decision = last_step.get("decision", {})
+            changes = decision.get("changes", [])
+            for ch in changes:
+                data = ch.get("data", {})
+                cond = data.get("condition")
+                if cond in ("operational", "restored", "engaged"):
+                    return "SATISFIED"
+
+        # 3. Check for blocking conditions
+        if len(self.cognition.firewall.hard_invariants) >= 3:
+            return "BLOCKED"
+
+        return "UNRESOLVED"
 
     def execute_autonomous_step(self, objective: str, step_num: int) -> dict[str, Any]:
         """Execute one complete cognitive perception-deliberation-action cycle."""
@@ -156,7 +211,7 @@ class LeviOperator:
                 dialogue_act=decision["dialogue_act"],
                 statement=decision["statement"],
             )
-            if result.get("status") == "cooperative" or result.get("granted_permission"):
+            if result.get("status") in ("cooperative", "agreement") or result.get("granted_permission"):
                 if decision["target_id"] not in self.cognition.firewall.aligned_partners:
                     self.cognition.firewall.aligned_partners.add(decision["target_id"])
                 # Reconcile constraints now that permission is granted

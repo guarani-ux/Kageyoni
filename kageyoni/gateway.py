@@ -85,21 +85,32 @@ class BoundedKageyoniGateway:
         )
         current_loc_id = avatar_presence["data"]["location"] if avatar_presence else None
 
-        # 2. Interactable items in vicinity (gate locked storage items)
-        granary_door = next((r for r in records if r["id"] == "granary-door"), None)
-        granary_open = granary_door and granary_door["data"].get("condition") == "unlocked_open"
-
-        items = [
-            {
+        # 2. Interactable items visible in avatar vicinity
+        open_barriers = {
+            r["id"] for r in records
+            if r["domain"] == "item" and r["data"].get("condition") in ("unlocked_open", "open", "unlocked")
+        }
+        item_locations = {
+            r["data"]["item"]: r["data"]["location"]
+            for r in records
+            if r["domain"] == "loot" and r["data"].get("item") and r["data"].get("location")
+        }
+        items = []
+        for r in records:
+            if r["domain"] != "item":
+                continue
+            item_loc = item_locations.get(r["id"])
+            if item_loc and current_loc_id and item_loc != current_loc_id:
+                if not open_barriers:
+                    continue
+            items.append({
                 "id": r["id"],
                 "name": r["data"].get("name"),
                 "condition": r["data"].get("condition"),
                 "effects": r["data"].get("effects"),
                 "kind": r["data"].get("kind", "tool"),
-            }
-            for r in records
-            if r["domain"] == "item" and not (r["id"] == "spare-relay-fuse" and not granary_open)
-        ]
+                "location": item_loc,
+            })
 
         # 3. Copresent NPCs
         npcs = [
@@ -172,22 +183,32 @@ class BoundedKageyoniGateway:
         )
         current_location = avatar_presence["data"]["location"] if avatar_presence else None
 
-        # Perceived room items (gate locked storage items)
-        granary_door = next((r for r in records if r["id"] == "granary-door"), None)
-        granary_open = granary_door and granary_door["data"].get("condition") == "unlocked_open"
-
+        # Perceived room items
+        open_barriers = {
+            r["id"] for r in records
+            if r["domain"] == "item" and r["data"].get("condition") in ("unlocked_open", "open", "unlocked")
+        }
+        item_locations = {
+            r["data"]["item"]: r["data"]["location"]
+            for r in records
+            if r["domain"] == "loot" and r["data"].get("item") and r["data"].get("location")
+        }
         items = []
         for r in records:
-            if r["domain"] == "item":
-                if r["id"] == "spare-relay-fuse" and not granary_open:
+            if r["domain"] != "item":
+                continue
+            item_loc = item_locations.get(r["id"])
+            if item_loc and current_location and item_loc != current_location:
+                if not open_barriers:
                     continue
-                items.append({
-                    "id": r["id"],
-                    "name": r["data"].get("name"),
-                    "condition": r["data"].get("condition"),
-                    "effects": r["data"].get("effects"),
-                    "kind": r["data"].get("kind"),
-                })
+            items.append({
+                "id": r["id"],
+                "name": r["data"].get("name"),
+                "condition": r["data"].get("condition"),
+                "effects": r["data"].get("effects"),
+                "kind": r["data"].get("kind"),
+                "location": item_loc,
+            })
 
         # Perceived copresent NPCs with observable aspects
         npcs = []
@@ -277,14 +298,13 @@ class BoundedKageyoniGateway:
         self,
         avatar_id: str,
         target_id: str,
-        dialogue_act: str,
-        statement: str,
+        dialogue_act: str = "inquire",
+        statement: str = "",
         context_items: Optional[list[str]] = None,
     ) -> dict[str, Any]:
         """
         Interact with an independent in-world NPC.
-        The NPC evaluates the interaction autonomously against their interiority aspects,
-        boundaries, and current conditions.
+        Forwards proposal directly to Kageyoni's sovereign character resolution.
         """
         ctx = self.engine.context(branch=self.branch, viewer=avatar_id)
         records = ctx.get("records", [])
@@ -297,69 +317,16 @@ class BoundedKageyoniGateway:
                 "message": f"Target character '{target_id}' is not copresent.",
             }
 
-        npc_aspects = [
-            r["data"] for r in records
-            if r["domain"] == "character_aspect" and r["data"].get("character") == target_id
-        ]
-
-        stmt_lower = statement.lower()
-
-        # Check NPC boundaries (absolute non-negotiables)
-        for aspect in npc_aspects:
-            if aspect.get("kind") == "boundary":
-                boundary_rule = aspect.get("statement", "").lower()
-
-                # Boundary: Certification / Authorization
-                if "uncertified" in boundary_rule and ("force" in stmt_lower or "override" in stmt_lower or "demand" in stmt_lower):
-                    return {
-                        "status": "refusal",
-                        "speaker": target_id,
-                        "response": f"{target_npc['data'].get('name', target_id)} firmly refuses: 'My procedural boundaries prohibit uncertified access.'",
-                        "boundary_triggered": aspect.get("statement"),
-                    }
-                if "unauthorized" in boundary_rule and "demand" in stmt_lower and not any(k in stmt_lower for k in ["permit", "authorize", "verify", "exchange"]):
-                    return {
-                        "status": "refusal",
-                        "speaker": target_id,
-                        "response": f"{target_npc['data'].get('name', target_id)} refuses: 'You do not hold verification authority for this area.'",
-                        "boundary_triggered": aspect.get("statement"),
-                    }
-                # Boundary: Quarantine / Sterilization
-                if "unsterilized" in boundary_rule:
-                    has_sterilization = any("steriliz" in s for s in [stmt_lower] + (context_items or []))
-                    if not has_sterilization:
-                        return {
-                            "status": "refusal",
-                            "speaker": target_id,
-                            "response": f"{target_npc['data'].get('name', target_id)} blocks the path: 'Strict quarantine protocol. Unsterilized entry is categorically prohibited.'",
-                            "boundary_triggered": aspect.get("statement"),
-                        }
-
-        # Check NPC drives / goals for alignment
-        aligned_drive = None
-        for aspect in npc_aspects:
-            if aspect.get("kind") == "drive":
-                drive_stmt = aspect.get("statement", "").lower()
-                # Check for shared problem-solving or helpfulness
-                if any(w in stmt_lower for w in ["help", "assist", "repair", "restore", "steriliz", "catalog", "preserve", "coordinate", "safety"]):
-                    aligned_drive = aspect.get("statement")
-                    break
-
-        if aligned_drive or dialogue_act in ("negotiate_alignment", "propose_cooperation", "offer_assistance"):
-            return {
-                "status": "cooperative",
-                "speaker": target_id,
-                "response": f"{target_npc['data'].get('name', target_id)} consents: 'We can proceed under mutual verification. I will authorize your entry.'",
-                "aligned_drive": aligned_drive,
-                "granted_permission": True,
-            }
-
-        # Default neutral response
-        return {
-            "status": "neutral",
-            "speaker": target_id,
-            "response": f"{target_npc['data'].get('name', target_id)} listens carefully: 'State your purpose and demonstrate authorization.'",
+        proposal = {
+            "dialogue_act": dialogue_act,
+            "statement": statement,
+            "context_items": context_items or [],
         }
+        res = self.engine.resolve_character_interaction(self.branch, target_id, avatar_id, proposal)
+        # Add cooperative alias if status is agreement for backwards compatibility
+        if res.get("status") == "agreement":
+            res["status"] = "cooperative"
+        return res
 
     def attempt_action(
         self,
@@ -409,21 +376,6 @@ class BoundedKageyoniGateway:
                     "rejected_at_revision": current_rev,
                 }
 
-        # Physical world invariant: quarantine door enforcement
-        for c in changes:
-            if c.get("id") == "granary-door" and c.get("op") == "patch":
-                records = self.engine.context(branch=self.branch, viewer=avatar_id).get("records", [])
-                spray = next((r for r in records if r["id"] == "sterilization-spray"), None)
-                spray_applied = spray and spray["data"].get("condition") == "applied_active"
-                if not spray_applied:
-                    return {
-                        "success": False,
-                        "error_type": "KAGEYONI_REJECTION",
-                        "rejection_class": "PREREQUISITE_MISSING",
-                        "message": "Quarantine protocol: unsterilized access prohibited to granary stores.",
-                        "rejected_at_revision": current_rev,
-                    }
-
         # Ensure changes have valid evidence if omitted on patch/create
         for c in changes:
             if isinstance(c, dict) and not c.get("evidence"):
@@ -448,13 +400,14 @@ class BoundedKageyoniGateway:
                 "receipt": receipt,
             }
         except Rejected as exc:
-            msg = str(exc)
-            rejection_class = classify_rejection(msg)
+            msg = getattr(exc, "message", str(exc))
+            rejection_class = getattr(exc, "rejection_class", None) or classify_rejection(msg)
             return {
                 "success": False,
                 "error_type": "KAGEYONI_REJECTION",
                 "rejection_class": rejection_class,
                 "message": msg,
+                "details": getattr(exc, "details", {}),
                 "rejected_at_revision": current_rev,
             }
         except Exception as exc:

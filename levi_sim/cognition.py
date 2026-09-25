@@ -115,8 +115,14 @@ class LeviCognitiveModel:
                 "condition": item.get("condition"),
                 "potential_surface": item.get("effects"),
                 "kind": item.get("kind", "tool"),
+                "role": item.get("role") or item.get("target_role"),
+                "effects": item.get("effects", ""),
+                "requirements": item.get("requirements"),
             }
-            if not any(a["id"] == aff["id"] for a in self.discovered_affordances):
+            existing = next((a for a in self.discovered_affordances if a["id"] == aff["id"]), None)
+            if existing:
+                existing.update(aff)
+            else:
                 self.discovered_affordances.append(aff)
             self.firewall.record_observation(
                 f"Item {item['name']} ({item['id']}) condition={item.get('condition')} effects={item.get('effects')}",
@@ -160,8 +166,9 @@ class LeviCognitiveModel:
         """
         msg = rejection_packet.get("message", "Action rejected by Kageyoni physical rules.")
         rejection_class = rejection_packet.get("rejection_class") or classify_rejection(msg)
+        details = rejection_packet.get("details")
 
-        dc = self.firewall.record_engine_rejection(msg, rejection_class)
+        dc = self.firewall.record_engine_rejection(msg, rejection_class, details=details)
 
         if rejection_class in ("PREREQUISITE_MISSING", "TEMPORARY_STATE_BLOCK"):
             return (
@@ -177,7 +184,8 @@ class LeviCognitiveModel:
     def deliberate(self, objective: str, capabilities: dict[str, Any], context: dict[str, Any]) -> dict[str, Any]:
         """
         Autonomous deliberation loop over compiled intent, epistemic firewall, and gateway capabilities.
-        Uses constraint economics and upstream reframing.
+        Uses constraint economics, structured affordance analysis, and upstream reframing.
+        No lexical scenario-specific keywords.
         """
         # Ensure IntentContract is initialized if not set
         if not self.intent_contract:
@@ -185,13 +193,11 @@ class LeviCognitiveModel:
 
         active_constraints = self.firewall.get_active_constraints()
         perceived_npcs = context.get("perceived_npcs", [])
-        perceived_items = context.get("perceived_items", [])
         discovered_affordances = self.discovered_affordances
 
         # STEP A: Check if direct execution is blocked by an active constraint
         if active_constraints:
             active_block = active_constraints[-1]
-            block_lower = active_block.lower()
 
             # Case A1: If unaligned copresent NPC exists, engage in cooperative alignment/negotiation first
             unaligned_npcs = [
@@ -214,126 +220,143 @@ class LeviCognitiveModel:
                     "rationale": f"Direct intervention is blocked; shifting to relational alignment with {npc_name} to satisfy prerequisites.",
                 }
 
-            # Case A2: If alignment already established, address the physical prerequisite (e.g. sterilization)
-            if "unsterilized" in block_lower or "quarantine" in block_lower:
-                sterilizer = next((
-                    a for a in discovered_affordances
-                    if "door" not in a["name"].lower() and "gate" not in a["name"].lower()
-                    and any(k in a["name"].lower() or k in a["id"].lower()
-                           for k in ["steriliz", "spray", "decontamina", "canister"])
-                ), None)
-                if sterilizer and sterilizer["id"] not in [a.get("used") for a in self.discovered_combinations]:
+            # Case A2: If alignment established or no NPC, resolve the physical prerequisite declared by DynamicConstraint
+            active_dc = next((dc for dc in reversed(self.firewall.dynamic_constraints) if not dc.is_obsolete), None)
+            if active_dc:
+                target_rec_id = None
+                target_cond = "applied_active"
+                if active_dc.required_predicate:
+                    target_rec_id = active_dc.required_predicate.target_id
+                    target_cond = active_dc.required_predicate.expected_value or "applied_active"
+
+                # Find matching affordance
+                matching_prereq = None
+                if target_rec_id:
+                    matching_prereq = next((a for a in discovered_affordances if a["id"] == target_rec_id), None)
+                if not matching_prereq:
+                    matching_prereq = next((
+                        a for a in discovered_affordances
+                        if a.get("condition") not in ("applied_active", "depleted", "installed")
+                        and (a.get("role") == "prerequisite" or a.get("kind") in ("consumable", "tool", "decontaminant", "key")
+                             or (active_dc.prerequisite_needed and a["id"] in active_dc.prerequisite_needed))
+                    ), None)
+
+                if matching_prereq and matching_prereq["id"] not in [c.get("used") for c in self.discovered_combinations]:
                     return {
                         "action_type": "execute_action",
-                        "target_id": sterilizer["id"],
+                        "target_id": matching_prereq["id"],
                         "kind": "action",
-                        "narrative": f"Levi Sim deploys {sterilizer['name']} to satisfy sterilization quarantine requirements.",
-                        "rationale": "Resolves missing prerequisite for quarantine clearance.",
+                        "narrative": f"Levi Sim deploys {matching_prereq['name']} to satisfy physical prerequisite conditions.",
+                        "rationale": f"Resolves active prerequisite condition for {active_dc.message}.",
                         "changes": [
                             {
                                 "op": "patch",
                                 "domain": "item",
-                                "id": sterilizer["id"],
+                                "id": matching_prereq["id"],
                                 "expected_version": 1,
-                                "data": {"condition": "applied_active"},
-                                "evidence": [{"note": "Sterilization spray applied"}],
+                                "data": {"condition": target_cond},
+                                "evidence": [{"note": f"Deployed {matching_prereq['name']} to meet prerequisite"}],
                             }
                         ],
                     }
 
-        # STEP B: Check for physical mechanisms and tools to achieve the objective
-        # Look for relay, terminal, vault, console, fuse box, or damaged system
-        broken_systems = [
+        # STEP B: Mechanical Repair & Operational Restoration
+        # Categorize affordances by structured kinds, conditions, and roles
+        impaired_targets = [
             a for a in discovered_affordances
-            if any(k in a["name"].lower() for k in ["relay", "terminal", "vault", "conduit", "fuse", "junction", "door", "switch", "override"])
+            if any(k in str(a.get("condition", "")).lower() for k in ["blown", "damaged", "disabled", "offline", "faulty", "ruptured", "dark"])
+            and not (a.get("kind") in ("barrier", "container") or any(b in a["name"].lower() for b in ["door", "gate", "barrier", "vault"]))
         ]
 
-        # Check if we have items that can be combined or used (e.g. fuse, slate, tool, key)
-        tools = [
+        tools_and_parts = [
             a for a in discovered_affordances
-            if any(k in a["name"].lower() for k in ["fuse", "slate", "lever", "tool", "key", "spray"])
+            if str(a.get("condition", "")).lower() in ["intact", "ready", "operational", "available"]
+            and a not in impaired_targets
+            and not (a.get("kind") in ("barrier", "container") or any(b in a["name"].lower() for b in ["door", "gate", "barrier", "vault"]))
         ]
 
-        # Check if an explicit broken target is identified (e.g. communication relay with blown fuse)
-        damaged_target = next(
-            (s for s in broken_systems if any(k in str(s.get("condition", "")).lower() for k in ["blown", "damaged", "disabled", "dark", "locked", "offline"])),
-            None
-        )
+        replacement_parts = [
+            a for a in tools_and_parts
+            if str(a.get("condition", "")).lower() in ("intact", "installed")
+            or a.get("role") in ("replacement", "component", "spare", "part")
+            or a.get("kind") in ("component", "part", "replacement")
+        ]
 
-        if damaged_target:
-            # Check if we have a matching replacement part (e.g. spare fuse)
-            replacement_part = next(
-                (t for t in tools if "fuse" in t["name"].lower() and "spare" in t["name"].lower() or "backup" in t["name"].lower()),
-                None
-            )
-            if replacement_part:
-                return {
-                    "action_type": "execute_action",
-                    "target_id": damaged_target["id"],
-                    "kind": "action",
-                    "narrative": f"Levi Sim installs {replacement_part['name']} into {damaged_target['name']} to restore operational function.",
-                    "rationale": f"Combines {replacement_part['id']} with {damaged_target['id']} to restore communication infrastructure.",
-                    "changes": [
-                        {
-                            "op": "patch",
-                            "domain": "item",
-                            "id": damaged_target["id"],
-                            "expected_version": 1,
-                            "data": {
-                                "condition": "operational",
-                                "effects": "Transmits emergency and settlement status signals normally.",
-                            },
+        if impaired_targets and replacement_parts:
+            target = impaired_targets[0]
+            part = replacement_parts[0]
+            return {
+                "action_type": "execute_action",
+                "target_id": target["id"],
+                "kind": "action",
+                "narrative": f"Levi Sim installs {part['name']} into {target['name']} to restore operational function.",
+                "rationale": f"Combines {part['id']} with {target['id']} to restore operational infrastructure.",
+                "changes": [
+                    {
+                        "op": "patch",
+                        "domain": "item",
+                        "id": target["id"],
+                        "expected_version": 1,
+                        "data": {
+                            "condition": "operational",
+                            "effects": "Operational state restored. Telemetry and function active.",
                         },
-                        {
-                            "op": "patch",
-                            "domain": "item",
-                            "id": replacement_part["id"],
-                            "expected_version": 1,
-                            "data": {"condition": "installed"},
-                        }
-                    ],
-                }
+                    },
+                    {
+                        "op": "patch",
+                        "domain": "item",
+                        "id": part["id"],
+                        "expected_version": 1,
+                        "data": {"condition": "installed"},
+                    }
+                ],
+            }
 
-        # Check for unmapped physical override surfaces (e.g. lever, slate, bypass)
-        for aff in discovered_affordances:
-            aff_name = aff["name"].lower()
-            if any(k in aff_name for k in ["override", "lever", "bypass", "conduit"]):
+        # STEP C: Interactive Mechanisms & Structural Controls (e.g. bypass, valve, switch)
+        controls = [
+            a for a in discovered_affordances
+            if a.get("kind") in ("mechanism", "control")
+            or a.get("role") in ("control", "override", "bypass")
+            or any(k in a["name"].lower() for k in ["override", "bypass", "switch", "lever", "valve", "control"])
+        ]
+        for ctrl in controls:
+            if ctrl.get("condition") in ("operational", "ready"):
                 return {
                     "action_type": "execute_action",
-                    "target_id": aff["id"],
+                    "target_id": ctrl["id"],
                     "kind": "action",
-                    "narrative": f"Levi Sim maneuvers through identified structural affordance: {aff['name']}.",
-                    "rationale": f"Leverages physical surface {aff['id']} to fulfill objective while preserving invariants.",
+                    "narrative": f"Levi Sim maneuvers through identified structural affordance: {ctrl['name']}.",
+                    "rationale": f"Leverages physical surface {ctrl['id']} to fulfill objective while preserving invariants.",
                     "changes": [
                         {
                             "op": "patch",
                             "domain": "item",
-                            "id": aff["id"],
+                            "id": ctrl["id"],
                             "expected_version": 1,
                             "data": {"condition": "engaged"},
                         }
                     ],
                 }
 
-        # Check for sealed / locked doors or vaults that can now be accessed
-        locked_entries = [
+        # STEP D: Access Sealed / Locked Barriers (if no active constraint blocks it)
+        locked_barriers = [
             a for a in discovered_affordances
-            if any(k in a["name"].lower() for k in ["door", "vault", "granary", "archive", "gate"])
-            and a.get("condition") != "unlocked_open"
+            if (a.get("kind") in ("barrier", "container") or any(k in a["name"].lower() for k in ["door", "gate", "vault", "bulkhead"]))
+            and a.get("condition") not in ("unlocked_open", "open", "unlocked")
         ]
-        if locked_entries:
-            entry = locked_entries[0]
+        if locked_barriers:
+            barrier = locked_barriers[0]
             return {
                 "action_type": "execute_action",
-                "target_id": entry["id"],
+                "target_id": barrier["id"],
                 "kind": "action",
-                "narrative": f"Levi Sim accesses {entry['name']} to retrieve required supplies.",
-                "rationale": f"Enters {entry['id']} under verified authorization to acquire necessary infrastructure parts.",
+                "narrative": f"Levi Sim accesses {barrier['name']} to inspect and retrieve required supplies.",
+                "rationale": f"Enters {barrier['id']} under verified authorization to acquire necessary infrastructure parts.",
                 "changes": [
                     {
                         "op": "patch",
                         "domain": "item",
-                        "id": entry["id"],
+                        "id": barrier["id"],
                         "expected_version": 1,
                         "data": {"condition": "unlocked_open"},
                         "evidence": [{"note": "Accessing entry under verified authorization"}],
@@ -341,7 +364,7 @@ class LeviCognitiveModel:
                 ],
             }
 
-        # STEP C: Default exploratory / perception action
+        # STEP E: Default exploratory / perception action
         return {
             "action_type": "inspect_affordances",
             "target_id": "environment",

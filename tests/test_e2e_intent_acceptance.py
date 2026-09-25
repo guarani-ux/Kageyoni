@@ -19,6 +19,7 @@ Verifies unscripted autonomous operation:
 from __future__ import annotations
 
 import gc
+import json
 import sys
 import tempfile
 import unittest
@@ -121,7 +122,22 @@ class TestEndToEndIntentAcceptance(unittest.TestCase):
             for iid, name, cond, effects in items
         ]
 
-        # 3. Scene
+        # 3. Loot Record (places spare fuse in granary store)
+        loot_change = {
+            "op": "create",
+            "domain": "loot",
+            "id": "loot-granary-fuse",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [{"note": "Granary backup supplies"}],
+            "data": {
+                "item": "spare-relay-fuse",
+                "location": "granary-store",
+                "discovery": "discoverable",
+            },
+        }
+
+        # 4. Scene
         scene_change = {
             "op": "create",
             "domain": "scene",
@@ -138,6 +154,30 @@ class TestEndToEndIntentAcceptance(unittest.TestCase):
             },
         }
 
+        # 5. Mechanical World Rule: Physical quarantine invariant enforced by Kageyoni Engine
+        rule_change = {
+            "op": "create",
+            "domain": "world_rule",
+            "id": "rule-granary-quarantine",
+            "status": "confirmed",
+            "visibility": "public",
+            "evidence": [{"note": "Authoritative settlement quarantine rule"}],
+            "data": {
+                "name": "Granary Quarantine Invariant",
+                "scope": "granary-store",
+                "statement": json.dumps({
+                    "target_id": "granary-door",
+                    "required_record": "sterilization-spray",
+                    "required_field": "condition",
+                    "required_equals": "applied_active",
+                    "rejection_class": "PREREQUISITE_MISSING",
+                    "rejection_message": "Cannot open quarantine door: unsterilized access prohibited.",
+                }),
+                "exceptions": "None",
+                "resolution": "mechanical",
+            },
+        }
+
         self.engine.apply({
             "api_version": 3,
             "branch": self.branch,
@@ -146,7 +186,7 @@ class TestEndToEndIntentAcceptance(unittest.TestCase):
             "kind": "action",
             "actor": "system",
             "narrative": "Initial world seeding for Oakhaven acceptance test.",
-            "changes": loc_changes + item_changes + [scene_change],
+            "changes": loc_changes + item_changes + [scene_change, rule_change, loot_change],
         })
 
         # 4. NPC: Elder Thorne (independent quartermaster with boundaries)

@@ -28,21 +28,61 @@ from .will import (
 )
 
 
-class Rejected(ValueError):
-    pass
-
-
 def encoded(value: Any) -> str:
-    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False)
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False, allow_nan=False)
 
 
 def digest(value: Any) -> str:
     return hashlib.sha256(encoded(value).encode("utf-8")).hexdigest()
 
 
-def require(condition: Any, message: str) -> None:
+_REJECTION_CLASS_KEYWORDS = [
+    ("MALFORMED_REQUEST", [
+        "invalid enum", "malformed", "missing key", "missing field", "unknown op", "invalid op",
+        "unknown domain", "schema", "syntax", "unexpected field", "bad format", "json_valid",
+        "unknown field", "invalid change", "missing or repeated", "unsupported change", "new evidence required"
+    ]),
+    ("INSUFFICIENT_AUTHORITY", [
+        "authority", "unauthorized", "forbidden", "permission", "source must exist", "not authorized"
+    ]),
+    ("TEMPORARY_STATE_BLOCK", [
+        "revision", "stale", "clock", "phase", "timing", "exhausted", "cooldown", "outdated"
+    ]),
+    ("PREREQUISITE_MISSING", [
+        "locked", "prerequisite", "requires", "uncertified", "unsterilized", "seal", "ward", "quarantine"
+    ]),
+]
+
+
+def default_rejection_class(msg: str) -> str:
+    low = str(msg).lower()
+    for cat, kws in _REJECTION_CLASS_KEYWORDS:
+        if any(k in low for k in kws):
+            return cat
+    return "HARD_INVARIANT_VIOLATION"
+
+
+class Rejected(ValueError):
+    def __init__(
+        self,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ):
+        super().__init__(message)
+        self.message = message
+        self.rejection_class = rejection_class or default_rejection_class(message)
+        self.details = details or {}
+
+
+def require(
+    condition: Any,
+    message: str,
+    rejection_class: str | None = None,
+    details: dict | None = None,
+) -> None:
     if not condition:
-        raise Rejected(message)
+        raise Rejected(message, rejection_class=rejection_class, details=details)
 
 
 _PROPERTY_STATES = {"known", "unknown", "absent", "not_applicable", "disputed"}
@@ -1225,6 +1265,7 @@ class Engine:
             "causes","clock_id","tick","roll_ids","dependencies","consequences","choice","properties",
             "facet_changes","processes","consequence_runs","resolution","judgment","observations",
             "process_runs","profiles","entity_links","classification_claims","assumptions","visibility","will_attempt",
+            "requirements",
         }
         require(set(command) <= allowed, "unknown command field")
         require(command.get("api_version") in (1, 2, 3), "unsupported API version")
@@ -1299,6 +1340,45 @@ class Engine:
                 self._validate_record(r)
                 r["data"] = {f: r["data"].get(f) for f in DOMAINS[r["domain"]]}
                 pending.append((old, r))
+            # Validate explicit command requirements if supplied
+            for req in command.get("requirements", []):
+                require(isinstance(req, dict), "requirement must be object", rejection_class="MALFORMED_REQUEST")
+                req_id = req.get("record_id") or req.get("id")
+                req_field = req.get("field", "condition")
+                req_equals = req.get("equals")
+                target_rec = self.get(branch, req_id)
+                require(target_rec is not None, f"Required record '{req_id}' missing in world state", rejection_class="PREREQUISITE_MISSING", details={"required_record": req_id, "field": req_field, "expected": req_equals, "actual": None})
+                actual_val = target_rec["data"].get(req_field)
+                require(actual_val == req_equals, f"Requirement not met for '{req_id}': expected {req_field}='{req_equals}', got '{actual_val}'", rejection_class="PREREQUISITE_MISSING", details={"required_record": req_id, "field": req_field, "expected": req_equals, "actual": actual_val})
+            # Evaluate mechanical world rules for physical and environmental invariants
+            all_state = self.state(branch)
+            world_rules = [w for w in all_state if w["domain"] == "world_rule" and w["data"].get("resolution") == "mechanical"]
+            for wr in world_rules:
+                stmt_text = wr["data"].get("statement", "")
+                if stmt_text.startswith("{") and stmt_text.endswith("}"):
+                    try:
+                        rule_spec = json.loads(stmt_text)
+                    except Exception:
+                        rule_spec = None
+                    if isinstance(rule_spec, dict):
+                        target_id = rule_spec.get("target_id")
+                        prohibited_ops = rule_spec.get("prohibited_ops", ["patch"])
+                        for ch in command.get("changes", []):
+                            if ch.get("id") == target_id and ch.get("op") in prohibited_ops:
+                                req_id = rule_spec.get("required_record")
+                                req_field = rule_spec.get("required_field", "condition")
+                                req_val = rule_spec.get("required_equals")
+                                if req_id:
+                                    req_rec = self.get(branch, req_id)
+                                    req_actual = req_rec["data"].get(req_field) if req_rec else None
+                                    if req_actual != req_val:
+                                        msg = rule_spec.get("rejection_message") or f"World rule '{wr['data'].get('name')}' prerequisite missing: {req_id}.{req_field} == {req_val}"
+                                        rej_cls = rule_spec.get("rejection_class", "PREREQUISITE_MISSING")
+                                        raise Rejected(msg, rejection_class=rej_cls, details={"rule_id": wr["id"], "target_id": target_id, "required_record": req_id, "field": req_field, "expected": req_val, "actual": req_actual})
+                                elif rule_spec.get("prohibit_direct_breach"):
+                                    msg = rule_spec.get("rejection_message") or f"World rule '{wr['data'].get('name')}' prohibits direct modification."
+                                    rej_cls = rule_spec.get("rejection_class", "HARD_INVARIANT_VIOLATION")
+                                    raise Rejected(msg, rejection_class=rej_cls, details={"rule_id": wr["id"], "target_id": target_id})
             event_hash = digest({"previous": prev_hash, "payload_hash": payload_hash, "changes": pending})
             resolution = self._read_resolution(command.get("resolution"))
             # Validate declared dependencies before inserting the event row.
@@ -2728,3 +2808,7 @@ class Engine:
             return {"source": str(source), "destination": str(destination), "verification": restored.verify()}
         finally:
             restored.close()
+
+    def resolve_character_interaction(self, branch: str, character_id: str, initiator_id: str, proposal: dict | str) -> dict:
+        from .characters import resolve_interaction
+        return resolve_interaction(self, branch, character_id, initiator_id, proposal)
