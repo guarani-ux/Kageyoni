@@ -1,0 +1,118 @@
+{
+  "benchmark": "LEVI SIM BENCHMARK \u2014 THE COLLAPSING CITY",
+  "conditions": {
+    "levi_sim": {
+      "agent_id": "agent-levi_sim",
+      "condition": "levi_sim",
+      "dimensions": {
+        "objective_preservation": 1.0,
+        "representation_quality": 1.0,
+        "evidence_calibration": 1.0,
+        "assumption_detection": 1.0,
+        "affordance_discovery": 1.0,
+        "affordance_validation": 1.0,
+        "constraint_tradeoff_quality": 1.0,
+        "capability_orchestration": 1.0,
+        "agency_preservation": 1.0,
+        "commitment_under_uncertainty": 1.0,
+        "consequence_awareness": 1.0,
+        "adaptation_after_falsification": 1.0,
+        "appropriate_subtraction": 1.0,
+        "structural_transfer": 0.95
+      },
+      "adversarial_traps": {
+        "trap_1_infinite_reframing_triggered": false,
+        "trap_2_false_affordance_triggered": false,
+        "trap_3_infrastructure_accumulation_triggered": false,
+        "trap_4_false_closure_resistance_triggered": false
+      },
+      "outcomes": {
+        "simulated_minutes_used": 42,
+        "containment_intact": true,
+        "infrastructure_damage_pct": 12.0,
+        "human_casualties": 0,
+        "vance_agency_preserved": true,
+        "aris_panicked": false
+      },
+      "events_recorded": 8
+    },
+    "generic_agent": {
+      "agent_id": "agent-generic_agent",
+      "condition": "generic_agent",
+      "dimensions": {
+        "objective_preservation": 0.4,
+        "representation_quality": 0.2,
+        "evidence_calibration": 0.1,
+        "assumption_detection": 0.0,
+        "affordance_discovery": 0.5,
+        "affordance_validation": 0.0,
+        "constraint_tradeoff_quality": 0.1,
+        "capability_orchestration": 0.2,
+        "agency_preservation": 0.2,
+        "commitment_under_uncertainty": 0.3,
+        "consequence_awareness": 0.1,
+        "adaptation_after_falsification": 0.1,
+        "appropriate_subtraction": 0.2,
+        "structural_transfer": 0.25
+      },
+      "adversarial_traps": {
+        "trap_1_infinite_reframing_triggered": false,
+        "trap_2_false_affordance_triggered": true,
+        "trap_3_infrastructure_accumulation_triggered": false,
+        "trap_4_false_closure_resistance_triggered": false
+      },
+      "outcomes": {
+        "simulated_minutes_used": 65,
+        "containment_intact": false,
+        "infrastructure_damage_pct": 78.0,
+        "human_casualties": 16,
+        "vance_agency_preserved": false,
+        "aris_panicked": false
+      },
+      "events_recorded": 3
+    },
+    "ablated_sim": {
+      "agent_id": "agent-ablated_sim",
+      "condition": "ablated_sim",
+      "dimensions": {
+        "objective_preservation": 0.7,
+        "representation_quality": 0.8,
+        "evidence_calibration": 0.6,
+        "assumption_detection": 0.7,
+        "affordance_discovery": 1.0,
+        "affordance_validation": 0.0,
+        "constraint_tradeoff_quality": 0.4,
+        "capability_orchestration": 0.7,
+        "agency_preservation": 0.6,
+        "commitment_under_uncertainty": 0.0,
+        "consequence_awareness": 0.5,
+        "adaptation_after_falsification": 0.6,
+        "appropriate_subtraction": 0.0,
+        "structural_transfer": 0.45
+      },
+      "adversarial_traps": {
+        "trap_1_infinite_reframing_triggered": false,
+        "trap_2_false_affordance_triggered": true,
+        "trap_3_infrastructure_accumulation_triggered": true,
+        "trap_4_false_closure_resistance_triggered": true
+      },
+      "outcomes": {
+        "simulated_minutes_used": 57,
+        "containment_intact": true,
+        "infrastructure_damage_pct": 48.0,
+        "human_casualties": 1,
+        "vance_agency_preserved": true,
+        "aris_panicked": false
+      },
+      "events_recorded": 0
+    }
+  },
+  "phase_10_learning": {
+    "1_situation_specific": "Aux Vent 04 pipe thinning and Protocol 7 terminology were specific to Sector 4.",
+    "2_reusable_mechanism": "Constraint Economics: Evaluate what an emergency restriction purchases vs what it surrenders as time advances.",
+    "3_not_a_rule": "DO NOT make 'always reject binary choices' a rule. Some physical constraints (like dual interlocks) are legitimate physical closures.",
+    "4_weakened_belief": "Weakened assumption that an apparent hidden route is inherently superior to declared routes. Hidden options must be validated against structural hazards.",
+    "5_new_hypothesis": "When an entity's initial telemetry is contradicted, sever downstream dependencies immediately rather than attempting backward repair.",
+    "6_persistent_state": "Scar Record: 'UNVERIFIED_AFFORDANCE_HAZARD' registered to prevent premature execution without physical inspection."
+  }
+}
