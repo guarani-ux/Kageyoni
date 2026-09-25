@@ -60,12 +60,23 @@ class StructuredPredicate:
 
 
 @dataclass
+class CompoundPredicate:
+    """Evaluates whether world state satisfies ALL child predicates (conjunction)."""
+    predicates: list[StructuredPredicate] = field(default_factory=list)
+
+    def is_satisfied_by(self, records: list[dict[str, Any]]) -> bool:
+        if not self.predicates:
+            return True
+        return all(p.is_satisfied_by(records) for p in self.predicates)
+
+
+@dataclass
 class DynamicConstraint:
     """An engine rejection that can become obsolete when prerequisite world state changes."""
     message: str
     rejection_class: str
     prerequisite_needed: Optional[str] = None
-    required_predicate: Optional[StructuredPredicate] = None
+    required_predicate: Optional[StructuredPredicate | CompoundPredicate] = None
     is_obsolete: bool = False
     obsoleted_by_event: Optional[str] = None
 
@@ -110,6 +121,10 @@ class EpistemicFirewall:
         ))
 
     def record_verified_fact(self, fact: str, receipt_hash: str, source: str):
+        if not receipt_hash or not isinstance(receipt_hash, str) or len(receipt_hash) != 64 or not all(c in "0123456789abcdefABCDEF" for c in receipt_hash):
+            raise ValueError(
+                f"CryptographicFactPromotionError: Receipt hash '{receipt_hash}' is not a valid 64-character hexadecimal SHA-256 digest."
+            )
         self.entries.append(EpistemicEntry(
             category=EpistemicCategory.KAGEYONI_FACT,
             statement=fact,
@@ -209,11 +224,14 @@ class EpistemicFirewall:
 
             # 1. Structured Predicate evaluation against physical observations
             if dc.required_predicate and dc.required_predicate.is_satisfied_by(records):
-                dc.mark_obsolete(f"Predicate satisfied: {dc.required_predicate.target_id}.{dc.required_predicate.field}=={dc.required_predicate.expected_value}")
+                if hasattr(dc.required_predicate, "target_id"):
+                    dc.mark_obsolete(f"Predicate satisfied: {dc.required_predicate.target_id}.{dc.required_predicate.field}=={dc.required_predicate.expected_value}")
+                else:
+                    dc.mark_obsolete("Compound predicate satisfied")
                 continue
 
             # 2. Check if granted permissions satisfy authorization requirements
-            if granted and dc.required_predicate and dc.required_predicate.target_id in granted:
+            if granted and dc.required_predicate and getattr(dc.required_predicate, "target_id", None) in granted:
                 dc.mark_obsolete(f"Granted authorization by: {dc.required_predicate.target_id}")
                 continue
 
