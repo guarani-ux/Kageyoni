@@ -57,18 +57,49 @@ def classify_rejection(message: str) -> str:
         return "INSUFFICIENT_AUTHORITY"
     if any(k in msg for k in ["revision", "stale", "clock", "phase", "timing", "exhausted", "cooldown", "outdated"]):
         return "TEMPORARY_STATE_BLOCK"
+    if any(k in msg for k in ["negative constraint", "negative_constraint"]):
+        return "NEGATIVE_CONSTRAINT_VIOLATION"
     if any(k in msg for k in ["locked", "prerequisite", "requires", "uncertified", "unsterilized", "seal", "ward", "quarantine"]):
         return "PREREQUISITE_MISSING"
     return "HARD_INVARIANT_VIOLATION"
 
 
+_UNSET = object()
+
+
 class BoundedKageyoniGateway:
     """Bounded client interface wrapping a Kageyoni engine instance."""
 
-    def __init__(self, engine: Engine, branch: str = "main"):
+    def __init__(self, engine: Engine, branch: str = "main", scar_ledger: Any = _UNSET, enable_affordance_synthesis: bool = True):
         self.engine = engine
         self.branch = branch
         self.wf = Workflows(engine)
+        self.enable_affordance_synthesis = enable_affordance_synthesis
+        if scar_ledger is not _UNSET:
+            self.scar_ledger = scar_ledger
+        else:
+            try:
+                from kageyoni.situations.storage import SQLiteSituationStore
+                from kageyoni.situations.scar import ScarLedger
+                store = SQLiteSituationStore(self.engine.db)
+                self.scar_ledger = ScarLedger(store)
+            except Exception:
+                self.scar_ledger = None
+
+    def _get_avatar_location(self, avatar_id: str) -> Optional[str]:
+        """Resolves avatar location checking character_presence first, falling back to character record."""
+        ctx = self.engine.context(branch=self.branch, viewer=avatar_id)
+        records = ctx.get("records", [])
+        avatar_presence = next(
+            (r for r in records if r["domain"] == "character_presence" and r["data"].get("character") == avatar_id),
+            None
+        )
+        if avatar_presence and avatar_presence["data"].get("location"):
+            return avatar_presence["data"]["location"]
+        char_rec = next((r for r in records if r["domain"] == "character" and r["id"] == avatar_id), None)
+        if char_rec and char_rec["data"].get("location"):
+            return char_rec["data"]["location"]
+        return None
 
     def discover_capabilities(self, avatar_id: str) -> dict[str, Any]:
         """
@@ -79,11 +110,7 @@ class BoundedKageyoniGateway:
         records = ctx.get("records", [])
 
         # 1. Avatar's current location & environment
-        avatar_presence = next(
-            (r for r in records if r["domain"] == "character_presence" and r["data"].get("character") == avatar_id),
-            None
-        )
-        current_loc_id = avatar_presence["data"]["location"] if avatar_presence else None
+        current_loc_id = self._get_avatar_location(avatar_id)
 
         # 2. Interactable items visible in avatar vicinity
         open_barriers = {
@@ -154,6 +181,42 @@ class BoundedKageyoniGateway:
             core_actions.append("interact_npc")
         core_actions.append("execute_action")
 
+        # Active negative constraints from ScarLedger
+        active_scars = []
+        restricted_actions = []
+        negative_constraints = []
+        if self.scar_ledger and current_loc_id:
+            active = self.scar_ledger.get_active_scars(scope=current_loc_id)
+            active_scars = [s.scar_id for s in active]
+            restricted_actions = [s.trigger_condition for s in active if s.trigger_condition]
+            negative_constraints = [
+                {
+                    "scar_id": s.scar_id,
+                    "action": s.trigger_condition,
+                    "failure_class": s.failure_class,
+                    "root_cause": s.root_cause,
+                }
+                for s in active
+            ]
+
+        # Situated affordances from visible routes
+        situated_affordances = []
+        available_affordances = []
+        if self.enable_affordance_synthesis:
+            for rt in routes:
+                if rt.get("source") == current_loc_id:
+                    act = f"traverse_route:{rt['id']}"
+                    is_blocked = (rt.get("condition") in ("blocked", "physically_collapsed")) or (act in restricted_actions)
+                    situated_affordances.append({
+                        "action_name": act,
+                        "kind": "route_traversal",
+                        "target_id": rt["id"],
+                        "destination": rt.get("destination"),
+                        "condition": rt.get("condition"),
+                        "blocked": is_blocked,
+                    })
+            available_affordances = [a["action_name"] for a in situated_affordances if not a["blocked"]]
+
         return {
             "avatar_id": avatar_id,
             "current_location": current_loc_id,
@@ -163,6 +226,11 @@ class BoundedKageyoniGateway:
             "visible_routes": routes,
             "will_system_active": bool(will_techniques),
             "available_will_techniques": will_techniques,
+            "active_scars": active_scars,
+            "restricted_actions": restricted_actions,
+            "negative_constraints": negative_constraints,
+            "situated_affordances": situated_affordances,
+            "available_affordances": available_affordances,
             "permitted_queries": ["inspect_environment", "query_records", "discover_capabilities"],
             "communication_verbs": ["inquire", "negotiate_alignment", "propose_exchange", "request_assistance", "warn"],
             "authority_boundary": "External agent proposals are subject to Kageyoni physical validation.",
@@ -177,11 +245,7 @@ class BoundedKageyoniGateway:
         records = ctx.get("records", [])
 
         # Find avatar's presence / location
-        avatar_presence = next(
-            (r for r in records if r["domain"] == "character_presence" and r["data"].get("character") == avatar_id),
-            None
-        )
-        current_location = avatar_presence["data"]["location"] if avatar_presence else None
+        current_location = self._get_avatar_location(avatar_id)
 
         # Perceived room items
         open_barriers = {
@@ -253,9 +317,45 @@ class BoundedKageyoniGateway:
 
         # Visible routes / connections
         routes = [
-            {"id": r["id"], "source": r["data"].get("source"), "destination": r["data"].get("destination"), "condition": r["data"].get("condition")}
+            {"id": r["id"], "source": r["data"].get("source") or r["data"].get("origin"), "destination": r["data"].get("destination"), "condition": r["data"].get("condition") or r["data"].get("access")}
             for r in records if r["domain"] == "route"
         ]
+
+        # Active scars / negative constraints in this environment
+        active_scars = []
+        restricted_actions = []
+        negative_constraints = []
+        if self.scar_ledger and current_location:
+            active = self.scar_ledger.get_active_scars(scope=current_location)
+            active_scars = [s.scar_id for s in active]
+            restricted_actions = [s.trigger_condition for s in active if s.trigger_condition]
+            negative_constraints = [
+                {
+                    "scar_id": s.scar_id,
+                    "action": s.trigger_condition,
+                    "failure_class": s.failure_class,
+                    "root_cause": s.root_cause,
+                }
+                for s in active
+            ]
+
+        # Situated affordances from visible routes
+        situated_affordances = []
+        available_affordances = []
+        if self.enable_affordance_synthesis:
+            for rt in routes:
+                if rt.get("source") == current_location:
+                    act = f"traverse_route:{rt['id']}"
+                    is_blocked = (rt.get("condition") in ("blocked", "physically_collapsed")) or (act in restricted_actions)
+                    situated_affordances.append({
+                        "action_name": act,
+                        "kind": "route_traversal",
+                        "target_id": rt["id"],
+                        "destination": rt.get("destination"),
+                        "condition": rt.get("condition"),
+                        "blocked": is_blocked,
+                    })
+            available_affordances = [a["action_name"] for a in situated_affordances if not a["blocked"]]
 
         return {
             "avatar_id": avatar_id,
@@ -268,6 +368,11 @@ class BoundedKageyoniGateway:
             "perceived_knowledge": knowledge,
             "perceived_clocks": clocks,
             "perceived_routes": routes,
+            "active_scars": active_scars,
+            "restricted_actions": restricted_actions,
+            "negative_constraints": negative_constraints,
+            "situated_affordances": situated_affordances,
+            "available_affordances": available_affordances,
         }
 
     def query_records(self, avatar_id: str, domain: Optional[str] = None, record_id: Optional[str] = None) -> list[dict[str, Any]]:
@@ -336,16 +441,18 @@ class BoundedKageyoniGateway:
         changes: list[dict[str, Any]],
         kind: str = "action",
         expected_revision: Optional[int] = None,
+        action_name: Optional[str] = None,
     ) -> dict[str, Any]:
         """
         Submit an action proposal to Kageyoni.
         Enforces authority:
-        - If Kageyoni rejects the change, catches the exception and returns a structured typed rejection.
-        - Fuzzing / malformed change structures are caught and returned cleanly.
-        - Verifiable SHA-256 event hash is returned on success.
+        - Negative Constraint Gating: Checks persistent ScarLedger to block repeat demonstrated failures.
+        - Physical Validation: Kageyoni executes changes according to physical invariants.
+        - Automatic Scar Formation: Catches engine rejections and records durable scars into ScarLedger.
         """
         current_rev = self.engine.branch(self.branch)["revision"]
         exp_rev = expected_revision if expected_revision is not None else current_rev
+        target_action = action_name or narrative
 
         # Input packet structure validation
         if not isinstance(changes, list):
@@ -355,6 +462,7 @@ class BoundedKageyoniGateway:
                 "rejection_class": "MALFORMED_REQUEST",
                 "message": "Malformed gateway request: 'changes' must be a list.",
                 "rejected_at_revision": current_rev,
+                "attempted_action": target_action,
             }
 
         # Prevent forbidden direct mutation or source spoofing
@@ -366,6 +474,7 @@ class BoundedKageyoniGateway:
                     "rejection_class": "MALFORMED_REQUEST",
                     "message": "Malformed gateway change element: item must be a dictionary.",
                     "rejected_at_revision": current_rev,
+                    "attempted_action": target_action,
                 }
             if c.get("domain") in ("source", "raw_ledger", "authority_override"):
                 return {
@@ -374,7 +483,31 @@ class BoundedKageyoniGateway:
                     "rejection_class": "INSUFFICIENT_AUTHORITY",
                     "message": f"Direct mutation of protected domain '{c.get('domain')}' is prohibited.",
                     "rejected_at_revision": current_rev,
+                    "attempted_action": target_action,
                 }
+
+        # Negative constraint check: fail closed if prior demonstrated failure is active for this action and scope
+        current_location = self._get_avatar_location(avatar_id)
+        if self.scar_ledger and current_location:
+            active_scars = self.scar_ledger.get_active_scars(scope=current_location)
+            for s in active_scars:
+                matches_action = (s.trigger_condition and s.trigger_condition == target_action) or (action_name and action_name in s.root_cause)
+                if matches_action:
+                    return {
+                        "success": False,
+                        "error_type": "KAGEYONI_REJECTION",
+                        "rejection_class": "NEGATIVE_CONSTRAINT_VIOLATION",
+                        "message": f"Action '{target_action}' blocked by active negative constraint in {current_location} (Scar: {s.scar_id}): {s.root_cause}",
+                        "details": {
+                            "scar_id": s.scar_id,
+                            "failure_class": s.failure_class,
+                            "root_cause": s.root_cause,
+                            "scope": current_location,
+                        },
+                        "rejected_at_revision": current_rev,
+                        "attempted_action": target_action,
+                        "scar_id": s.scar_id,
+                    }
 
         # Ensure changes have valid evidence if omitted on patch/create
         for c in changes:
@@ -398,10 +531,27 @@ class BoundedKageyoniGateway:
                 "revision": receipt["revision"],
                 "changed_records": receipt["changed"],
                 "receipt": receipt,
+                "attempted_action": target_action,
             }
         except Rejected as exc:
             msg = getattr(exc, "message", str(exc))
             rejection_class = getattr(exc, "rejection_class", None) or classify_rejection(msg)
+            scar_id = None
+            if self.scar_ledger:
+                try:
+                    from kageyoni.situations.scar import Scar
+                    scar_id = f"scar:{avatar_id}:{request_id}"
+                    self.scar_ledger.record_scar(Scar(
+                        scar_id=scar_id,
+                        failure_class=rejection_class,
+                        root_cause=msg,
+                        probe_refs=(request_id,),
+                        trigger_condition=target_action,
+                        affected_scopes=(current_location,) if current_location else (),
+                        status="open",
+                    ))
+                except Exception:
+                    pass
             return {
                 "success": False,
                 "error_type": "KAGEYONI_REJECTION",
@@ -409,6 +559,8 @@ class BoundedKageyoniGateway:
                 "message": msg,
                 "details": getattr(exc, "details", {}),
                 "rejected_at_revision": current_rev,
+                "attempted_action": target_action,
+                "scar_id": scar_id,
             }
         except Exception as exc:
             msg = str(exc)
@@ -419,4 +571,118 @@ class BoundedKageyoniGateway:
                 "rejection_class": rejection_class,
                 "message": msg,
                 "rejected_at_revision": current_rev,
+                "attempted_action": target_action,
             }
+
+    def enact(self, avatar_id: str, action_name: str, **kwargs) -> dict[str, Any]:
+        """
+        Directly enacts a situated affordance discovered by the gateway.
+        Translates situated affordance verbs into canonical engine mutations.
+        """
+        import uuid
+        current_loc = self._get_avatar_location(avatar_id)
+        ctx = self.engine.context(branch=self.branch, viewer=avatar_id)
+        records = ctx.get("records", [])
+
+        if action_name.startswith("traverse_route:"):
+            route_id = action_name.split(":", 1)[1]
+            route_rec = next((r for r in records if r.get("domain") == "route" and r.get("id") == route_id), None)
+            if not route_rec:
+                return {
+                    "success": False,
+                    "error_type": "KAGEYONI_REJECTION",
+                    "rejection_class": "HARD_INVARIANT_VIOLATION",
+                    "message": f"Route '{route_id}' does not exist or is outside avatar perception horizon.",
+                    "attempted_action": action_name,
+                }
+
+            route_data = route_rec.get("data", {})
+            destination = route_data.get("destination")
+            origin = route_data.get("origin") or route_data.get("source")
+            condition = route_data.get("condition") or route_data.get("conditions") or route_data.get("access")
+
+            if current_loc and origin and origin != current_loc:
+                return {
+                    "success": False,
+                    "error_type": "KAGEYONI_REJECTION",
+                    "rejection_class": "HARD_INVARIANT_VIOLATION",
+                    "message": f"Route '{route_id}' originates at '{origin}', but avatar is at '{current_loc}'.",
+                    "attempted_action": action_name,
+                }
+
+            if condition in ("blocked", "physically_collapsed"):
+                # First check if active scar already blocks it
+                if self.scar_ledger and current_loc:
+                    active_scars = self.scar_ledger.get_active_scars(scope=current_loc)
+                    for s in active_scars:
+                        if (s.trigger_condition == action_name) or (action_name in s.root_cause):
+                            return {
+                                "success": False,
+                                "error_type": "KAGEYONI_REJECTION",
+                                "rejection_class": "NEGATIVE_CONSTRAINT_VIOLATION",
+                                "message": f"Action '{action_name}' blocked by active negative constraint in {current_loc} (Scar: {s.scar_id}): {s.root_cause}",
+                                "details": {"scar_id": s.scar_id, "failure_class": s.failure_class, "root_cause": s.root_cause, "scope": current_loc},
+                                "attempted_action": action_name,
+                                "scar_id": s.scar_id,
+                            }
+                req_id = f"enact-route-{uuid.uuid4().hex[:6]}"
+                scar_id = f"scar:{avatar_id}:{req_id}"
+                msg = f"Route '{route_id}' is physically impassable (condition: {condition})."
+                if self.scar_ledger and current_loc:
+                    try:
+                        from kageyoni.situations.scar import Scar
+                        self.scar_ledger.record_scar(Scar(
+                            scar_id=scar_id,
+                            failure_class="HARD_INVARIANT_VIOLATION",
+                            root_cause=msg,
+                            probe_refs=(req_id,),
+                            trigger_condition=action_name,
+                            affected_scopes=(current_loc,),
+                            status="open",
+                        ))
+                    except Exception:
+                        pass
+                return {
+                    "success": False,
+                    "error_type": "KAGEYONI_REJECTION",
+                    "rejection_class": "HARD_INVARIANT_VIOLATION",
+                    "message": msg,
+                    "attempted_action": action_name,
+                    "scar_id": scar_id,
+                }
+
+            char_rec = next((r for r in records if r.get("domain") == "character" and r.get("id") == avatar_id), None)
+            if not char_rec:
+                return {
+                    "success": False,
+                    "error_type": "KAGEYONI_REJECTION",
+                    "rejection_class": "HARD_INVARIANT_VIOLATION",
+                    "message": f"Avatar character record '{avatar_id}' not found.",
+                    "attempted_action": action_name,
+                }
+
+            changes = [{
+                "op": "patch",
+                "id": avatar_id,
+                "domain": "character",
+                "expected_version": char_rec.get("version"),
+                "visibility": "public",
+                "data": {"location": destination},
+            }]
+
+            return self.attempt_action(
+                avatar_id=avatar_id,
+                request_id=f"enact-route-{uuid.uuid4().hex[:6]}",
+                narrative=f"Avatar '{avatar_id}' traverses route '{route_id}' to '{destination}'",
+                changes=changes,
+                action_name=action_name,
+            )
+
+        return {
+            "success": False,
+            "error_type": "KAGEYONI_REJECTION",
+            "rejection_class": "HARD_INVARIANT_VIOLATION",
+            "message": f"Affordance '{action_name}' has no registered enactment translator.",
+            "attempted_action": action_name,
+        }
+

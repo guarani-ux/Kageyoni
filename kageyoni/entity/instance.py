@@ -83,6 +83,23 @@ class EntityInstance:
                     confidence="HIGH",
                 ))
 
+        # Update available physical affordances into ActionHorizon
+        available = perceived_world.get("available_affordances", [])
+        if available:
+            self.state.action_horizon.update_actual(available)
+            for act in available:
+                if act not in self.state.action_horizon.blocked_actions:
+                    self.state.action_horizon.expand(act)
+
+        # Prune demonstrated negative constraints from ActionHorizon
+        for restricted in perceived_world.get("restricted_actions", []):
+            if restricted in self.state.action_horizon.believed_reachability:
+                loc = perceived_world.get("current_location") or "current_scope"
+                self.state.action_horizon.prune(
+                    restricted,
+                    f"Active negative constraint in {loc}",
+                )
+
     def reconcile_scars(self, current_context: dict[str, Any]) -> list[str]:
         """Re-evaluates active scars against current world context and restores invalidated affordances."""
         active_caps = list(self.spec.capability_model.active_capabilities.keys())
@@ -130,13 +147,13 @@ class EntityInstance:
         action = rejection.get("attempted_action", "unknown_action")
         curr_rev = self.state.revision_observed
 
-        scar_id = f"scar-{self.entity_id}-{uuid.uuid4().hex[:6]}"
+        scar_id = rejection.get("scar_id") or f"scar-{self.entity_id}-{uuid.uuid4().hex[:6]}"
         lesson = ""
         action_mutation: dict[str, Any] = {}
         inv_conds = list(invalidation_conditions or [])
         scar_scope = dict(scope or {})
 
-        if rejection_class == "HARD_INVARIANT_VIOLATION":
+        if rejection_class in ("HARD_INVARIANT_VIOLATION", "NEGATIVE_CONSTRAINT_VIOLATION"):
             lesson = f"Physical law invariant violated by '{action}' within scope {scar_scope}: {msg}"
             action_mutation = {"pruned_action": action, "requires_scope_invalidation": True}
             # Open semantic deficit to reframe approach
@@ -206,6 +223,103 @@ class EntityInstance:
 
     def reset_rejections(self) -> None:
         self.state.consecutive_rejections = 0
+
+    def encounter(self, gateway: Any, affordance: str) -> dict[str, Any]:
+        """
+        Closed-loop encounter step:
+        Directly collides intent against Ground through the Gateway.
+        1. Checks believed reachability (fails closed at epistemic membrane if unrepresented or blocked).
+        2. Enacts affordance directly against Ground via gateway.enact().
+        3. If Ground rejects, automatically metabolizes rejection into private epistemic state & scars.
+        4. If Ground accepts, reconciles perception and resets rejections.
+        """
+        # 1. Epistemic gate: fail closed if action is outside believed reachability
+        if affordance not in self.state.action_horizon.believed_reachability:
+            reason = self.state.action_horizon.blocked_actions.get(
+                affordance, f"Action '{affordance}' is outside believed reachability."
+            )
+            return {
+                "success": False,
+                "error_type": "EPISTEMIC_HORIZON_REJECTION",
+                "rejection_class": "NEGATIVE_CONSTRAINT_VIOLATION",
+                "message": reason,
+                "attempted_action": affordance,
+            }
+
+        # 2. Enact directly against Gateway
+        result = gateway.enact(self.entity_id, affordance)
+
+        # 3. Metabolize rejection or reconcile success
+        if not result.get("success"):
+            loc = self.state.perceived_world.get("current_location")
+            self.metabolize_rejection(
+                result,
+                scope={"location": loc} if loc else None,
+            )
+        else:
+            self.reconcile_perception(gateway.inspect_environment(self.entity_id))
+            self.reset_rejections()
+
+        return result
+
+    def select_affordance(self) -> Optional[str]:
+        """
+        Differentiates reachable affordances based on teleological alignment
+        with the CompletionContract and resolution of active KnowledgeDeficits.
+        """
+        reachable = sorted(list(self.state.action_horizon.believed_reachability))
+        if not reachable:
+            return None
+        if len(reachable) == 1:
+            return reachable[0]
+
+        situated = {
+            a["action_name"]: a for a in self.state.perceived_world.get("situated_affordances", [])
+        }
+
+        # 1. Target criteria from unmet CompletionContract conditions
+        target_locations = set()
+        if self.state.completion_contract:
+            for cond in self.state.completion_contract.required_conditions:
+                if cond.domain == "character" and cond.record_id == self.entity_id and cond.field_name == "location":
+                    target_locations.add(cond.expected_value)
+
+        # 2. Deficit targets
+        deficit_representations = {
+            d.impacted_representation for d in self.state.deficits if d.impacted_representation
+        }
+
+        def score(action_name: str) -> tuple[int, str]:
+            meta = situated.get(action_name, {})
+            dest = meta.get("destination")
+
+            # Tier 1: Direct CompletionCondition advance
+            if dest and dest in target_locations:
+                return (100, action_name)
+
+            # Tier 2: Deficit resolution / information seeking
+            if any(dr in action_name or (dest and dr in dest) for dr in deficit_representations):
+                return (50, action_name)
+
+            # Tier 3: Inert valid affordance
+            return (1, action_name)
+
+        ranked = sorted(reachable, key=score, reverse=True)
+        return ranked[0]
+
+    def step(self, gateway: Any) -> dict[str, Any]:
+        """
+        Autonomous encounter cycle:
+        Selects highest-relevance affordance and executes an encounter against Ground.
+        """
+        affordance = self.select_affordance()
+        if not affordance:
+            return {
+                "success": False,
+                "error_type": "NO_VIABLE_AFFORDANCE",
+                "message": "Action horizon contains no reachable affordances to select.",
+            }
+        return self.encounter(gateway, affordance)
 
     def serialize(self) -> dict[str, Any]:
         """Lossless round-trip serialization over the represented Entity schema."""

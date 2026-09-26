@@ -1,0 +1,40 @@
+{
+  "kernel": "playable-world/0.1",
+  "world_id": "levi-world-001",
+  "branch": "main",
+  "revision": 0,
+  "parent_revision": null,
+  "settings": {
+    "mode": "play",
+    "presentation": "chat",
+    "choice_limit": 4,
+    "voice_choice_limit": 2,
+    "target_reply_words": 180,
+    "external_actions": "require_current_authorization",
+    "background_progression": false,
+    "randomness": "declared_rule_and_roll_source"
+  },
+  "player": {
+    "id": "levi",
+    "name": "Levi",
+    "preferences": [],
+    "boundaries": []
+  },
+  "scene": {
+    "id": "threshold",
+    "title": "The Threshold",
+    "summary": "A new world. No imported history has been established.",
+    "source_experience": null,
+    "playable_interpretation": null
+  },
+  "goals": [],
+  "entities": [],
+  "relationships": [],
+  "claims": [],
+  "bridges": [],
+  "methods": [],
+  "residue": [],
+  "events": [],
+  "pending_actions": [],
+  "processed_requests": []
+}

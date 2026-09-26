@@ -1,0 +1,22 @@
+{
+  "snapshot_id": "a0-2f48c020",
+  "agent_id": "boundary_scout",
+  "genesis_mode": "IDENTICAL_GENESIS",
+  "objective": "Survey the threshold without crossing into unstable terrain",
+  "initial_horizon": [
+    "inspect",
+    "orient"
+  ],
+  "initial_techniques": [],
+  "initial_salience": {
+    "environmental_hazards": 0.35,
+    "physical_affordances": 0.25,
+    "social_presence": 0.15,
+    "unexplored_frontiers": 0.25
+  },
+  "authority_tier": 0,
+  "capabilities": [],
+  "relationship_state": "{}",
+  "code_config_digest": "747d59b80c1d8be9b1677b1de3b6dc2838086d287c86252da79299e3dd4464de",
+  "created_at": 1790446358.6698575
+}

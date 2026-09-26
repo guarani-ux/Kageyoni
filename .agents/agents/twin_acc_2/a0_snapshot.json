@@ -1,0 +1,22 @@
+{
+  "snapshot_id": "a0-b597c780",
+  "agent_id": "twin_acc_2",
+  "genesis_mode": "IDENTICAL_GENESIS",
+  "objective": "Mitigate catastrophic reactor containment collapse",
+  "initial_horizon": [
+    "inspect",
+    "orient"
+  ],
+  "initial_techniques": [],
+  "initial_salience": {
+    "environmental_hazards": 0.35,
+    "physical_affordances": 0.25,
+    "social_presence": 0.15,
+    "unexplored_frontiers": 0.25
+  },
+  "authority_tier": 0,
+  "capabilities": [],
+  "relationship_state": "{}",
+  "code_config_digest": "c75c2cba1ec6baf78193d80ffc61cc79ba1a5fbe769b8e05b7cd9321d31d454a",
+  "created_at": 1790449791.1424582
+}

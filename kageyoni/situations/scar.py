@@ -53,18 +53,27 @@ class ScarLedger:
         closed = close_scar(scar, reprobe_passed=reprobe_passed, positive_control_passed=positive_control_passed)
         return self.record_scar(closed)
 
-    def check_negative_constraints(self, failure_class: str, scope: str | None = None) -> bool:
-        """
-        Mechanically enforces negative constraints: returns True if an active (open)
-        scar exists matching failure_class and scope, preventing repeating demonstrated failures.
-        """
+    def get_active_scars(self, scope: str | None = None) -> list[Scar]:
+        """Returns all currently open scars matching the given scope (or all open scars if scope is None)."""
         scars = list(self._scars.values())
         if self.store is not None:
             for s in self.store.values("scar"):
                 if s.scar_id not in self._scars:
                     scars.append(s)
+        out = []
         for s in scars:
-            if s.status == "open" and s.failure_class == failure_class:
+            if s.status == "open":
                 if scope is None or not s.affected_scopes or scope in s.affected_scopes:
-                    return True
+                    out.append(s)
+        return out
+
+    def check_negative_constraints(self, failure_class: str, scope: str | None = None) -> bool:
+        """
+        Mechanically enforces negative constraints: returns True if an active (open)
+        scar exists matching failure_class and scope, preventing repeating demonstrated failures.
+        """
+        for s in self.get_active_scars(scope):
+            if s.failure_class == failure_class:
+                return True
         return False
+
