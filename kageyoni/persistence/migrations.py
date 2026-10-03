@@ -130,3 +130,14 @@ def install_situations(engine):
 
 def install_all(engine):
     install_situations(engine)
+
+SHINOBI_MIGRATION=schema_path('migration_024.sql')
+
+def install_shinobi(engine):
+    """Opt-in Kageyoni-Shinobi protocol storage on top of the full engine schema.
+
+    Deliberately not part of install_all(): existing campaign databases keep
+    their schema unless a Shinobi home explicitly installs this interface.
+    """
+    install_all(engine)
+    _install_component(engine,SHINOBI_MIGRATION,24,23,'shinobi_interface')
