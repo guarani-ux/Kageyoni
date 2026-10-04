@@ -1,0 +1,147 @@
+{
+  "scope": "synthetic mechanics and continuity, not model cognition or emergence",
+  "scenarios": {
+    "narrative": {
+      "baseline": {
+        "continuations": [
+          {
+            "loop_id": "promise",
+            "record_id": "promise"
+          }
+        ],
+        "guard": "sheltered",
+        "loops": {
+          "ability": {
+            "depends_on": [],
+            "kind": "defense",
+            "parent": null,
+            "phase": "resolved"
+          },
+          "consequence": {
+            "depends_on": [
+              "dialogue",
+              "ability"
+            ],
+            "kind": "departure",
+            "parent": null,
+            "phase": "resolved"
+          },
+          "dialogue": {
+            "depends_on": [],
+            "kind": "offer",
+            "parent": null,
+            "phase": "resolved"
+          },
+          "promise": {
+            "depends_on": [],
+            "kind": "relationship",
+            "parent": null,
+            "phase": "detached"
+          }
+        },
+        "outcome": "achieved",
+        "phase": "completed"
+      },
+      "candidate": {
+        "continuations": [
+          {
+            "loop_id": "promise",
+            "record_id": "promise"
+          }
+        ],
+        "guard": "sheltered",
+        "loops": {
+          "ability": {
+            "depends_on": [],
+            "kind": "defense",
+            "parent": null,
+            "phase": "resolved"
+          },
+          "consequence": {
+            "depends_on": [
+              "dialogue",
+              "ability"
+            ],
+            "kind": "departure",
+            "parent": null,
+            "phase": "resolved"
+          },
+          "dialogue": {
+            "depends_on": [],
+            "kind": "offer",
+            "parent": null,
+            "phase": "resolved"
+          },
+          "promise": {
+            "depends_on": [],
+            "kind": "relationship",
+            "parent": null,
+            "phase": "detached"
+          }
+        },
+        "outcome": "achieved",
+        "phase": "completed"
+      },
+      "same_behavior": true
+    },
+    "research_retraction": {
+      "baseline": {
+        "child": true,
+        "grandchild": true,
+        "root": true,
+        "unrelated": false
+      },
+      "candidate": {
+        "child": true,
+        "grandchild": true,
+        "root": true,
+        "unrelated": false
+      },
+      "same_behavior": true
+    },
+    "production_approval": {
+      "baseline": {
+        "approved": "STALE",
+        "status": "STALE"
+      },
+      "candidate": {
+        "approved": "STALE",
+        "status": "STALE"
+      },
+      "same_behavior": true
+    },
+    "participant_continuity": {
+      "baseline": {
+        "dialogue": 1,
+        "same_identity": true
+      },
+      "candidate": {
+        "dialogue": 1,
+        "same_identity": true
+      },
+      "same_behavior": true
+    },
+    "situation_continuation": {
+      "baseline": {
+        "objective": "launch",
+        "resumed": "active",
+        "waiting": "waiting"
+      },
+      "candidate": {
+        "objective": "launch",
+        "resumed": "active",
+        "waiting": "waiting"
+      },
+      "same_behavior": true
+    },
+    "ledger_outer_rollback": {
+      "baseline": {
+        "remaining_records": 1
+      },
+      "candidate": {
+        "remaining_records": 0
+      },
+      "same_behavior": false
+    }
+  }
+}

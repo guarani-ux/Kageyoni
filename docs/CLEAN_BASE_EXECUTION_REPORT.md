@@ -3,9 +3,9 @@
 Date: 2026-10-04 UTC. Source baseline: `c7a6f8dc595b3acada63a9cb4693dbf2b55c7784`.
 Review branch: `codex/consolidate-existing-capabilities`. Main is not changed by this work.
 
-**Result: selected consolidation mechanisms implemented and demonstrated; whole-system clean-base acceptance remains incomplete.** Thirty pre-existing checks still fail in this environment. These changes establish internal mechanics, not independent cognition, emergence, or an operating rank.
+**Result: selected consolidation mechanisms implemented and demonstrated; whole-system clean-base acceptance remains incomplete.** Latest exact-input verification: 927 passed, 22 pre-existing checks failed, and zero new failing IDs. The matched baseline reports 887 passed and 41 failed. The installed wheel also preserves existing rows when upgrading a copy of the authentic historical fixture. These changes establish internal mechanics, not independent cognition, emergence, or an operating rank.
 
-## Evidence and scope
+## Original verification checkpoint and scope
 
 | Check | Baseline | Candidate |
 | --- | --- | --- |
@@ -97,3 +97,46 @@ All 30 IDs also failed before changes; the structured test comparison lists each
 B0 is incomplete for binary/canonical inputs. B1/B2 are demonstrated within tested graph scope. B3/B4 are demonstrated for the issued internal encounter path; no host-cognition claim follows. B5 is demonstrated for store-backed situations and existing participant continuity. B6/B7 are completed only for the selected services and proven internal redundancies. B8 has a comparison/report and installed-package evidence, but whole-system acceptance remains blocked by the failures above and unverified external-effect/host paths.
 
 The next work is to recover authentic required inputs and diagnose the three blocked coupling checks, then rerun the same recorded suite and remaining B8 boundaries. Do not manufacture fixtures, reinterpret a blocked result as success, or assign a rank from the passing component tests.
+
+
+## Verification follow-up
+
+The follow-up repairs portable source-root discovery in the emergence engine and carrier dispatcher, and portable character-root discovery in hydration. Explicit caller-supplied paths remain supported. The canonical `data/SAVE.json` was present in GitHub: its five failing checks were caused by a hard-coded Windows path, not a missing save. That earlier diagnosis is corrected here.
+
+The GitHub verification workflow now installs its test/build dependencies, uses recursive pytest collection (including existing pytest-style tests and nested suites), and retains raw output. Mutation sensitivity, refusal of unsupported R5/R6 self-certification, distribution building and an installed-package behavioral probe are run even if the full suite fails. Uploading evidence is not a qualification verdict. Original failures remain failures; none is hidden with skips or replaced historical state.
+
+The first follow-up local run reports 949 cases: 925 passed, 24 failed, with zero new failing IDs relative to the original baseline. The focused changed-code suite reports 34 passing checks. Paired scenarios still preserve the five recorded behaviors and demonstrate the repaired outer-ledger rollback. The wheel installs outside the checkout and passes migration, dispatch/retry, durable situation and engine verification checks. The mutation probe detects all four injected invalid states, and R5/R6 refuse self-certification.
+
+The first GitHub run failed because its previous workflow omitted pytest and setuptools, used unittest discovery that could not execute the pytest suites, and encountered the recorded unavailable inputs. Its full job output was inspected. The repaired workflow recovered the two authentic historical SQLite files already tracked by GitHub. Both match their original main Git blob SHAs exactly. Additional historical recovery snapshots, private character state, the actual recalled campaign scene, and `ichimonji/engine_core.mjs` have not been recovered; coupling is blocked at that missing carrier, rather than at its repaired SQL path.
+
+Evidence from this follow-up is retained under `evidence/clean_base/verification-followup-*`. Main remains unchanged while whole-system acceptance is incomplete.
+
+
+### Completed exact-input comparison
+
+| Check | Original code | Updated code |
+| --- | --- | --- |
+| Full recursive collection with recovered historical fixtures and exact original SQL bytes | 928 cases: 887 passed, 41 failed | 949 cases: 927 passed, 22 failed |
+| New failing IDs | — | 0 |
+| Resolved original failing IDs | — | 19 |
+| Additional boundary/regression cases | — | 21, all pass |
+| GitHub full checkout, run 37168713010 | Not rerun remotely | 927 passed, 22 failed; matches local candidate |
+| GitHub build, mutation sensitivity, R5/R6 refusal and isolated installed behavior | Not measured | All pass |
+| Installed authentic historical upgrade | Not measured | Existing non-version rows/columns retained; engine verification passes |
+
+The downloaded text snapshot had one extra trailing newline on each original SQL file. Once authentic historical databases were recovered, checksum validation correctly refused two local upgrade checks. All 24 original SQL files were restored from the GitHub-produced source distribution only after verifying their Git blob SHAs against main. These are restored original bytes, not rewritten historical migrations. Earlier local runs remain recorded; the exact-input comparison supersedes their migration evidence. Locally generated seed databases created with the altered text snapshot were moved aside, preserving them as diagnostic fixtures. No private or canonical character history was fabricated or overwritten.
+
+The two historical fixture files still have their original SHA-256 digests after the tests. The optional historical input to the installed-package probe is copied into a disposable directory; the original is never opened for mutation. The probe checks the installed migrations through 025, retained original rows/columns, engine integrity, a fresh issued action/retry and durable situation continuation. It does not certify every older database, canonical campaign recovery, independent cognition or external-effect atomicity.
+
+The remaining 22 failures are:
+
+| Required input | Failed cases | Finding |
+| --- | ---: | --- |
+| Earlier recovery snapshots | 11 | Required `pre-character`, `pre-decisions`, `pre-personality`, `legacy-personality-pending`, `pre-writing`, `pre-v2-methods`, `pre-v3-learning` and `pre-v4-v8` files were not recovered |
+| Private character history | 4 | Sciel/Voss/Maki state required by the hydration tests is not in GitHub |
+| Actual recalled campaign scene | 5 | `lucretia-voss-recall-scene` is absent from the accessible seed and both recovered historical fixtures |
+| Ichimonji carrier | 2 | `engine_core.mjs` is absent; participant-coupling progression remains blocked at round 4 |
+
+Repository tree/history queries for the carrier, character state and representative recovery/campaign paths returned no files/commits; no release assets were available. Available historical workflow artifacts did not contain these inputs. No skips, authored replacement histories, or assumed success results were introduced. Restoring these inputs would require authentic additional project state, not a label change in the tests.
+
+The verified consolidation is on the review branch. Whole-system clean-base acceptance and main integration remain blocked by these explicit failures. Evidence: `verification-exact-comparison.json`, both exact full-run logs, `verification-exact-sql.json`, recovered-input hashes, GitHub run logs and installed-package output in `evidence/clean_base/`.

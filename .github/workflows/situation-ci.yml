@@ -63,19 +63,19 @@ jobs:
         if: ${{ always() }}
         run: |
           set -o pipefail
-          python tools/verify_clean_base_install.py dist/*.whl 2>&1 | tee evidence/clean_base/github-installed-wheel.txt
+          python tools/verify_clean_base_install.py dist/*.whl --historical-db fixtures/historical/personality-fixture.sqlite 2>&1 | tee evidence/clean_base/github-installed-wheel.txt
       - name: Record exact candidate SHA
         if: ${{ always() }}
         run: |
           mkdir -p evidence
-          printf '%s\n' "$GITHUB_SHA" > evidence/qualified-candidate-sha.txt
+          printf '%s\n' "$GITHUB_SHA" > evidence/verification-candidate-sha.txt
       - uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: kageyoni-v11-verification-evidence
           path: |
             dist/*
-            evidence/qualified-candidate-sha.txt
+            evidence/verification-candidate-sha.txt
             evidence/clean_base/github-*.txt
             fixtures/historical/*.sqlite
           if-no-files-found: error

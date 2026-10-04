@@ -1,0 +1,12 @@
+..................................                                       [100%]
+=============================== warnings summary ===============================
+kageyoni/emergence/models.py:118
+  /workspace/scratch/473144ed8f0b/Kageyoni/kageyoni/emergence/models.py:118: PytestCollectionWarning: cannot collect test class 'TestSpec' because it has a __init__ constructor (from: tests/test_emergence.py)
+    @dataclass
+
+kageyoni/emergence/models.py:27
+  /workspace/scratch/473144ed8f0b/Kageyoni/kageyoni/emergence/models.py:27: PytestCollectionWarning: cannot collect test class 'TestStatus' because it has a __init__ constructor (from: tests/test_emergence.py)
+    class TestStatus(str, Enum):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+34 passed, 2 warnings in 4.04s

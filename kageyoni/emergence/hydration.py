@@ -15,7 +15,7 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-DEFAULT_CHARACTERS_ROOT = Path("C:/Kageyoni/shinobi/.state/characters")
+DEFAULT_CHARACTERS_ROOT = Path(__file__).resolve().parents[2] / "shinobi" / ".state" / "characters"
 
 
 @dataclass
@@ -177,3 +177,4 @@ def hydrate_all_participants(
         except FileNotFoundError:
             pass
     return packets
+

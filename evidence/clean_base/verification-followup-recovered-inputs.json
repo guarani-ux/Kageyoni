@@ -1,0 +1,20 @@
+{
+  "run_id": 37168713010,
+  "artifact_id": 11290084144,
+  "candidate_sha": "faa8df07760150695c5477c1b2a24d0cdb5a5ad9",
+  "source": "GitHub checkout via Actions artifact; both database bytes match original main Git blob SHAs",
+  "files": [
+    {
+      "path": "fixtures/historical/personality-fixture.sqlite",
+      "git_blob_sha": "b727e89c64e0ab919723ae9820b8211865d17d2d",
+      "sha256": "030069a0325f798cb6349f0ccf0f77e4d3d4a35706d3525fccdc535002096d26",
+      "size": 1531904
+    },
+    {
+      "path": "fixtures/historical/writing-fixture.sqlite",
+      "git_blob_sha": "1afa10667c7cff10afcc19579974e3d60edb4128",
+      "sha256": "bae48def3b0e34da4ad7241937c21b1626c1ee45116f506893588f7a6a9e2728",
+      "size": 1605632
+    }
+  ]
+}

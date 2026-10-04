@@ -1,0 +1,95 @@
+.......................F........FF.                                      [100%]
+=================================== FAILURES ===================================
+_ RecoveryTests.test_historical_upgrade_preserves_tables_and_decision_fingerprint _
+
+self = <test_foundation.RecoveryTests testMethod=test_historical_upgrade_preserves_tables_and_decision_fingerprint>
+
+    def test_historical_upgrade_preserves_tables_and_decision_fingerprint(self):
+        import shutil
+        from kageyoni.application import Application
+        from kageyoni.decisions import fingerprint
+        from kageyoni.resources import fixture_path
+        with tempfile.TemporaryDirectory() as temp:
+>           p=Path(temp)/'previous.sqlite';shutil.copy2(fixture_path('personality-fixture.sqlite'),p)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_foundation.py:207: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'personality-fixture.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'personality-fixture.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/personality-fixture.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/personality-fixture.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+____________ TestCharacterHydration.test_hydrate_sciel_exact_state _____________
+
+self = <test_character_hydration.TestCharacterHydration testMethod=test_hydrate_sciel_exact_state>
+
+    def test_hydrate_sciel_exact_state(self):
+>       packet = hydrate_character_from_disk("sciel")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_character_hydration.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+character_id = 'sciel', characters_root = None
+
+    def hydrate_character_from_disk(
+        character_id: str,
+        characters_root: Optional[Path] = None
+    ) -> HydratedCharacterPacket:
+        """
+        Hydrates a participant directly from their persistent SQLite database.
+        Raises FileNotFoundError if the database does not exist.
+        """
+        root = characters_root or DEFAULT_CHARACTERS_ROOT
+        db_path = root / character_id / "kageyoni.sqlite"
+        if not db_path.exists():
+>           raise FileNotFoundError(f"Character database not found at {db_path}")
+E           FileNotFoundError: Character database not found at /workspace/scratch/473144ed8f0b/Kageyoni/shinobi/.state/characters/sciel/kageyoni.sqlite
+
+kageyoni/emergence/hydration.py:79: FileNotFoundError
+______________ TestCharacterHydration.test_hydrate_voss_and_maki _______________
+
+self = <test_character_hydration.TestCharacterHydration testMethod=test_hydrate_voss_and_maki>
+
+    def test_hydrate_voss_and_maki(self):
+>       voss = hydrate_character_from_disk("voss")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_character_hydration.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+character_id = 'voss', characters_root = None
+
+    def hydrate_character_from_disk(
+        character_id: str,
+        characters_root: Optional[Path] = None
+    ) -> HydratedCharacterPacket:
+        """
+        Hydrates a participant directly from their persistent SQLite database.
+        Raises FileNotFoundError if the database does not exist.
+        """
+        root = characters_root or DEFAULT_CHARACTERS_ROOT
+        db_path = root / character_id / "kageyoni.sqlite"
+        if not db_path.exists():
+>           raise FileNotFoundError(f"Character database not found at {db_path}")
+E           FileNotFoundError: Character database not found at /workspace/scratch/473144ed8f0b/Kageyoni/shinobi/.state/characters/voss/kageyoni.sqlite
+
+kageyoni/emergence/hydration.py:79: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_foundation.py::RecoveryTests::test_historical_upgrade_preserves_tables_and_decision_fingerprint
+FAILED tests/test_character_hydration.py::TestCharacterHydration::test_hydrate_sciel_exact_state
+FAILED tests/test_character_hydration.py::TestCharacterHydration::test_hydrate_voss_and_maki
+3 failed, 32 passed in 3.34s

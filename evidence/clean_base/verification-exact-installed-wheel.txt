@@ -1,0 +1,1 @@
+{"status": "pass", "scope": "installed migrations 002-025, issued dispatch/retry, durable situation, engine verification", "historical_existing_rows_preserved": true, "package": "/tmp/tmpqrgbw316/environment/lib/python3.12/site-packages/kageyoni/__init__.py"}
