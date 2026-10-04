@@ -10,6 +10,8 @@ SERVICES = {
     'operations': {'status','settings','export_bundle','import_bundle','migrate_copy','propose_policy','trial_policy','activate_policy','rollback_policy'},
     'genesis': {'introduce','read'},
     'encounters': {'define','start','inspect','act'},
+    'encounter_actions': {'prepare','dispatch'},
+    'situations': {'genesis','snapshot','bind_workflow'},
     'workspaces': {'open','read','list'},
     'transitions': {'enter','read','return_to_world','recover'},
     'documents': {'ingest','acquire_file','world_source','source','inquire','decompose','checked_candidates','draft','read'},
@@ -32,7 +34,10 @@ def dispatch(engine, data):
     service=data.get('service','operations'); action=data.get('action','status'); arguments=data.get('arguments',{})
     require(service in SERVICES and action in SERVICES[service],'unsupported service/action')
     require(type(arguments) is dict,'arguments must be an object')
-    return getattr(getattr(Application(engine),service),action)(**arguments)
+    result = getattr(getattr(Application(engine),service),action)(**arguments)
+    if hasattr(result, 'to_dict'): return result.to_dict()
+    from dataclasses import is_dataclass, asdict
+    return asdict(result) if is_dataclass(result) else result
 
 def describe(engine, service, action):
     require(service in SERVICES and action in SERVICES[service],'unsupported service/action')
@@ -91,3 +96,4 @@ def main(argv=None):
     finally: engine.close()
 
 if __name__=='__main__':main()
+

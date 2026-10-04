@@ -21,6 +21,17 @@ WORKFLOWS = (
 )
 
 def install_defaults(service):
-    for template in TEMPLATES: service.register_template(template)
-    for workflow in WORKFLOWS: service.register_workflow(workflow)
+    from .service import SituationError
+    for kind, records, definitions, register in (
+        ('template', service.templates, TEMPLATES, service.register_template),
+        ('workflow', service.workflows, WORKFLOWS, service.register_workflow),
+    ):
+        for definition in definitions:
+            key = getattr(definition, kind + '_id')
+            if key in records:
+                if records[key] != definition:
+                    raise SituationError('stored ' + kind + ' conflicts with default: ' + key)
+            else:
+                register(definition)
     return service
+

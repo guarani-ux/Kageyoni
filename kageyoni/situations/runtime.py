@@ -1,4 +1,5 @@
 from __future__ import annotations
+from .storage import StoreView
 from dataclasses import dataclass, field
 from typing import Any
 from .service import SituationError, SituationService
@@ -28,11 +29,11 @@ class EvolutionProposal:
 
 class SituationRuntime:
     def __init__(self,service:SituationService,evidence_resolver=None,mediator=None,*,test_mode=False):
-        self.service=service; self.runs={}; self.extensions={}; self.evolution={}; self.evidence_resolver=evidence_resolver; self.mediator=mediator; self.test_mode=test_mode
+        self.service=service; self.runs=StoreView(service.store,"workflow_run"); self.extensions=StoreView(service.store,"extension"); self.evolution=StoreView(service.store,"evolution"); self.evidence_resolver=evidence_resolver; self.mediator=mediator; self.test_mode=test_mode
         if not test_mode and mediator is None: raise SituationError("production SituationRuntime requires v11 mediator")
 
     def _run(self,run_id):
-        return self.runs.get(run_id) or self.service.store.get("workflow_run",run_id)
+        return self.runs[run_id]
 
     def start(self,run:WorkflowRun):
         # Negative constraint check: block start if active open scar matches authority
@@ -49,13 +50,13 @@ class SituationRuntime:
             except Exception:
                 pass
 
-        s=self.service.situations.get(run.situation_id) or self.service.store.get("situation",run.situation_id)
+        s=self.service.situations[run.situation_id]
         if s.workflow_id!=run.workflow_id: raise SituationError("workflow not bound to situation")
         if run.parent_run_id:
             p=self._run(run.parent_run_id)
             if run.objective!=p.objective: raise SituationError("child workflow cannot replace parent objective")
             if not set(run.authority).issubset(p.authority): raise SituationError("child workflow cannot expand authority")
-        self.runs[run.run_id]=run; self.service.store.put("workflow_run",run.run_id,run)
+        self.runs[run.run_id]=run
 
     def wait(self,run_id,resume_condition):
         if not resume_condition: raise SituationError("waiting requires resume condition")
@@ -80,7 +81,7 @@ class SituationRuntime:
     def complete_workflow(self,run_id,*,outcome_refs=()):
         run=self._run(run_id); run.status="completed"; self.service.store.put("workflow_run",run.run_id,run)
         from .memory import SituationMemory
-        s=self.service.situations.get(run.situation_id) or self.service.store.get("situation",run.situation_id)
+        s=self.service.situations[run.situation_id]
         mem=SituationMemory(
             memory_id=f"exp:{run.situation_id}:{run.run_id}",
             situation_id=run.situation_id,
@@ -97,7 +98,7 @@ class SituationRuntime:
         run=self._run(run_id)
         if run.status!="waiting": raise SituationError("only waiting workflow can resume")
         if not condition_satisfied: raise SituationError("resume condition not satisfied")
-        run.status="active"; run.resume_condition=None; self.runs[run.run_id]=run; self.service.store.put("workflow_run",run.run_id,run)
+        run.status="active"; run.resume_condition=None; self.runs[run.run_id]=run
 
     def begin_effectful_stage(self,run_id,stage_id,*,requirement_version="situation.v1"):
         if self.mediator is None: raise SituationError("effectful stage requires v11 mediator")
@@ -114,7 +115,7 @@ class SituationRuntime:
         return completed
 
     def complete_stage(self,run_id,stage_id,evidence_ref):
-        run=self._run(run_id); workflow=self.service.workflows.get(run.workflow_id) or self.service.store.get("workflow",run.workflow_id)
+        run=self._run(run_id); workflow=self.service.workflows[run.workflow_id]
         stage=next(x for x in workflow.stages if x.stage_id==stage_id)
         if any(req not in run.completed_stages for req in stage.requires): raise SituationError("stage dependency incomplete")
         if not evidence_ref or self.evidence_resolver is None or not self.evidence_resolver(evidence_ref,run): raise SituationError("stage completion requires engine-resolved evidence")
@@ -124,19 +125,19 @@ class SituationRuntime:
     def propose_extension(self,p):
         if p.scope!="local": raise SituationError("extensions begin local")
         if not self.service.store.contains("situation",p.situation_id): raise SituationError("unknown situation")
-        self.extensions[p.extension_id]=p; self.service.store.put("extension",p.extension_id,p)
+        self.extensions[p.extension_id]=p
 
     def promote_extension(self,extension_id,repeated_outcome_refs):
-        p=self.extensions.get(extension_id) or self.service.store.get("extension",extension_id)
+        p=self.extensions[extension_id]
         if len(set(repeated_outcome_refs))<2: raise SituationError("promotion requires repeated consequential evidence")
         if self.evidence_resolver is None or any(not self.evidence_resolver(ref,None) for ref in repeated_outcome_refs): raise SituationError("promotion evidence must resolve through engine custody")
-        s=self.service.situations.get(p.situation_id) or self.service.store.get("situation",p.situation_id)
+        s=self.service.situations[p.situation_id]
         return EvolutionProposal("promote:"+extension_id,"template",s.template_id,p.payload,repeated_outcome_refs,"qualified")
 
     def propose_evolution(self,p):
         if not p.outcome_refs: raise SituationError("evolution requires observed outcomes")
         if self.evidence_resolver is None or any(not self.evidence_resolver(ref,None) for ref in p.outcome_refs): raise SituationError("evolution evidence must resolve through engine custody")
-        self.evolution[p.proposal_id]=p; self.service.store.put("evolution",p.proposal_id,p)
+        self.evolution[p.proposal_id]=p
 
     def recruit(self,situation_id,candidates,unresolved):
         if not unresolved: return []
@@ -147,6 +148,7 @@ class SituationRuntime:
         return useful
 
     def collide(self,projection_ids):
-        ps=[self.service.projections.get(x) or self.service.store.get("projection",x) for x in projection_ids]
+        ps=[self.service.projections[x] for x in projection_ids]
         fg=[set(p.foreground) for p in ps]; shared=set.intersection(*fg) if fg else set()
         return {"shared":sorted(shared),"distinct":[sorted(x-shared) for x in fg],"redundant":bool(ps) and all(x==fg[0] for x in fg)}
+

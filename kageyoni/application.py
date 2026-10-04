@@ -42,6 +42,16 @@ class Application:
         return Encounters(self.engine)
 
     @property
+    def encounter_actions(self):
+        from .emergence.action_dispatcher import EncounterActionDispatcher
+        return EncounterActionDispatcher(self.engine, self.encounters)
+
+    @property
+    def situations(self):
+        from .situations.integration import KageyoniSituationAdapter
+        return KageyoniSituationAdapter(self.engine).service()
+
+    @property
     def workspaces(self):
         from .workspaces.registry import Registry
         return Registry(self.engine)

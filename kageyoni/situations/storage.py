@@ -1,14 +1,32 @@
 from __future__ import annotations
 import json
+from copy import deepcopy
+from collections.abc import MutableMapping
 from dataclasses import asdict, is_dataclass
+from ..persistence.unit_of_work import UnitOfWork
+
+class StoreView(MutableMapping):
+    """Compatibility mapping over one store, with no independently writable cache.
+
+    Retrieved records are snapshots. Assign a modified record to persist it.
+    Deletion is intentionally unsupported; this adapter cannot erase history.
+    """
+    def __init__(self, store, kind): self.store, self.kind = store, kind
+    def __getitem__(self, key): return self.store.get(self.kind, key)
+    def __setitem__(self, key, value): self.store.put(self.kind, key, value)
+    def __delitem__(self, key): raise TypeError('record deletion is unsupported')
+    def __iter__(self): return iter(self.store.keys(self.kind))
+    def __len__(self): return len(self.store.keys(self.kind))
+    def __contains__(self, key): return self.store.contains(self.kind, key)
 
 class MemorySituationStore:
     """Test double only. Production should use SQLiteSituationStore."""
     def __init__(self): self.data={}
-    def put(self,kind,key,value): self.data.setdefault(kind,{})[key]=value
-    def get(self,kind,key): return self.data[kind][key]
+    def put(self,kind,key,value): self.data.setdefault(kind,{})[key]=deepcopy(value)
+    def get(self,kind,key): return deepcopy(self.data[kind][key])
     def contains(self,kind,key): return key in self.data.get(kind,{})
-    def values(self,kind): return list(self.data.get(kind,{}).values())
+    def values(self,kind): return deepcopy(list(self.data.get(kind,{}).values()))
+    def keys(self,kind): return sorted(self.data.get(kind,{}))
 
 def default_decoders():
     from .models import Situation, SituationTemplate, Workflow, WorkflowStage, DomainProjection
@@ -37,7 +55,11 @@ class SQLiteSituationStore:
 
     def put(self,kind,key,value):
         payload=asdict(value) if is_dataclass(value) else value
-        self.conn.execute("INSERT INTO situation_records(kind,record_key,payload_json) VALUES(?,?,?) ON CONFLICT(kind,record_key) DO UPDATE SET payload_json=excluded.payload_json",(kind,key,json.dumps(payload,sort_keys=True)))
+        with UnitOfWork(self.conn):
+            self.conn.execute("INSERT INTO situation_records(kind,record_key,payload_json) VALUES(?,?,?) ON CONFLICT(kind,record_key) DO UPDATE SET payload_json=excluded.payload_json",(kind,key,json.dumps(payload,sort_keys=True)))
+
+    def keys(self,kind):
+        return [row[0] for row in self.conn.execute("SELECT record_key FROM situation_records WHERE kind=? ORDER BY record_key", (kind,))]
 
     def get(self,kind,key):
         row=self.conn.execute("SELECT payload_json FROM situation_records WHERE kind=? AND record_key=?",(kind,key)).fetchone()
