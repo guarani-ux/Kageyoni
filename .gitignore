@@ -19,3 +19,10 @@ recovery/
 
 **/.state/
 *.lock
+
+
+# Restored verification inputs are generated from tracked lossless archives.
+fixtures/historical/campaign-v11.sqlite
+fixtures/historical/recovery/*.sqlite
+!fixtures/historical/recovery/
+!fixtures/historical/recovery/*.sqlite.gz

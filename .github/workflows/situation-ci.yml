@@ -23,6 +23,9 @@ jobs:
           test -f kageyoni/v11/runtime.py
           test -f kageyoni/workspaces/pipeline.py
           test -f tests/test_v11.py
+      - name: Prepare byte-verified historical fixtures
+        run: |
+          python tools/prepare_verification_fixtures.py
       - name: Run complete test suite
         run: |
           mkdir -p evidence/clean_base

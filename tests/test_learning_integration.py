@@ -11,6 +11,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from examples.v3_demo import run
+from kageyoni.resources import fixture_path
 from kageyoni.application import Application
 from kageyoni.engine import Engine, Rejected
 from kageyoni.persistence.unit_of_work import UnitOfWork
@@ -147,7 +148,7 @@ class LearningMigrationTests(unittest.TestCase):
     def test_v2_campaign_migration_preserves_existing_rows_and_pending_decisions(self):
         from kageyoni.decisions import fingerprint
         from kageyoni.engine import encoded
-        source = Path(__file__).resolve().parents[1] / 'recovery/pre-v3-learning.sqlite'
+        source = fixture_path('recovery/pre-v3-learning.sqlite')
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / 'campaign.sqlite'
             shutil.copy2(source, path)
@@ -170,3 +171,4 @@ class LearningMigrationTests(unittest.TestCase):
                 self.assertTrue(engine.verify()['ok'])
             finally:
                 engine.close()
+

@@ -5,11 +5,12 @@ import unittest
 from pathlib import Path
 
 from kageyoni.engine import Engine, Rejected
+from kageyoni.resources import fixture_path
 from kageyoni.persistence.migrations import install_composition
 from kageyoni.composition import Compiler, CompositionRegistry, EngineAspectAdapter, ResolutionGovernor
 
 ROOT = Path(__file__).resolve().parents[2]
-BASE_DB = ROOT / 'build' / 'kageyoni.sqlite'
+BASE_DB = fixture_path('campaign-v11.sqlite')
 
 
 class CompositionIntegrationTests(unittest.TestCase):
@@ -104,3 +105,4 @@ class CompositionIntegrationTests(unittest.TestCase):
 
 
 if __name__=='__main__': unittest.main()
+

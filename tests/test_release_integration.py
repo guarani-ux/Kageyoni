@@ -9,6 +9,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+from kageyoni.resources import fixture_path
 from kageyoni.application import Application
 from kageyoni.engine import Engine, encoded
 from kageyoni.persistence import migrations
@@ -20,7 +21,7 @@ class ReleaseIntegrationTests(unittest.TestCase):
         root=Path(__file__).resolve().parents[1]
         with tempfile.TemporaryDirectory() as temp:
             path=Path(temp)/'campaign.sqlite'
-            shutil.copy2(root/'recovery/pre-v4-v8.sqlite',path)
+            shutil.copy2(fixture_path('recovery/pre-v4-v8.sqlite'),path)
             engine=Engine(path)
             try:
                 names=[r[0] for r in engine.db.execute("SELECT name FROM sqlite_master WHERE type='table'") if r[0] not in ('engine_versions','migration_checks')]
@@ -99,3 +100,4 @@ install_all(engine)
                 with patch('kageyoni.console.menu') as menu:
                     app.daily();menu.assert_called_once_with(app.session.engine)
             finally:app.session.close()
+

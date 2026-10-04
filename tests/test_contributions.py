@@ -8,6 +8,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+from kageyoni.resources import fixture_path
 from kageyoni.engine import Engine, Rejected
 from kageyoni.application import Application
 from kageyoni.persistence.unit_of_work import UnitOfWork
@@ -87,7 +88,7 @@ with UnitOfWork(e.db):
     def test_installed_v1_upgrade_preserves_node_and_world(self):
         import shutil
         p=self.root/'v1.sqlite'
-        origin=Path(__file__).resolve().parents[1]/'recovery/pre-v2-methods.sqlite'
+        origin=fixture_path('recovery/pre-v2-methods.sqlite')
         shutil.copy2(origin,p);e=Engine(p)
         try:
             app=Application(e);before=app.nodes.read('main','sciel')
@@ -128,3 +129,4 @@ class V2MigrationTests(unittest.TestCase):
                 e.db.execute("UPDATE migration_checks SET checksum='bad' WHERE version=10")
                 with self.assertRaises(Rejected):Application(e,migrate_methods=True)
             finally:e.close()
+

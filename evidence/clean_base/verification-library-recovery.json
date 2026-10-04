@@ -1,0 +1,38 @@
+{
+  "archive": "Kageyoni-Writing-Engine-v8-First-Fruiting.zip",
+  "library_file_id": "libfile_e72de37658dc819187926c64bbdcd5e3",
+  "archive_sha256": "7f51f43a8f8c197d4f41fbeebc433b842fd56e8da1c43875c99c13c91f3c3efd",
+  "scope": "Copies of authentic archived recovery test inputs; no current canonical database overwritten",
+  "files": [
+    {
+      "path": "fixtures/historical/recovery/pre-character-v1.sqlite",
+      "archive_member": "kageyoni-local-dev/build/recovery/pre-character-v1.sqlite",
+      "sha256": "2efc718cc7c8441636dc9ec85f80bb1159b322401a58eef8422f94e41dc37245",
+      "size": 1179648
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-decisions-v1.sqlite",
+      "archive_member": "kageyoni-local-dev/build/recovery/pre-decisions-v1.sqlite",
+      "sha256": "925557a8e1c66514f87fab2123ce8fb594a6b7b1e7c78f258cea9f88f70c2145",
+      "size": 1224704
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-personality-v1.sqlite",
+      "archive_member": "kageyoni-local-dev/build/recovery/pre-personality-v1.sqlite",
+      "sha256": "88786e40f1cd15f69bd70a01f9783eaf011fd3543d7289bec5d759f9f363bd80",
+      "size": 1232896
+    },
+    {
+      "path": "fixtures/historical/recovery/legacy-personality-pending.sqlite",
+      "archive_member": "kageyoni-local-dev/build/recovery/legacy-personality-pending.sqlite",
+      "sha256": "a3e24ff632246a279a7144849e4da09954b6f9e5e915cd96a0a13c77896f8129",
+      "size": 1232896
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-writing-v1.sqlite",
+      "archive_member": "kageyoni-local-dev/build/recovery/pre-writing-v1.sqlite",
+      "sha256": "e1bcd8d8a24cac73b9d36b92070a3d8450315315f32f5af90476293f2e1bbc77",
+      "size": 1265664
+    }
+  ]
+}

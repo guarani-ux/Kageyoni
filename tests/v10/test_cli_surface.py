@@ -7,8 +7,8 @@ from kageyoni.console import dispatch, SERVICES
 ROOT=Path(__file__).resolve().parents[2]
 class CLISurfaceTests(unittest.TestCase):
   def setUp(self):
-    from kageyoni.resources import campaign_db_path
-    self.tmp=tempfile.TemporaryDirectory(); self.db=Path(self.tmp.name)/'db.sqlite';shutil.copy2(campaign_db_path(),self.db)
+    from kageyoni.resources import fixture_path
+    self.tmp=tempfile.TemporaryDirectory(); self.db=Path(self.tmp.name)/'db.sqlite';shutil.copy2(fixture_path('campaign-v11.sqlite'),self.db)
     self.engine=Engine(self.db);install_composition(self.engine)
   def tearDown(self): self.engine.close();self.tmp.cleanup()
   def test_simulation_service_is_allowlisted(self):
@@ -32,3 +32,4 @@ class CLISurfaceTests(unittest.TestCase):
   def test_compile_scene_through_shared_dispatch(self):
     result=dispatch(self.engine,{'service':'simulation','action':'compile_scene','arguments':{'scene_id':'lucretia-voss-recall-scene','participant_ids':['sciel']}})
     self.assertTrue(result['result']['runnable'])
+

@@ -1,0 +1,106 @@
+{
+  "scope": "Frozen noncanonical verification copies of archived saved state; no live canonical state or character DB changed",
+  "files": [
+    {
+      "path": "fixtures/historical/campaign-v11.sqlite",
+      "size": 44818432,
+      "sha256": "45190280dbd080f8013b0f055882bd306c04fe59f185a481102100a25a710885",
+      "git_blob_sha": "c759eef38edc4cc013a508f06a16a92cbebfb8dc",
+      "compressed_path": "fixtures/historical/campaign-v11.sqlite.gz",
+      "compressed_size": 5085348,
+      "compressed_sha256": "338bf8b9b308a5a5558b11b6f6508d4a799b55824e3decfb80cf13240c4bdf5c",
+      "compressed_git_blob_sha": "21e1cbcf2599a9348ac0affbfb0f4a2610cd1c9d"
+    },
+    {
+      "path": "fixtures/historical/recovery/legacy-personality-pending.sqlite",
+      "size": 1232896,
+      "sha256": "a3e24ff632246a279a7144849e4da09954b6f9e5e915cd96a0a13c77896f8129",
+      "git_blob_sha": "60925b77cba95b7837ee3428e5c1cdfe725c39fd",
+      "compressed_path": "fixtures/historical/recovery/legacy-personality-pending.sqlite.gz",
+      "compressed_size": 106204,
+      "compressed_sha256": "43f5382422377abed49fedb21416d0d56442cecb4ac4fe31621f290651f63709",
+      "compressed_git_blob_sha": "4809bffa09b616359d7b2dde3c45d75a5411be05"
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-character-v1.sqlite",
+      "size": 1179648,
+      "sha256": "2efc718cc7c8441636dc9ec85f80bb1159b322401a58eef8422f94e41dc37245",
+      "git_blob_sha": "6f6a7016f2ed239bd5276d39b4b9a63d9790a2a8",
+      "compressed_path": "fixtures/historical/recovery/pre-character-v1.sqlite.gz",
+      "compressed_size": 102437,
+      "compressed_sha256": "fb03b290ad8d426c7f8fcc6a3dc75df0fa96ecf6db62064e513852152e28ca9d",
+      "compressed_git_blob_sha": "5a5b799031ecf8ed46f1c5617fa8b259cf9f8559"
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-decisions-v1.sqlite",
+      "size": 1224704,
+      "sha256": "925557a8e1c66514f87fab2123ce8fb594a6b7b1e7c78f258cea9f88f70c2145",
+      "git_blob_sha": "64b114058611c9dc2684a54a769b8d3a49b8b65c",
+      "compressed_path": "fixtures/historical/recovery/pre-decisions-v1.sqlite.gz",
+      "compressed_size": 104258,
+      "compressed_sha256": "4cf04912b1100cfd78c21ace38faccc7ae2662d3c819218bd075419bacd8dff2",
+      "compressed_git_blob_sha": "0b18c6236e0703d7e8b343a36c8e3aac0996eb0e"
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-personality-v1.sqlite",
+      "size": 1232896,
+      "sha256": "88786e40f1cd15f69bd70a01f9783eaf011fd3543d7289bec5d759f9f363bd80",
+      "git_blob_sha": "8392a9cf2522e5dbe67e9f1bb45349980e926daf",
+      "compressed_path": "fixtures/historical/recovery/pre-personality-v1.sqlite.gz",
+      "compressed_size": 104539,
+      "compressed_sha256": "9068138019fbf1ab98122fb7dddf5f967e142a591996a947d4f624ab42b236e1",
+      "compressed_git_blob_sha": "39f1aad48a5d19f36f4c9fe08536d0187ab3e866"
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-v2-methods.sqlite",
+      "size": 9236480,
+      "sha256": "3082c6e1ebdd0ed03181dffd582cd94d0f786e6aefce9e68f1b859aea785cdb7",
+      "git_blob_sha": "0bbfd79dbcfa4ee4d54dcdcf2f08f363d14005e8",
+      "compressed_path": "fixtures/historical/recovery/pre-v2-methods.sqlite.gz",
+      "compressed_size": 788716,
+      "compressed_sha256": "53faa420bda5e5f03dd21b1251bf84776664e6c0bd7178c3256ec7ba2b96dd4e",
+      "compressed_git_blob_sha": "2149374ce5a51916e282dfdeb05fee08e34cebd6"
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-v3-learning.sqlite",
+      "size": 9293824,
+      "sha256": "221b6a24a18bb980f6a4d45cb1f649adbda47c81cf6fdab015466d30d2919229",
+      "git_blob_sha": "280989d336fb43664d1a6c70014477ea17d0e86f",
+      "compressed_path": "fixtures/historical/recovery/pre-v3-learning.sqlite.gz",
+      "compressed_size": 790378,
+      "compressed_sha256": "05c04afbc524f57477b7082a4b07dee497259614718897813b8f365e0b3d599e",
+      "compressed_git_blob_sha": "9c996ef996efc47a964fb8df6bb64167e91c9338"
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-v4-v8.sqlite",
+      "size": 9355264,
+      "sha256": "56b2826cb6043c979fb4f9a0e87e32b73311a1fb31f78b13802f759fc887847b",
+      "git_blob_sha": "bb980683f3e634b6f71a0beb178eaa5e543d600d",
+      "compressed_path": "fixtures/historical/recovery/pre-v4-v8.sqlite.gz",
+      "compressed_size": 792277,
+      "compressed_sha256": "ee4c122240261615cb13ebbef9f226f9e1f48ac48183219b317712860ff20bb9",
+      "compressed_git_blob_sha": "67d8f1655d4b919bbd18ac38e0f71d50edd49ec0"
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-writing-v1.sqlite",
+      "size": 1265664,
+      "sha256": "e1bcd8d8a24cac73b9d36b92070a3d8450315315f32f5af90476293f2e1bbc77",
+      "git_blob_sha": "5d1b92731aa3c0f051caeb90e06647d4f1971dfa",
+      "compressed_path": "fixtures/historical/recovery/pre-writing-v1.sqlite.gz",
+      "compressed_size": 106888,
+      "compressed_sha256": "c15130a26873d2fcc948b19bd2fd870ffc32b8994b1cb5825ff81c8ec1418156",
+      "compressed_git_blob_sha": "bd40d7543e3a84c8730474945df7b7211efb02c4"
+    }
+  ],
+  "campaign_source": {
+    "archive": "Kageyoni-v11-trust-candidate4.zip",
+    "archive_sha256": "2516d0b4f1291b3fa383b3398bbd302dbe1a5af2db2c6ad8864bb3edad009799",
+    "library_file_id": "libfile_eef4ac232a5c8191b1f0f373384f1734",
+    "archive_member": "Kageyoni-v11.0.0-Foundation/build/kageyoni.sqlite",
+    "scope": "Frozen archived 167-event campaign, not asserted to be newest canonical state"
+  },
+  "recovery_source_manifests": [
+    "verification-library-recovery.json",
+    "verification-library-v11-recovery.json"
+  ]
+}

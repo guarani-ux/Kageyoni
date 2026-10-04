@@ -5,6 +5,7 @@ import tempfile
 import unittest
 import zipfile
 from pathlib import Path
+from kageyoni.resources import fixture_path
 from kageyoni.engine import Engine, Rejected
 from kageyoni.operations import Operations
 from kageyoni.persistence.migrations import install_all
@@ -58,7 +59,7 @@ class DailyOperationTests(unittest.TestCase):
         self.assertFalse((self.root/'escaped').exists())
     def test_migrate_copy_preserves_original_old_database(self):
         import shutil
-        source=self.root/'old.sqlite';shutil.copy2(Path(__file__).resolve().parents[1]/'recovery/pre-v3-learning.sqlite',source)
+        source=self.root/'old.sqlite';shutil.copy2(fixture_path('recovery/pre-v3-learning.sqlite'),source)
         before=source.read_bytes();target=self.root/'upgraded.sqlite';Operations.migrate_copy(source,target)
         self.assertEqual(source.read_bytes(),before)
         migrated=Engine(target)
@@ -118,3 +119,4 @@ class DailyOperationTests(unittest.TestCase):
             self.assertEqual((newroot/'result.txt').read_text(),'abc')
             self.assertFalse((original/'result.txt').exists())
         finally:copied.close()
+

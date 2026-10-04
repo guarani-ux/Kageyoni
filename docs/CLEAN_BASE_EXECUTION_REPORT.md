@@ -3,7 +3,7 @@
 Date: 2026-10-04 UTC. Source baseline: `c7a6f8dc595b3acada63a9cb4693dbf2b55c7784`.
 Review branch: `codex/consolidate-existing-capabilities`. Main is not changed by this work.
 
-**Result: selected consolidation mechanisms implemented and demonstrated; whole-system clean-base acceptance remains incomplete.** Latest exact-input verification: 927 passed, 22 pre-existing checks failed, and zero new failing IDs. The matched baseline reports 887 passed and 41 failed. The installed wheel also preserves existing rows when upgrading a copy of the authentic historical fixture. These changes establish internal mechanics, not independent cognition, emergence, or an operating rank.
+**Result: selected consolidation mechanisms implemented and demonstrated; whole-system clean-base acceptance remains incomplete.** Latest completed full comparison with recovered archived inputs: 938 passed, 11 failed, and zero new failing IDs against the matched baseline (898 passed, 30 failed). Five fixture-isolation conflicts in that run are subsequently repaired: the affected 25-check suite passes. Fresh full GitHub verification of this final fixture routing remains pending. The installed wheel also preserves existing rows when upgrading a copy of the authentic historical fixture. These changes establish internal mechanics, not independent cognition, emergence, or an operating rank.
 
 ## Original verification checkpoint and scope
 
@@ -82,7 +82,7 @@ For rollback before any candidate state is used, return to the baseline code and
 
 Atomicity demonstrated here is same-database SQLite atomicity. External messages, files or tools are not made transactional by these repairs. Their existing pending/uncertain semantics are not replaced with a false rollback guarantee.
 
-## Remaining failure groups
+## Original failure groups (superseded by follow-up)
 
 All 30 IDs also failed before changes; the structured test comparison lists each one.
 
@@ -140,3 +140,16 @@ The remaining 22 failures are:
 Repository tree/history queries for the carrier, character state and representative recovery/campaign paths returned no files/commits; no release assets were available. Available historical workflow artifacts did not contain these inputs. No skips, authored replacement histories, or assumed success results were introduced. Restoring these inputs would require authentic additional project state, not a label change in the tests.
 
 The verified consolidation is on the review branch. Whole-system clean-base acceptance and main integration remain blocked by these explicit failures. Evidence: `verification-exact-comparison.json`, both exact full-run logs, `verification-exact-sql.json`, recovered-input hashes, GitHub run logs and installed-package output in `evidence/clean_base/`.
+
+
+### Authentic archive recovery and separated test inputs
+
+Read-only Library archives supplied eight original recovery snapshots and the actual 167-event campaign containing `lucretia-voss-recall-scene`. Their archive IDs, member paths and SHA-256 digests are recorded in `verification-library-recovery.json`, `verification-library-v11-recovery.json` and `verification-recovered-fixtures.json`. The archived campaign is a frozen verification input; it is not asserted to be Levi's newest canonical state. No private character database was overwritten or synthesized.
+
+The historical recovery checks pass (62 checks plus 9 subtests, and 33 checks plus 6 subtests). The recovered campaign's composition/CLI suite passes all 10 checks. Matching full comparisons initially report original code 898 passed / 30 failed, updated code 938 passed / 11 failed: 19 original failing IDs resolved and zero new failing IDs. This comparison uses identical archived inputs on both sides.
+
+Five failures exposed test input coupling: the closed-loop and sovereign tests relocated actors from an archived campaign with additional active scene participation, instead of starting from the original seed they assumed. Those two authored scenario modules now seed their own disposable worlds directly. The actual-scene composition and CLI tests explicitly copy `campaign-v11.sqlite`; recovery tests locate their corresponding historical fixture. Assertions and engine invariants are unchanged. All 25 checks across the four affected modules pass after this separation. A fresh full GitHub run is required before claiming the final full count.
+
+The nine recovered databases contain 78,839,808 original bytes. They are retained in Git as 7,981,045 bytes of deterministic lossless gzip, rather than duplicate expanded databases. `tools/prepare_verification_fixtures.py` verifies both compressed and original hashes, restores the exact original bytes, and refuses to replace a different existing fixture. Expanded inputs are ignored by Git. All nine original fixture digests were checked unchanged after use. This is verification packaging, not a new runtime feature or a semantic rewrite of saved state.
+
+The six remaining external-input checks concern four private character hydration/environment checks and two missing `ichimonji/engine_core.mjs` carrier checks. No replacement histories, carrier stubs, weakened assertions or skip markers were supplied. Main remains unchanged until the acceptance boundary is resolved. The branch contains the implemented consolidation and executable verification, not a claim of independent cognition or whole-system qualification.
