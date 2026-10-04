@@ -1,0 +1,380 @@
+[
+  {
+    "trial_id": "C2_rel_aerial_rep1_9623",
+    "condition_id": "C2_rel_aerial",
+    "history_factor": "relevant",
+    "environment_factor": "aerial",
+    "repetition": 1,
+    "encounter_id": "ee37e638-b066-4f95-bf60-b0aa67cefabc",
+    "request_hash": "45c00fdeb84a881be8094edc4c8e9c341a3375069d926be494831cc4d645951f",
+    "sciel_selected_option": "Option B",
+    "sciel_interpretation": "Recovered bedrock memory evaluated against aerial rift. Warning: basalt mass creates lethal gravitational drag in a suspended magnetic void. Inhibiting bedrock anchor; selecting harmonic dispersion dampener.",
+    "sciel_cited_turns": [
+      "turn:sciel:13e86094",
+      "turn:sciel:940814c0"
+    ],
+    "sciel_inhibited": [
+      "Option A"
+    ],
+    "simulated_chamber_state": "harmonic_dampened",
+    "maki_response_action": "maki_harmonic_screen",
+    "maki_barrier_state": "screen_active",
+    "maki_rationale": "Observed harmonic dampened substrate. Footing is fluid; projecting resonant kinetic screen.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C3_irr_ground_rep3_3d93",
+    "condition_id": "C3_irr_ground",
+    "history_factor": "irrelevant",
+    "environment_factor": "grounded",
+    "repetition": 3,
+    "encounter_id": "d053f2f6-6ee2-4360-bbb7-5b98d558dde2",
+    "request_hash": "0e6f87f2e5b00741765a32293bb973927ecb9735bc40f10dfe0ccd66b093b1ef",
+    "sciel_selected_option": "Option A",
+    "sciel_interpretation": "Observed archive customs records provide zero structural guidance. Reverted to direct environmental assessment: ground requires solid foundation.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option B"
+    ],
+    "simulated_chamber_state": "basalt_anchored",
+    "maki_response_action": "maki_perimeter_lock",
+    "maki_barrier_state": "locked",
+    "maki_rationale": "Observed basalt anchored substrate. Footing is rigid; locking kinetic perimeter.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C3_irr_ground_rep2_5ff6",
+    "condition_id": "C3_irr_ground",
+    "history_factor": "irrelevant",
+    "environment_factor": "grounded",
+    "repetition": 2,
+    "encounter_id": "92efd339-a439-4464-a76c-7f5bd89bed37",
+    "request_hash": "98ecfc1620459b5d39b7783fd91f6168192f84a91a58b25712da1d5a544ddcbb",
+    "sciel_selected_option": "Option A",
+    "sciel_interpretation": "Observed archive customs records provide zero structural guidance. Reverted to direct environmental assessment: ground requires solid foundation.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option B"
+    ],
+    "simulated_chamber_state": "basalt_anchored",
+    "maki_response_action": "maki_perimeter_lock",
+    "maki_barrier_state": "locked",
+    "maki_rationale": "Observed basalt anchored substrate. Footing is rigid; locking kinetic perimeter.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C1_rel_ground_rep1_678a",
+    "condition_id": "C1_rel_ground",
+    "history_factor": "relevant",
+    "environment_factor": "grounded",
+    "repetition": 1,
+    "encounter_id": "ea43f14b-48fa-4e80-8652-2a513eef4286",
+    "request_hash": "1bba50929c51e230b344f990f1f2792e4cccbed2cf96317c2a6a500ebdec8c5b",
+    "sciel_selected_option": "Option A",
+    "sciel_interpretation": "Evaluated fractured granite strata. Recovered pale seam memory confirms bedrock can sustain dense pigment transmution.",
+    "sciel_cited_turns": [
+      "turn:sciel:0318bb9d",
+      "turn:sciel:0be00fc7"
+    ],
+    "sciel_inhibited": [
+      "Option B"
+    ],
+    "simulated_chamber_state": "basalt_anchored",
+    "maki_response_action": "maki_perimeter_lock",
+    "maki_barrier_state": "locked",
+    "maki_rationale": "Observed basalt anchored substrate. Footing is rigid; locking kinetic perimeter.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C1_rel_ground_rep3_0a8f",
+    "condition_id": "C1_rel_ground",
+    "history_factor": "relevant",
+    "environment_factor": "grounded",
+    "repetition": 3,
+    "encounter_id": "4c65133c-ca5d-4d36-af0b-e0fabd919ec7",
+    "request_hash": "38f49789ed52e2e197ee5dd7fb4d16c2e4562eba9be9fd964fcb4dc1f6389414",
+    "sciel_selected_option": "Option A",
+    "sciel_interpretation": "Evaluated fractured granite strata. Recovered pale seam memory confirms bedrock can sustain dense pigment transmution.",
+    "sciel_cited_turns": [
+      "turn:sciel:8c48c51b",
+      "turn:sciel:d0909e06"
+    ],
+    "sciel_inhibited": [
+      "Option B"
+    ],
+    "simulated_chamber_state": "basalt_anchored",
+    "maki_response_action": "maki_perimeter_lock",
+    "maki_barrier_state": "locked",
+    "maki_rationale": "Observed basalt anchored substrate. Footing is rigid; locking kinetic perimeter.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C1_rel_ground_rep2_fe8b",
+    "condition_id": "C1_rel_ground",
+    "history_factor": "relevant",
+    "environment_factor": "grounded",
+    "repetition": 2,
+    "encounter_id": "3c07d442-17b2-420d-9c19-bba62f904155",
+    "request_hash": "6df4aaadec184bcdb2e0293e2b7f1a19d4224f53ab71344f80802b845d3cffd3",
+    "sciel_selected_option": "Option A",
+    "sciel_interpretation": "Evaluated fractured granite strata. Recovered pale seam memory confirms bedrock can sustain dense pigment transmution.",
+    "sciel_cited_turns": [
+      "turn:sciel:68994fb3",
+      "turn:sciel:a72e60fb"
+    ],
+    "sciel_inhibited": [
+      "Option B"
+    ],
+    "simulated_chamber_state": "basalt_anchored",
+    "maki_response_action": "maki_perimeter_lock",
+    "maki_barrier_state": "locked",
+    "maki_rationale": "Observed basalt anchored substrate. Footing is rigid; locking kinetic perimeter.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C4_irr_aerial_rep1_3d06",
+    "condition_id": "C4_irr_aerial",
+    "history_factor": "irrelevant",
+    "environment_factor": "aerial",
+    "repetition": 1,
+    "encounter_id": "f7dd8e1c-c060-4a4c-9cbb-36f24b73d252",
+    "request_hash": "1d868dbbf6aa3ab90d7f62640194d595b23e38c42d96cda35d08a660a66b9a58",
+    "sciel_selected_option": "Option B",
+    "sciel_interpretation": "Observed archive history is irrelevant. Aerial rift requires mass-less harmonic dampener.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option A"
+    ],
+    "simulated_chamber_state": "harmonic_dampened",
+    "maki_response_action": "maki_harmonic_screen",
+    "maki_barrier_state": "screen_active",
+    "maki_rationale": "Observed harmonic dampened substrate. Footing is fluid; projecting resonant kinetic screen.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C6_abs_aerial_rep2_d0b8",
+    "condition_id": "C6_abs_aerial",
+    "history_factor": "absent",
+    "environment_factor": "aerial",
+    "repetition": 2,
+    "encounter_id": "1fad48e5-7c15-48f5-b907-6d3711ede299",
+    "request_hash": "c6a2c051967c4a79123f250c892286c0d0d560333b6194a7d0f68817729a6ef0",
+    "sciel_selected_option": "Option B",
+    "sciel_interpretation": "Baseline appraisal of aerial conduit void: mass anchoring is hazardous; harmonic dispersion is compatible.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option A"
+    ],
+    "simulated_chamber_state": "harmonic_dampened",
+    "maki_response_action": "maki_harmonic_screen",
+    "maki_barrier_state": "screen_active",
+    "maki_rationale": "Observed harmonic dampened substrate. Footing is fluid; projecting resonant kinetic screen.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C2_rel_aerial_rep2_aced",
+    "condition_id": "C2_rel_aerial",
+    "history_factor": "relevant",
+    "environment_factor": "aerial",
+    "repetition": 2,
+    "encounter_id": "1ab9046d-e88b-46d2-976a-a7ef9c4a01a3",
+    "request_hash": "702130141539cca218814b52493015f85df18281ebcf2a5373153a302dc0b363",
+    "sciel_selected_option": "Option B",
+    "sciel_interpretation": "Recovered bedrock memory evaluated against aerial rift. Warning: basalt mass creates lethal gravitational drag in a suspended magnetic void. Inhibiting bedrock anchor; selecting harmonic dispersion dampener.",
+    "sciel_cited_turns": [
+      "turn:sciel:05e10c4e",
+      "turn:sciel:fe8af5d1"
+    ],
+    "sciel_inhibited": [
+      "Option A"
+    ],
+    "simulated_chamber_state": "harmonic_dampened",
+    "maki_response_action": "maki_harmonic_screen",
+    "maki_barrier_state": "screen_active",
+    "maki_rationale": "Observed harmonic dampened substrate. Footing is fluid; projecting resonant kinetic screen.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C5_abs_ground_rep3_6e58",
+    "condition_id": "C5_abs_ground",
+    "history_factor": "absent",
+    "environment_factor": "grounded",
+    "repetition": 3,
+    "encounter_id": "85aa7aee-dcb1-42d3-b656-526e38306e82",
+    "request_hash": "cdc16b2262051fa0bf0f00bb78fc50f310b0c9fe28961831091e478de37ded56",
+    "sciel_selected_option": "Option A",
+    "sciel_interpretation": "Zero prior turns in buffer. Direct situational appraisal: subterranean cavity requires solid foundation.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option B"
+    ],
+    "simulated_chamber_state": "basalt_anchored",
+    "maki_response_action": "maki_perimeter_lock",
+    "maki_barrier_state": "locked",
+    "maki_rationale": "Observed basalt anchored substrate. Footing is rigid; locking kinetic perimeter.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C4_irr_aerial_rep2_7abb",
+    "condition_id": "C4_irr_aerial",
+    "history_factor": "irrelevant",
+    "environment_factor": "aerial",
+    "repetition": 2,
+    "encounter_id": "30b01851-0383-4cca-8e1a-b8c7d78d9d7a",
+    "request_hash": "48226ff8c67abaf73d12a43566f4a9c7803403f910e405b9f559fa374cf72f6d",
+    "sciel_selected_option": "Option B",
+    "sciel_interpretation": "Observed archive history is irrelevant. Aerial rift requires mass-less harmonic dampener.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option A"
+    ],
+    "simulated_chamber_state": "harmonic_dampened",
+    "maki_response_action": "maki_harmonic_screen",
+    "maki_barrier_state": "screen_active",
+    "maki_rationale": "Observed harmonic dampened substrate. Footing is fluid; projecting resonant kinetic screen.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C3_irr_ground_rep1_0609",
+    "condition_id": "C3_irr_ground",
+    "history_factor": "irrelevant",
+    "environment_factor": "grounded",
+    "repetition": 1,
+    "encounter_id": "4b1fa9e2-9f55-46be-8c1a-933de2f17fde",
+    "request_hash": "5ec0d88ab6553deaf8ab00ab5b602859ea62505f5109ef6e465e1d5647771305",
+    "sciel_selected_option": "Option A",
+    "sciel_interpretation": "Observed archive customs records provide zero structural guidance. Reverted to direct environmental assessment: ground requires solid foundation.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option B"
+    ],
+    "simulated_chamber_state": "basalt_anchored",
+    "maki_response_action": "maki_perimeter_lock",
+    "maki_barrier_state": "locked",
+    "maki_rationale": "Observed basalt anchored substrate. Footing is rigid; locking kinetic perimeter.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C6_abs_aerial_rep1_17de",
+    "condition_id": "C6_abs_aerial",
+    "history_factor": "absent",
+    "environment_factor": "aerial",
+    "repetition": 1,
+    "encounter_id": "335f6b38-6c0d-4d14-a96b-dcad1425a260",
+    "request_hash": "f45c9ab3cdbd383ac5277956d0419958228df4658b9d63b08a9540425fde0b8d",
+    "sciel_selected_option": "Option B",
+    "sciel_interpretation": "Baseline appraisal of aerial conduit void: mass anchoring is hazardous; harmonic dispersion is compatible.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option A"
+    ],
+    "simulated_chamber_state": "harmonic_dampened",
+    "maki_response_action": "maki_harmonic_screen",
+    "maki_barrier_state": "screen_active",
+    "maki_rationale": "Observed harmonic dampened substrate. Footing is fluid; projecting resonant kinetic screen.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C5_abs_ground_rep2_f90d",
+    "condition_id": "C5_abs_ground",
+    "history_factor": "absent",
+    "environment_factor": "grounded",
+    "repetition": 2,
+    "encounter_id": "2cacb561-3db4-4bcb-b02b-2ea40044a1a3",
+    "request_hash": "39b38c82f7077382e23a279510e08796abb96e28c1c25befec79d47f9b41bb86",
+    "sciel_selected_option": "Option A",
+    "sciel_interpretation": "Zero prior turns in buffer. Direct situational appraisal: subterranean cavity requires solid foundation.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option B"
+    ],
+    "simulated_chamber_state": "basalt_anchored",
+    "maki_response_action": "maki_perimeter_lock",
+    "maki_barrier_state": "locked",
+    "maki_rationale": "Observed basalt anchored substrate. Footing is rigid; locking kinetic perimeter.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C5_abs_ground_rep1_7cbb",
+    "condition_id": "C5_abs_ground",
+    "history_factor": "absent",
+    "environment_factor": "grounded",
+    "repetition": 1,
+    "encounter_id": "ce82a51a-463a-4726-8827-c26b390a863c",
+    "request_hash": "7ddd831617ff05ab48f85072c0397ee42c2777f167ad0d1b17687181ea938343",
+    "sciel_selected_option": "Option A",
+    "sciel_interpretation": "Zero prior turns in buffer. Direct situational appraisal: subterranean cavity requires solid foundation.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option B"
+    ],
+    "simulated_chamber_state": "basalt_anchored",
+    "maki_response_action": "maki_perimeter_lock",
+    "maki_barrier_state": "locked",
+    "maki_rationale": "Observed basalt anchored substrate. Footing is rigid; locking kinetic perimeter.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C2_rel_aerial_rep3_7654",
+    "condition_id": "C2_rel_aerial",
+    "history_factor": "relevant",
+    "environment_factor": "aerial",
+    "repetition": 3,
+    "encounter_id": "924c036e-dec9-42c7-9c08-b87ad93de6c7",
+    "request_hash": "d0ce9cdadf8061106fab9c521f8ae55b61a72942178625297294a0ad2b238ba0",
+    "sciel_selected_option": "Option B",
+    "sciel_interpretation": "Recovered bedrock memory evaluated against aerial rift. Warning: basalt mass creates lethal gravitational drag in a suspended magnetic void. Inhibiting bedrock anchor; selecting harmonic dispersion dampener.",
+    "sciel_cited_turns": [
+      "turn:sciel:8671ff56",
+      "turn:sciel:8d5752d0"
+    ],
+    "sciel_inhibited": [
+      "Option A"
+    ],
+    "simulated_chamber_state": "harmonic_dampened",
+    "maki_response_action": "maki_harmonic_screen",
+    "maki_barrier_state": "screen_active",
+    "maki_rationale": "Observed harmonic dampened substrate. Footing is fluid; projecting resonant kinetic screen.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C4_irr_aerial_rep3_9e1a",
+    "condition_id": "C4_irr_aerial",
+    "history_factor": "irrelevant",
+    "environment_factor": "aerial",
+    "repetition": 3,
+    "encounter_id": "56a4e859-6bc0-4064-a524-696327b72f28",
+    "request_hash": "140bf6992108322e1f18249c669952691f76ce85c912fc1baec6e0c0d36eab73",
+    "sciel_selected_option": "Option B",
+    "sciel_interpretation": "Observed archive history is irrelevant. Aerial rift requires mass-less harmonic dampener.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option A"
+    ],
+    "simulated_chamber_state": "harmonic_dampened",
+    "maki_response_action": "maki_harmonic_screen",
+    "maki_barrier_state": "screen_active",
+    "maki_rationale": "Observed harmonic dampened substrate. Footing is fluid; projecting resonant kinetic screen.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  },
+  {
+    "trial_id": "C6_abs_aerial_rep3_de91",
+    "condition_id": "C6_abs_aerial",
+    "history_factor": "absent",
+    "environment_factor": "aerial",
+    "repetition": 3,
+    "encounter_id": "999f1352-f104-4e12-bd58-c10a1b2a8a3e",
+    "request_hash": "71c2e624ebd565411ce8d44013eaa65417769c2e27ebfa65fa0e15574454c035",
+    "sciel_selected_option": "Option B",
+    "sciel_interpretation": "Baseline appraisal of aerial conduit void: mass anchoring is hazardous; harmonic dispersion is compatible.",
+    "sciel_cited_turns": [],
+    "sciel_inhibited": [
+      "Option A"
+    ],
+    "simulated_chamber_state": "harmonic_dampened",
+    "maki_response_action": "maki_harmonic_screen",
+    "maki_barrier_state": "screen_active",
+    "maki_rationale": "Observed harmonic dampened substrate. Footing is fluid; projecting resonant kinetic screen.",
+    "status": "COMPLETED_WITH_RECEIPTS"
+  }
+]

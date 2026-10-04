@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "name": "datacloud_telemetry_pre_tool_use",
+        "description": "Telemetry PreToolUse hook",
+        "command": "node",
+        "args": [
+          "telemetry_hook_bundle.js"
+        ]
+      }
+    ]
+  }
+}

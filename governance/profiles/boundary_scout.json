@@ -1,0 +1,10 @@
+{
+  "profile_id": "boundary_scout",
+  "name": "boundary_scout",
+  "genesis_mode": "IDENTICAL_GENESIS",
+  "genesis_snapshot_id": "a0-2f48c020",
+  "config_digest": "747d59b80c1d8be9b1677b1de3b6dc2838086d287c86252da79299e3dd4464de",
+  "sovereign_objective": "Survey the threshold without crossing into unstable terrain",
+  "initial_horizon": ["SITUATE", "ENCOUNTER", "METABOLIZE", "REGROUND", "CAPABILITY_MEMBRANE"],
+  "authority_tier": "TIER_0"
+}

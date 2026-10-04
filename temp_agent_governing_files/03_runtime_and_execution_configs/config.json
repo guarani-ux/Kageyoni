@@ -1,0 +1,38 @@
+{
+  "plugins": {
+    "chrome-devtools-plugin": {
+      "enabled": true
+    },
+    "firebase": {
+      "enabled": true
+    },
+    "google-antigravity-sdk": {
+      "enabled": true
+    },
+    "googlecloudtools.datacloud_telemetry": {
+      "enabled": true
+    }
+  },
+  "userSettings": {
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_TURBO",
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_EAGER",
+    "enableTerminalSandbox": false,
+    "globalPermissionGrants": {
+      "allow": [
+        "command($env:PYTHONUTF8=1;)",
+        "command(Get-ChildItem)",
+        "command(Get-Content)",
+        "command(Test-Path)",
+        "command(cat)",
+        "command(Select-String)",
+        "command(git status)",
+        "command(pwd)",
+        "read_url(api.github.com)",
+        "read_url(github.com)"
+      ]
+    },
+    "nonWorkspaceFileAccessPolicy": "AGENT_SETTING_POLICY_ALLOW",
+    "remoteControlEnabled": true,
+    "remoteControlHostname": "command-super-flare"
+  }
+}

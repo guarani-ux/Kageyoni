@@ -1,0 +1,565 @@
+{
+  "timestamp": "2026-09-29T23:50:00Z",
+  "system": {
+    "platform": "win32",
+    "python_version": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "git": {
+    "branch": "refactor/capability-compression",
+    "commit": "517ec4180eebb47566fa5f15d17160f08578dacb",
+    "status_porcelain": "M .agents/agents/twin_acc_1/a0_snapshot.json\n M .agents/agents/twin_acc_1/agent.md\n M .agents/agents/twin_acc_2/a0_snapshot.json\n M .agents/agents/twin_acc_2/agent.md\n?? VANTAGE_PRODUCTION_DOSSIER.md\n?? kageyoni/vantage/\n?? temp_agent_governing_files/\n?? tests/test_vantage.py\n?? vantage_cli.py"
+  },
+  "ancestor_file_sets": {
+    "temp_agent_governing_files": {
+      "INDEX.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\INDEX.md",
+        "sha256": "c8a0e87203cdcc8dd78da4224154513a78933d27d81993181285f141ca068ce9",
+        "size_bytes": 5238,
+        "mtime": 1790731993.5748508
+      },
+      "01_constitutions_and_rules\\ACTIVE_RUNTIME_SYSTEM_INSTRUCTIONS.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\01_constitutions_and_rules\\ACTIVE_RUNTIME_SYSTEM_INSTRUCTIONS.md",
+        "sha256": "c7ae5c43e36ed3ebeeb3c9e63a46b966f3a7949594dc103825135e397dcd7480",
+        "size_bytes": 2314,
+        "mtime": 1790731993.5748508
+      },
+      "01_constitutions_and_rules\\AGENTS.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\01_constitutions_and_rules\\AGENTS.md",
+        "sha256": "e50393186d1f15705c8880aff45a11572c55d730374bfa45270c3de853c0f49e",
+        "size_bytes": 5820,
+        "mtime": 1790442459.2865777
+      },
+      "01_constitutions_and_rules\\GEMINI.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\01_constitutions_and_rules\\GEMINI.md",
+        "sha256": "f5c2a01556833c17983083920f667ae67805cf71d0de98a9881ea3a4ea03a0ba",
+        "size_bytes": 2784,
+        "mtime": 1790442394.6662476
+      },
+      "02_hooks_and_guards\\datacloud_telemetry_hooks.json": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\02_hooks_and_guards\\datacloud_telemetry_hooks.json",
+        "sha256": "13581d7e323bf7a6e3b3bbc750d3845b88083eac5c84e5fc413ea84437867843",
+        "size_bytes": 258,
+        "mtime": 1787841764.9790304
+      },
+      "02_hooks_and_guards\\hooks.json": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\02_hooks_and_guards\\hooks.json",
+        "sha256": "78ac33e86900098c20c71621d39dec2bccee9dc91206624a0064c0e386367149",
+        "size_bytes": 368,
+        "mtime": 1790366854.2835333
+      },
+      "02_hooks_and_guards\\pre_tool_guard.js": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\02_hooks_and_guards\\pre_tool_guard.js",
+        "sha256": "c57757841668c69c9cc47e2dc98d165ea0077ef8b74d9fe3411d089a06dc3109",
+        "size_bytes": 6180,
+        "mtime": 1790442505.8791804
+      },
+      "02_hooks_and_guards\\telemetry_hook_bundle.js": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\02_hooks_and_guards\\telemetry_hook_bundle.js",
+        "sha256": "70616f6d14ac02fee029a0cbaffef7446dc7f1c1ed256ea17cbe9fc7267a8e05",
+        "size_bytes": 17652,
+        "mtime": 1787616158.6736877
+      },
+      "02_hooks_and_guards\\test_guard.js": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\02_hooks_and_guards\\test_guard.js",
+        "sha256": "3e508ce9a026e76249d553b571628330f09e68d06537d6eaf6dac7b94ce2a44a",
+        "size_bytes": 2179,
+        "mtime": 1790356404.8452742
+      },
+      "03_runtime_and_execution_configs\\config.json": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\03_runtime_and_execution_configs\\config.json",
+        "sha256": "3cec201ec86e52fab59023650697fda79b15d1b8eea2fb847199666a3beee76c",
+        "size_bytes": 980,
+        "mtime": 1790368924.392334
+      },
+      "03_runtime_and_execution_configs\\mcp_config.json": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\03_runtime_and_execution_configs\\mcp_config.json",
+        "sha256": "d84dcc96b6f6adb3ecc30438929b356fbced58795faa93ed695b8ccb4548a236",
+        "size_bytes": 2008,
+        "mtime": 1787616206.3411555
+      },
+      "03_runtime_and_execution_configs\\settings.json": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\03_runtime_and_execution_configs\\settings.json",
+        "sha256": "ec14296d7448c3eede7da889801af257abb8dbda6083ce85270d4ecdcd48b13c",
+        "size_bytes": 123,
+        "mtime": 1786831635.1028473
+      },
+      "03_runtime_and_execution_configs\\trustedFolders.json": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\03_runtime_and_execution_configs\\trustedFolders.json",
+        "sha256": "e530d3ec99f01a385c2a66e882a2b2d40c161425f9d69745ee29b19970282c3b",
+        "size_bytes": 73,
+        "mtime": 1786831600.1483223
+      },
+      "04_operational_protocols_and_frameworks\\ADVANCED_OPERATIONAL_PROTOCOL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\04_operational_protocols_and_frameworks\\ADVANCED_OPERATIONAL_PROTOCOL.md",
+        "sha256": "4ecd19840d5b6d407578dbd1a90980dd83534c3458ae40c9cae0a12d9af2ca97",
+        "size_bytes": 1998,
+        "mtime": 1777837085.902482
+      },
+      "04_operational_protocols_and_frameworks\\AGENT_REIFICATION_HANDBOOK.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\04_operational_protocols_and_frameworks\\AGENT_REIFICATION_HANDBOOK.md",
+        "sha256": "fa47031db27f5bda680917e74d510beb43c31a2d0bd15d1ba30a695bdc24d597",
+        "size_bytes": 1461,
+        "mtime": 1777932890.966583
+      },
+      "04_operational_protocols_and_frameworks\\claimverification.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\04_operational_protocols_and_frameworks\\claimverification.md",
+        "sha256": "20e37f296b1febdb4b60c35571fda5cbae98adcbe46f078e2c489aaadb1ce000",
+        "size_bytes": 210,
+        "mtime": 1790356464.3651817
+      },
+      "04_operational_protocols_and_frameworks\\LEARNING_LOG.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\04_operational_protocols_and_frameworks\\LEARNING_LOG.md",
+        "sha256": "88a1fccc462bca3f89cce475aece650de37107a9a2b15c46c90868041c798ea7",
+        "size_bytes": 796,
+        "mtime": 1777837584.420412
+      },
+      "04_operational_protocols_and_frameworks\\planhardening.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\04_operational_protocols_and_frameworks\\planhardening.md",
+        "sha256": "cddf408bdab748ae6d99d02027dace8248d4108b782c2c8b5cc49917081b3758",
+        "size_bytes": 205,
+        "mtime": 1790356467.7334685
+      },
+      "04_operational_protocols_and_frameworks\\PROTOCOL_HARDLINK.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\04_operational_protocols_and_frameworks\\PROTOCOL_HARDLINK.md",
+        "sha256": "7d54fe40f78a7d63f8bc89b8f9fa09c770522b9c9b00af9ddc82d8f0d6d3529d",
+        "size_bytes": 834,
+        "mtime": 1777837085.8791642
+      },
+      "04_operational_protocols_and_frameworks\\SOVEREIGN_FRAMEWORK_SPEC.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\04_operational_protocols_and_frameworks\\SOVEREIGN_FRAMEWORK_SPEC.md",
+        "sha256": "c6ab9503bf4a3d173c153e740838405ac2ae93114fac6b0f18229478f91d94fa",
+        "size_bytes": 1655,
+        "mtime": 1777957293.77276
+      },
+      "04_operational_protocols_and_frameworks\\SYSTEM_ARCHITECTURE_MANIFESTO.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\04_operational_protocols_and_frameworks\\SYSTEM_ARCHITECTURE_MANIFESTO.md",
+        "sha256": "cc4920225da04e1415233a073c426a9f9060cae7dab43f547032dee4991fafe3",
+        "size_bytes": 2082,
+        "mtime": 1777947276.896735
+      },
+      "04_operational_protocols_and_frameworks\\WORKFLOW_SOPS.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\04_operational_protocols_and_frameworks\\WORKFLOW_SOPS.md",
+        "sha256": "f981c419de0550265adbb25362ff0f879ddcd1127e3bc8e503b00d1856a0ab9f",
+        "size_bytes": 633,
+        "mtime": 1777837082.0740469
+      },
+      "05_global_governance_skills\\accidental-data-loss-prevention_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\05_global_governance_skills\\accidental-data-loss-prevention_SKILL.md",
+        "sha256": "30ce2c41a894f48c2fc88b6c5295c92e26a89c9dd7b676af4f3c4f242dae88d1",
+        "size_bytes": 3183,
+        "mtime": 1790366675.081812
+      },
+      "05_global_governance_skills\\council-reversibility-agent_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\05_global_governance_skills\\council-reversibility-agent_SKILL.md",
+        "sha256": "7b11914bfe94deef6d1424001d8f7031eac9f98bcd10b00bc7be162411d20614",
+        "size_bytes": 4359,
+        "mtime": 1790441070.3681493
+      },
+      "05_global_governance_skills\\domain-expansion_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\05_global_governance_skills\\domain-expansion_SKILL.md",
+        "sha256": "b265f6b62a8a06ec89ebc9f1532e5274f01f7ec56a7f2a4f37492e97fe561f91",
+        "size_bytes": 4379,
+        "mtime": 1790366613.5206256
+      },
+      "05_global_governance_skills\\managing-python-dependencies_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\05_global_governance_skills\\managing-python-dependencies_SKILL.md",
+        "sha256": "7ad459a5a8188fa0f2b8cf3e5e479825e7d7e93e1724750cd1707d896cbd7a05",
+        "size_bytes": 2757,
+        "mtime": 1781760692.5793874
+      },
+      "05_global_governance_skills\\ml-best-practices_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\05_global_governance_skills\\ml-best-practices_SKILL.md",
+        "sha256": "ae010fd52e6b29f9c18302c4bdb36ce444bfc5581a52a0e036ae1f0b6ab44473",
+        "size_bytes": 9805,
+        "mtime": 1781045520.9175673
+      },
+      "05_global_governance_skills\\notebook-guidance_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\05_global_governance_skills\\notebook-guidance_SKILL.md",
+        "sha256": "bddf53b2c3ab71eee53e83ef5c357adbe2f216ff324585f719da04e315a9862e",
+        "size_bytes": 15100,
+        "mtime": 1781045520.9155679
+      },
+      "05_global_governance_skills\\skill-repair_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\05_global_governance_skills\\skill-repair_SKILL.md",
+        "sha256": "7ed4b7eb5d82d14686967967159aa472869313bd9804ced44b16eab4884b7f00",
+        "size_bytes": 1777,
+        "mtime": 1781045520.914568
+      },
+      "05_global_governance_skills\\zero-trust-architect_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\05_global_governance_skills\\zero-trust-architect_SKILL.md",
+        "sha256": "f3c43f3ab5c49a9b3e9da98a48626274ddee1584af7b5504bac20ef816bcc72f",
+        "size_bytes": 4662,
+        "mtime": 1790366642.1462557
+      },
+      "06_workspace_agent_directives\\agents\\apex_open_ceiling.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\agents\\apex_open_ceiling.md",
+        "sha256": "b869b279d1f27a6784b6bbc556900ec43e150ad4c23b191bed0faa491e49d65e",
+        "size_bytes": 5714,
+        "mtime": 1790448075.0025105
+      },
+      "06_workspace_agent_directives\\agents\\boundary_scout.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\agents\\boundary_scout.md",
+        "sha256": "de91226712e7d79b65544b438c3cbfbc7f5190ed489fb50fe4f5d852b0eee190",
+        "size_bytes": 2975,
+        "mtime": 1790446358.6704183
+      },
+      "06_workspace_agent_directives\\agents\\compounding_agent.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\agents\\compounding_agent.md",
+        "sha256": "318e53561caff8eba231e29b6f3001c96fd1c9c1a4be0e5de4c1d87d27139d7b",
+        "size_bytes": 4866,
+        "mtime": 1790446783.7423272
+      },
+      "06_workspace_agent_directives\\agents\\developmental_agent.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\agents\\developmental_agent.md",
+        "sha256": "51e3738b9513bbd894ed482c5c04036129d72bddf1a315491ea6efe92457b4c5",
+        "size_bytes": 5087,
+        "mtime": 1790445689.9704247
+      },
+      "06_workspace_agent_directives\\agents\\symbiogenesis_agent.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\agents\\symbiogenesis_agent.md",
+        "sha256": "eedca0f7d8f375a2ce609ee7069d3beb03796d5069cb21c31dccea361ff0d61c",
+        "size_bytes": 5742,
+        "mtime": 1790447215.267478
+      },
+      "06_workspace_agent_directives\\agents\\twin_acc_1.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\agents\\twin_acc_1.md",
+        "sha256": "ce7abdcc00f183f49e8ec4f8bc657f717112f706e95e5658c43b744cdc624380",
+        "size_bytes": 2914,
+        "mtime": 1790449791.140841
+      },
+      "06_workspace_agent_directives\\agents\\twin_acc_2.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\agents\\twin_acc_2.md",
+        "sha256": "7c0b2eb965b8e3fa6183bd69da6783b102f75d65aac0956113cd5e5f68c7e121",
+        "size_bytes": 2914,
+        "mtime": 1790449791.143259
+      },
+      "06_workspace_agent_directives\\governance_docs\\SCAR-REGRESSION-RULE.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\governance_docs\\SCAR-REGRESSION-RULE.md",
+        "sha256": "973908f9a25fbd7c2f19d1214b44d68a13113d05279130bc09897e3470ec050d",
+        "size_bytes": 419,
+        "mtime": 1790223760.1801147
+      },
+      "06_workspace_agent_directives\\governance_docs\\SITUATION-CI-GATE.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\governance_docs\\SITUATION-CI-GATE.md",
+        "sha256": "58fc0fc54d6fd6ddde0ff9c4f4cb593aa3fb184104eeab58a136c99aeeb767b3",
+        "size_bytes": 125,
+        "mtime": 1790223760.180625
+      },
+      "06_workspace_agent_directives\\skills\\agent-genesis_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\skills\\agent-genesis_SKILL.md",
+        "sha256": "447c5709e99a3206c3ae75ca0961242bb81ddbf52b22b72b4b28de64e5f0cb15",
+        "size_bytes": 5236,
+        "mtime": 1790446369.6237261
+      },
+      "06_workspace_agent_directives\\skills\\kageyoni-architecture_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\skills\\kageyoni-architecture_SKILL.md",
+        "sha256": "ef8c2f865785d512afe05cf1d8eea5cabee2410d87ed79c7efc1e46152ecded2",
+        "size_bytes": 2509,
+        "mtime": 1790223760.1117506
+      },
+      "06_workspace_agent_directives\\skills\\kageyoni-evidence_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\skills\\kageyoni-evidence_SKILL.md",
+        "sha256": "a73e6bc2ed5edd855a6090c1286e30b2a39779556c74b64346d2d2a960973bc9",
+        "size_bytes": 2169,
+        "mtime": 1790223760.1132596
+      },
+      "06_workspace_agent_directives\\skills\\kageyoni-maintain_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\skills\\kageyoni-maintain_SKILL.md",
+        "sha256": "82cecb963e1d16201adf8ec1a7201e31da3759ed4cb89416939d6463db5f25d5",
+        "size_bytes": 5850,
+        "mtime": 1790223760.538317
+      },
+      "06_workspace_agent_directives\\skills\\kageyoni-play_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\skills\\kageyoni-play_SKILL.md",
+        "sha256": "9f148e1fd767a45084f755d50397eacb89f45452fa1b605baff5d5723fe6c51e",
+        "size_bytes": 6114,
+        "mtime": 1790223760.5468662
+      },
+      "06_workspace_agent_directives\\skills\\kageyoni-release_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\skills\\kageyoni-release_SKILL.md",
+        "sha256": "466710e5bfc9b7d7c949bee61956b63537d4ce262e97bfacdcdf6a9a4d9df746",
+        "size_bytes": 1034,
+        "mtime": 1790223760.1147661
+      },
+      "06_workspace_agent_directives\\skills\\kageyoni-scar_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\skills\\kageyoni-scar_SKILL.md",
+        "sha256": "ec3993ca14bd8ea1c20ddc7dcf2fe91058aaaa8647aef2ee76f87b6e38827171",
+        "size_bytes": 1424,
+        "mtime": 1790223760.1162744
+      },
+      "06_workspace_agent_directives\\skills\\playable-world_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\skills\\playable-world_SKILL.md",
+        "sha256": "9e315f484470cf716dbd62cf5787b5593fa34fbc1b85431f2e7e4e045829e867",
+        "size_bytes": 8963,
+        "mtime": 1790441181.839524
+      },
+      "06_workspace_agent_directives\\workflows\\agent-genesis.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\workflows\\agent-genesis.md",
+        "sha256": "89081182b19cb2d1e378c25ad3cb4078403794f5f33b0d999370aec60bf95958",
+        "size_bytes": 2630,
+        "mtime": 1790446376.8651848
+      },
+      "06_workspace_agent_directives\\workflows\\playable-turn.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\workflows\\playable-turn.md",
+        "sha256": "6062d850f646261d3cce1819b2ed8d158dc6e6daaedc5c6cfa2ff7db864892c0",
+        "size_bytes": 2068,
+        "mtime": 1790441221.6715906
+      },
+      "06_workspace_agent_directives\\workflows\\r5-comparative.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\workflows\\r5-comparative.md",
+        "sha256": "d7539bf98d72a168b290e1e6318a59adf190d0a45a796e6e2f7a71a033ff80b2",
+        "size_bytes": 1374,
+        "mtime": 1790223760.1172752
+      },
+      "06_workspace_agent_directives\\workflows\\r6-long-horizon.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\workflows\\r6-long-horizon.md",
+        "sha256": "287c3f43c16b5dd415626d41393bf2c9d750a5bcb54eab43c4e1b1c920f18c5c",
+        "size_bytes": 1450,
+        "mtime": 1790223760.1187868
+      },
+      "06_workspace_agent_directives\\workflows\\release-qualification.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\workflows\\release-qualification.md",
+        "sha256": "c70550d38c0fa517544d514ca3a29d1381a843052a6ee85953c3b8f0e8323ba9",
+        "size_bytes": 1309,
+        "mtime": 1790223760.1203022
+      },
+      "06_workspace_agent_directives\\workflows\\scar-loop.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\workflows\\scar-loop.md",
+        "sha256": "45fe8b595074fd5bc2794dc6e508d78e0eab1be5004c8d50f02276c05ccd4e98",
+        "size_bytes": 1045,
+        "mtime": 1790223760.1213024
+      },
+      "06_workspace_agent_directives\\workflows\\v11-repair.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\06_workspace_agent_directives\\workflows\\v11-repair.md",
+        "sha256": "d4108a0be59fcfdc54bc8dfe73b4f336c56857f3087afb0d056fb65c17225d13",
+        "size_bytes": 898,
+        "mtime": 1790223760.1218023
+      },
+      "07_builtin_customization_specs\\agy-customizations_SKILL.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\07_builtin_customization_specs\\agy-customizations_SKILL.md",
+        "sha256": "79c8885e76ce449e82016b37b53dfcc3ff5afefd90a23ea83b24148f41f33fa1",
+        "size_bytes": 5465,
+        "mtime": 1790727584.7520192
+      },
+      "07_builtin_customization_specs\\hooks_guide.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\07_builtin_customization_specs\\hooks_guide.md",
+        "sha256": "79c917a0ea47c1abc3bfe2e97371950d42d981fb648af2e2099c121652bc771b",
+        "size_bytes": 10667,
+        "mtime": 1790727584.752537
+      },
+      "07_builtin_customization_specs\\json_configs_guide.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\07_builtin_customization_specs\\json_configs_guide.md",
+        "sha256": "3770e39452bfc7c87ad94673abb68dbb85f6ee486dc373d1036ed7dff75ed872",
+        "size_bytes": 4512,
+        "mtime": 1790727584.752537
+      },
+      "07_builtin_customization_specs\\mcp_servers_guide.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\07_builtin_customization_specs\\mcp_servers_guide.md",
+        "sha256": "418fada49bb8ed1f43438fd6a355e7f51092daa4d021eb2a43b19a1d1e2146bd",
+        "size_bytes": 2966,
+        "mtime": 1790727584.7530532
+      },
+      "07_builtin_customization_specs\\plugins_guide.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\07_builtin_customization_specs\\plugins_guide.md",
+        "sha256": "481c2612f4729fb4fab600aebc5eb0d4eda6e00d5b45084bc7523718514bf19e",
+        "size_bytes": 3692,
+        "mtime": 1790727584.7530532
+      },
+      "07_builtin_customization_specs\\rules_guide.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\07_builtin_customization_specs\\rules_guide.md",
+        "sha256": "de56bc61e59bf8dc20fa1eb1ef5bb1d211667de818bc6f3074fb739c227b6c57",
+        "size_bytes": 1656,
+        "mtime": 1790727584.7541032
+      },
+      "07_builtin_customization_specs\\skills_guide.md": {
+        "full_path": "C:\\Kageyoni\\temp_agent_governing_files\\07_builtin_customization_specs\\skills_guide.md",
+        "sha256": "c4eba3bc9a8775928704d1b7feede20871b25f8d427c6cd6757b7edd54b3ae60",
+        "size_bytes": 2650,
+        "mtime": 1790727584.7541032
+      }
+    },
+    "workspace_dot_agents": {
+      "agents\\apex_open_ceiling\\agent.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\apex_open_ceiling\\agent.md",
+        "sha256": "b869b279d1f27a6784b6bbc556900ec43e150ad4c23b191bed0faa491e49d65e",
+        "size_bytes": 5714,
+        "mtime": 1790448075.0025105
+      },
+      "agents\\boundary_scout\\a0_snapshot.json": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\boundary_scout\\a0_snapshot.json",
+        "sha256": "4eb602bd076248cf29501ec3c1dd4e6aa5eefe2de4f7e3b071fdd5612b3347f9",
+        "size_bytes": 651,
+        "mtime": 1790446358.6704183
+      },
+      "agents\\boundary_scout\\agent.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\boundary_scout\\agent.md",
+        "sha256": "de91226712e7d79b65544b438c3cbfbc7f5190ed489fb50fe4f5d852b0eee190",
+        "size_bytes": 2975,
+        "mtime": 1790446358.6704183
+      },
+      "agents\\compounding_agent\\agent.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\compounding_agent\\agent.md",
+        "sha256": "318e53561caff8eba231e29b6f3001c96fd1c9c1a4be0e5de4c1d87d27139d7b",
+        "size_bytes": 4866,
+        "mtime": 1790446783.7423272
+      },
+      "agents\\developmental_agent\\agent.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\developmental_agent\\agent.md",
+        "sha256": "51e3738b9513bbd894ed482c5c04036129d72bddf1a315491ea6efe92457b4c5",
+        "size_bytes": 5087,
+        "mtime": 1790445689.9704247
+      },
+      "agents\\symbiogenesis_agent\\agent.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\symbiogenesis_agent\\agent.md",
+        "sha256": "eedca0f7d8f375a2ce609ee7069d3beb03796d5069cb21c31dccea361ff0d61c",
+        "size_bytes": 5742,
+        "mtime": 1790447215.267478
+      },
+      "agents\\twin_acc_1\\a0_snapshot.json": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\twin_acc_1\\a0_snapshot.json",
+        "sha256": "c62bf08762cb81ec647e7843188a2ee48ebda9e30a68c0d467d6aa37d91fd385",
+        "size_bytes": 638,
+        "mtime": 1790747299.6493227
+      },
+      "agents\\twin_acc_1\\agent.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\twin_acc_1\\agent.md",
+        "sha256": "d78c92affe3cba73336d75e28939b74354586a47b2ad720de1c78b77fb206ee7",
+        "size_bytes": 2914,
+        "mtime": 1790747299.6503336
+      },
+      "agents\\twin_acc_2\\a0_snapshot.json": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\twin_acc_2\\a0_snapshot.json",
+        "sha256": "acacabe5b18446c87f9c1898a04bc0764854a2ec0735bcf2530edfb3dc9b7eb9",
+        "size_bytes": 638,
+        "mtime": 1790747299.6528347
+      },
+      "agents\\twin_acc_2\\agent.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\agents\\twin_acc_2\\agent.md",
+        "sha256": "41a0c65665073d50be9bb83534835434aab40b87cfbcae841f1d0170da0720cc",
+        "size_bytes": 2914,
+        "mtime": 1790747299.653833
+      },
+      "skills\\agent-genesis\\SKILL.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\skills\\agent-genesis\\SKILL.md",
+        "sha256": "447c5709e99a3206c3ae75ca0961242bb81ddbf52b22b72b4b28de64e5f0cb15",
+        "size_bytes": 5236,
+        "mtime": 1790446369.6237261
+      },
+      "skills\\kageyoni-architecture\\SKILL.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\skills\\kageyoni-architecture\\SKILL.md",
+        "sha256": "ef8c2f865785d512afe05cf1d8eea5cabee2410d87ed79c7efc1e46152ecded2",
+        "size_bytes": 2509,
+        "mtime": 1790223760.1117506
+      },
+      "skills\\kageyoni-evidence\\SKILL.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\skills\\kageyoni-evidence\\SKILL.md",
+        "sha256": "a73e6bc2ed5edd855a6090c1286e30b2a39779556c74b64346d2d2a960973bc9",
+        "size_bytes": 2169,
+        "mtime": 1790223760.1132596
+      },
+      "skills\\kageyoni-release\\SKILL.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\skills\\kageyoni-release\\SKILL.md",
+        "sha256": "466710e5bfc9b7d7c949bee61956b63537d4ce262e97bfacdcdf6a9a4d9df746",
+        "size_bytes": 1034,
+        "mtime": 1790223760.1147661
+      },
+      "skills\\kageyoni-scar\\SKILL.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\skills\\kageyoni-scar\\SKILL.md",
+        "sha256": "ec3993ca14bd8ea1c20ddc7dcf2fe91058aaaa8647aef2ee76f87b6e38827171",
+        "size_bytes": 1424,
+        "mtime": 1790223760.1162744
+      },
+      "skills\\playable-world\\SKILL.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\skills\\playable-world\\SKILL.md",
+        "sha256": "9e315f484470cf716dbd62cf5787b5593fa34fbc1b85431f2e7e4e045829e867",
+        "size_bytes": 8963,
+        "mtime": 1790441181.839524
+      },
+      "workflows\\agent-genesis.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\workflows\\agent-genesis.md",
+        "sha256": "89081182b19cb2d1e378c25ad3cb4078403794f5f33b0d999370aec60bf95958",
+        "size_bytes": 2630,
+        "mtime": 1790446376.8651848
+      },
+      "workflows\\playable-turn.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\workflows\\playable-turn.md",
+        "sha256": "6062d850f646261d3cce1819b2ed8d158dc6e6daaedc5c6cfa2ff7db864892c0",
+        "size_bytes": 2068,
+        "mtime": 1790441221.6715906
+      },
+      "workflows\\r5-comparative.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\workflows\\r5-comparative.md",
+        "sha256": "d7539bf98d72a168b290e1e6318a59adf190d0a45a796e6e2f7a71a033ff80b2",
+        "size_bytes": 1374,
+        "mtime": 1790223760.1172752
+      },
+      "workflows\\r6-long-horizon.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\workflows\\r6-long-horizon.md",
+        "sha256": "287c3f43c16b5dd415626d41393bf2c9d750a5bcb54eab43c4e1b1c920f18c5c",
+        "size_bytes": 1450,
+        "mtime": 1790223760.1187868
+      },
+      "workflows\\release-qualification.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\workflows\\release-qualification.md",
+        "sha256": "c70550d38c0fa517544d514ca3a29d1381a843052a6ee85953c3b8f0e8323ba9",
+        "size_bytes": 1309,
+        "mtime": 1790223760.1203022
+      },
+      "workflows\\scar-loop.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\workflows\\scar-loop.md",
+        "sha256": "45fe8b595074fd5bc2794dc6e508d78e0eab1be5004c8d50f02276c05ccd4e98",
+        "size_bytes": 1045,
+        "mtime": 1790223760.1213024
+      },
+      "workflows\\v11-repair.md": {
+        "full_path": "C:\\Kageyoni\\.agents\\workflows\\v11-repair.md",
+        "sha256": "d4108a0be59fcfdc54bc8dfe73b4f336c56857f3087afb0d056fb65c17225d13",
+        "size_bytes": 898,
+        "mtime": 1790223760.1218023
+      }
+    },
+    "live_global_files": {
+      "C:/Users/flowe/.gemini/GEMINI.md": {
+        "sha256": "f5c2a01556833c17983083920f667ae67805cf71d0de98a9881ea3a4ea03a0ba",
+        "size_bytes": 2784,
+        "mtime": 1790442394.6662476
+      },
+      "C:/Users/flowe/.gemini/settings.json": {
+        "sha256": "ec14296d7448c3eede7da889801af257abb8dbda6083ce85270d4ecdcd48b13c",
+        "size_bytes": 123,
+        "mtime": 1786831635.1028473
+      },
+      "C:/Users/flowe/.gemini/trustedFolders.json": {
+        "sha256": "e530d3ec99f01a385c2a66e882a2b2d40c161425f9d69745ee29b19970282c3b",
+        "size_bytes": 73,
+        "mtime": 1786831600.1483223
+      },
+      "C:/Users/flowe/.gemini/config/AGENTS.md": {
+        "sha256": "e50393186d1f15705c8880aff45a11572c55d730374bfa45270c3de853c0f49e",
+        "size_bytes": 5820,
+        "mtime": 1790442459.2865777
+      },
+      "C:/Users/flowe/.gemini/config/config.json": {
+        "sha256": "3cec201ec86e52fab59023650697fda79b15d1b8eea2fb847199666a3beee76c",
+        "size_bytes": 980,
+        "mtime": 1790368924.392334
+      },
+      "C:/Users/flowe/.gemini/config/hooks.json": {
+        "sha256": "78ac33e86900098c20c71621d39dec2bccee9dc91206624a0064c0e386367149",
+        "size_bytes": 368,
+        "mtime": 1790366854.2835333
+      },
+      "C:/Users/flowe/.gemini/antigravity/mcp_config.json": {
+        "exists": false
+      },
+      "C:/Users/flowe/.gemini/antigravity/scratch/pre_tool_guard.js": {
+        "sha256": "c57757841668c69c9cc47e2dc98d165ea0077ef8b74d9fe3411d089a06dc3109",
+        "size_bytes": 6180,
+        "mtime": 1790442497.3950877
+      },
+      "C:/Users/flowe/.gemini/antigravity/scratch/test_guard.js": {
+        "exists": false
+      }
+    }
+  }
+}

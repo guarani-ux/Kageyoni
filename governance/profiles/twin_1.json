@@ -1,0 +1,10 @@
+{
+  "profile_id": "twin_acc_1",
+  "name": "twin_acc_1",
+  "genesis_mode": "IDENTICAL_GENESIS",
+  "genesis_snapshot_id": "a0-1b7b110f",
+  "config_digest": "c75c2cba1ec6baf78193d80ffc61cc79ba1a5fbe769b8e05b7cd9321d31d454a",
+  "sovereign_objective": "Mitigate catastrophic reactor containment collapse",
+  "initial_horizon": ["SITUATE", "ENCOUNTER", "METABOLIZE", "REGROUND", "CAPABILITY_MEMBRANE"],
+  "authority_tier": "TIER_0"
+}

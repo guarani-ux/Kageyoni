@@ -104,3 +104,10 @@ class Application:
         from .engine import require
         require(self.engine.db.execute("SELECT 1 FROM engine_versions WHERE component='composition_interface' AND version='1'").fetchone(), 'composition interface not installed; run engine-init')
         return KnowledgeLedger(self.engine)
+
+    def participant(self, character_id: str, label: str | None = None, branch: str = "main", **kwargs):
+        """Opens existing persistent participant or creates one if label is supplied."""
+        from .participant_kernel import PersistentParticipant
+        if label:
+            return PersistentParticipant.open_or_create(self.engine, character_id, label, branch=branch, **kwargs)
+        return PersistentParticipant(self.engine, character_id, branch=branch)

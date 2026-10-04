@@ -17,3 +17,6 @@ include = ["kageyoni*"]
 
 [tool.setuptools.package-data]
 kageyoni = ["data/*.sql", "data/*.json", "composition/data/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

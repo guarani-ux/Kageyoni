@@ -16,3 +16,6 @@ state/
 recovery/
 *.egg-info/
 .DS_Store
+
+**/.state/
+*.lock

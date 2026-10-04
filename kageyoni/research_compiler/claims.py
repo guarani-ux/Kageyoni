@@ -4,6 +4,7 @@ Source & Claim Provenance Graph (Pillars 4 & 8) - Hardened (Gates G2 & G3).
 Enforces epistemic status categories, bidirectional lineage tracing,
 uncertainty preservation, literal source assertion vs warranted claim separation,
 and forward contradiction propagation.
+Backed by kageyoni.graph.CausalDAG.
 """
 
 from __future__ import annotations
@@ -11,6 +12,8 @@ import hashlib
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional, Any, Set
+
+from kageyoni.graph import CausalDAG
 
 
 class EpistemicLaunderingError(ValueError):
@@ -112,17 +115,18 @@ class ClaimNode:
 class ClaimGraph:
     """
     Directed Acyclic Graph of verified sources and claims with bidirectional traversal.
+    Delegates topological edge validation, cycle checks, and forward invalidation to CausalDAG.
     """
 
     def __init__(self):
         self.sources: Dict[str, SourceRecord] = {}
         self.claims: Dict[str, ClaimNode] = {}
+        self._dag = CausalDAG()
 
     def add_source(self, source: SourceRecord) -> None:
         self.sources[source.source_id] = source
 
     def add_claim(self, claim: ClaimNode) -> None:
-        # Enforce non-empty falsification condition for high-impact claims
         canonical_status = claim.epistemic_status.value
         if canonical_status in (
             EpistemicStatus.SOURCE_SUPPLIED_FACT.value,
@@ -130,17 +134,13 @@ class ClaimGraph:
         ) and not claim.falsification_condition:
             claim.falsification_condition = "Unspecified counter-evidence or direct empirical contradiction."
 
-        # Anti-laundering invariant: If claim has no provenance sources and no parent claims,
-        # it CANNOT be designated as SOURCE_SUPPLIED_FACT
         if canonical_status == EpistemicStatus.SOURCE_SUPPLIED_FACT.value and not claim.provenance_sources:
             raise EpistemicLaunderingError(f"EPISTEMIC_LAUNDERING: Claim '{claim.claim_id}' declared as SOURCE_SUPPLIED_FACT without provenance sources.")
 
-        # Grounding check: verify that all referenced provenance_sources actually exist in self.sources
         for sid in claim.provenance_sources:
             if sid not in self.sources:
                 raise ValueError(f"UNGROUNDED_CLAIM: Provenance source '{sid}' referenced by claim '{claim.claim_id}' does not exist in graph.")
 
-        # Update child references on parents
         for pid in claim.parent_claim_ids:
             if pid in self.claims:
                 if claim.claim_id not in self.claims[pid].child_claim_ids:
@@ -148,36 +148,30 @@ class ClaimGraph:
 
         self.claims[claim.claim_id] = claim
 
+        # Register in CausalDAG
+        if claim.claim_id not in self._dag:
+            self._dag.add_node(claim.claim_id, "claim", claim.to_dict())
+        for pid in claim.parent_claim_ids:
+            if pid not in self._dag:
+                self._dag.add_node(pid, "claim")
+            self._dag.add_edge(pid, claim.claim_id)
+
     def invalidate_claim(self, claim_id: str, reason: str) -> List[str]:
         """
         Forward Contradiction Propagation:
         Recursively invalidates the target claim and all downstream dependent child claims.
-        Guarantees cycle detection and safe propagation without infinite loops.
-        Returns the list of all invalidated claim IDs.
+        Delegated to CausalDAG for guaranteed cycle detection and topological order.
         """
         if claim_id not in self.claims:
             return []
 
-        invalidated_ids: List[str] = []
-        visited: Set[str] = set()
-        stack = [(claim_id, reason)]
-
-        while stack:
-            current_id, current_reason = stack.pop()
-            if current_id in visited:
-                continue
-            visited.add(current_id)
-
-            if current_id in self.claims:
-                node = self.claims[current_id]
+        invalidated_ids = self._dag.invalidate(claim_id, reason=reason)
+        for cid in invalidated_ids:
+            if cid in self.claims:
+                node = self.claims[cid]
                 node.is_invalidated = True
-                node.invalidation_reason = current_reason
-                invalidated_ids.append(current_id)
-
-                # Propagate to all dependent child claims
-                for cid in node.child_claim_ids:
-                    if cid not in visited and cid in self.claims:
-                        stack.append((cid, f"Upstream dependency '{current_id}' invalidated: {current_reason}"))
+                dag_node = self._dag.get_node(cid)
+                node.invalidation_reason = dag_node.invalidation_reason or reason
 
         return invalidated_ids
 
@@ -187,18 +181,11 @@ class ClaimGraph:
         reason: str,
         db: Optional[Any] = None,
     ) -> Any:
-        """
-        Consolidates graph invalidation with downstream store cascading and UnitOfWork protection.
-        """
         from .invalidation_engine import InvalidationEngine
         engine = InvalidationEngine(db)
         return engine.invalidate_claim_with_cascade(self, claim_id, reason)
 
     def trace_backward_lineage(self, claim_id: str) -> Dict[str, Any]:
-        """
-        Backward Lineage Walk:
-        Traces from any claim back through its parent dependencies to physical SourceRecords.
-        """
         if claim_id not in self.claims:
             raise KeyError(f"Claim '{claim_id}' not found in claim graph.")
 
@@ -237,10 +224,6 @@ class ClaimGraph:
         provenance_sources: Optional[List[str]] = None,
         dependencies: Optional[List[str]] = None,
     ) -> None:
-        """
-        Validates transition between epistemic statuses enforcing strict warrants.
-        Replaces keyword-based heuristics with structural verification.
-        """
         curr = current_status.value if isinstance(current_status, EpistemicStatus) else str(current_status)
         target = new_status.value if isinstance(new_status, EpistemicStatus) else str(new_status)
 
@@ -249,19 +232,16 @@ class ClaimGraph:
             EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value,
         }
 
-        # 1. Assumption promotion gate
         if curr == EpistemicStatus.ASSUMPTION.value and target in warranted:
             raise EpistemicLaunderingError(
                 f"Laundering detected: Cannot promote ASSUMPTION to {target} without external warrant and empirical provenance."
             )
 
-        # 2. Creative decision promotion gate
         if curr == EpistemicStatus.CREATIVE_DECISION.value and target in warranted:
             raise EpistemicLaunderingError(
                 f"Laundering detected: CREATIVE_DECISION cannot be promoted to {target}."
             )
 
-        # 3. Unknown resolution gate (replaces keyword heuristics with structural warrants)
         if curr == EpistemicStatus.UNKNOWN.value and target != EpistemicStatus.UNKNOWN.value:
             if not warrant_or_reasoning or len(warrant_or_reasoning.strip()) < 10:
                 raise EpistemicLaunderingError(
@@ -276,14 +256,12 @@ class ClaimGraph:
                     "Laundering detected: INFERENCE cannot be derived without declared valid dependencies."
                 )
 
-        # 4. Target requirement gates
         if target == EpistemicStatus.SOURCE_SUPPLIED_FACT.value and not provenance_sources:
             raise EpistemicLaunderingError("SOURCE_SUPPLIED_FACT requires an identifiable provenance_source.")
         if target == EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value and not warrant_or_reasoning:
             raise EpistemicLaunderingError("EVIDENCE_SUPPORTED_CLAIM requires an identifiable warrant_or_reasoning.")
 
     def get_established_facts(self) -> List[ClaimNode]:
-        """Returns valid, un-invalidated claims backed by high confidence or verified source facts."""
         return [
             c for c in self.claims.values()
             if not c.is_invalidated
@@ -300,7 +278,6 @@ class ClaimGraph:
         ]
 
     def get_uncertain_claims(self) -> List[ClaimNode]:
-        """Returns claims that carry epistemic uncertainty or low confidence."""
         return [
             c for c in self.claims.values()
             if not c.is_invalidated
@@ -317,7 +294,6 @@ class ClaimGraph:
         ]
 
     def verify_no_laundering(self) -> bool:
-        """Audits the full graph to ensure no assumption or ungrounded proposition was laundered into factual truth."""
         warranted = {
             EpistemicStatus.SOURCE_SUPPLIED_FACT.value,
             EpistemicStatus.EVIDENCE_SUPPORTED_CLAIM.value,

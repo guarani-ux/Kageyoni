@@ -1,0 +1,27 @@
+{
+  "name": "Storyworld",
+  "type": "Form",
+  "object": "Strategic media encounter",
+  "status": "Operative form for strategic media and audience encounters",
+  "governing_object": "Turn strategic purpose into repeatable audience encounters that can produce useful media, meet real viewers, and return earned learning to the channel.",
+  "entry_sequence": "Purpose -> Audience -> Promise -> Pillar -> Material -> Format -> Contact",
+  "world_laws": {
+    "identity": "Curious, playful, welcoming, Calgary-grounded",
+    "pillars": {
+      "Grow": "Explore, try, build confidence",
+      "Books and Reading": "Discover, enjoy, discuss stories",
+      "Community": "Recognize yourself and encounter others"
+    },
+    "formats": "Movable carriers (interview, game, demonstration, challenge, exchange, profile, short), not strategy",
+    "focus": "One lead audience. One lead promise. One lead pillar. Secondary connections must be earned.",
+    "story": "Movement driven by question, choice, attempt, tension, discovery, surprise or change -> payoff",
+    "reality": "Reality chooses the finished piece. A planned pillar does not obligate weak material to become a video."
+  },
+  "encounter": "Find strongest available person x material x audience relevance x strategic connection. Shape smallest complete story. Design complete YouTube episode first, derive Shorts/social expressions afterward.",
+  "contact": {
+    "distinctions": ["attention", "response", "action", "institutional_consequence"],
+    "rule": "Never infer a downstream consequence from an upstream proxy. Record production cost and reusable material."
+  },
+  "return": "Carry home only what contact earned. Series earns persistence when audience + recurring promise + repeatable encounter survive multiple contacts.",
+  "prime": "Enter through purpose. Find the human encounter. Give the audience a reason to care. Let the material determine the story. Let the audience answer. Bring back only what was earned."
+}
