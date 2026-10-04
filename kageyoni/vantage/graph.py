@@ -2,7 +2,8 @@
 Epistemic Dependency Graph & Invalidation Frontier for Vantage.
 Maintains strict causal lineage between inputs, claims, decisions, and deliverables.
 Prevents unearned approvals and ensures targeted, non-destructive invalidation.
-Backed by kageyoni.graph.CausalDAG.
+Topology is authoritatively owned by kageyoni.graph.CausalDAG; GraphNode dependencies
+and dependents are compatibility projections derived from CausalDAG.
 """
 
 from __future__ import annotations
@@ -15,19 +16,59 @@ from kageyoni.graph import CausalDAG
 from .models import EpistemicNodeStatus, ApprovalStatus
 
 
-@dataclass
 class GraphNode:
-    node_id: str
-    node_type: str
-    title: str
-    status: EpistemicNodeStatus = EpistemicNodeStatus.VALID
-    approval_status: ApprovalStatus = ApprovalStatus.DRAFT
-    content_hash: str = ""
-    payload: Dict[str, Any] = field(default_factory=dict)
-    dependencies: Set[str] = field(default_factory=set)  # Nodes this node depends on
-    dependents: Set[str] = field(default_factory=set)    # Nodes that depend on this node
-    invalidation_reason: Optional[str] = None
-    last_updated: float = field(default_factory=time.time)
+    """
+    Domain deliverable node. Edge collections (dependencies, dependents)
+    are dynamic compatibility projections from the authoritative CausalDAG.
+    """
+
+    def __init__(
+        self,
+        node_id: str,
+        node_type: str,
+        title: str,
+        status: EpistemicNodeStatus | str = EpistemicNodeStatus.VALID,
+        approval_status: ApprovalStatus | str = ApprovalStatus.DRAFT,
+        content_hash: str = "",
+        payload: Optional[Dict[str, Any]] = None,
+        dependencies: Optional[Set[str]] = None,
+        dependents: Optional[Set[str]] = None,
+        invalidation_reason: Optional[str] = None,
+        last_updated: Optional[float] = None,
+        graph: Optional[Any] = None,
+    ):
+        self.node_id = node_id
+        self.node_type = node_type
+        self.title = title
+        self.status = status if isinstance(status, EpistemicNodeStatus) else EpistemicNodeStatus(status)
+        self.approval_status = approval_status if isinstance(approval_status, ApprovalStatus) else ApprovalStatus(approval_status)
+        self.content_hash = content_hash
+        self.payload = payload or {}
+        self.invalidation_reason = invalidation_reason
+        self.last_updated = last_updated if last_updated is not None else time.time()
+        self._dependencies = set(dependencies or [])
+        self._dependents = set(dependents or [])
+        self._graph = graph
+
+    @property
+    def dependencies(self) -> Set[str]:
+        if self._graph is not None and self.node_id in self._graph._dag:
+            return self._graph._dag.get_node(self.node_id).dependencies
+        return self._dependencies
+
+    @dependencies.setter
+    def dependencies(self, val: Set[str]):
+        self._dependencies = set(val)
+
+    @property
+    def dependents(self) -> Set[str]:
+        if self._graph is not None and self.node_id in self._graph._dag:
+            return self._graph._dag.get_node(self.node_id).dependents
+        return self._dependents
+
+    @dependents.setter
+    def dependents(self, val: Set[str]):
+        self._dependents = set(val)
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -76,7 +117,7 @@ class EpistemicDependencyGraph:
     """
     Directed Acyclic Graph governing causal dependency, invalidation propagation,
     and approval validity across all media production deliverables.
-    Delegates graph topology, edge binding, and invalidation cascades to CausalDAG.
+    Topology is owned solely by CausalDAG.
     """
 
     def __init__(self):
@@ -95,7 +136,32 @@ class EpistemicDependencyGraph:
         payload: Optional[Dict[str, Any]] = None,
         dependencies: Optional[List[str]] = None,
     ) -> GraphNode:
-        if node_id in self.nodes:
+        # Pre-validate dependencies exist before altering any state
+        if dependencies:
+            for dep_id in dependencies:
+                if dep_id not in self.nodes:
+                    raise KeyError(f"Parent node '{dep_id}' does not exist in graph.")
+
+        is_new = node_id not in self.nodes
+        added_dag_node = False
+        added_edges = []
+        try:
+            if is_new:
+                self._dag.add_node(node_id, node_type, payload or {}, status=status.value)
+                added_dag_node = True
+            if dependencies:
+                for dep_id in dependencies:
+                    self._dag.add_edge(dep_id, node_id)
+                    added_edges.append((dep_id, node_id))
+        except Exception:
+            # Atomic rollback: preserve both domain records and topology untouched on failure
+            for p, c in added_edges:
+                self._dag.remove_edge(p, c)
+            if added_dag_node:
+                self._dag.remove_node(node_id)
+            raise
+
+        if not is_new:
             node = self.nodes[node_id]
             node.node_type = node_type
             node.title = title
@@ -113,15 +179,9 @@ class EpistemicDependencyGraph:
                 approval_status=approval_status,
                 content_hash=content_hash,
                 payload=payload or {},
-                dependencies=set(),
-                dependents=set(),
+                graph=self,
             )
             self.nodes[node_id] = node
-            self._dag.add_node(node_id, node_type, payload or {})
-
-        if dependencies:
-            for dep_id in dependencies:
-                self.add_dependency(child_id=node_id, parent_id=dep_id)
 
         return node
 
@@ -131,14 +191,8 @@ class EpistemicDependencyGraph:
         if parent_id not in self.nodes:
             raise KeyError(f"Parent node '{parent_id}' does not exist in graph.")
 
-        if parent_id not in self._dag:
-            self._dag.add_node(parent_id, self.nodes[parent_id].node_type)
-        if child_id not in self._dag:
-            self._dag.add_node(child_id, self.nodes[child_id].node_type)
-
+        # CausalDAG is the SOLE authoritative owner of edge topology
         self._dag.add_edge(parent_id, child_id)
-        self.nodes[child_id].dependencies.add(parent_id)
-        self.nodes[parent_id].dependents.add(child_id)
 
     def get_node(self, node_id: str) -> Optional[GraphNode]:
         return self.nodes.get(node_id)
@@ -156,7 +210,6 @@ class EpistemicDependencyGraph:
         if root_node_id not in self.nodes:
             raise KeyError(f"Node '{root_node_id}' not found.")
 
-        # Delegate invalidation cascade to CausalDAG
         affected = self._dag.invalidate(root_node_id, reason=reason)
         revoked_approvals: List[str] = []
 
@@ -164,6 +217,7 @@ class EpistemicDependencyGraph:
         for nid in affected:
             node = self.nodes[nid]
             node.status = target_status
+            self._dag.get_node(nid).status = target_status.value
             if nid == root_node_id:
                 node.invalidation_reason = reason
             else:
@@ -189,6 +243,7 @@ class EpistemicDependencyGraph:
             return False
 
         node = self.nodes[node_id]
+        # Dependencies projected live from authoritative CausalDAG
         for dep_id in node.dependencies:
             dep = self.nodes[dep_id]
             if dep.status != EpistemicNodeStatus.VALID:
@@ -222,14 +277,25 @@ class EpistemicDependencyGraph:
     def from_dict(cls, data: Dict[str, Any]) -> EpistemicDependencyGraph:
         graph = cls()
         nodes_dict = data.get("nodes", {})
+        # 1. Reconstruct domain nodes and CausalDAG nodes with exact saved status
         for nid, ndata in nodes_dict.items():
             node = GraphNode.from_dict(ndata)
+            node._graph = graph
             graph.nodes[nid] = node
-            graph._dag.add_node(nid, node.node_type, node.payload)
+            graph._dag.add_node(
+                node_id=nid,
+                node_type=node.node_type,
+                payload=node.payload,
+                status=node.status.value,
+            )
+            if node.invalidation_reason:
+                graph._dag.get_node(nid).invalidation_reason = node.invalidation_reason
 
-        for nid, node in graph.nodes.items():
-            for dep in node.dependencies:
-                graph._dag.add_edge(dep, nid)
+        # 2. Re-establish edges strictly in authoritative CausalDAG
+        for nid, ndata in nodes_dict.items():
+            for dep in ndata.get("dependencies", []):
+                if dep in graph.nodes:
+                    graph._dag.add_edge(dep, nid)
 
         history = data.get("invalidation_history", [])
         for rdata in history:

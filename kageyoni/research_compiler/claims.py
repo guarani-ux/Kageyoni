@@ -4,7 +4,8 @@ Source & Claim Provenance Graph (Pillars 4 & 8) - Hardened (Gates G2 & G3).
 Enforces epistemic status categories, bidirectional lineage tracing,
 uncertainty preservation, literal source assertion vs warranted claim separation,
 and forward contradiction propagation.
-Backed by kageyoni.graph.CausalDAG.
+Topology is authoritatively owned by kageyoni.graph.CausalDAG; ClaimNode parent_claim_ids
+and child_claim_ids are dynamic compatibility views projected from CausalDAG.
 """
 
 from __future__ import annotations
@@ -13,7 +14,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional, Any, Set
 
-from kageyoni.graph import CausalDAG
+from kageyoni.graph import CausalDAG, CycleDetectedError
 
 
 class EpistemicLaunderingError(ValueError):
@@ -40,17 +41,135 @@ class EpistemicStatus(Enum):
     CREATIVE_PROPOSITION = "CREATIVE_DECISION"
 
 
+class ClaimEdgeList(list):
+    """
+    List proxy that dynamically derives adjacency from the authoritative CausalDAG.
+    Merges live DAG edges with any local manual mutations (e.g. artificial cycle tests).
+    """
+    def __init__(self, node_id: str, edge_type: str, graph: Any, initial: Optional[List[str]] = None):
+        super().__init__(initial or [])
+        self.node_id = node_id
+        self.edge_type = edge_type
+        self.graph = graph
+
+    @property
+    def _is_bound_to_dag(self) -> bool:
+        return bool(self.graph and hasattr(self.graph, "_dag") and self.node_id in self.graph._dag)
+
+    def __iter__(self):
+        if self._is_bound_to_dag:
+            dag_node = self.graph._dag.get_node(self.node_id)
+            dag_edges = dag_node.dependencies if self.edge_type == "parents" else dag_node.dependents
+            return iter(sorted(list(set(dag_edges) | set(super().__iter__()))))
+        return super().__iter__()
+
+    def __len__(self):
+        return len(list(iter(self)))
+
+    def __contains__(self, item):
+        return item in list(iter(self))
+
+    def __repr__(self):
+        return repr(list(iter(self)))
+
+    def __eq__(self, other):
+        return list(iter(self)) == list(other)
+
+
+class ClaimNode:
+    """
+    Epistemic claim record. Parent and child lineages are compatibility
+    projections derived from the authoritative CausalDAG.
+    """
+
+    def __init__(
+        self,
+        claim_id: str,
+        statement: str,
+        epistemic_status: EpistemicStatus | str,
+        provenance_sources: Optional[List[str]] = None,
+        confidence_level: str = "UNSPECIFIED",
+        falsification_condition: str = "",
+        parent_claim_ids: Optional[List[str]] = None,
+        child_claim_ids: Optional[List[str]] = None,
+        is_invalidated: bool = False,
+        invalidation_reason: Optional[str] = None,
+        evidence_establishes_claim: str = "",
+        modality: str = "UNSPECIFIED",
+        quantifier: str = "UNSPECIFIED",
+        uncertainties: Optional[List[str]] = None,
+        graph: Optional[Any] = None,
+    ):
+        self.claim_id = claim_id
+        self.statement = statement
+        self.epistemic_status = epistemic_status if isinstance(epistemic_status, EpistemicStatus) else EpistemicStatus(epistemic_status)
+        self.provenance_sources = list(provenance_sources or [])
+        self.confidence_level = confidence_level
+        self.falsification_condition = falsification_condition
+        self._graph = graph
+        self._parent_claim_ids = ClaimEdgeList(claim_id, "parents", graph, initial=parent_claim_ids)
+        self._child_claim_ids = ClaimEdgeList(claim_id, "children", graph, initial=child_claim_ids)
+        self.is_invalidated = is_invalidated
+        self.invalidation_reason = invalidation_reason
+        self.evidence_establishes_claim = evidence_establishes_claim or statement
+        self.modality = modality
+        self.quantifier = quantifier
+        self.uncertainties = list(uncertainties or [])
+
+    @property
+    def parent_claim_ids(self) -> ClaimEdgeList:
+        return self._parent_claim_ids
+
+    @parent_claim_ids.setter
+    def parent_claim_ids(self, val: List[str]):
+        self._parent_claim_ids = ClaimEdgeList(self.claim_id, "parents", self._graph, initial=val)
+
+    @property
+    def child_claim_ids(self) -> ClaimEdgeList:
+        return self._child_claim_ids
+
+    @child_claim_ids.setter
+    def child_claim_ids(self, val: List[str]):
+        self._child_claim_ids = ClaimEdgeList(self.claim_id, "children", self._graph, initial=val)
+
+    def _bind_graph(self, graph: Any) -> None:
+        self._graph = graph
+        self._parent_claim_ids.graph = graph
+        self._child_claim_ids.graph = graph
+        # Clear local duplicate edge storage now that CausalDAG is authoritative owner
+        super(ClaimEdgeList, self._parent_claim_ids).clear()
+        super(ClaimEdgeList, self._child_claim_ids).clear()
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "claim_id": self.claim_id,
+            "statement": self.statement,
+            "epistemic_status": self.epistemic_status.value,
+            "provenance_sources": self.provenance_sources,
+            "confidence_level": self.confidence_level,
+            "falsification_condition": self.falsification_condition,
+            "parent_claim_ids": list(self.parent_claim_ids),
+            "child_claim_ids": list(self.child_claim_ids),
+            "is_invalidated": self.is_invalidated,
+            "invalidation_reason": self.invalidation_reason,
+            "evidence_establishes_claim": self.evidence_establishes_claim,
+            "modality": self.modality,
+            "quantifier": self.quantifier,
+            "uncertainties": list(self.uncertainties),
+        }
+
+
 @dataclass
 class SourceRecord:
     source_id: str
     title: str
-    provenance: str  # URL, file path, physical document reference
+    provenance: str
     author_or_institution: str
     direct_excerpt: str
     date_recorded: float
-    reliability_tier: str = "PRIMARY_CORROBORATED"  # PRIMARY_CORROBORATED | PRIMARY_UNVERIFIED | SECONDARY | ANECDOTAL
+    reliability_tier: str = "PRIMARY_CORROBORATED"
     content_hash: str = ""
-    source_says_statement: str = ""  # Literal assertion made by the source
+    source_says_statement: str = ""
 
     def __post_init__(self):
         if not self.content_hash and self.direct_excerpt:
@@ -72,50 +191,11 @@ class SourceRecord:
         }
 
 
-@dataclass
-class ClaimNode:
-    claim_id: str
-    statement: str
-    epistemic_status: EpistemicStatus
-    provenance_sources: List[str] = field(default_factory=list)  # IDs of SourceRecords
-    confidence_level: str = "UNSPECIFIED"  # HIGH | MEDIUM | LOW | CONTESTED | UNSPECIFIED
-    falsification_condition: str = ""  # What specific evidence would break this claim?
-    parent_claim_ids: List[str] = field(default_factory=list)
-    child_claim_ids: List[str] = field(default_factory=list)
-    is_invalidated: bool = False
-    invalidation_reason: Optional[str] = None
-    evidence_establishes_claim: str = ""  # What the warranted analysis specifically concludes
-    modality: str = "UNSPECIFIED"  # POSSIBLE | PROBABLE | CERTAIN | UNSPECIFIED
-    quantifier: str = "UNSPECIFIED"  # SOME | MANY | MOST | ALL | UNSPECIFIED
-    uncertainties: List[str] = field(default_factory=list)
-
-    def __post_init__(self):
-        if not self.evidence_establishes_claim and self.statement:
-            self.evidence_establishes_claim = self.statement
-
-    def to_dict(self) -> Dict[str, Any]:
-        return {
-            "claim_id": self.claim_id,
-            "statement": self.statement,
-            "epistemic_status": self.epistemic_status.value,
-            "provenance_sources": self.provenance_sources,
-            "confidence_level": self.confidence_level,
-            "falsification_condition": self.falsification_condition,
-            "parent_claim_ids": self.parent_claim_ids,
-            "child_claim_ids": self.child_claim_ids,
-            "is_invalidated": self.is_invalidated,
-            "invalidation_reason": self.invalidation_reason,
-            "evidence_establishes_claim": self.evidence_establishes_claim,
-            "modality": self.modality,
-            "quantifier": self.quantifier,
-            "uncertainties": list(self.uncertainties),
-        }
-
-
 class ClaimGraph:
     """
-    Directed Acyclic Graph of verified sources and claims with bidirectional traversal.
-    Delegates topological edge validation, cycle checks, and forward invalidation to CausalDAG.
+    Directed Acyclic Graph of verified sources and claims.
+    Topology is authoritatively owned by CausalDAG.
+    ClaimNode edge lists are compatibility views projected from CausalDAG.
     """
 
     def __init__(self):
@@ -141,26 +221,37 @@ class ClaimGraph:
             if sid not in self.sources:
                 raise ValueError(f"UNGROUNDED_CLAIM: Provenance source '{sid}' referenced by claim '{claim.claim_id}' does not exist in graph.")
 
-        for pid in claim.parent_claim_ids:
-            if pid in self.claims:
-                if claim.claim_id not in self.claims[pid].child_claim_ids:
-                    self.claims[pid].child_claim_ids.append(claim.claim_id)
+        # Staged atomic addition to CausalDAG
+        parents_to_link = list(claim.parent_claim_ids)
+        added_dag_nodes = []
+        added_edges = []
+        try:
+            if claim.claim_id not in self._dag:
+                self._dag.add_node(claim.claim_id, "claim", claim.to_dict(), status="INVALIDATED" if claim.is_invalidated else "VALID")
+                added_dag_nodes.append(claim.claim_id)
+            for pid in parents_to_link:
+                if pid not in self._dag:
+                    self._dag.add_node(pid, "claim")
+                    added_dag_nodes.append(pid)
+                self._dag.add_edge(pid, claim.claim_id)
+                added_edges.append((pid, claim.claim_id))
+        except CycleDetectedError as err:
+            # Atomic rollback: undo any staged additions to DAG
+            for p, c in added_edges:
+                self._dag.remove_edge(p, c)
+            for nid in reversed(added_dag_nodes):
+                self._dag.remove_node(nid)
+            raise ValueError(f"CYCLE_DETECTED: Dependency cycle detected for claim '{claim.claim_id}': {err}")
 
+        # Bind graph so child_claim_ids and parent_claim_ids project live from _dag
+        claim._bind_graph(self)
         self.claims[claim.claim_id] = claim
-
-        # Register in CausalDAG
-        if claim.claim_id not in self._dag:
-            self._dag.add_node(claim.claim_id, "claim", claim.to_dict())
-        for pid in claim.parent_claim_ids:
-            if pid not in self._dag:
-                self._dag.add_node(pid, "claim")
-            self._dag.add_edge(pid, claim.claim_id)
 
     def invalidate_claim(self, claim_id: str, reason: str) -> List[str]:
         """
         Forward Contradiction Propagation:
         Recursively invalidates the target claim and all downstream dependent child claims.
-        Delegated to CausalDAG for guaranteed cycle detection and topological order.
+        Delegated to CausalDAG for guaranteed topological order and cycle detection.
         """
         if claim_id not in self.claims:
             return []
