@@ -1,0 +1,63 @@
+........................................................................ [ 45%]
+....................................................F................... [ 90%]
+...............                                                          [100%]
+=================================== FAILURES ===================================
+_ LearningMigrationTests.test_v2_campaign_migration_preserves_existing_rows_and_pending_decisions _
+
+self = <test_learning_integration.LearningMigrationTests testMethod=test_v2_campaign_migration_preserves_existing_rows_and_pending_decisions>
+
+    def test_v2_campaign_migration_preserves_existing_rows_and_pending_decisions(self):
+        from kageyoni.decisions import fingerprint
+        from kageyoni.engine import encoded
+        source = Path(__file__).resolve().parents[1] / 'recovery/pre-v3-learning.sqlite'
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'campaign.sqlite'
+>           shutil.copy2(source, path)
+
+tests/test_learning_integration.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:475: in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+src = PosixPath('/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v3-learning.sqlite')
+dst = PosixPath('/tmp/tmpjajq3o8h/campaign.sqlite'), follow_symlinks = True
+
+    def copyfile(src, dst, *, follow_symlinks=True):
+        """Copy data from src to dst in the most efficient way possible.
+    
+        If follow_symlinks is not set and src is a symbolic link, a new
+        symlink will be created instead of copying the file it points to.
+    
+        """
+        sys.audit("shutil.copyfile", src, dst)
+    
+        if _samefile(src, dst):
+            raise SameFileError("{!r} and {!r} are the same file".format(src, dst))
+    
+        file_size = 0
+        for i, fn in enumerate([src, dst]):
+            try:
+                st = _stat(fn)
+            except OSError:
+                # File most likely does not exist
+                pass
+            else:
+                # XXX What about other special files? (sockets, devices...)
+                if stat.S_ISFIFO(st.st_mode):
+                    fn = fn.path if isinstance(fn, os.DirEntry) else fn
+                    raise SpecialFileError("`%s` is a named pipe" % fn)
+                if _WINDOWS and i == 0:
+                    file_size = st.st_size
+    
+        if not follow_symlinks and _islink(src):
+            os.symlink(os.readlink(src), dst)
+        else:
+>           with open(src, 'rb') as fsrc:
+                 ^^^^^^^^^^^^^^^
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v3-learning.sqlite'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:260: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_learning_integration.py::LearningMigrationTests::test_v2_campaign_migration_preserves_existing_rows_and_pending_decisions
+1 failed, 158 passed in 10.63s

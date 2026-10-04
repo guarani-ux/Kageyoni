@@ -1,6 +1,6 @@
 # Kageyoni clean-base build plan
 
-Status: ready for implementation planning; no runtime changes executed by this document.
+Status: execution checkpoints recorded in [Clean-base execution report](CLEAN_BASE_EXECUTION_REPORT.md); whole-system acceptance remains incomplete.
 Repository: guarani-ux/Kageyoni.
 Source baseline: c7a6f8dc595b3acada63a9cb4693dbf2b55c7784.
 Branch: codex/consolidate-existing-capabilities.
@@ -224,3 +224,4 @@ Do not expand this phase into new mechanics or autonomy infrastructure. Record g
 ## Immediate first execution
 
 Start B0, then B1 and B2. They repair the graph failures already observed and establish a reliable shared mechanism for the subsequent wiring work. Follow with B3/B4 before claiming end-to-end participant execution. The clean base is complete only after B8, not after the first passing graph suite.
+

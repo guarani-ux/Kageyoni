@@ -2,7 +2,8 @@
 kageyoni.gate: Universal Declarative Gate Engine.
 
 Provides unified rule evaluation across state transitions, encounter dispatches,
-production pipelines, and causal graph dependencies with strict fail-closed semantics.
+production pipelines, and causal graph dependencies with missing-field refusal and legacy Python comparison semantics.
+World preconditions retain their separately typed equality and authorization.
 """
 
 from __future__ import annotations
@@ -164,3 +165,4 @@ class GateEngine:
             violations=violations,
             evaluated_count=len(rules),
         )
+

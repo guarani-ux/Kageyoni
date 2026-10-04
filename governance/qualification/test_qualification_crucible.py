@@ -8,7 +8,8 @@ import json
 import subprocess
 from pathlib import Path
 
-GOVERNANCE_ROOT = Path("C:/Kageyoni/governance")
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+GOVERNANCE_ROOT = REPOSITORY_ROOT / "governance"
 HOOKS_DIR = GOVERNANCE_ROOT / "hooks"
 GUARD_PATH = HOOKS_DIR / "pre_tool_guard.js"
 
@@ -129,7 +130,7 @@ class TestQualificationCrucible(unittest.TestCase):
     # 11. Fresh-session reconstruction
     def test_11_fresh_session_reconstruction(self):
         """Baseline manifest contains full cryptographic hashes for 100% state recovery."""
-        manifest = Path("C:/Kageyoni/ancestor_baseline_manifest.json")
+        manifest = REPOSITORY_ROOT / "ancestor_baseline_manifest.json"
         self.assertTrue(manifest.exists())
         with open(manifest, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -179,3 +180,4 @@ class TestQualificationCrucible(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

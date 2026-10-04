@@ -1,0 +1,9 @@
+Processing ./.
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: kageyoni-engine
+  Building wheel for kageyoni-engine (pyproject.toml): started
+  Building wheel for kageyoni-engine (pyproject.toml): finished with status 'done'
+  Created wheel for kageyoni-engine: filename=kageyoni_engine-11.0.0-py3-none-any.whl size=559950 sha256=7060c7d3deb3033070663f55c70d32f644432a55f5980d4158336684f94ebb6a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-pk9aeh6e/wheels/23/e9/fc/65c3c8040525b7b478d06f1cd239ed483c07774f5c1e438fa9
+Successfully built kageyoni-engine
