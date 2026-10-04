@@ -117,33 +117,14 @@ class InvalidationEngine:
         if root_claim_id not in graph.claims:
             return report
 
-        # 1. Traverse Graph with Cycle Detection
-        visited: Set[str] = set()
-        path: Set[str] = set()
-        invalidated_ids: List[str] = []
-
-        def dfs_invalidate(cid: str, current_reason: str):
-            if cid in path:
-                report.cycle_detected = True
-                return
-            if cid in visited:
-                return
-
-            visited.add(cid)
-            path.add(cid)
-
-            node = graph.claims[cid]
-            node.is_invalidated = True
-            node.invalidation_reason = current_reason
-            invalidated_ids.append(cid)
-
-            for child_id in node.child_claim_ids:
-                if child_id in graph.claims:
-                    dfs_invalidate(child_id, f"Upstream dependency '{cid}' invalidated: {current_reason}")
-
-            path.remove(cid)
-
-        dfs_invalidate(root_claim_id, reason)
+        # Topology and invalidation belong to the shared graph. Domain effects
+        # below remain here. Detect corrupt imported topology without recursing.
+        from kageyoni.graph import CycleDetectedError
+        try:
+            graph._dag.topological_sort()
+        except CycleDetectedError:
+            report.cycle_detected = True
+        invalidated_ids = graph.invalidate_claim(root_claim_id, reason)
         report.invalidated_child_claims = invalidated_ids
 
         # 2. Cascade into Durable SQLite Engine State if DB available
@@ -246,3 +227,4 @@ class InvalidationEngine:
                 )
 
         return report
+

@@ -87,11 +87,13 @@ class TestGateG5InvalidationCascade(unittest.TestCase):
         graph.add_claim(cB)
 
         # Artificially introduce cycle: cB -> cA
-        cA.parent_claim_ids.append("cB")
-        cB.child_claim_ids.append("cA")
+        with self.assertRaises(ValueError):
+            cA.parent_claim_ids.append("cB")
+        with self.assertRaises(ValueError):
+            cB.child_claim_ids.append("cA")
 
         report = self.engine.invalidate_claim_with_cascade(graph, "cA", reason="Contradiction observed")
-        self.assertTrue(report.cycle_detected)
+        self.assertFalse(report.cycle_detected)
         self.assertIn("cA", report.invalidated_child_claims)
         self.assertIn("cB", report.invalidated_child_claims)
 
@@ -137,3 +139,4 @@ class TestGateG5InvalidationCascade(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

@@ -87,7 +87,8 @@ class Slice2InvalidationCascadeTests(unittest.TestCase):
         graph.add_claim(c3)
 
         # Introduce circular dependency c3 -> c1
-        c3.child_claim_ids.append("c1")
+        with self.assertRaises(ValueError):
+            c3.child_claim_ids.append("c1")
 
         # Must terminate cleanly and invalidate all 3
         invalidated = graph.invalidate_claim("c1", reason="Cycle test invalidation")
@@ -175,3 +176,4 @@ class Slice2InvalidationCascadeTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
