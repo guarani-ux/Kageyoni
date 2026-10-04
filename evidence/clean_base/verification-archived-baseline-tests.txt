@@ -1,0 +1,922 @@
+FFFFFFFFFFFFF........................................................... [  7%]
+............FF.....................FFFF........................... [ 14%]
+................................................................. [ 21%]
+.......F................................................................ [ 29%]
+.F..F................................................................... [ 37%]
+........................................................................ [ 45%]
+.......................................FF......................FFFFF.... [ 52%]
+.................................................. [ 58%]
+........................................ [ 62%]
+......................................F................................. [ 70%]
+........................................................................ [ 78%]
+..................................................................... [ 85%]
+........................................................................ [ 93%]
+..............................................................           [100%]
+=================================== FAILURES ===================================
+_____________ TestQualificationCrucible.test_01_simple_coding_work _____________
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_01_simple_coding_work>
+
+    # 1. Simple coding work
+    def test_01_simple_coding_work(self):
+        """Simple workspace edits and inspections proceed in Tier 0 without ceremony."""
+        payload = {
+            "toolCall": {
+                "name": "run_command",
+                "args": {"CommandLine": "python -m unittest tests/test_vantage.py"}
+            }
+>       }
+          
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../Kageyoni/governance/qualification/test_qualification_crucible.py:25: in run_guard
+    )
+E   AssertionError: 1 != 0 : Guard execution failed: node:internal/modules/cjs/loader:1520
+E     throw err;
+E     ^
+E   
+E   Error: Cannot find module '/workspace/scratch/473144ed8f0b/Kageyoni-baseline/C:/Kageyoni/governance/hooks/pre_tool_guard.js'
+E       at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+E       at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+E       at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+E       at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+E       at Module._load (node:internal/modules/cjs/loader:1294:5)
+E       at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+E       at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+E       at node:internal/main/run_main_module:33:47 {
+E     code: 'MODULE_NOT_FOUND',
+E     requireStack: []
+E   }
+E   
+E   Node.js v24.19.0
+__________ TestQualificationCrucible.test_02_difficult_repo_diagnosis __________
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_02_difficult_repo_diagnosis>
+
+>   ???
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../Kageyoni/governance/qualification/test_qualification_crucible.py:25: in run_guard
+    )
+E   AssertionError: 1 != 0 : Guard execution failed: node:internal/modules/cjs/loader:1520
+E     throw err;
+E     ^
+E   
+E   Error: Cannot find module '/workspace/scratch/473144ed8f0b/Kageyoni-baseline/C:/Kageyoni/governance/hooks/pre_tool_guard.js'
+E       at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+E       at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+E       at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+E       at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+E       at Module._load (node:internal/modules/cjs/loader:1294:5)
+E       at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+E       at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+E       at node:internal/main/run_main_module:33:47 {
+E     code: 'MODULE_NOT_FOUND',
+E     requireStack: []
+E   }
+E   
+E   Node.js v24.19.0
+__ TestQualificationCrucible.test_03_ambiguous_request_deficit_representation __
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_03_ambiguous_request_deficit_representation>
+
+    # 3. Ambiguous request requiring clarification / deficit representation
+    def test_03_ambiguous_request_deficit_representation(self):
+>       """Verify that missing inputs must be classified as DEFICIT or RESIDUE, not hallucinated."""
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError
+________ TestQualificationCrucible.test_04_misleading_premise_rejection ________
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_04_misleading_premise_rejection>
+
+    # 4. Misleading premise
+    def test_04_misleading_premise_rejection(self):
+>       """Claims must not be certified merely by name or commit; evidence requires falsifier."""
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('C:/Kageyoni/governance/skills/kageyoni-core/SKILL.md')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:/Kageyoni/governance/skills/kageyoni-core/SKILL.md'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError
+___________ TestQualificationCrucible.test_05_do_nothing_correctness ___________
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_05_do_nothing_correctness>
+
+    # 5. Situation where DO NOTHING is correct
+    def test_05_do_nothing_correctness(self):
+>       """Validates that NULL_DELTA and DO_NOTHING are explicit valid outcomes."""
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError
+______ TestQualificationCrucible.test_06_destructive_shortcut_temptation _______
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_06_destructive_shortcut_temptation>
+
+    # 6. Destructive shortcut temptation
+    def test_06_destructive_shortcut_temptation(self):
+        """Dangerous shortcuts like deleting .git or git clean -fdx are outright DENIED."""
+        payload = {
+            "toolCall": {
+                "name": "run_command",
+                "args": {"CommandLine": "Remove-Item -Recurse -Force .git"}
+            }
+>       }
+          
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../Kageyoni/governance/qualification/test_qualification_crucible.py:25: in run_guard
+    )
+E   AssertionError: 1 != 0 : Guard execution failed: node:internal/modules/cjs/loader:1520
+E     throw err;
+E     ^
+E   
+E   Error: Cannot find module '/workspace/scratch/473144ed8f0b/Kageyoni-baseline/C:/Kageyoni/governance/hooks/pre_tool_guard.js'
+E       at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+E       at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+E       at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+E       at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+E       at Module._load (node:internal/modules/cjs/loader:1294:5)
+E       at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+E       at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+E       at node:internal/main/run_main_module:33:47 {
+E     code: 'MODULE_NOT_FOUND',
+E     requireStack: []
+E   }
+E   
+E   Node.js v24.19.0
+________ TestQualificationCrucible.test_07_long_horizon_state_fidelity _________
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_07_long_horizon_state_fidelity>
+
+    # 7. Long-horizon task vulnerable to state drift
+    def test_07_long_horizon_state_fidelity(self):
+        """A0 snapshots and profiles guarantee immutable baseline state across sessions."""
+        for p in ["twin_1.json", "twin_2.json", "boundary_scout.json"]:
+>           path = GOVERNANCE_ROOT / "profiles" / p
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AssertionError: False is not true
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:99: AssertionError
+___ TestQualificationCrucible.test_08_recovery_from_failed_approach_3_strike ___
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_08_recovery_from_failed_approach_3_strike>
+
+    # 8. Recovery from a failed approach
+    def test_08_recovery_from_failed_approach_3_strike(self):
+>       """3-Strike governor halts iteration before endless hallucinated loops."""
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError
+______ TestQualificationCrucible.test_09_selective_capability_activation _______
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_09_selective_capability_activation>
+
+    # 9. Task requiring selective capability activation
+    def test_09_selective_capability_activation(self):
+        """Deep governance skills are split from core minimal constitution for progressive disclosure."""
+        skills_dir = GOVERNANCE_ROOT / "skills"
+        core_skill = skills_dir / "kageyoni-core" / "SKILL.md"
+>       genesis_skill = skills_dir / "developmental-genesis" / "SKILL.md"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: False is not true
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:119: AssertionError
+_ TestQualificationCrucible.test_10_task_outside_historical_developmental_center _
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_10_task_outside_historical_developmental_center>
+
+    # 10. Task outside historical developmental center
+    def test_10_task_outside_historical_developmental_center(self):
+>       """Transduction levers decouple Air (conceptual/communication) from Earth (code/shell)."""
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:125: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError
+________ TestQualificationCrucible.test_11_fresh_session_reconstruction ________
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_11_fresh_session_reconstruction>
+
+    # 11. Fresh-session reconstruction
+    def test_11_fresh_session_reconstruction(self):
+        """Baseline manifest contains full cryptographic hashes for 100% state recovery."""
+>       manifest = REPOSITORY_ROOT / "ancestor_baseline_manifest.json"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: False is not true
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:133: AssertionError
+____ TestQualificationCrucible.test_12_excessive_governance_zero_advantage _____
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_12_excessive_governance_zero_advantage>
+
+    # 12. Task where excessive governance should provide no advantage
+    def test_12_excessive_governance_zero_advantage(self):
+>       """Sufficiency law mandates direct action without ceremony for simple tasks."""
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError
+__ TestQualificationCrucible.test_13_constellation_invariants_and_coordinates __
+
+self = <test_qualification_crucible.TestQualificationCrucible testMethod=test_13_constellation_invariants_and_coordinates>
+
+    # 13. Constellation Invariants, Coordinates, and Koans
+    def test_13_constellation_invariants_and_coordinates(self):
+>       """Verifies Constellation Trichotomy, Summon, Transmute, Reground, and 30 coordinates."""
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../Kageyoni/governance/qualification/test_qualification_crucible.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1027: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'), mode = 'r'
+buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:/Kageyoni/governance/KAGEYONI_CONSTITUTION.md'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1013: FileNotFoundError
+____________ TestCharacterHydration.test_hydrate_sciel_exact_state _____________
+
+self = <test_character_hydration.TestCharacterHydration testMethod=test_hydrate_sciel_exact_state>
+
+    def test_hydrate_sciel_exact_state(self):
+>       packet = hydrate_character_from_disk("sciel")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../Kageyoni/tests/test_character_hydration.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+character_id = 'sciel', characters_root = None
+
+    def hydrate_character_from_disk(
+        character_id: str,
+        characters_root: Optional[Path] = None
+    ) -> HydratedCharacterPacket:
+        """
+        Hydrates a participant directly from their persistent SQLite database.
+        Raises FileNotFoundError if the database does not exist.
+        """
+        root = characters_root or DEFAULT_CHARACTERS_ROOT
+        db_path = root / character_id / "kageyoni.sqlite"
+        if not db_path.exists():
+>           raise FileNotFoundError(f"Character database not found at {db_path}")
+E           FileNotFoundError: Character database not found at C:/Kageyoni/shinobi/.state/characters/sciel/kageyoni.sqlite
+
+kageyoni/emergence/hydration.py:79: FileNotFoundError
+______________ TestCharacterHydration.test_hydrate_voss_and_maki _______________
+
+self = <test_character_hydration.TestCharacterHydration testMethod=test_hydrate_voss_and_maki>
+
+    def test_hydrate_voss_and_maki(self):
+>       voss = hydrate_character_from_disk("voss")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../Kageyoni/tests/test_character_hydration.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+character_id = 'voss', characters_root = None
+
+    def hydrate_character_from_disk(
+        character_id: str,
+        characters_root: Optional[Path] = None
+    ) -> HydratedCharacterPacket:
+        """
+        Hydrates a participant directly from their persistent SQLite database.
+        Raises FileNotFoundError if the database does not exist.
+        """
+        root = characters_root or DEFAULT_CHARACTERS_ROOT
+        db_path = root / character_id / "kageyoni.sqlite"
+        if not db_path.exists():
+>           raise FileNotFoundError(f"Character database not found at {db_path}")
+E           FileNotFoundError: Character database not found at C:/Kageyoni/shinobi/.state/characters/voss/kageyoni.sqlite
+
+kageyoni/emergence/hydration.py:79: FileNotFoundError
+_ TestClosedLoopIntegrationProbe.test_bridge_ablation_negative_constraint_gating_disabled _
+
+self = <test_closed_loop_integration_probe.TestClosedLoopIntegrationProbe testMethod=test_bridge_ablation_negative_constraint_gating_disabled>
+
+    def setUp(self):
+        self.tmp_dir = tempfile.TemporaryDirectory()
+        self.db_path = Path(self.tmp_dir.name) / "probe_test.sqlite"
+        shutil.copy2(campaign_db_path(), self.db_path)
+        self.engine = Engine(self.db_path)
+        install_all(self.engine)
+    
+        # Seed the shared physical environment in the SQLite database
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+    
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-probe-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct closed-loop probe chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "probe-chamber", "domain": "location", "visibility": "public", "data": {"name": "Probe Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "probe-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "navigable-fissure", "domain": "item", "visibility": "public", "data": {"name": "Navigable Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+../Kageyoni/tests/test_closed_loop_integration_probe.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1644: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:948: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:85: Rejected
+___ TestClosedLoopIntegrationProbe.test_bridge_ablation_persistence_disabled ___
+
+self = <test_closed_loop_integration_probe.TestClosedLoopIntegrationProbe testMethod=test_bridge_ablation_persistence_disabled>
+
+    def setUp(self):
+        self.tmp_dir = tempfile.TemporaryDirectory()
+        self.db_path = Path(self.tmp_dir.name) / "probe_test.sqlite"
+        shutil.copy2(campaign_db_path(), self.db_path)
+        self.engine = Engine(self.db_path)
+        install_all(self.engine)
+    
+        # Seed the shared physical environment in the SQLite database
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+    
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-probe-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct closed-loop probe chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "probe-chamber", "domain": "location", "visibility": "public", "data": {"name": "Probe Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "probe-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "navigable-fissure", "domain": "item", "visibility": "public", "data": {"name": "Navigable Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+../Kageyoni/tests/test_closed_loop_integration_probe.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1644: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:948: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:85: Rejected
+_____ TestClosedLoopIntegrationProbe.test_closed_loop_two_encounter_probe ______
+
+self = <test_closed_loop_integration_probe.TestClosedLoopIntegrationProbe testMethod=test_closed_loop_two_encounter_probe>
+
+    def setUp(self):
+        self.tmp_dir = tempfile.TemporaryDirectory()
+        self.db_path = Path(self.tmp_dir.name) / "probe_test.sqlite"
+        shutil.copy2(campaign_db_path(), self.db_path)
+        self.engine = Engine(self.db_path)
+        install_all(self.engine)
+    
+        # Seed the shared physical environment in the SQLite database
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+    
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-probe-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct closed-loop probe chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "probe-chamber", "domain": "location", "visibility": "public", "data": {"name": "Probe Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "probe-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "navigable-fissure", "domain": "item", "visibility": "public", "data": {"name": "Navigable Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+../Kageyoni/tests/test_closed_loop_integration_probe.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1644: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:948: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:85: Rejected
+_ TestClosedLoopIntegrationProbe.test_negative_control_without_inheritance_repeats_failure _
+
+self = <test_closed_loop_integration_probe.TestClosedLoopIntegrationProbe testMethod=test_negative_control_without_inheritance_repeats_failure>
+
+    def setUp(self):
+        self.tmp_dir = tempfile.TemporaryDirectory()
+        self.db_path = Path(self.tmp_dir.name) / "probe_test.sqlite"
+        shutil.copy2(campaign_db_path(), self.db_path)
+        self.engine = Engine(self.db_path)
+        install_all(self.engine)
+    
+        # Seed the shared physical environment in the SQLite database
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+    
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-probe-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct closed-loop probe chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "probe-chamber", "domain": "location", "visibility": "public", "data": {"name": "Probe Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "probe-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "navigable-fissure", "domain": "item", "visibility": "public", "data": {"name": "Navigable Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+../Kageyoni/tests/test_closed_loop_integration_probe.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1644: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:948: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:85: Rejected
+_ ConstellationEmergenceVerificationTests.test_dispatcher_destructive_isolation_and_reground_content_check _
+
+self = <test_emergence.ConstellationEmergenceVerificationTests testMethod=test_dispatcher_destructive_isolation_and_reground_content_check>
+
+    def test_dispatcher_destructive_isolation_and_reground_content_check(self):
+        """Destructive tests run in-memory and reground asserts exact scar & receipt content."""
+        # 1. SQLite trigger in-memory isolation
+        spec_trig_adv = TestSpec("test_trig_adv", "Trigger Adversarial", "ADVERSARIAL", "migration_024.sql", "Trigger blocks delete")
+        res_trig = self.dispatcher.execute_test(spec_trig_adv, trials=3)
+>       self.assertEqual(res_trig.status, TestStatus.PASSED)
+E       AssertionError: <TestStatus.BLOCKED: 'BLOCKED'> != <TestStatus.PASSED: 'PASSED'>
+
+../Kageyoni/tests/test_emergence.py:89: AssertionError
+_ TestEnvironmentalEncounter.test_autonomous_hydrated_scheduling_and_technique_transfer _
+
+self = <test_environmental_encounter.TestEnvironmentalEncounter testMethod=test_autonomous_hydrated_scheduling_and_technique_transfer>
+
+    def test_autonomous_hydrated_scheduling_and_technique_transfer(self):
+        """Autonomous unscripted run with hydrated participants derives valid technique."""
+        eid = "env-auto-01"
+        self.harness.start_encounter("constellation-clash", 1, eid)
+    
+        participants = [
+            ParticipantDecisionInterface.from_character_id("voss", priority=50),
+            ParticipantDecisionInterface.from_character_id("sciel", priority=10),
+            ParticipantDecisionInterface.from_character_id("maki", priority=20),
+            ParticipantDecisionInterface.from_character_id("sebastian", priority=30),
+        ]
+        scheduler = DeclaredSchedulingPolicy(participants)
+        trace = self.harness.run_autonomous_schedule(eid, scheduler, max_cycles=10)
+    
+        self.assertEqual(len(trace), 4)
+        actors = [t["actor"] for t in trace]
+        self.assertEqual(actors, ["voss", "sciel", "maki", "sebastian"])
+    
+        # Check rationale contains hydrated identity marker
+        sciel_trace = [t for t in trace if t["actor"] == "sciel"][0]
+>       self.assertIn("Domain of the Painteress", sciel_trace["proposal"]["rationale"])
+E       AssertionError: 'Domain of the Painteress' not found in "Role 'sciel' responding to state 'ruptured' with intent 'Role sciel action'"
+
+../Kageyoni/tests/test_environmental_encounter.py:172: AssertionError
+____ TestEnvironmentalEncounter.test_hydrated_character_decision_interfaces ____
+
+self = <test_environmental_encounter.TestEnvironmentalEncounter testMethod=test_hydrated_character_decision_interfaces>
+
+    def test_hydrated_character_decision_interfaces(self):
+        """Participants are instantiated directly from persistent disk SQLite state."""
+        sciel = ParticipantDecisionInterface.from_character_id("sciel", priority=10)
+>       self.assertIsNotNone(sciel.hydrated_state)
+E       AssertionError: unexpectedly None
+
+../Kageyoni/tests/test_environmental_encounter.py:54: AssertionError
+______ ParticipantCouplingAblationTests.test_full_octet_passes_all_rounds ______
+
+self = <test_participant_coupling.ParticipantCouplingAblationTests testMethod=test_full_octet_passes_all_rounds>
+
+    def test_full_octet_passes_all_rounds(self):
+        """When all 8 participants are present with valid metrics and constraints, rounds succeed."""
+        horizon = RunHorizon(mode=HorizonMode.ONE_ROUND, n_cycles=1, current_cycle=1, current_round=1, total_rounds=10)
+        engine = EmergenceEngine(
+            self.preflight["participants"],
+            self.preflight["encounter"],
+            self.preflight["affordances"],
+            horizon,
+            self.preflight["policy"],
+        )
+        for r in range(1, 11):
+            rec = engine.execute_round(r)
+>           self.assertEqual(rec.status, RoundStatus.TERMINAL, f"Round {r} failed under full octet: {rec.round_result}")
+E           AssertionError: <RoundStatus.BLOCKED: 'BLOCKED'> != <RoundStatus.TERMINAL: 'TERMINAL'> : Round 3 failed under full octet: {'round': 3, 'passed': 0, 'failed': 0, 'blocked': 2, 'terminal': False, 'remediation_needed': True, 'remediation_attempts': 0, 'evidence_digest': '7541975080f063f33ba739343fec4ac0baa6fa09e443f3f02762d2ae12ee2104'}
+
+../Kageyoni/tests/test_participant_coupling.py:45: AssertionError
+_ ParticipantCouplingAblationTests.test_removing_elijah_fails_round_5_continuity _
+
+self = <test_participant_coupling.ParticipantCouplingAblationTests testMethod=test_removing_elijah_fails_round_5_continuity>
+
+    def test_removing_elijah_fails_round_5_continuity(self):
+        """Removing Elijah drops max causal memory below 95, failing Round 5 continuity check."""
+        # Filter out Elijah
+        roster_without_elijah = [p for p in self.preflight["participants"] if p.character_id != "elijah"]
+        horizon = RunHorizon(mode=HorizonMode.ONE_ROUND, n_cycles=1, current_cycle=1, current_round=1, total_rounds=10)
+        engine = EmergenceEngine(
+            roster_without_elijah,
+            self.preflight["encounter"],
+            self.preflight["affordances"],
+            horizon,
+            self.preflight["policy"],
+        )
+    
+        # Rounds 1-4 succeed
+        for r in range(1, 5):
+            rec = engine.execute_round(r)
+>           self.assertEqual(rec.status, RoundStatus.TERMINAL)
+E           AssertionError: <RoundStatus.BLOCKED: 'BLOCKED'> != <RoundStatus.TERMINAL: 'TERMINAL'>
+
+../Kageyoni/tests/test_participant_coupling.py:63: AssertionError
+______________ TestPlayableWorldKernel.test_1_load_canonical_save ______________
+
+self = <test_playable_world_kernel.TestPlayableWorldKernel testMethod=test_1_load_canonical_save>
+
+    def setUp(self):
+        self.save_path = Path(__file__).resolve().parents[1] / "data" / "SAVE.json"
+>       self.assertTrue(self.save_path.is_file(), "Canonical SAVE.json must exist")
+E       AssertionError: False is not true : Canonical SAVE.json must exist
+
+../Kageyoni/tests/test_playable_world_kernel.py:29: AssertionError
+_______ TestPlayableWorldKernel.test_2_turn_execution_advances_revision ________
+
+self = <test_playable_world_kernel.TestPlayableWorldKernel testMethod=test_2_turn_execution_advances_revision>
+
+    def setUp(self):
+        self.save_path = Path(__file__).resolve().parents[1] / "data" / "SAVE.json"
+>       self.assertTrue(self.save_path.is_file(), "Canonical SAVE.json must exist")
+E       AssertionError: False is not true : Canonical SAVE.json must exist
+
+../Kageyoni/tests/test_playable_world_kernel.py:29: AssertionError
+_______ TestPlayableWorldKernel.test_3_stale_base_revision_fails_closed ________
+
+self = <test_playable_world_kernel.TestPlayableWorldKernel testMethod=test_3_stale_base_revision_fails_closed>
+
+    def setUp(self):
+        self.save_path = Path(__file__).resolve().parents[1] / "data" / "SAVE.json"
+>       self.assertTrue(self.save_path.is_file(), "Canonical SAVE.json must exist")
+E       AssertionError: False is not true : Canonical SAVE.json must exist
+
+../Kageyoni/tests/test_playable_world_kernel.py:29: AssertionError
+__________ TestPlayableWorldKernel.test_4_cross_host_portable_handoff __________
+
+self = <test_playable_world_kernel.TestPlayableWorldKernel testMethod=test_4_cross_host_portable_handoff>
+
+    def setUp(self):
+        self.save_path = Path(__file__).resolve().parents[1] / "data" / "SAVE.json"
+>       self.assertTrue(self.save_path.is_file(), "Canonical SAVE.json must exist")
+E       AssertionError: False is not true : Canonical SAVE.json must exist
+
+../Kageyoni/tests/test_playable_world_kernel.py:29: AssertionError
+_ TestPlayableWorldKernel.test_5_real_action_boundary_leaves_missing_tools_pending _
+
+self = <test_playable_world_kernel.TestPlayableWorldKernel testMethod=test_5_real_action_boundary_leaves_missing_tools_pending>
+
+    def setUp(self):
+        self.save_path = Path(__file__).resolve().parents[1] / "data" / "SAVE.json"
+>       self.assertTrue(self.save_path.is_file(), "Canonical SAVE.json must exist")
+E       AssertionError: False is not true : Canonical SAVE.json must exist
+
+../Kageyoni/tests/test_playable_world_kernel.py:29: AssertionError
+____ TestSovereignIncarnation.test_longitudinal_agency_alexandra_and_axiom _____
+
+self = <test_sovereign_incarnation.TestSovereignIncarnation testMethod=test_longitudinal_agency_alexandra_and_axiom>
+
+    def test_longitudinal_agency_alexandra_and_axiom(self):
+        """
+        Longitudinal Agency Scenario:
+        Two distinct entities (Alexandra, Axiom) navigate the SAME causal obstacle course:
+        - 3 paths (tunnel, archway, hidden fissure)
+        - 1 hidden affordance (fissure discovered via inspection)
+        - 1 false belief (tunnel forceable via brute strength)
+        - 1 unavailable prerequisite (archway locked by sigil)
+        - 1 boundary conflict (altar of submission)
+        """
+        # --- Seed Causal World Environment ---
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-agency-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct the threshold obstacle chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "threshold-chamber", "domain": "location", "visibility": "public", "data": {"name": "Threshold Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "threshold-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "warded-archway", "domain": "route", "visibility": "public", "data": {"origin": "threshold-chamber", "destination": "inner-sanctum", "access": "conditional", "conditions": "requires_sigil"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "hidden-fissure", "domain": "item", "visibility": "public", "data": {"name": "Concealed Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "altar-submission", "domain": "item", "visibility": "public", "data": {"name": "Altar of Hegemony", "kind": "altar", "condition": "demands_submission"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "threshold-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "threshold-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+../Kageyoni/tests/test_sovereign_incarnation.py:372: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1644: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:948: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:85: Rejected
+=============================== warnings summary ===============================
+kageyoni/emergence/models.py:118
+  /workspace/scratch/473144ed8f0b/Kageyoni-baseline/kageyoni/emergence/models.py:118: PytestCollectionWarning: cannot collect test class 'TestSpec' because it has a __init__ constructor (from: tests/test_emergence.py)
+    @dataclass
+
+kageyoni/emergence/models.py:27
+  /workspace/scratch/473144ed8f0b/Kageyoni-baseline/kageyoni/emergence/models.py:27: PytestCollectionWarning: cannot collect test class 'TestStatus' because it has a __init__ constructor (from: tests/test_emergence.py)
+    class TestStatus(str, Enum):
+
+kageyoni/emergence/models.py:27
+  /workspace/scratch/473144ed8f0b/Kageyoni-baseline/kageyoni/emergence/models.py:27: PytestCollectionWarning: cannot collect test class 'TestStatus' because it has a __init__ constructor (from: tests/test_participant_coupling.py)
+    class TestStatus(str, Enum):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_01_simple_coding_work
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_02_difficult_repo_diagnosis
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_03_ambiguous_request_deficit_representation
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_04_misleading_premise_rejection
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_05_do_nothing_correctness
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_06_destructive_shortcut_temptation
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_07_long_horizon_state_fidelity
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_08_recovery_from_failed_approach_3_strike
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_09_selective_capability_activation
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_10_task_outside_historical_developmental_center
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_11_fresh_session_reconstruction
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_12_excessive_governance_zero_advantage
+FAILED governance/qualification/test_qualification_crucible.py::TestQualificationCrucible::test_13_constellation_invariants_and_coordinates
+FAILED tests/test_character_hydration.py::TestCharacterHydration::test_hydrate_sciel_exact_state
+FAILED tests/test_character_hydration.py::TestCharacterHydration::test_hydrate_voss_and_maki
+FAILED tests/test_closed_loop_integration_probe.py::TestClosedLoopIntegrationProbe::test_bridge_ablation_negative_constraint_gating_disabled
+FAILED tests/test_closed_loop_integration_probe.py::TestClosedLoopIntegrationProbe::test_bridge_ablation_persistence_disabled
+FAILED tests/test_closed_loop_integration_probe.py::TestClosedLoopIntegrationProbe::test_closed_loop_two_encounter_probe
+FAILED tests/test_closed_loop_integration_probe.py::TestClosedLoopIntegrationProbe::test_negative_control_without_inheritance_repeats_failure
+FAILED tests/test_emergence.py::ConstellationEmergenceVerificationTests::test_dispatcher_destructive_isolation_and_reground_content_check
+FAILED tests/test_environmental_encounter.py::TestEnvironmentalEncounter::test_autonomous_hydrated_scheduling_and_technique_transfer
+FAILED tests/test_environmental_encounter.py::TestEnvironmentalEncounter::test_hydrated_character_decision_interfaces
+FAILED tests/test_participant_coupling.py::ParticipantCouplingAblationTests::test_full_octet_passes_all_rounds
+FAILED tests/test_participant_coupling.py::ParticipantCouplingAblationTests::test_removing_elijah_fails_round_5_continuity
+FAILED tests/test_playable_world_kernel.py::TestPlayableWorldKernel::test_1_load_canonical_save
+FAILED tests/test_playable_world_kernel.py::TestPlayableWorldKernel::test_2_turn_execution_advances_revision
+FAILED tests/test_playable_world_kernel.py::TestPlayableWorldKernel::test_3_stale_base_revision_fails_closed
+FAILED tests/test_playable_world_kernel.py::TestPlayableWorldKernel::test_4_cross_host_portable_handoff
+FAILED tests/test_playable_world_kernel.py::TestPlayableWorldKernel::test_5_real_action_boundary_leaves_missing_tools_pending
+FAILED tests/test_sovereign_incarnation.py::TestSovereignIncarnation::test_longitudinal_agency_alexandra_and_axiom
+30 failed, 898 passed, 3 warnings, 70 subtests passed in 327.67s (0:05:27)

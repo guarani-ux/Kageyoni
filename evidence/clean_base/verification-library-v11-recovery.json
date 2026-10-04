@@ -1,0 +1,26 @@
+{
+  "archive": "Kageyoni-v11-trust-candidate4.zip",
+  "library_file_id": "libfile_eef4ac232a5c8191b1f0f373384f1734",
+  "archive_sha256": "2516d0b4f1291b3fa383b3398bbd302dbe1a5af2db2c6ad8864bb3edad009799",
+  "scope": "Authentic archived recovery inputs copied without updating canonical state",
+  "files": [
+    {
+      "path": "recovery/pre-v4-v8.sqlite",
+      "archive_member": "Kageyoni-v11.0.0-Foundation/recovery/pre-v4-v8.sqlite",
+      "sha256": "56b2826cb6043c979fb4f9a0e87e32b73311a1fb31f78b13802f759fc887847b",
+      "size": 9355264
+    },
+    {
+      "path": "recovery/pre-v2-methods.sqlite",
+      "archive_member": "Kageyoni-v11.0.0-Foundation/recovery/pre-v2-methods.sqlite",
+      "sha256": "3082c6e1ebdd0ed03181dffd582cd94d0f786e6aefce9e68f1b859aea785cdb7",
+      "size": 9236480
+    },
+    {
+      "path": "recovery/pre-v3-learning.sqlite",
+      "archive_member": "Kageyoni-v11.0.0-Foundation/recovery/pre-v3-learning.sqlite",
+      "sha256": "221b6a24a18bb980f6a4d45cb1f649adbda47c81cf6fdab015466d30d2919229",
+      "size": 9293824
+    }
+  ]
+}

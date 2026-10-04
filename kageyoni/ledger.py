@@ -1,13 +1,13 @@
-"""
-kageyoni.ledger: Universal Cryptographic Evidence Ledger.
+"""Supplementary hash-chained evidence records, referencing domain receipts.
 
-Consolidates all fragmented ledgers (scars, assessments, outcomes,
-dialogue receipts, contributions) into a single append-only,
-SHA-256 hash-chained cryptographic ledger backed by SQLite.
+This ledger does not replace world history, domain state, or qualification.
+Its API appends records; direct SQLite access remains a trusted boundary.
 """
 
 from __future__ import annotations
 import hashlib
+import re
+from .persistence.unit_of_work import UnitOfWork
 import json
 import sqlite3
 import time
@@ -53,29 +53,31 @@ class EvidenceLedger:
     """
 
     def __init__(self, conn: sqlite3.Connection, table_name: str = "evidence_ledger"):
+        if not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", table_name):
+            raise ValueError("Invalid ledger table identifier")
         self.conn = conn
         self.table_name = table_name
         self._ensure_schema()
 
     def _ensure_schema(self) -> None:
-        cursor = self.conn.cursor()
-        cursor.execute(f"""
-            CREATE TABLE IF NOT EXISTS {self.table_name} (
-                sequence INTEGER PRIMARY KEY,
-                event_id TEXT UNIQUE NOT NULL,
-                kind TEXT NOT NULL,
-                actor_id TEXT NOT NULL,
-                topic TEXT NOT NULL,
-                payload_json TEXT NOT NULL,
-                prev_hash TEXT NOT NULL,
-                event_hash TEXT NOT NULL,
-                created_at REAL NOT NULL
-            );
-        """)
-        cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{self.table_name}_actor ON {self.table_name}(actor_id);")
-        cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{self.table_name}_kind ON {self.table_name}(kind);")
-        cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{self.table_name}_topic ON {self.table_name}(topic);")
-        self.conn.commit()
+        with UnitOfWork(self.conn):
+            cursor = self.conn.cursor()
+            cursor.execute(f"""
+                CREATE TABLE IF NOT EXISTS {self.table_name} (
+                    sequence INTEGER PRIMARY KEY,
+                    event_id TEXT UNIQUE NOT NULL,
+                    kind TEXT NOT NULL,
+                    actor_id TEXT NOT NULL,
+                    topic TEXT NOT NULL,
+                    payload_json TEXT NOT NULL,
+                    prev_hash TEXT NOT NULL,
+                    event_hash TEXT NOT NULL,
+                    created_at REAL NOT NULL
+                );
+            """)
+            cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{self.table_name}_actor ON {self.table_name}(actor_id);")
+            cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{self.table_name}_kind ON {self.table_name}(kind);")
+            cursor.execute(f"CREATE INDEX IF NOT EXISTS idx_{self.table_name}_topic ON {self.table_name}(topic);")
 
     @staticmethod
     def compute_hash(
@@ -101,47 +103,47 @@ class EvidenceLedger:
         """
         Appends a new cryptographically chained event to the ledger.
         """
-        cursor = self.conn.cursor()
-        cursor.execute(
-            f"SELECT sequence, event_hash FROM {self.table_name} ORDER BY sequence DESC LIMIT 1"
-        )
-        last_row = cursor.fetchone()
+        with UnitOfWork(self.conn):
+            cursor = self.conn.cursor()
+            cursor.execute(
+                f"SELECT sequence, event_hash FROM {self.table_name} ORDER BY sequence DESC LIMIT 1"
+            )
+            last_row = cursor.fetchone()
 
-        if last_row is None:
-            seq = 1
-            prev_hash = GENESIS_PREV_HASH
-        else:
-            seq = last_row[0] + 1
-            prev_hash = last_row[1]
+            if last_row is None:
+                seq = 1
+                prev_hash = GENESIS_PREV_HASH
+            else:
+                seq = last_row[0] + 1
+                prev_hash = last_row[1]
 
-        if not event_id:
-            event_id = f"ev_{seq}_{uuid.uuid4().hex[:12]}"
+            if not event_id:
+                event_id = f"ev_{seq}_{uuid.uuid4().hex[:12]}"
 
-        now = time.time()
-        payload_json = json.dumps(payload, sort_keys=True)
-        event_hash = self.compute_hash(seq, event_id, kind, actor_id, topic, payload_json, prev_hash)
+            now = time.time()
+            payload_json = json.dumps(payload, sort_keys=True)
+            event_hash = self.compute_hash(seq, event_id, kind, actor_id, topic, payload_json, prev_hash)
 
-        cursor.execute(
-            f"""
-            INSERT INTO {self.table_name}
-            (sequence, event_id, kind, actor_id, topic, payload_json, prev_hash, event_hash, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """,
-            (seq, event_id, kind, actor_id, topic, payload_json, prev_hash, event_hash, now),
-        )
-        self.conn.commit()
+            cursor.execute(
+                f"""
+                INSERT INTO {self.table_name}
+                (sequence, event_id, kind, actor_id, topic, payload_json, prev_hash, event_hash, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (seq, event_id, kind, actor_id, topic, payload_json, prev_hash, event_hash, now),
+            )
 
-        return EvidenceRecord(
-            sequence=seq,
-            event_id=event_id,
-            kind=kind,
-            actor_id=actor_id,
-            topic=topic,
-            payload=payload,
-            prev_hash=prev_hash,
-            event_hash=event_hash,
-            created_at=now,
-        )
+            return EvidenceRecord(
+                sequence=seq,
+                event_id=event_id,
+                kind=kind,
+                actor_id=actor_id,
+                topic=topic,
+                payload=payload,
+                prev_hash=prev_hash,
+                event_hash=event_hash,
+                created_at=now,
+            )
 
     def query(
         self,
@@ -224,3 +226,4 @@ class EvidenceLedger:
             expected_prev_hash = stored_hash
 
         return True, None
+

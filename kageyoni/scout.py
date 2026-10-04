@@ -3,7 +3,8 @@ kageyoni.scout: Universal Static Carrier & AST Organ Scout.
 
 Extracts capability manifests, class hierarchies, method signatures,
 and docstrings across constellation codebases using pure AST parsing
-without executing untrusted code.
+without executing untrusted code. Static presence is not live availability,
+authorization, or evidence that a capability works.
 """
 
 from __future__ import annotations
@@ -226,3 +227,4 @@ class CarrierScout:
 
         scored.sort(key=lambda x: x[1], reverse=True)
         return scored[:top_k]
+

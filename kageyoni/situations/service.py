@@ -3,22 +3,22 @@ from dataclasses import asdict
 from typing import Any
 import uuid
 from .models import Situation, SituationTemplate, Workflow, DomainProjection
-from .storage import MemorySituationStore
+from .storage import MemorySituationStore, StoreView
 
 class SituationError(ValueError): pass
 
 class SituationService:
     def __init__(self,store=None,participant_evidence_resolver=None):
-        self.store=store or MemorySituationStore(); self.participant_evidence_resolver=participant_evidence_resolver
-        self.templates={}; self.workflows={}; self.situations={}; self.projections={}
+        self.store=store if store is not None else MemorySituationStore(); self.participant_evidence_resolver=participant_evidence_resolver
+        self.templates=StoreView(self.store,"template"); self.workflows=StoreView(self.store,"workflow"); self.situations=StoreView(self.store,"situation"); self.projections=StoreView(self.store,"projection")
 
     def register_template(self,template):
         if template.template_id in self.templates: raise SituationError("template already exists")
-        self.templates[template.template_id]=template; self.store.put("template",template.template_id,template)
+        self.templates[template.template_id]=template
 
     def register_workflow(self,workflow):
         if workflow.workflow_id in self.workflows: raise SituationError("workflow already exists")
-        self.workflows[workflow.workflow_id]=workflow; self.store.put("workflow",workflow.workflow_id,workflow)
+        self.workflows[workflow.workflow_id]=workflow
 
     def genesis(self,template_id,objective,supplied,*,situation_id=None,workspace=None,allow_local_novelty=True):
         # 1. Guard against unauthorized privilege escalation
@@ -35,8 +35,6 @@ class SituationService:
         template = None
         if template_id in self.templates:
             template = self.templates[template_id]
-        elif self.store.contains("template", template_id):
-            template = self.store.get("template", template_id)
 
         if template is None:
             if not allow_local_novelty:
@@ -64,7 +62,6 @@ class SituationService:
                 local_extensions=local_ext,
             )
             self.situations[s.situation_id] = s
-            self.store.put("situation", s.situation_id, s)
             return s
 
         # 3. Cataloged template with potential local novelty
@@ -97,14 +94,13 @@ class SituationService:
             local_extensions=local_ext,
         )
         self.situations[s.situation_id] = s
-        self.store.put("situation", s.situation_id, s)
         return s
 
     def bind_workflow(self,situation_id,workflow_id):
-        s=self.situations.get(situation_id) or self.store.get("situation",situation_id)
-        w=self.workflows.get(workflow_id) or self.store.get("workflow",workflow_id)
+        s=self.situations[situation_id]
+        w=self.workflows[workflow_id]
         if s.template_id not in w.applicable_templates: raise SituationError("workflow not applicable to situation template")
-        s.workflow_id=workflow_id; self.situations[s.situation_id]=s; self.store.put("situation",s.situation_id,s)
+        s.workflow_id=workflow_id; self.situations[s.situation_id]=s
 
     def propose_projection(self,projection,*,established_refs):
         refs=set(projection.method_refs)|set(projection.experience_refs)
@@ -112,7 +108,8 @@ class SituationService:
         if self.participant_evidence_resolver is None or any(not self.participant_evidence_resolver(projection.participant_id,ref,projection.situation_id) for ref in refs):
             raise SituationError("domain projection evidence is not bound to participant and situation")
         if not self.store.contains("situation",projection.situation_id): raise SituationError("unknown situation")
-        self.projections[projection.projection_id]=projection; self.store.put("projection",projection.projection_id,projection)
+        self.projections[projection.projection_id]=projection
 
     def snapshot(self,situation_id):
-        return asdict(self.situations.get(situation_id) or self.store.get("situation",situation_id))
+        return asdict(self.situations[situation_id])
+

@@ -111,23 +111,32 @@ class CausalDAG:
             if dep_id not in self.nodes:
                 raise NodeNotFoundError(f"Dependency '{dep_id}' does not exist in graph.")
 
-        # Create or update node
+        # Validate every edge and serialize the payload before touching live state.
+        # Adding parents cannot alter downstream reachability, so this also
+        # validates a multi-edge update without a partial rollback.
+        for dep_id in deps:
+            if dep_id == node_id or (node_id in self.nodes and self._is_reachable(node_id, dep_id)):
+                raise CycleDetectedError(f"Cycle detected: '{dep_id}' -> '{node_id}'.")
         payload_dict = payload or {}
+        payload_hash = content_hash or (hashlib.sha256(
+            json.dumps(payload_dict, sort_keys=True, default=str).encode("utf-8")
+        ).hexdigest() if payload_dict else "")
         if node_id in self.nodes:
             node = self.nodes[node_id]
             node.node_type = node_type
             node.payload = payload_dict
             node.status = status
             node.last_updated = time.time()
-            if content_hash:
-                node.content_hash = content_hash
+            node.content_hash = payload_hash
+            if status == "VALID":
+                node.invalidation_reason = None
         else:
             node = DAGNode(
                 node_id=node_id,
                 node_type=node_type,
                 payload=payload_dict,
                 status=status,
-                content_hash=content_hash,
+                content_hash=payload_hash,
             )
             self.nodes[node_id] = node
 
@@ -155,6 +164,9 @@ class CausalDAG:
 
         parent = self.nodes[parent_id]
         child = self.nodes[child_id]
+
+        if child_id in parent.dependents:
+            return
 
         parent.dependents.add(child_id)
         child.dependencies.add(parent_id)
@@ -350,11 +362,12 @@ class CausalDAG:
                 last_updated=lup,
             )
 
+        saved_times = {nid: n.last_updated for nid, n in dag.nodes.items()}
         edge_rows = conn.execute(f"SELECT parent_id, child_id FROM {edge_tbl}").fetchall()
         for pid, cid in edge_rows:
-            if pid in dag.nodes and cid in dag.nodes:
-                dag.nodes[pid].dependents.add(cid)
-                dag.nodes[cid].dependencies.add(pid)
+            dag.add_edge(pid, cid)
+        for nid, stamp in saved_times.items():
+            dag.nodes[nid].last_updated = stamp
 
         return dag
 
@@ -366,4 +379,18 @@ class CausalDAG:
         dag = cls()
         for nid, ndata in data.items():
             dag.nodes[nid] = DAGNode.from_dict(ndata)
+            if dag.nodes[nid].node_id != nid:
+                raise ValueError("Graph key and node_id disagree.")
+        for nid, node in dag.nodes.items():
+            for parent in node.dependencies:
+                if parent not in dag.nodes:
+                    raise NodeNotFoundError(parent)
+                if nid not in dag.nodes[parent].dependents:
+                    raise ValueError("Inconsistent graph adjacency.")
+            for child in node.dependents:
+                if child not in dag.nodes:
+                    raise NodeNotFoundError(child)
+                if nid not in dag.nodes[child].dependencies:
+                    raise ValueError("Inconsistent graph adjacency.")
+        dag.topological_sort()
         return dag

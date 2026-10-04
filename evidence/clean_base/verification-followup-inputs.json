@@ -1,0 +1,85 @@
+{
+  "inputs": [
+    {
+      "path": "fixtures/historical/personality-fixture.sqlite",
+      "present": true,
+      "sha256": "030069a0325f798cb6349f0ccf0f77e4d3d4a35706d3525fccdc535002096d26"
+    },
+    {
+      "path": "fixtures/historical/writing-fixture.sqlite",
+      "present": true,
+      "sha256": "bae48def3b0e34da4ad7241937c21b1626c1ee45116f506893588f7a6a9e2728"
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-character-v1.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-decisions-v1.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-personality-v1.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "fixtures/historical/recovery/legacy-personality-pending.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "fixtures/historical/recovery/pre-writing-v1.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "recovery/pre-v2-methods.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "recovery/pre-v3-learning.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "recovery/pre-v4-v8.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "shinobi/.state/characters/sciel/kageyoni.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "shinobi/.state/characters/voss/kageyoni.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "shinobi/.state/characters/maki/kageyoni.sqlite",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "ichimonji/engine_core.mjs",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "shinobi/ichimonji/engine_core.mjs",
+      "present": false,
+      "sha256": null
+    },
+    {
+      "path": "data/SAVE.json",
+      "present": true,
+      "sha256": "8080889eb74f9d29964f2dd027b11f5da4893fa40f5b8d033e898bab97a73ace"
+    }
+  ],
+  "policy": "No replacement historical or character database was generated."
+}

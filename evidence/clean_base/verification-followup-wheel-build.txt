@@ -1,0 +1,421 @@
+running bdist_wheel
+running build
+running build_py
+copying kageyoni/emergence/engine.py -> build/lib/kageyoni/emergence
+copying kageyoni/emergence/hydration.py -> build/lib/kageyoni/emergence
+copying kageyoni/emergence/dispatcher.py -> build/lib/kageyoni/emergence
+running egg_info
+writing kageyoni_engine.egg-info/PKG-INFO
+writing dependency_links to kageyoni_engine.egg-info/dependency_links.txt
+writing entry points to kageyoni_engine.egg-info/entry_points.txt
+writing top-level names to kageyoni_engine.egg-info/top_level.txt
+reading manifest file 'kageyoni_engine.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'kageyoni_engine.egg-info/SOURCES.txt'
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64/wheel
+creating build/bdist.linux-x86_64/wheel/kageyoni
+copying build/lib/kageyoni/magnet_delta.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/coliseum.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/scout.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/will.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/console.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/decisions.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+creating build/bdist.linux-x86_64/wheel/kageyoni/developmental
+copying build/lib/kageyoni/developmental/contracts.py -> build/bdist.linux-x86_64/wheel/./kageyoni/developmental
+copying build/lib/kageyoni/developmental/closure.py -> build/bdist.linux-x86_64/wheel/./kageyoni/developmental
+copying build/lib/kageyoni/developmental/apex.py -> build/bdist.linux-x86_64/wheel/./kageyoni/developmental
+copying build/lib/kageyoni/developmental/symbiogenesis.py -> build/bdist.linux-x86_64/wheel/./kageyoni/developmental
+copying build/lib/kageyoni/developmental/compounding_agent.py -> build/bdist.linux-x86_64/wheel/./kageyoni/developmental
+copying build/lib/kageyoni/developmental/forge.py -> build/bdist.linux-x86_64/wheel/./kageyoni/developmental
+copying build/lib/kageyoni/developmental/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/developmental
+copying build/lib/kageyoni/developmental/agent.py -> build/bdist.linux-x86_64/wheel/./kageyoni/developmental
+copying build/lib/kageyoni/gate.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/checkpoint.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/workflows.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/writing.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+creating build/bdist.linux-x86_64/wheel/kageyoni/v11
+copying build/lib/kageyoni/v11/enforcement.py -> build/bdist.linux-x86_64/wheel/./kageyoni/v11
+copying build/lib/kageyoni/v11/context.py -> build/bdist.linux-x86_64/wheel/./kageyoni/v11
+copying build/lib/kageyoni/v11/integration.py -> build/bdist.linux-x86_64/wheel/./kageyoni/v11
+copying build/lib/kageyoni/v11/adaptive.py -> build/bdist.linux-x86_64/wheel/./kageyoni/v11
+copying build/lib/kageyoni/v11/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/v11
+copying build/lib/kageyoni/v11/runtime.py -> build/bdist.linux-x86_64/wheel/./kageyoni/v11
+copying build/lib/kageyoni/v11/frontier.py -> build/bdist.linux-x86_64/wheel/./kageyoni/v11
+creating build/bdist.linux-x86_64/wheel/kageyoni/execution
+copying build/lib/kageyoni/execution/operations.py -> build/bdist.linux-x86_64/wheel/./kageyoni/execution
+copying build/lib/kageyoni/execution/manual.py -> build/bdist.linux-x86_64/wheel/./kageyoni/execution
+copying build/lib/kageyoni/execution/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/execution
+copying build/lib/kageyoni/gate_runner.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+creating build/bdist.linux-x86_64/wheel/kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/learning_contracts.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/genesis.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/contracts.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/nodes.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/expression.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/network.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/learning.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/transfer.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/development.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/methods.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+copying build/lib/kageyoni/intelligence/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/intelligence
+creating build/bdist.linux-x86_64/wheel/kageyoni/emergence
+copying build/lib/kageyoni/emergence/technique.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/cognition_trial.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/store.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/cli.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/evaluator.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/workflow.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/engine.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/models.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/hydration.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/causal_encounter.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/action_dispatcher.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/affordances.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/dispatcher.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/emergence/preview.py -> build/bdist.linux-x86_64/wheel/./kageyoni/emergence
+copying build/lib/kageyoni/operations.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/agency_workflows.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/engine.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/celestial.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+creating build/bdist.linux-x86_64/wheel/kageyoni/processes
+copying build/lib/kageyoni/processes/outcomes.py -> build/bdist.linux-x86_64/wheel/./kageyoni/processes
+copying build/lib/kageyoni/processes/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/processes
+creating build/bdist.linux-x86_64/wheel/kageyoni/research_compiler
+copying build/lib/kageyoni/research_compiler/adversarial.py -> build/bdist.linux-x86_64/wheel/./kageyoni/research_compiler
+copying build/lib/kageyoni/research_compiler/invalidation_engine.py -> build/bdist.linux-x86_64/wheel/./kageyoni/research_compiler
+copying build/lib/kageyoni/research_compiler/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/research_compiler
+copying build/lib/kageyoni/research_compiler/package_compiler.py -> build/bdist.linux-x86_64/wheel/./kageyoni/research_compiler
+copying build/lib/kageyoni/research_compiler/claims.py -> build/bdist.linux-x86_64/wheel/./kageyoni/research_compiler
+copying build/lib/kageyoni/research_compiler/topic_modeler.py -> build/bdist.linux-x86_64/wheel/./kageyoni/research_compiler
+copying build/lib/kageyoni/research_compiler/treatment_generator.py -> build/bdist.linux-x86_64/wheel/./kageyoni/research_compiler
+copying build/lib/kageyoni/research_compiler/semantic_casting.py -> build/bdist.linux-x86_64/wheel/./kageyoni/research_compiler
+creating build/bdist.linux-x86_64/wheel/kageyoni/persistence
+copying build/lib/kageyoni/persistence/migrations.py -> build/bdist.linux-x86_64/wheel/./kageyoni/persistence
+copying build/lib/kageyoni/persistence/contributions.py -> build/bdist.linux-x86_64/wheel/./kageyoni/persistence
+copying build/lib/kageyoni/persistence/artifacts.py -> build/bdist.linux-x86_64/wheel/./kageyoni/persistence
+copying build/lib/kageyoni/persistence/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/persistence
+copying build/lib/kageyoni/persistence/unit_of_work.py -> build/bdist.linux-x86_64/wheel/./kageyoni/persistence
+creating build/bdist.linux-x86_64/wheel/kageyoni/vantage
+copying build/lib/kageyoni/vantage/production.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/qualification.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/packaging.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/cli.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/engine.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/models.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/performance.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/proposal.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/graph.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/vantage/rubric.py -> build/bdist.linux-x86_64/wheel/./kageyoni/vantage
+copying build/lib/kageyoni/resources.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+creating build/bdist.linux-x86_64/wheel/kageyoni/playable_world
+copying build/lib/kageyoni/playable_world/kernel.py -> build/bdist.linux-x86_64/wheel/./kageyoni/playable_world
+copying build/lib/kageyoni/playable_world/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/playable_world
+copying build/lib/kageyoni/personality.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/__main__.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/migrate.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/graph.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/application.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+creating build/bdist.linux-x86_64/wheel/kageyoni/nature
+copying build/lib/kageyoni/nature/control.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/compression.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/compounding.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/expansion.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/core.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/coupling.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/continuity.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/extraction.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/techniques.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/sovereign_incarnation.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/grounding.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/nature/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/nature
+copying build/lib/kageyoni/gateway.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/model.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/constellation.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+creating build/bdist.linux-x86_64/wheel/kageyoni/entity
+copying build/lib/kageyoni/entity/specs.py -> build/bdist.linux-x86_64/wheel/./kageyoni/entity
+copying build/lib/kageyoni/entity/state.py -> build/bdist.linux-x86_64/wheel/./kageyoni/entity
+copying build/lib/kageyoni/entity/models.py -> build/bdist.linux-x86_64/wheel/./kageyoni/entity
+copying build/lib/kageyoni/entity/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/entity
+copying build/lib/kageyoni/entity/instance.py -> build/bdist.linux-x86_64/wheel/./kageyoni/entity
+creating build/bdist.linux-x86_64/wheel/kageyoni/situations
+copying build/lib/kageyoni/situations/qualification.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/storage.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/long_horizon.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/models.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/v11_adapter.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/integration.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/comparative.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/scar.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/memory.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/studio.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/comparative_runner.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/service.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/catalog.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/situations/runtime.py -> build/bdist.linux-x86_64/wheel/./kageyoni/situations
+copying build/lib/kageyoni/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+creating build/bdist.linux-x86_64/wheel/kageyoni/data
+copying build/lib/kageyoni/data/migration_021.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_006.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_017.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_023.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_022.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_011.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_020.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_004.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_002.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_008.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_014.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_007.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_010.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_019.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_013.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_025.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_003.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_012.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_024.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_018.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_005.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_016.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/schema.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_009.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+copying build/lib/kageyoni/data/migration_015.sql -> build/bdist.linux-x86_64/wheel/./kageyoni/data
+creating build/bdist.linux-x86_64/wheel/kageyoni/workspaces
+copying build/lib/kageyoni/workspaces/contracts.py -> build/bdist.linux-x86_64/wheel/./kageyoni/workspaces
+copying build/lib/kageyoni/workspaces/pipeline.py -> build/bdist.linux-x86_64/wheel/./kageyoni/workspaces
+copying build/lib/kageyoni/workspaces/documents.py -> build/bdist.linux-x86_64/wheel/./kageyoni/workspaces
+copying build/lib/kageyoni/workspaces/repository.py -> build/bdist.linux-x86_64/wheel/./kageyoni/workspaces
+copying build/lib/kageyoni/workspaces/transitions.py -> build/bdist.linux-x86_64/wheel/./kageyoni/workspaces
+copying build/lib/kageyoni/workspaces/world.py -> build/bdist.linux-x86_64/wheel/./kageyoni/workspaces
+copying build/lib/kageyoni/workspaces/registry.py -> build/bdist.linux-x86_64/wheel/./kageyoni/workspaces
+copying build/lib/kageyoni/participant_kernel.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+creating build/bdist.linux-x86_64/wheel/kageyoni/composition
+copying build/lib/kageyoni/composition/adapter.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/composition/compiler.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/composition/gates.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/composition/knowledge.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/composition/service.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/composition/governor.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/composition/deficits.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/composition/registry.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/composition/__init__.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+creating build/bdist.linux-x86_64/wheel/kageyoni/composition/data
+copying build/lib/kageyoni/composition/data/content_development.json -> build/bdist.linux-x86_64/wheel/./kageyoni/composition/data
+copying build/lib/kageyoni/composition/data/narrative_scene.json -> build/bdist.linux-x86_64/wheel/./kageyoni/composition/data
+copying build/lib/kageyoni/composition/data/aspect_types.json -> build/bdist.linux-x86_64/wheel/./kageyoni/composition/data
+copying build/lib/kageyoni/composition/effects.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/composition/explanation.py -> build/bdist.linux-x86_64/wheel/./kageyoni/composition
+copying build/lib/kageyoni/ledger.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/characters.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+copying build/lib/kageyoni/seed.py -> build/bdist.linux-x86_64/wheel/./kageyoni
+running install_egg_info
+Copying kageyoni_engine.egg-info to build/bdist.linux-x86_64/wheel/./kageyoni_engine-11.0.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.linux-x86_64/wheel/kageyoni_engine-11.0.0.dist-info/WHEEL
+creating 'dist/kageyoni_engine-11.0.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'kageyoni/__init__.py'
+adding 'kageyoni/__main__.py'
+adding 'kageyoni/agency_workflows.py'
+adding 'kageyoni/application.py'
+adding 'kageyoni/celestial.py'
+adding 'kageyoni/characters.py'
+adding 'kageyoni/checkpoint.py'
+adding 'kageyoni/coliseum.py'
+adding 'kageyoni/console.py'
+adding 'kageyoni/constellation.py'
+adding 'kageyoni/decisions.py'
+adding 'kageyoni/engine.py'
+adding 'kageyoni/gate.py'
+adding 'kageyoni/gate_runner.py'
+adding 'kageyoni/gateway.py'
+adding 'kageyoni/graph.py'
+adding 'kageyoni/ledger.py'
+adding 'kageyoni/magnet_delta.py'
+adding 'kageyoni/migrate.py'
+adding 'kageyoni/model.py'
+adding 'kageyoni/operations.py'
+adding 'kageyoni/participant_kernel.py'
+adding 'kageyoni/personality.py'
+adding 'kageyoni/resources.py'
+adding 'kageyoni/scout.py'
+adding 'kageyoni/seed.py'
+adding 'kageyoni/will.py'
+adding 'kageyoni/workflows.py'
+adding 'kageyoni/writing.py'
+adding 'kageyoni/composition/__init__.py'
+adding 'kageyoni/composition/adapter.py'
+adding 'kageyoni/composition/compiler.py'
+adding 'kageyoni/composition/deficits.py'
+adding 'kageyoni/composition/effects.py'
+adding 'kageyoni/composition/explanation.py'
+adding 'kageyoni/composition/gates.py'
+adding 'kageyoni/composition/governor.py'
+adding 'kageyoni/composition/knowledge.py'
+adding 'kageyoni/composition/registry.py'
+adding 'kageyoni/composition/service.py'
+adding 'kageyoni/composition/data/aspect_types.json'
+adding 'kageyoni/composition/data/content_development.json'
+adding 'kageyoni/composition/data/narrative_scene.json'
+adding 'kageyoni/data/migration_002.sql'
+adding 'kageyoni/data/migration_003.sql'
+adding 'kageyoni/data/migration_004.sql'
+adding 'kageyoni/data/migration_005.sql'
+adding 'kageyoni/data/migration_006.sql'
+adding 'kageyoni/data/migration_007.sql'
+adding 'kageyoni/data/migration_008.sql'
+adding 'kageyoni/data/migration_009.sql'
+adding 'kageyoni/data/migration_010.sql'
+adding 'kageyoni/data/migration_011.sql'
+adding 'kageyoni/data/migration_012.sql'
+adding 'kageyoni/data/migration_013.sql'
+adding 'kageyoni/data/migration_014.sql'
+adding 'kageyoni/data/migration_015.sql'
+adding 'kageyoni/data/migration_016.sql'
+adding 'kageyoni/data/migration_017.sql'
+adding 'kageyoni/data/migration_018.sql'
+adding 'kageyoni/data/migration_019.sql'
+adding 'kageyoni/data/migration_020.sql'
+adding 'kageyoni/data/migration_021.sql'
+adding 'kageyoni/data/migration_022.sql'
+adding 'kageyoni/data/migration_023.sql'
+adding 'kageyoni/data/migration_024.sql'
+adding 'kageyoni/data/migration_025.sql'
+adding 'kageyoni/data/schema.sql'
+adding 'kageyoni/developmental/__init__.py'
+adding 'kageyoni/developmental/agent.py'
+adding 'kageyoni/developmental/apex.py'
+adding 'kageyoni/developmental/closure.py'
+adding 'kageyoni/developmental/compounding_agent.py'
+adding 'kageyoni/developmental/contracts.py'
+adding 'kageyoni/developmental/forge.py'
+adding 'kageyoni/developmental/symbiogenesis.py'
+adding 'kageyoni/emergence/__init__.py'
+adding 'kageyoni/emergence/action_dispatcher.py'
+adding 'kageyoni/emergence/affordances.py'
+adding 'kageyoni/emergence/causal_encounter.py'
+adding 'kageyoni/emergence/cli.py'
+adding 'kageyoni/emergence/cognition_trial.py'
+adding 'kageyoni/emergence/dispatcher.py'
+adding 'kageyoni/emergence/engine.py'
+adding 'kageyoni/emergence/evaluator.py'
+adding 'kageyoni/emergence/hydration.py'
+adding 'kageyoni/emergence/models.py'
+adding 'kageyoni/emergence/preview.py'
+adding 'kageyoni/emergence/store.py'
+adding 'kageyoni/emergence/technique.py'
+adding 'kageyoni/emergence/workflow.py'
+adding 'kageyoni/entity/__init__.py'
+adding 'kageyoni/entity/instance.py'
+adding 'kageyoni/entity/models.py'
+adding 'kageyoni/entity/specs.py'
+adding 'kageyoni/entity/state.py'
+adding 'kageyoni/execution/__init__.py'
+adding 'kageyoni/execution/manual.py'
+adding 'kageyoni/execution/operations.py'
+adding 'kageyoni/intelligence/__init__.py'
+adding 'kageyoni/intelligence/contracts.py'
+adding 'kageyoni/intelligence/development.py'
+adding 'kageyoni/intelligence/expression.py'
+adding 'kageyoni/intelligence/genesis.py'
+adding 'kageyoni/intelligence/learning.py'
+adding 'kageyoni/intelligence/learning_contracts.py'
+adding 'kageyoni/intelligence/methods.py'
+adding 'kageyoni/intelligence/network.py'
+adding 'kageyoni/intelligence/nodes.py'
+adding 'kageyoni/intelligence/transfer.py'
+adding 'kageyoni/nature/__init__.py'
+adding 'kageyoni/nature/compounding.py'
+adding 'kageyoni/nature/compression.py'
+adding 'kageyoni/nature/continuity.py'
+adding 'kageyoni/nature/control.py'
+adding 'kageyoni/nature/core.py'
+adding 'kageyoni/nature/coupling.py'
+adding 'kageyoni/nature/expansion.py'
+adding 'kageyoni/nature/extraction.py'
+adding 'kageyoni/nature/grounding.py'
+adding 'kageyoni/nature/sovereign_incarnation.py'
+adding 'kageyoni/nature/techniques.py'
+adding 'kageyoni/persistence/__init__.py'
+adding 'kageyoni/persistence/artifacts.py'
+adding 'kageyoni/persistence/contributions.py'
+adding 'kageyoni/persistence/migrations.py'
+adding 'kageyoni/persistence/unit_of_work.py'
+adding 'kageyoni/playable_world/__init__.py'
+adding 'kageyoni/playable_world/kernel.py'
+adding 'kageyoni/processes/__init__.py'
+adding 'kageyoni/processes/outcomes.py'
+adding 'kageyoni/research_compiler/__init__.py'
+adding 'kageyoni/research_compiler/adversarial.py'
+adding 'kageyoni/research_compiler/claims.py'
+adding 'kageyoni/research_compiler/invalidation_engine.py'
+adding 'kageyoni/research_compiler/package_compiler.py'
+adding 'kageyoni/research_compiler/semantic_casting.py'
+adding 'kageyoni/research_compiler/topic_modeler.py'
+adding 'kageyoni/research_compiler/treatment_generator.py'
+adding 'kageyoni/situations/__init__.py'
+adding 'kageyoni/situations/catalog.py'
+adding 'kageyoni/situations/comparative.py'
+adding 'kageyoni/situations/comparative_runner.py'
+adding 'kageyoni/situations/integration.py'
+adding 'kageyoni/situations/long_horizon.py'
+adding 'kageyoni/situations/memory.py'
+adding 'kageyoni/situations/models.py'
+adding 'kageyoni/situations/qualification.py'
+adding 'kageyoni/situations/runtime.py'
+adding 'kageyoni/situations/scar.py'
+adding 'kageyoni/situations/service.py'
+adding 'kageyoni/situations/storage.py'
+adding 'kageyoni/situations/studio.py'
+adding 'kageyoni/situations/v11_adapter.py'
+adding 'kageyoni/v11/__init__.py'
+adding 'kageyoni/v11/adaptive.py'
+adding 'kageyoni/v11/context.py'
+adding 'kageyoni/v11/enforcement.py'
+adding 'kageyoni/v11/frontier.py'
+adding 'kageyoni/v11/integration.py'
+adding 'kageyoni/v11/runtime.py'
+adding 'kageyoni/vantage/__init__.py'
+adding 'kageyoni/vantage/cli.py'
+adding 'kageyoni/vantage/engine.py'
+adding 'kageyoni/vantage/graph.py'
+adding 'kageyoni/vantage/models.py'
+adding 'kageyoni/vantage/packaging.py'
+adding 'kageyoni/vantage/performance.py'
+adding 'kageyoni/vantage/production.py'
+adding 'kageyoni/vantage/proposal.py'
+adding 'kageyoni/vantage/qualification.py'
+adding 'kageyoni/vantage/rubric.py'
+adding 'kageyoni/workspaces/contracts.py'
+adding 'kageyoni/workspaces/documents.py'
+adding 'kageyoni/workspaces/pipeline.py'
+adding 'kageyoni/workspaces/registry.py'
+adding 'kageyoni/workspaces/repository.py'
+adding 'kageyoni/workspaces/transitions.py'
+adding 'kageyoni/workspaces/world.py'
+adding 'kageyoni_engine-11.0.0.dist-info/METADATA'
+adding 'kageyoni_engine-11.0.0.dist-info/WHEEL'
+adding 'kageyoni_engine-11.0.0.dist-info/entry_points.txt'
+adding 'kageyoni_engine-11.0.0.dist-info/top_level.txt'
+adding 'kageyoni_engine-11.0.0.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel

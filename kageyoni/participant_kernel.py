@@ -45,6 +45,21 @@ class PersistentParticipant:
         self.node_id = node_data["node_id"]
         self.workspace_id = node_data["workspace_id"]
 
+    def observe_encounter(self, encounter_id):
+        from .application import Application
+        return Application(self.engine).encounters.inspect(
+            self.branch, encounter_id, viewer=self.character_id)
+
+    def prepare_action(self, encounter_id, request_id=None):
+        from .application import Application
+        return Application(self.engine).encounter_actions.prepare(
+            self.branch, encounter_id, self.character_id, request_id)
+
+    def dispatch_reply(self, encounter_id, request, reply):
+        from .application import Application
+        return Application(self.engine).encounter_actions.dispatch(
+            self.branch, encounter_id, request, reply, viewer=self.character_id)
+
     @classmethod
     def open_or_create(
         cls,

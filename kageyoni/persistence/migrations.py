@@ -141,3 +141,8 @@ def install_shinobi(engine):
     """
     install_all(engine)
     _install_component(engine,SHINOBI_MIGRATION,24,23,'shinobi_interface')
+
+def install_action_dispatch(engine):
+    """Opt-in issued requests; preserve legacy dispatch rows unchanged."""
+    install_shinobi(engine)
+    _install_component(engine,schema_path('migration_025.sql'),25,24,'action_dispatch_interface')

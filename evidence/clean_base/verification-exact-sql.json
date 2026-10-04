@@ -1,0 +1,126 @@
+{
+  "source_artifact_id": 11290084144,
+  "files": [
+    {
+      "path": "migration_002.sql",
+      "git_blob_sha": "3ae201609baca11ef6ec1e174157a4ca597f6f02",
+      "sha256": "a5442cd0616e46547fc00b7168c010629e7a889f616e93e46e89f59a26f2aa9b"
+    },
+    {
+      "path": "migration_003.sql",
+      "git_blob_sha": "85625a3788adc603264b3cff7b9c2eead7eca9e4",
+      "sha256": "bea3bd624745b39c94f589f0fa49944c8c11d80b1e822a796125ca62534dedac"
+    },
+    {
+      "path": "migration_004.sql",
+      "git_blob_sha": "63706973065102bdcbec8fbe17503e05657eeaeb",
+      "sha256": "8f20d2759a765f8c35556e527df982481db4292571e96a1189046347bdcfcc64"
+    },
+    {
+      "path": "migration_005.sql",
+      "git_blob_sha": "cad007c7b59b5a763cbe0066d106a66d1c52bba9",
+      "sha256": "c9caa8dde7379caa38927b4125a0c732e3688447ae0d1204fe8a19f11692ae32"
+    },
+    {
+      "path": "migration_006.sql",
+      "git_blob_sha": "ab10bc81c602d32a0fd2082d8636890bc34c7f04",
+      "sha256": "43d505460110945cb96233ebeb21051e6e4070e95e8dac45cf929f29431ba4b8"
+    },
+    {
+      "path": "migration_007.sql",
+      "git_blob_sha": "f15b7b7cb5dbc987598ea0192a975aeacc72b8e9",
+      "sha256": "43e8706e91d67ecd7349e847cc8beabdc0775265f43819e220879a881063cd7d"
+    },
+    {
+      "path": "migration_008.sql",
+      "git_blob_sha": "92a889d1f6efb2e29f98f71544ae58b1e51b9c7a",
+      "sha256": "042ac97d44a494358ecacc382541ecf1c485001bd497ab93ba903966697e21e3"
+    },
+    {
+      "path": "migration_009.sql",
+      "git_blob_sha": "eab4f350ad88152bde25df4ecdc52864a5d7c543",
+      "sha256": "6e916198798a08bc62e41233be10e571b532b6d7eea5f52d038a30ede1c37074"
+    },
+    {
+      "path": "migration_010.sql",
+      "git_blob_sha": "d664f8fd9827da0e2e240e846058253be06cec74",
+      "sha256": "fae161634775e261a0da650a8984c830c321307e99cfe3a5b5351d9880170f6a"
+    },
+    {
+      "path": "migration_011.sql",
+      "git_blob_sha": "8db5a0198b6d0269b6025925b8dc90e8aaaae048",
+      "sha256": "e4d543cf739396e217e7b0657854ea20c06fb0e9873dfb973904ec5828604f8c"
+    },
+    {
+      "path": "migration_012.sql",
+      "git_blob_sha": "3bdd13c0f82b03dabe9c12ecd6df7a925ff31516",
+      "sha256": "681b27fa90de7c42c668a9ebd4b288ed51ac81b4feec095362d4fe9d1955e914"
+    },
+    {
+      "path": "migration_013.sql",
+      "git_blob_sha": "81c2886c7c3d6a9130c36abb782042df2a432d86",
+      "sha256": "431b734af855058eec1576b74053155130dc9f2b6df04acaff58789e80baeb4a"
+    },
+    {
+      "path": "migration_014.sql",
+      "git_blob_sha": "9c1eece13d902db442a1e66f3770255978a8b9b9",
+      "sha256": "5b54eb4a84d84bf15764308f03403aae58aefe02778cd7c61eda39d191a68fe8"
+    },
+    {
+      "path": "migration_015.sql",
+      "git_blob_sha": "61f51ca22dc0bdb3d3f30e5e40327b6bee5c72b6",
+      "sha256": "8e39a9999b31f6b9cfe876411f1db38e184e64f4dc30c569a3f1d33b4f2d450d"
+    },
+    {
+      "path": "migration_016.sql",
+      "git_blob_sha": "e7ee37f62c723669ce53e34ba719a66358cf0135",
+      "sha256": "267743fa93e5757e28d82e80c89e8952f7d9a4eb161776f3168f158b85a5de54"
+    },
+    {
+      "path": "migration_017.sql",
+      "git_blob_sha": "209688765c24ad5c6f03c41c45dc90cb5fa05329",
+      "sha256": "e125ee0f074e8e7a9f9cb9f5077cb3e915c1dfe7b2ef9fbed7c67a0d050a5f8f"
+    },
+    {
+      "path": "migration_018.sql",
+      "git_blob_sha": "118712cbed9d60a997a08ed92d5cb9433ac99603",
+      "sha256": "538e30ad6f817f599b5b68912d27157fcad6c0f9eb7f7467061c89408f47b216"
+    },
+    {
+      "path": "migration_019.sql",
+      "git_blob_sha": "6f4c6e3cba33e9362146cef7890f6946a2e91e4e",
+      "sha256": "3e1dedafcce9f794791c4f9d3f48b00c76aa84a28705f62a84852fe872ddb4e6"
+    },
+    {
+      "path": "migration_020.sql",
+      "git_blob_sha": "58c1a8b550b99e78ddac4397a6acfdb9911591db",
+      "sha256": "6ba2d95c2a0e1d2b0521e0a9022979a7cd80f548264dd2db26c599743e86cb5f"
+    },
+    {
+      "path": "migration_021.sql",
+      "git_blob_sha": "1564cbf03e84227538e35b84b939b466bc9b1650",
+      "sha256": "ebb8409cfd566a47b52b5772d21f9dca6293b79440bce334b495bb3d0c7f58a3"
+    },
+    {
+      "path": "migration_022.sql",
+      "git_blob_sha": "b3a98b522037daf4beed85f68192cf66814bb1a7",
+      "sha256": "b501ba3a65e279b0917ba0a4b454433a8b25a855bfd022f4319170a1946bf7f0"
+    },
+    {
+      "path": "migration_023.sql",
+      "git_blob_sha": "9d0d51ae26c61744c20519b0d76f44f75edd7d5e",
+      "sha256": "9bb9419c5f1d0e5050b77a5faa613d98e74467991d8d079fd186f3f2fdd5bd3e"
+    },
+    {
+      "path": "migration_024.sql",
+      "git_blob_sha": "a364ed17984d3a0361c5abe184b64dfc124373f1",
+      "sha256": "5c2265517dd7432e99f6a8ac7f49dc74f4c8cf6b6a3b32e0f45801f1e77ec840"
+    },
+    {
+      "path": "schema.sql",
+      "git_blob_sha": "6d67d5fdacc2f185b19b4099f5093b3b4544a6ab",
+      "sha256": "fa48e230a50c4fee9621d01b3d5f1f0c29d05f51df00593e0c63260e8f9e21eb"
+    }
+  ],
+  "recovery": "Restored source bytes from sdist after verifying each original main Git blob SHA. Moved only generated seed databases aside; original historical fixtures untouched."
+}

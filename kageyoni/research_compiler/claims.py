@@ -12,6 +12,7 @@ from __future__ import annotations
 import hashlib
 from dataclasses import dataclass, field
 from enum import Enum
+from collections.abc import MutableSequence
 from typing import Dict, List, Optional, Any, Set
 
 from kageyoni.graph import CausalDAG, CycleDetectedError
@@ -41,39 +42,51 @@ class EpistemicStatus(Enum):
     CREATIVE_PROPOSITION = "CREATIVE_DECISION"
 
 
-class ClaimEdgeList(list):
-    """
-    List proxy that dynamically derives adjacency from the authoritative CausalDAG.
-    Merges live DAG edges with any local manual mutations (e.g. artificial cycle tests).
-    """
-    def __init__(self, node_id: str, edge_type: str, graph: Any, initial: Optional[List[str]] = None):
-        super().__init__(initial or [])
-        self.node_id = node_id
-        self.edge_type = edge_type
-        self.graph = graph
+class ClaimEdgeList(MutableSequence):
+    """Sequence view; bound mutations use the graph's checked topology owner."""
+    def __init__(self, node_id, edge_type, graph, initial=None):
+        self.node_id, self.edge_type, self.graph = node_id, edge_type, graph
+        self._initial = list(initial or [])
 
     @property
-    def _is_bound_to_dag(self) -> bool:
-        return bool(self.graph and hasattr(self.graph, "_dag") and self.node_id in self.graph._dag)
+    def _is_bound_to_dag(self):
+        return self.graph is not None and self.node_id in self.graph._dag
 
-    def __iter__(self):
-        if self._is_bound_to_dag:
-            dag_node = self.graph._dag.get_node(self.node_id)
-            dag_edges = dag_node.dependencies if self.edge_type == "parents" else dag_node.dependents
-            return iter(sorted(list(set(dag_edges) | set(super().__iter__()))))
-        return super().__iter__()
+    def _values(self):
+        if not self._is_bound_to_dag:
+            return self._initial
+        node = self.graph._dag.get_node(self.node_id)
+        return sorted(node.dependencies if self.edge_type == "parents" else node.dependents)
 
-    def __len__(self):
-        return len(list(iter(self)))
+    def __len__(self): return len(self._values())
+    def __getitem__(self, index): return self._values()[index]
+    def __iter__(self): return iter(self._values())
+    def __repr__(self): return repr(self._values())
+    def __eq__(self, other): return list(self) == list(other)
+    def __setitem__(self, index, value):
+        values = list(self); values[index] = value; self._replace(values)
+    def __delitem__(self, index):
+        values = list(self); del values[index]; self._replace(values)
+    def insert(self, index, value):
+        values = list(self); values.insert(index, value); self._replace(values)
 
-    def __contains__(self, item):
-        return item in list(iter(self))
-
-    def __repr__(self):
-        return repr(list(iter(self)))
-
-    def __eq__(self, other):
-        return list(iter(self)) == list(other)
+    def _replace(self, values):
+        if not self._is_bound_to_dag:
+            self._initial = list(values)
+            return
+        dag = self.graph._dag
+        for value in values:
+            dag.get_node(value)
+            parent, child = (value, self.node_id) if self.edge_type == "parents" else (self.node_id, value)
+            if parent == child or dag._is_reachable(child, parent):
+                raise CycleDetectedError(f"CYCLE_DETECTED: {parent} -> {child}")
+        old = set(self)
+        for value in old - set(values):
+            parent, child = (value, self.node_id) if self.edge_type == "parents" else (self.node_id, value)
+            dag.remove_edge(parent, child)
+        for value in set(values) - old:
+            parent, child = (value, self.node_id) if self.edge_type == "parents" else (self.node_id, value)
+            dag.add_edge(parent, child)
 
 
 class ClaimNode:
@@ -117,12 +130,38 @@ class ClaimNode:
         self.uncertainties = list(uncertainties or [])
 
     @property
+    def is_invalidated(self):
+        if self._graph is not None and self.claim_id in self._graph._dag:
+            return self._graph._dag.get_node(self.claim_id).status == "INVALIDATED"
+        return self._is_invalidated
+
+    @is_invalidated.setter
+    def is_invalidated(self, value):
+        if self._graph is not None and self.claim_id in self._graph._dag:
+            self._graph._dag.get_node(self.claim_id).status = "INVALIDATED" if value else "VALID"
+        else:
+            self._is_invalidated = value
+
+    @property
+    def invalidation_reason(self):
+        if self._graph is not None and self.claim_id in self._graph._dag:
+            return self._graph._dag.get_node(self.claim_id).invalidation_reason
+        return self._invalidation_reason
+
+    @invalidation_reason.setter
+    def invalidation_reason(self, value):
+        if self._graph is not None and self.claim_id in self._graph._dag:
+            self._graph._dag.get_node(self.claim_id).invalidation_reason = value
+        else:
+            self._invalidation_reason = value
+
+    @property
     def parent_claim_ids(self) -> ClaimEdgeList:
         return self._parent_claim_ids
 
     @parent_claim_ids.setter
     def parent_claim_ids(self, val: List[str]):
-        self._parent_claim_ids = ClaimEdgeList(self.claim_id, "parents", self._graph, initial=val)
+        self._parent_claim_ids._replace(val)
 
     @property
     def child_claim_ids(self) -> ClaimEdgeList:
@@ -130,15 +169,15 @@ class ClaimNode:
 
     @child_claim_ids.setter
     def child_claim_ids(self, val: List[str]):
-        self._child_claim_ids = ClaimEdgeList(self.claim_id, "children", self._graph, initial=val)
+        self._child_claim_ids._replace(val)
 
     def _bind_graph(self, graph: Any) -> None:
         self._graph = graph
         self._parent_claim_ids.graph = graph
         self._child_claim_ids.graph = graph
         # Clear local duplicate edge storage now that CausalDAG is authoritative owner
-        super(ClaimEdgeList, self._parent_claim_ids).clear()
-        super(ClaimEdgeList, self._child_claim_ids).clear()
+        self._parent_claim_ids._initial.clear()
+        self._child_claim_ids._initial.clear()
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -221,27 +260,26 @@ class ClaimGraph:
             if sid not in self.sources:
                 raise ValueError(f"UNGROUNDED_CLAIM: Provenance source '{sid}' referenced by claim '{claim.claim_id}' does not exist in graph.")
 
-        # Staged atomic addition to CausalDAG
-        parents_to_link = list(claim.parent_claim_ids)
-        added_dag_nodes = []
-        added_edges = []
+        parents = list(claim.parent_claim_ids)
+        missing = [pid for pid in parents if pid not in self._dag]
+        # Preserve forward references, but never publish placeholders on failure.
+        if claim.claim_id in parents:
+            raise ValueError("CYCLE_DETECTED: self dependency")
+        for pid in parents:
+            if pid in self._dag and claim.claim_id in self._dag and self._dag._is_reachable(claim.claim_id, pid):
+                raise ValueError("CYCLE_DETECTED: claim update")
+        payload = claim.to_dict()
+        for field in ("parent_claim_ids", "child_claim_ids", "is_invalidated", "invalidation_reason"):
+            payload.pop(field)  # Topology and validity belong to the DAG node.
+        for pid in missing:
+            self._dag.add_node(pid, "claim")
         try:
-            if claim.claim_id not in self._dag:
-                self._dag.add_node(claim.claim_id, "claim", claim.to_dict(), status="INVALIDATED" if claim.is_invalidated else "VALID")
-                added_dag_nodes.append(claim.claim_id)
-            for pid in parents_to_link:
-                if pid not in self._dag:
-                    self._dag.add_node(pid, "claim")
-                    added_dag_nodes.append(pid)
-                self._dag.add_edge(pid, claim.claim_id)
-                added_edges.append((pid, claim.claim_id))
-        except CycleDetectedError as err:
-            # Atomic rollback: undo any staged additions to DAG
-            for p, c in added_edges:
-                self._dag.remove_edge(p, c)
-            for nid in reversed(added_dag_nodes):
-                self._dag.remove_node(nid)
-            raise ValueError(f"CYCLE_DETECTED: Dependency cycle detected for claim '{claim.claim_id}': {err}")
+            self._dag.add_node(claim.claim_id, "claim", payload, dependencies=parents,
+                               status="INVALIDATED" if claim.is_invalidated else "VALID")
+        except Exception:
+            for pid in missing:
+                self._dag.remove_node(pid)
+            raise
 
         # Bind graph so child_claim_ids and parent_claim_ids project live from _dag
         claim._bind_graph(self)
@@ -257,13 +295,6 @@ class ClaimGraph:
             return []
 
         invalidated_ids = self._dag.invalidate(claim_id, reason=reason)
-        for cid in invalidated_ids:
-            if cid in self.claims:
-                node = self.claims[cid]
-                node.is_invalidated = True
-                dag_node = self._dag.get_node(cid)
-                node.invalidation_reason = dag_node.invalidation_reason or reason
-
         return invalidated_ids
 
     def invalidate_claim_with_cascade(
@@ -399,3 +430,4 @@ class ClaimGraph:
                     ):
                         return False
         return True
+

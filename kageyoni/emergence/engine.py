@@ -51,7 +51,7 @@ class EmergenceEngine:
         self.affordances = affordances
         self.horizon = horizon
         self.policy = policy
-        self.repo_root = repo_root or Path("C:/Kageyoni")
+        self.repo_root = Path(repo_root) if repo_root is not None else Path(__file__).resolve().parents[2]
         self.dispatcher = CarrierTestDispatcher(self.repo_root)
         self.rounds: List[RoundRecord] = []
         self.technique_bank: Dict[str, CandidateDescendant] = {}
@@ -526,3 +526,4 @@ class EmergenceEngine:
             "decision": decision or "Initial emergence encounter execution",
             "recorded_at": time.time(),
         }
+

@@ -32,7 +32,7 @@ from kageyoni.entity import (
 )
 from kageyoni.gateway import BoundedKageyoniGateway
 from kageyoni.persistence.migrations import install_all
-from kageyoni.resources import campaign_db_path
+from kageyoni.seed import _seed
 from kageyoni.situations.scar import Scar, ScarLedger
 from kageyoni.situations.storage import SQLiteSituationStore
 
@@ -42,8 +42,8 @@ class TestClosedLoopIntegrationProbe(unittest.TestCase):
     def setUp(self):
         self.tmp_dir = tempfile.TemporaryDirectory()
         self.db_path = Path(self.tmp_dir.name) / "probe_test.sqlite"
-        shutil.copy2(campaign_db_path(), self.db_path)
         self.engine = Engine(self.db_path)
+        _seed(self.engine, Path(__file__).resolve().parents[1] / "sources")
         install_all(self.engine)
 
         # Seed the shared physical environment in the SQLite database
@@ -272,8 +272,8 @@ class TestClosedLoopIntegrationProbe(unittest.TestCase):
         # Create an isolated engine without Encounter A's persistent scars
         tmp_uninherited = tempfile.TemporaryDirectory()
         uninherited_db = Path(tmp_uninherited.name) / "uninherited.sqlite"
-        shutil.copy2(campaign_db_path(), uninherited_db)
         engine_uninherited = Engine(uninherited_db)
+        _seed(engine_uninherited, Path(__file__).resolve().parents[1] / "sources")
         install_all(engine_uninherited)
 
         # Seed same environment
@@ -370,3 +370,4 @@ class TestClosedLoopIntegrationProbe(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

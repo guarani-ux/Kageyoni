@@ -64,7 +64,7 @@ from kageyoni.nature.sovereign_incarnation import (
     SovereignIncarnation,
     SovereignNonCompletionError,
 )
-from kageyoni.resources import campaign_db_path
+from kageyoni.seed import _seed
 
 
 class TestSovereignIncarnation(unittest.TestCase):
@@ -72,8 +72,8 @@ class TestSovereignIncarnation(unittest.TestCase):
     def setUp(self):
         self.tmp_dir = tempfile.TemporaryDirectory()
         self.db_path = Path(self.tmp_dir.name) / "sovereign_test.sqlite"
-        shutil.copy2(campaign_db_path(), self.db_path)
         self.engine = Engine(self.db_path)
+        _seed(self.engine, Path(__file__).resolve().parents[1] / "sources")
         self.gateway = BoundedKageyoniGateway(self.engine)
         self.technique = SovereignIncarnation()
 
@@ -520,3 +520,4 @@ class TestSovereignIncarnation(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

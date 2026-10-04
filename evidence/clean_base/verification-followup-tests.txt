@@ -1,0 +1,829 @@
+........................................................................ [  7%]
+............FF......F.......F..................................... [ 14%]
+.............F..............F..F................................. [ 21%]
+........................................................................ [ 28%]
+............F..F.....................................................F.. [ 36%]
+........................................................................ [ 44%]
+..........F.................................................FF.....F.... [ 51%]
+.......F....................F................................................................. [ 61%]
+.................................................................... [ 68%]
+........................................................................ [ 76%]
+..................................................................... [ 83%]
+.............................................................F.......... [ 91%]
+..............................................FFF.....FFF.F............. [ 98%]
+...........                                                              [100%]
+=================================== FAILURES ===================================
+____________ TestCharacterHydration.test_hydrate_sciel_exact_state _____________
+
+self = <test_character_hydration.TestCharacterHydration testMethod=test_hydrate_sciel_exact_state>
+
+    def test_hydrate_sciel_exact_state(self):
+>       packet = hydrate_character_from_disk("sciel")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_character_hydration.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+character_id = 'sciel', characters_root = None
+
+    def hydrate_character_from_disk(
+        character_id: str,
+        characters_root: Optional[Path] = None
+    ) -> HydratedCharacterPacket:
+        """
+        Hydrates a participant directly from their persistent SQLite database.
+        Raises FileNotFoundError if the database does not exist.
+        """
+        root = characters_root or DEFAULT_CHARACTERS_ROOT
+        db_path = root / character_id / "kageyoni.sqlite"
+        if not db_path.exists():
+>           raise FileNotFoundError(f"Character database not found at {db_path}")
+E           FileNotFoundError: Character database not found at C:/Kageyoni/shinobi/.state/characters/sciel/kageyoni.sqlite
+
+kageyoni/emergence/hydration.py:79: FileNotFoundError
+______________ TestCharacterHydration.test_hydrate_voss_and_maki _______________
+
+self = <test_character_hydration.TestCharacterHydration testMethod=test_hydrate_voss_and_maki>
+
+    def test_hydrate_voss_and_maki(self):
+>       voss = hydrate_character_from_disk("voss")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_character_hydration.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+character_id = 'voss', characters_root = None
+
+    def hydrate_character_from_disk(
+        character_id: str,
+        characters_root: Optional[Path] = None
+    ) -> HydratedCharacterPacket:
+        """
+        Hydrates a participant directly from their persistent SQLite database.
+        Raises FileNotFoundError if the database does not exist.
+        """
+        root = characters_root or DEFAULT_CHARACTERS_ROOT
+        db_path = root / character_id / "kageyoni.sqlite"
+        if not db_path.exists():
+>           raise FileNotFoundError(f"Character database not found at {db_path}")
+E           FileNotFoundError: Character database not found at C:/Kageyoni/shinobi/.state/characters/voss/kageyoni.sqlite
+
+kageyoni/emergence/hydration.py:79: FileNotFoundError
+______ CharacterTests.test_interrupted_migration_rolls_back_and_can_retry ______
+
+self = <test_characters.CharacterTests testMethod=test_interrupted_migration_rolls_back_and_can_retry>
+
+    def test_interrupted_migration_rolls_back_and_can_retry(self):
+        from kageyoni.resources import fixture_path
+>       dst=Path(self.temp.name)/'interrupted.sqlite'; shutil.copy2(fixture_path('recovery/pre-character-v1.sqlite'),dst)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_characters.py:143: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'recovery/pre-character-v1.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'recovery/pre-character-v1.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/recovery/pre-character-v1.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/recovery/pre-character-v1.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+_______ CharacterTests.test_upgrade_actual_previous_campaign_and_backup ________
+
+self = <test_characters.CharacterTests testMethod=test_upgrade_actual_previous_campaign_and_backup>
+
+    def test_upgrade_actual_previous_campaign_and_backup(self):
+        from kageyoni.resources import fixture_path
+>       src=fixture_path('recovery/pre-character-v1.sqlite')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_characters.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'recovery/pre-character-v1.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'recovery/pre-character-v1.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/recovery/pre-character-v1.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/recovery/pre-character-v1.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+_ ContributionIntegrationTests.test_installed_v1_upgrade_preserves_node_and_world _
+
+self = <test_contributions.ContributionIntegrationTests testMethod=test_installed_v1_upgrade_preserves_node_and_world>
+
+    def test_installed_v1_upgrade_preserves_node_and_world(self):
+        import shutil
+        p=self.root/'v1.sqlite'
+        origin=Path(__file__).resolve().parents[1]/'recovery/pre-v2-methods.sqlite'
+>       shutil.copy2(origin,p);e=Engine(p)
+        ^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_contributions.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:475: in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+src = PosixPath('/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v2-methods.sqlite')
+dst = PosixPath('/tmp/tmpbfl_3fc2/demo/v1.sqlite'), follow_symlinks = True
+
+    def copyfile(src, dst, *, follow_symlinks=True):
+        """Copy data from src to dst in the most efficient way possible.
+    
+        If follow_symlinks is not set and src is a symbolic link, a new
+        symlink will be created instead of copying the file it points to.
+    
+        """
+        sys.audit("shutil.copyfile", src, dst)
+    
+        if _samefile(src, dst):
+            raise SameFileError("{!r} and {!r} are the same file".format(src, dst))
+    
+        file_size = 0
+        for i, fn in enumerate([src, dst]):
+            try:
+                st = _stat(fn)
+            except OSError:
+                # File most likely does not exist
+                pass
+            else:
+                # XXX What about other special files? (sockets, devices...)
+                if stat.S_ISFIFO(st.st_mode):
+                    fn = fn.path if isinstance(fn, os.DirEntry) else fn
+                    raise SpecialFileError("`%s` is a named pipe" % fn)
+                if _WINDOWS and i == 0:
+                    file_size = st.st_size
+    
+        if not follow_symlinks and _islink(src):
+            os.symlink(os.readlink(src), dst)
+        else:
+>           with open(src, 'rb') as fsrc:
+                 ^^^^^^^^^^^^^^^
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v2-methods.sqlite'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:260: FileNotFoundError
+______________ DecisionTests.test_interrupted_decision_migration _______________
+
+self = <test_decisions.DecisionTests testMethod=test_interrupted_decision_migration>
+
+    def test_interrupted_decision_migration(self):
+        import sqlite3
+        from kageyoni.resources import fixture_path
+>       dst=Path(self.t.name)/'interrupted.sqlite'; shutil.copy2(fixture_path('recovery/pre-decisions-v1.sqlite'),dst)
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_decisions.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'recovery/pre-decisions-v1.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'recovery/pre-decisions-v1.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/recovery/pre-decisions-v1.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/recovery/pre-decisions-v1.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+____________ DecisionTests.test_replay_snapshot_and_actual_upgrade _____________
+
+self = <test_decisions.DecisionTests testMethod=test_replay_snapshot_and_actual_upgrade>
+
+    def test_replay_snapshot_and_actual_upgrade(self):
+        d.propose(self.e,'main',self.spec()); self.commit(); self.e.register_snapshot('main','decision-snapshot')
+        self.assertEqual(self.e.replay('main')['records'],sorted(self.e.state(),key=lambda r:r['id']))
+        from kageyoni.resources import fixture_path
+>       dst=Path(self.t.name)/'upgrade.sqlite'; shutil.copy2(fixture_path('recovery/pre-decisions-v1.sqlite'),dst)
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_decisions.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'recovery/pre-decisions-v1.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'recovery/pre-decisions-v1.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/recovery/pre-decisions-v1.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/recovery/pre-decisions-v1.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+_ TestEnvironmentalEncounter.test_autonomous_hydrated_scheduling_and_technique_transfer _
+
+self = <test_environmental_encounter.TestEnvironmentalEncounter testMethod=test_autonomous_hydrated_scheduling_and_technique_transfer>
+
+    def test_autonomous_hydrated_scheduling_and_technique_transfer(self):
+        """Autonomous unscripted run with hydrated participants derives valid technique."""
+        eid = "env-auto-01"
+        self.harness.start_encounter("constellation-clash", 1, eid)
+    
+        participants = [
+            ParticipantDecisionInterface.from_character_id("voss", priority=50),
+            ParticipantDecisionInterface.from_character_id("sciel", priority=10),
+            ParticipantDecisionInterface.from_character_id("maki", priority=20),
+            ParticipantDecisionInterface.from_character_id("sebastian", priority=30),
+        ]
+        scheduler = DeclaredSchedulingPolicy(participants)
+        trace = self.harness.run_autonomous_schedule(eid, scheduler, max_cycles=10)
+    
+        self.assertEqual(len(trace), 4)
+        actors = [t["actor"] for t in trace]
+        self.assertEqual(actors, ["voss", "sciel", "maki", "sebastian"])
+    
+        # Check rationale contains hydrated identity marker
+        sciel_trace = [t for t in trace if t["actor"] == "sciel"][0]
+>       self.assertIn("Domain of the Painteress", sciel_trace["proposal"]["rationale"])
+E       AssertionError: 'Domain of the Painteress' not found in "Role 'sciel' responding to state 'ruptured' with intent 'Role sciel action'"
+
+tests/test_environmental_encounter.py:172: AssertionError
+____ TestEnvironmentalEncounter.test_hydrated_character_decision_interfaces ____
+
+self = <test_environmental_encounter.TestEnvironmentalEncounter testMethod=test_hydrated_character_decision_interfaces>
+
+    def test_hydrated_character_decision_interfaces(self):
+        """Participants are instantiated directly from persistent disk SQLite state."""
+        sciel = ParticipantDecisionInterface.from_character_id("sciel", priority=10)
+>       self.assertIsNotNone(sciel.hydrated_state)
+E       AssertionError: unexpectedly None
+
+tests/test_environmental_encounter.py:54: AssertionError
+_ RecoveryTests.test_historical_upgrade_preserves_tables_and_decision_fingerprint _
+
+self = <test_foundation.RecoveryTests testMethod=test_historical_upgrade_preserves_tables_and_decision_fingerprint>
+
+    def test_historical_upgrade_preserves_tables_and_decision_fingerprint(self):
+        import shutil
+        from kageyoni.application import Application
+        from kageyoni.decisions import fingerprint
+        from kageyoni.resources import fixture_path
+        with tempfile.TemporaryDirectory() as temp:
+>           p=Path(temp)/'previous.sqlite';shutil.copy2(fixture_path('personality-fixture.sqlite'),p)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_foundation.py:207: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'personality-fixture.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'personality-fixture.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/personality-fixture.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/personality-fixture.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+_ LearningMigrationTests.test_v2_campaign_migration_preserves_existing_rows_and_pending_decisions _
+
+self = <test_learning_integration.LearningMigrationTests testMethod=test_v2_campaign_migration_preserves_existing_rows_and_pending_decisions>
+
+    def test_v2_campaign_migration_preserves_existing_rows_and_pending_decisions(self):
+        from kageyoni.decisions import fingerprint
+        from kageyoni.engine import encoded
+        source = Path(__file__).resolve().parents[1] / 'recovery/pre-v3-learning.sqlite'
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'campaign.sqlite'
+>           shutil.copy2(source, path)
+
+tests/test_learning_integration.py:153: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:475: in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+src = PosixPath('/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v3-learning.sqlite')
+dst = PosixPath('/tmp/tmp71lfp83u/campaign.sqlite'), follow_symlinks = True
+
+    def copyfile(src, dst, *, follow_symlinks=True):
+        """Copy data from src to dst in the most efficient way possible.
+    
+        If follow_symlinks is not set and src is a symbolic link, a new
+        symlink will be created instead of copying the file it points to.
+    
+        """
+        sys.audit("shutil.copyfile", src, dst)
+    
+        if _samefile(src, dst):
+            raise SameFileError("{!r} and {!r} are the same file".format(src, dst))
+    
+        file_size = 0
+        for i, fn in enumerate([src, dst]):
+            try:
+                st = _stat(fn)
+            except OSError:
+                # File most likely does not exist
+                pass
+            else:
+                # XXX What about other special files? (sockets, devices...)
+                if stat.S_ISFIFO(st.st_mode):
+                    fn = fn.path if isinstance(fn, os.DirEntry) else fn
+                    raise SpecialFileError("`%s` is a named pipe" % fn)
+                if _WINDOWS and i == 0:
+                    file_size = st.st_size
+    
+        if not follow_symlinks and _islink(src):
+            os.symlink(os.readlink(src), dst)
+        else:
+>           with open(src, 'rb') as fsrc:
+                 ^^^^^^^^^^^^^^^
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v3-learning.sqlite'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:260: FileNotFoundError
+______ ParticipantCouplingAblationTests.test_full_octet_passes_all_rounds ______
+
+self = <test_participant_coupling.ParticipantCouplingAblationTests testMethod=test_full_octet_passes_all_rounds>
+
+    def test_full_octet_passes_all_rounds(self):
+        """When all 8 participants are present with valid metrics and constraints, rounds succeed."""
+        horizon = RunHorizon(mode=HorizonMode.ONE_ROUND, n_cycles=1, current_cycle=1, current_round=1, total_rounds=10)
+        engine = EmergenceEngine(
+            self.preflight["participants"],
+            self.preflight["encounter"],
+            self.preflight["affordances"],
+            horizon,
+            self.preflight["policy"],
+        )
+        for r in range(1, 11):
+            rec = engine.execute_round(r)
+>           self.assertEqual(rec.status, RoundStatus.TERMINAL, f"Round {r} failed under full octet: {rec.round_result}")
+E           AssertionError: <RoundStatus.BLOCKED: 'BLOCKED'> != <RoundStatus.TERMINAL: 'TERMINAL'> : Round 4 failed under full octet: {'round': 4, 'passed': 1, 'failed': 0, 'blocked': 1, 'terminal': False, 'remediation_needed': True, 'remediation_attempts': 0, 'evidence_digest': '95389e24abf32f0ec54323ba67772448001ca90261af9dd3524527a02485c26d'}
+
+tests/test_participant_coupling.py:45: AssertionError
+_ ParticipantCouplingAblationTests.test_removing_elijah_fails_round_5_continuity _
+
+self = <test_participant_coupling.ParticipantCouplingAblationTests testMethod=test_removing_elijah_fails_round_5_continuity>
+
+    def test_removing_elijah_fails_round_5_continuity(self):
+        """Removing Elijah drops max causal memory below 95, failing Round 5 continuity check."""
+        # Filter out Elijah
+        roster_without_elijah = [p for p in self.preflight["participants"] if p.character_id != "elijah"]
+        horizon = RunHorizon(mode=HorizonMode.ONE_ROUND, n_cycles=1, current_cycle=1, current_round=1, total_rounds=10)
+        engine = EmergenceEngine(
+            roster_without_elijah,
+            self.preflight["encounter"],
+            self.preflight["affordances"],
+            horizon,
+            self.preflight["policy"],
+        )
+    
+        # Rounds 1-4 succeed
+        for r in range(1, 5):
+            rec = engine.execute_round(r)
+>           self.assertEqual(rec.status, RoundStatus.TERMINAL)
+E           AssertionError: <RoundStatus.BLOCKED: 'BLOCKED'> != <RoundStatus.TERMINAL: 'TERMINAL'>
+
+tests/test_participant_coupling.py:63: AssertionError
+___ PersonalityTests.test_failed_migration_recovers_actual_previous_campaign ___
+
+self = <test_personality.PersonalityTests testMethod=test_failed_migration_recovers_actual_previous_campaign>
+
+    def test_failed_migration_recovers_actual_previous_campaign(self):
+        from kageyoni.resources import fixture_path
+>       old=Path(self.tmp.name)/'old.sqlite'; shutil.copy2(fixture_path('recovery/pre-personality-v1.sqlite'),old)
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_personality.py:249: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'recovery/pre-personality-v1.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'recovery/pre-personality-v1.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/recovery/pre-personality-v1.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/recovery/pre-personality-v1.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+__ PersonalityTests.test_real_v6_pending_decision_survives_supported_upgrade ___
+
+self = <test_personality.PersonalityTests testMethod=test_real_v6_pending_decision_survives_supported_upgrade>
+
+    def test_real_v6_pending_decision_survives_supported_upgrade(self):
+        # Create an authentic pending decision with the delivered older code.
+        from kageyoni.resources import fixture_path
+        archive=ROOT/'build/Kageyoni-Connected-Play-v6.zip'
+>       portable=fixture_path('recovery/legacy-personality-pending.sqlite')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_personality.py:269: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'recovery/legacy-personality-pending.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'recovery/legacy-personality-pending.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/recovery/legacy-personality-pending.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/recovery/legacy-personality-pending.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+_ ReleaseIntegrationTests.test_actual_v3_upgrade_preserves_every_existing_nonversion_table _
+
+self = <test_release_integration.ReleaseIntegrationTests testMethod=test_actual_v3_upgrade_preserves_every_existing_nonversion_table>
+
+    def test_actual_v3_upgrade_preserves_every_existing_nonversion_table(self):
+        from kageyoni.decisions import fingerprint
+        root=Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'campaign.sqlite'
+>           shutil.copy2(root/'recovery/pre-v4-v8.sqlite',path)
+
+tests/test_release_integration.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:475: in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+src = PosixPath('/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v4-v8.sqlite')
+dst = PosixPath('/tmp/tmpre44enc4/campaign.sqlite'), follow_symlinks = True
+
+    def copyfile(src, dst, *, follow_symlinks=True):
+        """Copy data from src to dst in the most efficient way possible.
+    
+        If follow_symlinks is not set and src is a symbolic link, a new
+        symlink will be created instead of copying the file it points to.
+    
+        """
+        sys.audit("shutil.copyfile", src, dst)
+    
+        if _samefile(src, dst):
+            raise SameFileError("{!r} and {!r} are the same file".format(src, dst))
+    
+        file_size = 0
+        for i, fn in enumerate([src, dst]):
+            try:
+                st = _stat(fn)
+            except OSError:
+                # File most likely does not exist
+                pass
+            else:
+                # XXX What about other special files? (sockets, devices...)
+                if stat.S_ISFIFO(st.st_mode):
+                    fn = fn.path if isinstance(fn, os.DirEntry) else fn
+                    raise SpecialFileError("`%s` is a named pipe" % fn)
+                if _WINDOWS and i == 0:
+                    file_size = st.st_size
+    
+        if not follow_symlinks and _islink(src):
+            os.symlink(os.readlink(src), dst)
+        else:
+>           with open(src, 'rb') as fsrc:
+                 ^^^^^^^^^^^^^^^
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v4-v8.sqlite'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:260: FileNotFoundError
+____ DailyOperationTests.test_migrate_copy_preserves_original_old_database _____
+
+self = <test_v8_operations.DailyOperationTests testMethod=test_migrate_copy_preserves_original_old_database>
+
+    def test_migrate_copy_preserves_original_old_database(self):
+        import shutil
+>       source=self.root/'old.sqlite';shutil.copy2(Path(__file__).resolve().parents[1]/'recovery/pre-v3-learning.sqlite',source)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_v8_operations.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:475: in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+src = PosixPath('/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v3-learning.sqlite')
+dst = PosixPath('/tmp/tmp7glndumv/old.sqlite'), follow_symlinks = True
+
+    def copyfile(src, dst, *, follow_symlinks=True):
+        """Copy data from src to dst in the most efficient way possible.
+    
+        If follow_symlinks is not set and src is a symbolic link, a new
+        symlink will be created instead of copying the file it points to.
+    
+        """
+        sys.audit("shutil.copyfile", src, dst)
+    
+        if _samefile(src, dst):
+            raise SameFileError("{!r} and {!r} are the same file".format(src, dst))
+    
+        file_size = 0
+        for i, fn in enumerate([src, dst]):
+            try:
+                st = _stat(fn)
+            except OSError:
+                # File most likely does not exist
+                pass
+            else:
+                # XXX What about other special files? (sockets, devices...)
+                if stat.S_ISFIFO(st.st_mode):
+                    fn = fn.path if isinstance(fn, os.DirEntry) else fn
+                    raise SpecialFileError("`%s` is a named pipe" % fn)
+                if _WINDOWS and i == 0:
+                    file_size = st.st_size
+    
+        if not follow_symlinks and _islink(src):
+            os.symlink(os.readlink(src), dst)
+        else:
+>           with open(src, 'rb') as fsrc:
+                 ^^^^^^^^^^^^^^^
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/473144ed8f0b/Kageyoni/recovery/pre-v3-learning.sqlite'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py:260: FileNotFoundError
+________ WritingTests.test_upgrade_actual_v7_and_interrupted_migration _________
+
+self = <test_writing.WritingTests testMethod=test_upgrade_actual_v7_and_interrupted_migration>
+
+    def test_upgrade_actual_v7_and_interrupted_migration(self):
+     from kageyoni.resources import fixture_path
+>    old=Path(self.tmp.name)/'old.sqlite';shutil.copy2(fixture_path('recovery/pre-writing-v1.sqlite'),old)
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_writing.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'recovery/pre-writing-v1.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'recovery/pre-writing-v1.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/recovery/pre-writing-v1.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/recovery/pre-writing-v1.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+____________ WritingTests.test_v7_pending_fixture_survives_upgrade _____________
+
+self = <test_writing.WritingTests testMethod=test_v7_pending_fixture_survives_upgrade>
+
+    def test_v7_pending_fixture_survives_upgrade(self):
+     from kageyoni.resources import fixture_path
+>    old=Path(self.tmp.name)/'pending.sqlite';shutil.copy2(fixture_path('personality-fixture.sqlite'),old)
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_writing.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'personality-fixture.sqlite'
+
+    def fixture_path(name: str) -> Path:
+        """Locate authentic historical test fixtures in fixtures/historical or fallback to build/."""
+        package = Path(__file__).resolve().parent
+        root = package.parent
+        target = root / "fixtures" / "historical" / name
+        if target.is_file():
+            return target
+        build_target = root / "build" / name
+        if build_target.is_file():
+            return build_target
+>       raise FileNotFoundError(f"Authentic historical fixture '{name}' not found in {target} or {build_target}")
+E       FileNotFoundError: Authentic historical fixture 'personality-fixture.sqlite' not found in /workspace/scratch/473144ed8f0b/Kageyoni/fixtures/historical/personality-fixture.sqlite or /workspace/scratch/473144ed8f0b/Kageyoni/build/personality-fixture.sqlite
+
+kageyoni/resources.py:23: FileNotFoundError
+__________ CLISurfaceTests.test_compile_scene_through_shared_dispatch __________
+
+self = <test_cli_surface.CLISurfaceTests testMethod=test_compile_scene_through_shared_dispatch>
+
+    def test_compile_scene_through_shared_dispatch(self):
+>     result=dispatch(self.engine,{'service':'simulation','action':'compile_scene','arguments':{'scene_id':'lucretia-voss-recall-scene','participant_ids':['sciel']}})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/v10/test_cli_surface.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/console.py:37: in dispatch
+    result = getattr(getattr(Application(engine),service),action)(**arguments)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kageyoni/composition/service.py:65: in compile_scene
+    aspects,bindings=adapter.narrative_scene(scene_id,participant_ids)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+kageyoni/composition/adapter.py:56: in narrative_scene
+    scene=self.engine.get(self.branch,scene_id); require(scene and scene['domain']=='scene','scene unavailable')
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = None, message = 'scene unavailable', rejection_class = None
+details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: scene unavailable
+
+kageyoni/engine.py:86: Rejected
+_ CompositionIntegrationTests.test_current_sciel_scene_compiles_from_actual_campaign_state _
+
+self = <test_composition_integration.CompositionIntegrationTests testMethod=test_current_sciel_scene_compiles_from_actual_campaign_state>
+
+    def test_current_sciel_scene_compiles_from_actual_campaign_state(self):
+        adapter = EngineAspectAdapter(self.engine)
+>       aspects, bindings = adapter.narrative_scene('lucretia-voss-recall-scene', ['sciel'])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/v10/test_composition_integration.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/composition/adapter.py:56: in narrative_scene
+    scene=self.engine.get(self.branch,scene_id); require(scene and scene['domain']=='scene','scene unavailable')
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = None, message = 'scene unavailable', rejection_class = None
+details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: scene unavailable
+
+kageyoni/engine.py:86: Rejected
+_ CompositionIntegrationTests.test_governor_preview_commit_verifies_existing_engine_transition _
+
+self = <test_composition_integration.CompositionIntegrationTests testMethod=test_governor_preview_commit_verifies_existing_engine_transition>
+
+    def test_governor_preview_commit_verifies_existing_engine_transition(self):
+        adapter=EngineAspectAdapter(self.engine)
+>       aspects,bindings=adapter.narrative_scene('lucretia-voss-recall-scene',['sciel'])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/v10/test_composition_integration.py:78: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/composition/adapter.py:56: in narrative_scene
+    scene=self.engine.get(self.branch,scene_id); require(scene and scene['domain']=='scene','scene unavailable')
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = None, message = 'scene unavailable', rejection_class = None
+details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: scene unavailable
+
+kageyoni/engine.py:86: Rejected
+_ CompositionIntegrationTests.test_governor_rejects_changed_command_after_preview _
+
+self = <test_composition_integration.CompositionIntegrationTests testMethod=test_governor_rejects_changed_command_after_preview>
+
+    def test_governor_rejects_changed_command_after_preview(self):
+        adapter=EngineAspectAdapter(self.engine)
+>       aspects,bindings=adapter.narrative_scene('lucretia-voss-recall-scene',['sciel'])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/v10/test_composition_integration.py:95: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/composition/adapter.py:56: in narrative_scene
+    scene=self.engine.get(self.branch,scene_id); require(scene and scene['domain']=='scene','scene unavailable')
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = None, message = 'scene unavailable', rejection_class = None
+details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: scene unavailable
+
+kageyoni/engine.py:86: Rejected
+_ CompositionIntegrationTests.test_two_actor_scene_fails_closed_without_relationship_state _
+
+self = <test_composition_integration.CompositionIntegrationTests testMethod=test_two_actor_scene_fails_closed_without_relationship_state>
+
+    def test_two_actor_scene_fails_closed_without_relationship_state(self):
+        adapter = EngineAspectAdapter(self.engine)
+>       aspects, bindings = adapter.narrative_scene('lucretia-voss-recall-scene', ['sciel','environmental-admiral'])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/v10/test_composition_integration.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/composition/adapter.py:56: in narrative_scene
+    scene=self.engine.get(self.branch,scene_id); require(scene and scene['domain']=='scene','scene unavailable')
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = None, message = 'scene unavailable', rejection_class = None
+details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: scene unavailable
+
+kageyoni/engine.py:86: Rejected
+=============================== warnings summary ===============================
+kageyoni/emergence/models.py:118
+  /workspace/scratch/473144ed8f0b/Kageyoni/kageyoni/emergence/models.py:118: PytestCollectionWarning: cannot collect test class 'TestSpec' because it has a __init__ constructor (from: tests/test_emergence.py)
+    @dataclass
+
+kageyoni/emergence/models.py:27
+  /workspace/scratch/473144ed8f0b/Kageyoni/kageyoni/emergence/models.py:27: PytestCollectionWarning: cannot collect test class 'TestStatus' because it has a __init__ constructor (from: tests/test_emergence.py)
+    class TestStatus(str, Enum):
+
+kageyoni/emergence/models.py:27
+  /workspace/scratch/473144ed8f0b/Kageyoni/kageyoni/emergence/models.py:27: PytestCollectionWarning: cannot collect test class 'TestStatus' because it has a __init__ constructor (from: tests/test_participant_coupling.py)
+    class TestStatus(str, Enum):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_character_hydration.py::TestCharacterHydration::test_hydrate_sciel_exact_state
+FAILED tests/test_character_hydration.py::TestCharacterHydration::test_hydrate_voss_and_maki
+FAILED tests/test_characters.py::CharacterTests::test_interrupted_migration_rolls_back_and_can_retry
+FAILED tests/test_characters.py::CharacterTests::test_upgrade_actual_previous_campaign_and_backup
+FAILED tests/test_contributions.py::ContributionIntegrationTests::test_installed_v1_upgrade_preserves_node_and_world
+FAILED tests/test_decisions.py::DecisionTests::test_interrupted_decision_migration
+FAILED tests/test_decisions.py::DecisionTests::test_replay_snapshot_and_actual_upgrade
+FAILED tests/test_environmental_encounter.py::TestEnvironmentalEncounter::test_autonomous_hydrated_scheduling_and_technique_transfer
+FAILED tests/test_environmental_encounter.py::TestEnvironmentalEncounter::test_hydrated_character_decision_interfaces
+FAILED tests/test_foundation.py::RecoveryTests::test_historical_upgrade_preserves_tables_and_decision_fingerprint
+FAILED tests/test_learning_integration.py::LearningMigrationTests::test_v2_campaign_migration_preserves_existing_rows_and_pending_decisions
+FAILED tests/test_participant_coupling.py::ParticipantCouplingAblationTests::test_full_octet_passes_all_rounds
+FAILED tests/test_participant_coupling.py::ParticipantCouplingAblationTests::test_removing_elijah_fails_round_5_continuity
+FAILED tests/test_personality.py::PersonalityTests::test_failed_migration_recovers_actual_previous_campaign
+FAILED tests/test_personality.py::PersonalityTests::test_real_v6_pending_decision_survives_supported_upgrade
+FAILED tests/test_release_integration.py::ReleaseIntegrationTests::test_actual_v3_upgrade_preserves_every_existing_nonversion_table
+FAILED tests/test_v8_operations.py::DailyOperationTests::test_migrate_copy_preserves_original_old_database
+FAILED tests/test_writing.py::WritingTests::test_upgrade_actual_v7_and_interrupted_migration
+FAILED tests/test_writing.py::WritingTests::test_v7_pending_fixture_survives_upgrade
+FAILED tests/v10/test_cli_surface.py::CLISurfaceTests::test_compile_scene_through_shared_dispatch
+FAILED tests/v10/test_composition_integration.py::CompositionIntegrationTests::test_current_sciel_scene_compiles_from_actual_campaign_state
+FAILED tests/v10/test_composition_integration.py::CompositionIntegrationTests::test_governor_preview_commit_verifies_existing_engine_transition
+FAILED tests/v10/test_composition_integration.py::CompositionIntegrationTests::test_governor_rejects_changed_command_after_preview
+FAILED tests/v10/test_composition_integration.py::CompositionIntegrationTests::test_two_actor_scene_fails_closed_without_relationship_state
+24 failed, 925 passed, 3 warnings, 70 subtests passed in 63.21s (0:01:03)

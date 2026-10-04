@@ -1,0 +1,475 @@
+........................................................................ [  7%]
+............FF................................FFFF................ [ 14%]
+................................................................. [ 21%]
+........................................................................ [ 28%]
+............F..F........................................................ [ 36%]
+........................................................................ [ 44%]
+............................................................FF.......... [ 51%]
+.............................................................................................. [ 61%]
+.......................................................F............ [ 68%]
+........................................................................ [ 76%]
+..................................................................... [ 83%]
+........................................................................ [ 91%]
+........................................................................ [ 98%]
+...........                                                              [100%]
+=================================== FAILURES ===================================
+____________ TestCharacterHydration.test_hydrate_sciel_exact_state _____________
+
+self = <test_character_hydration.TestCharacterHydration testMethod=test_hydrate_sciel_exact_state>
+
+    def test_hydrate_sciel_exact_state(self):
+>       packet = hydrate_character_from_disk("sciel")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_character_hydration.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+character_id = 'sciel', characters_root = None
+
+    def hydrate_character_from_disk(
+        character_id: str,
+        characters_root: Optional[Path] = None
+    ) -> HydratedCharacterPacket:
+        """
+        Hydrates a participant directly from their persistent SQLite database.
+        Raises FileNotFoundError if the database does not exist.
+        """
+        root = characters_root or DEFAULT_CHARACTERS_ROOT
+        db_path = root / character_id / "kageyoni.sqlite"
+        if not db_path.exists():
+>           raise FileNotFoundError(f"Character database not found at {db_path}")
+E           FileNotFoundError: Character database not found at /workspace/scratch/473144ed8f0b/Kageyoni/shinobi/.state/characters/sciel/kageyoni.sqlite
+
+kageyoni/emergence/hydration.py:79: FileNotFoundError
+______________ TestCharacterHydration.test_hydrate_voss_and_maki _______________
+
+self = <test_character_hydration.TestCharacterHydration testMethod=test_hydrate_voss_and_maki>
+
+    def test_hydrate_voss_and_maki(self):
+>       voss = hydrate_character_from_disk("voss")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_character_hydration.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+character_id = 'voss', characters_root = None
+
+    def hydrate_character_from_disk(
+        character_id: str,
+        characters_root: Optional[Path] = None
+    ) -> HydratedCharacterPacket:
+        """
+        Hydrates a participant directly from their persistent SQLite database.
+        Raises FileNotFoundError if the database does not exist.
+        """
+        root = characters_root or DEFAULT_CHARACTERS_ROOT
+        db_path = root / character_id / "kageyoni.sqlite"
+        if not db_path.exists():
+>           raise FileNotFoundError(f"Character database not found at {db_path}")
+E           FileNotFoundError: Character database not found at /workspace/scratch/473144ed8f0b/Kageyoni/shinobi/.state/characters/voss/kageyoni.sqlite
+
+kageyoni/emergence/hydration.py:79: FileNotFoundError
+_ TestClosedLoopIntegrationProbe.test_bridge_ablation_negative_constraint_gating_disabled _
+
+self = <test_closed_loop_integration_probe.TestClosedLoopIntegrationProbe testMethod=test_bridge_ablation_negative_constraint_gating_disabled>
+
+    def setUp(self):
+        self.tmp_dir = tempfile.TemporaryDirectory()
+        self.db_path = Path(self.tmp_dir.name) / "probe_test.sqlite"
+        shutil.copy2(campaign_db_path(), self.db_path)
+        self.engine = Engine(self.db_path)
+        install_all(self.engine)
+    
+        # Seed the shared physical environment in the SQLite database
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+    
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-probe-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct closed-loop probe chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "probe-chamber", "domain": "location", "visibility": "public", "data": {"name": "Probe Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "probe-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "navigable-fissure", "domain": "item", "visibility": "public", "data": {"name": "Navigable Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+tests/test_closed_loop_integration_probe.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1645: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:949: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:86: Rejected
+___ TestClosedLoopIntegrationProbe.test_bridge_ablation_persistence_disabled ___
+
+self = <test_closed_loop_integration_probe.TestClosedLoopIntegrationProbe testMethod=test_bridge_ablation_persistence_disabled>
+
+    def setUp(self):
+        self.tmp_dir = tempfile.TemporaryDirectory()
+        self.db_path = Path(self.tmp_dir.name) / "probe_test.sqlite"
+        shutil.copy2(campaign_db_path(), self.db_path)
+        self.engine = Engine(self.db_path)
+        install_all(self.engine)
+    
+        # Seed the shared physical environment in the SQLite database
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+    
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-probe-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct closed-loop probe chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "probe-chamber", "domain": "location", "visibility": "public", "data": {"name": "Probe Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "probe-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "navigable-fissure", "domain": "item", "visibility": "public", "data": {"name": "Navigable Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+tests/test_closed_loop_integration_probe.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1645: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:949: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:86: Rejected
+_____ TestClosedLoopIntegrationProbe.test_closed_loop_two_encounter_probe ______
+
+self = <test_closed_loop_integration_probe.TestClosedLoopIntegrationProbe testMethod=test_closed_loop_two_encounter_probe>
+
+    def setUp(self):
+        self.tmp_dir = tempfile.TemporaryDirectory()
+        self.db_path = Path(self.tmp_dir.name) / "probe_test.sqlite"
+        shutil.copy2(campaign_db_path(), self.db_path)
+        self.engine = Engine(self.db_path)
+        install_all(self.engine)
+    
+        # Seed the shared physical environment in the SQLite database
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+    
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-probe-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct closed-loop probe chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "probe-chamber", "domain": "location", "visibility": "public", "data": {"name": "Probe Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "probe-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "navigable-fissure", "domain": "item", "visibility": "public", "data": {"name": "Navigable Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+tests/test_closed_loop_integration_probe.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1645: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:949: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:86: Rejected
+_ TestClosedLoopIntegrationProbe.test_negative_control_without_inheritance_repeats_failure _
+
+self = <test_closed_loop_integration_probe.TestClosedLoopIntegrationProbe testMethod=test_negative_control_without_inheritance_repeats_failure>
+
+    def setUp(self):
+        self.tmp_dir = tempfile.TemporaryDirectory()
+        self.db_path = Path(self.tmp_dir.name) / "probe_test.sqlite"
+        shutil.copy2(campaign_db_path(), self.db_path)
+        self.engine = Engine(self.db_path)
+        install_all(self.engine)
+    
+        # Seed the shared physical environment in the SQLite database
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+    
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-probe-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct closed-loop probe chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "probe-chamber", "domain": "location", "visibility": "public", "data": {"name": "Probe Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "probe-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "navigable-fissure", "domain": "item", "visibility": "public", "data": {"name": "Navigable Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "probe-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+tests/test_closed_loop_integration_probe.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1645: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:949: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:86: Rejected
+_ TestEnvironmentalEncounter.test_autonomous_hydrated_scheduling_and_technique_transfer _
+
+self = <test_environmental_encounter.TestEnvironmentalEncounter testMethod=test_autonomous_hydrated_scheduling_and_technique_transfer>
+
+    def test_autonomous_hydrated_scheduling_and_technique_transfer(self):
+        """Autonomous unscripted run with hydrated participants derives valid technique."""
+        eid = "env-auto-01"
+        self.harness.start_encounter("constellation-clash", 1, eid)
+    
+        participants = [
+            ParticipantDecisionInterface.from_character_id("voss", priority=50),
+            ParticipantDecisionInterface.from_character_id("sciel", priority=10),
+            ParticipantDecisionInterface.from_character_id("maki", priority=20),
+            ParticipantDecisionInterface.from_character_id("sebastian", priority=30),
+        ]
+        scheduler = DeclaredSchedulingPolicy(participants)
+        trace = self.harness.run_autonomous_schedule(eid, scheduler, max_cycles=10)
+    
+        self.assertEqual(len(trace), 4)
+        actors = [t["actor"] for t in trace]
+        self.assertEqual(actors, ["voss", "sciel", "maki", "sebastian"])
+    
+        # Check rationale contains hydrated identity marker
+        sciel_trace = [t for t in trace if t["actor"] == "sciel"][0]
+>       self.assertIn("Domain of the Painteress", sciel_trace["proposal"]["rationale"])
+E       AssertionError: 'Domain of the Painteress' not found in "Role 'sciel' responding to state 'ruptured' with intent 'Role sciel action'"
+
+tests/test_environmental_encounter.py:172: AssertionError
+____ TestEnvironmentalEncounter.test_hydrated_character_decision_interfaces ____
+
+self = <test_environmental_encounter.TestEnvironmentalEncounter testMethod=test_hydrated_character_decision_interfaces>
+
+    def test_hydrated_character_decision_interfaces(self):
+        """Participants are instantiated directly from persistent disk SQLite state."""
+        sciel = ParticipantDecisionInterface.from_character_id("sciel", priority=10)
+>       self.assertIsNotNone(sciel.hydrated_state)
+E       AssertionError: unexpectedly None
+
+tests/test_environmental_encounter.py:54: AssertionError
+______ ParticipantCouplingAblationTests.test_full_octet_passes_all_rounds ______
+
+self = <test_participant_coupling.ParticipantCouplingAblationTests testMethod=test_full_octet_passes_all_rounds>
+
+    def test_full_octet_passes_all_rounds(self):
+        """When all 8 participants are present with valid metrics and constraints, rounds succeed."""
+        horizon = RunHorizon(mode=HorizonMode.ONE_ROUND, n_cycles=1, current_cycle=1, current_round=1, total_rounds=10)
+        engine = EmergenceEngine(
+            self.preflight["participants"],
+            self.preflight["encounter"],
+            self.preflight["affordances"],
+            horizon,
+            self.preflight["policy"],
+        )
+        for r in range(1, 11):
+            rec = engine.execute_round(r)
+>           self.assertEqual(rec.status, RoundStatus.TERMINAL, f"Round {r} failed under full octet: {rec.round_result}")
+E           AssertionError: <RoundStatus.BLOCKED: 'BLOCKED'> != <RoundStatus.TERMINAL: 'TERMINAL'> : Round 4 failed under full octet: {'round': 4, 'passed': 1, 'failed': 0, 'blocked': 1, 'terminal': False, 'remediation_needed': True, 'remediation_attempts': 0, 'evidence_digest': '8512cbf490d07c1d22394c5e4624f83447379ad024746c673fe2d8f39c7f569a'}
+
+tests/test_participant_coupling.py:45: AssertionError
+_ ParticipantCouplingAblationTests.test_removing_elijah_fails_round_5_continuity _
+
+self = <test_participant_coupling.ParticipantCouplingAblationTests testMethod=test_removing_elijah_fails_round_5_continuity>
+
+    def test_removing_elijah_fails_round_5_continuity(self):
+        """Removing Elijah drops max causal memory below 95, failing Round 5 continuity check."""
+        # Filter out Elijah
+        roster_without_elijah = [p for p in self.preflight["participants"] if p.character_id != "elijah"]
+        horizon = RunHorizon(mode=HorizonMode.ONE_ROUND, n_cycles=1, current_cycle=1, current_round=1, total_rounds=10)
+        engine = EmergenceEngine(
+            roster_without_elijah,
+            self.preflight["encounter"],
+            self.preflight["affordances"],
+            horizon,
+            self.preflight["policy"],
+        )
+    
+        # Rounds 1-4 succeed
+        for r in range(1, 5):
+            rec = engine.execute_round(r)
+>           self.assertEqual(rec.status, RoundStatus.TERMINAL)
+E           AssertionError: <RoundStatus.BLOCKED: 'BLOCKED'> != <RoundStatus.TERMINAL: 'TERMINAL'>
+
+tests/test_participant_coupling.py:63: AssertionError
+____ TestSovereignIncarnation.test_longitudinal_agency_alexandra_and_axiom _____
+
+self = <test_sovereign_incarnation.TestSovereignIncarnation testMethod=test_longitudinal_agency_alexandra_and_axiom>
+
+    def test_longitudinal_agency_alexandra_and_axiom(self):
+        """
+        Longitudinal Agency Scenario:
+        Two distinct entities (Alexandra, Axiom) navigate the SAME causal obstacle course:
+        - 3 paths (tunnel, archway, hidden fissure)
+        - 1 hidden affordance (fissure discovered via inspection)
+        - 1 false belief (tunnel forceable via brute strength)
+        - 1 unavailable prerequisite (archway locked by sigil)
+        - 1 boundary conflict (altar of submission)
+        """
+        # --- Seed Causal World Environment ---
+        current_rev = self.engine.branch("main")["revision"]
+        alex_rec = self.engine.get("main", "alexandra")
+        axiom_rec = self.engine.get("main", "axiom")
+        scene_rec = self.engine.get("main", "threshold-scene")
+>       self.engine.apply({
+            "api_version": 3,
+            "branch": "main",
+            "expected_revision": current_rev,
+            "request_id": f"seed-agency-env-{uuid.uuid4().hex[:6]}",
+            "kind": "scene",
+            "actor": "system",
+            "narrative": "Construct the threshold obstacle chamber",
+            "changes": [
+                {"op": "patch", "id": "threshold-scene", "domain": "scene", "expected_version": scene_rec["version"], "visibility": "public", "data": {"phase": "closed"}, "evidence": [{"note": "Party entered chamber"}]},
+                {"op": "create", "id": "threshold-chamber", "domain": "location", "visibility": "public", "data": {"name": "Threshold Chamber", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "inner-sanctum", "domain": "location", "visibility": "public", "data": {"name": "Inner Sanctum", "kind": "room"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "collapsed-tunnel", "domain": "route", "visibility": "public", "data": {"origin": "threshold-chamber", "destination": "inner-sanctum", "access": "blocked", "conditions": "physically_collapsed"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "warded-archway", "domain": "route", "visibility": "public", "data": {"origin": "threshold-chamber", "destination": "inner-sanctum", "access": "conditional", "conditions": "requires_sigil"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "hidden-fissure", "domain": "item", "visibility": "public", "data": {"name": "Concealed Wall Fissure", "kind": "route_affordance", "condition": "navigable"}, "evidence": [{"note": "World seed"}]},
+                {"op": "create", "id": "altar-submission", "domain": "item", "visibility": "public", "data": {"name": "Altar of Hegemony", "kind": "altar", "condition": "demands_submission"}, "evidence": [{"note": "World seed"}]},
+                {"op": "patch", "id": "alexandra", "domain": "character", "expected_version": alex_rec["version"], "visibility": "public", "data": {"location": "threshold-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+                {"op": "patch", "id": "axiom", "domain": "character", "expected_version": axiom_rec["version"], "visibility": "public", "data": {"location": "threshold-chamber"}, "evidence": [{"note": "Moved to chamber"}]},
+            ],
+        })
+
+tests/test_sovereign_incarnation.py:372: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+kageyoni/engine.py:1645: in apply
+    self._validate_world(branch)
+kageyoni/engine.py:949: in _validate_world
+    require(char.get("location") == scene["location"], "participant not at scene location")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'participant not at scene location'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: participant not at scene location
+
+kageyoni/engine.py:86: Rejected
+=============================== warnings summary ===============================
+kageyoni/emergence/models.py:118
+  /workspace/scratch/473144ed8f0b/Kageyoni/kageyoni/emergence/models.py:118: PytestCollectionWarning: cannot collect test class 'TestSpec' because it has a __init__ constructor (from: tests/test_emergence.py)
+    @dataclass
+
+kageyoni/emergence/models.py:27
+  /workspace/scratch/473144ed8f0b/Kageyoni/kageyoni/emergence/models.py:27: PytestCollectionWarning: cannot collect test class 'TestStatus' because it has a __init__ constructor (from: tests/test_emergence.py)
+    class TestStatus(str, Enum):
+
+kageyoni/emergence/models.py:27
+  /workspace/scratch/473144ed8f0b/Kageyoni/kageyoni/emergence/models.py:27: PytestCollectionWarning: cannot collect test class 'TestStatus' because it has a __init__ constructor (from: tests/test_participant_coupling.py)
+    class TestStatus(str, Enum):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_character_hydration.py::TestCharacterHydration::test_hydrate_sciel_exact_state
+FAILED tests/test_character_hydration.py::TestCharacterHydration::test_hydrate_voss_and_maki
+FAILED tests/test_closed_loop_integration_probe.py::TestClosedLoopIntegrationProbe::test_bridge_ablation_negative_constraint_gating_disabled
+FAILED tests/test_closed_loop_integration_probe.py::TestClosedLoopIntegrationProbe::test_bridge_ablation_persistence_disabled
+FAILED tests/test_closed_loop_integration_probe.py::TestClosedLoopIntegrationProbe::test_closed_loop_two_encounter_probe
+FAILED tests/test_closed_loop_integration_probe.py::TestClosedLoopIntegrationProbe::test_negative_control_without_inheritance_repeats_failure
+FAILED tests/test_environmental_encounter.py::TestEnvironmentalEncounter::test_autonomous_hydrated_scheduling_and_technique_transfer
+FAILED tests/test_environmental_encounter.py::TestEnvironmentalEncounter::test_hydrated_character_decision_interfaces
+FAILED tests/test_participant_coupling.py::ParticipantCouplingAblationTests::test_full_octet_passes_all_rounds
+FAILED tests/test_participant_coupling.py::ParticipantCouplingAblationTests::test_removing_elijah_fails_round_5_continuity
+FAILED tests/test_sovereign_incarnation.py::TestSovereignIncarnation::test_longitudinal_agency_alexandra_and_axiom
+11 failed, 938 passed, 3 warnings, 70 subtests passed in 332.76s (0:05:32)

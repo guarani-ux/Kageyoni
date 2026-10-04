@@ -395,10 +395,11 @@ class TestMagnetDeltaVerification(unittest.TestCase):
             runtime.resume("run_rec", condition_satisfied=True)
             runtime.complete_stage("run_rec", "stage2", "ev:stage2")
 
+            current_run = runtime.runs["run_rec"]
             return {
-                "run_status": run.status,
-                "completed_stages": run.completed_stages,
-                "stage1_completion_count": run.completed_stages.count("stage1"),
+                "run_status": current_run.status,
+                "completed_stages": current_run.completed_stages,
+                "stage1_completion_count": current_run.completed_stages.count("stage1"),
             }
 
         record = StateDeltaChecker.execute_and_check(
@@ -421,3 +422,4 @@ class TestMagnetDeltaVerification(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

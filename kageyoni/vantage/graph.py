@@ -16,11 +16,34 @@ from kageyoni.graph import CausalDAG
 from .models import EpistemicNodeStatus, ApprovalStatus
 
 
+def _dag_property(name, convert=lambda value: value):
+    """Bound metadata is a projection; detached records retain constructor data."""
+    def get(node):
+        graph = getattr(node, "_graph", None)
+        if graph is not None and node.node_id in graph._dag:
+            return convert(getattr(graph._dag.get_node(node.node_id), name))
+        return getattr(node, "_" + name)
+    def set_value(node, value):
+        value = convert(value)
+        graph = getattr(node, "_graph", None)
+        if graph is not None and node.node_id in graph._dag:
+            setattr(graph._dag.get_node(node.node_id), name, value.value if isinstance(value, EpistemicNodeStatus) else value)
+        else:
+            setattr(node, "_" + name, value)
+    return property(get, set_value)
+
+
 class GraphNode:
     """
     Domain deliverable node. Edge collections (dependencies, dependents)
     are dynamic compatibility projections from the authoritative CausalDAG.
     """
+
+    status = _dag_property("status", EpistemicNodeStatus)
+    node_type = _dag_property("node_type")
+    payload = _dag_property("payload")
+    invalidation_reason = _dag_property("invalidation_reason")
+    last_updated = _dag_property("last_updated")
 
     def __init__(
         self,
@@ -37,6 +60,7 @@ class GraphNode:
         last_updated: Optional[float] = None,
         graph: Optional[Any] = None,
     ):
+        self._graph = graph
         self.node_id = node_id
         self.node_type = node_type
         self.title = title
@@ -53,21 +77,25 @@ class GraphNode:
     @property
     def dependencies(self) -> Set[str]:
         if self._graph is not None and self.node_id in self._graph._dag:
-            return self._graph._dag.get_node(self.node_id).dependencies
+            return frozenset(self._graph._dag.get_node(self.node_id).dependencies)
         return self._dependencies
 
     @dependencies.setter
     def dependencies(self, val: Set[str]):
+        if self._graph is not None:
+            raise TypeError("Use add_dependency for bound topology changes.")
         self._dependencies = set(val)
 
     @property
     def dependents(self) -> Set[str]:
         if self._graph is not None and self.node_id in self._graph._dag:
-            return self._graph._dag.get_node(self.node_id).dependents
+            return frozenset(self._graph._dag.get_node(self.node_id).dependents)
         return self._dependents
 
     @dependents.setter
     def dependents(self, val: Set[str]):
+        if self._graph is not None:
+            raise TypeError("Use add_dependency for bound topology changes.")
         self._dependents = set(val)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -142,24 +170,10 @@ class EpistemicDependencyGraph:
                 if dep_id not in self.nodes:
                     raise KeyError(f"Parent node '{dep_id}' does not exist in graph.")
 
+        status, approval_status = EpistemicNodeStatus(status), ApprovalStatus(approval_status)
         is_new = node_id not in self.nodes
-        added_dag_node = False
-        added_edges = []
-        try:
-            if is_new:
-                self._dag.add_node(node_id, node_type, payload or {}, status=status.value)
-                added_dag_node = True
-            if dependencies:
-                for dep_id in dependencies:
-                    self._dag.add_edge(dep_id, node_id)
-                    added_edges.append((dep_id, node_id))
-        except Exception:
-            # Atomic rollback: preserve both domain records and topology untouched on failure
-            for p, c in added_edges:
-                self._dag.remove_edge(p, c)
-            if added_dag_node:
-                self._dag.remove_node(node_id)
-            raise
+        self._dag.add_node(node_id, node_type, payload or {}, dependencies=dependencies,
+                           status=status.value, content_hash=content_hash)
 
         if not is_new:
             node = self.nodes[node_id]
@@ -169,7 +183,8 @@ class EpistemicDependencyGraph:
             node.approval_status = approval_status
             node.content_hash = content_hash
             node.payload = payload or {}
-            node.last_updated = time.time()
+            node.invalidation_reason = self._dag.get_node(node_id).invalidation_reason
+            node.last_updated = self._dag.get_node(node_id).last_updated
         else:
             node = GraphNode(
                 node_id=node_id,
@@ -243,6 +258,8 @@ class EpistemicDependencyGraph:
             return False
 
         node = self.nodes[node_id]
+        if node.status != EpistemicNodeStatus.VALID:
+            return False
         # Dependencies projected live from authoritative CausalDAG
         for dep_id in node.dependencies:
             dep = self.nodes[dep_id]
@@ -288,14 +305,14 @@ class EpistemicDependencyGraph:
                 payload=node.payload,
                 status=node.status.value,
             )
-            if node.invalidation_reason:
-                graph._dag.get_node(nid).invalidation_reason = node.invalidation_reason
+            graph._dag.get_node(nid).invalidation_reason = ndata.get("invalidation_reason")
+            graph._dag.get_node(nid).last_updated = ndata["last_updated"]
 
         # 2. Re-establish edges strictly in authoritative CausalDAG
         for nid, ndata in nodes_dict.items():
             for dep in ndata.get("dependencies", []):
-                if dep in graph.nodes:
-                    graph._dag.add_edge(dep, nid)
+                graph._dag.add_edge(dep, nid)
+            graph._dag.get_node(nid).last_updated = ndata["last_updated"]
 
         history = data.get("invalidation_history", [])
         for rdata in history:

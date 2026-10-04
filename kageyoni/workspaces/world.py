@@ -246,7 +246,6 @@ class Encounters:
                 continuation_of=state['continuation_of'],reason=state.get('reason'))
 
     def act(self,branch,encounter_id,action_id,request_id,expected_revision,fields=None,viewer=None,expected_encounter_revision=None):
-        require(not self.db.in_transaction,'encounter act owns Will preparation boundary; finish outer work first')
         fields={} if fields is None else fields;require(isinstance(fields,dict),'action fields must be an object')
         text(action_id,'action id');text(request_id,'request id');integer(expected_revision,'expected revision',0)
         if expected_encounter_revision is not None:integer(expected_encounter_revision,'expected encounter revision')
@@ -288,8 +287,9 @@ class Encounters:
                 require(not fields,'authored action takes no caller-injected effects')
                 target=action.get('next_state')
             start_revision=row['revision']
-        # Legacy Will prepare owns its transaction. It changes execution metadata
-        # only. World effects and encounter advancement below share one commit.
+        # Will preparation and rolls use nestable units of work. A dispatcher
+        # may own the outer transaction, including preparation and required
+        # provenance; direct calls retain their existing preparation boundary.
         prepared=None
         if action['kind']=='will':
             attempt=_expand(action['payload'],participants,encounter_id)

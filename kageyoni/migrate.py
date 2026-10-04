@@ -1,140 +1,120 @@
-"""
-kageyoni.migrate: Universal Database Migration Utility.
+"""Read-only legacy snapshot export into the supplementary evidence ledger.
 
-Migrates legacy unchained SQLite tables (scars, outcomes, dispatches, assessments)
-into the SHA-256 hash-chained EvidenceLedger schema with deterministic sorting.
+This preserves source rows and their timestamp fields. It does not migrate
+application identity, permissions, replay semantics, or domain schemas.
 """
-
 from __future__ import annotations
 import argparse
+from datetime import datetime, timezone
 import json
 import sqlite3
-import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
-
+from kageyoni.engine import digest, encoded
 from kageyoni.ledger import EvidenceLedger
+from kageyoni.persistence.unit_of_work import UnitOfWork
+
+
+def _identifier(name):
+    return '"' + name.replace('"', '""') + '"'
+
+
+def _json_value(value):
+    if isinstance(value, bytes):
+        return {'sqlite_blob_hex': value.hex()}
+    return value
+
+
+def _timestamp(row):
+    for key in ('created_at', 'timestamp', 'date_recorded', 'time'):
+        value = row.get(key)
+        if value is None or value == '': continue
+        try:
+            return float(value), key
+        except (TypeError, ValueError):
+            try:
+                parsed = datetime.fromisoformat(str(value).replace('Z', '+00:00'))
+                if parsed.tzinfo is None:
+                    # Do not invent a timezone for an ambiguous historical time.
+                    return None, key
+                return parsed.timestamp(), key
+            except ValueError:
+                return None, key
+    return None, None
 
 
 class DatabaseMigrator:
-    """
-    Deterministic ETL pipeline translating heterogeneous legacy tables
-    into a unified cryptographic evidence ledger.
-    """
+    """Compatibility name for an atomic, idempotent snapshot exporter."""
+    def __init__(self, target_ledger): self.ledger = target_ledger
 
-    def __init__(self, target_ledger: EvidenceLedger):
-        self.ledger = target_ledger
-
-    def migrate_from_connection(self, source_conn: sqlite3.Connection) -> int:
-        cursor = source_conn.cursor()
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%';")
-        tables = [r[0] for r in cursor.fetchall()]
-
-        extracted_events: List[Dict[str, Any]] = []
-
-        for tbl in tables:
-            cursor.execute(f"PRAGMA table_info({tbl});")
-            columns = [c[1] for c in cursor.fetchall()]
-            
-            # Query all rows with rowid for deterministic tie-breaking
-            cursor.execute(f"SELECT rowid, * FROM {tbl};")
-            rows = cursor.fetchall()
-
-            for row in rows:
-                rowid = row[0]
-                col_data = dict(zip(columns, row[1:]))
-
-                # Normalize kind, actor, topic, and timestamp
-                kind = "event"
-                actor_id = "unknown"
-                topic = tbl
-                ts = time.time()
-                payload = dict(col_data)
-
-                if "actor_id" in col_data and col_data["actor_id"]:
-                    actor_id = str(col_data["actor_id"])
-                elif "participant_id" in col_data and col_data["participant_id"]:
-                    actor_id = str(col_data["participant_id"])
-
-                if "scar_id" in col_data:
-                    kind = "scar"
-                elif "outcome_id" in col_data:
-                    kind = "outcome"
-                elif "dispatch_id" in col_data:
-                    kind = "dispatch"
-                elif "assessment_id" in col_data:
-                    kind = "assessment"
-
-                if "topic" in col_data and col_data["topic"]:
-                    topic = str(col_data["topic"])
-                elif "encounter_id" in col_data and col_data["encounter_id"]:
-                    topic = str(col_data["encounter_id"])
-
-                # Timestamp extraction
-                for ts_col in ("created_at", "timestamp", "date_recorded", "time"):
-                    if ts_col in col_data and col_data[ts_col]:
-                        val = col_data[ts_col]
-                        try:
-                            if isinstance(val, (int, float)):
-                                ts = float(val)
-                            elif isinstance(val, str):
-                                # ISO string or float string
-                                try:
-                                    ts = float(val)
-                                except ValueError:
-                                    ts = time.time()
-                            break
-                        except Exception:
-                            pass
-
-                extracted_events.append({
-                    "rowid": rowid,
-                    "created_at": ts,
-                    "kind": kind,
-                    "actor_id": actor_id,
-                    "topic": topic,
-                    "payload": payload,
-                })
-
-        # Deterministic sorting: timestamp ASC, tie-breaker rowid ASC
-        extracted_events.sort(key=lambda x: (x["created_at"], x["rowid"]))
-
-        migrated_count = 0
-        for ev in extracted_events:
-            self.ledger.record(
-                kind=ev["kind"],
-                actor_id=ev["actor_id"],
-                topic=ev["topic"],
-                payload=ev["payload"],
-            )
-            migrated_count += 1
-
-        # Verify target ledger integrity post-migration
-        valid, err = self.ledger.verify_integrity()
-        if not valid:
-            raise RuntimeError(f"Post-migration integrity verification failed: {err}")
-
-        return migrated_count
-
-
-def migrate_files(source_path: Path, target_path: Path) -> int:
-    src_conn = sqlite3.connect(str(source_path))
-    tgt_conn = sqlite3.connect(str(target_path))
-    try:
-        ledger = EvidenceLedger(tgt_conn)
-        migrator = DatabaseMigrator(ledger)
-        count = migrator.migrate_from_connection(src_conn)
+    def migrate_from_connection(self, source_conn):
+        if source_conn is self.ledger.conn:
+            raise ValueError('source and target must differ')
+        owns_read = not source_conn.in_transaction
+        if owns_read: source_conn.execute('BEGIN')
+        try:
+            extracted = []
+            tables = source_conn.execute("SELECT name,sql FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name").fetchall()
+            for table, ddl in tables:
+                name = _identifier(table)
+                schema = source_conn.execute('PRAGMA table_info(' + name + ')').fetchall()
+                columns = [c[1] for c in schema]
+                primary = [c[1] for c in sorted(schema, key=lambda c: c[5]) if c[5]]
+                rows = source_conn.execute('SELECT * FROM ' + name).fetchall()
+                normalized = [dict(zip(columns, map(_json_value, row))) for row in rows]
+                normalized.sort(key=encoded)
+                for ordinal, row in enumerate(normalized):
+                    identity = {k: row[k] for k in primary} if primary else {'snapshot_ordinal': ordinal}
+                    timestamp, timestamp_field = _timestamp(row)
+                    kind = next((k for k in ('scar','outcome','dispatch','assessment') if k+'_id' in row), 'event')
+                    extracted.append(dict(table=table, schema=ddl, identity=identity, row=row,
+                        timestamp=timestamp, timestamp_field=timestamp_field, kind=kind,
+                        actor=str(row.get('actor_id') or row.get('participant_id') or 'unknown'),
+                        topic=str(row.get('topic') or row.get('encounter_id') or table)))
+        finally:
+            if owns_read: source_conn.rollback()
+        snapshot = digest(extracted)
+        # Known times first; unknown times retain a deterministic storage order,
+        # not a claimed chronology. Source fields are never replaced by now().
+        extracted.sort(key=lambda e: (e['timestamp'] is None, e['timestamp'] or 0,
+                                     e['table'], encoded(e['identity'])))
+        count = 0
+        with UnitOfWork(self.ledger.conn):
+            valid, error = self.ledger.verify_integrity()
+            if not valid: raise RuntimeError('Target ledger integrity failure: ' + str(error))
+            for item in extracted:
+                event_id = 'export:' + digest({'snapshot':snapshot, 'table':item['table'], 'identity':item['identity']})
+                payload = {'source_row':item['row'], 'source_schema':item['schema'],
+                           'source_snapshot_digest':snapshot, 'source_table':item['table'],
+                           'source_identity':item['identity'], 'source_timestamp':item['timestamp'],
+                           'source_timestamp_field':item['timestamp_field'],
+                           'scope':'legacy snapshot export; domain migration not performed'}
+                prior = self.ledger.conn.execute('SELECT payload_json FROM '+self.ledger.table_name+' WHERE event_id=?', (event_id,)).fetchone()
+                if prior:
+                    if digest(json.loads(prior[0])) != digest(payload):
+                        raise RuntimeError('Conflicting export identity')
+                    continue
+                self.ledger.record(kind=item['kind'], actor_id=item['actor'], topic=item['topic'],
+                                   payload=payload, event_id=event_id)
+                count += 1
+            valid, error = self.ledger.verify_integrity()
+            if not valid: raise RuntimeError('Post-export integrity failure: ' + str(error))
         return count
+
+
+def migrate_files(source_path, target_path):
+    source_path, target_path = Path(source_path).resolve(), Path(target_path).resolve()
+    if source_path == target_path: raise ValueError('source and target must differ')
+    source = sqlite3.connect(source_path.as_uri() + '?mode=ro', uri=True)
+    target = sqlite3.connect(target_path)
+    try:
+        return DatabaseMigrator(EvidenceLedger(target)).migrate_from_connection(source)
     finally:
-        src_conn.close()
-        tgt_conn.close()
+        source.close(); target.close()
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Migrate legacy SQLite tables to EvidenceLedger.")
-    parser.add_argument("--source", required=True, type=Path, help="Path to legacy SQLite DB")
-    parser.add_argument("--target", required=True, type=Path, help="Path to target EvidenceLedger DB")
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Export a legacy SQLite snapshot to EvidenceLedger.')
+    parser.add_argument('--source', required=True, type=Path)
+    parser.add_argument('--target', required=True, type=Path)
     args = parser.parse_args()
-
-    n = migrate_files(args.source, args.target)
-    print(f"Successfully migrated {n} records to {args.target}")
+    print(f'Exported {migrate_files(args.source, args.target)} new snapshot records to {args.target}')
