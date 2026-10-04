@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install verification dependencies
+        run: python -m pip install pytest setuptools wheel
       - name: Compile source
         run: python -m compileall -q kageyoni tests
       - name: Require integrated engine
@@ -22,10 +24,15 @@ jobs:
           test -f kageyoni/workspaces/pipeline.py
           test -f tests/test_v11.py
       - name: Run complete test suite
-        run: python -m unittest discover -s tests -p 'test_*.py' -v
+        run: |
+          mkdir -p evidence/clean_base
+          set -o pipefail
+          python -m pytest -q 2>&1 | tee evidence/clean_base/github-tests.txt
       - name: Run Situation mutation sensitivity
+        if: ${{ always() }}
         run: python tools/situation_mutation_check.py
       - name: Verify R5 cannot self-certify
+        if: ${{ always() }}
         run: |
           python - <<'PY'
           from kageyoni.situations.comparative_runner import run_comparative_suite
@@ -37,6 +44,7 @@ jobs:
               raise SystemExit("R5 self-certified without observed executor")
           PY
       - name: Verify R6 cannot self-certify
+        if: ${{ always() }}
         run: |
           python - <<'PY'
           from kageyoni.situations.long_horizon import export_long_horizon_evidence
@@ -49,24 +57,26 @@ jobs:
               raise SystemExit("R6 self-certified without observed executor")
           PY
       - name: Build distributions
+        if: ${{ always() }}
         run: python setup.py sdist bdist_wheel
-      - name: Fresh installed-package smoke test
+      - name: Fresh installed-package behavior check
+        if: ${{ always() }}
         run: |
-          python -m venv .release-venv
-          .release-venv/bin/pip install --upgrade pip
-          .release-venv/bin/pip install dist/*.whl
-          .release-venv/bin/python - <<'PY'
-          import kageyoni, kageyoni.v11, kageyoni.situations
-          print(kageyoni.__file__)
-          PY
+          set -o pipefail
+          python tools/verify_clean_base_install.py dist/*.whl 2>&1 | tee evidence/clean_base/github-installed-wheel.txt
       - name: Record exact candidate SHA
+        if: ${{ always() }}
         run: |
           mkdir -p evidence
           printf '%s\n' "$GITHUB_SHA" > evidence/qualified-candidate-sha.txt
       - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
         with:
-          name: kageyoni-v11-qualification-evidence
+          name: kageyoni-v11-verification-evidence
           path: |
             dist/*
             evidence/qualified-candidate-sha.txt
+            evidence/clean_base/github-*.txt
+            fixtures/historical/*.sqlite
           if-no-files-found: error
+

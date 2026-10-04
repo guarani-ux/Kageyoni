@@ -25,7 +25,7 @@ from kageyoni.playable_world.kernel import (
 class TestPlayableWorldKernel(unittest.TestCase):
 
     def setUp(self):
-        self.save_path = Path("c:/Kageyoni/data/SAVE.json")
+        self.save_path = Path(__file__).resolve().parents[1] / "data" / "SAVE.json"
         self.assertTrue(self.save_path.is_file(), "Canonical SAVE.json must exist")
 
     def test_1_load_canonical_save(self):
@@ -146,3 +146,4 @@ class TestPlayableWorldKernel(unittest.TestCase):
         self.assertEqual(len(res.pending_actions), 1)
         self.assertEqual(res.pending_actions[0]["status"], "pending_host_authorization")
         self.assertEqual(len(kernel.state.pending_actions), 1)
+
