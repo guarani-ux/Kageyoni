@@ -17,6 +17,7 @@ import time
 import uuid
 from pathlib import Path
 from .resources import schema_path
+from .persistence.unit_of_work import UnitOfWork
 from typing import Any, Iterable
 
 from .model import DOMAINS, REQUIRED, STATUSES, schema
@@ -1765,18 +1766,19 @@ class Engine:
         self.branch(branch)
         require(all(type(x) is int for x in (sides,target,modifier)) and 2 <= sides <= 1_000_000, "invalid dice")
         require(isinstance(id, str) and id and isinstance(reason, str) and reason, "roll ID and reason required")
-        self.db.execute("BEGIN IMMEDIATE")
+        transaction = UnitOfWork(self.db)
+        transaction.__enter__()
         try:
             old = self.db.execute("SELECT * FROM rolls WHERE branch=? AND id=?", (branch,id)).fetchone()
             if old:
                 require((old["sides"],old["target"],old["modifier"],old["reason"]) == (sides,target,modifier,reason), "roll ID reused with different declaration")
-                self.db.rollback(); return dict(old)
+                transaction.rollback(); return dict(old)
             result = secrets.randbelow(sides) + 1
             self.db.execute("INSERT INTO rolls VALUES(?,?,?,?,?,?,?)", (branch,id,sides,target,modifier,result,reason))
-            self.db.commit()
+            transaction.commit()
             return {"branch":branch,"id":id,"sides":sides,"target":target,"modifier":modifier,"result":result,"reason":reason}
         except Exception:
-            self.db.rollback(); raise
+            transaction.rollback(); raise
 
     def resolve_action(self, branch: str, spec: dict) -> dict:
         """Resolve mechanical stages without committing a fictional event."""
@@ -2038,12 +2040,13 @@ class Engine:
             if not ok:
                 normalized = dict(attempt); normalized.update(expected_revision=expected, input_snapshot_hash=snapshot_hash)
                 blocked = {"attempt": normalized, "status": "blocked", "reason": reason, "detail": detail, "resolution": {"feasible": False, "permission": {"allowed": False, "reason": reason}}, "compiled": {"changes": [], "properties": [], "processes": [], "consequences": [], "observations": [], "roll_ids": [], "dependencies": [], "resolution": {"feasible": False, "permission": {"allowed": False, "reason": reason}}, "judgment": {"required": reason == "judgment_required"}}}
-                self.db.execute("BEGIN IMMEDIATE")
+                transaction = UnitOfWork(self.db)
+                transaction.__enter__()
                 try:
                     self.db.execute("INSERT INTO will_attempts(branch,attempt_id,prepare_request_id,actor,expression_id,expression_version,technique_id,technique_version,expected_revision,input_snapshot_hash,attempt_json,compiled_json,status,roll_id) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (branch,attempt["attempt_id"],attempt["request_id"],attempt["actor"],expression["id"],expression["version"],technique["id"],technique["version"],expected,snapshot_hash,encoded(normalized),encoded(blocked["compiled"]),"blocked",None))
-                    self.db.commit()
+                    transaction.commit()
                 except Exception:
-                    self.db.rollback(); raise
+                    transaction.rollback(); raise
                 return {"attempt_id": attempt["attempt_id"], "status": "blocked", "reason": reason, "judgment_required": reason == "judgment_required", "resolution": blocked["resolution"], "replayed": False}
         randomness = attempt.get("randomness", {"mode": "none", "roll_id": None, "difficulty": None, "modifier": 0})
         require(isinstance(randomness, dict), "Will randomness must be an object")
@@ -2062,12 +2065,13 @@ class Engine:
             if judgment is None:
                 normalized = dict(attempt); normalized.update(expected_revision=expected, input_snapshot_hash=snapshot_hash)
                 blocked = {"changes": [], "properties": [], "processes": [], "consequences": [], "observations": [], "roll_ids": [], "dependencies": [], "resolution": {"feasible": True, "judgment_required": True}, "judgment": {"required": "outcome"}}
-                self.db.execute("BEGIN IMMEDIATE")
+                transaction = UnitOfWork(self.db)
+                transaction.__enter__()
                 try:
                     self.db.execute("INSERT INTO will_attempts(branch,attempt_id,prepare_request_id,actor,expression_id,expression_version,technique_id,technique_version,expected_revision,input_snapshot_hash,attempt_json,compiled_json,status,roll_id) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (branch,attempt["attempt_id"],attempt["request_id"],attempt["actor"],expression["id"],expression["version"],technique["id"],technique["version"],expected,snapshot_hash,encoded(normalized),encoded(blocked),"blocked",None))
-                    self.db.commit()
+                    transaction.commit()
                 except Exception:
-                    self.db.rollback(); raise
+                    transaction.rollback(); raise
                 return {"attempt_id": attempt["attempt_id"], "status": "blocked", "reason": "judgment_required", "judgment_required": True, "resolution": blocked["resolution"], "replayed": False}
             outcome = str(judgment.get("decision", "")).lower()
             require(outcome in {"success", "partial", "failure", "interrupted"}, "outcome judgment must be success, partial, failure, or interrupted")
@@ -2109,12 +2113,13 @@ class Engine:
         if blocked_costs:
             normalized = dict(attempt); normalized.update(expected_revision=expected, input_snapshot_hash=snapshot_hash)
             blocked = {"changes": [], "properties": [], "processes": [], "consequences": [], "observations": [], "roll_ids": roll_ids, "dependencies": compiled["dependencies"], "resolution": {"feasible": False, "outcome": "blocked", "costs": blocked_costs}, "judgment": {"required": "cost"}}
-            self.db.execute("BEGIN IMMEDIATE")
+            transaction = UnitOfWork(self.db)
+            transaction.__enter__()
             try:
                 self.db.execute("INSERT INTO will_attempts(branch,attempt_id,prepare_request_id,actor,expression_id,expression_version,technique_id,technique_version,expected_revision,input_snapshot_hash,attempt_json,compiled_json,status,roll_id) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (branch,attempt["attempt_id"],attempt["request_id"],attempt["actor"],expression["id"],expression["version"],technique["id"],technique["version"],expected,snapshot_hash,encoded(normalized),encoded(blocked),"blocked",roll["id"] if roll else None))
-                self.db.commit()
+                transaction.commit()
             except Exception:
-                self.db.rollback(); raise
+                transaction.rollback(); raise
             return {"attempt_id": attempt["attempt_id"], "status": "blocked", "reason": "insufficient_resource", "resolution": blocked["resolution"], "replayed": False}
         compiled["properties"].extend(costs)
         # Duplicate writes from two differently-labelled contributions are not
@@ -2126,12 +2131,13 @@ class Engine:
             seen_writes.add(key)
         normalized = dict(attempt); normalized.update(expected_revision=expected, input_snapshot_hash=snapshot_hash)
         compiled["attempt_id"] = attempt["attempt_id"]; compiled["status"] = "prepared"; compiled["input_snapshot_hash"] = snapshot_hash
-        self.db.execute("BEGIN IMMEDIATE")
+        transaction = UnitOfWork(self.db)
+        transaction.__enter__()
         try:
             self.db.execute("INSERT INTO will_attempts(branch,attempt_id,prepare_request_id,actor,expression_id,expression_version,technique_id,technique_version,expected_revision,input_snapshot_hash,attempt_json,compiled_json,status,roll_id) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (branch,attempt["attempt_id"],attempt["request_id"],attempt["actor"],expression["id"],expression["version"],technique["id"],technique["version"],expected,snapshot_hash,encoded(normalized),encoded(compiled),"prepared",roll["id"] if roll else None))
-            self.db.commit()
+            transaction.commit()
         except Exception:
-            self.db.rollback(); raise
+            transaction.rollback(); raise
         return {"attempt_id": attempt["attempt_id"], "status": "prepared", "outcome": outcome, "resolution": compiled["resolution"], "roll": roll, "replayed": False}
 
     def _validate_will_apply_command(self, branch: str, command: dict) -> sqlite3.Row:
@@ -2812,3 +2818,4 @@ class Engine:
     def resolve_character_interaction(self, branch: str, character_id: str, initiator_id: str, proposal: dict | str) -> dict:
         from .characters import resolve_interaction
         return resolve_interaction(self, branch, character_id, initiator_id, proposal)
+
