@@ -1,0 +1,1011 @@
+{
+  "format": "samsara-F1-recovery-in-progress-context/1",
+  "status": "IN_PROGRESS_NOT_QUALIFIED",
+  "source_identity": "ca04b11e79fc5bfd73224284082206555e21ddb3571b6b0e42f1129a6aa42d16",
+  "runtime_digest": "9c04e83eea806dc60d3890204d22b053029c99da94543a5878780a5cdb6886b0",
+  "product": "0.5.3.dev16",
+  "engine": "11.1.0.dev10",
+  "wheels": {
+    "product": "0ca4a2c77094a7a58e0766350ae7c0109e2a7c849793ad8dc0c6910983e5a305",
+    "engine": "d2c033c3df989eff9da8ac4f006150b6276e8a07bbab30992d1b33341d871195"
+  },
+  "source_counts": {
+    "product": 293,
+    "engine": 734
+  },
+  "total_selected_source_files": 1027,
+  "payload_source_wheel_correspondence": 226,
+  "what_changed": "Only3testfiles adopt protected v5default969records/18definitions andunknown-refdialogueproducer assertion. Exactold3testfiles/diffs retained in E/round-f1/v5-test-adoption. Productioncode/runtime/wheels unchanged from source86d79; v5 data/nativeproofs preserved, no installedplay/human qualification.",
+  "historical_failure": {
+    "collected": 457,
+    "passed": 196,
+    "failed": 42,
+    "errors": 219,
+    "source_identity": "86d79ede2a05853352dae0a8a89ff58e50c2a03cac62d5ae0d8e5d310950b896",
+    "raw_world_archive_bytes": 102151654,
+    "raw_world_archive_sha256": "4c8429127886916d47e1d3c158455835f7bb33e6b93d13a844e9eb892b44a44c",
+    "raw_archive_parts": 146,
+    "raw_archive_files": 2782,
+    "status": "GENUINE_FAILED_RUN_RAW_BYTES_PRESERVED; not rewritten as pass"
+  },
+  "later_same_candidate_retry": {
+    "passed": 457,
+    "failed": 0,
+    "errors": 0,
+    "duration_seconds": 436.24,
+    "source_identity": "86d79ede2a05853352dae0a8a89ff58e50c2a03cac62d5ae0d8e5d310950b896",
+    "runtime_digest": "9c04e83eea806dc60d3890204d22b053029c99da94543a5878780a5cdb6886b0",
+    "correspondence": 226,
+    "note": "Actual full457retrypass with real pytest tmp_path_retention_policy=failed deletes only successful temporary worlds. All14priorUNAVAILABLE cases passed on retry. Reserve/production/assertions unchanged; old failure/rawworlds retained. This86d79+v4evidence is not relabelled currenta93+v5."
+  },
+  "current_v5_affected_checks": {
+    "source_identity": "a93f6ed28f1b52b68606544ba141b2e1f5b68013177e15eac78709f91ac96a64",
+    "passed": 44,
+    "failed": 2,
+    "errors": 0,
+    "reason": "Two obsoleteharness rawacceptrequirements==[] assertions againstactual21authoredv5guards; rawreport preserved. Not a clean46pass."
+  },
+  "v5_data": "Protectedv5 SHA9d519f388e9d6c773e1595c831287886ba63828d0f3ccd4f135ddc3a95a35331;969records18defs427routes; actual raw nativeproofs not installedplay/humanreview.",
+  "current_PS1_compatible_copy": "Actual installed authenticPS1v15->currentdev16 explicit compatiblecopy PASS; originalDB/metadata unchanged,4linkchain,exactrecipientreads/replay/nativebackuprestore/physicalrelocation. NoF1activation. Evidence E/round-f1/f1-compatibility-installed-current.",
+  "source_carrier": {
+    "format": "samsara-F1-recovery-in-progress-source/1",
+    "bytes": 22782642,
+    "sha256": "edf5cf00e4185d463c6d24c76bf80beb44e22a21a98fed0feb3f435b7fb73079",
+    "zip_entries": 1212,
+    "parts": [
+      {
+        "name": "source-part-0000.bin",
+        "bytes": 700000,
+        "sha256": "9b353443725c5ddf7005afe792659a6d8f5ebbc0b367a2eba05c6bfe8514dc22",
+        "git_sha": "8ab045170d00ea4317a11759cb9857ea0ebb56c7"
+      },
+      {
+        "name": "source-part-0001.bin",
+        "bytes": 700000,
+        "sha256": "c61ed7b51e381232dd8443d484921c6e25cc9de2c7f82114adc07efb674f8a54",
+        "git_sha": "d25247eff87fe463c80fbac6d5c149bd3618d1ab"
+      },
+      {
+        "name": "source-part-0002.bin",
+        "bytes": 700000,
+        "sha256": "31a5a7d0480043188cd010200829a9e453b55f0a1d74b2c2d54e164c17b7b5f4",
+        "git_sha": "b7ebfc966f07a4ab8f7c3878e7bbba3a7af93cec"
+      },
+      {
+        "name": "source-part-0003.bin",
+        "bytes": 700000,
+        "sha256": "b8d2156786eabfa07dc808c2f3a67374126d3b193e383c591473c68ccf2cd3d0",
+        "git_sha": "4be8a35c779ac7b52349504f793c090243b938d5"
+      },
+      {
+        "name": "source-part-0004.bin",
+        "bytes": 700000,
+        "sha256": "b0e6ab7e9b92aa23c58deb7da2474c57eaf6fa98168e2124761484c63e4eb00d",
+        "git_sha": "ad587c2ff80da90ec5479b8312abc630bbda18b0"
+      },
+      {
+        "name": "source-part-0005.bin",
+        "bytes": 700000,
+        "sha256": "f2ea774fd02ff733377414e070dea6d5cd218e1676ae3b3127f1c45f32dc4b89",
+        "git_sha": "9f1cee49cab57fcf92464260f0090640ac473450"
+      },
+      {
+        "name": "source-part-0006.bin",
+        "bytes": 700000,
+        "sha256": "8d49279355c611d53e5e92c69adae739d69a5213540baeffdb0f3bd9353148fc",
+        "git_sha": "aef6425c46a1dd8e7b27359ca78c235e06bc93fa"
+      },
+      {
+        "name": "source-part-0007.bin",
+        "bytes": 700000,
+        "sha256": "a6e724297049dc74b25e7d874ba9b255321d3b2457bdfacea69a49b8ea0799fa",
+        "git_sha": "6fad645d9b4d4d29544f15bc38e21f337b6d05e0"
+      },
+      {
+        "name": "source-part-0008.bin",
+        "bytes": 700000,
+        "sha256": "c0b3be5507cca610f47fb8580cafa59bb5bea0e96d131dd4b85c8a296e855182",
+        "git_sha": "8aeb93121972eb5d9a0d6ffedc50efa9d924ab62"
+      },
+      {
+        "name": "source-part-0009.bin",
+        "bytes": 700000,
+        "sha256": "2f09f8c1803a28730a9beb52c05e3f37ce4f4dc6f9c289bdc6ebaab6aae6e776",
+        "git_sha": "5e8e32d934ec1561f56a12c3625f095f15e3c99b"
+      },
+      {
+        "name": "source-part-0010.bin",
+        "bytes": 700000,
+        "sha256": "b32de2a0a55c0969b378c33339d81025a4eea933e995428e38ad4fbc1af9029e",
+        "git_sha": "1d2791c3f73d16292039f741efd814eb7d16dec9"
+      },
+      {
+        "name": "source-part-0011.bin",
+        "bytes": 700000,
+        "sha256": "6f3eb18caa64d51c00366fb94c5ad6c2687489e4077cddd418836c92e15f9edb",
+        "git_sha": "425fc4aae69ad21717cc52f6be5301aa6f3d6bac"
+      },
+      {
+        "name": "source-part-0012.bin",
+        "bytes": 700000,
+        "sha256": "0a5c3db6adf0dd5efea3b436be4a04d8e65c51b56942b0f5fb50b9bfa746189c",
+        "git_sha": "3f83f61e0563515464960bc0f2b437fb9aa9979b"
+      },
+      {
+        "name": "source-part-0013.bin",
+        "bytes": 700000,
+        "sha256": "804e65c03d0e472ef62e8f47762fda8b8b62250ccc1f73de51dd3cad8d587620",
+        "git_sha": "ac35ce141fdf476783a79e4218df42f2024a9468"
+      },
+      {
+        "name": "source-part-0014.bin",
+        "bytes": 700000,
+        "sha256": "70f8b1ccec6b158bd8937e0a85c69daff208bdc59000f110c718f401cf1f26b3",
+        "git_sha": "e6c7b015a007ad4b13165569201361cd963fb66d"
+      },
+      {
+        "name": "source-part-0015.bin",
+        "bytes": 700000,
+        "sha256": "4c587520e4f85c64a50152df41c3587950eb6110c6efe1804e866c63186abb8f",
+        "git_sha": "3331878de68129133e9053a05673360f4c682c54"
+      },
+      {
+        "name": "source-part-0016.bin",
+        "bytes": 700000,
+        "sha256": "76f9740565994020539ffd9439bd50bc49f5c5b35d1dd9b31c88e622e461a18c",
+        "git_sha": "b6415e2c314a0eeb7f40f296cb567d80f4d77940"
+      },
+      {
+        "name": "source-part-0017.bin",
+        "bytes": 700000,
+        "sha256": "e5289a56af85607248141660f507a1dbb01823e3f3bba2df310ee532e466e6a0",
+        "git_sha": "5f22d9156e802d304fcf04fccf795a288ec4f801"
+      },
+      {
+        "name": "source-part-0018.bin",
+        "bytes": 700000,
+        "sha256": "f1b467a4b851f9a1ad1208715a261ff2e262b4555d3fb1c65998f20092b0ca97",
+        "git_sha": "0584480b9e564c77ee3d5e39129f6e2b0b0cc81f"
+      },
+      {
+        "name": "source-part-0019.bin",
+        "bytes": 700000,
+        "sha256": "a0e531e89b38c9743cafa93c080461da926af9d1569b0830b246ceeab6306317",
+        "git_sha": "ba5bc7a891961f93262e27282fe1db50dcbcd70c"
+      },
+      {
+        "name": "source-part-0020.bin",
+        "bytes": 700000,
+        "sha256": "74b00690b1dce81d18fac2ede44b764d8702505d09558c370831a8947bfc253c",
+        "git_sha": "17bbe112e2a4d2f7ea81c9ac5cb670c00e9821ad"
+      },
+      {
+        "name": "source-part-0021.bin",
+        "bytes": 700000,
+        "sha256": "cb505c64b33139d32dc46f90b699e64bb1391d28ca109e9c00e75f4bce91fc44",
+        "git_sha": "daa930ab67bff3de13e478cc2cfe382275248aba"
+      },
+      {
+        "name": "source-part-0022.bin",
+        "bytes": 700000,
+        "sha256": "526122b664dadfb00a42bf2b8af9a02ec3b047afc355873f29da4d3978a8eacf",
+        "git_sha": "2b799f5fe7eecc321249a6ef4772ce32a01ee7dc"
+      },
+      {
+        "name": "source-part-0023.bin",
+        "bytes": 700000,
+        "sha256": "c471b20facd15b2f9711972562c890f99cacf31e6695aa0477708d966a4ed5e7",
+        "git_sha": "4413337585f1a9291c098b98f6cd67fa9a50467d"
+      },
+      {
+        "name": "source-part-0024.bin",
+        "bytes": 700000,
+        "sha256": "17bd7e0c94b056d5986f9a61cbdf16dec6171e098638b1c0dff5d0f98c3f23d9",
+        "git_sha": "bd40e178a7d397fc0499dabc60f980adc55e4e60"
+      },
+      {
+        "name": "source-part-0025.bin",
+        "bytes": 700000,
+        "sha256": "accdf90c48af4d2d2c287f3a6dd691f334a157ce77bb69ec2848a29c640aaa12",
+        "git_sha": "38d5c9c3e2cf5696273155199f181e5def4d707e"
+      },
+      {
+        "name": "source-part-0026.bin",
+        "bytes": 700000,
+        "sha256": "5feaa53b55ed9a14cf7300e86d5421b86d6b32e813184c07d3fdbae11c59db2e",
+        "git_sha": "861ab8180a4da225e1b34b83b756987fe2a347a0"
+      },
+      {
+        "name": "source-part-0027.bin",
+        "bytes": 700000,
+        "sha256": "2392660d2e8e0ff288d43b4afc075c929d9b9146681003aaa72acc98ef597604",
+        "git_sha": "73171d24ab6ba02c45f6d3e22b24c6d1bc776946"
+      },
+      {
+        "name": "source-part-0028.bin",
+        "bytes": 700000,
+        "sha256": "7af2c1854c117052d185c1e632de63dfb472eaa1380aa36043f91b45ca3c9ee3",
+        "git_sha": "5e1c1ed9a0cff09177b510f70a49fb21bdb3c5b3"
+      },
+      {
+        "name": "source-part-0029.bin",
+        "bytes": 700000,
+        "sha256": "89a1efab296499098cafb99a21e35cfbeaf8fd341eb56b460a7b2787628763ca",
+        "git_sha": "a195e52dbb4928d71a7d7362603c31aad8c9d3fe"
+      },
+      {
+        "name": "source-part-0030.bin",
+        "bytes": 700000,
+        "sha256": "8f824d70ff5f04c3e05557ca6ab0c46a457c8a14bdb3f6c6f6a744b49b6e3d5c",
+        "git_sha": "bdd0041ce10d3fe509f8dcc14a5a98af7875beeb"
+      },
+      {
+        "name": "source-part-0031.bin",
+        "bytes": 700000,
+        "sha256": "7b878386a154e7f003c07f3cfaf27c0490d45dff5ec74cfcc26100feefb171a6",
+        "git_sha": "f48d03e3ad94615bce164948eeca45d860d45769"
+      },
+      {
+        "name": "source-part-0032.bin",
+        "bytes": 382642,
+        "sha256": "b1f877f888133dceff3cbcfaee30d76791b045fcf0307d60bf19da585117fee7",
+        "git_sha": "fc12a88219c9fef1d8cd69aaa071c4bb860e5842"
+      }
+    ],
+    "source_identity": "a93f6ed28f1b52b68606544ba141b2e1f5b68013177e15eac78709f91ac96a64",
+    "limit": "Current source/tests/status/closedE/v1-v5data/currentpairwheels only; full qualified PS1v15 archive/history remain separate unchanged. Source checkpoint is IN_PROGRESS, not qualifiedF1."
+  },
+  "qualified_parent": {
+    "library_version": 15,
+    "source_identity": "6c32e7af10ebef6790ee38f65ca097bedee779cfca157b6b18380e1cf64d9b2d",
+    "runtime_digest": "be05229b564fad5bc1b0e86ccb144c5d7569cbe083ed32cd34af92d2a211e9c9",
+    "bytes": 462812341,
+    "sha256": "73738ee2b30962cf461e7c04c499524286b0a81715dbca7f12820618545690b4",
+    "path": "core-build/verified/PS1-6c32e7af10eb/",
+    "stage": "QUALIFIED_SELECTED_PS1_ONLY"
+  },
+  "CONTINUE_identity_note": "Currentca04 is distinct fromhistorical457source86d79, historical46sourcea93 andfailed7retry; current9presencecasesPASS only. Productionruntime/wheels9c04/0ca4/d2cunchanged.",
+  "native_engine": "191capsule/30SQLunchanged;oneauthoritativeseparateengine.",
+  "active_or_uncertain_operations": "Only currentv5affectedread-onlytest job RUNNING at freeze, sourcewritersreleased/privatecopysealed. No uncertain remote/nativeworldeffects.",
+  "F1_qualified": false,
+  "full_release_complete": false,
+  "remaining": "AllF1-F5/original13loops22requirements13slices14increments/broadfoundation retained. Needactual current installedv5play/consumers/recovery/recipient/lateruse. Canonical mappings/designatedlatestcampaign andhumanplay not invented.",
+  "next_action": "Inspect actual socialdrivercompletion without overlap; repair realcontinuinggear/readset/geometry/distinctnativeoutcome/laterconsumer andactivebattleoverlap, then rebuild/qualify exactsource/runtime/content withrecipient/recovery. Retain allF1-F5. Frozen currentca04/sourcecode has no repairclaim.",
+  "host": "RAMstaging, overlaycapacitylimited. ps inventory failedfatal libraryerrorlookupself; no processlifetime/OSsandbox/model/capacity/calibration claim.",
+  "preservation": "Allprior/unseenGitpaths/qualifiedv15fullcarrier/history/failures preserved. This sourcecheckpoint creates no newLibraryversion; no full462MBduplicate.",
+  "authority": "Oneprivatecontinuationwriter/CASnoforce/freshpins;noPRmergepublishdeploylivecampaignmanualcredentials.",
+  "current_source_identity": "ca04b11e79fc5bfd73224284082206555e21ddb3571b6b0e42f1129a6aa42d16",
+  "base_snapshot_source_identity": "a93f6ed28f1b52b68606544ba141b2e1f5b68013177e15eac78709f91ac96a64",
+  "current_overlay": {
+    "format": "samsara-current-source-overlay/1",
+    "base": {
+      "format": "samsara-F1-recovery-in-progress-source/1",
+      "bytes": 22782642,
+      "sha256": "edf5cf00e4185d463c6d24c76bf80beb44e22a21a98fed0feb3f435b7fb73079",
+      "zip_entries": 1212,
+      "parts": [
+        {
+          "name": "source-part-0000.bin",
+          "bytes": 700000,
+          "sha256": "9b353443725c5ddf7005afe792659a6d8f5ebbc0b367a2eba05c6bfe8514dc22",
+          "git_sha": "8ab045170d00ea4317a11759cb9857ea0ebb56c7"
+        },
+        {
+          "name": "source-part-0001.bin",
+          "bytes": 700000,
+          "sha256": "c61ed7b51e381232dd8443d484921c6e25cc9de2c7f82114adc07efb674f8a54",
+          "git_sha": "d25247eff87fe463c80fbac6d5c149bd3618d1ab"
+        },
+        {
+          "name": "source-part-0002.bin",
+          "bytes": 700000,
+          "sha256": "31a5a7d0480043188cd010200829a9e453b55f0a1d74b2c2d54e164c17b7b5f4",
+          "git_sha": "b7ebfc966f07a4ab8f7c3878e7bbba3a7af93cec"
+        },
+        {
+          "name": "source-part-0003.bin",
+          "bytes": 700000,
+          "sha256": "b8d2156786eabfa07dc808c2f3a67374126d3b193e383c591473c68ccf2cd3d0",
+          "git_sha": "4be8a35c779ac7b52349504f793c090243b938d5"
+        },
+        {
+          "name": "source-part-0004.bin",
+          "bytes": 700000,
+          "sha256": "b0e6ab7e9b92aa23c58deb7da2474c57eaf6fa98168e2124761484c63e4eb00d",
+          "git_sha": "ad587c2ff80da90ec5479b8312abc630bbda18b0"
+        },
+        {
+          "name": "source-part-0005.bin",
+          "bytes": 700000,
+          "sha256": "f2ea774fd02ff733377414e070dea6d5cd218e1676ae3b3127f1c45f32dc4b89",
+          "git_sha": "9f1cee49cab57fcf92464260f0090640ac473450"
+        },
+        {
+          "name": "source-part-0006.bin",
+          "bytes": 700000,
+          "sha256": "8d49279355c611d53e5e92c69adae739d69a5213540baeffdb0f3bd9353148fc",
+          "git_sha": "aef6425c46a1dd8e7b27359ca78c235e06bc93fa"
+        },
+        {
+          "name": "source-part-0007.bin",
+          "bytes": 700000,
+          "sha256": "a6e724297049dc74b25e7d874ba9b255321d3b2457bdfacea69a49b8ea0799fa",
+          "git_sha": "6fad645d9b4d4d29544f15bc38e21f337b6d05e0"
+        },
+        {
+          "name": "source-part-0008.bin",
+          "bytes": 700000,
+          "sha256": "c0b3be5507cca610f47fb8580cafa59bb5bea0e96d131dd4b85c8a296e855182",
+          "git_sha": "8aeb93121972eb5d9a0d6ffedc50efa9d924ab62"
+        },
+        {
+          "name": "source-part-0009.bin",
+          "bytes": 700000,
+          "sha256": "2f09f8c1803a28730a9beb52c05e3f37ce4f4dc6f9c289bdc6ebaab6aae6e776",
+          "git_sha": "5e8e32d934ec1561f56a12c3625f095f15e3c99b"
+        },
+        {
+          "name": "source-part-0010.bin",
+          "bytes": 700000,
+          "sha256": "b32de2a0a55c0969b378c33339d81025a4eea933e995428e38ad4fbc1af9029e",
+          "git_sha": "1d2791c3f73d16292039f741efd814eb7d16dec9"
+        },
+        {
+          "name": "source-part-0011.bin",
+          "bytes": 700000,
+          "sha256": "6f3eb18caa64d51c00366fb94c5ad6c2687489e4077cddd418836c92e15f9edb",
+          "git_sha": "425fc4aae69ad21717cc52f6be5301aa6f3d6bac"
+        },
+        {
+          "name": "source-part-0012.bin",
+          "bytes": 700000,
+          "sha256": "0a5c3db6adf0dd5efea3b436be4a04d8e65c51b56942b0f5fb50b9bfa746189c",
+          "git_sha": "3f83f61e0563515464960bc0f2b437fb9aa9979b"
+        },
+        {
+          "name": "source-part-0013.bin",
+          "bytes": 700000,
+          "sha256": "804e65c03d0e472ef62e8f47762fda8b8b62250ccc1f73de51dd3cad8d587620",
+          "git_sha": "ac35ce141fdf476783a79e4218df42f2024a9468"
+        },
+        {
+          "name": "source-part-0014.bin",
+          "bytes": 700000,
+          "sha256": "70f8b1ccec6b158bd8937e0a85c69daff208bdc59000f110c718f401cf1f26b3",
+          "git_sha": "e6c7b015a007ad4b13165569201361cd963fb66d"
+        },
+        {
+          "name": "source-part-0015.bin",
+          "bytes": 700000,
+          "sha256": "4c587520e4f85c64a50152df41c3587950eb6110c6efe1804e866c63186abb8f",
+          "git_sha": "3331878de68129133e9053a05673360f4c682c54"
+        },
+        {
+          "name": "source-part-0016.bin",
+          "bytes": 700000,
+          "sha256": "76f9740565994020539ffd9439bd50bc49f5c5b35d1dd9b31c88e622e461a18c",
+          "git_sha": "b6415e2c314a0eeb7f40f296cb567d80f4d77940"
+        },
+        {
+          "name": "source-part-0017.bin",
+          "bytes": 700000,
+          "sha256": "e5289a56af85607248141660f507a1dbb01823e3f3bba2df310ee532e466e6a0",
+          "git_sha": "5f22d9156e802d304fcf04fccf795a288ec4f801"
+        },
+        {
+          "name": "source-part-0018.bin",
+          "bytes": 700000,
+          "sha256": "f1b467a4b851f9a1ad1208715a261ff2e262b4555d3fb1c65998f20092b0ca97",
+          "git_sha": "0584480b9e564c77ee3d5e39129f6e2b0b0cc81f"
+        },
+        {
+          "name": "source-part-0019.bin",
+          "bytes": 700000,
+          "sha256": "a0e531e89b38c9743cafa93c080461da926af9d1569b0830b246ceeab6306317",
+          "git_sha": "ba5bc7a891961f93262e27282fe1db50dcbcd70c"
+        },
+        {
+          "name": "source-part-0020.bin",
+          "bytes": 700000,
+          "sha256": "74b00690b1dce81d18fac2ede44b764d8702505d09558c370831a8947bfc253c",
+          "git_sha": "17bbe112e2a4d2f7ea81c9ac5cb670c00e9821ad"
+        },
+        {
+          "name": "source-part-0021.bin",
+          "bytes": 700000,
+          "sha256": "cb505c64b33139d32dc46f90b699e64bb1391d28ca109e9c00e75f4bce91fc44",
+          "git_sha": "daa930ab67bff3de13e478cc2cfe382275248aba"
+        },
+        {
+          "name": "source-part-0022.bin",
+          "bytes": 700000,
+          "sha256": "526122b664dadfb00a42bf2b8af9a02ec3b047afc355873f29da4d3978a8eacf",
+          "git_sha": "2b799f5fe7eecc321249a6ef4772ce32a01ee7dc"
+        },
+        {
+          "name": "source-part-0023.bin",
+          "bytes": 700000,
+          "sha256": "c471b20facd15b2f9711972562c890f99cacf31e6695aa0477708d966a4ed5e7",
+          "git_sha": "4413337585f1a9291c098b98f6cd67fa9a50467d"
+        },
+        {
+          "name": "source-part-0024.bin",
+          "bytes": 700000,
+          "sha256": "17bd7e0c94b056d5986f9a61cbdf16dec6171e098638b1c0dff5d0f98c3f23d9",
+          "git_sha": "bd40e178a7d397fc0499dabc60f980adc55e4e60"
+        },
+        {
+          "name": "source-part-0025.bin",
+          "bytes": 700000,
+          "sha256": "accdf90c48af4d2d2c287f3a6dd691f334a157ce77bb69ec2848a29c640aaa12",
+          "git_sha": "38d5c9c3e2cf5696273155199f181e5def4d707e"
+        },
+        {
+          "name": "source-part-0026.bin",
+          "bytes": 700000,
+          "sha256": "5feaa53b55ed9a14cf7300e86d5421b86d6b32e813184c07d3fdbae11c59db2e",
+          "git_sha": "861ab8180a4da225e1b34b83b756987fe2a347a0"
+        },
+        {
+          "name": "source-part-0027.bin",
+          "bytes": 700000,
+          "sha256": "2392660d2e8e0ff288d43b4afc075c929d9b9146681003aaa72acc98ef597604",
+          "git_sha": "73171d24ab6ba02c45f6d3e22b24c6d1bc776946"
+        },
+        {
+          "name": "source-part-0028.bin",
+          "bytes": 700000,
+          "sha256": "7af2c1854c117052d185c1e632de63dfb472eaa1380aa36043f91b45ca3c9ee3",
+          "git_sha": "5e1c1ed9a0cff09177b510f70a49fb21bdb3c5b3"
+        },
+        {
+          "name": "source-part-0029.bin",
+          "bytes": 700000,
+          "sha256": "89a1efab296499098cafb99a21e35cfbeaf8fd341eb56b460a7b2787628763ca",
+          "git_sha": "a195e52dbb4928d71a7d7362603c31aad8c9d3fe"
+        },
+        {
+          "name": "source-part-0030.bin",
+          "bytes": 700000,
+          "sha256": "8f824d70ff5f04c3e05557ca6ab0c46a457c8a14bdb3f6c6f6a744b49b6e3d5c",
+          "git_sha": "bdd0041ce10d3fe509f8dcc14a5a98af7875beeb"
+        },
+        {
+          "name": "source-part-0031.bin",
+          "bytes": 700000,
+          "sha256": "7b878386a154e7f003c07f3cfaf27c0490d45dff5ec74cfcc26100feefb171a6",
+          "git_sha": "f48d03e3ad94615bce164948eeca45d860d45769"
+        },
+        {
+          "name": "source-part-0032.bin",
+          "bytes": 382642,
+          "sha256": "b1f877f888133dceff3cbcfaee30d76791b045fcf0307d60bf19da585117fee7",
+          "git_sha": "fc12a88219c9fef1d8cd69aaa071c4bb860e5842"
+        }
+      ],
+      "source_identity": "a93f6ed28f1b52b68606544ba141b2e1f5b68013177e15eac78709f91ac96a64",
+      "limit": "Current source/tests/status/closedE/v1-v5data/currentpairwheels only; full qualified PS1v15 archive/history remain separate unchanged. Source checkpoint is IN_PROGRESS, not qualifiedF1."
+    },
+    "overlay": {
+      "bytes": 23989208,
+      "sha256": "0ac22deec4f6eb19b17113d9e7d37f26e64cf49241b92034bbce868ac852c99b",
+      "entries": 182,
+      "parts": [
+        {
+          "name": "overlay-part-0000.bin",
+          "bytes": 700000,
+          "sha256": "d6cef67ef478f1904f469b08d445aba5c46a190b5a3fc7bb538be95cbd182f17",
+          "git_sha": "a84e37aa204c2b697e6c95c49a9d3648b1e70925"
+        },
+        {
+          "name": "overlay-part-0001.bin",
+          "bytes": 700000,
+          "sha256": "2ff3b21c813d24265fd593987f1618963b988af87f4bd259d5ba72b28defc613",
+          "git_sha": "0b10fe17e9152859859e5220dfcda263b54825bb"
+        },
+        {
+          "name": "overlay-part-0002.bin",
+          "bytes": 700000,
+          "sha256": "1212966a341375d4832a183c00bc0d5e44ec4a78870c5e969117d8d44cc05599",
+          "git_sha": "563f6bd71f2590c125f1b5aa705937ec767f4c03"
+        },
+        {
+          "name": "overlay-part-0003.bin",
+          "bytes": 700000,
+          "sha256": "13c91c9e4a8a620c1dff4dae4c72b11f8ad1181b8de920c7f1da1fde9ec0ce83",
+          "git_sha": "d8eb39834769c652dc1c96bc0329e293fcbb8556"
+        },
+        {
+          "name": "overlay-part-0004.bin",
+          "bytes": 700000,
+          "sha256": "c896988de8d6d36e6aa6907cc28d423d24f7e71fac03c26b9697e6d5fb53acd9",
+          "git_sha": "8b22809471bd3ae5fa4b3e2738f70c032282a34e"
+        },
+        {
+          "name": "overlay-part-0005.bin",
+          "bytes": 700000,
+          "sha256": "57b796d24a13f4a976f9f4a4ae190aafb34819c5b120e33f4a5fb53b2c61ffcd",
+          "git_sha": "62e21be91ab3483ab246f8d16f6960504ccb9cb0"
+        },
+        {
+          "name": "overlay-part-0006.bin",
+          "bytes": 700000,
+          "sha256": "3e135e8afcb62e300710b97704ef0499315d40438d40021ffc727d88f98a3c43",
+          "git_sha": "db4ee91adbd71edb442dfdf77f84103eb6b1e67f"
+        },
+        {
+          "name": "overlay-part-0007.bin",
+          "bytes": 700000,
+          "sha256": "29d84d88761758534f7f69eccf70c957322b2d6e174e700798ac1354fc959fd4",
+          "git_sha": "96bf6641f39a4b10769a1fed42d515d23ada01e0"
+        },
+        {
+          "name": "overlay-part-0008.bin",
+          "bytes": 700000,
+          "sha256": "baf96fd203152c91733729a506701f2b2d2e0814cdfb34246b9db8a081934852",
+          "git_sha": "dbb53de449cfcf158a04fd7d15ef6cd30335e69a"
+        },
+        {
+          "name": "overlay-part-0009.bin",
+          "bytes": 700000,
+          "sha256": "b679e20a663a9f952d6ddf6a317dc8b4b63d74dd20095437210cf4d70ba8a7be",
+          "git_sha": "6e1199541ad3985a823714adf39fb83c65ca92f7"
+        },
+        {
+          "name": "overlay-part-0010.bin",
+          "bytes": 700000,
+          "sha256": "054cdb05a7019e29348645807bd6529a31ea2faab41ac1201536e19f80d2c8d1",
+          "git_sha": "c3681e33b69db1389dd2f6c1b5de087ff4970762"
+        },
+        {
+          "name": "overlay-part-0011.bin",
+          "bytes": 700000,
+          "sha256": "77b7e8ccaa63cfc35a72e391ca491aeb13f8413002e0754df0248423c00e1bfa",
+          "git_sha": "f4078f38d88d377ba05b7da9403c995a5638d1fd"
+        },
+        {
+          "name": "overlay-part-0012.bin",
+          "bytes": 700000,
+          "sha256": "db1134c3f04cd0e9f079f95fbfea3c31faf40efb411d10b4db894d0b3a80b6d5",
+          "git_sha": "89cda901bb20cfd77f9297eba61833c5b255d491"
+        },
+        {
+          "name": "overlay-part-0013.bin",
+          "bytes": 700000,
+          "sha256": "10fbff0ae7e3f5eeb0b2fbf4abc584fbb9f83260582043843f3fd7f301a568ff",
+          "git_sha": "42c896410fa442f7fbfad6af9f7df6d408094950"
+        },
+        {
+          "name": "overlay-part-0014.bin",
+          "bytes": 700000,
+          "sha256": "74574abfc2edf1da4f742d586b51596aec0435a003f805a88f9ecfb4c39d2299",
+          "git_sha": "fc4e9ccc79be9b2e128c4a2ce38a7f4f815925b5"
+        },
+        {
+          "name": "overlay-part-0015.bin",
+          "bytes": 700000,
+          "sha256": "9a76d771e62e3f83ca09df97bc8178956ecbdb615d6f5a9daa76b6f0e40c8e4e",
+          "git_sha": "71abd0dac38b3f4b23871ff52b943156802d7249"
+        },
+        {
+          "name": "overlay-part-0016.bin",
+          "bytes": 700000,
+          "sha256": "1a4c7abf7fe7f7a74805448cfc69b73ec2bef81c6965daaedb95fd10b4d9edcf",
+          "git_sha": "1ef228797e90ceb5b47c4ae27300f55dff619f31"
+        },
+        {
+          "name": "overlay-part-0017.bin",
+          "bytes": 700000,
+          "sha256": "523e407a268c1083f0c355f2eaa621372e59de9cacdfa7c19fed03814085f99b",
+          "git_sha": "07241748adc724836bc3d14d168b21bc600eea1e"
+        },
+        {
+          "name": "overlay-part-0018.bin",
+          "bytes": 700000,
+          "sha256": "1e47c528ca28abaa90ef1441d9f87eeb3522bac37a2451106eaa5b3e78dd8b36",
+          "git_sha": "cd86553d43b70c3f867cd03669688d49a0d8d5c9"
+        },
+        {
+          "name": "overlay-part-0019.bin",
+          "bytes": 700000,
+          "sha256": "db129bb90395a317feacea7f38b3f46539f9fd69507f13dc1328f030e171feaa",
+          "git_sha": "295a5e1b1bfa7427883210d5bb8fd956ab10b91f"
+        },
+        {
+          "name": "overlay-part-0020.bin",
+          "bytes": 700000,
+          "sha256": "ee525db2294db2dc7dc7926ae178eefa862cb0abc27f2a6a44915d38e7eba3d8",
+          "git_sha": "604fa6566118901d46b9ab45daabd60c8b09c835"
+        },
+        {
+          "name": "overlay-part-0021.bin",
+          "bytes": 700000,
+          "sha256": "6709012f5a62d0d33fc5dd8ad08156c74d620c80d83a29ebca2696ff385bfa2d",
+          "git_sha": "185a25aca8ec217c68c3fbbf43556552de7388f1"
+        },
+        {
+          "name": "overlay-part-0022.bin",
+          "bytes": 700000,
+          "sha256": "45049bdf4f556dc6856b9604d19ca957e5c83ff175b6ea0c885d0987cb00cc86",
+          "git_sha": "145baa37aada9e49bcfbf09a17e88e3e3de42c02"
+        },
+        {
+          "name": "overlay-part-0023.bin",
+          "bytes": 700000,
+          "sha256": "b621507c4d6b4fdfb8cb281a44c3990b608621a7c365230cb24da198d7cede51",
+          "git_sha": "99cce81c0e601a4bbd70a638c6908ec11af855e5"
+        },
+        {
+          "name": "overlay-part-0024.bin",
+          "bytes": 700000,
+          "sha256": "31a530258cb9fe2e42e4a4895b21ea731ca2954db29a59bae4da046b02909898",
+          "git_sha": "9251da23b94fb80211f329165cacd983b8a16698"
+        },
+        {
+          "name": "overlay-part-0025.bin",
+          "bytes": 700000,
+          "sha256": "9d93daf53ec7d9fc7e278510e95e366beb704670b1c0810b4af24b241b17c819",
+          "git_sha": "dad51709d422c6a8758e915154d7382d8a5136cb"
+        },
+        {
+          "name": "overlay-part-0026.bin",
+          "bytes": 700000,
+          "sha256": "5014632fe2ba853acb6dbbed2e47c4d6acfbf162bcac424e412c213dad3e2e7f",
+          "git_sha": "bd9b98a166901b6a049fea30d82a822081a0171e"
+        },
+        {
+          "name": "overlay-part-0027.bin",
+          "bytes": 700000,
+          "sha256": "f0c293a6d051af7bcc7aee3d43543a6ad9bc0ecc4c3baf4df5c0cfd66d94595e",
+          "git_sha": "3ec663acf837c7015c6ef5da6869e277902ebe28"
+        },
+        {
+          "name": "overlay-part-0028.bin",
+          "bytes": 700000,
+          "sha256": "090e35a1a8e7e5b7aa4670033a74f13e146a3d98a98114f41f6394bc07132dc2",
+          "git_sha": "c591d23027a8b82f5d3258ef30d200b905fa3f00"
+        },
+        {
+          "name": "overlay-part-0029.bin",
+          "bytes": 700000,
+          "sha256": "7cd29a4b9e67a2b7182b2275442e0063b99c7aae58efb8adba016259cabc7d75",
+          "git_sha": "8d86bef263f21ecb99ef2f6bd1b7c3ab89c7d1a5"
+        },
+        {
+          "name": "overlay-part-0030.bin",
+          "bytes": 700000,
+          "sha256": "99df4e71f7f369a2d4e52e68180688f434a1cdd70f8ff8a68084efae72a661c4",
+          "git_sha": "57ac5f817224b5e33dc58773bf182800582e12ed"
+        },
+        {
+          "name": "overlay-part-0031.bin",
+          "bytes": 700000,
+          "sha256": "eb10824ccdefadb4f97d150b890b7d58d76e2065ad8b688cb5a68fa5e7dd728c",
+          "git_sha": "5ac0bf9d0cca863f3105984b804a3c8f8447cd9c"
+        },
+        {
+          "name": "overlay-part-0032.bin",
+          "bytes": 700000,
+          "sha256": "1cceceb883a21f389d74c9aff95b6753fd37b2eb35dee5fd49658d00aab8d0d3",
+          "git_sha": "2c7da34656ad61778fa233b7779bfeb5e18f991d"
+        },
+        {
+          "name": "overlay-part-0033.bin",
+          "bytes": 700000,
+          "sha256": "108073cba53cde3bb05275f314da2761d9b1380b18ea673c8c7b0a112e5ca5ff",
+          "git_sha": "a06d5115684e20dd09685d4c9649ad8f3e57d9f3"
+        },
+        {
+          "name": "overlay-part-0034.bin",
+          "bytes": 189208,
+          "sha256": "cdc7977822ab65f229d0578bbe10028710bd38472583efca33c2245c7dd1b3bd",
+          "git_sha": "1d233825b7b904dc3468941d799498d6eb695d68"
+        }
+      ]
+    },
+    "current_source_identity": "ca04b11e79fc5bfd73224284082206555e21ddb3571b6b0e42f1129a6aa42d16",
+    "production_runtime_digest": "9c04e83eea806dc60d3890204d22b053029c99da94543a5878780a5cdb6886b0",
+    "modified_source_files": [
+      "product/tests/test_content_presence.py"
+    ],
+    "status": "IN_PROGRESS_NOT_QUALIFIED",
+    "base_source_identity": "a93f6ed28f1b52b68606544ba141b2e1f5b68013177e15eac78709f91ac96a64",
+    "target": {
+      "bytes": 35969113,
+      "sha256": "13ece8efa26451511b85eb61e67615b374557a4310157636cb395ca3a0fe4132",
+      "zip_entries": 1249
+    }
+  },
+  "current_v5_presence_contracts": {
+    "passed": 9,
+    "failed": 0,
+    "seconds": 53.86,
+    "source_identity": "ca04b11e79fc5bfd73224284082206555e21ddb3571b6b0e42f1129a6aa42d16",
+    "runtime_digest": "9c04e83eea806dc60d3890204d22b053029c99da94543a5878780a5cdb6886b0",
+    "payload_correspondence": 226,
+    "scope": "Real retainedv4freeexitproducer plus new currentv5absentlistenerblocksallspoken/materialactions; actualnativecancel bybothhost/visitor no move/material/clockrefund. No whole46suitepass orF1qualification."
+  },
+  "first_presence_retry": {
+    "passed": 5,
+    "failed": 2,
+    "reason": "Semanticproducercontract: v5refuseisspokenwithabsentlistener, offeredsetcorrectlyempty; legacyv4freeownreportassertion inappropriate. Rawfailure preserved; stronglegacyassertions nowrunrealretainedv4producer plus explicitv5negatives."
+  },
+  "new_raw_failure_archive": {
+    "format": "samsara-preserved-v5-failed-native-worlds/1",
+    "bytes": 20532609,
+    "sha256": "3c9409e7516c29d4bf398d278585ea5b0780df415d9e41e6f99429db522a7303",
+    "zip_entries": 622,
+    "parts": [
+      {
+        "name": "v5-failures-part-0000.bin",
+        "bytes": 700000,
+        "sha256": "96e6c7fb2dd716fa1c06620f1cbc78161d082edbf3ffe42addf52866d65a85ca",
+        "git_sha": "f36efba047e92f33ad047d9cadd903783bb70d88"
+      },
+      {
+        "name": "v5-failures-part-0001.bin",
+        "bytes": 700000,
+        "sha256": "ef965c4320cd9e88e049a203f54ac4343a928eb32c347c6528a432c1e6be7775",
+        "git_sha": "0d1ee04819dcbe6a7d9bfe8602d9d279fbe23c6c"
+      },
+      {
+        "name": "v5-failures-part-0002.bin",
+        "bytes": 700000,
+        "sha256": "7c15ca77dddf44ad389c5301c7c424d64a0dd4502a1983f4704642a5ac503537",
+        "git_sha": "0a8ef0d0636502522498b699838803d088d94203"
+      },
+      {
+        "name": "v5-failures-part-0003.bin",
+        "bytes": 700000,
+        "sha256": "f58b78bf5833522a61c477a52f107e1385a01230fcdeaae465c40a0582b7347b",
+        "git_sha": "0c3b8bdfd15d78ea3e48d3aa236df46a2a348226"
+      },
+      {
+        "name": "v5-failures-part-0004.bin",
+        "bytes": 700000,
+        "sha256": "cff8479358f42422293b1e7c160169686f41cca414ee0761a31e483470d7f72e",
+        "git_sha": "cacbd8c5573b20143fb08096045084211f66a211"
+      },
+      {
+        "name": "v5-failures-part-0005.bin",
+        "bytes": 700000,
+        "sha256": "1a585a73ec764cb4afc7e05aa32e35fc3418400a80dff7d280e21cce375a4507",
+        "git_sha": "dc9594fcf5fda7c420efcb848cb00c40b856b945"
+      },
+      {
+        "name": "v5-failures-part-0006.bin",
+        "bytes": 700000,
+        "sha256": "d549a96f2e3e4081e4ee2d58f4cf9993a7901c0f456177fa7f8b59c36911faa4",
+        "git_sha": "4e83d5952192f6fd6390d337d23107792e2bbc57"
+      },
+      {
+        "name": "v5-failures-part-0007.bin",
+        "bytes": 700000,
+        "sha256": "d7a463fd1fba8830c1fa8bd8b2e627dff27018a536d660de761839c10325ff0c",
+        "git_sha": "93bf888e2fc1276707e013eda0ea7b1fa740ad81"
+      },
+      {
+        "name": "v5-failures-part-0008.bin",
+        "bytes": 700000,
+        "sha256": "65f7f3588316750b27e9d4c15428db360bfbdec8b479eee1d22bce3d70b3bcd5",
+        "git_sha": "66d742c9b57e5a360e2872e82c14f54eab1f8a1a"
+      },
+      {
+        "name": "v5-failures-part-0009.bin",
+        "bytes": 700000,
+        "sha256": "297adec6c759d740ded074cda4fc62d7e76f7e7f9b111bba7556176b473d7d75",
+        "git_sha": "bc7200a55260e7aefbc698be890ec46e706378fa"
+      },
+      {
+        "name": "v5-failures-part-0010.bin",
+        "bytes": 700000,
+        "sha256": "6df93225756673b5a56c28a86b0630448df6e73202b537e734e240d800b0585e",
+        "git_sha": "8b52b8a745924a50b610c08d883a2adde89ce640"
+      },
+      {
+        "name": "v5-failures-part-0011.bin",
+        "bytes": 700000,
+        "sha256": "d77572a593b3cb455ec21a056ed2c9ff3fb21549819ac1269606580e2f337b1d",
+        "git_sha": "b02bdd9838d4382c57a7f632b9b58abbebdd7520"
+      },
+      {
+        "name": "v5-failures-part-0012.bin",
+        "bytes": 700000,
+        "sha256": "9c87d7bee39cccad46054185704962dadd845a2769d7179d4bb02e7e98f27345",
+        "git_sha": "3be644ed1b3428e6c591128c7c3379cca1ed966c"
+      },
+      {
+        "name": "v5-failures-part-0013.bin",
+        "bytes": 700000,
+        "sha256": "b860cd1c28479c33db8cbb3f71c20bee57a9f6a806835a8b170730934a4deeda",
+        "git_sha": "9cc02e582503fc9b574fac16094004e8a93a4241"
+      },
+      {
+        "name": "v5-failures-part-0014.bin",
+        "bytes": 700000,
+        "sha256": "c988e4a02e2d87f836e40392a6e123c32b01c34c7e57c2951322f226d9a55f87",
+        "git_sha": "822d57b915c8c3f6fa1cae27493db2eb7cbd6d2e"
+      },
+      {
+        "name": "v5-failures-part-0015.bin",
+        "bytes": 700000,
+        "sha256": "82b0c2a4c6e2f0288a6034340809753791d6935d5c145cd1768c5295beecba61",
+        "git_sha": "644a0bc485b02c1fb84d47747dcc7fd898225463"
+      },
+      {
+        "name": "v5-failures-part-0016.bin",
+        "bytes": 700000,
+        "sha256": "561020f6f736059934ebfc8e15a15e1b7f403393cb33897e2a8e26c29611e51c",
+        "git_sha": "9b168dbf0df92184c0a84de14105d7920dc6dd2b"
+      },
+      {
+        "name": "v5-failures-part-0017.bin",
+        "bytes": 700000,
+        "sha256": "0b7578b5ef36f08875811ad7f7afb4bc0f63a5ce0859528d2707609adb9def84",
+        "git_sha": "2a1491511774c4b298d8347fc3fadccd7d1810e7"
+      },
+      {
+        "name": "v5-failures-part-0018.bin",
+        "bytes": 700000,
+        "sha256": "c361e8e31788f93ac702265247651a174e8042897af482e8d2016a921cabadeb",
+        "git_sha": "1230add0e72e81fd09b6c4021dea46a21be48edf"
+      },
+      {
+        "name": "v5-failures-part-0019.bin",
+        "bytes": 700000,
+        "sha256": "9fa7113534ff927febedc62a707fa6b699cd9e4f5921ba949b3874714b5e9a74",
+        "git_sha": "c55159d6182107c6bd8df178e77bafb0ab570bc6"
+      },
+      {
+        "name": "v5-failures-part-0020.bin",
+        "bytes": 700000,
+        "sha256": "ee29ad870f9e0adda4207d08dc4ddf7a059b30be1151724d3b27894f99c7c400",
+        "git_sha": "426302ab543e15282e1fd72afb6fe87f779af84e"
+      },
+      {
+        "name": "v5-failures-part-0021.bin",
+        "bytes": 700000,
+        "sha256": "c145d4512dc4286840059d4ecefb273a322b06290c4837834fc97a67e344ef02",
+        "git_sha": "4bd9878b13ab35278b52e8b25a8d56e445723026"
+      },
+      {
+        "name": "v5-failures-part-0022.bin",
+        "bytes": 700000,
+        "sha256": "aecd61d830c09364b0273c70454494678b019f1c577f5007c20795fe5ea73bfb",
+        "git_sha": "d81d0d115f378c45ab608f30fffbd6808a94010b"
+      },
+      {
+        "name": "v5-failures-part-0023.bin",
+        "bytes": 700000,
+        "sha256": "64b3e42ebef9117255c28ae0457ec501931e639d46294e09b204cc30c42b6a4e",
+        "git_sha": "c4eb0a688f61618c895e0769489864bea00c0886"
+      },
+      {
+        "name": "v5-failures-part-0024.bin",
+        "bytes": 700000,
+        "sha256": "50d66e7f0d489430d313d73ebeee528b872549503349cff8382b0d99cbf4dc4f",
+        "git_sha": "60e0fc695e3dbf3a645a37bcf4254e4a1277ea54"
+      },
+      {
+        "name": "v5-failures-part-0025.bin",
+        "bytes": 700000,
+        "sha256": "6d32c8051b058fbff50e092f69047d5d0b23be97aabbdb28f2748db7070a65b7",
+        "git_sha": "f790a8238a1c886b8316369e6433b0ff36b8aac5"
+      },
+      {
+        "name": "v5-failures-part-0026.bin",
+        "bytes": 700000,
+        "sha256": "d7e5666dc1563ffd8d2584751731fed675942ddc5991f1ff4ae792dcf30db568",
+        "git_sha": "d7fe94e524603cb64c692fec81bde268b93c2202"
+      },
+      {
+        "name": "v5-failures-part-0027.bin",
+        "bytes": 700000,
+        "sha256": "ba50ae2de673fc7d72bfcc16b349a86ded6c895f797df7d0c204ed93cb3cc1cf",
+        "git_sha": "3e8daccf69481eab194f751145dca2e99c04ccbe"
+      },
+      {
+        "name": "v5-failures-part-0028.bin",
+        "bytes": 700000,
+        "sha256": "0570bd5f1612025d7745332fa97e6620c71785ea163f1b7647ef7186bc34e41d",
+        "git_sha": "74693509ea423d04864ab0d14a80dabe277d2a03"
+      },
+      {
+        "name": "v5-failures-part-0029.bin",
+        "bytes": 232609,
+        "sha256": "39a532052f353696dfe2be2154041d30612ba004bd2300501eda720741fb14e2",
+        "git_sha": "dec989fed720adb52d0a72bef6898a033c36769c"
+      }
+    ],
+    "status": "RAW_GENUINE46case44PASS2FAIL_and7case5PASS2FAIL_history_not_relabelledPASS"
+  },
+  "current_social_driver": "CLOSED_PASS after freeze:449commoncommands/35physicaljourneys/59exactrecipienttracesafterreopen; 3closedworld6,327,376BZIPverified. Controlleddriveronly,noSIGKILL/stdio/independent/human/F1claim.",
+  "combat_semantic_gaps": [
+    "Continuinggear: invite->explicitgearreleasebeforeconsent stillallowsphysicalaction; no productionrepair/passingnewtest yet.",
+    "Evade/meet produce materiallysame cleanup/account-onlydifference with no actuallaterconsumer.",
+    "Practice.admit skipsadmittedcontentbattle overlap; isolatedscene-guard sourceauthoring outsidecandidate, not qualified."
+  ],
+  "newer_isolated_work": "WIPv6data andscene-guard source outsideactive/frozen currentcandidate; not installed or qualified.",
+  "closed_v5_social_craft": {
+    "format": "samsara-closed-v5-social-craft-evidence/1",
+    "bytes": 6202313,
+    "sha256": "5abdcc0a5104cd3dc2e548d0f2271d7702ba51265d7385688fd805f461acf7ab",
+    "parts": [
+      {
+        "name": "closed-play-part-0000.bin",
+        "bytes": 700000,
+        "sha256": "94fc24cb38d7af6dda15d36a5ff9ac3e4a54432effdb11aab8730af69517a56c",
+        "git_sha": "689a1722b0e8ff53a1eee4c65b866289c99857b3"
+      },
+      {
+        "name": "closed-play-part-0001.bin",
+        "bytes": 700000,
+        "sha256": "4311694930969891e6d84247b61b82c6441478342d27d352c9b43157b55dbb09",
+        "git_sha": "8d67c3fef74939b96f86e8b3e63c4b01941f1a82"
+      },
+      {
+        "name": "closed-play-part-0002.bin",
+        "bytes": 700000,
+        "sha256": "63757a20bb9b7a5ade179adbd59d6adbd64aaea94fa2d9d9797b0aabaea7b23d",
+        "git_sha": "c4527ff77b8b3f4bd47ca564cd53b7a955a03275"
+      },
+      {
+        "name": "closed-play-part-0003.bin",
+        "bytes": 700000,
+        "sha256": "964c9555b5d30e309772a73e5be420d2107f5a8f2076d3c5c411085dca6d0917",
+        "git_sha": "97dccf3cdb328c50d566873ff47b2e6b0519976c"
+      },
+      {
+        "name": "closed-play-part-0004.bin",
+        "bytes": 700000,
+        "sha256": "5ef838ed25c592078bf0e336b32bb7c116fdae105052f5e98e3fbc66d2d6ccfd",
+        "git_sha": "9a35fe17c3c1faebda0b8c01843092d8cc222c8a"
+      },
+      {
+        "name": "closed-play-part-0005.bin",
+        "bytes": 700000,
+        "sha256": "b5c55d302288555d3143838ccea8178a8249860440756ca39d13568e0ffa86d1",
+        "git_sha": "ab71d3d3e5c2c2b81fc87d7e10f246ef6c40b630"
+      },
+      {
+        "name": "closed-play-part-0006.bin",
+        "bytes": 700000,
+        "sha256": "691666e591ea81875176ac33ab877367914395648b9428fde45a8af895c71a63",
+        "git_sha": "d2f81c3a868dbbe5f392cf576335ac63e3817651"
+      },
+      {
+        "name": "closed-play-part-0007.bin",
+        "bytes": 700000,
+        "sha256": "02fb33d634f94e80c057bc4dd422480f059322767a7efb0244abb7cce451f37d",
+        "git_sha": "45c94e1f9b77de73a66d9bbbd306fbb9c9903252"
+      },
+      {
+        "name": "closed-play-part-0008.bin",
+        "bytes": 602313,
+        "sha256": "8fd76c626db9aafff7bfa8c555c91762b0e3e1d7d0c59152c2727314758d9220",
+        "git_sha": "d001a5dd22db6b0f171a91f8a1ad20571072092b"
+      }
+    ],
+    "inner_world_archive": {
+      "bytes": 6327376,
+      "sha256": "8ca0ae59d94836f04bedc94495c938c18e108659b4df66aba7234cc43a7514d8"
+    },
+    "actual_closed_observations": {
+      "common_commands": 449,
+      "physical_atlas_journeys": 35,
+      "exact_recipient_trace_reads_after_reopen": 59
+    },
+    "limits": "Controlled installed product driver only. No actual SIGKILL/stdio/independent receiving/human or fullF1 qualification. Frozen source/runtime9c04 unchanged; combat/overlap gaps remain."
+  },
+  "next_isolated_v6": {
+    "status": "SOURCE_PROPOSAL_AND_RAW_NATIVE_CONTACT_ONLY_UNINTEGRATED",
+    "bytes": 146574,
+    "sha256": "0d4e9c43437f3da508489230d440bdd54841767709e2acd79a133083ca585dde",
+    "zip_entries": 18,
+    "data_sha256": "fd14fe17bf59e118b4a740bde2c9e715179d86dfcc57bafdb58ef531cf17f674",
+    "records": 982,
+    "definitions": 23,
+    "current_product_admission": "NOT_SUPPORTED; no productionactivation/integration/recipient or fullF1claim",
+    "actual_raw_native_observations_from_root": "167positive/77counter/33atomicnegative, directregistry/FK/nativebackup; reports/scripts included. Original rawworldZIP not included in this optional proposal bundle; no remote retrieval of omitted rawworldZIP claimed."
+  }
+}
