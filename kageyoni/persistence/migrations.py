@@ -146,3 +146,26 @@ def install_action_dispatch(engine):
     """Opt-in issued requests; preserve legacy dispatch rows unchanged."""
     install_shinobi(engine)
     _install_component(engine,schema_path('migration_025.sql'),25,24,'action_dispatch_interface')
+
+
+def install_activities(engine):
+    """Opt-in application continuation on the separately versioned engine."""
+    install_action_dispatch(engine)
+    _install_component(engine,schema_path('migration_026.sql'),26,25,'activity_interface')
+
+
+def install_activity_queue(engine):
+    """Explicit maintenance only; opening an older world does not install it."""
+    install_activities(engine)
+    _install_component(engine,schema_path('migration_027.sql'),27,26,'activity_queue_interface')
+
+
+def install_property_changes(engine):
+    """Explicit maintenance; participants cannot silently upgrade a save."""
+    install_activity_queue(engine)
+    _install_component(engine,schema_path('migration_028.sql'),28,27,'property_change_interface')
+
+
+def install_causal_delivery(engine):
+    install_property_changes(engine)
+    _install_component(engine,schema_path('migration_029.sql'),29,28,'causal_delivery_interface')

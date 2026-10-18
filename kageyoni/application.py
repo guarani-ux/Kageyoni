@@ -121,3 +121,8 @@ class Application:
         if label:
             return PersistentParticipant.open_or_create(self.engine, character_id, label, branch=branch, **kwargs)
         return PersistentParticipant(self.engine, character_id, branch=branch)
+
+    @property
+    def activities(self):
+        from .workspaces.activities import Activities
+        return Activities(self.engine)

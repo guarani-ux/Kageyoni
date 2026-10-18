@@ -1578,14 +1578,14 @@ class Engine:
                             target = aliases.get(key, key)
                             if target in ("subjects_json","scope_json","conditions_json","subscriptions_json","metadata_json") and not isinstance(value, str):
                                 value = encoded(value)
-                            if target in p:
+                            if target in p or target in aliases.values():
                                 p[target] = value
                         # `_current_process` exposes decoded JSON fields for
                         # callers; restore storage columns before the write.
                         for raw, decoded in (("subjects_json", "subjects"), ("scope_json", "scope"), ("conditions_json", "conditions"), ("subscriptions_json", "subscriptions"), ("metadata_json", "metadata")):
                             if raw not in p:
                                 p[raw] = encoded(p.get(decoded, [] if decoded in ("subjects", "subscriptions") else {}))
-                        self._validate_process(p, branch, stored=False); self._write_process(p, False)
+                        self._validate_process(self._process_json(p), branch, stored=False); self._write_process(p, False)
                 elif op == "cancel":
                     require(old is not None, "process missing")
                     p = dict(old); p["state"] = "cancelled"; p["updated_event"] = event_id
@@ -2188,13 +2188,12 @@ class Engine:
         })
 
     def define_property(self, property_id: str, version: int, label: str, meaning: str, value_type: str, applicability: Any, constraints: Any, lifecycle: str = "proposed", unit: str | None = None, origin: str = "design") -> dict:
-        require(isinstance(property_id, str) and property_id and isinstance(version, int) and version > 0, "invalid property identity")
-        require(value_type in _PROPERTY_TYPES, "invalid property type")
-        require(lifecycle in _LIFECYCLE, "invalid property lifecycle")
-        require(isinstance(applicability, (list,dict)), "invalid property applicability")
-        require(isinstance(constraints, dict), "invalid property constraints")
-        self.db.execute("BEGIN IMMEDIATE")
-        try:
+        with UnitOfWork(self.db):
+            require(isinstance(property_id, str) and property_id and isinstance(version, int) and version > 0, "invalid property identity")
+            require(value_type in _PROPERTY_TYPES, "invalid property type")
+            require(lifecycle in _LIFECYCLE, "invalid property lifecycle")
+            require(isinstance(applicability, (list,dict)), "invalid property applicability")
+            require(isinstance(constraints, dict), "invalid property constraints")
             self.db.execute(
                 "INSERT INTO property_definitions VALUES(?,?,?,?,?,?,?,?,?)",
                 (property_id, version, label, meaning, value_type, unit, encoded(applicability), encoded(constraints), origin),
@@ -2207,35 +2206,28 @@ class Engine:
                 "INSERT INTO property_operations(id,operation,property_id,definition_version,before_json,after_json,actor,reason) VALUES(?,?,?,?,?,?,?,?)",
                 (str(uuid.uuid4()), "define", property_id, version, None, encoded({"state": lifecycle}), "system", "property registry change"),
             )
-            self.db.commit()
-        except Exception:
-            self.db.rollback(); raise
-        self.register_component("property", property_id, str(version), f"property:{property_id}:{version}", status="verified" if lifecycle == "active" else "declared", readers=["engine"], writers=["event"], compatibility={"runtime_schema":"4"}, declared_by="property-registry")
-        return {"property_id": property_id, "definition_version": version, "state": lifecycle, "unit": unit}
+            self.register_component("property", property_id, str(version), f"property:{property_id}:{version}", status="verified" if lifecycle == "active" else "declared", readers=["engine"], writers=["event"], compatibility={"runtime_schema":"4"}, declared_by="property-registry")
+            return {"property_id": property_id, "definition_version": version, "state": lifecycle, "unit": unit}
 
     def revise_property(self, property_id: str, old_version: int, new_version: int, **definition: Any) -> dict:
-        require(new_version > old_version, "new property version must increase")
-        old = self._definition(property_id, old_version)
-        result = self.define_property(property_id, new_version, definition["label"], definition["meaning"], definition["value_type"], definition["applicability"], definition.get("constraints", {}), definition.get("lifecycle", "proposed"), definition.get("unit"), definition.get("origin", "design"))
-        self.register_component("property", property_id, str(new_version), f"property:{property_id}:{new_version}", status="verified", readers=["engine"], writers=["event"], compatibility={"runtime_schema":"4"}, declared_by="property-registry")
-        self.db.execute("BEGIN IMMEDIATE")
-        try:
+        with UnitOfWork(self.db):
+            require(new_version > old_version, "new property version must increase")
+            old = self._definition(property_id, old_version)
+            result = self.define_property(property_id, new_version, definition["label"], definition["meaning"], definition["value_type"], definition["applicability"], definition.get("constraints", {}), definition.get("lifecycle", "proposed"), definition.get("unit"), definition.get("origin", "design"))
+            self.register_component("property", property_id, str(new_version), f"property:{property_id}:{new_version}", status="verified", readers=["engine"], writers=["event"], compatibility={"runtime_schema":"4"}, declared_by="property-registry")
             self.db.execute(
                 "INSERT INTO registry_dependencies(kind,stable_id,version,depends_kind,depends_id,depends_version,relation) VALUES('property',?,?,?,?,?,'replaces')",
                 (property_id, str(new_version), "property", property_id, str(old_version)),
             )
-            self.db.commit()
-        except Exception:
-            self.db.rollback(); raise
-        return result
+            self._validate_registry_cycles()
+            return result
 
     def retire_property(self, property_id: str, version: int, reason: str, actor: str = "system", replacement: tuple[str,int] | None = None) -> dict:
-        self._definition(property_id, version)
-        deps = self.property_dependencies(property_id, version)
-        if deps and replacement is None:
-            raise Rejected("property has downstream dependencies; provide replacement mapping")
-        self.db.execute("BEGIN IMMEDIATE")
-        try:
+        with UnitOfWork(self.db):
+            self._definition(property_id, version)
+            deps = self.property_dependencies(property_id, version)
+            if deps and replacement is None:
+                raise Rejected("property has downstream dependencies; provide replacement mapping")
             self.db.execute(
                 "INSERT INTO property_lifecycle(property_id,definition_version,state,reason) VALUES(?,?,?,?)",
                 (property_id, version, "retired", reason),
@@ -2244,10 +2236,7 @@ class Engine:
                 "INSERT INTO property_operations(id,operation,property_id,definition_version,before_json,after_json,actor,reason) VALUES(?,?,?,?,?,?,?,?)",
                 (str(uuid.uuid4()), "retire", property_id, version, None, encoded({"replacement": replacement}), actor, reason),
             )
-            self.db.commit()
-        except Exception:
-            self.db.rollback(); raise
-        return {"property_id":property_id,"definition_version":version,"state":"retired","dependencies":deps}
+            return {"property_id":property_id,"definition_version":version,"state":"retired","dependencies":deps}
 
     def set_property(self, branch: str, entity_id: str, property_id: str, definition_version: int, state: str, value: Any = None, unit: str | None = None, context: dict | None = None, epistemic_status: str = "proposed", visibility: str = "gm", source_event: str | None = None) -> dict:
         """Compatibility/admin assignment.
@@ -2256,10 +2245,9 @@ class Engine:
         part of an event. This method records an administrative operation and is
         retained for old callers and registry setup.
         """
-        assignment = {"entity_id":entity_id,"property_id":property_id,"definition_version":definition_version,"state":state,"value":value,"unit":unit,"context":context or {},"epistemic_status":epistemic_status,"visibility":visibility}
-        self._validate_property_assignment(branch, assignment)
-        self.db.execute("BEGIN IMMEDIATE")
-        try:
+        with UnitOfWork(self.db):
+            assignment = {"entity_id":entity_id,"property_id":property_id,"definition_version":definition_version,"state":state,"value":value,"unit":unit,"context":context or {},"epistemic_status":epistemic_status,"visibility":visibility}
+            self._validate_property_assignment(branch, assignment)
             old = self.property_value(branch, entity_id, property_id, definition_version)
             new = self._property_json(branch, assignment, source_event)
             self.db.execute(
@@ -2276,21 +2264,17 @@ class Engine:
                 "INSERT INTO property_operations(id,operation,property_id,definition_version,before_json,after_json,actor,reason) VALUES(?,?,?,?,?,?,?,?)",
                 (str(uuid.uuid4()), "assign", property_id, definition_version, encoded(old) if old else None, encoded(new), "compatibility", "direct assignment; use event-mediated properties for play"),
             )
-            self.db.commit()
-        except Exception:
-            self.db.rollback(); raise
-        return self.property_value(branch, entity_id, property_id, definition_version)
+            return self.property_value(branch, entity_id, property_id, definition_version)
 
     def add_rule(self, rule_id: str, version: int, name: str, inputs: Any, outputs: Any, mechanical: bool, definition: dict, dependencies: Iterable[tuple] = ()) -> dict:
-        require(isinstance(definition, dict), "rule definition must be an object")
-        deps = list(dependencies)
-        if definition.get("kind") == "personality":
-            from .personality import validate_policy, validate_policy_references
-            require(mechanical is True, "personality weight evaluation is mechanical; semantic authorship remains judgment")
-            validate_policy(definition, inputs, outputs, deps)
-            validate_policy_references(self, definition)
-        self.db.execute("BEGIN IMMEDIATE")
-        try:
+        with UnitOfWork(self.db):
+            require(isinstance(definition, dict), "rule definition must be an object")
+            deps = list(dependencies)
+            if definition.get("kind") == "personality":
+                from .personality import validate_policy, validate_policy_references
+                require(mechanical is True, "personality weight evaluation is mechanical; semantic authorship remains judgment")
+                validate_policy(definition, inputs, outputs, deps)
+                validate_policy_references(self, definition)
             self.db.execute("INSERT INTO rule_definitions VALUES(?,?,?,?,?,?,?)", (rule_id, version, name, encoded(inputs), encoded(outputs), int(mechanical), encoded(definition)))
             for prop, pver, usage in deps:
                 self._definition(prop, int(pver))
@@ -2303,13 +2287,10 @@ class Engine:
                 self.db.execute('INSERT INTO registry_entries VALUES(?,?,?,?,?,?,?,?,?,?)', ('rule',rule_id,str(version),f'rule:{rule_id}:{version}','verified',encoded(['Engine.evaluate_rule']),encoded(['Engine.add_rule']),encoded({'runtime_schema':'4','personality_interface':'1'}),None,'engine'))
                 for domain in policy_domains(definition):
                     self.db.execute("INSERT INTO registry_dependencies VALUES(?,?,?,?,?,?,?)", ("rule",rule_id,str(version),"domain",domain,"1","verified condition read"))
-            self.db.commit()
-        except Exception:
-            self.db.rollback(); raise
-        compatibility={"runtime_schema":"4"}
-        if definition.get('kind')=='personality': compatibility['personality_interface']='1'
-        self.register_component("rule", rule_id, str(version), f"rule:{rule_id}:{version}", status="verified", readers=["engine"], writers=["event"], compatibility=compatibility, declared_by="engine")
-        return {"rule_id": rule_id, "rule_version": version}
+            compatibility={"runtime_schema":"4"}
+            if definition.get('kind')=='personality': compatibility['personality_interface']='1'
+            self.register_component("rule", rule_id, str(version), f"rule:{rule_id}:{version}", status="verified", readers=["engine"], writers=["event"], compatibility=compatibility, declared_by="engine")
+            return {"rule_id": rule_id, "rule_version": version}
 
     def evaluate_rule(self, rule_id: str, version: int, branch: str, subject_id: str | None = None, inputs: dict | None = None) -> dict:
         row = self.db.execute("SELECT * FROM rule_definitions WHERE rule_id=? AND rule_version=?", (rule_id, version)).fetchone()
@@ -2387,23 +2368,23 @@ class Engine:
         return [dict(r) for r in self.db.execute("SELECT rule_id,rule_version,usage FROM rule_dependencies WHERE property_id=?", (property_id,))]
 
     def register_component(self, kind: str, stable_id: str, version: str, locator: str, status: str = "declared", readers: list[str] | None = None, writers: list[str] | None = None, compatibility: dict | None = None, source_hash: str | None = None, declared_by: str = "engine") -> dict:
-        require(status in ("declared","verified","uncertain","retired"), "invalid registry status")
-        self.db.execute(
-            """INSERT INTO registry_entries VALUES(?,?,?,?,?,?,?,?,?,?)
-               ON CONFLICT(kind,stable_id,version) DO UPDATE SET locator=excluded.locator,status=excluded.status,
-               readers_json=excluded.readers_json,writers_json=excluded.writers_json,compatibility_json=excluded.compatibility_json,
-               source_hash=excluded.source_hash,declared_by=excluded.declared_by""",
-            (kind,stable_id,version,locator,status,encoded(readers or []),encoded(writers or []),encoded(compatibility or {}),source_hash,declared_by),
-        )
-        self.db.commit()
-        return {"kind":kind,"stable_id":stable_id,"version":version,"status":status,"locator":locator}
+        with UnitOfWork(self.db):
+            require(status in ("declared","verified","uncertain","retired"), "invalid registry status")
+            self.db.execute(
+                """INSERT INTO registry_entries VALUES(?,?,?,?,?,?,?,?,?,?)
+                   ON CONFLICT(kind,stable_id,version) DO UPDATE SET locator=excluded.locator,status=excluded.status,
+                   readers_json=excluded.readers_json,writers_json=excluded.writers_json,compatibility_json=excluded.compatibility_json,
+                   source_hash=excluded.source_hash,declared_by=excluded.declared_by""",
+                (kind,stable_id,version,locator,status,encoded(readers or []),encoded(writers or []),encoded(compatibility or {}),source_hash,declared_by),
+            )
+            return {"kind":kind,"stable_id":stable_id,"version":version,"status":status,"locator":locator}
 
     def add_registry_dependency(self, kind: str, stable_id: str, version: str, depends_kind: str, depends_id: str, depends_version: str | None, relation: str = "uses") -> dict:
-        require(self.db.execute("SELECT 1 FROM registry_entries WHERE kind=? AND stable_id=? AND version=?", (kind,stable_id,version)).fetchone() is not None, "registry entry missing")
-        self.db.execute("INSERT INTO registry_dependencies VALUES(?,?,?,?,?,?,?)", (kind,stable_id,version,depends_kind,depends_id,depends_version,relation))
-        self._validate_registry_cycles()
-        self.db.commit()
-        return {"ok":True}
+        with UnitOfWork(self.db):
+            require(self.db.execute("SELECT 1 FROM registry_entries WHERE kind=? AND stable_id=? AND version=?", (kind,stable_id,version)).fetchone() is not None, "registry entry missing")
+            self.db.execute("INSERT INTO registry_dependencies VALUES(?,?,?,?,?,?,?)", (kind,stable_id,version,depends_kind,depends_id,depends_version,relation))
+            self._validate_registry_cycles()
+            return {"ok":True}
 
     def _validate_registry_cycles(self) -> None:
         graph: dict[tuple[str,str,str],set[tuple[str,str,str]]] = {}
@@ -2765,6 +2746,18 @@ class Engine:
         if self.db.execute("SELECT 1 FROM engine_versions WHERE component='operations_interface'").fetchone():
             from .operations import verify_operations
             verify_operations(self)
+        if self.db.execute("SELECT 1 FROM engine_versions WHERE component='activity_interface'").fetchone():
+            from .workspaces.activities import verify_activities
+            verify_activities(self)
+        if self.db.execute("SELECT 1 FROM engine_versions WHERE component='activity_queue_interface'").fetchone():
+            from .workspaces.job_queue import verify_queue
+            verify_queue(self)
+        if self.db.execute("SELECT 1 FROM engine_versions WHERE component='property_change_interface'").fetchone():
+            from .workspaces.property_changes import verify_property_changes
+            verify_property_changes(self)
+        if self.db.execute("SELECT 1 FROM engine_versions WHERE component='causal_delivery_interface'").fetchone():
+            from .workspaces.causal_delivery import verify_causal_delivery
+            verify_causal_delivery(self)
         return {
             "ok":True,"schema_version":2,"runtime_schema":"4",
             "branches":self.db.execute("SELECT count(*) FROM branches").fetchone()[0],
