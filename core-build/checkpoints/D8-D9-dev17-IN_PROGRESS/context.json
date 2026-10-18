@@ -1,0 +1,57 @@
+{
+  "status": "IN_PROGRESS",
+  "stage": "D8-D9 dev17 physical scene admission and unique substantive chooser",
+  "product_version": "0.5.3.dev17",
+  "base_source_identity": "ca04b11e79fc5bfd73224284082206555e21ddb3571b6b0e42f1129a6aa42d16",
+  "frozen_product_snapshot": "c0f0347933eaabdba2927e7e5723dbd02aab390a2bcf9cc56cf05a1338ab6c97",
+  "engine_version": "11.1.0.dev10",
+  "engine_wheel_sha256": "d2c033c3df989eff9da8ac4f006150b6276e8a07bbab30992d1b33341d871195",
+  "engine_code_changed": false,
+  "current_product_wheel_qualified": false,
+  "source_checks": {
+    "strict_recovery_parser": {
+      "passed": 8
+    },
+    "native_first": "1 PASS / 1 BUDGET setup error; actual reserve unchanged",
+    "D8_retry": "6 PASS / 1 FAIL in69.20s: real multi-actor prepare defect, atomic rollback",
+    "D9_positive": "1 PASS in11.99s after unique substantive chooser repair",
+    "independent_review": "ACCEPT_SOURCE_ONLY_NOT_RUNTIME",
+    "current_full_native_retry": "ACTIVE_ROOT_SESSION44839_AT_CONTEXT"
+  },
+  "changes": "Physical gear/readset reservations and content-battle overlap guard; strict recovery metadata; authenticated physical definitions select only unique substantive native actor while preserving own free terminal withdrawal and global native cancel. Ambiguous substantive actors remain refused.",
+  "qualification": {
+    "private_native_study": "QUALIFIED_v15_SELECTED_LOOP",
+    "F1": false,
+    "F2": false,
+    "F3": false,
+    "F4": false,
+    "F5": false,
+    "full_release": false,
+    "human_play": "NOT_PERFORMED"
+  },
+  "next_action": "Run current D8/D9 native suite, build and bind exact new wheel, then installed recipient/later-use/recovery checks and address remaining F1-F5 obligations. Strict old ContentSets compatibility refusal retained.",
+  "library": {
+    "latest_verified_version": 15,
+    "latest_verified_sha256": "73738ee2b30962cf461e7c04c499524286b0a81715dbca7f12820618545690b4",
+    "new_primary_bytes": 521858092,
+    "new_primary_sha256": "f1b0fedca9f48b24857fa34ecc623d01832f8e1a8e3b734f61045e5b9bb9626b",
+    "status": "FROZEN_LOCAL_NOT_SAVED",
+    "limitations": "Workspace guard aborted before helper at zero free space. RAM helper failed Errno28 at /tmp/openai-library-upload-* even TMPDIR override. No new finalization observed; generic prior628MB preparation failure cause unknown, no size cap asserted."
+  },
+  "prior_recovery": {
+    "SAMSARA": "3a532f7a77be132226c438d41368615028f60afd",
+    "Kageyoni": "5bd64f4854b5cd68868a2acf4066a0381ea65127",
+    "all_prior_paths": "PRESERVE",
+    "raw_diagnostic_anchor": "f5daf7f3029fe0cf4cb74205874f6c3be7dd8797",
+    "v15_qualified_carrier": "core-build/verified/PS1-6c32e7af10eb/"
+  },
+  "permissions": "Private continuation checkpoint only; no force/PR/merge/publication/deployment/live campaign/credential use.",
+  "retained_scope": "Every adopted original13loops/22requirements/13slices/14increments and F1-F5 preserved. No fabricated canonical history or human results.",
+  "current_runtime": "30d5b5a6c7d26f1a0bef9de9ceadbdbc23a6940408f1a9ce2fa517dce5fb4387",
+  "current_product_wheel": {
+    "sha256": "b00df88590942aab98bc54de776885322636c8d78773a5a75cf82b092aad3384",
+    "bytes": 200596,
+    "source_wheel_matches": 35,
+    "installed": false
+  }
+}
