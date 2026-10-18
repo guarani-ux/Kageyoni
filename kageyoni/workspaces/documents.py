@@ -68,21 +68,33 @@ class Documents:
         require(source['revision']==citation['revision'] and source['digest']==citation['digest'],'source passage version unavailable or stale')
         start,end=citation['start'],citation['end'];require(type(start) is int and type(end) is int and 0<=start<end<=len(source['text']),'invalid source passage span')
         return {'text':source['text'][start:end],'citation':deepcopy(citation),'status':source['status'],'identity':source['identity'],'locator':source['locator'],'captured_at':source['captured_at']}
-    def inquire(self,workspace_id,request_id,question,required_fields,claims,counters=None,viewer=None):
+    def _audience_passage(self,workspace_id,citation,viewer,audience):
+        passage=self._passage(workspace_id,citation,viewer)
+        row=self.db.execute('SELECT a.viewer FROM document_sources s JOIN artifacts a ON a.artifact_id=s.artifact_id WHERE s.workspace_id=? AND s.source_id=? AND s.revision=?',
+            (workspace_id,citation['source_id'],citation['revision'])).fetchone()
+        require(row is not None and row['viewer'] in (None,audience),'source audience unavailable')
+        return passage
+    def inquire(self,workspace_id,request_id,question,required_fields,claims,counters=None,viewer=None,recipient=None):
         text(request_id,'request id');text(question,'question');counters=[] if counters is None else counters
         require(isinstance(required_fields,list) and 1<=len(required_fields)<=64 and all(isinstance(f,str) and f for f in required_fields) and len(set(required_fields))==len(required_fields),'distinct required fields needed')
         require(isinstance(claims,list) and isinstance(counters,list) and len(claims)+len(counters)<=256,'bounded claim mappings required')
-        payload=dict(workspace_id=workspace_id,question=question,required_fields=required_fields,claims=claims,counters=counters,viewer=viewer);finite(payload)
+        audience=Artifacts._audience(viewer,recipient)
+        payload=dict(workspace_id=workspace_id,question=question,required_fields=required_fields,claims=claims,counters=counters,viewer=viewer)
+        if recipient is not None:payload['recipient']=recipient
+        finite(payload)
         with UnitOfWork(self.db):
             Registry(self.engine).read(workspace_id,viewer=viewer)
             old=self.db.execute('SELECT payload_hash,result_json FROM document_inquiries WHERE request_id=?',(request_id,)).fetchone()
             if old:require(old['payload_hash']==digest(payload),'inquiry request conflict');return json.loads(old['result_json'])
-            attempts=sum(json.loads(r[0])['question']==question for r in self.db.execute('SELECT result_json FROM document_inquiries WHERE workspace_id=?',(workspace_id,)))
+            # Historical unmarked results retain the default lane. Their
+            # audience cannot be retrospectively inferred from source text.
+            prior=[json.loads(r[0]) for r in self.db.execute('SELECT result_json FROM document_inquiries WHERE workspace_id=?',(workspace_id,))]
+            attempts=sum(r['question']==question and r.get('audience')==audience for r in prior)
             fields={field:{'supports':[],'counters':[],'unavailable':[]} for field in required_fields}
             for kind,items in (('supports',claims),('counters',counters)):
                 for item in items:
                     require(isinstance(item,dict) and set(item)=={'field','evidence'} and item['field'] in fields,'claim must map a required field to evidence')
-                    passage=self._passage(workspace_id,item['evidence'],viewer)
+                    passage=self._audience_passage(workspace_id,item['evidence'],viewer,audience)
                     fields[item['field']][kind if passage['status']=='available' else 'unavailable'].append(passage)
             unknowns=[name for name,data in fields.items() if not data['supports']]
             disputed=[name for name,data in fields.items() if data['supports'] and data['counters']]
@@ -90,6 +102,7 @@ class Documents:
             result=dict(inquiry_id='inquiry:'+uuid4().hex,workspace_id=workspace_id,question=question,phase=phase,fields=fields,unknowns=unknowns,disputed=disputed,coverage=(len(required_fields)-len(unknowns))/len(required_fields),attempt=attempts+1,
                 next={'action':'stop_and_review_budget' if attempts>=3 else 'capture_or_map_passage' if unknowns or disputed else 'draft','fields':unknowns+disputed},
                 limit='Exact source statements and mapped passages; field meanings, business identity and real-world truth still require judgment.')
+            if audience is not None:result['audience']=audience
             self.db.execute('INSERT INTO document_inquiries VALUES(?,?,?,?,?)',(result['inquiry_id'],workspace_id,request_id,digest(payload),encoded(result)));return result
     def decompose(self,workspace_id,source_id,viewer=None):
         source=self.source(workspace_id,source_id,viewer=viewer)
@@ -112,12 +125,14 @@ class Documents:
                 claims[field]={'value':value,'support':'matched' if matched else 'unmatched','evidence':[passage]}
             result.append({'id':candidate['id'],'claims':claims,'counterclaims':{}})
         return result
-    def draft(self,workspace_id,request_id,brief,viewer=None,transfer_trial_id=None):
+    def draft(self,workspace_id,request_id,brief,viewer=None,transfer_trial_id=None,recipient=None):
         text(request_id,'request id');finite(brief)
         require(isinstance(brief,dict) and {'brief_id','title','audience','purpose','sections'}<=set(brief)<= {'brief_id','title','audience','purpose','sections','obligations'},'invalid document brief')
         for field in ('brief_id','title','audience','purpose'):text(brief[field],field)
         sections=brief['sections'];require(isinstance(sections,list) and 1<=len(sections)<=100,'bounded document sections required')
+        audience=Artifacts._audience(viewer,recipient)
         payload=dict(workspace_id=workspace_id,brief=brief,viewer=viewer,transfer_trial_id=transfer_trial_id)
+        if recipient is not None:payload['recipient']=recipient
         with UnitOfWork(self.db):
             workspace=Registry(self.engine).read(workspace_id,viewer=viewer);require(workspace['kind']=='document','document workspace required')
             old=self.db.execute('SELECT draft_id,payload_hash FROM document_drafts WHERE request_id=?',(request_id,)).fetchone()
@@ -128,7 +143,7 @@ class Documents:
                 for key in ('id','heading','field'):text(section[key],'section '+key,256)
                 require(section['id'] not in section_map,'duplicate section');require(type(section.get('required',True)) is bool,'required flag must be boolean')
                 citations=section.get('claims',[]);require(isinstance(citations,list) and len(citations)<=32,'bounded section citations required')
-                passages=[self._passage(workspace_id,c,viewer) for c in citations];valid=[p for p in passages if p['status']=='available'];refs.extend(p['citation'] for p in passages)
+                passages=[self._audience_passage(workspace_id,c,viewer,audience) for c in citations];valid=[p for p in passages if p['status']=='available'];refs.extend(p['citation'] for p in passages)
                 if not valid:unknowns.append(section['field']);required_missing=required_missing or section.get('required',True)
                 section_map[section['id']]={'section':section,'passages':valid}
             order=list(section_map);method_effect=None
@@ -137,6 +152,12 @@ class Documents:
                 transfer=Transfers(self.engine).require_qualified(transfer_trial_id,workspace_id,'document',viewer=viewer)
                 definition=dict(transfer['method_guards'],operation=transfer['operation'])
                 require(not pending_guards(definition),'transferred method still requires judgment')
+                for section in sections:
+                    metrics=section.get('metrics',{})
+                    require(isinstance(metrics,dict),'bounded metrics required')
+                    for metric in metrics.values():
+                        require(isinstance(metric,dict) and 'evidence' in metric,'metric needs exact source evidence')
+                        self._audience_passage(workspace_id,metric['evidence'],viewer,audience)
                 candidates=self.checked_candidates(workspace_id,[{'id':s['id'],'metrics':s.get('metrics',{})} for s in sections],viewer=viewer)
                 require(not failed_guards(definition,candidates),'transferred method precondition unmet')
                 effect=run(transfer['operation'],candidates);require(effect['phase']=='completed','transferred method lacks supported destination inputs')
@@ -147,7 +168,7 @@ class Documents:
             require(isinstance(brief.get('obligations',[]),list) and len(brief.get('obligations',[]))<=128,'bounded brief obligations required')
             for obligation in brief.get('obligations',[]):
                 require(isinstance(obligation,dict) and set(obligation)=={'id','status','evidence'} and obligation['status'] in ('required','cancelled'),'obligation must have scoped source evidence')
-                passage=self._passage(workspace_id,obligation['evidence'],viewer);require(passage['status']=='available','obligation source unavailable')
+                passage=self._audience_passage(workspace_id,obligation['evidence'],viewer,audience);require(passage['status']=='available','obligation source unavailable')
                 obligations.append(dict(id=obligation['id'],brief_id=brief['brief_id'],status=obligation['status'],passage=passage));refs.append(passage['citation'])
             lines=['# '+brief['title'],'','Audience: '+brief['audience'],'','Purpose: '+brief['purpose'],'']
             for identifier in order:
@@ -160,7 +181,7 @@ class Documents:
                 for obligation in obligations:lines.extend([f"- {obligation['status'].upper()}: {obligation['passage']['text']}"])
             if method_effect and transfer['operation']['kind']=='counterexample_check':lines.extend(['','## Supplied-evidence review','',encoded(method_effect['result'])])
             rendered='\n'.join(lines).rstrip()+'\n'
-            artifact=Artifacts(self.engine).put(rendered,'text/markdown; charset=utf-8',request_id+':draft',workspace_id=workspace_id,viewer=viewer)
+            artifact=Artifacts(self.engine).put(rendered,'text/markdown; charset=utf-8',request_id+':draft',workspace_id=workspace_id,viewer=viewer,recipient=recipient)
             result=dict(draft_id='draft:'+uuid4().hex,workspace_id=workspace_id,node_id=workspace['node_id'],branch=workspace['branch'],phase='partial' if required_missing else 'completed',artifact=artifact,brief_id=brief['brief_id'],source_refs=refs,unknowns=unknowns,obligations=obligations,transfer_trial_id=transfer_trial_id,method_effect=method_effect,section_order=order,
                 objective_scope='source_constrained_draft',task_objective='unresolved',obligation_satisfaction='not_established',
                 limit='A source-constrained draft with checked literal passages; semantic adaptation and audience effectiveness remain unverified judgments.')
@@ -168,10 +189,12 @@ class Documents:
             return dict(result,text=rendered)
     def read(self,draft_id,viewer=None):
         row=self.db.execute('SELECT * FROM document_drafts WHERE draft_id=?',(draft_id,)).fetchone();require(row is not None,'draft unavailable')
-        Registry(self.engine).read(row['workspace_id'],viewer=viewer);result=json.loads(row['result_json'])
+        Registry(self.engine).read(row['workspace_id'],viewer=viewer)
+        artifact=Artifacts(self.engine).read(row['artifact_id'],viewer=viewer)
+        result=json.loads(row['result_json'])
         if viewer is not None and result['transfer_trial_id']:
             from ..intelligence.transfer import Transfers
             transfer=Transfers(self.engine).require_qualified(result['transfer_trial_id'],result['workspace_id'],'document',viewer=viewer)
             require(transfer['latest_trial']['trial_id']==result['method_effect']['trial_id'],'draft trial requires revalidation')
-        artifact=Artifacts(self.engine).read(row['artifact_id'],viewer=viewer);require(artifact['digest']==result['artifact']['digest'],'draft bytes changed')
+        require(artifact['digest']==result['artifact']['digest'],'draft bytes changed')
         return dict(result,artifact={k:v for k,v in artifact.items() if k!='content'},text=artifact['content'].decode('utf-8'))

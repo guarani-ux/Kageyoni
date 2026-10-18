@@ -1,0 +1,103 @@
+{
+  "format": "samsara-PS1-source1-in-progress-github-context/1",
+  "status": "IN_PROGRESS",
+  "stage": "PS1",
+  "label": "PS1-source1-8a7f7d892753",
+  "source_identity": "8a7f7d8927530d2dae721eae0414f3311f098e970adf12a49623db1c395d4f4e",
+  "runtime_digest": "be05229b564fad5bc1b0e86ccb144c5d7569cbe083ed32cd34af92d2a211e9c9",
+  "product": "0.5.3.dev15",
+  "engine": "11.1.0.dev10",
+  "current_wheels": [
+    {
+      "name": "samsara_world-0.5.3.dev15-py3-none-any.whl",
+      "bytes": 162957,
+      "sha256": "73f4d95cf13ce774f0d84ca742456fc266550277c828f14acfe05a8f688d4281",
+      "path": "core-build/checkpoints/PS1-source1-8a7f7d892753/distributions/samsara_world-0.5.3.dev15-py3-none-any.whl"
+    },
+    {
+      "name": "kageyoni_engine-11.1.0.dev10-py3-none-any.whl",
+      "bytes": 582509,
+      "sha256": "d2c033c3df989eff9da8ac4f006150b6276e8a07bbab30992d1b33341d871195",
+      "path": "core-build/checkpoints/PS1-source1-8a7f7d892753/distributions/kageyoni_engine-11.1.0.dev10-py3-none-any.whl"
+    }
+  ],
+  "installed_payload_correspondence": 222,
+  "independent_frozen_wheel_source_entries": 222,
+  "closed_source_checks": {
+    "native": 59,
+    "product": 25,
+    "compatibility": 22
+  },
+  "current_installed_411_suite": "ACTIVE_AT_FREEZE_RESULT_UNKNOWN; not a pass and no later result imported.",
+  "original_private_request": "PARTIAL; no installed fulfillment yet.",
+  "full_world_complete": false,
+  "full_release_complete": false,
+  "PS1_qualified": false,
+  "F1_status": "Authored data-only carrier plus static validation; not native execution or integrated F1 qualification.",
+  "last_qualified_artifact": {
+    "library_version": 13,
+    "stage": "R07b representative thirteen-loop functional core",
+    "source_identity": "5ee061e83c20cd47c158462daa03801bedd73ede1f61a46779ff28232875154b",
+    "runtime_digest": "83f21c4d1237213d21524918b61fe32d3c37cd9e3e614008e81aef5c40d13332",
+    "product_commit": "3726bf7866d80e5320bc3ada38dd00c30ebeeb66",
+    "engine_commit": "e5f21632aa58cf8756708d92fc5609472dd19090",
+    "archive_sha256": "d8844a2718c38a99bfbe5998b3f14c47922b6acb4f14f0f8250b6c6cdc3284ba",
+    "archive_bytes": 354420530,
+    "path": "core-build/verified/R07b-5ee061e83c20/"
+  },
+  "source_and_evidence_status": "Closed source native59/product25/compatibility22 and current222payload identity only. These counts are not summed into whole-loop qualification. Initial failure/repair logs, independent source review and capacity/recovery receipts remain exact. Snapshot is independent and all source writers closed; a read-only installed suite was active.",
+  "local_only_recovery_archive": {
+    "archive": "/workspace/scratch/5c7ed9200168/resume_full_release/private-engine-implementation/temp-recovery/actual-native-worlds.zip",
+    "archive_bytes": 54005181,
+    "archive_sha256": "a4b663b246eddcbbafb0e831c803b6cab5c92c91d16e38401f986b238b751e11",
+    "manifest_sha256": "5a83c9cbb6598837290ca6d76a712a397bb72ad1a15bf76ecb694be2d87794bf",
+    "case_directory_count": 139,
+    "file_count": 1805
+  },
+  "local_only_recovery_limit": "54,005,181-byte actual-native-worlds.zip is omitted from this Git snapshot. Receipt/manifest included, not raw world bytes, so no remote retrieval/reconstruction of that archive is claimed. Root plans it for the next same-item continuation archive.",
+  "Library_save": "No new Library save; latest qualified delivered archive remains v13. This Git source checkpoint is not a sealed or qualified continuation archive.",
+  "root_snapshot_context": "checkpoint-context.json",
+  "next_action": "Finish installed411case suite, affected native and originalprivate-note controlled+freshrecipient/interruption/recovery/lateruse checks; qualify or repair; then integrate F1.",
+  "retained_scope": "All original13loops/22requirements/13slices/14increments/F1-F5 and exactprivate request retained. V13 representativecore remains lastqualifiedartifact. Canonical/history/human results not fabricated.",
+  "private_request_and_release_scope": "Original private-native request not narrowed or fulfilled; PS1 precedes F1-F5. Keep authentic canonical/history/human-review limits; no invented evidence.",
+  "host_controls": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "stdio_subprocess": "stdio-subprocess-ok",
+    "logical_pid": 5,
+    "procfs_self_status_pid": "Pid:\t80234",
+    "pidfd_api": true,
+    "known_command_inventory": [
+      {
+        "pid_in_procfs": 80223,
+        "kind": "known-test-or-upload-command"
+      },
+      {
+        "pid_in_procfs": 80224,
+        "kind": "known-test-or-upload-command"
+      },
+      {
+        "pid_in_procfs": 80225,
+        "kind": "known-test-or-upload-command"
+      },
+      {
+        "pid_in_procfs": 80230,
+        "kind": "known-test-or-upload-command"
+      },
+      {
+        "pid_in_procfs": 80231,
+        "kind": "known-test-or-upload-command"
+      }
+    ],
+    "concurrency": "Two read-only agent tasks, no runtime builds or native world writers yet",
+    "disk_free": 648040448
+  },
+  "preservation": "All previous leaves/unseen work, v13 and older complete archives/wheels/worlds/history remain unchanged except named current source/status/context. Changed-only staging avoids duplicate historical archive.",
+  "authority": "Sole github_checkpoint writer may CASpush withoutforce onlyexistingprivatecontinuationbranches preservingallpreviouspaths/unseenwork; noPR/merge/publish/manualcredentials.",
+  "remote_before": {
+    "product": "3726bf7866d80e5320bc3ada38dd00c30ebeeb66",
+    "engine": "e5f21632aa58cf8756708d92fc5609472dd19090"
+  },
+  "uncertain_effects": [],
+  "newer_work": "Any later live suite result, root work or later source revision is outside this frozen source1 checkpoint.",
+  "pairing": "This engine checkpoint commit is pinned exactly in product interval context."
+}
