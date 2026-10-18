@@ -1,35 +1,32 @@
-# Matching Samsara R05b engine checkpoint
+# Matching reconstructed R05c engine source checkpoint
 
-Verified pair: Samsara0.5.3.dev9 / separate Kageyoni11.1.0.dev7, v8 R05b.
-Native source-pinned encounter ending closes only the episode's temporary
-scene/participation while preserving paid effort, accepted touch, equipment and
-history. Participant withdrawal is distinct from operator maintenance;
-controller failure is not fictional withdrawal. Opted-in parent cancellation
-closes native children atomically. One authoritative engine remains.
+IN_PROGRESS_NOT_QUALIFIED pair:Samsara0.5.3.dev10 / Kageyoni11.1.0.dev8.
+Native artifact/document recipient API source bytes and focused test are exactly
+restored from recorded producing patches/hashes against qualified v8. Fresh
+current-host source API/legacy68checks pass; no old lost-host pass is inherited.
+The caller's authorization remains distinct from the created artifact audience.
 
-174affectedengine checks and the current selected product/native qualification
-pass;245product (228base+17integration), five current installed regressions,
-six independent installed scenarios/213correspondences and24closeout observations
-are in the exact complete product package. Actual two-SIGKILL recovery/replay,
-pause/native cancel/no refund/changed-rematch countercase/relocation/parent and
-fresh offline new native opposed response/no-touch ending/rest are observed.
+Full matching source identity:
+852ead6d03d101baa78921e84686f6479e1635d74d3b90e5dd7abf4b73f1bfce.
+Current engine wheel SHA256:
+45580add0a35a2430ef17c87dbbb97544238c016ead33e92e04e4d68ee1def6d.
 
-Matching full source/ledger/evidence/context and complete offline archive:
-https://github.com/guarani-ux/SAMSARA/tree/codex/samsara-core-continuation
-Archive SHA256:
-695631832ad07daf03840720b4d725877445d663175f76c769e185ae88690172
-Size98,265,187bytes; checked parts are under core-build/verified/v8.
-Product INTERVAL_CONTEXT pins this exact separate-engine commit.
+Full product/context/current sealed wheel pair and exact source/evidence map:
+https://github.com/guarani-ux/SAMSARA/tree/codex/samsara-core-continuation/core-build
 
-Full core remains incomplete. R05c round-trip exploration, unlike work/learning,
-initiative, authorised development and combined compatibility remain. General
-endings/drain/timers, arbitrary code/worker admission, load/heartbeat and full
-calibration are not established by this selected expression. Keep direct
-validate_registry and R07 playable-product upgrade gap. No human enjoyment,
-autonomous opponent, canonical power/world or hidden copied-engine claim.
+Fresh native installed/broad product/whole-loop exploration, kill/reopen/
+relocation/recipient/later use, independent/offline/negative controls remain
+unqualified in this snapshot. Source/wheel215entry correspondence does not
+establish them. Frozen partial logs are not passes. Prior R05c reports were lost.
+Current lock outer dev8 wheel/SHA match; nested historical dev7 descriptor is
+explicit unresolved WIP metadata, with no runtime compatibility claim.
 
-Nine expanded SQLite native test fixtures were excluded from selected source;
-preserved original compressed fixture bytes/raw maintenance remain. All prior
-artifacts, unseen paths and history are preserved. User authorizes adaptive
-context-aware private-branch interval checkpoints, one writer/CAS without force;
-no PR/merge/force/publication/deployment/credentials/live campaign mutation.
+The last qualified stage remains v8 R05b. All original/full-release obligations,
+old playable metadata compatibility, general worker/graph/code/load/ending
+breadth and the direct-registry requirement remain. New host controls must be
+inspected; AF_UNIX is EPERM and actual PID/procfs/pidfd guards still apply.
+
+User authorizes private-branch interval checkpoints, maintenance and bounded
+subagents. Fresh expected-head CAS only, no force/PR/merge/deploy/publication/
+credentials/live campaign. Preserve all unseen paths, qualified artifacts and
+prior interrupted recovery context. Product context pins this exact commit.

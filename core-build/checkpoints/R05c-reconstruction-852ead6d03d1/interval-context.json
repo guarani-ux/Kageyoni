@@ -1,0 +1,121 @@
+{
+  "format": "samsara-github-in-progress-reconstruction-checkpoint/1",
+  "status": "IN_PROGRESS_NOT_QUALIFIED",
+  "label": "R05c-reconstruction-852ead6d03d1",
+  "source_identity": "852ead6d03d101baa78921e84686f6479e1635d74d3b90e5dd7abf4b73f1bfce",
+  "identity_files": 375,
+  "product": "0.5.3.dev10",
+  "engine": "11.1.0.dev8",
+  "frozen_snapshot_manifest_sha256": "55eeca2df22e8d6644807cd9c9fdc41729d720309645aa10e39b423c6b443b29",
+  "frozen_manifest_files": 3327,
+  "last_qualified": {
+    "library_version": 8,
+    "round": "R05b",
+    "archive_sha256": "695631832ad07daf03840720b4d725877445d663175f76c769e185ae88690172",
+    "source_identity": "4040525c26088eb25b116239c4030cb40652118d4252d6d47114fc85945914e7",
+    "source_commits": {
+      "product": "5a50893669dffb4cb4aeda8ca09956ec1e7fe70b",
+      "engine": "ef37d5d65ded96239803efcff300e2c83b786a06"
+    },
+    "artifact_path": "core-build/verified/v8/"
+  },
+  "latest_durable_in_progress": {
+    "library_version": 9,
+    "archive_bytes": 98852161,
+    "archive_sha256": "0a0b6859b3114c75d3a862f8734d540392259990eacd75ff17b31a3b78422548",
+    "readback": "Root reports guarded v8-to-v9 replacement and exact latest readback; this writer did not independently retrieve Library bytes.",
+    "qualified": false
+  },
+  "source_recovery": "Previous host and unfinished R05c source/raw reports were lost. Exact prior-produced native API and travel leaf/test patch bytes were restored from recorded producing inputs/hashes against verified v8. Root application integration and new tests form a NEW reconstruction candidate.",
+  "restored_native_source_hashes": {
+    "engine/kageyoni/persistence/artifacts.py": "2eed677ee902e53ef9fe28dc327b98e98f33eb5c613637fb220aededa3dbdf57",
+    "engine/kageyoni/workspaces/documents.py": "caa5ca6b38f023e63ee5b2f98ee90fe0ecf7a625dcaa8586ece4af3990370f65",
+    "engine/pyproject.toml": "ab0336f6b3ee778ae45705ed94269d8de4fee79b44ff65cf36dee3f584e61eeb",
+    "engine/tests/test_artifact_recipients.py": "14e77f307d75fad466edfe5fad53cc24d529554590a11c5d15b287361566c61e"
+  },
+  "fresh_completed_component_checks": {
+    "native_source": 68,
+    "travel_native_content_source": 49,
+    "artifact_privacy_source": 6,
+    "wheel_source_entries": 215,
+    "snapshot_manifest_identity_files": 3327
+  },
+  "current_wheels": {
+    "samsara_world-0.5.3.dev10-py3-none-any.whl": {
+      "sha256": "7d4133ed43b8bf565aef1e3514e26e63788beaca17a708cb9532fced680a4b16",
+      "bytes": 108575,
+      "path": "core-build/checkpoints/R05c-reconstruction-852ead6d03d1/distributions/samsara_world-0.5.3.dev10-py3-none-any.whl"
+    },
+    "kageyoni_engine-11.1.0.dev8-py3-none-any.whl": {
+      "sha256": "45580add0a35a2430ef17c87dbbb97544238c016ead33e92e04e4d68ee1def6d",
+      "bytes": 575497,
+      "path": "core-build/checkpoints/R05c-reconstruction-852ead6d03d1/distributions/kageyoni_engine-11.1.0.dev8-py3-none-any.whl"
+    }
+  },
+  "source_wheel_correspondence": "Current packaged source entries match the two current sealed wheels. This is package correspondence, not integrated runtime/semantic qualification.",
+  "qualification": "No R05c or complete-core qualification. Frozen broad logs are partial running snapshots, not passes. Lost prior checks are historical context only.",
+  "historical_failed_or_unresolved_checks": [
+    "Lost prior product-base294 had an uninspected failure; raw report lost, rerun/diagnose current source.",
+    "Lost installed native211 had207passes/4fixture lookup errors; current fixture data placement still requires actual new check.",
+    "Namespace package origin must be inspected through __path__, not __file__ alone."
+  ],
+  "running_at_freeze": [
+    "Broad product tests including old-engine first harness/current installed engine attempt",
+    "New exploration integration",
+    "Current installed affected native checks",
+    "Seven sequential installed regressions"
+  ],
+  "not_yet_qualified": [
+    "Actual reconstructed full-loop installed exploration and parent continuation",
+    "Actual kill/reopen/replay/relocation/exact recipient return/later discovery use",
+    "Independent installed review and fresh offline receiver",
+    "Readiness negative controls and source-bound qualified receipt",
+    "Complete functional core and all retained full-release obligations"
+  ],
+  "next_actions": "Inspect actual running operations/reports before repeating. Diagnose current source failures without weakening assertions, qualify reconstructed installed travel/exploration and exact recipient/later use, then independent/offline/negative controls and guarded latest archive readback. Continue current R05c; never infer READY from the inherited R05b receipt.",
+  "host_controls": {
+    "python": "3.12.14",
+    "os": "Linux",
+    "logical_pid": 5,
+    "proc_pid": "599",
+    "pid_namespace": "pid:[4026532415]",
+    "pidfd": true,
+    "fcntl_lock": true,
+    "unix_bind": {
+      "errno": 1,
+      "name": "[Errno 1] Operation not permitted"
+    },
+    "subprocess": {
+      "logical_pid": 6,
+      "proc_pid": "609"
+    }
+  },
+  "host_limit": "Fresh Linux/Python3.12.14 execution; AF_UNIX bind EPERM. Current nested PID/procfs identity and pidfd guards still required. Do not assume old host lifetime/resource/sandbox capacity.",
+  "metadata_limits": [
+    "Frozen ledger inherited operating_context/working_parent/frozen_candidate fields describe historical v7/v8 state; current round_status/reconstruction/root checkpoint context state IN_PROGRESS and this exact source/wheel map identifies the new candidate.",
+    "Current engine-lock outer version/wheel/SHA match dev8; nested reference still names historical dev7 and old digest. This unresolved descriptor is preserved explicitly, not treated as new runtime compatibility qualification."
+  ],
+  "snapshot_fixture_omissions": [
+    "engine/fixtures/historical/personality-fixture.sqlite",
+    "engine/fixtures/historical/writing-fixture.sqlite"
+  ],
+  "fixture_preservation": "Both omitted prior raw native fixture paths remain unchanged in the remote base tree; compressed originals/history remain preserved. No fixture is removed or fabricated.",
+  "newer_work": "Root has newer local metadata/test/probe work after this freeze. It is outside this checkpoint and supplies no qualification to these frozen bytes.",
+  "remote_before": {
+    "product": "444f206b45407c41fc6982c2f3fa19c26ee4a536",
+    "engine": "1a6e6c1b4e1e109a9f939560ddee837e48db1dca"
+  },
+  "authority": "User requires adaptive prior-aware continuation, maintenance, bounded subagents and private-branch pushes each interval. Root GO covers frozen coherent IN_PROGRESS source/current wheels/evidence only.",
+  "preservation": "All prior v8/v5/v6/v7 complete artifact paths, interrupted recovery context and unowned paths/history preserved. No continuation ZIP uploaded in this early checkpoint.",
+  "uncertain_external_effects": [],
+  "live_campaign_mutation": false,
+  "core_complete": false,
+  "boundaries": [
+    "No PR/merge/force/deploy/publication/purchases",
+    "No credentials",
+    "No live campaign mutation",
+    "No inferred lost-host passes",
+    "No current round/core qualification claim"
+  ],
+  "source_pairing": "This engine checkpoint commit is pinned exactly by the matching product interval context."
+}

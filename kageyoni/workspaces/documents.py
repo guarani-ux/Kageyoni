@@ -19,19 +19,21 @@ from .contracts import text,finite,timestamp
 
 class Documents:
     def __init__(self,engine):self.engine=engine;self.db=engine.db
-    def ingest(self,workspace_id,request_id,source_id,text,identity,expected_identity,captured_at,expires_at=None,viewer=None,locator='subscription-host supplied'):
+    def ingest(self,workspace_id,request_id,source_id,text,identity,expected_identity,captured_at,expires_at=None,viewer=None,locator='subscription-host supplied',recipient=None):
         from .contracts import text as checktext
         for value,label in ((request_id,'request id'),(source_id,'source id'),(identity,'source identity'),(expected_identity,'expected identity'),(locator,'source locator')):checktext(value,label)
         require(isinstance(text,str) and 0<len(text)<=1000000,'bounded source text required')
         captured=timestamp(captured_at);require(captured<=datetime.now(timezone.utc)+timedelta(minutes=5),'source capture time is in the future')
         if expires_at is not None:require(timestamp(expires_at)>=captured,'source expiry precedes capture')
+        Artifacts._audience(viewer,recipient)
         payload=dict(workspace_id=workspace_id,source_id=source_id,text=text,identity=identity,expected_identity=expected_identity,captured_at=captured_at,expires_at=expires_at,viewer=viewer,locator=locator)
+        if recipient is not None:payload['recipient']=recipient
         with UnitOfWork(self.db):
             Registry(self.engine).read(workspace_id,viewer=viewer)
             old=self.db.execute('SELECT source_id,revision,payload_hash FROM document_sources WHERE request_id=?',(request_id,)).fetchone()
             if old:require(old['payload_hash']==digest(payload),'source request conflict');return self.source(workspace_id,old['source_id'],viewer=viewer,revision=old['revision'])
             revision=self.db.execute('SELECT coalesce(MAX(revision),0)+1 FROM document_sources WHERE workspace_id=? AND source_id=?',(workspace_id,source_id)).fetchone()[0]
-            artifact=Artifacts(self.engine).put(text,'text/plain; charset=utf-8',request_id+':source',workspace_id=workspace_id,viewer=viewer)
+            artifact=Artifacts(self.engine).put(text,'text/plain; charset=utf-8',request_id+':source',workspace_id=workspace_id,viewer=viewer,recipient=recipient)
             metadata=dict(identity=identity,expected_identity=expected_identity,captured_at=captured_at,expires_at=expires_at,locator=locator,acquisition='exact captured bytes',identity_limit='Identity attribution supplied by operator; equality does not independently identify a business.')
             self.db.execute('INSERT INTO document_sources VALUES(?,?,?,?,?,?,?)',(workspace_id,source_id,revision,request_id,digest(payload),artifact['artifact_id'],encoded(metadata)))
             return self.source(workspace_id,source_id,viewer=viewer,revision=revision)

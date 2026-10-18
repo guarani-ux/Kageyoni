@@ -19,6 +19,15 @@ class Artifacts:
         self.engine.context(row[0],viewer=viewer)
     def _meta(self,row):
         return {**{k:row[k] for k in ('artifact_id','workspace_id','digest','media_type','size')},'path':str((self.root/'objects'/row['digest']).resolve()),'relative_path':'objects/'+row['digest']}
+    @staticmethod
+    def _audience(viewer, recipient):
+        """Choose immutable audience without changing caller authorization."""
+        if recipient is None:return viewer
+        from ..workspaces.contracts import text
+        text(recipient,'artifact recipient',1024)
+        require(len(recipient)<=1024,'artifact recipient too long')
+        require(viewer is None or viewer==recipient,'only owner may choose another artifact recipient')
+        return recipient
     def _materialize(self,row,replace=False):
         blob=bytes(row['content']);require(hashlib.sha256(blob).hexdigest()==row['digest'] and len(blob)==row['size'],'artifact bytes corrupt')
         path=self.root/'objects'/row['digest']
@@ -35,19 +44,23 @@ class Artifacts:
             os.replace(temporary,path)
         finally:
             if temporary.exists():temporary.unlink()
-    def put(self, content, media_type, request_id, *, workspace_id, viewer=None):
+    def put(self, content, media_type, request_id, *, workspace_id, viewer=None, recipient=None):
         from ..workspaces.contracts import text
         text(media_type,'media type',200);text(request_id,'request id');require(type(content) in (bytes,str),'artifact must be bytes or text')
+        audience=self._audience(viewer,recipient)
         blob=content.encode('utf-8') if isinstance(content,str) else content
         require(len(blob)<=10000000,'artifact exceeds 10 MB limit');sha=hashlib.sha256(blob).hexdigest()
         payload=dict(workspace_id=workspace_id,viewer=viewer,media_type=media_type,digest=sha,size=len(blob))
+        # Omitted/None keeps historical request hashes exactly. An explicit
+        # recipient is part of retry identity even when it equals the caller.
+        if recipient is not None:payload['recipient']=recipient
         with UnitOfWork(self.db):
             self._scope(workspace_id,viewer)
             old=self.db.execute('SELECT * FROM artifacts WHERE request_id=?',(request_id,)).fetchone()
             if old:require(old['payload_hash']==digest(payload),'artifact request conflict');row=old
             else:
                 aid='artifact:'+uuid4().hex
-                self.db.execute('INSERT INTO artifacts(artifact_id,workspace_id,viewer,request_id,payload_hash,digest,media_type,size,content) VALUES(?,?,?,?,?,?,?,?,?)',(aid,workspace_id,viewer,request_id,digest(payload),sha,media_type,len(blob),blob))
+                self.db.execute('INSERT INTO artifacts(artifact_id,workspace_id,viewer,request_id,payload_hash,digest,media_type,size,content) VALUES(?,?,?,?,?,?,?,?,?)',(aid,workspace_id,audience,request_id,digest(payload),sha,media_type,len(blob),blob))
                 row=self.db.execute('SELECT * FROM artifacts WHERE artifact_id=?',(aid,)).fetchone()
         self._materialize(row);return self._meta(row)
     def read(self, artifact_id, viewer=None):
