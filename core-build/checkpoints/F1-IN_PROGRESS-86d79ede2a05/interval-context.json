@@ -1,0 +1,205 @@
+{
+  "format": "samsara-F1-in-progress-github-checkpoint/1",
+  "status": "IN_PROGRESS_NOT_QUALIFIED",
+  "stage": "F1",
+  "source_identity": "86d79ede2a05853352dae0a8a89ff58e50c2a03cac62d5ae0d8e5d310950b896",
+  "runtime_digest": "9c04e83eea806dc60d3890204d22b053029c99da94543a5878780a5cdb6886b0",
+  "versions": {
+    "product": "0.5.3.dev16",
+    "engine": "11.1.0.dev10"
+  },
+  "product_wheel_sha256": "0ca4a2c77094a7a58e0766350ae7c0109e2a7c849793ad8dc0c6910983e5a305",
+  "engine_wheel_sha256": "d2c033c3df989eff9da8ac4f006150b6276e8a07bbab30992d1b33341d871195",
+  "what_changed": "Native versioned content admission/pins, dynamic participant presence, scoped atlas route/time/conditions and equipment reservations/guards; adopted finite craft carrier v4. Actual bounded native content contacts and selected product checks, no full F1 claim.",
+  "source_checks": "Closed61case run57PASS/4FAIL; affected15retryPASS after two actual harness repairs. Raw failures retained. No clean all61run asserted.",
+  "installed_product_suite": "ACTIVE_AT_FREEZE session47310, resultUNKNOWN; live logs/results excluded and no later outcome imported.",
+  "source_wheel_payload_matches": 226,
+  "native_engine_code": "Unchanged dev10 native191capsule/30SQL; one authoritative engine. No schema rewrite.",
+  "data": "sources/full-release-f1-authoring v1-v4 incl actualv4finitecraft initialmaterials repair;957native records/15defs; separate newer v5 socialauthoring is outside freeze and not adopted.",
+  "semantic_gaps": "Four social scene labels still lack some actual food/performance/route/invitation consumers; need adoptedv5 means-sensitive effects, affected checks, installed native consequences, fresh recipient/lateruse/recovery and full original F1 semantic review.",
+  "qualified_parent": {
+    "library_version": 15,
+    "sha256": "73738ee2b30962cf461e7c04c499524286b0a81715dbca7f12820618545690b4",
+    "bytes": 462812341,
+    "stage": "PS1 qualified selected original private native study",
+    "source_identity": "6c32e7af10ebef6790ee38f65ca097bedee779cfca157b6b18380e1cf64d9b2d",
+    "product_commit": "8c97210ea4391965aeeda782980d3d73060b82d3",
+    "engine_commit": "fa587c66cf010ba5ea66fcc43bf55ae5ff2b9353",
+    "path": "core-build/verified/PS1-6c32e7af10eb/"
+  },
+  "source_carrier": {
+    "format": "samsara-coherent-in-progress-source-carrier/1",
+    "bytes": 17770366,
+    "sha256": "db141fa78df28b483532c2560564bd48a286c1f7ffd08d0c2ce67aed8073fbdb",
+    "zip_entries": 1122,
+    "source_identity": "86d79ede2a05853352dae0a8a89ff58e50c2a03cac62d5ae0d8e5d310950b896",
+    "parts": [
+      {
+        "name": "part-0000.bin",
+        "bytes": 700000,
+        "sha256": "61e47c7105151bad2d0d09f77cc4d37d55e159a626397beb84e6c7e815e31da2",
+        "git_sha": "3eb5e0432269556294713f85b5f956d10d79132d"
+      },
+      {
+        "name": "part-0001.bin",
+        "bytes": 700000,
+        "sha256": "a9c8b5083a0343b0b90695393cebd9a27f27780ec4b90283e1c2ea0a4b9125f3",
+        "git_sha": "f31ce1bf5c5404d6754be1b1f291062abc70beaa"
+      },
+      {
+        "name": "part-0002.bin",
+        "bytes": 700000,
+        "sha256": "2d16669780b51c7620d633e12e8ba6a25fc5dc44201cbaeb289e5c74ab4db3ca",
+        "git_sha": "2edb4b3748e7d0f215f9eb0d09a8133c5bd0e658"
+      },
+      {
+        "name": "part-0003.bin",
+        "bytes": 700000,
+        "sha256": "2af8c0b7cb44ecbd4f6206a7a94d1fddf7bad12ba5e8e2c248df25eac713f3fb",
+        "git_sha": "467450eb9e65b79ffc7c11081e2ac722aafd908b"
+      },
+      {
+        "name": "part-0004.bin",
+        "bytes": 700000,
+        "sha256": "f5c70f8893711b0b587dce45532f753f8f9a90037035cdbd1c8abf6212f243a9",
+        "git_sha": "8324db895afafd803c74286a992e34296b2e7e35"
+      },
+      {
+        "name": "part-0005.bin",
+        "bytes": 700000,
+        "sha256": "2ddfb5127489cd9b8bc020001cf5bfa30d480b96aed81ccfb2397e06c83242e2",
+        "git_sha": "4f6bc95cb8b98e500c1db962bc64726057615f0e"
+      },
+      {
+        "name": "part-0006.bin",
+        "bytes": 700000,
+        "sha256": "017cca0d9204a08c6a5b41d8944a7d818b5456f423e1f1169a3f9279fe93cb1b",
+        "git_sha": "f2e939b5a2a8cbc7d313f36656b0d14a2f9df416"
+      },
+      {
+        "name": "part-0007.bin",
+        "bytes": 700000,
+        "sha256": "d494da6c6474b92d4751b2ad939ccb517a0a4abdfc1aec9e36b4b679543fe8c5",
+        "git_sha": "20d279821d4b3901586767795e6155f720f77cf0"
+      },
+      {
+        "name": "part-0008.bin",
+        "bytes": 700000,
+        "sha256": "60ced1f851d3c45074bb2c4b1e56b7513ef5f3526b580bc3649ea1036bb5e29d",
+        "git_sha": "53d0ff11308af643a7bd9ec7e1490182e64638cd"
+      },
+      {
+        "name": "part-0009.bin",
+        "bytes": 700000,
+        "sha256": "8623aa43486c294131cb1b5639947724c2e50a5199fbb1b8d629979dfb3c7b1a",
+        "git_sha": "65fa9ea6429740d60417caa7d7afd785dce6c2a2"
+      },
+      {
+        "name": "part-0010.bin",
+        "bytes": 700000,
+        "sha256": "adfd0f1944ff3b19803479bcdfcd67a73829bc4c605059e8dfdee5bf70fbaabb",
+        "git_sha": "778e0ec8555bd1075130018eafee0955eee1bf0e"
+      },
+      {
+        "name": "part-0011.bin",
+        "bytes": 700000,
+        "sha256": "8371d8ca58455d49f0e087087be73c00a7eae8037c83c834c32ab02b43c58c98",
+        "git_sha": "4102b480fffddea8363d6c15b1d82b41c8a66708"
+      },
+      {
+        "name": "part-0012.bin",
+        "bytes": 700000,
+        "sha256": "e2677f68fa0c6a6f963c3ed477615d524f9d33c6913927f5b52b5146c5bac5e1",
+        "git_sha": "4c7788c07ade029c22fca770924ca0292f723475"
+      },
+      {
+        "name": "part-0013.bin",
+        "bytes": 700000,
+        "sha256": "b36248cfe30895c42a9e9ac5eef33d7710688d66bedc69b141f68bdadeed55e5",
+        "git_sha": "f7cf31e2c78b9b98b318ba9b5f8fff5c3789a709"
+      },
+      {
+        "name": "part-0014.bin",
+        "bytes": 700000,
+        "sha256": "29157688d034272fd7d0cbfa7337007a9c3c485c685357ebcb312de0a439330b",
+        "git_sha": "1a98801278b2794d8260b579e676d68747cad29f"
+      },
+      {
+        "name": "part-0015.bin",
+        "bytes": 700000,
+        "sha256": "81e99efe1daa51c0855cb2079004dd1a1a4f0e8c515a1de3237cd367694f293f",
+        "git_sha": "39dbf45e0fcbfd01a711a806010867045ad8e048"
+      },
+      {
+        "name": "part-0016.bin",
+        "bytes": 700000,
+        "sha256": "7bc6479866b48eb4fd3c568757daaa61fd823f0b2f68756325a0859a80d9b02c",
+        "git_sha": "4aee3e9d91ba8b209160527300234302aa91375e"
+      },
+      {
+        "name": "part-0017.bin",
+        "bytes": 700000,
+        "sha256": "0e453ff2a54cb64cc4f63b2ffe82a16c05b3231894637198a7b1595b11c9aa30",
+        "git_sha": "0f6374131e282468907278bb694617cde929acab"
+      },
+      {
+        "name": "part-0018.bin",
+        "bytes": 700000,
+        "sha256": "76e0a9007c0137bf0dc332dc2a3498d9af9befede9382d96d5ef14a50bff2886",
+        "git_sha": "0b96f6dfe14ec933f4be365fc5eae5916a27cc15"
+      },
+      {
+        "name": "part-0019.bin",
+        "bytes": 700000,
+        "sha256": "9a629a65de13748c4e0868b018433f6a457d054d8e5e313dbb7b58e2e8a87176",
+        "git_sha": "a4fddf8a25a60840076318010e60a449deb9a20a"
+      },
+      {
+        "name": "part-0020.bin",
+        "bytes": 700000,
+        "sha256": "877f73ecd1b16c70db06919e5f42cefbca6c730fa944d3bfb71d1262ed6d236e",
+        "git_sha": "6774ffb0d6d468aefbc81f3c1272aaff978e5c40"
+      },
+      {
+        "name": "part-0021.bin",
+        "bytes": 700000,
+        "sha256": "729d7cd3b3055342d86e5d85f8e183947dcb7485680a036e7ad6e9f2b2394818",
+        "git_sha": "f44a60c74d782199fc11baf59d66821ff85b1457"
+      },
+      {
+        "name": "part-0022.bin",
+        "bytes": 700000,
+        "sha256": "b5462fc6ba02a71fa29494db161f7f3bfcf302a0bff8470401c921830920f4cd",
+        "git_sha": "5343d630555cd29043b37b3045a02d3d6578043a"
+      },
+      {
+        "name": "part-0023.bin",
+        "bytes": 700000,
+        "sha256": "8c86ef1b7def9ad915c78fea8b25d2543d1a8898c7d759e4623d8eaa46ce2643",
+        "git_sha": "97a62cfdd163524976575e6ccce85039725068ab"
+      },
+      {
+        "name": "part-0024.bin",
+        "bytes": 700000,
+        "sha256": "4ca5e3fa4dc498967096f303d2b89086579148684e5780abb6f49dc82aaeccb2",
+        "git_sha": "146f1acaf2775a104b6e989fcb544433d7e53170"
+      },
+      {
+        "name": "part-0025.bin",
+        "bytes": 270366,
+        "sha256": "30ac917db53ec5bfd47251473b14ee7a44d52f2a2a06186dd36c19cc811a2c66",
+        "git_sha": "408f1a9d164c043f0c1cb63f6ed031da41afb335"
+      }
+    ],
+    "limit": "Source/status/closed new evidence/current wheel pair/data v1-v4 ONLY. Not a complete Library continuation archive; complete qualified v15 and all historical artifacts remain separate and unchanged. Never overlay newer unfinished work blindly."
+  },
+  "full_release_complete": false,
+  "F1_qualified": false,
+  "remaining_scope": "All F1-F5 and original13loops/22requirements/13slices/14increments/generalworkerheartbeatstop/fullcalibration/graphmergetimerextension breadth retained. No invented canonical mappings/currentcampaign designation or human review.",
+  "snapshot": "Independent1122file copy, before/copy/after sourceidentityequal,226payloadwheel/source independentlymatched; local root freeze released only after receipt. Later active edits excluded.",
+  "active_or_uncertain_operations": "Only read-only full installed product test ACTIVE at freeze; no uncertain world/remote effects; source snapshot has no live writers.",
+  "host_limits": "RAM private snapshot/carrier; overlay capacity constrained. No sandbox/model/resource/OS calibration inferred.",
+  "next_action": "Root inspect actual installed-suite completion; repair current candidate if failed; adopt reviewed v5 actual social effects, rebuild/lock and qualify exact installed consumers/negative/recovery/recipient/lateruse. Continue all retained full-release work.",
+  "preservation": "All previous Git paths/qualifiedv15exactcarrier/history/failures/unseenwork preserved except named current source/status files; no new full LibraryZIP or new Libraryversion claimed by this source-only checkpoint.",
+  "authority": "Private continuation branches only; one writer, freshhead/pincompare, CASnoforce; no PR/merge/deployment/publication/livecampaign/credentials."
+}
