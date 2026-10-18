@@ -1,0 +1,32 @@
+{
+  "status": "IN_PROGRESS_NOT_QUALIFIED_R07b",
+  "runtime_digest": "83f21c4d1237213d21524918b61fe32d3c37cd9e3e614008e81aef5c40d13332",
+  "source_identity_at_checkpoint": "ef5d3f543d999c87de3b83e4c837749e0c74636a269ebbb607942c1fa76d232f",
+  "product_version": "0.5.3.dev14",
+  "engine_version": "11.1.0.dev9",
+  "product_wheel_sha256": "65aaf259ff9a0c6b670e065c36749bdded4c9e1fd3ecc1320ffb071a91e222d1",
+  "engine_wheel_sha256": "dd8d2b65df7685bba21126a656ac33ec98ad907c49b187d7e785d6853e876632",
+  "qualified_parent_library_version": 12,
+  "qualified_parent_zip_sha256": "cdf78651d247a2b8ec9847388a30539498c706a12e4efc97714ae882f58c4281",
+  "qualified_parent_git_heads": {
+    "SAMSARA": "0fd3bc105a2a5826a8c85735445d759e00efad92",
+    "Kageyoni": "b17cdfb021a9d43f502b852cb6d7c8bd47a43459"
+  },
+  "changed": "D4 authenticated R06 first/current R07a chained copy; producer/semantic namespace split, historical policy/receipt/control ancestry; preserve disabled admission; current waiting binding; controlbound preflight before writable access. __init version corrected and chained precommit oracle preserves prior receipts.",
+  "actual_checks": "397 installedproductcases PASS409.24s/221beforeafter;15focused;8regressions/17worlds/38refs/8nativebackuprestore+replay;two families4realSIGKILLseams;currentSourceWork2SIGKILLseams;9control/policy/tamper and6preparedbindingcountercases;genuine32controlbound;actualfreshsource/practice/code recipients and all13 independent semanticreview including currentcode identity closure.",
+  "limits": "FULL_CORE_FALSE until finalcold/offline/durablegates. Originalprivate-native-studyrequestPARTIAL. Historical226nativecasesnotfresh,191nativepayloadsunchanged. Fullrelease/allretainedscopepreserved. Provisionalwheel/failureexcerpt/rawmistakesretainedhonestly.",
+  "active_operations": "Cold receiver /root/r07b_cold_receiver owns separate tempworld/evidence, excluded from frozen snapshot. No source writers; root will update readiness/ledger/package separately. Git previous writer released after v12 fullreadback. No uncertain remote effect.",
+  "next": "Complete cold receiver, strict currentreceipt/negativecontrols, full qualified package/sameLibraryguardedreplacement/readback; finalsourceGitcheckpoint follows. Do not replayobsoleteR07a.",
+  "source_snapshot_scope": "Complete current product and tools; unchanged authoritativeengine stays paired to exact separate engine sources in previoushead, no copied hiddenengine. Relevant currentevidence/nativebackups and currentwheel included. Full prior deliveries remain on remote; full new continuation ZIP not yet built.",
+  "format": "samsara-github-in-progress-source-checkpoint/1",
+  "label": "R07b-IN_PROGRESS-source1-83f21c4d1237",
+  "core_complete": false,
+  "snapshot_zip_bytes": 6745920,
+  "snapshot_zip_sha256": "d73949e1785f35480285ce30c1c441cd0613d60f825d1095305cfaf6052093c0",
+  "snapshot_manifest_files": 638,
+  "recovery": "Recover qualified continuation Libraryv12 (272924588bytesSHAcdf78651d247a2b8ec9847388a30539498c706a12e4efc97714ae882f58c4281) first; verify original manifest/prior evidence there. Apply this separately marked IN_PROGRESS snapshot product/tools/status/evidence/currentwheel overlay. Do not run old qualified v12 manifest against overlaid source or claim overlaid candidate qualified. Inspect current jobs/reports before repeating effects; preserve original v12.",
+  "remote_source_scope": "All immutable snapshot selected product files mapped to repository root. Full639files retained through eight-or-more sequential raw ZIPparts; UTF8 evidence/source/currentwheel readable under checkpoint. Prior fullv12qualifiedcarrier/wheel/artifacts remain unchanged.",
+  "authority": "User authorized contextual private continuation checkpoint; exact-head CAS force=false and preserved unseen paths. No PR/merge/deploy/publication/livecampaign/manual credentials.",
+  "engine_code_changed": false,
+  "pairing": "The resulting context-only engine commit is pinned exactly in paired product interval context."
+}
