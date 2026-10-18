@@ -15,7 +15,7 @@ from ..intelligence.contracts import text, integer
 
 def _validate(spec):
     required={'title','roles','initial_state','states','loops','actions'}
-    require(isinstance(spec,dict) and required <= set(spec) <= required|{'visibility','scene_id','max_steps'},'invalid encounter definition fields')
+    require(isinstance(spec,dict) and required <= set(spec) <= required|{'visibility','scene_id','max_steps','ending'},'invalid encounter definition fields')
     result=deepcopy(spec);text(result['title'],'encounter title')
     result.setdefault('visibility','gm');result.setdefault('max_steps',100)
     require(result['visibility'] in ('gm','public'),'invalid encounter visibility')
@@ -74,6 +74,59 @@ def _validate(spec):
                 text(choice['id'],'choice id');text(choice['label'],'choice label');require(choice['id'] not in seen,'duplicate choice')
                 seen.add(choice['id']);targets.append(choice['next_state'])
         require(targets and all(s in states for s in targets),'action has unknown continuation state')
+    if 'ending' in result:
+        ending=result['ending']
+        require(isinstance(ending,dict) and set(ending)=={'label','next_state','changes'},'invalid encounter ending contract')
+        text(ending['label'],'encounter ending label')
+        require(isinstance(ending['next_state'],str) and ending['next_state'] in states
+                and states[ending['next_state']]['phase'] in ('completed','failed'),'encounter ending needs a terminal state')
+        # Opting in means every still-open loop has an explicit cancellation
+        # disposition. Definitions with mandatory noncancellable obligations
+        # must supply a different ending policy in a later version.
+        require(all(loop['cancellable'] for loop in loops),'encounter ending requires cancellable loops')
+        require(isinstance(ending['changes'],list) and len(ending['changes'])<=64,'invalid encounter ending changes')
+        seen=set();cleanup={}
+        for change in ending['changes']:
+            require(isinstance(change,dict) and {'op','id','data','evidence'} <= set(change)
+                    <= {'op','id','domain','data','evidence'} and change['op']=='patch','ending only permits authored cleanup patches')
+            target=change['id']
+            require(isinstance(target,dict) and set(target)=={'$encounter'},'ending target must be an encounter suffix')
+            text(target['$encounter'],'ending target suffix')
+            require(target['$encounter'] not in seen,'duplicate ending target');seen.add(target['$encounter'])
+            data=change['data']
+            require(isinstance(data,dict) and data,'ending cleanup data required')
+            if 'phase' in data:
+                require(data=={'phase':'closed'},'ending scene cleanup must only close its phase')
+                domain='scene'
+            else:
+                require(set(data)=={'position','actions_remaining','active_effects'},'ending participation must lower its complete temporary geometry')
+                if 'position' in data:text(data['position'],'ending position')
+                if 'actions_remaining' in data:
+                    require(type(data['actions_remaining']) is int and data['actions_remaining']==0,'ending cannot grant actions')
+                if 'active_effects' in data:require(data['active_effects'] in ('',None),'ending cannot grant effects')
+                domain='participation'
+            require(change.get('domain',domain)==domain,'ending cleanup domain mismatch')
+            cleanup[target['$encounter']]=domain
+            require(isinstance(change['evidence'],list) and 1<=len(change['evidence'])<=64,'ending cleanup evidence required')
+            for evidence in change['evidence']:
+                require(isinstance(evidence,dict),'invalid ending evidence');text(evidence.get('note'),'ending evidence note')
+        # Known authored geometry creators must declare their matching ending
+        # now. Unsupported/literal domains cannot hide a geometry creator from
+        # this check; the runtime also checks actual accepted creation below.
+        for action in actions.values():
+            if action['kind']!='event':continue
+            changes=action['payload'].get('changes',[])
+            require(isinstance(changes,list),'ending-enabled event changes must be a list')
+            for change in changes:
+                require(isinstance(change,dict),'invalid ending-enabled event change')
+                if change.get('op')!='create':continue
+                domain=change.get('domain')
+                require(isinstance(domain,str),'ending-enabled creation needs a literal domain')
+                if domain not in ('scene','participation'):continue
+                target=change.get('id')
+                require(isinstance(target,dict) and set(target)=={'$encounter'} and isinstance(target['$encounter'],str),
+                        'ending-enabled geometry creation needs an encounter suffix')
+                require(cleanup.get(target['$encounter'])==domain,'ending cleanup does not cover authored geometry')
     require(len(encoded(result))<=500000,'encounter definition too large')
     return result
 
@@ -244,6 +297,81 @@ class Encounters:
                 pending=pending,steps=state['steps'],max_steps=spec['max_steps'],
                 next_actions=self._available(spec,state,participants,visible,encounter_id,viewer),
                 continuation_of=state['continuation_of'],reason=state.get('reason'))
+
+    def end(self,branch,encounter_id,actor,request_id,expected_revision,viewer=None,expected_encounter_revision=None):
+        """Apply a pinned, opt-in ending independently of action/step budgets.
+
+        A participant can withdraw as themself. A trusted owner can either
+        attribute an actual participant withdrawal or pass actor=None for an
+        explicit maintenance stop. Only existing per-episode geometry is
+        cleaned up; absent pre-consent targets are deliberately skipped.
+        """
+        self._installed();text(encounter_id,'encounter id');text(request_id,'request id');integer(expected_revision,'expected revision',0)
+        if actor is not None:text(actor,'ending actor')
+        if expected_encounter_revision is not None:integer(expected_encounter_revision,'expected encounter revision')
+        require(viewer is None or actor is not None and viewer==actor,'ending must use the viewing participant')
+        payload=dict(branch=branch,encounter_id=encounter_id,operation='end',actor=actor,request_id=request_id,
+            expected_revision=expected_revision,viewer=viewer,expected_encounter_revision=expected_encounter_revision)
+        with UnitOfWork(self.db):
+            prior=self._replay(request_id,payload,branch,encounter_id,viewer)
+            if prior:return prior
+            row,spec,participants,visible=self._instance(branch,encounter_id,viewer);before=json.loads(row['state_json'])
+            require(actor is None or actor in participants.values(),'ending actor is not an encounter participant')
+            require('ending' in spec,'encounter has no callable ending')
+            require(self.engine.branch(branch)['revision']==expected_revision,'stale branch revision')
+            if expected_encounter_revision is not None:require(row['revision']==expected_encounter_revision,'stale encounter revision')
+            require(before['phase'] not in ('completed','failed'),'encounter is closed')
+            ending=spec['ending'];changes=[]
+            def episode_record(record_id):
+                # Namespaced text alone is insufficient: native encounter IDs
+                # may themselves contain colons. Prove creation through an
+                # accepted world receipt of this exact encounter instance.
+                return self.db.execute('''SELECT 1 FROM changes c JOIN encounter_events e
+                    ON json_extract(e.receipt_json,'$.world_receipt.event_id')=c.event_id
+                    WHERE e.branch=? AND e.encounter_id=? AND c.record_id=? AND c.before_json IS NULL''',
+                    (branch,encounter_id,record_id)).fetchone() is not None
+            expanded=_expand(ending['changes'],participants,encounter_id)
+            declared={change['id'] for change in expanded}
+            created=self.db.execute('''SELECT DISTINCT c.record_id FROM changes c JOIN encounter_events e
+                ON json_extract(e.receipt_json,'$.world_receipt.event_id')=c.event_id
+                WHERE e.branch=? AND e.encounter_id=? AND c.before_json IS NULL''',(branch,encounter_id)).fetchall()
+            for created_row in created:
+                record=self.engine.get(branch,created_row['record_id'])
+                if record and record['domain'] in ('scene','participation'):
+                    require(record['id'] in declared,'ending cleanup does not cover actual episode geometry')
+            for change in expanded:
+                record=self.engine.get(branch,change['id'])
+                if record is None:continue
+                require(viewer is None or record['id'] in visible,'ending target unavailable')
+                domain='scene' if 'phase' in change['data'] else 'participation'
+                require(record['domain']==domain,'ending cleanup domain mismatch')
+                require(episode_record(record['id']),'ending target was not created by this encounter')
+                if domain=='participation':
+                    scene=self.engine.get(branch,record['data']['scene'])
+                    require(record['data']['character'] in participants.values() and scene is not None
+                            and scene['domain']=='scene' and scene['id'].startswith(encounter_id+':') and episode_record(scene['id']),
+                            'ending participation is not episode geometry')
+                change['expected_version']=record['version'];changes.append(change)
+            after=deepcopy(before)
+            for loop in after['loops'].values():
+                if loop['phase']=='open':loop.update(phase='cancelled',reason=ending['label'])
+            target=ending['next_state'];state=spec['states'][target]
+            after.update(current_state=target,phase=state['phase'],outcome=state['outcome'],pending=None)
+            after.pop('reason',None)
+            # Even a pre-consent ending has real provenance without creating
+            # fictional geometry. Current participant dependencies make the
+            # explicit stop a valid event when all cleanup targets are absent.
+            dependencies=[dict(kind='record',ref_id=cid,version=self.engine.get(branch,cid)['version'],usage='encounter_ending')
+                          for cid in sorted(set(participants.values()))]
+            world=self.engine.apply(dict(api_version=3,branch=branch,request_id='encounter-ending:'+request_id,
+                expected_revision=expected_revision,kind='maintenance' if actor is None else 'decision',
+                actor='encounter-maintenance' if actor is None else actor,
+                narrative=('Operator stop: ' if actor is None else 'Participant withdrawal: ')+ending['label'],
+                changes=changes,dependencies=dependencies,judgment={'encounter_ending':dict(
+                    definition_id=row['definition_id'],definition_version=row['definition_version'],
+                    definition_digest=digest(spec),actor=actor,attribution='maintenance' if actor is None else 'participant',
+                    next_state=target,scope='Pinned episode cleanup; no refund or reversal of accepted history.')}))
+            return self._write(row,before,after,payload,world)
 
     def act(self,branch,encounter_id,action_id,request_id,expected_revision,fields=None,viewer=None,expected_encounter_revision=None):
         fields={} if fields is None else fields;require(isinstance(fields,dict),'action fields must be an object')

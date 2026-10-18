@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kageyoni-engine"
-version = "11.1.0.dev6"
+version = "11.1.0.dev7"
 description = "Portable Kageyoni world and workspace engine; no model API required"
 requires-python = ">=3.10"
 dependencies = []
