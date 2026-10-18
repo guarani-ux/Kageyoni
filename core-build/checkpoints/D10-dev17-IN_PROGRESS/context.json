@@ -1,0 +1,54 @@
+{
+  "status": "IN_PROGRESS",
+  "stage": "D10 own spoken terminal refusal guard",
+  "product_version": "0.5.3.dev17",
+  "base_source_identity": "ca04b11e79fc5bfd73224284082206555e21ddb3571b6b0e42f1129a6aa42d16",
+  "frozen_product_snapshot": "06580ca251876fb865c2015e5b137493d9bbc44f563ee64624437ff020bb57a2",
+  "engine_version": "11.1.0.dev10",
+  "engine_wheel_sha256": "d2c033c3df989eff9da8ac4f006150b6276e8a07bbab30992d1b33341d871195",
+  "engine_code_changed": false,
+  "current_product_wheel_qualified": false,
+  "source_checks": {
+    "prior_D9_full": "10 PASS / 1 FAIL in98.14s; real own-spoken-refusal guard gap preserved",
+    "D10_focused_refusal": "1 PASS in9.00s",
+    "current_full_native": "ACTIVE_ROOT_SESSION77211_AT_FREEZE",
+    "offline_install": "226 exact source/wheel/installed payloads, 30SQL/contracts namespace; not gameplay qualification",
+    "independent_static_review": "ACCEPT_SOURCE_ONLY; all-free D9 liveness bound documented, common cancel retained"
+  },
+  "changes": "Bounded own spoken terminal refusal allowed only exact encounter-local dialogue creation, own-role speaker, listeners restricted to bound refs, spoken proposed/reported, not-achieved terminal without material effects. Native presence guards and global cancel retained. Added foreign-speaker/literal-listener/material-refund countercases.",
+  "qualification": {
+    "private_native_study": "QUALIFIED_v15_SELECTED_LOOP",
+    "F1": false,
+    "F2": false,
+    "F3": false,
+    "F4": false,
+    "F5": false,
+    "full_release": false,
+    "human_play": "NOT_PERFORMED"
+  },
+  "next_action": "Run current D8/D9 native suite, build and bind exact new wheel, then installed recipient/later-use/recovery checks and address remaining F1-F5 obligations. Strict old ContentSets compatibility refusal retained.",
+  "library": {
+    "latest_verified_version": 15,
+    "latest_verified_sha256": "73738ee2b30962cf461e7c04c499524286b0a81715dbca7f12820618545690b4",
+    "new_primary_bytes": 521858092,
+    "new_primary_sha256": "f1b0fedca9f48b24857fa34ecc623d01832f8e1a8e3b734f61045e5b9bb9626b",
+    "status": "FROZEN_LOCAL_NOT_SAVED",
+    "limitations": "Workspace guard aborted before helper at zero free space. RAM helper failed Errno28 at /tmp/openai-library-upload-* even TMPDIR override. No new finalization observed; generic prior628MB preparation failure cause unknown, no size cap asserted."
+  },
+  "prior_recovery": {
+    "SAMSARA": "022f69d6ea8ec9bc78ddfaa680f3b2d3d147646d",
+    "Kageyoni": "dcae2f84d41c972242958805ab68bb3eb6a0dee6",
+    "all_prior_paths": "PRESERVE",
+    "raw_diagnostic_anchor": "f5daf7f3029fe0cf4cb74205874f6c3be7dd8797",
+    "v15_qualified_carrier": "core-build/verified/PS1-6c32e7af10eb/"
+  },
+  "permissions": "Private continuation checkpoint only; no force/PR/merge/publication/deployment/live campaign/credential use.",
+  "retained_scope": "Every adopted original13loops/22requirements/13slices/14increments and F1-F5 preserved. No fabricated canonical history or human results.",
+  "current_runtime": "05fb0ce5714c7246ffd51934064a1ae89b4ca7fdb8c8f46b47a5ca57f9427f80",
+  "current_product_wheel": {
+    "sha256": "a51831a7b3e3e021a16421729aa2826265dbabb147c86b87992b8222bff9f035",
+    "bytes": 200835,
+    "source_wheel_installed_payloads": 226,
+    "installed_gameplay_qualified": false
+  }
+}

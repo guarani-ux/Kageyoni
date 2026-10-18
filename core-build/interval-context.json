@@ -1,24 +1,21 @@
 {
   "status": "IN_PROGRESS",
-  "stage": "D8-D9 dev17 physical scene admission and unique substantive chooser",
+  "stage": "D10 own spoken terminal refusal guard",
   "product_version": "0.5.3.dev17",
   "base_source_identity": "ca04b11e79fc5bfd73224284082206555e21ddb3571b6b0e42f1129a6aa42d16",
-  "frozen_product_snapshot": "c0f0347933eaabdba2927e7e5723dbd02aab390a2bcf9cc56cf05a1338ab6c97",
+  "frozen_product_snapshot": "06580ca251876fb865c2015e5b137493d9bbc44f563ee64624437ff020bb57a2",
   "engine_version": "11.1.0.dev10",
   "engine_wheel_sha256": "d2c033c3df989eff9da8ac4f006150b6276e8a07bbab30992d1b33341d871195",
   "engine_code_changed": false,
   "current_product_wheel_qualified": false,
   "source_checks": {
-    "strict_recovery_parser": {
-      "passed": 8
-    },
-    "native_first": "1 PASS / 1 BUDGET setup error; actual reserve unchanged",
-    "D8_retry": "6 PASS / 1 FAIL in69.20s: real multi-actor prepare defect, atomic rollback",
-    "D9_positive": "1 PASS in11.99s after unique substantive chooser repair",
-    "independent_review": "ACCEPT_SOURCE_ONLY_NOT_RUNTIME",
-    "current_full_native_retry": "ACTIVE_ROOT_SESSION44839_AT_CONTEXT"
+    "prior_D9_full": "10 PASS / 1 FAIL in98.14s; real own-spoken-refusal guard gap preserved",
+    "D10_focused_refusal": "1 PASS in9.00s",
+    "current_full_native": "ACTIVE_ROOT_SESSION77211_AT_FREEZE",
+    "offline_install": "226 exact source/wheel/installed payloads, 30SQL/contracts namespace; not gameplay qualification",
+    "independent_static_review": "ACCEPT_SOURCE_ONLY; all-free D9 liveness bound documented, common cancel retained"
   },
-  "changes": "Physical gear/readset reservations and content-battle overlap guard; strict recovery metadata; authenticated physical definitions select only unique substantive native actor while preserving own free terminal withdrawal and global native cancel. Ambiguous substantive actors remain refused.",
+  "changes": "Bounded own spoken terminal refusal allowed only exact encounter-local dialogue creation, own-role speaker, listeners restricted to bound refs, spoken proposed/reported, not-achieved terminal without material effects. Native presence guards and global cancel retained. Added foreign-speaker/literal-listener/material-refund countercases.",
   "qualification": {
     "private_native_study": "QUALIFIED_v15_SELECTED_LOOP",
     "F1": false,
@@ -39,19 +36,19 @@
     "limitations": "Workspace guard aborted before helper at zero free space. RAM helper failed Errno28 at /tmp/openai-library-upload-* even TMPDIR override. No new finalization observed; generic prior628MB preparation failure cause unknown, no size cap asserted."
   },
   "prior_recovery": {
-    "SAMSARA": "3a532f7a77be132226c438d41368615028f60afd",
-    "Kageyoni": "5bd64f4854b5cd68868a2acf4066a0381ea65127",
+    "SAMSARA": "022f69d6ea8ec9bc78ddfaa680f3b2d3d147646d",
+    "Kageyoni": "dcae2f84d41c972242958805ab68bb3eb6a0dee6",
     "all_prior_paths": "PRESERVE",
     "raw_diagnostic_anchor": "f5daf7f3029fe0cf4cb74205874f6c3be7dd8797",
     "v15_qualified_carrier": "core-build/verified/PS1-6c32e7af10eb/"
   },
   "permissions": "Private continuation checkpoint only; no force/PR/merge/publication/deployment/live campaign/credential use.",
   "retained_scope": "Every adopted original13loops/22requirements/13slices/14increments and F1-F5 preserved. No fabricated canonical history or human results.",
-  "current_runtime": "30d5b5a6c7d26f1a0bef9de9ceadbdbc23a6940408f1a9ce2fa517dce5fb4387",
+  "current_runtime": "05fb0ce5714c7246ffd51934064a1ae89b4ca7fdb8c8f46b47a5ca57f9427f80",
   "current_product_wheel": {
-    "sha256": "b00df88590942aab98bc54de776885322636c8d78773a5a75cf82b092aad3384",
-    "bytes": 200596,
-    "source_wheel_matches": 35,
-    "installed": false
+    "sha256": "a51831a7b3e3e021a16421729aa2826265dbabb147c86b87992b8222bff9f035",
+    "bytes": 200835,
+    "source_wheel_installed_payloads": 226,
+    "installed_gameplay_qualified": false
   }
 }
