@@ -1,0 +1,184 @@
+{
+  "status": "IN_PROGRESS_EXECUTION_INTERRUPTED_NOT_QUALIFIED",
+  "purpose": "Complete usable functional core: initiation through native consequence/result, recipient retrieval and later continuation; all retained full-release obligations remain.",
+  "source_upload_complete": false,
+  "archive_upload_complete": false,
+  "checkpoint_scope": "Recovery context only. New R05c source, wheels, runtime reports and archive could not be read/uploaded after execution-service transport disconnected. Existing v8 source and artifacts remain unchanged.",
+  "last_qualified_delivery": {
+    "round": "R05b",
+    "library_file_id": "libfile_b4be79d59368819187fae7dceada0199",
+    "library_version": 8,
+    "sha256": "695631832ad07daf03840720b4d725877445d663175f76c769e185ae88690172",
+    "bytes": 98265187,
+    "source_pair": {
+      "SAMSARA": "5a50893669dffb4cb4aeda8ca09956ec1e7fe70b",
+      "Kageyoni": "ef37d5d65ded96239803efcff300e2c83b786a06"
+    },
+    "github_archive_directory": "guarani-ux/SAMSARA/core-build/verified/v8"
+  },
+  "governing_pins": {
+    "SAMSARA": "db9838371a1128124b77fac69677902a4b5820c6",
+    "Kageyoni": "872973f091320f92e3276408090978084928d291",
+    "freshly_compared": true,
+    "adopted_new_refs": false
+  },
+  "newer_local_candidate": {
+    "root": "/workspace/scratch/5c7ed9200168/resume_r05c/work/samsara_core",
+    "product_version": "0.5.3.dev10",
+    "engine_version": "11.1.0.dev8",
+    "runtime_digest": "5c4daf1ae8c48e1d79a9a9d00ee3d08d9f16cb013bcd7bee3f5aa248c7d01cb2",
+    "product_wheel_sha256": "55ba27db32ae91295ea0141a7da33a142daf4b7019ddb08c888b129099ad6a02",
+    "engine_wheel_sha256": "0c9f85ca5157b76a9a86607037e9c7a7491b8c52eafff1b792413c2dad4fe01b",
+    "environment": "/tmp/samsara-r05c6-env",
+    "wheels": "/tmp/samsara-r05c6-wheels",
+    "frozen_runtime_sources": true,
+    "qualification": "IN_PROGRESS"
+  },
+  "actual_implementation": [
+    "Chosen studio/garden/local journey, actual native movement and explicit personal marker observation, proof-linked native knowledge, known local route projection, later native use and physical return.",
+    "Current conditions/origin guards, changed return refusal until real reopening, source-independent leisure/return, pause/cancel retaining accepted place and history, active-practice movement fences.",
+    "Private geographic artifact/result scopes, source withdrawal and actual provenance; direct copied-source and borrowed-output/tool relay failures were found and repaired.",
+    "Additive authoritative engine Artifacts.put/Documents.ingest recipient-at-creation separate from caller/workspace viewer. Default payload/retry/read behavior retained, no schema change.",
+    "Immutable audience inherited from actual source/child/recovered/input/output lineage; prospective union C2 checks preserve public property projections; actual current/reachable text parent choosers preserve restricted R02 intake after Keeper suggestion.",
+    "Private optional practice-account and restricted intake producers, native prepared/raw contexts, work records and managed queue lineage explicitly bound. Two engine API files changed; 187 other installed engine entries and 30 SQL entries unchanged; migration max30."
+  ],
+  "actually_executed_passes": [
+    {
+      "kind": "installed_exploration_integration",
+      "cases": 41,
+      "source_wheel_installed_entries": 215,
+      "before_after_match": true,
+      "report_sha256": "25a44cb328dd223c11916fff19e4a4ba941ae0d32556ad385d92e67026bbae80",
+      "world_archive_sha256": "8dd87327c4ab4f7d38ae0da9599657f9d0ef03939e0b8a4edacd5c79411f5d8b",
+      "world_archive_bytes": 53642315
+    },
+    {
+      "kind": "installed_exploration",
+      "path": "/tmp/r5c-installed-exploration-current/report.json",
+      "observed": [
+        "native observation precommit SIGKILL rollback",
+        "committed physical-return response exact replay",
+        "nine actual unrelated exchanges and later native learned-path use",
+        "basis withdrawal revokes direct/derived reads while actual leisure/return remains",
+        "changed return refused until actual reopening",
+        "relocation/exact prior trace/Visitor-only parent continuation"
+      ],
+      "world_complete": false
+    },
+    {
+      "kind": "current_installed_regressions",
+      "passed": [
+        "causal",
+        "property",
+        "bounded",
+        "extension",
+        "life",
+        "practice",
+        "intake"
+      ],
+      "archive_sha256": "28627f0be8450f5dc1bc7a15fd62a861de3055b1cef5007e4dfb4bf58d9499bd",
+      "archive_bytes": 16124096,
+      "native_worlds": 16,
+      "read_result_refs": 34,
+      "source_wheel_installed_entries": 215,
+      "scope": "Original public support mixed-parent and restricted intake continuing-parent consumers executed successfully; selected small host probe only."
+    },
+    {
+      "kind": "independent_installed_review",
+      "cases": 7,
+      "exact_native_receipts": 25,
+      "source_wheel_installed_entries": 215,
+      "report_sha256": "68e3a30a9a9a9cd6b74baf2e0c4bf1a2b6d92c46ec195a510aabc01f39bf8916"
+    },
+    {
+      "kind": "source_native_engine_api",
+      "focused_cases": 25,
+      "affected_legacy_cases": 43,
+      "passed": 68,
+      "report_sha256": "0a5e37b8fc63f1876f65344e0b2330288421c70bc9e25648ff12128cfa865b39"
+    },
+    {
+      "kind": "fresh_participant",
+      "chosen_actions": [
+        "walk_open",
+        "follow_known_path",
+        "rest_local",
+        "back_to_garden",
+        "return_open"
+      ],
+      "actual_final_place": "studio",
+      "revision": 57,
+      "normal_closed_sessions": 3,
+      "reopened_earlier_and_current_exact_bytes": true,
+      "world": "/tmp/r5c-fresh-exploration/world",
+      "structured_report": "/workspace/scratch/5c7ed9200168/resume_r05c/fresh-exploration-receiver/observations.json",
+      "limits": "Controlled participant selected own choices from ordinary interface; not autonomy/human-enjoyment/world-completion evidence."
+    }
+  ],
+  "unresolved_checks": [
+    {
+      "kind": "full_product_base",
+      "expected_scope": "294 product checks excluding separate41 integration",
+      "session_id": 9366,
+      "observation": "At least one failure observed before transport loss; final count/cause/completion uninspected. Inspect actual final log/XML and repair without weakened assertions."
+    },
+    {
+      "kind": "installed_engine",
+      "cases": 211,
+      "passed": 207,
+      "failed": 4,
+      "observation": "Four tests could not locate authentic historical fixtures under installed site-packages/fixtures/historical. Verified originals materialized under source only. Copy only exact original verified test bytes to the installed test-data lookup, preserve failure and rerun."
+    },
+    {
+      "kind": "module_origin_assertion",
+      "observation": "Post-native assertion failed. Namespace packages with __file__ None may be a harness cause, but actual origins and __path__ were not inspected after transport loss. Reconcile rather than assuming source copying or harmlessness."
+    },
+    {
+      "kind": "remaining_round_closeout",
+      "not_run": [
+        "fresh offline complete-package recipient",
+        "specific readiness negative controls",
+        "final exact source-bound readiness receipt and dependency-lock/manifest/ledger refresh",
+        "guarded same continuation item replacement and latest-byte readback",
+        "new R05c source/wheels/evidence GitHub upload"
+      ]
+    }
+  ],
+  "historical_failures_preserved": [
+    "Initial catalogue17/schema16 defect, repaired cap32 with explicit BUDGET.",
+    "27c3 actual private-geography copied-source and borrowed-artifact relay failures.",
+    "56728486 public property-note regression from overly strict preexisting-recipient-grant policy.",
+    "First SIGKILL harness refused incompatible PID/procfs identity without signaling; child exited and rollback verified; corrected namespace/start-time/pidfd target guard executed successfully.",
+    "Provisional c4/c5 builds were not semantically executed and are not qualified.",
+    "Evidence-only selector/path/sealing errors retained and corrected without fictional effects or weakened assertions."
+  ],
+  "operations": {
+    "source_writers": "No active source writer at runtime freeze.",
+    "source_builds": "Inspect surviving actual root product pytest completion and locks before retry; no assumption that a saved job is running.",
+    "remote_writer": "Root after explicit interruption/ownership transfer; inspect actual heads and uncertain effects before any next writer.",
+    "uncertain_local_files": [
+      "exec-interruption-context.json status-only patch was stopped after no tool response; existence unconfirmed.",
+      "Fresh receiver Markdown packaging unconfirmed; structured report/transcripts already saved.",
+      "R06 provisional packet Markdown save unconfirmed; earlier plan/source excerpts saved."
+    ],
+    "outage": "exec-server transport disconnected; failed to resume exec-server session: recovery timed out after25s; repeated read-only probes and status-only patch could not return. Treated as transient, no duplicate automation.",
+    "no_uncertain_world_or_external_send": "Fresh participant closed normally; no publication/live campaign effects dispatched."
+  },
+  "recovery": [
+    "Retrieve LATEST stable continuation item and inspect actual newer local/Git state; never overwrite newer R05c work with v8.",
+    "If current local source survives, verify exact hashes/current code/operations and resume this candidate; repair actual broad-suite failure first.",
+    "If local source is gone, this context does NOT contain the new R05c source. Recover last qualified v8 and the retained obligations, then reconstruct/requalify missing work honestly; do not claim current product uploaded.",
+    "Complete broad tests, offline recipient, code-bound evidence/ledger/locks/recovery; guard same Library replacement and verify latest bytes; source/evidence CAS-push matching private branches.",
+    "R06 grounding is provisional read-only and did not read original WORLD_BIBLE due outage. Exact stable entry is design-v052.zip::samsara_v052/WORLD_BIBLE.md. No R06 implementation/READY claim."
+  ],
+  "retained_scope": [
+    "All13 core loops,22 original requirements,13 old slices,14 increments andF1-F5 retained.",
+    "R06 unlike study/research/real work and initiative; R07 development/playable compatibility/combined usable-core review.",
+    "General worker/model admission, heartbeat/graceful stop,1000dormant/20job calibration, general graphs/timers/merges/extension breadth unqualified.",
+    "Direct validate_registry remains necessary because Engine.verify ignores its false result."
+  ],
+  "authority": "Private contextual CAS checkpoints authorized; no force, PR, merge, deployment/publication, purchase, manual credential use or live campaign mutation.",
+  "core_complete": false,
+  "repository_role": "Separate engine recovery context; the source tree and last qualified artifacts remain v8/dev7. New local dev8 API source is NOT uploaded in this context-only checkpoint.",
+  "paired_product_last_qualified_commit": "5a50893669dffb4cb4aeda8ca09956ec1e7fe70b"
+}
