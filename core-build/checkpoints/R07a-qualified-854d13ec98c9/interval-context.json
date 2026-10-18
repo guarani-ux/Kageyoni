@@ -1,0 +1,35 @@
+{
+  "format": "samsara-github-selected-qualified-checkpoint/1",
+  "status": "SELECTED_R07a_QUALIFIED",
+  "core_complete": false,
+  "label": "R07a-qualified-854d13ec98c9",
+  "product": "0.5.3.dev13",
+  "engine": "11.1.0.dev9",
+  "source_identity": "854d13ec98c92bde80460f385ca064e10ee642cb7da0c1e2d052bcbffab796bc",
+  "runtime_digest": "9e5e77a90e4a1c29d3dcc342b52d3d4f8016de708f0ca652406c3a5bdffa4e16",
+  "archive": {
+    "path": "/workspace/scratch/5c7ed9200168/resume_r07a/qualified-r07a/Samsara_Core_Build_Continuation.zip",
+    "bytes": 272924588,
+    "sha256": "cdf78651d247a2b8ec9847388a30539498c706a12e4efc97714ae882f58c4281",
+    "library_version": 12,
+    "library_file_id": "libfile_b4be79d59368819187fae7dceada0199",
+    "file_id": "file_0000000099b881f590ae561ae4767d75",
+    "manifest_files": 6239,
+    "zip_entries": 6240,
+    "readback": "Root reports actual stable-ID latest v12 exact bytes/SHA/CRC/all6239manifest/verify and next READY_R07b."
+  },
+  "qualification": "Read evidence/round-r07a/root-semantic-review.md, receiving-report.json and readiness-receipt.json. Actual387installedproduct/220source-wheel-installedmatches, eight current regressions/17nativeworlds/eightbackuprestore-replay, fourcopySIGKILLseams, currentnative-sourcework twoSIGKILL/replay/relocation, actual code return+11literalfile/7installedpayloadverification, independent later use/Keeper exertion3to2, cold112exactreads/no-touchending, three specific readiness negatives. These are selected-path actual qualifications, never whole-core completion.",
+  "original_request": "Original private-native-note study remains correctly refused; request PARTIAL. Public admitted source-study and later private reasoning executed without laundering private note. Returned developer component retrieved/reopened and later exploration remain choice executed, preserving loan/parent.",
+  "engine_scope": "Authoritative engine dev9 source and wheel unchanged.191nativepayloads exact antecedent;226nativecases historical, not relabelled a current whole-engine run. New engine commit is paired context only.",
+  "unfinished": "R07b actual R06 parent and authenticated already-continued chained continuation NOT IMPLEMENTED; current v8/v10 first-copy transition refuses these honestly. Read actual next-r07b-packet.md. Full all-thirteen-loop fresh receiving review and essential repairs remain. General worker/heartbeat/gracefulstop/full1000dormant20job/propertygraphmerge/timer/extension/canonical/human breadth remains unqualified.",
+  "next_action": "Recover latest exact package and runtime, inspect current/next packet/producers/consumers/host/jobs/locks/uncertain effects, run verify_candidate/next_round. READY checks prerequisites only. Freeze R07b semantic namespace/policy/receipt/capsule chain before delegation and implement bounded repair; never rewrite metadata or execute metadata code.",
+  "active_operations": "Frozen selected R07a immutable snapshot. No live build source writer included. New root R07b work may exist separately and is excluded; inspect actual active/pending jobs before resuming or repeating effects.",
+  "preservation": "All prior verified full archives, old failure evidence, earlier IN_PROGRESS checkpoint and unseen source paths retained. Only selected named current source/status/context replaced. Entire v12ZIP includes binary worlds/history; latest R07a UTF8 reports/tools directly readable under core-build.",
+  "authority": "User authorized private continuation same-branch context pushes each interval. One writer exact-head CAS force=false; no PR/merge/deploy/publication/purchases/livecampaign/manual credentials.",
+  "remaining_obligations": "All13loops/22requirements/13slices/14increments/F1-F5 retained. Missing authentic cast/save/atlas blocks dependent canonical work only. No automatic mastery/autonomous participants/human enjoyment or broad sandbox claim.",
+  "remote_before": {
+    "product": "97be3f5fccf17934252c1327e89aadb451c3f32c",
+    "engine": "777e75190383d0678fcd502ddef4a528bd88c7c8"
+  },
+  "pairing": "The resulting context-only engine commit is pinned exactly by the paired product context."
+}
