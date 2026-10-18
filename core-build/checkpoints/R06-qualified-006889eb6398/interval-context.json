@@ -1,0 +1,35 @@
+{
+  "format": "samsara-github-selected-qualified-checkpoint/1",
+  "status": "SELECTED_R06_QUALIFIED",
+  "core_complete": false,
+  "label": "R06-qualified-006889eb6398",
+  "product": "0.5.3.dev12",
+  "engine": "11.1.0.dev9",
+  "source_identity": "006889eb6398dcc79641ca0070d18bce9c3980b45472a70049e50ebd46e8f256",
+  "runtime_digest": "b8dcc7fc345bd3a23d9c3fe66bf53e27870c6c073be28a50d2c7a7f498b37f0f",
+  "archive": {
+    "path": "/workspace/scratch/5c7ed9200168/resume_r06/qualified-r06/Samsara_Core_Build_Continuation.zip",
+    "bytes": 217601589,
+    "sha256": "f92d2bce4c056cbfa86dde93896958977f6dfacf6dfaecacae012294e11a651b",
+    "library_version": 11,
+    "library_file_id": "libfile_b4be79d59368819187fae7dceada0199",
+    "file_id": "file_000000000c60823080e879331fadb3eb",
+    "zip_entries": 5761,
+    "manifest_files": 5760,
+    "latest_readback": "Root verified latest stable identity version11, exact bytes/SHA, CRC, extracted manifest, verify_candidate and next_round READY R07a."
+  },
+  "qualification": "Read evidence/round-r06/root-semantic-review.md and readiness-receipt.json. Actual382installedproduct/218payloads, eight current installed regressions/17nativeworlds/eightbackuprestore-replay; actual native inquiry/draft two SIGKILL seams/exact replay/relocation; independent authored study/unlike research/script then fresh revised media/records current native use and old-citation refusals; coldrecipient unlike A/V study-to-records decisioncard, sixth native inquiry/26exact refs; three readiness negative controls. Counts establish selected loops only, not whole world.",
+  "engine_scope": "Engine source and dev9 wheel unchanged; this new engine context commit pairs the exact R06 checkpoint and does not claim new native code or rerun unaffected native226suite.",
+  "remaining": "R07a recorded READY prerequisites only; compatibility/authorized development/initiative and full integrated core qualification remain. General model/unknown workers, heartbeat/graceful-stop breadth/full1000dormant20jobcalibration, general merges/timers/causal breadth and all retained obligations remain. No broad learning/mastery/autonomous NPC or human enjoyment claim.",
+  "source_scope": "All frozen selected product and authoritative separate engine files mapped to respective roots. All unseen prior paths and archive deliveries retained. Full ZIP carries binary evidence/worlds/history; UTF-8 R06 evidence readable directly under core-build.",
+  "active_operations": "Frozen R06 package immutable; no live writer in snapshot. Root may start separate newer R07 IN_PROGRESS work; it is not included in this qualified checkpoint. Inspect actual host/jobs/uncertain effects before any execution.",
+  "next_action": "Recover latest package and exact source/runtime/host, verify_candidate/next_round; inspect R07a packet and real producers/consumers, preserve all retained scope, implement bounded authorized continuation.",
+  "authority": "User explicitly authorizes private same-branch contextual pushes. Sole remote writer, exact-head CAS force=false; no PR/merge/deploy/publication/purchases/live campaign/manual credentials.",
+  "remote_before": {
+    "product": "824c284e999aa8593ede735fd757492d2ce4c07e",
+    "engine": "99d6e1870bb566a2e8a8c396bb4d2905a702d67f"
+  },
+  "preservation": "No remote path deletions; only named selected source/current status/context changes. Prior source, full archives and unseen work retained.",
+  "limits": "Missing authentic legacy cast/save/atlas blocks dependent canonical work only. Historical reports remain historical unless current runtime binding applies. No transferred sandbox/process/resource promises. All13loops/22oldrequirements/13slices/14increments/F1-F5 obligations retained.",
+  "pairing": "The resulting context-only engine commit is pinned exactly in product interval-context."
+}
