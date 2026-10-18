@@ -169,3 +169,8 @@ def install_property_changes(engine):
 def install_causal_delivery(engine):
     install_property_changes(engine)
     _install_component(engine,schema_path('migration_029.sql'),29,28,'causal_delivery_interface')
+
+
+def install_extensions(engine):
+    install_causal_delivery(engine)
+    _install_component(engine,schema_path('migration_030.sql'),30,29,'extension_lifecycle_interface')

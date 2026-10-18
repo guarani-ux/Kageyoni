@@ -2758,6 +2758,9 @@ class Engine:
         if self.db.execute("SELECT 1 FROM engine_versions WHERE component='causal_delivery_interface'").fetchone():
             from .workspaces.causal_delivery import verify_causal_delivery
             verify_causal_delivery(self)
+        if self.db.execute("SELECT 1 FROM engine_versions WHERE component='extension_lifecycle_interface'").fetchone():
+            from .workspaces.extensions import verify_extensions
+            verify_extensions(self)
         return {
             "ok":True,"schema_version":2,"runtime_schema":"4",
             "branches":self.db.execute("SELECT count(*) FROM branches").fetchone()[0],
