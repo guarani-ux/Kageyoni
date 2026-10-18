@@ -1,0 +1,32 @@
+{
+  "status": "IN_PROGRESS_UNQUALIFIED",
+  "candidate_runtime": "9e5e77a90e4a1c29d3dcc342b52d3d4f8016de708f0ca652406c3a5bdffa4e16",
+  "product_version": "0.5.3.dev13",
+  "product_wheel_sha256": "9a87970bfb4a5f2104360492fc4825d589cb1b5b5d9b80959dc4261f9653baf8",
+  "engine_version": "11.1.0.dev9",
+  "engine_wheel_sha256": "dd8d2b65df7685bba21126a656ac33ec98ad907c49b187d7e785d6853e876632",
+  "qualified_parent_library_version": 11,
+  "qualified_parent_zip_sha256": "f92d2bce4c056cbfa86dde93896958977f6dfacf6dfaecacae012294e11a651b",
+  "source_frozen": true,
+  "evidence_limits": "387 full installed product tests still RUNNING at checkpoint, not passed. Four actual SIGKILL seams, oldload ending/newadmission disable, source unchanged, actual Keeper v8 consequence and Visitor public study/later private reasoning,220 payload matches pass. Independent source review fixes actual control receipts; BLOB concern native verifier already rejects (correction retained).",
+  "unfinished": "Private-note native source-study remains correctly refused; original request PARTIAL. Actual r7-development generic work component still WAITING, no code-return yet. Full regressions/offline/relocation/qualification/R07b review pending.",
+  "active_operations": [
+    "root installed suite session35333",
+    "root source-withdrawal adverse probe session61714; report may complete after snapshot, not claimed here"
+  ],
+  "uncertain_effects": [],
+  "next_action": "Inspect actual product suite/source-withdrawal result, repair genuine failures, finish installed old/new receiving/relocation/offline checks, return actual developer component, qualify exact candidate then R07b. Preserve all13 loops/22requirements/13slices/14increments/F1-F5.",
+  "format": "samsara-github-in-progress-source-checkpoint/1",
+  "label": "R07a-IN_PROGRESS-source1-9e5e77a90e4a",
+  "core_complete": false,
+  "snapshot_zip_bytes": 3684726,
+  "snapshot_zip_sha256": "9c05c4d8e53ca8ffbe82e6a8840f194de23d61dd1addd7c92f8590a88ded6763",
+  "snapshot_manifest_files": 430,
+  "qualified_parent_product_commit": "9c773f361628814d5b27c2278c547e07f0439e16",
+  "qualified_parent_engine_commit": "3ec3f4b82f6ae876ab1357b3842a425bbefede4e",
+  "recovery": "Recover qualified continuation Libraryv11 (217601589bytesSHAf92d2bce4c056cbfa86dde93896958977f6dfacf6dfaecacae012294e11a651b) first; verify its original manifest and prior evidence. Then apply this separately marked IN_PROGRESS snapshot product/tools/status/evidence/wheel overlay. Do not run old qualified v11 manifest against overlaid source or claim overlaid candidate qualified. Inspect CHECKPOINT_CONTEXT and current jobs before resuming; never repeat uncertain effects. Preserve original v11 artifact.",
+  "remote_source_scope": "All immutable snapshot selected product files mapped to repository root; snapshot all431files retained through full ZIP parts; UTF8 evidence/source and current wheel also readable directly under checkpoint. Prior qualified core-build/verified/R06-006889eb6398 and wheel artifacts remain unchanged.",
+  "authority": "User authorized contextual private continuation checkpoint. Expected-head CAS force=false; preserve all unseen/newer paths. No PR/merge/deploy/publication/live campaign/manual credentials.",
+  "engine_code_changed": false,
+  "pairing": "The resulting context-only engine commit is pinned exactly in paired product interval context."
+}
