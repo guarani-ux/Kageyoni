@@ -1,0 +1,45 @@
+{
+  "format": "samsara-github-selected-qualified-checkpoint/1",
+  "status": "SELECTED_R05C_QUALIFIED",
+  "core_complete": false,
+  "label": "R05c-qualified-f6606ba4a28a",
+  "product": "0.5.3.dev11",
+  "engine": "11.1.0.dev9",
+  "source_identity": "f6606ba4a28ac2b4a8a7b67ed076f5905cc2cbd0ca8107f49b3613d3a52ef16d",
+  "runtime_digest": "3eec9cc25d3bb7dad136bb55e9e7066fd8cdff7052be3fd1a2bd9e79e651d04f",
+  "manifest_files": 4228,
+  "manifest_sha256": "c4ab69c1397aa9e35aa636248a77276acd48cea76da3cf902b18709ac93ea976",
+  "source_scope": "All frozen selected product and separate-engine files mapped to respective repository roots. Original omitted raw fixtures and all unseen remote paths remain.",
+  "qualification": "Read evidence/round-r05c-reconstruction/qualification.md and raw reports; installed product364/native226, source/wheel/installed217, seven current regressions, two real SIGKILL seams, recipient return/later bench use, independent three scenarios, fresh offline57 pinned readbacks, three specific readiness negative controls. Counts support the bounded actual operations, not whole-core completion.",
+  "repairs_and_limits": "Old host unfinished R05c source/raw reports were lost and its passes were not borrowed. Reconstructed application was freshly requalified. Older-engine22 failures, hearing knowledge invariant repair, genuine native20 packaging failures, verifier mapping/origin/count faults and receiver API/index errors are preserved. Two actual canonical contract modules now ship for six real consumers;189 native payloads and30 SQL unchanged. Reviewer authored62 integration tests, so independent implementation/execution/scenarios are not fresh-context judgment. No full load, enjoyment, autonomous Keeper, general atlas, hostile-code sandbox, broad worker or older-save upgrade claim.",
+  "metadata_limits": "Frozen engine-lock candidate description retains the prequalification words qualification pending; its exact dev9 wheel/reference/digest are current, and the later source/runtime-bound qualification receipt governs the selected R05c claim. No frozen source bytes are relabelled or edited.",
+  "active_example": "Synthetic Visitor-only optional open-exploration pending; Keeper turn, single tray loan and promise remain open. No live build worker.",
+  "next": "R06 recorded READY prerequisites only: freeze root shared handler/family/envelope/source/recipient contracts, then implement unlike actual source-grounded study/research/brief-matched A/V work and initiative/refusal; R07 compatibility/development/full-core receiving review remains.",
+  "unresolved": "Missing authentic cast/save/atlas blocks dependent canonical work only. All13 loops/22 original requirements/13 slices/14 increments/F1-F5 retained.",
+  "host": "Do not transfer host lifetime/network/resource/sandbox or PID capabilities. Inspect actual current controls and pending/uncertain operations before execution.",
+  "authority": "User explicitly authorizes contextual private continuation branch source+artifact pushes each interval. One writer, exact expected-head CAS, force=false. No PR, merge, force, publication, deployment, live campaign mutation or manual credentials.",
+  "preservation": "Every remote base leaf and prior artifact preserved except explicitly selected changed source/current status/context. Full continuation ZIP includes all binary worlds, mutation specimens and prior records. Readable direct carrier includes all latest R05c UTF-8 raw evidence excluding duplicate prior checkpoint subtree.",
+  "remote_before": {
+    "product": "eade8f29066dd86bf5b65bf8394fdd49ae1df08d",
+    "engine": "1d4564127ee10438aa06dfe1425bc219997dc822"
+  },
+  "archive": {
+    "path": "/workspace/scratch/5c7ed9200168/recovery_0325/qualified-r05c/Samsara_Core_Build_Continuation.zip",
+    "bytes": 163208471,
+    "sha256": "472731fc94711966087568e5900d3526455b8182a02989ebe1c96348aada13d6",
+    "library_version": 10,
+    "stable_id": "libfile_b4be79d59368819187fae7dceada0199",
+    "file_id": "file_0000000024dc81f5a4fce1ad33b574a2",
+    "readback_receipt": {
+      "version": 10,
+      "library_file_id": "libfile_b4be79d59368819187fae7dceada0199",
+      "file_id": "file_0000000024dc81f5a4fce1ad33b574a2",
+      "size_bytes": 163208471,
+      "sha256": "472731fc94711966087568e5900d3526455b8182a02989ebe1c96348aada13d6",
+      "zip_entries": 4229,
+      "crc_ok": true
+    },
+    "root_go": "Explicit paired private source/status/evidence/wheels/full ZIP CAS push GO, 2026-10-18. Root separately begins R06 workcopy; frozen qualified-r05c remains immutable."
+  },
+  "pairing": "This resulting engine commit is pinned exactly in product interval-context.json."
+}

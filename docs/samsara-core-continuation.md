@@ -1,32 +1,7 @@
-# Matching reconstructed R05c engine source checkpoint
+# Matching selected qualified R05c engine
 
-IN_PROGRESS_NOT_QUALIFIED pair:Samsara0.5.3.dev10 / Kageyoni11.1.0.dev8.
-Native artifact/document recipient API source bytes and focused test are exactly
-restored from recorded producing patches/hashes against qualified v8. Fresh
-current-host source API/legacy68checks pass; no old lost-host pass is inherited.
-The caller's authorization remains distinct from the created artifact audience.
+Samsara0.5.3.dev11 / separate Kageyoni11.1.0.dev9; SELECTED_R05C_QUALIFIED, core_complete=false. Exact full source identity f6606ba4a28ac2b4a8a7b67ed076f5905cc2cbd0ca8107f49b3613d3a52ef16d; runtime 3eec9cc25d3bb7dad136bb55e9e7066fd8cdff7052be3fd1a2bd9e79e651d04f.
 
-Full matching source identity:
-852ead6d03d101baa78921e84686f6479e1635d74d3b90e5dd7abf4b73f1bfce.
-Current engine wheel SHA256:
-45580add0a35a2430ef17c87dbbb97544238c016ead33e92e04e4d68ee1def6d.
+Product context pins this exact engine commit. Full source map, current wheel pair, reports, preserved failures, limits, final complete archive and reconstruction instructions live in guarani-ux/SAMSARA core-build. Native current226 affected cases pass;217 source/wheel/installed entries correspond, two canonical contract modules now ship for six real consumers, all189 prior native payloads and30 SQL unchanged. Genuine old20 packaging failures remain preserved. Read the paired qualification.md for actual operations and independent-review limits.
 
-Full product/context/current sealed wheel pair and exact source/evidence map:
-https://github.com/guarani-ux/SAMSARA/tree/codex/samsara-core-continuation/core-build
-
-Fresh native installed/broad product/whole-loop exploration, kill/reopen/
-relocation/recipient/later use, independent/offline/negative controls remain
-unqualified in this snapshot. Source/wheel215entry correspondence does not
-establish them. Frozen partial logs are not passes. Prior R05c reports were lost.
-Current lock outer dev8 wheel/SHA match; nested historical dev7 descriptor is
-explicit unresolved WIP metadata, with no runtime compatibility claim.
-
-The last qualified stage remains v8 R05b. All original/full-release obligations,
-old playable metadata compatibility, general worker/graph/code/load/ending
-breadth and the direct-registry requirement remain. New host controls must be
-inspected; AF_UNIX is EPERM and actual PID/procfs/pidfd guards still apply.
-
-User authorizes private-branch interval checkpoints, maintenance and bounded
-subagents. Fresh expected-head CAS only, no force/PR/merge/deploy/publication/
-credentials/live campaign. Preserve all unseen paths, qualified artifacts and
-prior interrupted recovery context. Product context pins this exact commit.
+R06 unlike source-based study/research/real work plus participant initiative remains unimplemented; R07 development/compatibility/full review remains. Missing authentic canon blocks dependent work only. No whole-core/full-world claim. Preserve all unseen original paths and earlier artifacts. User authorized private interval checkpoint; expected-head CAS, force=false; no PR/merge/deploy/publication/live campaign/manual credentials.
