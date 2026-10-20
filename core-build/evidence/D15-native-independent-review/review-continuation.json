@@ -1,0 +1,13 @@
+{
+  "kind": "Read-only-review pending final RAM source freeze",
+  "overlay_available_bytes": 0,
+  "new_write_destination": "/dev/shm/d15-repair-independent-review-current",
+  "root_adopted_repairs_after_v2": [
+    "Normal successful return requires non-null retained attempt identity exactly equal to current queue identity",
+    "Current033 attempt with no retained registration requires queue.process_json NULL",
+    "New explicit cancel dominates any existing stop disposition, preserving first time/deadline and earlier receipts; other dispositions cannot override prior selection"
+  ],
+  "diagnostic_order": "Keep specific stopped-returned diagnostic check before generic normal-return-shape refusal, preserving existing negative assertion.",
+  "execution": "No repaired native tests, Engine imports, DB/world opens, worker processes or heavy jobs by reviewer.",
+  "persistence_limit": "RAM-only current update; root must persist after storage permits. Earlier draft/identities on overlay untouched."
+}

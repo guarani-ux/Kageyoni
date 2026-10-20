@@ -1,0 +1,15 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/dev/shm/d15-repaired-native-run/engine TMPDIR=/dev/shm/d15-repaired-native-run/tmp D15_NATIVE_EVIDENCE=/dev/shm/d15-repaired-native-run/specimens resume-current/env-dev18/bin/python /dev/shm/d15-repaired-native-run/run.py",
+  "pytest_args": [
+    "/dev/shm/d15-repaired-native-run/tests/test_worker_liveness.py",
+    "/dev/shm/d15-repaired-native-run/tests/test_liveness_review_countercases.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "pythonpath=",
+    "--basetemp=/dev/shm/d15-repaired-native-run/pytest-temp",
+    "--junitxml=/dev/shm/d15-repaired-native-run/native-v3-01.xml"
+  ],
+  "source_frozen_v3": true
+}

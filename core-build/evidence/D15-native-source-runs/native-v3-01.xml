@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="37" time="36.210" timestamp="2026-10-20T13:31:54.613645+02:00" hostname="de38da22d1a3"><testcase classname="test_worker_liveness" name="test_renew_duplicate_reorder_ceiling_accounting" time="1.026" /><testcase classname="test_worker_liveness" name="test_invalid_heartbeat_inputs_atomic[True-110]" time="1.107" /><testcase classname="test_worker_liveness" name="test_invalid_heartbeat_inputs_atomic[0-110]" time="0.923" /><testcase classname="test_worker_liveness" name="test_invalid_heartbeat_inputs_atomic[1-True]" time="0.994" /><testcase classname="test_worker_liveness" name="test_invalid_heartbeat_inputs_atomic[1-nan]" time="1.081" /><testcase classname="test_worker_liveness" name="test_invalid_heartbeat_inputs_atomic[1-inf]" time="0.933" /><testcase classname="test_worker_liveness" name="test_expiry_fence_and_clock_rollback" time="0.937" /><testcase classname="test_worker_liveness" name="test_heartbeat_rechecks_actual_authority_ancestors_and_profile[binding]" time="0.964" /><testcase classname="test_worker_liveness" name="test_heartbeat_rechecks_actual_authority_ancestors_and_profile[epoch]" time="0.987" /><testcase classname="test_worker_liveness" name="test_heartbeat_rechecks_actual_authority_ancestors_and_profile[ancestor]" time="1.050" /><testcase classname="test_worker_liveness" name="test_heartbeat_rechecks_actual_authority_ancestors_and_profile[profile]" time="0.984" /><testcase classname="test_worker_liveness" name="test_stop_exact_replay_cancel_dominance_and_observation" time="1.003" /><testcase classname="test_worker_liveness" name="test_reconciling_process_keeps_configured_and_heavy_slot[1]" time="0.973" /><testcase classname="test_worker_liveness" name="test_reconciling_process_keeps_configured_and_heavy_slot[2]" time="0.928" /><testcase classname="test_worker_liveness" name="test_old_epoch_stop_exit_but_no_renew_or_acceptance" time="0.980"><failure message="AssertionError: Regex pattern did not match.&#10; Regex: 'observe stopped'&#10; Input: 'stopped worker cannot return'">make = &lt;function make.&lt;locals&gt;.factory at 0x7feb62371b20&gt;
+
+    def test_old_epoch_stop_exit_but_no_renew_or_acceptance(make):
+        f=make();j,k=f.start();f.q.boot(105)
+        with pytest.raises(Rejected):f.q.assert_lease(j,k,106)
+        with pytest.raises(Rejected):f.q.heartbeat(j,k,1,106)
+&gt;       with pytest.raises(Rejected,match='observe stopped'):f.q.transition(j,'returned',clear_process=True)
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/dev/shm/d15-repaired-native-run/tests/test_worker_liveness.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/dev/shm/d15-repaired-native-run/engine/kageyoni/workspaces/job_queue.py:158: in transition
+    require(state != 'returned' or normal_return, 'stopped worker cannot return')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'stopped worker cannot return'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -&gt; None:
+        if not condition:
+&gt;           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: stopped worker cannot return
+
+/dev/shm/d15-repaired-native-run/engine/kageyoni/engine.py:86: Rejected
+
+During handling of the above exception, another exception occurred:
+
+make = &lt;function make.&lt;locals&gt;.factory at 0x7feb62371b20&gt;
+
+    def test_old_epoch_stop_exit_but_no_renew_or_acceptance(make):
+        f=make();j,k=f.start();f.q.boot(105)
+        with pytest.raises(Rejected):f.q.assert_lease(j,k,106)
+        with pytest.raises(Rejected):f.q.heartbeat(j,k,1,106)
+&gt;       with pytest.raises(Rejected,match='observe stopped'):f.q.transition(j,'returned',clear_process=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'observe stopped'
+E        Input: 'stopped worker cannot return'
+
+/dev/shm/d15-repaired-native-run/tests/test_worker_liveness.py:184: AssertionError</failure></testcase><testcase classname="test_worker_liveness" name="test_normal_running_finish_boundary_and_explicit_exit" time="1.961" /><testcase classname="test_worker_liveness" name="test_genuine32_predecessor_backup_preservation_restore_and_readonly" time="1.392" /><testcase classname="test_worker_liveness" name="test_checked33_install_rollback_and_checksum_failure" time="0.947" /><testcase classname="test_worker_liveness" name="test_receipt_immutability_and_correspondence_tamper" time="0.806" /><testcase classname="test_worker_liveness" name="test_configured_light_slot_retention_and_release[1]" time="0.874" /><testcase classname="test_worker_liveness" name="test_configured_light_slot_retention_and_release[2]" time="0.974" /><testcase classname="test_worker_liveness" name="test_terminal_parent_rejects_heartbeat_and_attempt_history_retained" time="0.864" /><testcase classname="test_liveness_review_countercases" name="test_preregistered_stop_cannot_return" time="0.862" /><testcase classname="test_liveness_review_countercases" name="test_stop_and_exit_advance_cross_attempt_clock_floor" time="0.804" /><testcase classname="test_liveness_review_countercases" name="test_known_older_receipt_is_exact_zero_write_replay_after_validation" time="0.888" /><testcase classname="test_liveness_review_countercases" name="test_never_registered_stop_settles_without_invented_exit[pause-paused]" time="0.999" /><testcase classname="test_liveness_review_countercases" name="test_never_registered_stop_settles_without_invented_exit[cancel-cancelled]" time="0.825" /><testcase classname="test_liveness_review_countercases" name="test_never_registered_stop_settles_without_invented_exit[shutdown-reconciling]" time="0.891" /><testcase classname="test_liveness_review_countercases" name="test_retained_registered_identity_guards_illicitly_cleared_queue_process" time="0.800" /><testcase classname="test_liveness_review_countercases" name="test_backward_exit_uncertain_highwater_survives_boot_and_replay" time="0.781" /><testcase classname="test_liveness_review_countercases" name="test_normal_return_cannot_erase_missing_or_changed_registered_identity[cleared]" time="0.899" /><testcase classname="test_liveness_review_countercases" name="test_normal_return_cannot_erase_missing_or_changed_registered_identity[mutated]" time="0.988" /><testcase classname="test_liveness_review_countercases" name="test_normal_return_cannot_erase_missing_or_changed_registered_identity[never_registered]" time="0.933" /><testcase classname="test_liveness_review_countercases" name="test_matching_registered_identity_normal_return_remains_free_of_exit_receipt" time="0.904" /><testcase classname="test_liveness_review_countercases" name="test_current_unregistered_attempt_rejects_queue_only_process_identity" time="0.882" /><testcase classname="test_liveness_review_countercases" name="test_explicit_cancel_dominates_nonpause_unregistered_stop_without_fake_exit[shutdown]" time="0.906" /><testcase classname="test_liveness_review_countercases" name="test_explicit_cancel_dominates_nonpause_unregistered_stop_without_fake_exit[protocol_error]" time="0.902" /></testsuite></testsuites>

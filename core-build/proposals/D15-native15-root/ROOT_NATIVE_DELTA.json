@@ -1,0 +1,7 @@
+{
+  "status": "ROOT_FUTURE_SOURCE_ONLY_UNEXECUTED",
+  "new_terminal_method": "exited_after_stop",
+  "reason": "An actual unforced non20 Popen exit observed after stop must not be labeled cooperative or said to precede stop. Existingstoprecord remains required, actualreturncode retained; nativeAPI stillcannotproveOSobservation.",
+  "antecedent_source": "Immutable nativeV4 worker a6ca48, queueec310d retained outside futurecandidate; methodaddition/rootglobalhook notcoveredbyV4sourcechecks.",
+  "actual_tests": "Native37predicates passing executions across preserved V3 36PASS1diagnosticFAIL +V4 affected14PASS; worker46purePASS. New5rootnativechecks authoredASTonly. Combinedinstalledcandidate/processtransportNOTRUN."
+}

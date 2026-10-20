@@ -1,0 +1,53 @@
+..............F......................                                    [100%]
+=================================== FAILURES ===================================
+_____________ test_old_epoch_stop_exit_but_no_renew_or_acceptance ______________
+
+make = <function make.<locals>.factory at 0x7feb62371b20>
+
+    def test_old_epoch_stop_exit_but_no_renew_or_acceptance(make):
+        f=make();j,k=f.start();f.q.boot(105)
+        with pytest.raises(Rejected):f.q.assert_lease(j,k,106)
+        with pytest.raises(Rejected):f.q.heartbeat(j,k,1,106)
+>       with pytest.raises(Rejected,match='observe stopped'):f.q.transition(j,'returned',clear_process=True)
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/dev/shm/d15-repaired-native-run/tests/test_worker_liveness.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/dev/shm/d15-repaired-native-run/engine/kageyoni/workspaces/job_queue.py:158: in transition
+    require(state != 'returned' or normal_return, 'stopped worker cannot return')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'stopped worker cannot return'
+rejection_class = None, details = None
+
+    def require(
+        condition: Any,
+        message: str,
+        rejection_class: str | None = None,
+        details: dict | None = None,
+    ) -> None:
+        if not condition:
+>           raise Rejected(message, rejection_class=rejection_class, details=details)
+E           kageyoni.engine.Rejected: stopped worker cannot return
+
+/dev/shm/d15-repaired-native-run/engine/kageyoni/engine.py:86: Rejected
+
+During handling of the above exception, another exception occurred:
+
+make = <function make.<locals>.factory at 0x7feb62371b20>
+
+    def test_old_epoch_stop_exit_but_no_renew_or_acceptance(make):
+        f=make();j,k=f.start();f.q.boot(105)
+        with pytest.raises(Rejected):f.q.assert_lease(j,k,106)
+        with pytest.raises(Rejected):f.q.heartbeat(j,k,1,106)
+>       with pytest.raises(Rejected,match='observe stopped'):f.q.transition(j,'returned',clear_process=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'observe stopped'
+E        Input: 'stopped worker cannot return'
+
+/dev/shm/d15-repaired-native-run/tests/test_worker_liveness.py:184: AssertionError
+---- generated xml file: /dev/shm/d15-repaired-native-run/native-v3-01.xml -----
+=========================== short test summary info ============================
+FAILED ../../../dev/shm/d15-repaired-native-run/tests/test_worker_liveness.py::test_old_epoch_stop_exit_but_no_renew_or_acceptance
+1 failed, 36 passed in 36.21s

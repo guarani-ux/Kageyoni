@@ -1,0 +1,13 @@
+{
+  "source": "/dev/shm/d15-native-installed-tmp",
+  "archive": "/dev/shm/d15-native-installed/closed-pytest-temp.zip",
+  "archive_bytes": 58816913,
+  "archive_sha256": "224c132fb6706db7f061728363c1fa03c158464e8c35f80637c154c39f655ca2",
+  "files": 1342,
+  "symlink_diagnostics": 26,
+  "source_bytes": 1806239229,
+  "crc_and_all_bytes": true,
+  "no_source_open_fds": true,
+  "released_redundant_copy": true,
+  "sqlite_opened_or_recovered": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "D14_SELECTED_COMPONENT_RESULT_WITH_D15_UNINTEGRATED_FUTURE_SOURCE",
+  "source_identity": "6902a15bc112b1bd1e9b0d66b73ed1a9b1c88a8431c296b7c4eaf0eb2e5a4043",
+  "runtime_digest": "40c4a5aa65844550afc35c65a094a39695f27a3e2e2018a3cc5d1e8e4f8bc590",
+  "installed_authority": "product23/native14 unchanged; no versions/wheels/lock or authoritative source adopted from D15 proposals",
+  "critical_pair": {
+    "SAM": "2a846c4910a8e689431f2dbfe09fd528820c1989",
+    "Kage": "4dc9ae74db7316c9a4e5f092f20aa45c07ebd72b"
+  },
+  "chronology": "Primary425 source/currentmetadata snapshot and unchanged sealed53MB capsule predate newer C2/selected receipt/currentledger. Current BUILD_STATUS is advanced explicitly here; all prior snapshots/failures preserved.",
+  "D14_result": "Exact root selected receipt binds C1 originalFAILED measurement plus observation-only tail and freshC2PASS/control/42installednative/111distinctproduct predicates. C2local two_capacity_sequence_complete=false is retained, not rewritten; explicit priorC1 binding and combined receipt establish selected sequence only.",
+  "scope": "ALL F1-F5/full release false; no full ten-scenario load matrix/human/model/heartbeat/graceful/old-product compatibility claim.",
+  "D15_native_future": "V3 36PASS1diagnostic-orderFAIL, then finalV4 14affectedPASS; not one clean37suite. Source-only native leaf/review/runs stored separately from installed authority.",
+  "D15_worker_future": "46pure checks PASS on exact frozen sourcebcc536; stale source-only AST declaration remains historical raw provenance. No installed transport/heartbeat/graceful qualification.",
+  "D15_common_future": "SYNTAX_ONLY named root files; versions not bumped/wheels not built. Active future runner.py/test writer explicitly excluded.",
+  "F1v8_future": "Static proposal only; large carrier represented by exact parts, no activated world qualification.",
+  "capsule": "Exact53,049,314B SHA0a4c34dcb426662d2126f40ee4e2c0d988e3bc2b1121775997aeaf7baafa25f7 unchanged; remote artifact custody pending.",
+  "raw_worlds": "13D14 raw specimen ZIPs288889435B pending remote custody. C1/C2/control fullworlds/journals and D15raw source-test specimens are observed local provenance and are not all made durable by these small reports. No full retrievability claim.",
+  "physical_restore": "Prior D13 physical restore NOT_QUALIFIED across invocations; causeUNKNOWN; no path assertion or guard weakened.",
+  "library": "Latest verified15; no new Library version/save claim.",
+  "portability": "Use immutable commit + bound recovery-map relative paths; raw absoluteRAM paths remain original provenance only. Never rely on them as recovery authority.",
+  "repository": "Kage"
+}

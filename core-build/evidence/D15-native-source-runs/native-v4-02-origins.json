@@ -1,0 +1,17 @@
+{
+  "route": "complete isolated source, NOT installed qualification",
+  "modules": {
+    "kageyoni.engine": "/dev/shm/d15-repaired-native-run/engine/kageyoni/engine.py",
+    "kageyoni.workspaces.worker_liveness": "/dev/shm/d15-repaired-native-run/engine/kageyoni/workspaces/worker_liveness.py",
+    "kageyoni.workspaces.job_queue": "/dev/shm/d15-repaired-native-run/engine/kageyoni/workspaces/job_queue.py",
+    "kageyoni.persistence.migrations": "/dev/shm/d15-repaired-native-run/engine/kageyoni/persistence/migrations.py"
+  },
+  "python": "/workspace/scratch/5c7ed9200168/resume-current/env-dev18/bin/python",
+  "pythonpath": "/dev/shm/d15-repaired-native-run/engine",
+  "source_hashes": {
+    "/dev/shm/d15-repaired-native-run/engine/kageyoni/engine.py": "e4b7d8fde2a9f91db9bb627c49cac12d74caa4450c7318a0fcdcce8721be6742",
+    "/dev/shm/d15-repaired-native-run/engine/kageyoni/workspaces/worker_liveness.py": "a6ca48206fb5bd5cbbd1c5fbd78e93520268017b220bf14265becb8c8645d8d6",
+    "/dev/shm/d15-repaired-native-run/engine/kageyoni/workspaces/job_queue.py": "ec310dadb4ec3a586f45468c607fcc3e88d7fae7223c0b0c6673bbad9464104b",
+    "/dev/shm/d15-repaired-native-run/engine/kageyoni/persistence/migrations.py": "ceab5ba005ff78d494f6b909363cf05ac4f880bc02a75ec87eec5ab94bb19747"
+  }
+}

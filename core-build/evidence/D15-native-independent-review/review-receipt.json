@@ -1,0 +1,66 @@
+{
+  "verdict": "ACCEPT_SOURCE_ONLY",
+  "accepted_source": "/dev/shm/d15-repair-current/freeze-v3",
+  "files": {
+    "engine/migration_033.sql": {
+      "sha256": "ae7c588d694dbd2aa67a3b862277ab5badd483b7bf02a224070034a0a3dd67f0",
+      "bytes": 3612
+    },
+    "engine/kageyoni/workspaces/worker_liveness.py": {
+      "sha256": "a6ca48206fb5bd5cbbd1c5fbd78e93520268017b220bf14265becb8c8645d8d6",
+      "bytes": 24536
+    },
+    "engine/kageyoni/workspaces/job_queue.py": {
+      "sha256": "e27ee95f81c3c772b96909dafaaea0b20020b13f6ef4907f8f51b5b5a760e39c",
+      "bytes": 14614
+    },
+    "engine/kageyoni/persistence/migrations.py": {
+      "sha256": "ceab5ba005ff78d494f6b909363cf05ac4f880bc02a75ec87eec5ab94bb19747",
+      "bytes": 9708
+    },
+    "tests/test_worker_liveness.py": {
+      "sha256": "0b8b4239b997545f0e227699d78e35e91e83b63f499c29f3b9e26f091d8e8a55",
+      "bytes": 15563
+    },
+    "tests/test_liveness_review_countercases.py": {
+      "sha256": "83fc25268c5816b23a5c3844e4d0db09385fba76988b0ab97fe755e86fc8e097",
+      "bytes": 7878
+    },
+    "REPORT.md": {
+      "sha256": "ef27b75e228d91e9d874b16313285c3bf80fdd6818d12046a505116f8b71e3cb",
+      "bytes": 13167
+    },
+    "D15-native-liveness.md": {
+      "sha256": "441d115b45388d4c75e1a2fcdf0c0fdf1faef68d7cc8ed1aa025dd50c6a9d7d8",
+      "bytes": 9809
+    }
+  },
+  "repaired_native_execution": false,
+  "reviewer_native_imports": false,
+  "reviewer_db_world_opens": false,
+  "reviewer_source_mutations": false,
+  "remaining": [
+    "current repaired native37-case suite and affected legacy/migration/restore checks",
+    "global verifier/installer/product consumer integration",
+    "actual worker heartbeat/stop/exit/process identity/owner-close/interruption and recipient continuation",
+    "durable storage of exact RAM artifacts"
+  ],
+  "historical_evidence": "Original22PASS antecedent and actual prerepair3FAIL3.95s remain distinct and preserved; no new runtime pass inferred",
+  "source_findings_resolved": [
+    "stopped/no-process false return",
+    "shared stop/exit/boot wall floor",
+    "eligible known heartbeat zero-write replay",
+    "registered identity equality/non-null for normal success",
+    "specific stopped-return diagnostic precedence",
+    "reverse no-registration queue identity correspondence",
+    "explicit cancel dominance across any prior stop without grace reset"
+  ],
+  "durability": "Final review and final source V3 are RAM-only; earlier overlay draft untouched",
+  "report": {
+    "path": "/dev/shm/d15-repair-independent-review-current/REPORT.md",
+    "sha256": "096211a865e8a169b7535d28572003374328078a76ee2857c02b1e6a5c7fb9b0",
+    "bytes": 12237
+  },
+  "reviewer_worker_or_owner_execution": false,
+  "reviewer_pending_jobs": false
+}

@@ -1,0 +1,16 @@
+{
+  "args": [
+    "-q",
+    "-x",
+    "-p",
+    "no:cacheprovider",
+    "--import-mode=prepend",
+    "-o",
+    "pythonpath=",
+    "/dev/shm/d15-product-integration/engine/tests/test_worker_liveness.py",
+    "/dev/shm/d15-product-integration/engine/tests/test_liveness_review_countercases.py",
+    "--basetemp=/dev/shm/d15-native-installed-tmp",
+    "--junitxml=/dev/shm/d15-native-installed/junit.xml"
+  ],
+  "route": "Isolated fresh offline native-only venv. Installed package preloaded; pytest pythonpath empty; all imported native origins captured same process. No Samsara product imported, no OS worker or human qualification."
+}
