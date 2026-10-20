@@ -174,3 +174,25 @@ def install_causal_delivery(engine):
 def install_extensions(engine):
     install_causal_delivery(engine)
     _install_component(engine,schema_path('migration_030.sql'),30,29,'extension_lifecycle_interface')
+
+
+def install_resource_profiles(engine):
+    """Explicit future capacity profile; never installed by merely opening a world."""
+    install_extensions(engine)
+    _install_component(engine,schema_path('migration_031.sql'),31,30,'resource_profile_interface')
+    from ..workspaces.resource_profiles import verify_resource_profiles
+    verify_resource_profiles(engine)
+
+
+def install_resource_admission(engine):
+    """Explicit indexed membership and native configured-capacity gates."""
+    install_resource_profiles(engine)
+    # A v31 trusted writer can retain activities before v32's final-usage
+    # guard exists. Refuse an over-capacity predecessor before changing its
+    # schema, even when the caller has not yet integrated the global hook.
+    from ..workspaces.resource_admission import _validate_configured_usage
+    for row in engine.db.execute('SELECT workspace_id FROM operational_workspaces'):
+        _validate_configured_usage(engine,row['workspace_id'])
+    _install_component(engine,schema_path('migration_032.sql'),32,31,'resource_admission_interface')
+    from ..workspaces.resource_admission import verify_resource_admission
+    verify_resource_admission(engine)

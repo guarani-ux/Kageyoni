@@ -10,6 +10,7 @@ from uuid import uuid4
 from ..engine import require, encoded
 from ..persistence.unit_of_work import UnitOfWork
 from ..resources import schema_path
+from .resource_profiles import ResourceProfiles
 
 
 class JobQueue:
@@ -31,8 +32,9 @@ class JobQueue:
         row = self.db.execute('SELECT * FROM activity_queue WHERE workspace_id=? AND job_id=?', (self.workspace_id, job_id)).fetchone()
         return dict(row) if row else None
 
-    def rows(self):
-        return [dict(r) for r in self.db.execute('SELECT * FROM activity_queue WHERE workspace_id=? ORDER BY sequence', (self.workspace_id,))]
+    def rows(self, live_only=False):
+        where = " AND state IN ('queued','running','reconciling')" if live_only else ''
+        return [dict(r) for r in self.db.execute('SELECT * FROM activity_queue WHERE workspace_id=?'+where+' ORDER BY sequence', (self.workspace_id,))]
 
     def root(self, activity_id):
         seen = set()
@@ -63,11 +65,18 @@ class JobQueue:
                 return old
             job = self.db.execute('SELECT activity_id,state FROM activity_jobs WHERE workspace_id=? AND job_id=?', (self.workspace_id,job_id)).fetchone()
             require(job and job['state']=='waiting', 'job unavailable')
-            require(self.db.execute("SELECT count(*) FROM activity_queue WHERE workspace_id=? AND state IN ('queued','running','paused','reconciling')", (self.workspace_id,)).fetchone()[0] < 32, 'queue full')
+            profile = ResourceProfiles(self.engine, self.workspace_id).get()
+            require(self.db.execute("SELECT count(*) FROM activity_queue WHERE workspace_id=? AND state IN ('queued','running','paused','reconciling')", (self.workspace_id,)).fetchone()[0] < profile['queue_backlog'], 'queue full')
             root = self.root(job['activity_id'])
-            self.db.execute('INSERT OR IGNORE INTO activity_queue_roots(workspace_id,root_id) VALUES(?,?)', (self.workspace_id,root))
-            self.db.execute('''INSERT INTO activity_queue(job_id,workspace_id,root_id,binding_id,authority_epoch,recipe,parameters_json,state,max_seconds)
-                VALUES(?,?,?,?,?,?,?,'queued',?)''', (job_id,self.workspace_id,root,binding_id,authority_epoch,recipe,encoded(parameters),max_seconds))
+            tail = self.db.execute('SELECT coalesce(max(last_dispatch),0) FROM activity_queue_roots WHERE workspace_id=?', (self.workspace_id,)).fetchone()[0]
+            self.db.execute('INSERT OR IGNORE INTO activity_queue_roots(workspace_id,root_id,last_dispatch) VALUES(?,?,?)', (self.workspace_id,root,tail))
+            columns = {r['name'] for r in self.db.execute('PRAGMA table_info(activity_queue)')}
+            if 'profile_digest' in columns:
+                self.db.execute('''INSERT INTO activity_queue(job_id,workspace_id,root_id,binding_id,authority_epoch,recipe,parameters_json,state,max_seconds,profile_digest)
+                    VALUES(?,?,?,?,?,?,?,'queued',?,?)''', (job_id,self.workspace_id,root,binding_id,authority_epoch,recipe,encoded(parameters),max_seconds,profile['digest']))
+            else:
+                self.db.execute('''INSERT INTO activity_queue(job_id,workspace_id,root_id,binding_id,authority_epoch,recipe,parameters_json,state,max_seconds)
+                    VALUES(?,?,?,?,?,?,?,'queued',?)''', (job_id,self.workspace_id,root,binding_id,authority_epoch,recipe,encoded(parameters),max_seconds))
         return self.row(job_id)
 
     def claim(self, now):
@@ -79,7 +88,8 @@ class JobQueue:
             self.db.execute('UPDATE activity_queue_owners SET last_wall=? WHERE workspace_id=?', (now,self.workspace_id))
             # Reconciling processes retain their slot until observed stopped.
             active = self.db.execute("SELECT count(*) FROM activity_queue WHERE workspace_id=? AND (state='running' OR (state='reconciling' AND process_json IS NOT NULL))", (self.workspace_id,)).fetchone()[0]
-            if active >= 2: return None
+            profile = ResourceProfiles(self.engine, self.workspace_id).get()
+            if active >= profile['active_jobs']: return None
             heavy = any(json.loads(r['parameters_json']).get('cpu_iterations',0)>0 for r in
                 self.db.execute("SELECT parameters_json FROM activity_queue WHERE workspace_id=? AND (state='running' OR (state='reconciling' AND process_json IS NOT NULL))", (self.workspace_id,)))
             rows = self.db.execute('''SELECT q.* FROM activity_queue q JOIN activity_queue_roots r
@@ -87,6 +97,8 @@ class JobQueue:
                 WHERE q.workspace_id=? AND q.state='queued' ORDER BY r.last_dispatch,q.sequence''', (self.workspace_id,)).fetchall()
             for raw in rows:
                 row = dict(raw)
+                if 'profile_digest' in row:
+                    require(row['profile_digest'] == profile['digest'], 'queue resource profile binding mismatch')
                 if heavy and json.loads(row['parameters_json']).get('cpu_iterations',0)>0:
                     continue
                 binding = self.db.execute('SELECT active,authority_epoch FROM activity_bindings WHERE binding_id=?', (row['binding_id'],)).fetchone()
@@ -140,7 +152,8 @@ def verify_queue(engine):
     check=db.execute('SELECT checksum FROM migration_checks WHERE version=27').fetchone()
     require(check and check[0]==hashlib.sha256(schema_path('migration_027.sql').read_bytes()).hexdigest(), 'queue migration checksum mismatch')
     require(not db.execute('PRAGMA foreign_key_check').fetchall(), 'queue foreign key failure')
-    require(not db.execute("SELECT workspace_id FROM activity_queue WHERE state='running' GROUP BY workspace_id HAVING count(*)>2").fetchall(), 'queue capacity exceeded')
+    for row in db.execute("SELECT workspace_id,count(*) AS active FROM activity_queue WHERE state='running' OR (state='reconciling' AND process_json IS NOT NULL) GROUP BY workspace_id"):
+        require(row['active'] <= ResourceProfiles(engine,row['workspace_id']).get()['active_jobs'], 'queue capacity exceeded')
     for row in db.execute("SELECT * FROM activity_queue WHERE state='running'"):
         owner=db.execute('SELECT epoch FROM activity_queue_owners WHERE workspace_id=?',(row['workspace_id'],)).fetchone()
         require(owner and row['owner_epoch']==owner[0] and row['lease_token'] and row['lease_until'] is not None,'invalid live lease')

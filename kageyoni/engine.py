@@ -2749,6 +2749,17 @@ class Engine:
         if self.db.execute("SELECT 1 FROM engine_versions WHERE component='activity_interface'").fetchone():
             from .workspaces.activities import verify_activities
             verify_activities(self)
+        if (self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='activity_resource_profiles'").fetchone()
+                or self.db.execute("SELECT 1 FROM engine_versions WHERE component='resource_profile_interface'").fetchone()
+                or self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='activity_resource_profile_receipts'").fetchone()
+                or self.db.execute("SELECT 1 FROM migration_checks WHERE version=31").fetchone()):
+            from .workspaces.resource_profiles import verify_resource_profiles
+            require(verify_resource_profiles(self).get('installed') is True, 'resource profile interface not installed')
+        if (self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='activity_participants'").fetchone()
+                or self.db.execute("SELECT 1 FROM engine_versions WHERE component='resource_admission_interface'").fetchone()
+                or self.db.execute("SELECT 1 FROM migration_checks WHERE version=32").fetchone()):
+            from .workspaces.resource_admission import verify_resource_admission
+            require(verify_resource_admission(self).get('installed') is True, 'resource admission interface not installed')
         if self.db.execute("SELECT 1 FROM engine_versions WHERE component='activity_queue_interface'").fetchone():
             from .workspaces.job_queue import verify_queue
             verify_queue(self)
