@@ -1,0 +1,56 @@
+{
+  "status": "IN_PROGRESS",
+  "stage": "D13 bounded native registry verification maintenance",
+  "source_identity": "53b137040b9f67474ac84720c0cdc41f88e773140a057022440fd4575b2ad85c",
+  "runtime_digest": "d2a11fabfb420a32c62704c7f769746bb5a1768c14ab84b6b9b82882980136a4",
+  "product": "0.5.3.dev20",
+  "engine": "11.1.0.dev12",
+  "wheels": {
+    "product": "0f5b5dc9af34c5daa09403a9f4d84b2e3a7ca7ba3b563684ac45f0c1f720608d",
+    "engine": "1d7dad001064b95c9da3c80e5805fa13f6a0090050e1fb0de7aa211b426b9a0d"
+  },
+  "qualification": {
+    "bounded_D13_native_verify_repair": "QUALIFIED_SELECTED_MAINTENANCE_ONLY",
+    "F1": false,
+    "F2": false,
+    "F3": false,
+    "F4": false,
+    "F5": false,
+    "full_release": false,
+    "human_play": "NOT_RUN"
+  },
+  "actually_passed": [
+    "104 installed native cases",
+    "11 installed product cases",
+    "Current installed native twoSIGKILL rollback/exact replay/relocation/lateruse/backuprestore",
+    "226 exact source/wheel/installed payloads",
+    "Frozen7832physical manifest/verify/CONTINUE_FULL_RELEASE"
+  ],
+  "preserved_failures": [
+    "Initial helper test collection/import-mode errors",
+    "Earlier D11 wholetool final dynamic-import inventory equality failure; observation-only reconciliation preserved without gameplay replay",
+    "Storage incident and legitimate hotjournal, causeUNKNOWN"
+  ],
+  "exact_evidence_limit": "D11 scripted RAMequipment evidence is exact historical antecedent, not current D13rerun. D11 independent Host/Visitor laterresults, active D13engagedcombats and isolated D14a source are EXCLUDED from this freeze. No semantic/human/fullF1 inference.",
+  "historical_ledger_keys": "Old latest_candidate_status/current_unqualified_checkpoint D10 fields are retained history, not current authority; full_release_continuation.current_installed_candidate and this frozen D13packet define currentcandidate.",
+  "artifact_custody": "PENDING: critical source pair first; canonicalrawZIPparts/fullreadback+exact7832restoration recipe following under same solewriter.",
+  "canonical_raw_archives": {
+    "d11": {
+      "bytes": 145959578,
+      "sha256": "da44d02982e9b2d703edd5a2926934028e846061233896534bdd0d9b3a7467e3"
+    },
+    "d13": {
+      "bytes": 51056921,
+      "sha256": "3234947883123e231f92ce7ccdc1b826c086e6b11648e521d0436054c47c0efb"
+    }
+  },
+  "library": {
+    "latest_verified_version": 15,
+    "sha256": "73738ee2b30962cf461e7c04c499524286b0a81715dbca7f12820618545690b4",
+    "new_version_saved": false,
+    "save_attempt": "Current mandatory helper tools/list HTTP403 exit1; no bypass/newversion claim"
+  },
+  "authority": "Private contextual branch checkpoint/CASnoforce only; no PR/merge/publish/deploy/livecampaign/purchase/manualcredentials.",
+  "retained_scope": "AllF1-F5/13loops22requirements13slices14increments/generalworker/graph/merge/timer/extension/load/actualhuman gates preserved. PS1originalprivateNative v15 retainedqualified, no requesteragreement/mastery invented.",
+  "next": "Reconcile actual newer reports/owners, repair/resume current work; qualify full F1 and remaining F2-F5 without overwriting newer source with this frozencheckpoint."
+}

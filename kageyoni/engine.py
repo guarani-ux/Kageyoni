@@ -2705,7 +2705,7 @@ class Engine:
             event=self.db.execute('SELECT er.resolution_json FROM event_resolutions er JOIN events ev ON ev.id=er.event_id WHERE ev.branch=? AND ev.request_id=?',(row['branch'],'decision:'+row['id'])).fetchone()
             if event:
                 require(json.loads(event[0]).get('roll_result')==row['roll'],'decision roll differs from event')
-        self.validate_registry()
+        require(self.validate_registry()["ok"], "registry validation failed")
         # v11: composition/knowledge integrity participates in the global verifier.
         if self.db.execute("SELECT 1 FROM engine_versions WHERE component='composition_interface'").fetchone():
             for table in ('composition_frames','composition_types','composition_aspects'):
