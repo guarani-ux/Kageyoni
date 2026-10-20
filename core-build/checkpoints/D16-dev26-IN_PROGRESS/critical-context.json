@@ -1,0 +1,27 @@
+{
+  "status": "D16_CURRENT26_SOURCE_OFFLINE_IN_PROGRESS_NOT_FEATURE_QUALIFIED",
+  "source_identity": "5fc016c696de34c8d86ca3b9485bda817085eeabc6af8fdc4175b09be85b9592",
+  "source_entries": 430,
+  "native_selected_source_entries_exact_unchanged": 338,
+  "product": "0.5.3.dev26",
+  "native": "11.1.0.dev15",
+  "runtime": "26a07d047655cfc3fec7c431e13e64239d2e7707c3b73940fbd49f9c87eb02ef",
+  "wheel_sha256": {
+    "product": "dcc81ae95ddd0eaee4e5ccd47a6e056be45fe5cc49342742e9898634c20ef06a",
+    "native": "ed30ab970dfe198fe948b2a3b776b9dae864654dd5cd2b84d0f8ef453bfc843e"
+  },
+  "frozen_manifest_SHA": "de0952fca3e71a3999d8d518d75147c3dab297178d2c757fa2c6d832af8480bd",
+  "frozen_files": 1534,
+  "frozen_manifest_files": 1533,
+  "current_D16": "233payloads/21installedparser/actualv1returnedvideo; v2known8stageBUDGET unfinished and rawfailure retained. No feature/F4/fullsuite/mediaSIGKILL/independentreceiver claim.",
+  "F1_parent25": "ActualdualsIGKILL rawproof10,332,440B/qualifiedselected25 rootsemantic97eb... retained as exacthistorical25 evidence, never silently transferred to26.",
+  "proposals": "ProviderR1failures/R2R3R4reviews/actual3rawsametime-domain facts/034leaf/commonPREREPAIRreject/sharedprovider are source-only evidence, not productionengine authority.",
+  "historical_qualified25": "Exact31,878,784B base2ca16d89... plus immutablepriorrefs retained.",
+  "raw_D14": "Fiveof13 verified; eight PENDING. Newbodycustody PENDING atcriticalsource snapshot.",
+  "full_release": false,
+  "F1_F5": "ALL_OPEN",
+  "human_play": "NOT_RUN",
+  "Library_latest": 15,
+  "new_Library_version_claim": false,
+  "scope": "Criticalcurrent sources/status/wheels before fullprovidercustody. Frozen1534tree only; future dynamicrepairs/probes excluded."
+}
