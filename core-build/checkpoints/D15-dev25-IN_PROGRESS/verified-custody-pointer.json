@@ -1,0 +1,13 @@
+{
+  "SAM_verified_receipt_commit": "3712942ad7cd2c383e559c2e038ad8691030dd2b",
+  "recipe": "core-build/checkpoints/D15-dev25-IN_PROGRESS/capsule-recipe.json",
+  "receipt": "core-build/checkpoints/D15-dev25-IN_PROGRESS/push-receipt.json",
+  "recovery_map": "core-build/checkpoints/D15-dev25-IN_PROGRESS/recovery-map/index.json",
+  "source_identity": "db2f6b96f46929b33d2331289ba413888c9acf89813f09e569e2ec9eca90add8",
+  "runtime": "3d03195d94afe37ade615e88797ba464b01ff4966135930da8fa6c183351eca2",
+  "native_wheel": "ed30ab970dfe198fe948b2a3b776b9dae864654dd5cd2b84d0f8ef453bfc843e",
+  "full_release": false,
+  "raw_custody": "PENDING",
+  "historical_owner_product_recovery": "UNIMPLEMENTED",
+  "Library_latest": 15
+}
