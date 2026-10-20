@@ -1,0 +1,18 @@
+{
+  "SAM_verified_receipt_commit": "a9f609dd88b5db76e3ad1ead37dbd97294a105cc",
+  "receipt": "core-build/checkpoints/D16-dev26-IN_PROGRESS/push-receipt.json",
+  "reconstruction_recipe_commit": "9e27e8dc1ae2ed9cf359ddc5cb7ba2d9331b2807",
+  "recipe": "core-build/checkpoints/D16-dev26-IN_PROGRESS/current-reconstruction-recipe.json",
+  "download_bytes": 62419764,
+  "download_sha256": "73daef00e272cb6a842d267d2d4b5d4c0bc007b4edb99540960fbb38eccee195",
+  "source430_identity": "5fc016c696de34c8d86ca3b9485bda817085eeabc6af8fdc4175b09be85b9592",
+  "native15_code_wheel_unchanged": true,
+  "fresh_offline233payloads_and_CLI": true,
+  "raw_D14_verified": 5,
+  "raw_D14_total": 13,
+  "D16_feature_qualified": false,
+  "revision2_BUDGET_unfinished": true,
+  "proposal034_not_production": true,
+  "full_release": false,
+  "Library_latest": 15
+}
