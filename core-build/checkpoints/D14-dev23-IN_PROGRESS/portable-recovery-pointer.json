@@ -1,0 +1,10 @@
+{
+  "SAM_recovery_commit": "fa002f3c0d389ae5c581ade23936259679f87b87",
+  "path": "core-build/checkpoints/D14-dev23-IN_PROGRESS/portable-recovery-map.json",
+  "native_future_commit": "f19ac5ad7b2f538cffa06024a7fb9e4a6950f8c9",
+  "current_native_authority": "4dc9ae74db7316c9a4e5f092f20aa45c07ebd72b",
+  "future_native15_native_only_42_pass": true,
+  "full_product_installed": false,
+  "raw_custody": "PENDING",
+  "full_release": false
+}
