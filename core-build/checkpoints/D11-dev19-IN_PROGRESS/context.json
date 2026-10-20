@@ -1,0 +1,59 @@
+{
+  "status": "IN_PROGRESS",
+  "stage": "D11 grounded control transitions + strict legacy personal-exit declaration + additive v7 stow authoring",
+  "source_identity": "96a34cd677e4ceb09f1cb97a16782656770bc29c805dc00d74246611c728cafd",
+  "product": "0.5.3.dev19",
+  "engine": "11.1.0.dev11",
+  "runtime_digest": "5ed0fb930bbca8ea47dbefcf22abab6e92763d7ade56ba9c797c9bfeeca1cbc6",
+  "wheels": {
+    "product": "06384e110e493bed89c7f2b4f049d5178da99e82ac997655af9b321fa19d0d36",
+    "engine": "e5fe82457b5cbc9d85057569cc92883900bf369f4ba12c4b01b26dde902f856c"
+  },
+  "executed": [
+    "44 focused native source checks pass",
+    "Independent source review with native control execution passes",
+    "Installed native actual precommit SIGKILL rollback and committed/pre-response exact replay, relocation, later new native use and backup/restore pass",
+    "39 unique affected product cases have passing executions across preserved runs, NOT one clean39 suite",
+    "V7 static59 raw/compiled native definitions validate; all982 v6 records/23olddefinitions/427routes exact",
+    "First installed stdio equipment run failed after activation returned revision10, before any participant release/travel/stow; reopening failed and read-only SQLite integrity reported malformed bytes",
+    "Plain SQLite cross-process storage control passed"
+  ],
+  "failed_preserved": [
+    "Original personal-recovery guest_leave empty-event rejection",
+    "Dev18 guards26PASS1FAIL legacy own private declaration BUSY",
+    "Dev19 focus2PASS1invalid-geometry-fixtureFAIL",
+    "Dev19 retry35PASS1invalid-self-listener-fixtureFAIL; corrected3countercases+1legacy guard4PASS",
+    "Equipment-run-one malformed closed world, commands, receipt and metadata retained; cause UNKNOWN"
+  ],
+  "active_at_freeze": [
+    "Root separate directactivation diagnosis; NOT included",
+    "No participant action underway in frozen equipmentrun; failed world closed"
+  ],
+  "qualified": {
+    "PS1": "v15 selected private native loop retained",
+    "F1": false,
+    "F2": false,
+    "F3": false,
+    "F4": false,
+    "F5": false,
+    "full_release": false,
+    "human_play": "NOT_RUN"
+  },
+  "next_action": "Inspect actual directactivation diagnostics; repair/resume current candidate, qualify stdio equipment release/stow/reselection/recipient/lateruse, then every retained full-release obligation. Do not repeat uncertain effects or rewrite old runtime metadata.",
+  "retained_scope": "Every13loop/22requirement/13slice/14increment/F1-F5 obligation retained; no invented canonical history/mapping/mastery/requester agreement/human results.",
+  "library": {
+    "latest_verified_version": 15,
+    "sha256": "73738ee2b30962cf461e7c04c499524286b0a81715dbca7f12820618545690b4",
+    "new_version_saved": false
+  },
+  "overlay_recipe": "overlay-recipe.json",
+  "governing_pins": {
+    "SAMSARA": "db9838371a1128124b77fac69677902a4b5820c6",
+    "Kageyoni": "872973f091320f92e3276408090978084928d291"
+  },
+  "expected_parents": {
+    "SAMSARA": "da3f57f54e73e8e02d8a5e69c49ef30e4d799c41",
+    "Kageyoni": "32308365d2b3396b21b617e3819a1b2507a0602e"
+  },
+  "authority": "Private branch checkpoint only. No force/PR/merge/publication/deployment/purchases/live campaign/manual credentials."
+}

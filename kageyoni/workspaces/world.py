@@ -482,6 +482,19 @@ class Encounters:
                 for change in effects.get('changes',[]):
                     if change.get('op')=='patch' and 'expected_version' not in change:
                         record=self.engine.get(branch,change['id']);require(record is not None,'effect target unavailable');change['expected_version']=record['version']
+                if set(effects)<= {'changes'} and not effects.get('changes'):
+                    # A selected authored control transition has a real
+                    # encounter consequence, even when it changes no domain
+                    # record. Bind that receipt to the actual participants;
+                    # do not invent a material effect or relax Engine.apply's
+                    # refusal of an ungrounded empty event.
+                    effects['dependencies']=[dict(kind='record',ref_id=cid,
+                        version=self.engine.get(branch,cid)['version'],usage='encounter_transition')
+                        for cid in sorted(set(participants.values()))]
+                    effects['judgment']={'encounter_transition':dict(
+                        definition_id=row['definition_id'],version=row['definition_version'],
+                        action_id=action_id,from_state=before['current_state'],to_state=target,
+                        scope='Selected authored continuation; no material change or inferred recovery.')}
                 world=self.engine.apply(dict(api_version=3,branch=branch,request_id=world_request,expected_revision=expected_revision,
                     kind='action',actor=actor,narrative=action['label'],**effects))
             after.update(current_state=target,phase=target_state['phase'],outcome=target_state['outcome'],pending=None,steps=before['steps']+1)

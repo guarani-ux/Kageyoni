@@ -1,0 +1,95 @@
+{
+  "format": "samsara-private-git-overlay/1",
+  "status": "IN_PROGRESS",
+  "library_parent": {
+    "version": 15,
+    "sha256": "73738ee2b30962cf461e7c04c499524286b0a81715dbca7f12820618545690b4"
+  },
+  "overlay": {
+    "filename": "D11-dev19-IN_PROGRESS-overlay.zip",
+    "bytes": 4789337,
+    "sha256": "4edfe37abe9bbf7e6de3311d578bb78f8aa5e039d0e34a058ec91060c18584dc",
+    "zip_entries": 527
+  },
+  "parts": [
+    {
+      "path": "overlay-parts/part-000.b64",
+      "bytes": 500000,
+      "sha256": "c5658af789c3b63b9582aed48e316ca16465c22a6f3d23b1e8bcfdc087eecf04",
+      "encoded_bytes": 666668,
+      "encoded_git_sha1": "7548d334d1a407ceed16746344186e91c880f534"
+    },
+    {
+      "path": "overlay-parts/part-001.b64",
+      "bytes": 500000,
+      "sha256": "1d3119aa728c292d53b98b1645f67fc76640d8af74defb65757701c8fe445077",
+      "encoded_bytes": 666668,
+      "encoded_git_sha1": "3982387fa3c983d3e64dfd356476b79298f91e2c"
+    },
+    {
+      "path": "overlay-parts/part-002.b64",
+      "bytes": 500000,
+      "sha256": "f76d4c1aed15a194ee4f4ecea17b43e724fd63b0e08b4b3e5f331826d078ec5e",
+      "encoded_bytes": 666668,
+      "encoded_git_sha1": "7b43ce5a78d52ef7c650ae59e8a090f4fb98a3df"
+    },
+    {
+      "path": "overlay-parts/part-003.b64",
+      "bytes": 500000,
+      "sha256": "1d1bc5b84b795940c8c33e1b9fce5da56ff1c4e57d78f04b21237ce4e43b8344",
+      "encoded_bytes": 666668,
+      "encoded_git_sha1": "eb9ba356e6e383da5584f288a2a3dfa58cf32440"
+    },
+    {
+      "path": "overlay-parts/part-004.b64",
+      "bytes": 500000,
+      "sha256": "2bf1d3f6021ecea70bfcabd744aaa0c9308efad95faef8ca16ce046033a794e0",
+      "encoded_bytes": 666668,
+      "encoded_git_sha1": "8ed12617c3f1cb7263173cab182b92de4c5b5eb0"
+    },
+    {
+      "path": "overlay-parts/part-005.b64",
+      "bytes": 500000,
+      "sha256": "568a523df77f29dd276291c193c0b4b856621517250e4e4a10f25826a9d932e7",
+      "encoded_bytes": 666668,
+      "encoded_git_sha1": "53dcb6d0482b6a55607b985b7310ab41f10e32fd"
+    },
+    {
+      "path": "overlay-parts/part-006.b64",
+      "bytes": 500000,
+      "sha256": "b3b34747a6d84bc448667e6287474e0aef658604d8d1706bad1040d5d0c2e1f8",
+      "encoded_bytes": 666668,
+      "encoded_git_sha1": "215be736ea206baa95a364d95ba247fe51cc4b90"
+    },
+    {
+      "path": "overlay-parts/part-007.b64",
+      "bytes": 500000,
+      "sha256": "ef27c9e334b694ae1d25b43fabf7376d6f6f39aa554d327ab69683972a2c3dbb",
+      "encoded_bytes": 666668,
+      "encoded_git_sha1": "14d8e4eab986e207d11f66c3c7f738c07015cdf3"
+    },
+    {
+      "path": "overlay-parts/part-008.b64",
+      "bytes": 500000,
+      "sha256": "c060beda36b0f1e55c4d40d78c98545aeb4d6d5cde942a6bb7be24d9747b5245",
+      "encoded_bytes": 666668,
+      "encoded_git_sha1": "8192399871dcc10b78f4c5869915434ba8b7120b"
+    },
+    {
+      "path": "overlay-parts/part-009.b64",
+      "bytes": 289337,
+      "sha256": "6c8a146f3e0f83fb8318ee99f9545f7426fc1d72e1267d6c7adb75c6c9634b70",
+      "encoded_bytes": 385784,
+      "encoded_git_sha1": "29ef63c685e8ff3dfcc2f46963be08c0a7bf334c"
+    }
+  ],
+  "snapshot_source_identity": "96a34cd677e4ceb09f1cb97a16782656770bc29c805dc00d74246611c728cafd",
+  "requirements": "Recover verified Libraryv15, then apply exact overlay preserving parent historicalevidence. This is not a new Library version or fullrelease qualification.",
+  "ca04_predecessor": {
+    "bytes": 35969113,
+    "sha256": "13ece8efa26451511b85eb61e67615b374557a4310157636cb395ca3a0fe4132",
+    "repository": "guarani-ux/SAMSARA",
+    "immutable_ref": "3a532f7a77be132226c438d41368615028f60afd",
+    "recipe_path": "core-build/checkpoints/F1-CURRENT-IN_PROGRESS-ca04b11e79fc/current-overlay/current-source-recipe.json"
+  }
+}
