@@ -1,0 +1,12 @@
+{
+  "SAM_verified_receipt_commit": "7fd9f97ae6aad16278f14f042b45cc071657df19",
+  "receipt": "core-build/checkpoints/D15-F1v9-IN_PROGRESS/push-receipt.json",
+  "source_identity_unchanged": "db2f6b96f46929b33d2331289ba413888c9acf89813f09e569e2ec9eca90add8",
+  "runtime_unchanged": "3d03195d94afe37ade615e88797ba464b01ff4966135930da8fa6c183351eca2",
+  "F1v9_frozen_context_bytes_verified": true,
+  "F1v9_later_worlds_excluded": true,
+  "raw_D14_archive_verified": 1,
+  "raw_D14_total": 13,
+  "full_release": false,
+  "latest_Library": 15
+}
