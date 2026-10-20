@@ -20,8 +20,10 @@ class JobQueue:
 
     def boot(self, now):
         with UnitOfWork(self.db):
+            from .worker_liveness import WorkerLiveness
+            clock = 'max(activity_queue_owners.last_wall,excluded.last_wall)' if WorkerLiveness(self.engine,self.workspace_id).present() else 'excluded.last_wall'
             self.db.execute('''INSERT INTO activity_queue_owners VALUES(?,1,?)
-                ON CONFLICT(workspace_id) DO UPDATE SET epoch=epoch+1,last_wall=excluded.last_wall''', (self.workspace_id, now))
+                ON CONFLICT(workspace_id) DO UPDATE SET epoch=epoch+1,last_wall=''' + clock, (self.workspace_id, now))
             self.db.execute("UPDATE activity_queue SET state='reconciling',reason='owner restarted; observe process before disposition' WHERE workspace_id=? AND state='running'", (self.workspace_id,))
         return self.owner()['epoch']
 
@@ -119,6 +121,8 @@ class JobQueue:
                     (row['max_seconds'],serial,self.workspace_id,row['root_id']))
                 self.db.execute("UPDATE activity_queue SET state='running',generation=generation+1,owner_epoch=?,lease_token=?,lease_until=?,reason='' WHERE job_id=? AND state='queued'",
                     (owner['epoch'],uuid4().hex,now+row['max_seconds'],row['job_id']))
+                from .worker_liveness import WorkerLiveness
+                WorkerLiveness(self.engine,self.workspace_id).claim(self.row(row['job_id']),now)
                 return self.row(row['job_id'])
         return None
 
@@ -136,15 +140,45 @@ class JobQueue:
     def process(self, job_id, fence, observation, now):
         with UnitOfWork(self.db):
             self.assert_lease(job_id,fence,now)
+            from .worker_liveness import WorkerLiveness
+            WorkerLiveness(self.engine,self.workspace_id).process(job_id,fence,observation)
             self.db.execute('UPDATE activity_queue SET process_json=? WHERE job_id=?', (encoded(observation),job_id))
 
     def transition(self, job_id, state, reason='', output_ref=None, clear_process=False):
         require(state in ('queued','paused','reconciling','returned','cancelled','failed'), 'invalid queue transition')
         with UnitOfWork(self.db):
-            require(self.row(job_id), 'queue job unavailable')
+            row=self.row(job_id)
+            require(row, 'queue job unavailable')
+            from .worker_liveness import WorkerLiveness
+            live=WorkerLiveness(self.engine,self.workspace_id)
+            if live.present():
+                attempt=self.db.execute('SELECT stop_requested_at,stop_disposition,process_json,exit_json FROM activity_worker_liveness WHERE job_id=? AND owner_epoch=? AND generation=?', (job_id,row['owner_epoch'],row['generation'])).fetchone()
+                if attempt:
+                    normal_return = row['state'] == 'running' and attempt['stop_requested_at'] is None and state == 'returned' and clear_process and attempt['process_json'] is not None and row['process_json'] == attempt['process_json']
+                    if attempt['exit_json'] is None and attempt['process_json'] is not None:
+                        require(normal_return or (not clear_process and state == 'reconciling' and row['process_json'] == attempt['process_json']), 'observe stopped worker exit before clearing process or releasing slot')
+                    elif attempt['stop_requested_at'] is not None and attempt['process_json'] is None:
+                        allowed = {'reconciling'}
+                        if attempt['stop_disposition'] == 'pause': allowed.add('paused')
+                        if attempt['stop_disposition'] == 'cancel': allowed.add('cancelled')
+                        require(state in allowed, 'unregistered stopped worker cannot revive or return')
+                    require(state != 'returned' or normal_return, 'stopped worker cannot return')
             self.db.execute('''UPDATE activity_queue SET state=?,reason=?,output_ref_json=coalesce(?,output_ref_json),
                 process_json=CASE WHEN ? THEN NULL ELSE process_json END WHERE job_id=?''',
                 (state,reason,encoded(output_ref) if output_ref else None,clear_process,job_id))
+
+
+    def heartbeat(self, job_id, fence, sequence, now):
+        from .worker_liveness import WorkerLiveness
+        return WorkerLiveness(self.engine,self.workspace_id).heartbeat(job_id,fence,sequence,now)
+
+    def request_stop(self, job_id, fence, disposition, request_id, now):
+        from .worker_liveness import WorkerLiveness
+        return WorkerLiveness(self.engine,self.workspace_id).request_stop(job_id,fence,disposition,request_id,now)
+
+    def observe_exit(self, job_id, fence, observation, now):
+        from .worker_liveness import WorkerLiveness
+        return WorkerLiveness(self.engine,self.workspace_id).observe_exit(job_id,fence,observation,now)
 
 
 def verify_queue(engine):

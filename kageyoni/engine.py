@@ -2760,6 +2760,11 @@ class Engine:
                 or self.db.execute("SELECT 1 FROM migration_checks WHERE version=32").fetchone()):
             from .workspaces.resource_admission import verify_resource_admission
             require(verify_resource_admission(self).get('installed') is True, 'resource admission interface not installed')
+        if (self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name IN ('activity_worker_liveness','activity_worker_heartbeats','activity_worker_stops','activity_worker_exits')").fetchone()
+                or self.db.execute("SELECT 1 FROM engine_versions WHERE component='worker_liveness_interface'").fetchone()
+                or self.db.execute("SELECT 1 FROM migration_checks WHERE version=33").fetchone()):
+            from .workspaces.worker_liveness import verify_worker_liveness
+            require(verify_worker_liveness(self).get('installed') is True, 'worker liveness interface not installed')
         if self.db.execute("SELECT 1 FROM engine_versions WHERE component='activity_queue_interface'").fetchone():
             from .workspaces.job_queue import verify_queue
             verify_queue(self)

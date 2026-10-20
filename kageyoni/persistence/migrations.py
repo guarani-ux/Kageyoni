@@ -196,3 +196,11 @@ def install_resource_admission(engine):
     _install_component(engine,schema_path('migration_032.sql'),32,31,'resource_admission_interface')
     from ..workspaces.resource_admission import verify_resource_admission
     verify_resource_admission(engine)
+
+
+def install_worker_liveness(engine):
+    """Explicit opt-in033; preserve old attempts and checked v32 predecessors."""
+    install_resource_admission(engine)
+    _install_component(engine,schema_path('migration_033.sql'),33,32,'worker_liveness_interface')
+    from ..workspaces.worker_liveness import verify_worker_liveness
+    verify_worker_liveness(engine)
