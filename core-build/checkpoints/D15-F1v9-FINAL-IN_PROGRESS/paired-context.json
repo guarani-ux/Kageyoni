@@ -1,0 +1,33 @@
+{
+  "status": "IN_PROGRESS_EXACT_CURRENT_COMPACT_CHECKPOINT_WITH_TWO_SCRIPTED_F1V9_LOOPS",
+  "source_identity": "db2f6b96f46929b33d2331289ba413888c9acf89813f09e569e2ec9eca90add8",
+  "runtime": "3d03195d94afe37ade615e88797ba464b01ff4966135930da8fa6c183351eca2",
+  "product": "0.5.3.dev25",
+  "native": "11.1.0.dev15",
+  "current_source427_and_payload232_unchanged": true,
+  "root_manifest_sha256": "4d1ed291986cf6237e5532c6cc9d010f17371c277b0a919942b3c455db2e4e39",
+  "root_semantic_receipt_sha256": "710ea940fdd08ee05948b3249465da6271192f5f91843d8b293dc2f1c1866de6",
+  "current_full_compact": {
+    "physical_files": 1243,
+    "manifest_files": 1242,
+    "bytes": 31878784,
+    "sha256": "2ca16d8917772b69963cfba29f1de9a7ce1224bcb2034746a457ace1a20f1e36",
+    "reconstruction": "Exact immutable10MB R2base +actualverified6MB F1proof +331894B delta; no full historical continuation/Librarynewversion claim."
+  },
+  "F1v9": "Exactly two SCRIPTED mechanism loops,327commoncommands,29freshreads,7exactreplays,3intentionalrefusals. NoAI/human/interruption/fullF1 qualification.",
+  "detach": "19raw actualOSdetach observations; no nativeAPI/truthfulreturncode/portabletimer/historicalownerqualification.",
+  "excluded": "Active newF1interruption probe/futureD16dev26/OSprovider/native034/automationprompt not in frozen GO.",
+  "raw_D14": {
+    "verified_archives": 5,
+    "total_archives": 13,
+    "actual_parts_read": 285,
+    "remaining8": "PENDING",
+    "proof_metadata_appended": true,
+    "single_BOM_alternate": "Explicit ASCII route for rawpart036 only; originaltransportfailurebytes/prefixrecipe retained, no generalizedhostfix."
+  },
+  "capacity": "266132276B plus75685861B only owned exactredundant copies released with retainedproviders/byteproof. FDvisibility correction:120currentindividualEACCES,originalerrorcountUNKNOWN; no globalnoFD claim. No worlds/currentuserZIPs/uniquehistory removed.",
+  "latest_Library": 15,
+  "new_Library_version_claim": false,
+  "full_release": false,
+  "F1_F5": "ALL_OPEN"
+}
