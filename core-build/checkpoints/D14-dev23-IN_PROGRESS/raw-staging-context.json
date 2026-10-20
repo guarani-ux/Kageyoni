@@ -1,0 +1,14 @@
+{
+  "status": "ALL13_D14_RAW_PARTS_STAGED_COMPLETE_REMOTE_ARCHIVE_READBACK_PENDING",
+  "SAM_immutable_parts_commit": "6fe905f86419088bbde378b35793ef5949f47191",
+  "path": "core-build/checkpoints/D14-dev23-IN_PROGRESS/raw-custody-recipe.json",
+  "archive_count": 13,
+  "raw_bytes": 288889435,
+  "parts": 584,
+  "staged_blob_identities_verified": 599,
+  "complete_remote_archive_bytes_verified": false,
+  "reason": "Priority newer coherent D15 critical source checkpoint before large raw reread, by root instruction.",
+  "capsule_complete_custody": "bbdbdbe8e2b134ff4d3fcb178da245ec26563a03",
+  "current_native_authority_unchanged": "native14; future native15 component separately retained",
+  "full_release": false
+}
