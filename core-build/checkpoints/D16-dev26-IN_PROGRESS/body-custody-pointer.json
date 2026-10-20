@@ -1,0 +1,10 @@
+{
+  "SAM_body_commit": "9e27e8dc1ae2ed9cf359ddc5cb7ba2d9331b2807",
+  "recipe": "core-build/checkpoints/D16-dev26-IN_PROGRESS/current-reconstruction-recipe.json",
+  "native15_source_wheel_unchanged": true,
+  "body_parts": 40,
+  "provider_readback": "PENDING",
+  "adaptive_two_attachments": "Externalcontext only, not candidate1534manifest; rootactual readback declared, no automation effects by checkpoint",
+  "full_release": false,
+  "Library_latest": 15
+}

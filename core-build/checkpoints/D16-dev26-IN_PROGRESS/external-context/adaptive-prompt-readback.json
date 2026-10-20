@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED_EXISTING_CONTINUATION_UPDATED",
+  "automation_id": "6ad44f937dd48191a087ec9b629e7232",
+  "enabled": true,
+  "cadence_unchanged": true,
+  "prompt_exact_returned_match": true,
+  "prompt_characters": 27733,
+  "existing_task_only": true,
+  "new_task_created": false,
+  "local_prompt": "SAMSARA_ADAPTIVE_CONTINUATION_D16_CURRENT.md"
+}
