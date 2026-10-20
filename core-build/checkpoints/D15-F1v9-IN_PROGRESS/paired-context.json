@@ -1,0 +1,27 @@
+{
+  "status": "FROZEN_F1V9_CONTENT_AND_D15B_PROBE_CONTEXT_ONLY_IN_PROGRESS",
+  "current_source": "db2f6b96f46929b33d2331289ba413888c9acf89813f09e569e2ec9eca90add8",
+  "runtime": "3d03195d94afe37ade615e88797ba464b01ff4966135930da8fa6c183351eca2",
+  "product": "0.5.3.dev25",
+  "native": "11.1.0.dev15",
+  "source_unchanged": true,
+  "current_qualified_source_pair": {
+    "SAM": "9b9b097ff8631b968c6f8c725574374115ea23e1",
+    "Kage": "772f5be6374563081723329a3492c19aeeab2ea6"
+  },
+  "frozen_root": "30physicalfiles/29manifestfiles; exactF1v9 staticcarrier plus generator/proof/delta, v8atomicactivation refusal and closed39fileZIP, hostreadonlymissingtime-namespace UNKNOWN/proposals and D15finalreceipt. Oneactualv9activationresponse only; later active v9runtime findings excluded.",
+  "raw_D14_progress": {
+    "verified_archives": 1,
+    "total_archives": 13,
+    "first_archive": "native-installed-specimens.zip",
+    "first_sha256": "ba5c943ee7f80b8769c138d758f57b84f8ad11761457ce0233f77421af11dd71",
+    "proof_commit": "fd33e4a20e42b2ac81483f3971faae7fc333305d",
+    "route": "97originalbinaryparts+oneexplicitASCIIbase64alt; exact48,788,156B/1263members/CRC/SHA; originalbadreturnedbytes and18MBpartial-prefix recipe preserved. Observed FEFF transport only, no host/storage fix.",
+    "remaining": "12rawarchives PENDING; newD15raw PENDING"
+  },
+  "Library_latest": 15,
+  "new_Library_version": false,
+  "full_release": false,
+  "F1_F5": "ALL_OPEN",
+  "human_test": "NOT_RUN"
+}
