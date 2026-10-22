@@ -30,6 +30,22 @@ def run_empirical_audit():
     except Exception:
         pass
 
+    # Probe ELF (CH 02)
+    try:
+        from kageyoni.ninshu.elf_parser import ElfParser
+        ElfParser.parse_bytes(b"\x7fELF\x01\x01\x01\x00" + b"\x00" * 8 + b"\x02\x00\x03\x00\x01\x00\x00\x00\x54\x80\x04\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x34\x00\x20\x00\x00\x00\x28\x00\x00\x00\x00\x00")
+        probes_passed += 1
+    except Exception:
+        pass
+
+    # Probe Mach-O (CH 03)
+    try:
+        from kageyoni.ninshu.macho_parser import MachOParser
+        MachOParser.parse_bytes(b"\xcf\xfa\xed\xfe\x07\x00\x00\x01\x03\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00")
+        probes_passed += 1
+    except Exception:
+        pass
+
     # Probe .NET (CH 09)
     try:
         from tools.reverse_engineer import inspect_pe_clr_header
@@ -57,6 +73,30 @@ def run_empirical_audit():
     try:
         from kageyoni.ninshu.go_parser import GoBinaryParser
         GoBinaryParser.parse_bytes(b"\x7fELF" + (b"\x00" * 32))
+        probes_passed += 1
+    except Exception:
+        pass
+
+    # Probe Rust (CH 14)
+    try:
+        from kageyoni.ninshu.rust_parser import RustSymbolDemangler
+        RustSymbolDemangler.demangle("_RNvC1a1f")
+        probes_passed += 1
+    except Exception:
+        pass
+
+    # Probe Raw Binary (CH 15)
+    try:
+        from kageyoni.ninshu.raw_binary_parser import RawBinaryDisassembler
+        RawBinaryDisassembler.parse_raw(b"\xc3", architecture="x86", entry_point="0x1000")
+        probes_passed += 1
+    except Exception:
+        pass
+
+    # Probe Firmware (CH 16)
+    try:
+        from kageyoni.ninshu.firmware_parser import FirmwareScanner
+        FirmwareScanner.analyze_firmware(b"sqsh" + b"\x00" * 60)
         probes_passed += 1
     except Exception:
         pass
