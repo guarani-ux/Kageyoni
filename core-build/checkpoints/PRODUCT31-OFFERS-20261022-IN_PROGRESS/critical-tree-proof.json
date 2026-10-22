@@ -1,0 +1,2637 @@
+{
+  "SAMSARA": {
+    "levels": [
+      {
+        "sha": "67828ebc2d79dbc494f232d88fd43d2b76fb6cea",
+        "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/67828ebc2d79dbc494f232d88fd43d2b76fb6cea",
+        "tree": [
+          {
+            "path": ".github",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "bff8d45513873c6590bea19c3cbd62c7eb70cdde",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/bff8d45513873c6590bea19c3cbd62c7eb70cdde"
+          },
+          {
+            "path": ".gitignore",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "60a8697b4e6ef3c63b43bbf7afc66ad292612e0d",
+            "size": 49,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/60a8697b4e6ef3c63b43bbf7afc66ad292612e0d"
+          },
+          {
+            "path": ".pytest_cache",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "28f86395595793f5f468fa158febf181e0cb8c81",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/28f86395595793f5f468fa158febf181e0cb8c81"
+          },
+          {
+            "path": "AGENTS.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "189e886cc09efd217259056f4e496ab94313d6de",
+            "size": 6717,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/189e886cc09efd217259056f4e496ab94313d6de"
+          },
+          {
+            "path": "README.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "b7bbbc4e10e6d181cea97c13bd43878a207346f3",
+            "size": 5463,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/b7bbbc4e10e6d181cea97c13bd43878a207346f3"
+          },
+          {
+            "path": "agents",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "97318aaabc837c1c3f3f8e24d641a6a82ec8e6da",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/97318aaabc837c1c3f3f8e24d641a6a82ec8e6da"
+          },
+          {
+            "path": "core-build",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "eac0ab3d28364ce9140756dbd6aafad1d9dcd9c4",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/eac0ab3d28364ce9140756dbd6aafad1d9dcd9c4"
+          },
+          {
+            "path": "docs",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "6c3272b7ba88870be1f3adfa5edef458ee459ba8",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/6c3272b7ba88870be1f3adfa5edef458ee459ba8"
+          },
+          {
+            "path": "domain-practice",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "f583534aa04d0d2e42f9820b663caf27ee46d9e1",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/f583534aa04d0d2e42f9820b663caf27ee46d9e1"
+          },
+          {
+            "path": "examples",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "4eeee17140db9308d1a63f1d3056fcca5776f4e5",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/4eeee17140db9308d1a63f1d3056fcca5776f4e5"
+          },
+          {
+            "path": "grimoire",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "277224cd5ac818552048e2ea2cb5b0083174c066",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/277224cd5ac818552048e2ea2cb5b0083174c066"
+          },
+          {
+            "path": "pyproject.toml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e12cd88793608c1dc87ca4a64d3f7f4e0edffe8a",
+            "size": 520,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/e12cd88793608c1dc87ca4a64d3f7f4e0edffe8a"
+          },
+          {
+            "path": "samsara",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "ade19130feaac05107e62930f65dc9be10e5916f",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/ade19130feaac05107e62930f65dc9be10e5916f"
+          },
+          {
+            "path": "tests",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "6d419e24a5183e132bb72e62ae6df813695b4184",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/6d419e24a5183e132bb72e62ae6df813695b4184"
+          },
+          {
+            "path": "tools",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "226d3aedd0c941511dd78312c139f358b8e1a3de",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/226d3aedd0c941511dd78312c139f358b8e1a3de"
+          },
+          {
+            "path": "work",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "16db1a088d49fe4b389d428578150b1d851ba278",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/16db1a088d49fe4b389d428578150b1d851ba278"
+          },
+          {
+            "path": "workflows",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "f645f14584b54245cc3864e75dffecda64b3ed1d",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/f645f14584b54245cc3864e75dffecda64b3ed1d"
+          }
+        ],
+        "truncated": false
+      },
+      {
+        "sha": "eac0ab3d28364ce9140756dbd6aafad1d9dcd9c4",
+        "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/eac0ab3d28364ce9140756dbd6aafad1d9dcd9c4",
+        "tree": [
+          {
+            "path": "BASELINE.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "cac987073164de97af4bc531c043fa8baea24da9",
+            "size": 1728,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/cac987073164de97af4bc531c043fa8baea24da9"
+          },
+          {
+            "path": "BUILD_STATUS.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "08dec2908de036f7b6ef56de0c28e149d2ffef84",
+            "size": 457688,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/08dec2908de036f7b6ef56de0c28e149d2ffef84"
+          },
+          {
+            "path": "CONTINUE.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "00f4403c1b43e1b90ac38778e48922e863d68fac",
+            "size": 1771,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/00f4403c1b43e1b90ac38778e48922e863d68fac"
+          },
+          {
+            "path": "INTERVAL_CONTEXT.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9e242f0aac33e1ade3ce21f904c07b718d40b8d0",
+            "size": 1497,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/9e242f0aac33e1ade3ce21f904c07b718d40b8d0"
+          },
+          {
+            "path": "MANIFEST.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6b1184d61dfdb7bab233a7e0bedbc4b21871ca4c",
+            "size": 286501,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/6b1184d61dfdb7bab233a7e0bedbc4b21871ca4c"
+          },
+          {
+            "path": "README.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d0e001ca4740b032d2bce5409048d0b1b66faee3",
+            "size": 4782,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/d0e001ca4740b032d2bce5409048d0b1b66faee3"
+          },
+          {
+            "path": "README_CHECKPOINT.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "cc16a33d24fe5662b4e70cd62ba63e3d7dd643ed",
+            "size": 510,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/cc16a33d24fe5662b4e70cd62ba63e3d7dd643ed"
+          },
+          {
+            "path": "VERIFY_CHECKPOINT.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c89c01677bc7a62a1c5334df1b54483307f9e0f2",
+            "size": 2229,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/c89c01677bc7a62a1c5334df1b54483307f9e0f2"
+          },
+          {
+            "path": "candidate-source-map.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "dc542a0a472434825d643f569838fbcfd079a1c2",
+            "size": 269121,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/dc542a0a472434825d643f569838fbcfd079a1c2"
+          },
+          {
+            "path": "checkpoint-files.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "770be5d642ad3f1ba0a9c8e1c5aad298e27ce00e",
+            "size": 81263,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/770be5d642ad3f1ba0a9c8e1c5aad298e27ce00e"
+          },
+          {
+            "path": "checkpoints",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "ee4f5c404c6fa84ddc5607b8e9dac849b18c2689",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/ee4f5c404c6fa84ddc5607b8e9dac849b18c2689"
+          },
+          {
+            "path": "development-wheels.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "2428ff1fdf329e4860e6099c66e74430e4480aeb",
+            "size": 551,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/2428ff1fdf329e4860e6099c66e74430e4480aeb"
+          },
+          {
+            "path": "development-wheels",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "ab28335745a61c77c791abae5fbf8b38ffa83594",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/ab28335745a61c77c791abae5fbf8b38ffa83594"
+          },
+          {
+            "path": "distributions",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "5c21264c404754772b19b929bf0aa1ed8f3b1e85",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/5c21264c404754772b19b929bf0aa1ed8f3b1e85"
+          },
+          {
+            "path": "durable-v7-summary.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "5158e02fda76d691c7bd411468b98bf3c2e21346",
+            "size": 760,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/5158e02fda76d691c7bd411468b98bf3c2e21346"
+          },
+          {
+            "path": "durable-v8-summary.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6540c5ec7e60745fb0bfa0cbe15f14f02cc90f53",
+            "size": 797,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/6540c5ec7e60745fb0bfa0cbe15f14f02cc90f53"
+          },
+          {
+            "path": "evidence",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "e19ddc9c239fc8eb62e3474433e99a77f27320de",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/e19ddc9c239fc8eb62e3474433e99a77f27320de"
+          },
+          {
+            "path": "f1-authoring",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "1b2af8273c2ac14c6fd6174af873c37e66a940f2",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/1b2af8273c2ac14c6fd6174af873c37e66a940f2"
+          },
+          {
+            "path": "interval-context.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "02eed475b3714c0ad105eb8dd076257eb300e414",
+            "size": 3384,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/02eed475b3714c0ad105eb8dd076257eb300e414"
+          },
+          {
+            "path": "patches",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "b3ab4b3f21d36fb4d8c700016b346c443daf51c8",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/b3ab4b3f21d36fb4d8c700016b346c443daf51c8"
+          },
+          {
+            "path": "proposals",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "15db6255dd4d42ba380e8bba594081912cdf8c4f",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/15db6255dd4d42ba380e8bba594081912cdf8c4f"
+          },
+          {
+            "path": "sources",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "ff0ee18e9e97c7cdd6883082ab12f2291b9cb02e",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/ff0ee18e9e97c7cdd6883082ab12f2291b9cb02e"
+          },
+          {
+            "path": "tools",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "6dac39ada4b1f5e8381fdf102a76e0a6faf422e8",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/6dac39ada4b1f5e8381fdf102a76e0a6faf422e8"
+          },
+          {
+            "path": "verified",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "6dd69a882b98a5ab5bd36d8b0d1196eff63c9d36",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/6dd69a882b98a5ab5bd36d8b0d1196eff63c9d36"
+          }
+        ],
+        "truncated": false
+      },
+      {
+        "sha": "ee4f5c404c6fa84ddc5607b8e9dac849b18c2689",
+        "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/ee4f5c404c6fa84ddc5607b8e9dac849b18c2689",
+        "tree": [
+          {
+            "path": "D10-dev17-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "e9725da36b4a8bda43cea2103d753c0e7113522d",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/e9725da36b4a8bda43cea2103d753c0e7113522d"
+          },
+          {
+            "path": "D11-dev19-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "77e6f3a73bb688d873e0a80dd632f8b5c0964105",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/77e6f3a73bb688d873e0a80dd632f8b5c0964105"
+          },
+          {
+            "path": "D13-dev20-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "8d37f33b2bbc2ec1ab4e2694c4579fae3e5d8b6d",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/8d37f33b2bbc2ec1ab4e2694c4579fae3e5d8b6d"
+          },
+          {
+            "path": "D14-dev23-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "88ed2dd7f64ad52f8d5118ab3ccfa2f436412140",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/88ed2dd7f64ad52f8d5118ab3ccfa2f436412140"
+          },
+          {
+            "path": "D15-F1v9-FINAL-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "45f955cd8ff6494515695a5ac46d36efbae66ab8",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/45f955cd8ff6494515695a5ac46d36efbae66ab8"
+          },
+          {
+            "path": "D15-F1v9-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "6e6a2400b88a346ea17f336f712c36e4696a2a5c",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/6e6a2400b88a346ea17f336f712c36e4696a2a5c"
+          },
+          {
+            "path": "D15-dev25-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "cb8b1e9effea5f56cb118a30a36a96da8246adc0",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/cb8b1e9effea5f56cb118a30a36a96da8246adc0"
+          },
+          {
+            "path": "D16-dev26-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "b902d2b6e0f0f43b5f06ebdf0323a15381a34990",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/b902d2b6e0f0f43b5f06ebdf0323a15381a34990"
+          },
+          {
+            "path": "D8-D9-dev17-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "fe42d594bfe3ff6041c7243b3e983112d1467dde",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/fe42d594bfe3ff6041c7243b3e983112d1467dde"
+          },
+          {
+            "path": "F1-CURRENT-IN_PROGRESS-ca04b11e79fc",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "01721b3929c07ff887bc3125de1cdb903d8fad2b",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/01721b3929c07ff887bc3125de1cdb903d8fad2b"
+          },
+          {
+            "path": "F1-IN_PROGRESS-86d79ede2a05",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "73846914af85b7656a3d859e471ca5ec7810a658",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/73846914af85b7656a3d859e471ca5ec7810a658"
+          },
+          {
+            "path": "F3A-NATIVE18-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "507b1f788ef9f7e3cb54858c160b08bfc9b002a5",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/507b1f788ef9f7e3cb54858c160b08bfc9b002a5"
+          },
+          {
+            "path": "NATIVE034-R1-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "ae31a9dd817f15ed6d80623cc9feb803fb2c8b90",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/ae31a9dd817f15ed6d80623cc9feb803fb2c8b90"
+          },
+          {
+            "path": "PRODUCT27-MEDIA-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "0283d4708382aee4afe925d0636d79477f6c6436",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/0283d4708382aee4afe925d0636d79477f6c6436"
+          },
+          {
+            "path": "PRODUCT28-BOUNDED-QUALIFIED-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "4129c73d2f68ed94d6926695173113159ad4b4da",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/4129c73d2f68ed94d6926695173113159ad4b4da"
+          },
+          {
+            "path": "PRODUCT28-R3-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "abdc2ac8e68ebab32ad0db5007ead0ed08d55e7e",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/abdc2ac8e68ebab32ad0db5007ead0ed08d55e7e"
+          },
+          {
+            "path": "PRODUCT29-ADMISSION-SOURCE-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "a5cbe0e1efa1f7d558032a980923ddba60e9b4ea",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/a5cbe0e1efa1f7d558032a980923ddba60e9b4ea"
+          },
+          {
+            "path": "PRODUCT30-ADMISSION-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "527078f458b5dfe46a35334c4be6fc49840abdf2",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/527078f458b5dfe46a35334c4be6fc49840abdf2"
+          },
+          {
+            "path": "PRODUCT31-OFFERS-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "3506cd3d1df60aa8e62026be9a9f86c9279a0137",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/3506cd3d1df60aa8e62026be9a9f86c9279a0137"
+          },
+          {
+            "path": "PS1-source1-8a7f7d892753",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "689c84f877b85bd23fff0736e5e5a54f76e1adfb",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/689c84f877b85bd23fff0736e5e5a54f76e1adfb"
+          },
+          {
+            "path": "R05c-IN_PROGRESS-execution-interrupted.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "f2cd43b0680496655aebc08db2d03033bde05dc3",
+            "size": 11163,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/f2cd43b0680496655aebc08db2d03033bde05dc3"
+          },
+          {
+            "path": "R05c-qualified-f6606ba4a28a",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "1ea3d78b2936b34567bd89ed037895c4b4a8b6b0",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/1ea3d78b2936b34567bd89ed037895c4b4a8b6b0"
+          },
+          {
+            "path": "R05c-reconstruction-852ead6d03d1",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "68706d94dfbeb5635c97208293570f4f0c83a7b8",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/68706d94dfbeb5635c97208293570f4f0c83a7b8"
+          },
+          {
+            "path": "R06-qualified-006889eb6398",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "cc44b0739b2cc2a0669a4ffc84e649da54eee0f1",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/cc44b0739b2cc2a0669a4ffc84e649da54eee0f1"
+          },
+          {
+            "path": "R07a-IN_PROGRESS-source1-9e5e77a90e4a",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "a8d6e8221b27beef1f282491a5007601adaf93e0",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/a8d6e8221b27beef1f282491a5007601adaf93e0"
+          },
+          {
+            "path": "R07a-qualified-854d13ec98c9",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "898f5a37c83375db1d30a5e61f76621f3443c5da",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/898f5a37c83375db1d30a5e61f76621f3443c5da"
+          },
+          {
+            "path": "R07b-IN_PROGRESS-source1-83f21c4d1237",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "3d00fd549aa2327b1626bfb0b2f269cf40835180",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/3d00fd549aa2327b1626bfb0b2f269cf40835180"
+          },
+          {
+            "path": "R07b-qualified-5ee061e83c20",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "a4c2d2d40866809a2f4bc5bc5e7e7182e47db41c",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/a4c2d2d40866809a2f4bc5bc5e7e7182e47db41c"
+          },
+          {
+            "path": "REHOST-20261022",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "037733cbcddf9d3fa578e96127e28fbfa18f0ddc",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/037733cbcddf9d3fa578e96127e28fbfa18f0ddc"
+          }
+        ],
+        "truncated": false
+      },
+      {
+        "sha": "3506cd3d1df60aa8e62026be9a9f86c9279a0137",
+        "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/3506cd3d1df60aa8e62026be9a9f86c9279a0137",
+        "tree": [
+          {
+            "path": "context.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "136f1a64e26580ce93fe23bd219776d256abf55b",
+            "size": 3541,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/136f1a64e26580ce93fe23bd219776d256abf55b"
+          },
+          {
+            "path": "critical-parts",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "69196e9b60e85f9c310d575ab5c6ac6cd2f4864a",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/69196e9b60e85f9c310d575ab5c6ac6cd2f4864a"
+          },
+          {
+            "path": "critical-parts/part-000.base64",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "5a1ab6d10b3844b2f4ad8df3159822085aed1004",
+            "size": 666668,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/5a1ab6d10b3844b2f4ad8df3159822085aed1004"
+          },
+          {
+            "path": "critical-parts/part-001.base64",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "b939e4e70f554ed9e62d684e30d6d7f293e30ef1",
+            "size": 666668,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/b939e4e70f554ed9e62d684e30d6d7f293e30ef1"
+          },
+          {
+            "path": "critical-parts/part-002.base64",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "865a8724b5c5726ac34b4811b87b8b524a3ed598",
+            "size": 608904,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/865a8724b5c5726ac34b4811b87b8b524a3ed598"
+          },
+          {
+            "path": "critical-recipe.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "227df16bb436125f37e2a87183a01d893694dc48",
+            "size": 34564,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/227df16bb436125f37e2a87183a01d893694dc48"
+          },
+          {
+            "path": "offers31-package",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "8afb585f01998a010b32dbeafc148521b558fbdf",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/8afb585f01998a010b32dbeafc148521b558fbdf"
+          },
+          {
+            "path": "offers31-package/pyproject.toml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6",
+            "size": 520,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6"
+          },
+          {
+            "path": "offers31-package/samsara",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "7f8d5f694367fe70485e9be6488c835ce666afb7",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/7f8d5f694367fe70485e9be6488c835ce666afb7"
+          },
+          {
+            "path": "offers31-package/samsara/__init__.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7fe39a0be07b3bf0368d5945795b0d1176032ddb",
+            "size": 105,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/7fe39a0be07b3bf0368d5945795b0d1176032ddb"
+          },
+          {
+            "path": "offers31-package/samsara/__main__.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "130bc6375628dffcf81fd338a297adae47ac205c",
+            "size": 29,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/130bc6375628dffcf81fd338a297adae47ac205c"
+          },
+          {
+            "path": "offers31-package/samsara/application.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1",
+            "size": 75485,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1"
+          },
+          {
+            "path": "offers31-package/samsara/atlas.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058",
+            "size": 20907,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/ecd555137dba0fafae2e94bc2ce8ceaacb00e058"
+          },
+          {
+            "path": "offers31-package/samsara/causality.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9032d89355888dc8c5a4b91c8b44e510d3fb8728",
+            "size": 13613,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/9032d89355888dc8c5a4b91c8b44e510d3fb8728"
+          },
+          {
+            "path": "offers31-package/samsara/cli.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494",
+            "size": 9443,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/4d165dfbc68d6b256e64c1ee33d0ecdcbae16494"
+          },
+          {
+            "path": "offers31-package/samsara/client.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3639fc697e524bed5a52640d3046a55e3dfeb0a7",
+            "size": 19442,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/3639fc697e524bed5a52640d3046a55e3dfeb0a7"
+          },
+          {
+            "path": "offers31-package/samsara/compatibility.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9336136d859ae6cab6a128fa402e8b92029b1180",
+            "size": 30288,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/9336136d859ae6cab6a128fa402e8b92029b1180"
+          },
+          {
+            "path": "offers31-package/samsara/console.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4",
+            "size": 15603,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/1c88536e506a3dbff0f5f1b1eea8027ea80580f4"
+          },
+          {
+            "path": "offers31-package/samsara/content.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "8a8bc561c6346b6332aa7578f25b8c19daea4b13",
+            "size": 26324,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/8a8bc561c6346b6332aa7578f25b8c19daea4b13"
+          },
+          {
+            "path": "offers31-package/samsara/contentsets.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a7d62204cf58b68cab10040d3e61cf28b0684edd",
+            "size": 39135,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/a7d62204cf58b68cab10040d3e61cf28b0684edd"
+          },
+          {
+            "path": "offers31-package/samsara/data",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "362661ba70a5193019c09c7b4e22d4f8bd48f005",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/362661ba70a5193019c09c7b4e22d4f8bd48f005"
+          },
+          {
+            "path": "offers31-package/samsara/data/compatibility-policy-ps1.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a",
+            "size": 143222,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/835e0b0dd80ef65ac958fa7f37126af9ecefd07a"
+          },
+          {
+            "path": "offers31-package/samsara/data/compatibility-policy-r07a.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "45a9782db7a443084e5aebca43a25f6bff3bb042",
+            "size": 55805,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/45a9782db7a443084e5aebca43a25f6bff3bb042"
+          },
+          {
+            "path": "offers31-package/samsara/data/compatibility-policy-r07b.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7bc0eec693e02cb175af2acc230a12b05f29b9a8",
+            "size": 113651,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/7bc0eec693e02cb175af2acc230a12b05f29b9a8"
+          },
+          {
+            "path": "offers31-package/samsara/data/compatibility-policy.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d559187944d7413367ba329bb8d83592000516cf",
+            "size": 172418,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/d559187944d7413367ba329bb8d83592000516cf"
+          },
+          {
+            "path": "offers31-package/samsara/data/contract.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8",
+            "size": 124046,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/efc380603f63dab9ff5ebb35737f56ba3b99d2a8"
+          },
+          {
+            "path": "offers31-package/samsara/data/engine-lock.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "498bab92eadd245fd1f5056105acfd756f63f05c",
+            "size": 535,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/498bab92eadd245fd1f5056105acfd756f63f05c"
+          },
+          {
+            "path": "offers31-package/samsara/data/initial-source.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3bba2c6d899f9a4601cf1f710159702895441b00",
+            "size": 572,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/3bba2c6d899f9a4601cf1f710159702895441b00"
+          },
+          {
+            "path": "offers31-package/samsara/data/work-record.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "bbe835f62093af2e26d62ad8f72a88583b37f2cb",
+            "size": 979,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/bbe835f62093af2e26d62ad8f72a88583b37f2cb"
+          },
+          {
+            "path": "offers31-package/samsara/equipment.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "0e4a983930f29d23713754e884b17cd29d0bb76c",
+            "size": 10788,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/0e4a983930f29d23713754e884b17cd29d0bb76c"
+          },
+          {
+            "path": "offers31-package/samsara/exhibition_admission.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6125db205396d8dbca1289566d364c39dfc8e6f8",
+            "size": 7158,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/6125db205396d8dbca1289566d364c39dfc8e6f8"
+          },
+          {
+            "path": "offers31-package/samsara/exhibition_profiles.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "58255982b1e38d006afd8277b9df49e21ac6331d",
+            "size": 29499,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/58255982b1e38d006afd8277b9df49e21ac6331d"
+          },
+          {
+            "path": "offers31-package/samsara/exhibitions.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6cb547dd2a5f7556a4759376570bf9f75c9676c3",
+            "size": 17447,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/6cb547dd2a5f7556a4759376570bf9f75c9676c3"
+          },
+          {
+            "path": "offers31-package/samsara/exploration.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a58369057b721e0816473c47376a63f1cc584913",
+            "size": 10177,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/a58369057b721e0816473c47376a63f1cc584913"
+          },
+          {
+            "path": "offers31-package/samsara/extensions.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "421e30cda5be46b2cb2d094765815f0746221de5",
+            "size": 16151,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/421e30cda5be46b2cb2d094765815f0746221de5"
+          },
+          {
+            "path": "offers31-package/samsara/handlers.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9",
+            "size": 11382,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/2079c8ffedc6e536898d9a4502a0c7d6354dc5a9"
+          },
+          {
+            "path": "offers31-package/samsara/intake.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+            "size": 10721,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366"
+          },
+          {
+            "path": "offers31-package/samsara/local_worker.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d7039883a3e73c3a219d36929590f65915e1cd85",
+            "size": 13009,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/d7039883a3e73c3a219d36929590f65915e1cd85"
+          },
+          {
+            "path": "offers31-package/samsara/mediawork.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c6b960e1f9c3a2fb498653883c4d36a75744d3bb",
+            "size": 20871,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/c6b960e1f9c3a2fb498653883c4d36a75744d3bb"
+          },
+          {
+            "path": "offers31-package/samsara/owner.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c69b201209df32aaff84973582b1383a6fba44c1",
+            "size": 19337,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/c69b201209df32aaff84973582b1383a6fba44c1"
+          },
+          {
+            "path": "offers31-package/samsara/practice.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "bdef75ccf0493f2a67cf914725aa1ae08765a14a",
+            "size": 25686,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/bdef75ccf0493f2a67cf914725aa1ae08765a14a"
+          },
+          {
+            "path": "offers31-package/samsara/practice_content.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9a7696e3a3ba1325eaf036f421ec88cc6696f4e1",
+            "size": 21975,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/9a7696e3a3ba1325eaf036f421ec88cc6696f4e1"
+          },
+          {
+            "path": "offers31-package/samsara/process_custody.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "f4d13803194d72e76882e5e5cf8735d4cbb8e8f8",
+            "size": 12747,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/f4d13803194d72e76882e5e5cf8735d4cbb8e8f8"
+          },
+          {
+            "path": "offers31-package/samsara/properties.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "4420cd5ffd1e1094b71d758c91b7457a6ecef4a6",
+            "size": 37343,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/4420cd5ffd1e1094b71d758c91b7457a6ecef4a6"
+          },
+          {
+            "path": "offers31-package/samsara/protocol.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "315dfffcf2418fa555d7f15c1f9519950cae2026",
+            "size": 4039,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/315dfffcf2418fa555d7f15c1f9519950cae2026"
+          },
+          {
+            "path": "offers31-package/samsara/runner.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "1de3cd2f6b5bb47ad8f591924c0feadf590ef30a",
+            "size": 51926,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/1de3cd2f6b5bb47ad8f591924c0feadf590ef30a"
+          },
+          {
+            "path": "offers31-package/samsara/situation.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "07e0bc6ccdd3beef161fd8bbeb21df1e1719989f",
+            "size": 18184,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/07e0bc6ccdd3beef161fd8bbeb21df1e1719989f"
+          },
+          {
+            "path": "offers31-package/samsara/sourcework.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "dcb71d8b8a343a99ea8ab00dcde03fc4324ee66b",
+            "size": 16934,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/dcb71d8b8a343a99ea8ab00dcde03fc4324ee66b"
+          },
+          {
+            "path": "offers31-package/samsara/terminal.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c2089cbe140fb2608967e38947626e1da7a294ab",
+            "size": 2534,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/c2089cbe140fb2608967e38947626e1da7a294ab"
+          },
+          {
+            "path": "offers31-package/samsara/travel_content.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "055319f6a991483e731057575e5b4c7cc368fe19",
+            "size": 17730,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/055319f6a991483e731057575e5b4c7cc368fe19"
+          },
+          {
+            "path": "offers31-package/tests",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "d384dd535b948eaa80f1e16a71371cc7155998c7",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/d384dd535b948eaa80f1e16a71371cc7155998c7"
+          },
+          {
+            "path": "offers31-package/tests/test_exhibition_profiles.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "272235da8dc0310c40f79a4e6139f11a45a3f08f",
+            "size": 26630,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/272235da8dc0310c40f79a4e6139f11a45a3f08f"
+          },
+          {
+            "path": "reconstruct.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "adb6f5548da9f8980cd07748e3c75818261e886f",
+            "size": 1823,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/adb6f5548da9f8980cd07748e3c75818261e886f"
+          },
+          {
+            "path": "selected",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "89fac101ae637b7a5802e3abf325adc2a16469d5",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/89fac101ae637b7a5802e3abf325adc2a16469d5"
+          },
+          {
+            "path": "selected/BUILD_STATUS.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "65bc6beae6626f4075620550054670e47301ee34",
+            "size": 582517,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/65bc6beae6626f4075620550054670e47301ee34"
+          },
+          {
+            "path": "selected/CONTINUE.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6148a25e834029c4966c05be274c687c08e1dbd2",
+            "size": 2297,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/6148a25e834029c4966c05be274c687c08e1dbd2"
+          },
+          {
+            "path": "selected/MANIFEST.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9bfd558259d2a81228010879aaca8e0562af49c1",
+            "size": 15387,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/9bfd558259d2a81228010879aaca8e0562af49c1"
+          },
+          {
+            "path": "selected/RAW_CAPTURE.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "f4f2e5cfebf4e889856992bca479a8f9a20298a2",
+            "size": 357,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/f4f2e5cfebf4e889856992bca479a8f9a20298a2"
+          },
+          {
+            "path": "selected/REPORT.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de",
+            "size": 50446,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de"
+          },
+          {
+            "path": "selected/SOURCE_MANIFEST.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "091018e30bb01a966fd3aea1421f19ef6fc19550",
+            "size": 5769,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/091018e30bb01a966fd3aea1421f19ef6fc19550"
+          },
+          {
+            "path": "selected/STATUS.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7336995bc55e0e032db0d181330aa6a56f08883b",
+            "size": 939,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/7336995bc55e0e032db0d181330aa6a56f08883b"
+          },
+          {
+            "path": "selected/WIRE_INSTALLED_RESULT.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "1beac62c03aa67b2e15c23525c067197c66ef51d",
+            "size": 1061,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/1beac62c03aa67b2e15c23525c067197c66ef51d"
+          },
+          {
+            "path": "selected/WIRE_PURE_RESULT.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae",
+            "size": 1059,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/d94f64fdaff6d9ee383d4cc6ec657100dbd13cae"
+          },
+          {
+            "path": "selected/identity-lock.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "f4d4dc58c1b7217a705925520797680f8b3e655a",
+            "size": 50301,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/f4d4dc58c1b7217a705925520797680f8b3e655a"
+          },
+          {
+            "path": "selected/native18-canonical-source-manifest.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5",
+            "size": 111407,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/5a5cb856335e3e8671ee54fc208dd4fa9a5807f5"
+          },
+          {
+            "path": "selected/native18-paired-dependency-receipt.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "50bf952ff4957655d96e7358cc67a43f33933474",
+            "size": 6541,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/50bf952ff4957655d96e7358cc67a43f33933474"
+          },
+          {
+            "path": "selected/product30-antecedent-paired-receipt.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "5da9782af672530b6b7402d72ce3ae3265277594",
+            "size": 14410,
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/blobs/5da9782af672530b6b7402d72ce3ae3265277594"
+          }
+        ],
+        "truncated": false
+      }
+    ],
+    "commit": {
+      "sha": "67828ebc2d79dbc494f232d88fd43d2b76fb6cea",
+      "node_id": "C_kwDOVIqlR9oAKDY3ODI4ZWJjMmQ3OWRiYzQ5NGYyMzJkODhmZDQzZDJiNzZmYjZjZWE",
+      "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/67828ebc2d79dbc494f232d88fd43d2b76fb6cea",
+      "html_url": "https://github.com/guarani-ux/SAMSARA/commit/67828ebc2d79dbc494f232d88fd43d2b76fb6cea",
+      "author": {
+        "name": "guarani-ux",
+        "email": "flowersnelsone@gmail.com",
+        "date": "2026-10-22T20:51:22Z"
+      },
+      "committer": {
+        "name": "guarani-ux",
+        "email": "flowersnelsone@gmail.com",
+        "date": "2026-10-22T20:51:22Z"
+      },
+      "tree": {
+        "sha": "9b28180c01611bf8aec5f610ec04728ab659d1f5",
+        "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/9b28180c01611bf8aec5f610ec04728ab659d1f5"
+      },
+      "message": "Preserve product31 offers and AI recipient source/wheel evidence IN_PROGRESS\n\nExact42-entry source tree incl1test/41production, dev31/native18 wheels, frozen105manifest+root106file ledger/report/proofs. Unreserved offers and SCRIPTED separately bound own choices/replay/privacy; independent AI4495B private later-use real_work output/fresh retrieval and physical relocation evidence,243payload proof. Critical remoteZIP1,456,676B28f2324a...79d01/119members fully reconstructed. No actual contestplay/award/helperrepair/fullF3/human/fullrelease. Source32/reconstructionKIT excluded, prior28/30/native18 anchors preserved.",
+      "parents": [
+        {
+          "sha": "bd8f9b42a96cae748fa4b2dba5137448f44fe402",
+          "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/bd8f9b42a96cae748fa4b2dba5137448f44fe402",
+          "html_url": "https://github.com/guarani-ux/SAMSARA/commit/bd8f9b42a96cae748fa4b2dba5137448f44fe402"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "all_prior_sibling_paths_preserved": true,
+    "checkpoint_payloads": 61
+  },
+  "Kageyoni": {
+    "levels": [
+      {
+        "sha": "c9affccdab3879ef2db9b03799486a1daac211a9",
+        "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/c9affccdab3879ef2db9b03799486a1daac211a9",
+        "tree": [
+          {
+            "path": ".agents",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "729683a8a1ae5f902cb4f077d0091296c47a8395",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/729683a8a1ae5f902cb4f077d0091296c47a8395"
+          },
+          {
+            "path": ".gitattributes",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ae316934947dc27aacba0a41e25dda07e55a89fc",
+            "size": 106,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/ae316934947dc27aacba0a41e25dda07e55a89fc"
+          },
+          {
+            "path": ".github",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "78fa7581dc804b603cd890ad208b3b16cc0d0694",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/78fa7581dc804b603cd890ad208b3b16cc0d0694"
+          },
+          {
+            "path": ".gitignore",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c0770e99a8988614daa65edbb44e377213c252a3",
+            "size": 453,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/c0770e99a8988614daa65edbb44e377213c252a3"
+          },
+          {
+            "path": "CONSTELLATION_CAPABILITY_GUIDE.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "8045b282365c9ae2447a2b0e41cd88745f8a67ee",
+            "size": 14035,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/8045b282365c9ae2447a2b0e41cd88745f8a67ee"
+          },
+          {
+            "path": "CONTEXT.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "320ae9fb1f88a253c439e1fc49d288d07796dae5",
+            "size": 5709,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/320ae9fb1f88a253c439e1fc49d288d07796dae5"
+          },
+          {
+            "path": "IMPORT_STATUS.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "bf879c2ddf5b78c9b3b4019fadb08056c3bb5c99",
+            "size": 384,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/bf879c2ddf5b78c9b3b4019fadb08056c3bb5c99"
+          },
+          {
+            "path": "INHERITANCE-LEDGER.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c9b72a5071674e14f82816c9bc35ea802263a7eb",
+            "size": 3499,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/c9b72a5071674e14f82816c9bc35ea802263a7eb"
+          },
+          {
+            "path": "KAGEYONI.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3bd54f108185f6d23d2f77a22666e6e0cecc896f",
+            "size": 2982,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/3bd54f108185f6d23d2f77a22666e6e0cecc896f"
+          },
+          {
+            "path": "LATEST-SCENE.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "14b7888c579597dfb1c2fe6809dcb117057a93b0",
+            "size": 943,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/14b7888c579597dfb1c2fe6809dcb117057a93b0"
+          },
+          {
+            "path": "MANIFEST.in",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9b674bd52c479f93d96bdf9fc4c5b52d1aadcac7",
+            "size": 32,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/9b674bd52c479f93d96bdf9fc4c5b52d1aadcac7"
+          },
+          {
+            "path": "PACKAGE-MANIFEST.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "b79b91b51acccc6580ea1dcb898631813e6e4c08",
+            "size": 40553,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/b79b91b51acccc6580ea1dcb898631813e6e4c08"
+          },
+          {
+            "path": "PROMOTION.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "2ab136c2059ee23d2019e21d6e17e09bbce63aa3",
+            "size": 1080,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/2ab136c2059ee23d2019e21d6e17e09bbce63aa3"
+          },
+          {
+            "path": "README.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "bdc09e754cd6dfb97758246d2985df3d928e3cd9",
+            "size": 674,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/bdc09e754cd6dfb97758246d2985df3d928e3cd9"
+          },
+          {
+            "path": "START-HERE.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "aaa8e677daf5f4d865db97bf181eba19084d678a",
+            "size": 550,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/aaa8e677daf5f4d865db97bf181eba19084d678a"
+          },
+          {
+            "path": "SUBSTRATE_PROGRESS_AND_NEXT.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "61576804b894da584b00c8a00d098677db525954",
+            "size": 2510,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/61576804b894da584b00c8a00d098677db525954"
+          },
+          {
+            "path": "V10-HANDOFF.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "844cb5ee595c10b8d81de346f74fb2aaa532ef24",
+            "size": 5462,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/844cb5ee595c10b8d81de346f74fb2aaa532ef24"
+          },
+          {
+            "path": "V11-HANDOFF.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3b378ca52f7eb9660c1dcd3174e7c22f74135667",
+            "size": 5011,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/3b378ca52f7eb9660c1dcd3174e7c22f74135667"
+          },
+          {
+            "path": "V11-MANIFEST.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "91048a7f8b7bfc973f6d6686cefa7261a2022b35",
+            "size": 70639,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/91048a7f8b7bfc973f6d6686cefa7261a2022b35"
+          },
+          {
+            "path": "V11-RELEASE-REPORT.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "2bb40bba9c1e4a035c8933c79577b7af3e20b2db",
+            "size": 4745,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/2bb40bba9c1e4a035c8933c79577b7af3e20b2db"
+          },
+          {
+            "path": "VANTAGE_PRODUCTION_DOSSIER.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "cbcbf8150a1720915ce60107346fd18c3a68cb8f",
+            "size": 7394,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/cbcbf8150a1720915ce60107346fd18c3a68cb8f"
+          },
+          {
+            "path": "ancestor_baseline_manifest.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "4e763e6d2e2840d7f8392e60d179f934bf116704",
+            "size": 30252,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/4e763e6d2e2840d7f8392e60d179f934bf116704"
+          },
+          {
+            "path": "benchmarks",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "09a1e4f2bf23924974886cc86c1fe60b408d0e14",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/09a1e4f2bf23924974886cc86c1fe60b408d0e14"
+          },
+          {
+            "path": "constellation_emergence_cli.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "cf674684457ac5642bdcbc3c0a6d9e66a391c93f",
+            "size": 577,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/cf674684457ac5642bdcbc3c0a6d9e66a391c93f"
+          },
+          {
+            "path": "constellation_emergence_sim.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "afde43434b318954884d6263ccd8d8e472d4ac59",
+            "size": 22513,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/afde43434b318954884d6263ccd8d8e472d4ac59"
+          },
+          {
+            "path": "contracts",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "f044029f7be94fa2fbc72ae1b6a618aac887112d",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/f044029f7be94fa2fbc72ae1b6a618aac887112d"
+          },
+          {
+            "path": "core-build",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "e47d8b8db87ddc629fe1dbaec57cddb963489d79",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/e47d8b8db87ddc629fe1dbaec57cddb963489d79"
+          },
+          {
+            "path": "data",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "74bd4ccf3d4eeab30d95b9d9fc59efd99aaf9152",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/74bd4ccf3d4eeab30d95b9d9fc59efd99aaf9152"
+          },
+          {
+            "path": "docs",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "088178838cc6fd28b5010f952fe8c8d125f6b504",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/088178838cc6fd28b5010f952fe8c8d125f6b504"
+          },
+          {
+            "path": "evidence",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "91d2285557f5ff6a839ba2d3e9d027fe258ec746",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/91d2285557f5ff6a839ba2d3e9d027fe258ec746"
+          },
+          {
+            "path": "examples",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "c76eb7f736e3bc2dba8c33c37bba397c2663417b",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/c76eb7f736e3bc2dba8c33c37bba397c2663417b"
+          },
+          {
+            "path": "experiments",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "05e9e6e5edfd7a3e1b953342738e8df3fbd1253f",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/05e9e6e5edfd7a3e1b953342738e8df3fbd1253f"
+          },
+          {
+            "path": "file_runner.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7b6a73751463dbd071e3d489df3cd78c30070b40",
+            "size": 948,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/7b6a73751463dbd071e3d489df3cd78c30070b40"
+          },
+          {
+            "path": "fixtures",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "a0ef46fb8c3e78f9fdedd67364c8f88729c6511e",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/a0ef46fb8c3e78f9fdedd67364c8f88729c6511e"
+          },
+          {
+            "path": "governance",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "9e849c089aa21daf83b395134798b638aa0d9639",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/9e849c089aa21daf83b395134798b638aa0d9639"
+          },
+          {
+            "path": "kageyoni.manifest.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "64afbfdea5f7b455df0757d03c0c8c0e0918f536",
+            "size": 787,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/64afbfdea5f7b455df0757d03c0c8c0e0918f536"
+          },
+          {
+            "path": "kageyoni",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "cb2d385497fc972e86324f7d7cc83806b1983b87",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/cb2d385497fc972e86324f7d7cc83806b1983b87"
+          },
+          {
+            "path": "levi_sim",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "8c58235ec80a44cad5ad2a6d7608da448c7d02ae",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/8c58235ec80a44cad5ad2a6d7608da448c7d02ae"
+          },
+          {
+            "path": "migration_002.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3ae201609baca11ef6ec1e174157a4ca597f6f02",
+            "size": 3565,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/3ae201609baca11ef6ec1e174157a4ca597f6f02"
+          },
+          {
+            "path": "migration_003.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "85625a3788adc603264b3cff7b9c2eead7eca9e4",
+            "size": 6602,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/85625a3788adc603264b3cff7b9c2eead7eca9e4"
+          },
+          {
+            "path": "migration_004.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "63706973065102bdcbec8fbe17503e05657eeaeb",
+            "size": 5238,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/63706973065102bdcbec8fbe17503e05657eeaeb"
+          },
+          {
+            "path": "migration_005.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "cad007c7b59b5a763cbe0066d106a66d1c52bba9",
+            "size": 3910,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/cad007c7b59b5a763cbe0066d106a66d1c52bba9"
+          },
+          {
+            "path": "migration_006.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ab10bc81c602d32a0fd2082d8636890bc34c7f04",
+            "size": 470,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/ab10bc81c602d32a0fd2082d8636890bc34c7f04"
+          },
+          {
+            "path": "migration_007.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "f15b7b7cb5dbc987598ea0192a975aeacc72b8e9",
+            "size": 3512,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/f15b7b7cb5dbc987598ea0192a975aeacc72b8e9"
+          },
+          {
+            "path": "migration_008.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "92a889d1f6efb2e29f98f71544ae58b1e51b9c7a",
+            "size": 1507,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/92a889d1f6efb2e29f98f71544ae58b1e51b9c7a"
+          },
+          {
+            "path": "migration_009.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "eab4f350ad88152bde25df4ecdc52864a5d7c543",
+            "size": 1461,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/eab4f350ad88152bde25df4ecdc52864a5d7c543"
+          },
+          {
+            "path": "migration_010.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d664f8fd9827da0e2e240e846058253be06cec74",
+            "size": 3387,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/d664f8fd9827da0e2e240e846058253be06cec74"
+          },
+          {
+            "path": "migration_011.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "8db5a0198b6d0269b6025925b8dc90e8aaaae048",
+            "size": 929,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/8db5a0198b6d0269b6025925b8dc90e8aaaae048"
+          },
+          {
+            "path": "migration_012.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3bdd13c0f82b03dabe9c12ecd6df7a925ff31516",
+            "size": 4118,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/3bdd13c0f82b03dabe9c12ecd6df7a925ff31516"
+          },
+          {
+            "path": "migration_013.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "81c2886c7c3d6a9130c36abb782042df2a432d86",
+            "size": 2750,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/81c2886c7c3d6a9130c36abb782042df2a432d86"
+          },
+          {
+            "path": "migration_014.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9c1eece13d902db442a1e66f3770255978a8b9b9",
+            "size": 3090,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/9c1eece13d902db442a1e66f3770255978a8b9b9"
+          },
+          {
+            "path": "migration_015.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "61f51ca22dc0bdb3d3f30e5e40327b6bee5c72b6",
+            "size": 2374,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/61f51ca22dc0bdb3d3f30e5e40327b6bee5c72b6"
+          },
+          {
+            "path": "migration_016.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e7ee37f62c723669ce53e34ba719a66358cf0135",
+            "size": 1075,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/e7ee37f62c723669ce53e34ba719a66358cf0135"
+          },
+          {
+            "path": "migration_017.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "209688765c24ad5c6f03c41c45dc90cb5fa05329",
+            "size": 658,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/209688765c24ad5c6f03c41c45dc90cb5fa05329"
+          },
+          {
+            "path": "migration_018.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "118712cbed9d60a997a08ed92d5cb9433ac99603",
+            "size": 2740,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/118712cbed9d60a997a08ed92d5cb9433ac99603"
+          },
+          {
+            "path": "migration_019.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6f4c6e3cba33e9362146cef7890f6946a2e91e4e",
+            "size": 2072,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/6f4c6e3cba33e9362146cef7890f6946a2e91e4e"
+          },
+          {
+            "path": "migration_020.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "58c1a8b550b99e78ddac4397a6acfdb9911591db",
+            "size": 1170,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/58c1a8b550b99e78ddac4397a6acfdb9911591db"
+          },
+          {
+            "path": "migration_021.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "1564cbf03e84227538e35b84b939b466bc9b1650",
+            "size": 1020,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/1564cbf03e84227538e35b84b939b466bc9b1650"
+          },
+          {
+            "path": "migration_022.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "b3a98b522037daf4beed85f68192cf66814bb1a7",
+            "size": 1728,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/b3a98b522037daf4beed85f68192cf66814bb1a7"
+          },
+          {
+            "path": "migration_023.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9d0d51ae26c61744c20519b0d76f44f75edd7d5e",
+            "size": 470,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/9d0d51ae26c61744c20519b0d76f44f75edd7d5e"
+          },
+          {
+            "path": "migration_024.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a364ed17984d3a0361c5abe184b64dfc124373f1",
+            "size": 3504,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/a364ed17984d3a0361c5abe184b64dfc124373f1"
+          },
+          {
+            "path": "migration_025.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a3c6dba9fad3858a7a97005fd6e17fd950b13c63",
+            "size": 1049,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/a3c6dba9fad3858a7a97005fd6e17fd950b13c63"
+          },
+          {
+            "path": "migration_026.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3a3ff8095bba888474ae6a11e795786f66b912be",
+            "size": 4295,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/3a3ff8095bba888474ae6a11e795786f66b912be"
+          },
+          {
+            "path": "migration_027.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "1430ca3e1c58dcff7b6f81c544bc4887f0e35069",
+            "size": 1892,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/1430ca3e1c58dcff7b6f81c544bc4887f0e35069"
+          },
+          {
+            "path": "migration_028.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "72d15a4993b33be129de0d71ef16a81b2a1bff8e",
+            "size": 3212,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/72d15a4993b33be129de0d71ef16a81b2a1bff8e"
+          },
+          {
+            "path": "migration_029.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "75792a491fae9da73a9353cb89097821d6053ea5",
+            "size": 1572,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/75792a491fae9da73a9353cb89097821d6053ea5"
+          },
+          {
+            "path": "migration_030.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "95358416c37bfd508ac088c7cddcf3553c7b3b52",
+            "size": 1754,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/95358416c37bfd508ac088c7cddcf3553c7b3b52"
+          },
+          {
+            "path": "migration_031.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "62629bcdf880e83a8bac899547ac38b7d13abb5f",
+            "size": 1540,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/62629bcdf880e83a8bac899547ac38b7d13abb5f"
+          },
+          {
+            "path": "migration_032.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7dcc100c4ae6f7998ae095f35f26c492e8057214",
+            "size": 791,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/7dcc100c4ae6f7998ae095f35f26c492e8057214"
+          },
+          {
+            "path": "migration_033.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "305507eb27696e704f8147ba4f4db75bbb223b35",
+            "size": 3612,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/305507eb27696e704f8147ba4f4db75bbb223b35"
+          },
+          {
+            "path": "patches",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "56e299157ea1891d3f30be8e1932eca7a213f74b",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/56e299157ea1891d3f30be8e1932eca7a213f74b"
+          },
+          {
+            "path": "pyproject.toml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "697a7ce01020d61fd02c161f12cbf2071e3c8799",
+            "size": 554,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/697a7ce01020d61fd02c161f12cbf2071e3c8799"
+          },
+          {
+            "path": "run_diag.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "afec7795076f37022667d1593d81267fb7ab678e",
+            "size": 684,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/afec7795076f37022667d1593d81267fb7ab678e"
+          },
+          {
+            "path": "run_emergence.cmd",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "09debe344609cbd91412c61e25da866f999ecf57",
+            "size": 517,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/09debe344609cbd91412c61e25da866f999ecf57"
+          },
+          {
+            "path": "run_emergence.ps1",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "abc9555e189ad9654331cd42458bd530433dfc85",
+            "size": 1560,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/abc9555e189ad9654331cd42458bd530433dfc85"
+          },
+          {
+            "path": "run_emergence_all.ps1",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "dc7fcd607bb58661e1381f227a8fc8d015014ac9",
+            "size": 721,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/dc7fcd607bb58661e1381f227a8fc8d015014ac9"
+          },
+          {
+            "path": "run_emergence_all.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a4ceea46ea2e7c47711f5b179255935a4b9d322e",
+            "size": 1046,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/a4ceea46ea2e7c47711f5b179255935a4b9d322e"
+          },
+          {
+            "path": "schema.sql",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6d67d5fdacc2f185b19b4099f5093b3b4544a6ab",
+            "size": 42066,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/6d67d5fdacc2f185b19b4099f5093b3b4544a6ab"
+          },
+          {
+            "path": "schemas",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "96babbfc5a0615c438489b02a1c0b8a155a2ca49",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/96babbfc5a0615c438489b02a1c0b8a155a2ca49"
+          },
+          {
+            "path": "scripts",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "6ac9e177a34cfec9a921136fcc18a6f861353ea6",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/6ac9e177a34cfec9a921136fcc18a6f861353ea6"
+          },
+          {
+            "path": "setup.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d82f6d8ae19609ff29d742d55cd33a6f0b8de363",
+            "size": 547,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/d82f6d8ae19609ff29d742d55cd33a6f0b8de363"
+          },
+          {
+            "path": "shinobi",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "59a84768714488d8d19e182900fe0e4e6d43370a",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/59a84768714488d8d19e182900fe0e4e6d43370a"
+          },
+          {
+            "path": "shinobi_agent",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "1064c7283fd7c327fdbcd6d7f57d6cb81d0c7eb7",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/1064c7283fd7c327fdbcd6d7f57d6cb81d0c7eb7"
+          },
+          {
+            "path": "skills",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "7a69a8574bdd0828b97ee6c146b9ae3bc447bac0",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/7a69a8574bdd0828b97ee6c146b9ae3bc447bac0"
+          },
+          {
+            "path": "sources",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "1a463a51041af0f185a1eec4abcbf69c3175d20f",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/1a463a51041af0f185a1eec4abcbf69c3175d20f"
+          },
+          {
+            "path": "substrate_qualification_ledger.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "289026b04a65ce98f401e50b06370b88c892c2f7",
+            "size": 2691,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/289026b04a65ce98f401e50b06370b88c892c2f7"
+          },
+          {
+            "path": "temp_agent_governing_files",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "fbaea70049136b4cd6d92f615819e177666c6331",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/fbaea70049136b4cd6d92f615819e177666c6331"
+          },
+          {
+            "path": "terminal.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "deafa794c600a0fdd0d910b426941a6893b0c9cb",
+            "size": 20358,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/deafa794c600a0fdd0d910b426941a6893b0c9cb"
+          },
+          {
+            "path": "tests",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "9260613fc6fa41792987cac4f5a59f1c6db32ff9",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/9260613fc6fa41792987cac4f5a59f1c6db32ff9"
+          },
+          {
+            "path": "tools",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "f701383308dd68e5e121d2eeaa60626bf3eea321",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/f701383308dd68e5e121d2eeaa60626bf3eea321"
+          },
+          {
+            "path": "vantage_cli.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "b416cd4df2b47279e9832f6f33d15c5348666b66",
+            "size": 419,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/b416cd4df2b47279e9832f6f33d15c5348666b66"
+          }
+        ],
+        "truncated": false
+      },
+      {
+        "sha": "e47d8b8db87ddc629fe1dbaec57cddb963489d79",
+        "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/e47d8b8db87ddc629fe1dbaec57cddb963489d79",
+        "tree": [
+          {
+            "path": "checkpoints",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "2725d9c3f75538e19f07fa87232c6d8612dc0afc",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/2725d9c3f75538e19f07fa87232c6d8612dc0afc"
+          },
+          {
+            "path": "distributions",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "58683afc564e727115af06eed63468db6fd8c238",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/58683afc564e727115af06eed63468db6fd8c238"
+          },
+          {
+            "path": "evidence",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "faa117aa26b33e0dbd6c00666d2728ba6a6612cb",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/faa117aa26b33e0dbd6c00666d2728ba6a6612cb"
+          },
+          {
+            "path": "interval-context.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d841164720bfc4c14eb0da9985171ba9c69f585f",
+            "size": 3314,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/d841164720bfc4c14eb0da9985171ba9c69f585f"
+          },
+          {
+            "path": "proposals",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "fb1f0b5bea17ba63069c2ad24fde7044bfd6c680",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/fb1f0b5bea17ba63069c2ad24fde7044bfd6c680"
+          },
+          {
+            "path": "verified",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "d72091ac487cd415c5123b89fd1fb8ad01ad0bcb",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/d72091ac487cd415c5123b89fd1fb8ad01ad0bcb"
+          }
+        ],
+        "truncated": false
+      },
+      {
+        "sha": "2725d9c3f75538e19f07fa87232c6d8612dc0afc",
+        "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/2725d9c3f75538e19f07fa87232c6d8612dc0afc",
+        "tree": [
+          {
+            "path": "D10-dev17-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "c813e8da52969806263219ae8bebb59f65982691",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/c813e8da52969806263219ae8bebb59f65982691"
+          },
+          {
+            "path": "D11-dev19-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "489792a11bea60a7a9c455c40ce8e939a2076b09",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/489792a11bea60a7a9c455c40ce8e939a2076b09"
+          },
+          {
+            "path": "D13-dev20-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "c5d9a1490928d495760208175120e5daddbf64e3",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/c5d9a1490928d495760208175120e5daddbf64e3"
+          },
+          {
+            "path": "D14-dev23-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "887e9bd86027458b34c562e92a5f3f14e0791ab9",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/887e9bd86027458b34c562e92a5f3f14e0791ab9"
+          },
+          {
+            "path": "D15-F1v9-FINAL-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "08b1299e0c040f2329b9a95ab3d8a9febf392932",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/08b1299e0c040f2329b9a95ab3d8a9febf392932"
+          },
+          {
+            "path": "D15-F1v9-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "9d6f70e2c6333d4c28901066c17be30af5392c8c",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/9d6f70e2c6333d4c28901066c17be30af5392c8c"
+          },
+          {
+            "path": "D15-dev25-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "f743449074dac9c202c85ea77a9b8126239844cf",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/f743449074dac9c202c85ea77a9b8126239844cf"
+          },
+          {
+            "path": "D16-dev26-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "66adcb97a704fb6f4e2730b9af057d4923b7778b",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/66adcb97a704fb6f4e2730b9af057d4923b7778b"
+          },
+          {
+            "path": "D8-D9-dev17-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "8bcb15986361def16a65a17b03e11d249353b891",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/8bcb15986361def16a65a17b03e11d249353b891"
+          },
+          {
+            "path": "F1-CURRENT-IN_PROGRESS-ca04b11e79fc",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "4ee8e1e607afb743f99e625bad4483b88ac9d236",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/4ee8e1e607afb743f99e625bad4483b88ac9d236"
+          },
+          {
+            "path": "F1-IN_PROGRESS-86d79ede2a05",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "67d75ac980e2a5f930eaa3128f6c1252723abf6b",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/67d75ac980e2a5f930eaa3128f6c1252723abf6b"
+          },
+          {
+            "path": "F3A-NATIVE18-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "6e1c1aec846d9bca74ee0d5f279554d55dbb5b58",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/6e1c1aec846d9bca74ee0d5f279554d55dbb5b58"
+          },
+          {
+            "path": "NATIVE034-R1-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "982b2bcaa3f360b50a605d9c478859a7416fa9fd",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/982b2bcaa3f360b50a605d9c478859a7416fa9fd"
+          },
+          {
+            "path": "PRODUCT27-MEDIA-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "c1f284316cf2c56aa10f9ce412b3a8f16fa678e1",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/c1f284316cf2c56aa10f9ce412b3a8f16fa678e1"
+          },
+          {
+            "path": "PRODUCT28-BOUNDED-QUALIFIED-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "917aa818207eb42a11d0d469e6901b34f21b03a9",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/917aa818207eb42a11d0d469e6901b34f21b03a9"
+          },
+          {
+            "path": "PRODUCT28-R3-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "d9a972a6ffb4b154feccc96f04f1c9340bea5730",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/d9a972a6ffb4b154feccc96f04f1c9340bea5730"
+          },
+          {
+            "path": "PRODUCT29-ADMISSION-SOURCE-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "c5162a7ba81a8eda61b4e5eeff05852da5396b81",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/c5162a7ba81a8eda61b4e5eeff05852da5396b81"
+          },
+          {
+            "path": "PRODUCT30-ADMISSION-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "57c336f9e58644f21116d2d9b14ba69c88be4614",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/57c336f9e58644f21116d2d9b14ba69c88be4614"
+          },
+          {
+            "path": "PRODUCT31-OFFERS-20261022-IN_PROGRESS",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "78a6cc1619382fba6bb4dca99edc0864d1dcb30b",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/78a6cc1619382fba6bb4dca99edc0864d1dcb30b"
+          },
+          {
+            "path": "PS1-source1-8a7f7d892753",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "c48d69b1b5fc94de2daab01c5fc65e1458ea2a4d",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/c48d69b1b5fc94de2daab01c5fc65e1458ea2a4d"
+          },
+          {
+            "path": "R05c-IN_PROGRESS-execution-interrupted.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "fca67171950c3c18d47d3491d491a223b50520fc",
+            "size": 11183,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/fca67171950c3c18d47d3491d491a223b50520fc"
+          },
+          {
+            "path": "R05c-qualified-f6606ba4a28a",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "366d98d56fa55b2c588a25043f6ac81664db84e5",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/366d98d56fa55b2c588a25043f6ac81664db84e5"
+          },
+          {
+            "path": "R05c-reconstruction-852ead6d03d1",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "9d2db941abe52c06c1be1794bc66e17f8e0f572d",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/9d2db941abe52c06c1be1794bc66e17f8e0f572d"
+          },
+          {
+            "path": "R06-qualified-006889eb6398",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "8d04fcd6eac1262309b1d01c580e40516e8b1ca5",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/8d04fcd6eac1262309b1d01c580e40516e8b1ca5"
+          },
+          {
+            "path": "R07a-IN_PROGRESS-source1-9e5e77a90e4a",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "12938dbb6f387ff1850b55bba748f1056fcea0ce",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/12938dbb6f387ff1850b55bba748f1056fcea0ce"
+          },
+          {
+            "path": "R07a-qualified-854d13ec98c9",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "cad294f35b9442a843e8b2bb48695180cdbfcaf4",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/cad294f35b9442a843e8b2bb48695180cdbfcaf4"
+          },
+          {
+            "path": "R07b-IN_PROGRESS-source1-83f21c4d1237",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "14d1f08b677c13898c60f27f44a934d8f6c49b13",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/14d1f08b677c13898c60f27f44a934d8f6c49b13"
+          },
+          {
+            "path": "R07b-qualified-5ee061e83c20",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "1e89403b2e393543cae70511e48a647e359dfd39",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/1e89403b2e393543cae70511e48a647e359dfd39"
+          },
+          {
+            "path": "REHOST-20261022",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "037733cbcddf9d3fa578e96127e28fbfa18f0ddc",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/037733cbcddf9d3fa578e96127e28fbfa18f0ddc"
+          }
+        ],
+        "truncated": false
+      },
+      {
+        "sha": "78a6cc1619382fba6bb4dca99edc0864d1dcb30b",
+        "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/78a6cc1619382fba6bb4dca99edc0864d1dcb30b",
+        "tree": [
+          {
+            "path": "SOURCE-PROVIDER.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "8aeba0537c6f2323fd8ba74c4d91886bf7738445",
+            "size": 791,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/8aeba0537c6f2323fd8ba74c4d91886bf7738445"
+          },
+          {
+            "path": "context.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "136f1a64e26580ce93fe23bd219776d256abf55b",
+            "size": 3541,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/136f1a64e26580ce93fe23bd219776d256abf55b"
+          },
+          {
+            "path": "critical-recipe.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "227df16bb436125f37e2a87183a01d893694dc48",
+            "size": 34564,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/227df16bb436125f37e2a87183a01d893694dc48"
+          },
+          {
+            "path": "offers31-package",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "8afb585f01998a010b32dbeafc148521b558fbdf",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/8afb585f01998a010b32dbeafc148521b558fbdf"
+          },
+          {
+            "path": "offers31-package/pyproject.toml",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6",
+            "size": 520,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6"
+          },
+          {
+            "path": "offers31-package/samsara",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "7f8d5f694367fe70485e9be6488c835ce666afb7",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/7f8d5f694367fe70485e9be6488c835ce666afb7"
+          },
+          {
+            "path": "offers31-package/samsara/__init__.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7fe39a0be07b3bf0368d5945795b0d1176032ddb",
+            "size": 105,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/7fe39a0be07b3bf0368d5945795b0d1176032ddb"
+          },
+          {
+            "path": "offers31-package/samsara/__main__.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "130bc6375628dffcf81fd338a297adae47ac205c",
+            "size": 29,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/130bc6375628dffcf81fd338a297adae47ac205c"
+          },
+          {
+            "path": "offers31-package/samsara/application.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1",
+            "size": 75485,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1"
+          },
+          {
+            "path": "offers31-package/samsara/atlas.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058",
+            "size": 20907,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/ecd555137dba0fafae2e94bc2ce8ceaacb00e058"
+          },
+          {
+            "path": "offers31-package/samsara/causality.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9032d89355888dc8c5a4b91c8b44e510d3fb8728",
+            "size": 13613,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/9032d89355888dc8c5a4b91c8b44e510d3fb8728"
+          },
+          {
+            "path": "offers31-package/samsara/cli.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494",
+            "size": 9443,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/4d165dfbc68d6b256e64c1ee33d0ecdcbae16494"
+          },
+          {
+            "path": "offers31-package/samsara/client.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3639fc697e524bed5a52640d3046a55e3dfeb0a7",
+            "size": 19442,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/3639fc697e524bed5a52640d3046a55e3dfeb0a7"
+          },
+          {
+            "path": "offers31-package/samsara/compatibility.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9336136d859ae6cab6a128fa402e8b92029b1180",
+            "size": 30288,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/9336136d859ae6cab6a128fa402e8b92029b1180"
+          },
+          {
+            "path": "offers31-package/samsara/console.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4",
+            "size": 15603,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/1c88536e506a3dbff0f5f1b1eea8027ea80580f4"
+          },
+          {
+            "path": "offers31-package/samsara/content.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "8a8bc561c6346b6332aa7578f25b8c19daea4b13",
+            "size": 26324,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/8a8bc561c6346b6332aa7578f25b8c19daea4b13"
+          },
+          {
+            "path": "offers31-package/samsara/contentsets.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a7d62204cf58b68cab10040d3e61cf28b0684edd",
+            "size": 39135,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/a7d62204cf58b68cab10040d3e61cf28b0684edd"
+          },
+          {
+            "path": "offers31-package/samsara/data",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "362661ba70a5193019c09c7b4e22d4f8bd48f005",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/362661ba70a5193019c09c7b4e22d4f8bd48f005"
+          },
+          {
+            "path": "offers31-package/samsara/data/compatibility-policy-ps1.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a",
+            "size": 143222,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/835e0b0dd80ef65ac958fa7f37126af9ecefd07a"
+          },
+          {
+            "path": "offers31-package/samsara/data/compatibility-policy-r07a.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "45a9782db7a443084e5aebca43a25f6bff3bb042",
+            "size": 55805,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/45a9782db7a443084e5aebca43a25f6bff3bb042"
+          },
+          {
+            "path": "offers31-package/samsara/data/compatibility-policy-r07b.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7bc0eec693e02cb175af2acc230a12b05f29b9a8",
+            "size": 113651,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/7bc0eec693e02cb175af2acc230a12b05f29b9a8"
+          },
+          {
+            "path": "offers31-package/samsara/data/compatibility-policy.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d559187944d7413367ba329bb8d83592000516cf",
+            "size": 172418,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/d559187944d7413367ba329bb8d83592000516cf"
+          },
+          {
+            "path": "offers31-package/samsara/data/contract.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8",
+            "size": 124046,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/efc380603f63dab9ff5ebb35737f56ba3b99d2a8"
+          },
+          {
+            "path": "offers31-package/samsara/data/engine-lock.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "498bab92eadd245fd1f5056105acfd756f63f05c",
+            "size": 535,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/498bab92eadd245fd1f5056105acfd756f63f05c"
+          },
+          {
+            "path": "offers31-package/samsara/data/initial-source.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "3bba2c6d899f9a4601cf1f710159702895441b00",
+            "size": 572,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/3bba2c6d899f9a4601cf1f710159702895441b00"
+          },
+          {
+            "path": "offers31-package/samsara/data/work-record.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "bbe835f62093af2e26d62ad8f72a88583b37f2cb",
+            "size": 979,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/bbe835f62093af2e26d62ad8f72a88583b37f2cb"
+          },
+          {
+            "path": "offers31-package/samsara/equipment.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "0e4a983930f29d23713754e884b17cd29d0bb76c",
+            "size": 10788,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/0e4a983930f29d23713754e884b17cd29d0bb76c"
+          },
+          {
+            "path": "offers31-package/samsara/exhibition_admission.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6125db205396d8dbca1289566d364c39dfc8e6f8",
+            "size": 7158,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/6125db205396d8dbca1289566d364c39dfc8e6f8"
+          },
+          {
+            "path": "offers31-package/samsara/exhibition_profiles.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "58255982b1e38d006afd8277b9df49e21ac6331d",
+            "size": 29499,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/58255982b1e38d006afd8277b9df49e21ac6331d"
+          },
+          {
+            "path": "offers31-package/samsara/exhibitions.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6cb547dd2a5f7556a4759376570bf9f75c9676c3",
+            "size": 17447,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/6cb547dd2a5f7556a4759376570bf9f75c9676c3"
+          },
+          {
+            "path": "offers31-package/samsara/exploration.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a58369057b721e0816473c47376a63f1cc584913",
+            "size": 10177,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/a58369057b721e0816473c47376a63f1cc584913"
+          },
+          {
+            "path": "offers31-package/samsara/extensions.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "421e30cda5be46b2cb2d094765815f0746221de5",
+            "size": 16151,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/421e30cda5be46b2cb2d094765815f0746221de5"
+          },
+          {
+            "path": "offers31-package/samsara/handlers.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9",
+            "size": 11382,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/2079c8ffedc6e536898d9a4502a0c7d6354dc5a9"
+          },
+          {
+            "path": "offers31-package/samsara/intake.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+            "size": 10721,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366"
+          },
+          {
+            "path": "offers31-package/samsara/local_worker.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d7039883a3e73c3a219d36929590f65915e1cd85",
+            "size": 13009,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/d7039883a3e73c3a219d36929590f65915e1cd85"
+          },
+          {
+            "path": "offers31-package/samsara/mediawork.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c6b960e1f9c3a2fb498653883c4d36a75744d3bb",
+            "size": 20871,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/c6b960e1f9c3a2fb498653883c4d36a75744d3bb"
+          },
+          {
+            "path": "offers31-package/samsara/owner.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c69b201209df32aaff84973582b1383a6fba44c1",
+            "size": 19337,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/c69b201209df32aaff84973582b1383a6fba44c1"
+          },
+          {
+            "path": "offers31-package/samsara/practice.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "bdef75ccf0493f2a67cf914725aa1ae08765a14a",
+            "size": 25686,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/bdef75ccf0493f2a67cf914725aa1ae08765a14a"
+          },
+          {
+            "path": "offers31-package/samsara/practice_content.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9a7696e3a3ba1325eaf036f421ec88cc6696f4e1",
+            "size": 21975,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/9a7696e3a3ba1325eaf036f421ec88cc6696f4e1"
+          },
+          {
+            "path": "offers31-package/samsara/process_custody.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "f4d13803194d72e76882e5e5cf8735d4cbb8e8f8",
+            "size": 12747,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/f4d13803194d72e76882e5e5cf8735d4cbb8e8f8"
+          },
+          {
+            "path": "offers31-package/samsara/properties.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "4420cd5ffd1e1094b71d758c91b7457a6ecef4a6",
+            "size": 37343,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/4420cd5ffd1e1094b71d758c91b7457a6ecef4a6"
+          },
+          {
+            "path": "offers31-package/samsara/protocol.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "315dfffcf2418fa555d7f15c1f9519950cae2026",
+            "size": 4039,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/315dfffcf2418fa555d7f15c1f9519950cae2026"
+          },
+          {
+            "path": "offers31-package/samsara/runner.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "1de3cd2f6b5bb47ad8f591924c0feadf590ef30a",
+            "size": 51926,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/1de3cd2f6b5bb47ad8f591924c0feadf590ef30a"
+          },
+          {
+            "path": "offers31-package/samsara/situation.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "07e0bc6ccdd3beef161fd8bbeb21df1e1719989f",
+            "size": 18184,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/07e0bc6ccdd3beef161fd8bbeb21df1e1719989f"
+          },
+          {
+            "path": "offers31-package/samsara/sourcework.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "dcb71d8b8a343a99ea8ab00dcde03fc4324ee66b",
+            "size": 16934,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/dcb71d8b8a343a99ea8ab00dcde03fc4324ee66b"
+          },
+          {
+            "path": "offers31-package/samsara/terminal.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c2089cbe140fb2608967e38947626e1da7a294ab",
+            "size": 2534,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/c2089cbe140fb2608967e38947626e1da7a294ab"
+          },
+          {
+            "path": "offers31-package/samsara/travel_content.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "055319f6a991483e731057575e5b4c7cc368fe19",
+            "size": 17730,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/055319f6a991483e731057575e5b4c7cc368fe19"
+          },
+          {
+            "path": "offers31-package/tests",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "d384dd535b948eaa80f1e16a71371cc7155998c7",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/d384dd535b948eaa80f1e16a71371cc7155998c7"
+          },
+          {
+            "path": "offers31-package/tests/test_exhibition_profiles.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "272235da8dc0310c40f79a4e6139f11a45a3f08f",
+            "size": 26630,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/272235da8dc0310c40f79a4e6139f11a45a3f08f"
+          },
+          {
+            "path": "reconstruct.py",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "adb6f5548da9f8980cd07748e3c75818261e886f",
+            "size": 1823,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/adb6f5548da9f8980cd07748e3c75818261e886f"
+          },
+          {
+            "path": "selected",
+            "mode": "040000",
+            "type": "tree",
+            "sha": "89fac101ae637b7a5802e3abf325adc2a16469d5",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/89fac101ae637b7a5802e3abf325adc2a16469d5"
+          },
+          {
+            "path": "selected/BUILD_STATUS.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "65bc6beae6626f4075620550054670e47301ee34",
+            "size": 582517,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/65bc6beae6626f4075620550054670e47301ee34"
+          },
+          {
+            "path": "selected/CONTINUE.md",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6148a25e834029c4966c05be274c687c08e1dbd2",
+            "size": 2297,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/6148a25e834029c4966c05be274c687c08e1dbd2"
+          },
+          {
+            "path": "selected/MANIFEST.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9bfd558259d2a81228010879aaca8e0562af49c1",
+            "size": 15387,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/9bfd558259d2a81228010879aaca8e0562af49c1"
+          },
+          {
+            "path": "selected/RAW_CAPTURE.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "f4f2e5cfebf4e889856992bca479a8f9a20298a2",
+            "size": 357,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/f4f2e5cfebf4e889856992bca479a8f9a20298a2"
+          },
+          {
+            "path": "selected/REPORT.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de",
+            "size": 50446,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de"
+          },
+          {
+            "path": "selected/SOURCE_MANIFEST.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "091018e30bb01a966fd3aea1421f19ef6fc19550",
+            "size": 5769,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/091018e30bb01a966fd3aea1421f19ef6fc19550"
+          },
+          {
+            "path": "selected/STATUS.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "7336995bc55e0e032db0d181330aa6a56f08883b",
+            "size": 939,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/7336995bc55e0e032db0d181330aa6a56f08883b"
+          },
+          {
+            "path": "selected/WIRE_INSTALLED_RESULT.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "1beac62c03aa67b2e15c23525c067197c66ef51d",
+            "size": 1061,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/1beac62c03aa67b2e15c23525c067197c66ef51d"
+          },
+          {
+            "path": "selected/WIRE_PURE_RESULT.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae",
+            "size": 1059,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/d94f64fdaff6d9ee383d4cc6ec657100dbd13cae"
+          },
+          {
+            "path": "selected/identity-lock.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "f4d4dc58c1b7217a705925520797680f8b3e655a",
+            "size": 50301,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/f4d4dc58c1b7217a705925520797680f8b3e655a"
+          },
+          {
+            "path": "selected/native18-canonical-source-manifest.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5",
+            "size": 111407,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/5a5cb856335e3e8671ee54fc208dd4fa9a5807f5"
+          },
+          {
+            "path": "selected/native18-paired-dependency-receipt.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "50bf952ff4957655d96e7358cc67a43f33933474",
+            "size": 6541,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/50bf952ff4957655d96e7358cc67a43f33933474"
+          },
+          {
+            "path": "selected/product30-antecedent-paired-receipt.json",
+            "mode": "100644",
+            "type": "blob",
+            "sha": "5da9782af672530b6b7402d72ce3ae3265277594",
+            "size": 14410,
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/blobs/5da9782af672530b6b7402d72ce3ae3265277594"
+          }
+        ],
+        "truncated": false
+      }
+    ],
+    "commit": {
+      "sha": "c9affccdab3879ef2db9b03799486a1daac211a9",
+      "node_id": "C_kwDOUgoRfdoAKGM5YWZmY2NkYWIzODc5ZWYyZGI5YjAzNzk5NDg2YTFkYWFjMjExYTk",
+      "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/c9affccdab3879ef2db9b03799486a1daac211a9",
+      "html_url": "https://github.com/guarani-ux/Kageyoni/commit/c9affccdab3879ef2db9b03799486a1daac211a9",
+      "author": {
+        "name": "guarani-ux",
+        "email": "flowersnelsone@gmail.com",
+        "date": "2026-10-22T20:51:25Z"
+      },
+      "committer": {
+        "name": "guarani-ux",
+        "email": "flowersnelsone@gmail.com",
+        "date": "2026-10-22T20:51:25Z"
+      },
+      "tree": {
+        "sha": "999f121eaecc43815eda09d22270117654cad727",
+        "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/999f121eaecc43815eda09d22270117654cad727"
+      },
+      "message": "Pair product31 bounded offers/recipient critical evidence IN_PROGRESS\n\nMirror42source incl1test/41production, exact frozen ledger/reports and immutable SAM critical provider; native18 canonical source remains prior78f68/159855. SCRIPTED ownchoices, freshAI4495B later-use recipient and relocation evidence are bounded. No actual contestplay/award/helperrepair/fullF3/human/fullrelease. Full raw custody follows;32/reconstructionKIT excluded.",
+      "parents": [
+        {
+          "sha": "2689d50a276203002a6f8568fcbd48ae3b74f1ca",
+          "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/2689d50a276203002a6f8568fcbd48ae3b74f1ca",
+          "html_url": "https://github.com/guarani-ux/Kageyoni/commit/2689d50a276203002a6f8568fcbd48ae3b74f1ca"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "all_prior_sibling_paths_preserved": true,
+    "checkpoint_payloads": 59
+  }
+}

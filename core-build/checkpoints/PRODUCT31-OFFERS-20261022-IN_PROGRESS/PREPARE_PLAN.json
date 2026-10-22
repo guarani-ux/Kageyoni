@@ -1,0 +1,54 @@
+{
+  "status": "HOLD_NO_PACKING_OR_REMOTE_WRITES_UNTIL_SEPARATE_ROOT_GO",
+  "packet_manifest_sha256": "c06a476d55c9252e70bcf7d539a8a1773b8c84b0600ded623584b46f6d048317",
+  "ledger_sha256": "b3a826c6cf36726362c8f7064968e5dff09de9790c4101007b0a7fd84b08d7a0",
+  "manifest_files": 105,
+  "physical_files": 106,
+  "total_file_bytes": 5932240,
+  "all_manifest_file_bytes_SHA_exact": true,
+  "source_entries": 42,
+  "production_entries": 41,
+  "critical": {
+    "source_files": 105,
+    "source_bytes": 3409977,
+    "directories_including_root": 13,
+    "planned_ZIP_members_including_added_manifest": 119,
+    "direct_mirrored_source": 42,
+    "direct_mirrored_selected_reports": 13,
+    "direct_generated_context_recipe_reconstructor": 3,
+    "direct_mirrored_total_before_parts_or_pointers": 58,
+    "placement": "New checkpoint subdirectory only in both repos; complete critical ZIP excludes only rawZIP, contains every other exact frozen file inclboth dependencywheels; ASCIIcriticalparts SAM, immutable sourceprovider pointer Kage.",
+    "compressed_bytes_and_ASCII_part_count": "UNMEASURED_UNPACKED_pending_GO"
+  },
+  "full": {
+    "source_files": 106,
+    "source_bytes": 5932240,
+    "directories_including_root": 13,
+    "planned_ZIP_members_including_added_manifest": 120,
+    "placement": "Complete frozenpacket provider plus standalone exact originalraw provider in SAM; recipes/custody proofs mirrored both, KageimmutableBODYprovider pointer.",
+    "compressed_bytes_and_ASCII_part_count": "UNMEASURED_UNPACKED_pending_GO"
+  },
+  "raw": {
+    "bytes": 2522263,
+    "sha256": "cca2d1e2a0cbd2ea5355308341efe73bc335b0049b82ee4b173be8955bc91eba",
+    "members": 138,
+    "CRC_pass": true,
+    "parts_at_500000_bytes": 6,
+    "actual_CAPTURE_MANIFEST_file_type": 0
+  },
+  "wheels": {
+    "samsara_world-0.5.3.dev31-py3-none-any.whl": {
+      "bytes": 239571,
+      "sha256": "a17dac8ed4172b2cda1ccf50e0fd09f67d9f4b7ebd64a34ed81c26616c0fa1f4"
+    },
+    "kageyoni_engine-11.1.0.dev18-py3-none-any.whl": {
+      "bytes": 624705,
+      "sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626"
+    }
+  },
+  "scope": "Installed dev31/native18 bounded unreserved offers/own scripted choices; independent AI4495B later-use private assessment and relocation evidence. No actual contestplay/award/helperrepair/fullF3/human/allF1-F5/fullrelease; recipient changed no consent.",
+  "native18_source_anchor": "78f68bde6496a3598d9059bf0e052b51ec494ca7/1598555d04c3846a6ba4208b4b35dc701515474b F3A-NATIVE18-20261022-IN_PROGRESS745source",
+  "effects": "Read-only file/hash/ZIP CRC and Git preflight; ownsmallmetadata only. No archive/parts created, no remote mutation, no DB/native/processprobe/test/build/source/Library/automation effects. No children.",
+  "capacity": "Observed /dev/shm1.5GiB available at preflight; no claim sufficient after independent469MBreconstruction; recheck before authorized packing.",
+  "reconstructionkit": "EXCLUDED: separate possible additivecommission only after actualresult/rootGO"
+}

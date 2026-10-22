@@ -1,0 +1,45 @@
+{
+  "status": "WHOLE_ARCHIVE_ACTUAL_REMOTE_READBACK_VERIFIED",
+  "providers": {
+    "critical": {
+      "filename": "Product31_Offers_Critical_IN_PROGRESS.zip",
+      "bytes": 1456676,
+      "sha256": "28f2324ae02f144d6543d7c76e3159ffa9fa66fda30b950987b0e22c5f679d01",
+      "zip_entries": 119
+    },
+    "body": {
+      "filename": "Product31_Offers_Complete_Packet_IN_PROGRESS.zip",
+      "bytes": 3786333,
+      "sha256": "23c4afcb1bd7742118f03dc8dc01e5dfdc0378236d94f488b8d6d54f6663a22e",
+      "zip_entries": 120
+    },
+    "raw": {
+      "filename": "Product31_Offers_Recipient_Relocation_Raw.zip",
+      "bytes": 2522263,
+      "sha256": "cca2d1e2a0cbd2ea5355308341efe73bc335b0049b82ee4b173be8955bc91eba",
+      "zip_entries": 138
+    }
+  },
+  "remote_reconstruction_checks": [
+    "all ASCII/raw partSHA256 and Git IDs",
+    "strict base64 and exact offsets",
+    "wholearchiveSHA256",
+    "ZIPCRC/unique paths",
+    "everymemberSHA256/mode/filetype/symlinktarget",
+    "all106frozenfiles exact inside remote packet",
+    "rawZIP exact standalone and inside recoveredpacket"
+  ],
+  "remote_payload_counts": {
+    "critical_SAM": 61,
+    "critical_Kage": 58,
+    "critical_Kage_pointer": 1,
+    "body_SAM": 32,
+    "body_Kage": 18
+  },
+  "raw_manifest_type0": "Exact original CAPTURE-MANIFEST.json only, not original sourceentry; no invented S_IFREG",
+  "all_source_before_after_metadata_exact": true,
+  "semantic_claim": "Bounded offers/SCRIPTED ownchoices; independentAI later-use recipient changednochoices and relocation only; no actual contestplay/award/helperrepair/fullF3/human/fullrelease.",
+  "unknown_blob": "One create_blob UNKNOWN resolved by exact actual immutableblob fullbytes/SHA256/GitID verification; originalerror retained, no mutationretry; no remainingunknown remoteeffects.",
+  "writer_DB_native_Client_test_build_source_Library_automation_effects": false,
+  "all_byte_verification_commands_closed_exit0_serial": true
+}

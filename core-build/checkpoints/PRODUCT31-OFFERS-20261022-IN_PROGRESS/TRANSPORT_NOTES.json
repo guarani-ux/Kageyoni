@@ -1,0 +1,19 @@
+{
+  "original_UTF8_transport": "All source/metadata submitted as base64; ASCIIproviders strictbase64 noBOM/noLF.",
+  "remote_text_capture": "apply_patch may add single LF; adapter takes exactexpectedbytecount and allows tail empty/oneLF, then complete SHA256 and Gitblob ID prove originalbytes.",
+  "one_blob_UNKNOWN": {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/intake.py",
+    "expected_git_id": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+    "actual_response": "RemoteProtocolError: Server disconnected without sending a response.",
+    "resolution": "Read exactexpectedblob succeeded, complete actualbytes match local SHA256/GitID. Bothheads freshly unchanged; no reupload. All other issued calls accounted; remaining17paths had never been issued and were uploaded normally.",
+    "raw_evidence": [
+      "critical-upload-partial-UNKNOWN.json",
+      "unknown-blob-actual-read.json",
+      "unknown-blob-resolution.json"
+    ]
+  },
+  "uncertain_remote_mutations": false,
+  "ref_updates": "ExactparentCAS/forcefalse, no unknowneffectretry, allpriorpaths preserved.",
+  "byte_jobs": "All packaging/reconstruction bytecommands collected exit0 serially; no DB/native/source/runtime process activity."
+}

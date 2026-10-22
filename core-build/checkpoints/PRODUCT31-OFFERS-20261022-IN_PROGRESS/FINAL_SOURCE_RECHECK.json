@@ -1,0 +1,11 @@
+{
+  "status": "ALL106EXACT_SOURCE_FILES_AND_METADATA_UNCHANGED_REMOTE_PACKET_EXACT",
+  "manifest_files": 105,
+  "physical_files": 106,
+  "manifest_sha256": "c06a476d55c9252e70bcf7d539a8a1773b8c84b0600ded623584b46f6d048317",
+  "ledger_sha256": "b3a826c6cf36726362c8f7064968e5dff09de9790c4101007b0a7fd84b08d7a0",
+  "current31_wheel_and_native18_wheel_exact": true,
+  "remote_packet106files_exact": true,
+  "remote_rawZIP_exact_inside_packet_and_standalone": true,
+  "DB_opened": false
+}

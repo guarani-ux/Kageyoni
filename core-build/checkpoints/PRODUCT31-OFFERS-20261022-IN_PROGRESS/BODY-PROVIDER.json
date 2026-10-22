@@ -1,0 +1,36 @@
+{
+  "status": "COMPLETE_COMPACT_PRODUCT31_OFFERS_RECIPIENT_RELOCATION_REMOTE_CUSTODY_VERIFIED",
+  "repository": "guarani-ux/SAMSARA",
+  "commit": "789b595753e4ea4e801d780346719881765e949f",
+  "critical_commit": "67828ebc2d79dbc494f232d88fd43d2b76fb6cea",
+  "checkpoint": "core-build/checkpoints/PRODUCT31-OFFERS-20261022-IN_PROGRESS",
+  "README": "README.md",
+  "reconstruct": "reconstruct.py",
+  "providers": [
+    {
+      "recipe": "body-recipe.json",
+      "bytes": 3786333,
+      "filename": "Product31_Offers_Complete_Packet_IN_PROGRESS.zip",
+      "sha256": "23c4afcb1bd7742118f03dc8dc01e5dfdc0378236d94f488b8d6d54f6663a22e",
+      "zip_entries": 120
+    },
+    {
+      "recipe": "critical-recipe.json",
+      "bytes": 1456676,
+      "filename": "Product31_Offers_Critical_IN_PROGRESS.zip",
+      "sha256": "28f2324ae02f144d6543d7c76e3159ffa9fa66fda30b950987b0e22c5f679d01",
+      "zip_entries": 119
+    },
+    {
+      "recipe": "raw-recipe.json",
+      "bytes": 2522263,
+      "filename": "Product31_Offers_Recipient_Relocation_Raw.zip",
+      "sha256": "cca2d1e2a0cbd2ea5355308341efe73bc335b0049b82ee4b173be8955bc91eba",
+      "zip_entries": 138
+    }
+  ],
+  "proof": "BODY_READBACK.json",
+  "manifest_sha256": "c06a476d55c9252e70bcf7d539a8a1773b8c84b0600ded623584b46f6d048317",
+  "ledger_sha256": "b3a826c6cf36726362c8f7064968e5dff09de9790c4101007b0a7fd84b08d7a0",
+  "scope": "Installed31/native18 bounded offers/SCRIPTED ownchoices, independent AI later-use4495B assessment no consentchanges, physicalrelocation. Complete106file compact packet; no actual contestplay/award/helperrepair/fullF3/human/fullrelease. Prior28/30/native18 anchors preserved,32/reconstructionKIT excluded."
+}

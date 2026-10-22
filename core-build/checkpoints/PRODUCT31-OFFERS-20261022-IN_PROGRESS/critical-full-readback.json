@@ -1,0 +1,954 @@
+[
+  {
+    "repo": "SAMSARA",
+    "path": "reconstruct.py",
+    "bytes": 1823,
+    "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5",
+    "git_sha1": "adb6f5548da9f8980cd07748e3c75818261e886f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/BUILD_STATUS.json",
+    "bytes": 582517,
+    "sha256": "b3a826c6cf36726362c8f7064968e5dff09de9790c4101007b0a7fd84b08d7a0",
+    "git_sha1": "65bc6beae6626f4075620550054670e47301ee34",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "critical-recipe.json",
+    "bytes": 34564,
+    "sha256": "dd5301b7baf3d7768beb0f8d3393a92375c218c6dc090e9d551558c5bda9970f",
+    "git_sha1": "227df16bb436125f37e2a87183a01d893694dc48",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "context.json",
+    "bytes": 3541,
+    "sha256": "1d39ac7452ec292bd5e663a7b282593dc61d62065d6f70c7efa626c6fce3374e",
+    "git_sha1": "136f1a64e26580ce93fe23bd219776d256abf55b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/RAW_CAPTURE.json",
+    "bytes": 357,
+    "sha256": "18316d46217909d1b99444f2f162a3e314c5cfe544d37f9af449eecdeb3bd64c",
+    "git_sha1": "f4f2e5cfebf4e889856992bca479a8f9a20298a2",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/CONTINUE.md",
+    "bytes": 2297,
+    "sha256": "551edbb5a6e9aeeded8ebb9dd7ac4248d336e7a240658e9a8fea8f6850dae179",
+    "git_sha1": "6148a25e834029c4966c05be274c687c08e1dbd2",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/REPORT.json",
+    "bytes": 50446,
+    "sha256": "1bfc75372d5bb8feeebac8b62d4baeb5f38b78fbb553a3249f3eba8da33d90e8",
+    "git_sha1": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/MANIFEST.json",
+    "bytes": 15387,
+    "sha256": "c06a476d55c9252e70bcf7d539a8a1773b8c84b0600ded623584b46f6d048317",
+    "git_sha1": "9bfd558259d2a81228010879aaca8e0562af49c1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/WIRE_PURE_RESULT.json",
+    "bytes": 1059,
+    "sha256": "ddac5fc0f1ac9a46d43f5baee14f4e7c2f09212b660241bb86776e094db82f39",
+    "git_sha1": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/SOURCE_MANIFEST.json",
+    "bytes": 5769,
+    "sha256": "f65df67c0db39c1464e1ca696fb1f10d14f7bbe8bd77ebfdffc1f2a9db6cd420",
+    "git_sha1": "091018e30bb01a966fd3aea1421f19ef6fc19550",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/STATUS.json",
+    "bytes": 939,
+    "sha256": "06fd0746acab4725378afb32c454a3648012aaf5a27a0d08ad797e32a7c0e7df",
+    "git_sha1": "7336995bc55e0e032db0d181330aa6a56f08883b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/WIRE_INSTALLED_RESULT.json",
+    "bytes": 1061,
+    "sha256": "1c51ddf7dd57b05eab5e365501a5c56be5e020606cd5fcba723d5e9934d75456",
+    "git_sha1": "1beac62c03aa67b2e15c23525c067197c66ef51d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/identity-lock.json",
+    "bytes": 50301,
+    "sha256": "97c6cf6e88cc94b6d0fda5d1137a13e8ecf21474db5dc11970bd69f3321aa505",
+    "git_sha1": "f4d4dc58c1b7217a705925520797680f8b3e655a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/product30-antecedent-paired-receipt.json",
+    "bytes": 14410,
+    "sha256": "50894ba56cd70ffdbb18cc6f8b3e79546e18f46ede0880f12843a94d58bcb135",
+    "git_sha1": "5da9782af672530b6b7402d72ce3ae3265277594",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/native18-paired-dependency-receipt.json",
+    "bytes": 6541,
+    "sha256": "ed134b7a17780a1d134f15d5ba51fe6bb88100298ca26dacccdc5f49db2739e3",
+    "git_sha1": "50bf952ff4957655d96e7358cc67a43f33933474",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "selected/native18-canonical-source-manifest.json",
+    "bytes": 111407,
+    "sha256": "2a391e08290fe554b97c597f491e6c1a875c7945827308e03a98079eba95ecf1",
+    "git_sha1": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/__main__.py",
+    "bytes": 29,
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+    "git_sha1": "130bc6375628dffcf81fd338a297adae47ac205c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/__init__.py",
+    "bytes": 105,
+    "sha256": "22bafa404b31d7c112d9f1b8afa62166ad87e31bd6a686a2c9a0f1a1eb4f8749",
+    "git_sha1": "7fe39a0be07b3bf0368d5945795b0d1176032ddb",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/application.py",
+    "bytes": 75485,
+    "sha256": "0e81fe3feb5523931ed1e77ecf3d590e3a6cd10b254b6c8ace8a96647d23bbd9",
+    "git_sha1": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/pyproject.toml",
+    "bytes": 520,
+    "sha256": "a409caadb8077281c5e0fc99d05f9d630450d0a128e49e421084cf4d4d96533c",
+    "git_sha1": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/atlas.py",
+    "bytes": 20907,
+    "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b",
+    "git_sha1": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/causality.py",
+    "bytes": 13613,
+    "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95",
+    "git_sha1": "9032d89355888dc8c5a4b91c8b44e510d3fb8728",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/cli.py",
+    "bytes": 9443,
+    "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd",
+    "git_sha1": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/client.py",
+    "bytes": 19442,
+    "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040",
+    "git_sha1": "3639fc697e524bed5a52640d3046a55e3dfeb0a7",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/content.py",
+    "bytes": 26324,
+    "sha256": "54bec339f5dc07291fb0bf09190dbb7ca347b352906c8bc2e0d1a33313ff77e0",
+    "git_sha1": "8a8bc561c6346b6332aa7578f25b8c19daea4b13",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/console.py",
+    "bytes": 15603,
+    "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7",
+    "git_sha1": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/compatibility.py",
+    "bytes": 30288,
+    "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71",
+    "git_sha1": "9336136d859ae6cab6a128fa402e8b92029b1180",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/contentsets.py",
+    "bytes": 39135,
+    "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5",
+    "git_sha1": "a7d62204cf58b68cab10040d3e61cf28b0684edd",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/data/compatibility-policy-r07a.json",
+    "bytes": 55805,
+    "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845",
+    "git_sha1": "45a9782db7a443084e5aebca43a25f6bff3bb042",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/data/compatibility-policy-ps1.json",
+    "bytes": 143222,
+    "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9",
+    "git_sha1": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/data/compatibility-policy-r07b.json",
+    "bytes": 113651,
+    "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb",
+    "git_sha1": "7bc0eec693e02cb175af2acc230a12b05f29b9a8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/data/compatibility-policy.json",
+    "bytes": 172418,
+    "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a",
+    "git_sha1": "d559187944d7413367ba329bb8d83592000516cf",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/data/work-record.json",
+    "bytes": 979,
+    "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de",
+    "git_sha1": "bbe835f62093af2e26d62ad8f72a88583b37f2cb",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/data/contract.json",
+    "bytes": 124046,
+    "sha256": "11950ecba7a73d92889d0605f29d5982018469c11f4da207976e8c9d07b0a436",
+    "git_sha1": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/data/initial-source.md",
+    "bytes": 572,
+    "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+    "git_sha1": "3bba2c6d899f9a4601cf1f710159702895441b00",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/data/engine-lock.json",
+    "bytes": 535,
+    "sha256": "5de62427f9f4d77e9ea325733a6167155d5cbcf9a4790ecb62eec15debf00887",
+    "git_sha1": "498bab92eadd245fd1f5056105acfd756f63f05c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/equipment.py",
+    "bytes": 10788,
+    "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72",
+    "git_sha1": "0e4a983930f29d23713754e884b17cd29d0bb76c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/exhibition_profiles.py",
+    "bytes": 29499,
+    "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc",
+    "git_sha1": "58255982b1e38d006afd8277b9df49e21ac6331d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/exhibition_admission.py",
+    "bytes": 7158,
+    "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55",
+    "git_sha1": "6125db205396d8dbca1289566d364c39dfc8e6f8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/exhibitions.py",
+    "bytes": 17447,
+    "sha256": "983f39607192daaa4afa7b63eb634bf3c380d8e0a112fc489ea0af2d23248fb1",
+    "git_sha1": "6cb547dd2a5f7556a4759376570bf9f75c9676c3",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/intake.py",
+    "bytes": 10721,
+    "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297",
+    "git_sha1": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/handlers.py",
+    "bytes": 11382,
+    "sha256": "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275",
+    "git_sha1": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/exploration.py",
+    "bytes": 10177,
+    "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96",
+    "git_sha1": "a58369057b721e0816473c47376a63f1cc584913",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/extensions.py",
+    "bytes": 16151,
+    "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca",
+    "git_sha1": "421e30cda5be46b2cb2d094765815f0746221de5",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/practice.py",
+    "bytes": 25686,
+    "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444",
+    "git_sha1": "bdef75ccf0493f2a67cf914725aa1ae08765a14a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/local_worker.py",
+    "bytes": 13009,
+    "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730",
+    "git_sha1": "d7039883a3e73c3a219d36929590f65915e1cd85",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/mediawork.py",
+    "bytes": 20871,
+    "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e",
+    "git_sha1": "c6b960e1f9c3a2fb498653883c4d36a75744d3bb",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/owner.py",
+    "bytes": 19337,
+    "sha256": "74e405d8e230b412ebf65d02fa7a94f770da1802a01d67385353268a22b52145",
+    "git_sha1": "c69b201209df32aaff84973582b1383a6fba44c1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/protocol.py",
+    "bytes": 4039,
+    "sha256": "5ed8767fd5135d96f45479446a2f986a20f08c7cc7704473ba48decb06285163",
+    "git_sha1": "315dfffcf2418fa555d7f15c1f9519950cae2026",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/properties.py",
+    "bytes": 37343,
+    "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883",
+    "git_sha1": "4420cd5ffd1e1094b71d758c91b7457a6ecef4a6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/process_custody.py",
+    "bytes": 12747,
+    "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340",
+    "git_sha1": "f4d13803194d72e76882e5e5cf8735d4cbb8e8f8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/practice_content.py",
+    "bytes": 21975,
+    "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4",
+    "git_sha1": "9a7696e3a3ba1325eaf036f421ec88cc6696f4e1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/sourcework.py",
+    "bytes": 16934,
+    "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa",
+    "git_sha1": "dcb71d8b8a343a99ea8ab00dcde03fc4324ee66b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/terminal.py",
+    "bytes": 2534,
+    "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800",
+    "git_sha1": "c2089cbe140fb2608967e38947626e1da7a294ab",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/situation.py",
+    "bytes": 18184,
+    "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9",
+    "git_sha1": "07e0bc6ccdd3beef161fd8bbeb21df1e1719989f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/runner.py",
+    "bytes": 51926,
+    "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832",
+    "git_sha1": "1de3cd2f6b5bb47ad8f591924c0feadf590ef30a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/samsara/travel_content.py",
+    "bytes": 17730,
+    "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6",
+    "git_sha1": "055319f6a991483e731057575e5b4c7cc368fe19",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "offers31-package/tests/test_exhibition_profiles.py",
+    "bytes": 26630,
+    "sha256": "c9bdd0725de59ddc176e03f5bd6c86f087ce862c5a540a840e97b961b51eab63",
+    "git_sha1": "272235da8dc0310c40f79a4e6139f11a45a3f08f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "critical-parts/part-000.base64",
+    "bytes": 666668,
+    "sha256": "55ffe123f86eae61375e1f009e9c86d047826034368bee9db50ef00eac24a0ee",
+    "git_sha1": "5a1ab6d10b3844b2f4ad8df3159822085aed1004",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "critical-parts/part-001.base64",
+    "bytes": 666668,
+    "sha256": "f9ce4e835e9c94c4ea3bd10717543723699c4863c5c95f52e241c0d366cfaef1",
+    "git_sha1": "b939e4e70f554ed9e62d684e30d6d7f293e30ef1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "reconstruct.py",
+    "bytes": 1823,
+    "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5",
+    "git_sha1": "adb6f5548da9f8980cd07748e3c75818261e886f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "context.json",
+    "bytes": 3541,
+    "sha256": "1d39ac7452ec292bd5e663a7b282593dc61d62065d6f70c7efa626c6fce3374e",
+    "git_sha1": "136f1a64e26580ce93fe23bd219776d256abf55b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "critical-recipe.json",
+    "bytes": 34564,
+    "sha256": "dd5301b7baf3d7768beb0f8d3393a92375c218c6dc090e9d551558c5bda9970f",
+    "git_sha1": "227df16bb436125f37e2a87183a01d893694dc48",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "critical-parts/part-002.base64",
+    "bytes": 608904,
+    "sha256": "dc59978fd8d1af3ab04fe1fdcfac79ee60591c48506e5ea39c89b9a00d796744",
+    "git_sha1": "865a8724b5c5726ac34b4811b87b8b524a3ed598",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/CONTINUE.md",
+    "bytes": 2297,
+    "sha256": "551edbb5a6e9aeeded8ebb9dd7ac4248d336e7a240658e9a8fea8f6850dae179",
+    "git_sha1": "6148a25e834029c4966c05be274c687c08e1dbd2",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/RAW_CAPTURE.json",
+    "bytes": 357,
+    "sha256": "18316d46217909d1b99444f2f162a3e314c5cfe544d37f9af449eecdeb3bd64c",
+    "git_sha1": "f4f2e5cfebf4e889856992bca479a8f9a20298a2",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/MANIFEST.json",
+    "bytes": 15387,
+    "sha256": "c06a476d55c9252e70bcf7d539a8a1773b8c84b0600ded623584b46f6d048317",
+    "git_sha1": "9bfd558259d2a81228010879aaca8e0562af49c1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/BUILD_STATUS.json",
+    "bytes": 582517,
+    "sha256": "b3a826c6cf36726362c8f7064968e5dff09de9790c4101007b0a7fd84b08d7a0",
+    "git_sha1": "65bc6beae6626f4075620550054670e47301ee34",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/WIRE_INSTALLED_RESULT.json",
+    "bytes": 1061,
+    "sha256": "1c51ddf7dd57b05eab5e365501a5c56be5e020606cd5fcba723d5e9934d75456",
+    "git_sha1": "1beac62c03aa67b2e15c23525c067197c66ef51d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/SOURCE_MANIFEST.json",
+    "bytes": 5769,
+    "sha256": "f65df67c0db39c1464e1ca696fb1f10d14f7bbe8bd77ebfdffc1f2a9db6cd420",
+    "git_sha1": "091018e30bb01a966fd3aea1421f19ef6fc19550",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/STATUS.json",
+    "bytes": 939,
+    "sha256": "06fd0746acab4725378afb32c454a3648012aaf5a27a0d08ad797e32a7c0e7df",
+    "git_sha1": "7336995bc55e0e032db0d181330aa6a56f08883b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/REPORT.json",
+    "bytes": 50446,
+    "sha256": "1bfc75372d5bb8feeebac8b62d4baeb5f38b78fbb553a3249f3eba8da33d90e8",
+    "git_sha1": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/native18-paired-dependency-receipt.json",
+    "bytes": 6541,
+    "sha256": "ed134b7a17780a1d134f15d5ba51fe6bb88100298ca26dacccdc5f49db2739e3",
+    "git_sha1": "50bf952ff4957655d96e7358cc67a43f33933474",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/WIRE_PURE_RESULT.json",
+    "bytes": 1059,
+    "sha256": "ddac5fc0f1ac9a46d43f5baee14f4e7c2f09212b660241bb86776e094db82f39",
+    "git_sha1": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/identity-lock.json",
+    "bytes": 50301,
+    "sha256": "97c6cf6e88cc94b6d0fda5d1137a13e8ecf21474db5dc11970bd69f3321aa505",
+    "git_sha1": "f4d4dc58c1b7217a705925520797680f8b3e655a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/native18-canonical-source-manifest.json",
+    "bytes": 111407,
+    "sha256": "2a391e08290fe554b97c597f491e6c1a875c7945827308e03a98079eba95ecf1",
+    "git_sha1": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/pyproject.toml",
+    "bytes": 520,
+    "sha256": "a409caadb8077281c5e0fc99d05f9d630450d0a128e49e421084cf4d4d96533c",
+    "git_sha1": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/__init__.py",
+    "bytes": 105,
+    "sha256": "22bafa404b31d7c112d9f1b8afa62166ad87e31bd6a686a2c9a0f1a1eb4f8749",
+    "git_sha1": "7fe39a0be07b3bf0368d5945795b0d1176032ddb",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "selected/product30-antecedent-paired-receipt.json",
+    "bytes": 14410,
+    "sha256": "50894ba56cd70ffdbb18cc6f8b3e79546e18f46ede0880f12843a94d58bcb135",
+    "git_sha1": "5da9782af672530b6b7402d72ce3ae3265277594",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/__main__.py",
+    "bytes": 29,
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+    "git_sha1": "130bc6375628dffcf81fd338a297adae47ac205c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/causality.py",
+    "bytes": 13613,
+    "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95",
+    "git_sha1": "9032d89355888dc8c5a4b91c8b44e510d3fb8728",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/application.py",
+    "bytes": 75485,
+    "sha256": "0e81fe3feb5523931ed1e77ecf3d590e3a6cd10b254b6c8ace8a96647d23bbd9",
+    "git_sha1": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/cli.py",
+    "bytes": 9443,
+    "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd",
+    "git_sha1": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/atlas.py",
+    "bytes": 20907,
+    "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b",
+    "git_sha1": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/content.py",
+    "bytes": 26324,
+    "sha256": "54bec339f5dc07291fb0bf09190dbb7ca347b352906c8bc2e0d1a33313ff77e0",
+    "git_sha1": "8a8bc561c6346b6332aa7578f25b8c19daea4b13",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/client.py",
+    "bytes": 19442,
+    "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040",
+    "git_sha1": "3639fc697e524bed5a52640d3046a55e3dfeb0a7",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/compatibility.py",
+    "bytes": 30288,
+    "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71",
+    "git_sha1": "9336136d859ae6cab6a128fa402e8b92029b1180",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/console.py",
+    "bytes": 15603,
+    "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7",
+    "git_sha1": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/data/compatibility-policy-ps1.json",
+    "bytes": 143222,
+    "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9",
+    "git_sha1": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/data/compatibility-policy-r07b.json",
+    "bytes": 113651,
+    "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb",
+    "git_sha1": "7bc0eec693e02cb175af2acc230a12b05f29b9a8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/data/compatibility-policy-r07a.json",
+    "bytes": 55805,
+    "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845",
+    "git_sha1": "45a9782db7a443084e5aebca43a25f6bff3bb042",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/contentsets.py",
+    "bytes": 39135,
+    "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5",
+    "git_sha1": "a7d62204cf58b68cab10040d3e61cf28b0684edd",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/data/work-record.json",
+    "bytes": 979,
+    "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de",
+    "git_sha1": "bbe835f62093af2e26d62ad8f72a88583b37f2cb",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/data/contract.json",
+    "bytes": 124046,
+    "sha256": "11950ecba7a73d92889d0605f29d5982018469c11f4da207976e8c9d07b0a436",
+    "git_sha1": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/data/compatibility-policy.json",
+    "bytes": 172418,
+    "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a",
+    "git_sha1": "d559187944d7413367ba329bb8d83592000516cf",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/data/engine-lock.json",
+    "bytes": 535,
+    "sha256": "5de62427f9f4d77e9ea325733a6167155d5cbcf9a4790ecb62eec15debf00887",
+    "git_sha1": "498bab92eadd245fd1f5056105acfd756f63f05c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/exhibition_admission.py",
+    "bytes": 7158,
+    "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55",
+    "git_sha1": "6125db205396d8dbca1289566d364c39dfc8e6f8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/equipment.py",
+    "bytes": 10788,
+    "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72",
+    "git_sha1": "0e4a983930f29d23713754e884b17cd29d0bb76c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/data/initial-source.md",
+    "bytes": 572,
+    "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+    "git_sha1": "3bba2c6d899f9a4601cf1f710159702895441b00",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/exhibition_profiles.py",
+    "bytes": 29499,
+    "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc",
+    "git_sha1": "58255982b1e38d006afd8277b9df49e21ac6331d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/handlers.py",
+    "bytes": 11382,
+    "sha256": "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275",
+    "git_sha1": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/exhibitions.py",
+    "bytes": 17447,
+    "sha256": "983f39607192daaa4afa7b63eb634bf3c380d8e0a112fc489ea0af2d23248fb1",
+    "git_sha1": "6cb547dd2a5f7556a4759376570bf9f75c9676c3",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/exploration.py",
+    "bytes": 10177,
+    "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96",
+    "git_sha1": "a58369057b721e0816473c47376a63f1cc584913",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/extensions.py",
+    "bytes": 16151,
+    "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca",
+    "git_sha1": "421e30cda5be46b2cb2d094765815f0746221de5",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/mediawork.py",
+    "bytes": 20871,
+    "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e",
+    "git_sha1": "c6b960e1f9c3a2fb498653883c4d36a75744d3bb",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/intake.py",
+    "bytes": 10721,
+    "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297",
+    "git_sha1": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/local_worker.py",
+    "bytes": 13009,
+    "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730",
+    "git_sha1": "d7039883a3e73c3a219d36929590f65915e1cd85",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/owner.py",
+    "bytes": 19337,
+    "sha256": "74e405d8e230b412ebf65d02fa7a94f770da1802a01d67385353268a22b52145",
+    "git_sha1": "c69b201209df32aaff84973582b1383a6fba44c1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/practice.py",
+    "bytes": 25686,
+    "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444",
+    "git_sha1": "bdef75ccf0493f2a67cf914725aa1ae08765a14a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/process_custody.py",
+    "bytes": 12747,
+    "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340",
+    "git_sha1": "f4d13803194d72e76882e5e5cf8735d4cbb8e8f8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/protocol.py",
+    "bytes": 4039,
+    "sha256": "5ed8767fd5135d96f45479446a2f986a20f08c7cc7704473ba48decb06285163",
+    "git_sha1": "315dfffcf2418fa555d7f15c1f9519950cae2026",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/practice_content.py",
+    "bytes": 21975,
+    "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4",
+    "git_sha1": "9a7696e3a3ba1325eaf036f421ec88cc6696f4e1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/sourcework.py",
+    "bytes": 16934,
+    "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa",
+    "git_sha1": "dcb71d8b8a343a99ea8ab00dcde03fc4324ee66b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/situation.py",
+    "bytes": 18184,
+    "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9",
+    "git_sha1": "07e0bc6ccdd3beef161fd8bbeb21df1e1719989f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/runner.py",
+    "bytes": 51926,
+    "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832",
+    "git_sha1": "1de3cd2f6b5bb47ad8f591924c0feadf590ef30a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/properties.py",
+    "bytes": 37343,
+    "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883",
+    "git_sha1": "4420cd5ffd1e1094b71d758c91b7457a6ecef4a6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/tests/test_exhibition_profiles.py",
+    "bytes": 26630,
+    "sha256": "c9bdd0725de59ddc176e03f5bd6c86f087ce862c5a540a840e97b961b51eab63",
+    "git_sha1": "272235da8dc0310c40f79a4e6139f11a45a3f08f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/terminal.py",
+    "bytes": 2534,
+    "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800",
+    "git_sha1": "c2089cbe140fb2608967e38947626e1da7a294ab",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "offers31-package/samsara/travel_content.py",
+    "bytes": 17730,
+    "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6",
+    "git_sha1": "055319f6a991483e731057575e5b4c7cc368fe19",
+    "transport_padding_bytes": 1
+  }
+]

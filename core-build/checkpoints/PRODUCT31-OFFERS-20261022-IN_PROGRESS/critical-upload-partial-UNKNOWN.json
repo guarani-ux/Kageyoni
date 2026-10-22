@@ -1,0 +1,2057 @@
+{
+  "partial": {
+    "SAMSARA": [
+      {
+        "bytes": 3541,
+        "encoding": "base64",
+        "git_sha1": "136f1a64e26580ce93fe23bd219776d256abf55b",
+        "local": "/dev/shm/github-product31-offers/context.json",
+        "path": "context.json",
+        "sha256": "1d39ac7452ec292bd5e663a7b282593dc61d62065d6f70c7efa626c6fce3374e",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-000.base64",
+        "transport_bytes": 4724,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "136f1a64e26580ce93fe23bd219776d256abf55b"
+          },
+          "isError": false
+        },
+        "sha": "136f1a64e26580ce93fe23bd219776d256abf55b"
+      },
+      {
+        "bytes": 34564,
+        "encoding": "base64",
+        "git_sha1": "227df16bb436125f37e2a87183a01d893694dc48",
+        "local": "/dev/shm/github-product31-offers/critical-recipe.json",
+        "path": "critical-recipe.json",
+        "sha256": "dd5301b7baf3d7768beb0f8d3393a92375c218c6dc090e9d551558c5bda9970f",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-001.base64",
+        "transport_bytes": 46088,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "227df16bb436125f37e2a87183a01d893694dc48"
+          },
+          "isError": false
+        },
+        "sha": "227df16bb436125f37e2a87183a01d893694dc48"
+      },
+      {
+        "bytes": 1823,
+        "encoding": "base64",
+        "git_sha1": "adb6f5548da9f8980cd07748e3c75818261e886f",
+        "local": "/dev/shm/github-product31-offers/reconstruct.py",
+        "path": "reconstruct.py",
+        "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-002.base64",
+        "transport_bytes": 2432,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "adb6f5548da9f8980cd07748e3c75818261e886f"
+          },
+          "isError": false
+        },
+        "sha": "adb6f5548da9f8980cd07748e3c75818261e886f"
+      },
+      {
+        "bytes": 582517,
+        "encoding": "base64",
+        "git_sha1": "65bc6beae6626f4075620550054670e47301ee34",
+        "local": "/dev/shm/product31-checkpoint/BUILD_STATUS.json",
+        "path": "selected/BUILD_STATUS.json",
+        "sha256": "b3a826c6cf36726362c8f7064968e5dff09de9790c4101007b0a7fd84b08d7a0",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-003.base64",
+        "transport_bytes": 776692,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "65bc6beae6626f4075620550054670e47301ee34"
+          },
+          "isError": false
+        },
+        "sha": "65bc6beae6626f4075620550054670e47301ee34"
+      },
+      {
+        "bytes": 15387,
+        "encoding": "base64",
+        "git_sha1": "9bfd558259d2a81228010879aaca8e0562af49c1",
+        "local": "/dev/shm/product31-checkpoint/MANIFEST.json",
+        "path": "selected/MANIFEST.json",
+        "sha256": "c06a476d55c9252e70bcf7d539a8a1773b8c84b0600ded623584b46f6d048317",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-004.base64",
+        "transport_bytes": 20516,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "9bfd558259d2a81228010879aaca8e0562af49c1"
+          },
+          "isError": false
+        },
+        "sha": "9bfd558259d2a81228010879aaca8e0562af49c1"
+      },
+      {
+        "bytes": 2297,
+        "encoding": "base64",
+        "git_sha1": "6148a25e834029c4966c05be274c687c08e1dbd2",
+        "local": "/dev/shm/product31-checkpoint/CONTINUE.md",
+        "path": "selected/CONTINUE.md",
+        "sha256": "551edbb5a6e9aeeded8ebb9dd7ac4248d336e7a240658e9a8fea8f6850dae179",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-005.base64",
+        "transport_bytes": 3064,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "6148a25e834029c4966c05be274c687c08e1dbd2"
+          },
+          "isError": false
+        },
+        "sha": "6148a25e834029c4966c05be274c687c08e1dbd2"
+      },
+      {
+        "bytes": 50446,
+        "encoding": "base64",
+        "git_sha1": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de",
+        "local": "/dev/shm/product31-checkpoint/REPORT.json",
+        "path": "selected/REPORT.json",
+        "sha256": "1bfc75372d5bb8feeebac8b62d4baeb5f38b78fbb553a3249f3eba8da33d90e8",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-007.base64",
+        "transport_bytes": 67264,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de"
+          },
+          "isError": false
+        },
+        "sha": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de"
+      },
+      {
+        "bytes": 357,
+        "encoding": "base64",
+        "git_sha1": "f4f2e5cfebf4e889856992bca479a8f9a20298a2",
+        "local": "/dev/shm/product31-checkpoint/RAW_CAPTURE.json",
+        "path": "selected/RAW_CAPTURE.json",
+        "sha256": "18316d46217909d1b99444f2f162a3e314c5cfe544d37f9af449eecdeb3bd64c",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-006.base64",
+        "transport_bytes": 476,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "f4f2e5cfebf4e889856992bca479a8f9a20298a2"
+          },
+          "isError": false
+        },
+        "sha": "f4f2e5cfebf4e889856992bca479a8f9a20298a2"
+      },
+      {
+        "bytes": 939,
+        "encoding": "base64",
+        "git_sha1": "7336995bc55e0e032db0d181330aa6a56f08883b",
+        "local": "/dev/shm/product31-checkpoint/STATUS.json",
+        "path": "selected/STATUS.json",
+        "sha256": "06fd0746acab4725378afb32c454a3648012aaf5a27a0d08ad797e32a7c0e7df",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-009.base64",
+        "transport_bytes": 1252,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "7336995bc55e0e032db0d181330aa6a56f08883b"
+          },
+          "isError": false
+        },
+        "sha": "7336995bc55e0e032db0d181330aa6a56f08883b"
+      },
+      {
+        "bytes": 5769,
+        "encoding": "base64",
+        "git_sha1": "091018e30bb01a966fd3aea1421f19ef6fc19550",
+        "local": "/dev/shm/product31-checkpoint/SOURCE_MANIFEST.json",
+        "path": "selected/SOURCE_MANIFEST.json",
+        "sha256": "f65df67c0db39c1464e1ca696fb1f10d14f7bbe8bd77ebfdffc1f2a9db6cd420",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-008.base64",
+        "transport_bytes": 7692,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "091018e30bb01a966fd3aea1421f19ef6fc19550"
+          },
+          "isError": false
+        },
+        "sha": "091018e30bb01a966fd3aea1421f19ef6fc19550"
+      },
+      {
+        "bytes": 1061,
+        "encoding": "base64",
+        "git_sha1": "1beac62c03aa67b2e15c23525c067197c66ef51d",
+        "local": "/dev/shm/product31-checkpoint/WIRE_INSTALLED_RESULT.json",
+        "path": "selected/WIRE_INSTALLED_RESULT.json",
+        "sha256": "1c51ddf7dd57b05eab5e365501a5c56be5e020606cd5fcba723d5e9934d75456",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-010.base64",
+        "transport_bytes": 1416,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "1beac62c03aa67b2e15c23525c067197c66ef51d"
+          },
+          "isError": false
+        },
+        "sha": "1beac62c03aa67b2e15c23525c067197c66ef51d"
+      },
+      {
+        "bytes": 1059,
+        "encoding": "base64",
+        "git_sha1": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae",
+        "local": "/dev/shm/product31-checkpoint/WIRE_PURE_RESULT.json",
+        "path": "selected/WIRE_PURE_RESULT.json",
+        "sha256": "ddac5fc0f1ac9a46d43f5baee14f4e7c2f09212b660241bb86776e094db82f39",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-011.base64",
+        "transport_bytes": 1412,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae"
+          },
+          "isError": false
+        },
+        "sha": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae"
+      },
+      {
+        "bytes": 50301,
+        "encoding": "base64",
+        "git_sha1": "f4d4dc58c1b7217a705925520797680f8b3e655a",
+        "local": "/dev/shm/product31-checkpoint/identity-lock.json",
+        "path": "selected/identity-lock.json",
+        "sha256": "97c6cf6e88cc94b6d0fda5d1137a13e8ecf21474db5dc11970bd69f3321aa505",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-012.base64",
+        "transport_bytes": 67068,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "f4d4dc58c1b7217a705925520797680f8b3e655a"
+          },
+          "isError": false
+        },
+        "sha": "f4d4dc58c1b7217a705925520797680f8b3e655a"
+      },
+      {
+        "bytes": 111407,
+        "encoding": "base64",
+        "git_sha1": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5",
+        "local": "/dev/shm/product31-checkpoint/native18-canonical-source-manifest.json",
+        "path": "selected/native18-canonical-source-manifest.json",
+        "sha256": "2a391e08290fe554b97c597f491e6c1a875c7945827308e03a98079eba95ecf1",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-013.base64",
+        "transport_bytes": 148544,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5"
+          },
+          "isError": false
+        },
+        "sha": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5"
+      },
+      {
+        "bytes": 14410,
+        "encoding": "base64",
+        "git_sha1": "5da9782af672530b6b7402d72ce3ae3265277594",
+        "local": "/dev/shm/product31-checkpoint/product30-antecedent-paired-receipt.json",
+        "path": "selected/product30-antecedent-paired-receipt.json",
+        "sha256": "50894ba56cd70ffdbb18cc6f8b3e79546e18f46ede0880f12843a94d58bcb135",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-015.base64",
+        "transport_bytes": 19216,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "5da9782af672530b6b7402d72ce3ae3265277594"
+          },
+          "isError": false
+        },
+        "sha": "5da9782af672530b6b7402d72ce3ae3265277594"
+      },
+      {
+        "bytes": 6541,
+        "encoding": "base64",
+        "git_sha1": "50bf952ff4957655d96e7358cc67a43f33933474",
+        "local": "/dev/shm/product31-checkpoint/native18-paired-dependency-receipt.json",
+        "path": "selected/native18-paired-dependency-receipt.json",
+        "sha256": "ed134b7a17780a1d134f15d5ba51fe6bb88100298ca26dacccdc5f49db2739e3",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-014.base64",
+        "transport_bytes": 8724,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "50bf952ff4957655d96e7358cc67a43f33933474"
+          },
+          "isError": false
+        },
+        "sha": "50bf952ff4957655d96e7358cc67a43f33933474"
+      },
+      {
+        "bytes": 520,
+        "encoding": "base64",
+        "git_sha1": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6",
+        "local": "/dev/shm/product31-checkpoint/package/pyproject.toml",
+        "path": "offers31-package/pyproject.toml",
+        "sha256": "a409caadb8077281c5e0fc99d05f9d630450d0a128e49e421084cf4d4d96533c",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-016.base64",
+        "transport_bytes": 696,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6"
+          },
+          "isError": false
+        },
+        "sha": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6"
+      },
+      {
+        "bytes": 29,
+        "encoding": "base64",
+        "git_sha1": "130bc6375628dffcf81fd338a297adae47ac205c",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/__main__.py",
+        "path": "offers31-package/samsara/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-018.base64",
+        "transport_bytes": 40,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "130bc6375628dffcf81fd338a297adae47ac205c"
+          },
+          "isError": false
+        },
+        "sha": "130bc6375628dffcf81fd338a297adae47ac205c"
+      },
+      {
+        "bytes": 105,
+        "encoding": "base64",
+        "git_sha1": "7fe39a0be07b3bf0368d5945795b0d1176032ddb",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/__init__.py",
+        "path": "offers31-package/samsara/__init__.py",
+        "sha256": "22bafa404b31d7c112d9f1b8afa62166ad87e31bd6a686a2c9a0f1a1eb4f8749",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-017.base64",
+        "transport_bytes": 140,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "7fe39a0be07b3bf0368d5945795b0d1176032ddb"
+          },
+          "isError": false
+        },
+        "sha": "7fe39a0be07b3bf0368d5945795b0d1176032ddb"
+      },
+      {
+        "bytes": 75485,
+        "encoding": "base64",
+        "git_sha1": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/application.py",
+        "path": "offers31-package/samsara/application.py",
+        "sha256": "0e81fe3feb5523931ed1e77ecf3d590e3a6cd10b254b6c8ace8a96647d23bbd9",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-019.base64",
+        "transport_bytes": 100648,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1"
+          },
+          "isError": false
+        },
+        "sha": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1"
+      },
+      {
+        "bytes": 20907,
+        "encoding": "base64",
+        "git_sha1": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/atlas.py",
+        "path": "offers31-package/samsara/atlas.py",
+        "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-020.base64",
+        "transport_bytes": 27876,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058"
+          },
+          "isError": false
+        },
+        "sha": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058"
+      },
+      {
+        "bytes": 13613,
+        "encoding": "base64",
+        "git_sha1": "9032d89355888dc8c5a4b91c8b44e510d3fb8728",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/causality.py",
+        "path": "offers31-package/samsara/causality.py",
+        "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-021.base64",
+        "transport_bytes": 18152,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "9032d89355888dc8c5a4b91c8b44e510d3fb8728"
+          },
+          "isError": false
+        },
+        "sha": "9032d89355888dc8c5a4b91c8b44e510d3fb8728"
+      },
+      {
+        "bytes": 9443,
+        "encoding": "base64",
+        "git_sha1": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/cli.py",
+        "path": "offers31-package/samsara/cli.py",
+        "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-022.base64",
+        "transport_bytes": 12592,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494"
+          },
+          "isError": false
+        },
+        "sha": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494"
+      },
+      {
+        "bytes": 19442,
+        "encoding": "base64",
+        "git_sha1": "3639fc697e524bed5a52640d3046a55e3dfeb0a7",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/client.py",
+        "path": "offers31-package/samsara/client.py",
+        "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-023.base64",
+        "transport_bytes": 25924,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "3639fc697e524bed5a52640d3046a55e3dfeb0a7"
+          },
+          "isError": false
+        },
+        "sha": "3639fc697e524bed5a52640d3046a55e3dfeb0a7"
+      },
+      {
+        "bytes": 15603,
+        "encoding": "base64",
+        "git_sha1": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/console.py",
+        "path": "offers31-package/samsara/console.py",
+        "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-025.base64",
+        "transport_bytes": 20804,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4"
+          },
+          "isError": false
+        },
+        "sha": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4"
+      },
+      {
+        "bytes": 30288,
+        "encoding": "base64",
+        "git_sha1": "9336136d859ae6cab6a128fa402e8b92029b1180",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/compatibility.py",
+        "path": "offers31-package/samsara/compatibility.py",
+        "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-024.base64",
+        "transport_bytes": 40384,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "9336136d859ae6cab6a128fa402e8b92029b1180"
+          },
+          "isError": false
+        },
+        "sha": "9336136d859ae6cab6a128fa402e8b92029b1180"
+      },
+      {
+        "bytes": 26324,
+        "encoding": "base64",
+        "git_sha1": "8a8bc561c6346b6332aa7578f25b8c19daea4b13",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/content.py",
+        "path": "offers31-package/samsara/content.py",
+        "sha256": "54bec339f5dc07291fb0bf09190dbb7ca347b352906c8bc2e0d1a33313ff77e0",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-026.base64",
+        "transport_bytes": 35100,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "8a8bc561c6346b6332aa7578f25b8c19daea4b13"
+          },
+          "isError": false
+        },
+        "sha": "8a8bc561c6346b6332aa7578f25b8c19daea4b13"
+      },
+      {
+        "bytes": 39135,
+        "encoding": "base64",
+        "git_sha1": "a7d62204cf58b68cab10040d3e61cf28b0684edd",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/contentsets.py",
+        "path": "offers31-package/samsara/contentsets.py",
+        "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-027.base64",
+        "transport_bytes": 52180,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "a7d62204cf58b68cab10040d3e61cf28b0684edd"
+          },
+          "isError": false
+        },
+        "sha": "a7d62204cf58b68cab10040d3e61cf28b0684edd"
+      },
+      {
+        "bytes": 143222,
+        "encoding": "base64",
+        "git_sha1": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/compatibility-policy-ps1.json",
+        "path": "offers31-package/samsara/data/compatibility-policy-ps1.json",
+        "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-028.base64",
+        "transport_bytes": 190964,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a"
+          },
+          "isError": false
+        },
+        "sha": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a"
+      },
+      {
+        "bytes": 55805,
+        "encoding": "base64",
+        "git_sha1": "45a9782db7a443084e5aebca43a25f6bff3bb042",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/compatibility-policy-r07a.json",
+        "path": "offers31-package/samsara/data/compatibility-policy-r07a.json",
+        "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-029.base64",
+        "transport_bytes": 74408,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "45a9782db7a443084e5aebca43a25f6bff3bb042"
+          },
+          "isError": false
+        },
+        "sha": "45a9782db7a443084e5aebca43a25f6bff3bb042"
+      },
+      {
+        "bytes": 113651,
+        "encoding": "base64",
+        "git_sha1": "7bc0eec693e02cb175af2acc230a12b05f29b9a8",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/compatibility-policy-r07b.json",
+        "path": "offers31-package/samsara/data/compatibility-policy-r07b.json",
+        "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-030.base64",
+        "transport_bytes": 151536,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "7bc0eec693e02cb175af2acc230a12b05f29b9a8"
+          },
+          "isError": false
+        },
+        "sha": "7bc0eec693e02cb175af2acc230a12b05f29b9a8"
+      },
+      {
+        "bytes": 172418,
+        "encoding": "base64",
+        "git_sha1": "d559187944d7413367ba329bb8d83592000516cf",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/compatibility-policy.json",
+        "path": "offers31-package/samsara/data/compatibility-policy.json",
+        "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-031.base64",
+        "transport_bytes": 229892,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "d559187944d7413367ba329bb8d83592000516cf"
+          },
+          "isError": false
+        },
+        "sha": "d559187944d7413367ba329bb8d83592000516cf"
+      },
+      {
+        "bytes": 124046,
+        "encoding": "base64",
+        "git_sha1": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/contract.json",
+        "path": "offers31-package/samsara/data/contract.json",
+        "sha256": "11950ecba7a73d92889d0605f29d5982018469c11f4da207976e8c9d07b0a436",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-032.base64",
+        "transport_bytes": 165396,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8"
+          },
+          "isError": false
+        },
+        "sha": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8"
+      },
+      {
+        "bytes": 535,
+        "encoding": "base64",
+        "git_sha1": "498bab92eadd245fd1f5056105acfd756f63f05c",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/engine-lock.json",
+        "path": "offers31-package/samsara/data/engine-lock.json",
+        "sha256": "5de62427f9f4d77e9ea325733a6167155d5cbcf9a4790ecb62eec15debf00887",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-033.base64",
+        "transport_bytes": 716,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "498bab92eadd245fd1f5056105acfd756f63f05c"
+          },
+          "isError": false
+        },
+        "sha": "498bab92eadd245fd1f5056105acfd756f63f05c"
+      },
+      {
+        "bytes": 979,
+        "encoding": "base64",
+        "git_sha1": "bbe835f62093af2e26d62ad8f72a88583b37f2cb",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/work-record.json",
+        "path": "offers31-package/samsara/data/work-record.json",
+        "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-035.base64",
+        "transport_bytes": 1308,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "bbe835f62093af2e26d62ad8f72a88583b37f2cb"
+          },
+          "isError": false
+        },
+        "sha": "bbe835f62093af2e26d62ad8f72a88583b37f2cb"
+      },
+      {
+        "bytes": 572,
+        "encoding": "base64",
+        "git_sha1": "3bba2c6d899f9a4601cf1f710159702895441b00",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/initial-source.md",
+        "path": "offers31-package/samsara/data/initial-source.md",
+        "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-034.base64",
+        "transport_bytes": 764,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "3bba2c6d899f9a4601cf1f710159702895441b00"
+          },
+          "isError": false
+        },
+        "sha": "3bba2c6d899f9a4601cf1f710159702895441b00"
+      },
+      {
+        "bytes": 10788,
+        "encoding": "base64",
+        "git_sha1": "0e4a983930f29d23713754e884b17cd29d0bb76c",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/equipment.py",
+        "path": "offers31-package/samsara/equipment.py",
+        "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-036.base64",
+        "transport_bytes": 14384,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "0e4a983930f29d23713754e884b17cd29d0bb76c"
+          },
+          "isError": false
+        },
+        "sha": "0e4a983930f29d23713754e884b17cd29d0bb76c"
+      },
+      {
+        "bytes": 7158,
+        "encoding": "base64",
+        "git_sha1": "6125db205396d8dbca1289566d364c39dfc8e6f8",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/exhibition_admission.py",
+        "path": "offers31-package/samsara/exhibition_admission.py",
+        "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-037.base64",
+        "transport_bytes": 9544,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "6125db205396d8dbca1289566d364c39dfc8e6f8"
+          },
+          "isError": false
+        },
+        "sha": "6125db205396d8dbca1289566d364c39dfc8e6f8"
+      },
+      {
+        "bytes": 29499,
+        "encoding": "base64",
+        "git_sha1": "58255982b1e38d006afd8277b9df49e21ac6331d",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/exhibition_profiles.py",
+        "path": "offers31-package/samsara/exhibition_profiles.py",
+        "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-038.base64",
+        "transport_bytes": 39332,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "58255982b1e38d006afd8277b9df49e21ac6331d"
+          },
+          "isError": false
+        },
+        "sha": "58255982b1e38d006afd8277b9df49e21ac6331d"
+      },
+      {
+        "bytes": 17447,
+        "encoding": "base64",
+        "git_sha1": "6cb547dd2a5f7556a4759376570bf9f75c9676c3",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/exhibitions.py",
+        "path": "offers31-package/samsara/exhibitions.py",
+        "sha256": "983f39607192daaa4afa7b63eb634bf3c380d8e0a112fc489ea0af2d23248fb1",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-039.base64",
+        "transport_bytes": 23264,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "6cb547dd2a5f7556a4759376570bf9f75c9676c3"
+          },
+          "isError": false
+        },
+        "sha": "6cb547dd2a5f7556a4759376570bf9f75c9676c3"
+      },
+      {
+        "bytes": 10177,
+        "encoding": "base64",
+        "git_sha1": "a58369057b721e0816473c47376a63f1cc584913",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/exploration.py",
+        "path": "offers31-package/samsara/exploration.py",
+        "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-040.base64",
+        "transport_bytes": 13572,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "a58369057b721e0816473c47376a63f1cc584913"
+          },
+          "isError": false
+        },
+        "sha": "a58369057b721e0816473c47376a63f1cc584913"
+      },
+      {
+        "bytes": 16151,
+        "encoding": "base64",
+        "git_sha1": "421e30cda5be46b2cb2d094765815f0746221de5",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/extensions.py",
+        "path": "offers31-package/samsara/extensions.py",
+        "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-041.base64",
+        "transport_bytes": 21536,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "421e30cda5be46b2cb2d094765815f0746221de5"
+          },
+          "isError": false
+        },
+        "sha": "421e30cda5be46b2cb2d094765815f0746221de5"
+      },
+      {
+        "bytes": 11382,
+        "encoding": "base64",
+        "git_sha1": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/handlers.py",
+        "path": "offers31-package/samsara/handlers.py",
+        "sha256": "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-042.base64",
+        "transport_bytes": 15176,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9"
+          },
+          "isError": false
+        },
+        "sha": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9"
+      },
+      {
+        "bytes": 10721,
+        "encoding": "base64",
+        "git_sha1": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/intake.py",
+        "path": "offers31-package/samsara/intake.py",
+        "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-043.base64",
+        "transport_bytes": 14296,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366"
+          },
+          "isError": false
+        },
+        "sha": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366"
+      }
+    ],
+    "Kageyoni": [
+      {
+        "bytes": 3541,
+        "encoding": "base64",
+        "git_sha1": "136f1a64e26580ce93fe23bd219776d256abf55b",
+        "local": "/dev/shm/github-product31-offers/context.json",
+        "path": "context.json",
+        "sha256": "1d39ac7452ec292bd5e663a7b282593dc61d62065d6f70c7efa626c6fce3374e",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-000.base64",
+        "transport_bytes": 4724,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "136f1a64e26580ce93fe23bd219776d256abf55b"
+          },
+          "isError": false
+        },
+        "sha": "136f1a64e26580ce93fe23bd219776d256abf55b"
+      },
+      {
+        "bytes": 1823,
+        "encoding": "base64",
+        "git_sha1": "adb6f5548da9f8980cd07748e3c75818261e886f",
+        "local": "/dev/shm/github-product31-offers/reconstruct.py",
+        "path": "reconstruct.py",
+        "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-002.base64",
+        "transport_bytes": 2432,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "adb6f5548da9f8980cd07748e3c75818261e886f"
+          },
+          "isError": false
+        },
+        "sha": "adb6f5548da9f8980cd07748e3c75818261e886f"
+      },
+      {
+        "bytes": 34564,
+        "encoding": "base64",
+        "git_sha1": "227df16bb436125f37e2a87183a01d893694dc48",
+        "local": "/dev/shm/github-product31-offers/critical-recipe.json",
+        "path": "critical-recipe.json",
+        "sha256": "dd5301b7baf3d7768beb0f8d3393a92375c218c6dc090e9d551558c5bda9970f",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-001.base64",
+        "transport_bytes": 46088,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "227df16bb436125f37e2a87183a01d893694dc48"
+          },
+          "isError": false
+        },
+        "sha": "227df16bb436125f37e2a87183a01d893694dc48"
+      },
+      {
+        "bytes": 582517,
+        "encoding": "base64",
+        "git_sha1": "65bc6beae6626f4075620550054670e47301ee34",
+        "local": "/dev/shm/product31-checkpoint/BUILD_STATUS.json",
+        "path": "selected/BUILD_STATUS.json",
+        "sha256": "b3a826c6cf36726362c8f7064968e5dff09de9790c4101007b0a7fd84b08d7a0",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-003.base64",
+        "transport_bytes": 776692,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "65bc6beae6626f4075620550054670e47301ee34"
+          },
+          "isError": false
+        },
+        "sha": "65bc6beae6626f4075620550054670e47301ee34"
+      },
+      {
+        "bytes": 15387,
+        "encoding": "base64",
+        "git_sha1": "9bfd558259d2a81228010879aaca8e0562af49c1",
+        "local": "/dev/shm/product31-checkpoint/MANIFEST.json",
+        "path": "selected/MANIFEST.json",
+        "sha256": "c06a476d55c9252e70bcf7d539a8a1773b8c84b0600ded623584b46f6d048317",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-004.base64",
+        "transport_bytes": 20516,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "9bfd558259d2a81228010879aaca8e0562af49c1"
+          },
+          "isError": false
+        },
+        "sha": "9bfd558259d2a81228010879aaca8e0562af49c1"
+      },
+      {
+        "bytes": 2297,
+        "encoding": "base64",
+        "git_sha1": "6148a25e834029c4966c05be274c687c08e1dbd2",
+        "local": "/dev/shm/product31-checkpoint/CONTINUE.md",
+        "path": "selected/CONTINUE.md",
+        "sha256": "551edbb5a6e9aeeded8ebb9dd7ac4248d336e7a240658e9a8fea8f6850dae179",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-005.base64",
+        "transport_bytes": 3064,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "6148a25e834029c4966c05be274c687c08e1dbd2"
+          },
+          "isError": false
+        },
+        "sha": "6148a25e834029c4966c05be274c687c08e1dbd2"
+      },
+      {
+        "bytes": 357,
+        "encoding": "base64",
+        "git_sha1": "f4f2e5cfebf4e889856992bca479a8f9a20298a2",
+        "local": "/dev/shm/product31-checkpoint/RAW_CAPTURE.json",
+        "path": "selected/RAW_CAPTURE.json",
+        "sha256": "18316d46217909d1b99444f2f162a3e314c5cfe544d37f9af449eecdeb3bd64c",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-006.base64",
+        "transport_bytes": 476,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "f4f2e5cfebf4e889856992bca479a8f9a20298a2"
+          },
+          "isError": false
+        },
+        "sha": "f4f2e5cfebf4e889856992bca479a8f9a20298a2"
+      },
+      {
+        "bytes": 50446,
+        "encoding": "base64",
+        "git_sha1": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de",
+        "local": "/dev/shm/product31-checkpoint/REPORT.json",
+        "path": "selected/REPORT.json",
+        "sha256": "1bfc75372d5bb8feeebac8b62d4baeb5f38b78fbb553a3249f3eba8da33d90e8",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-007.base64",
+        "transport_bytes": 67264,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de"
+          },
+          "isError": false
+        },
+        "sha": "8b0c5f949c963bb1cc4be75e2a33ab6b5717e5de"
+      },
+      {
+        "bytes": 5769,
+        "encoding": "base64",
+        "git_sha1": "091018e30bb01a966fd3aea1421f19ef6fc19550",
+        "local": "/dev/shm/product31-checkpoint/SOURCE_MANIFEST.json",
+        "path": "selected/SOURCE_MANIFEST.json",
+        "sha256": "f65df67c0db39c1464e1ca696fb1f10d14f7bbe8bd77ebfdffc1f2a9db6cd420",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-008.base64",
+        "transport_bytes": 7692,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "091018e30bb01a966fd3aea1421f19ef6fc19550"
+          },
+          "isError": false
+        },
+        "sha": "091018e30bb01a966fd3aea1421f19ef6fc19550"
+      },
+      {
+        "bytes": 939,
+        "encoding": "base64",
+        "git_sha1": "7336995bc55e0e032db0d181330aa6a56f08883b",
+        "local": "/dev/shm/product31-checkpoint/STATUS.json",
+        "path": "selected/STATUS.json",
+        "sha256": "06fd0746acab4725378afb32c454a3648012aaf5a27a0d08ad797e32a7c0e7df",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-009.base64",
+        "transport_bytes": 1252,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "7336995bc55e0e032db0d181330aa6a56f08883b"
+          },
+          "isError": false
+        },
+        "sha": "7336995bc55e0e032db0d181330aa6a56f08883b"
+      },
+      {
+        "bytes": 1061,
+        "encoding": "base64",
+        "git_sha1": "1beac62c03aa67b2e15c23525c067197c66ef51d",
+        "local": "/dev/shm/product31-checkpoint/WIRE_INSTALLED_RESULT.json",
+        "path": "selected/WIRE_INSTALLED_RESULT.json",
+        "sha256": "1c51ddf7dd57b05eab5e365501a5c56be5e020606cd5fcba723d5e9934d75456",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-010.base64",
+        "transport_bytes": 1416,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "1beac62c03aa67b2e15c23525c067197c66ef51d"
+          },
+          "isError": false
+        },
+        "sha": "1beac62c03aa67b2e15c23525c067197c66ef51d"
+      },
+      {
+        "bytes": 1059,
+        "encoding": "base64",
+        "git_sha1": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae",
+        "local": "/dev/shm/product31-checkpoint/WIRE_PURE_RESULT.json",
+        "path": "selected/WIRE_PURE_RESULT.json",
+        "sha256": "ddac5fc0f1ac9a46d43f5baee14f4e7c2f09212b660241bb86776e094db82f39",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-011.base64",
+        "transport_bytes": 1412,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae"
+          },
+          "isError": false
+        },
+        "sha": "d94f64fdaff6d9ee383d4cc6ec657100dbd13cae"
+      },
+      {
+        "bytes": 50301,
+        "encoding": "base64",
+        "git_sha1": "f4d4dc58c1b7217a705925520797680f8b3e655a",
+        "local": "/dev/shm/product31-checkpoint/identity-lock.json",
+        "path": "selected/identity-lock.json",
+        "sha256": "97c6cf6e88cc94b6d0fda5d1137a13e8ecf21474db5dc11970bd69f3321aa505",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-012.base64",
+        "transport_bytes": 67068,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "f4d4dc58c1b7217a705925520797680f8b3e655a"
+          },
+          "isError": false
+        },
+        "sha": "f4d4dc58c1b7217a705925520797680f8b3e655a"
+      },
+      {
+        "bytes": 111407,
+        "encoding": "base64",
+        "git_sha1": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5",
+        "local": "/dev/shm/product31-checkpoint/native18-canonical-source-manifest.json",
+        "path": "selected/native18-canonical-source-manifest.json",
+        "sha256": "2a391e08290fe554b97c597f491e6c1a875c7945827308e03a98079eba95ecf1",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-013.base64",
+        "transport_bytes": 148544,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5"
+          },
+          "isError": false
+        },
+        "sha": "5a5cb856335e3e8671ee54fc208dd4fa9a5807f5"
+      },
+      {
+        "bytes": 6541,
+        "encoding": "base64",
+        "git_sha1": "50bf952ff4957655d96e7358cc67a43f33933474",
+        "local": "/dev/shm/product31-checkpoint/native18-paired-dependency-receipt.json",
+        "path": "selected/native18-paired-dependency-receipt.json",
+        "sha256": "ed134b7a17780a1d134f15d5ba51fe6bb88100298ca26dacccdc5f49db2739e3",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-014.base64",
+        "transport_bytes": 8724,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "50bf952ff4957655d96e7358cc67a43f33933474"
+          },
+          "isError": false
+        },
+        "sha": "50bf952ff4957655d96e7358cc67a43f33933474"
+      },
+      {
+        "bytes": 14410,
+        "encoding": "base64",
+        "git_sha1": "5da9782af672530b6b7402d72ce3ae3265277594",
+        "local": "/dev/shm/product31-checkpoint/product30-antecedent-paired-receipt.json",
+        "path": "selected/product30-antecedent-paired-receipt.json",
+        "sha256": "50894ba56cd70ffdbb18cc6f8b3e79546e18f46ede0880f12843a94d58bcb135",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-015.base64",
+        "transport_bytes": 19216,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "5da9782af672530b6b7402d72ce3ae3265277594"
+          },
+          "isError": false
+        },
+        "sha": "5da9782af672530b6b7402d72ce3ae3265277594"
+      },
+      {
+        "bytes": 520,
+        "encoding": "base64",
+        "git_sha1": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6",
+        "local": "/dev/shm/product31-checkpoint/package/pyproject.toml",
+        "path": "offers31-package/pyproject.toml",
+        "sha256": "a409caadb8077281c5e0fc99d05f9d630450d0a128e49e421084cf4d4d96533c",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-016.base64",
+        "transport_bytes": 696,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6"
+          },
+          "isError": false
+        },
+        "sha": "e1dcaf87af985a41ba6ed7764459f5fe2c4a82b6"
+      },
+      {
+        "bytes": 105,
+        "encoding": "base64",
+        "git_sha1": "7fe39a0be07b3bf0368d5945795b0d1176032ddb",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/__init__.py",
+        "path": "offers31-package/samsara/__init__.py",
+        "sha256": "22bafa404b31d7c112d9f1b8afa62166ad87e31bd6a686a2c9a0f1a1eb4f8749",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-017.base64",
+        "transport_bytes": 140,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "7fe39a0be07b3bf0368d5945795b0d1176032ddb"
+          },
+          "isError": false
+        },
+        "sha": "7fe39a0be07b3bf0368d5945795b0d1176032ddb"
+      },
+      {
+        "bytes": 29,
+        "encoding": "base64",
+        "git_sha1": "130bc6375628dffcf81fd338a297adae47ac205c",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/__main__.py",
+        "path": "offers31-package/samsara/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-018.base64",
+        "transport_bytes": 40,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "130bc6375628dffcf81fd338a297adae47ac205c"
+          },
+          "isError": false
+        },
+        "sha": "130bc6375628dffcf81fd338a297adae47ac205c"
+      },
+      {
+        "bytes": 75485,
+        "encoding": "base64",
+        "git_sha1": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/application.py",
+        "path": "offers31-package/samsara/application.py",
+        "sha256": "0e81fe3feb5523931ed1e77ecf3d590e3a6cd10b254b6c8ace8a96647d23bbd9",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-019.base64",
+        "transport_bytes": 100648,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1"
+          },
+          "isError": false
+        },
+        "sha": "e0c9590e9556e2ea45e0a27b09a1927f61c9b6f1"
+      },
+      {
+        "bytes": 13613,
+        "encoding": "base64",
+        "git_sha1": "9032d89355888dc8c5a4b91c8b44e510d3fb8728",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/causality.py",
+        "path": "offers31-package/samsara/causality.py",
+        "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-021.base64",
+        "transport_bytes": 18152,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "9032d89355888dc8c5a4b91c8b44e510d3fb8728"
+          },
+          "isError": false
+        },
+        "sha": "9032d89355888dc8c5a4b91c8b44e510d3fb8728"
+      },
+      {
+        "bytes": 20907,
+        "encoding": "base64",
+        "git_sha1": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/atlas.py",
+        "path": "offers31-package/samsara/atlas.py",
+        "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-020.base64",
+        "transport_bytes": 27876,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058"
+          },
+          "isError": false
+        },
+        "sha": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058"
+      },
+      {
+        "bytes": 9443,
+        "encoding": "base64",
+        "git_sha1": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/cli.py",
+        "path": "offers31-package/samsara/cli.py",
+        "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-022.base64",
+        "transport_bytes": 12592,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494"
+          },
+          "isError": false
+        },
+        "sha": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494"
+      },
+      {
+        "bytes": 19442,
+        "encoding": "base64",
+        "git_sha1": "3639fc697e524bed5a52640d3046a55e3dfeb0a7",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/client.py",
+        "path": "offers31-package/samsara/client.py",
+        "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-023.base64",
+        "transport_bytes": 25924,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "3639fc697e524bed5a52640d3046a55e3dfeb0a7"
+          },
+          "isError": false
+        },
+        "sha": "3639fc697e524bed5a52640d3046a55e3dfeb0a7"
+      },
+      {
+        "bytes": 30288,
+        "encoding": "base64",
+        "git_sha1": "9336136d859ae6cab6a128fa402e8b92029b1180",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/compatibility.py",
+        "path": "offers31-package/samsara/compatibility.py",
+        "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-024.base64",
+        "transport_bytes": 40384,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "9336136d859ae6cab6a128fa402e8b92029b1180"
+          },
+          "isError": false
+        },
+        "sha": "9336136d859ae6cab6a128fa402e8b92029b1180"
+      },
+      {
+        "bytes": 26324,
+        "encoding": "base64",
+        "git_sha1": "8a8bc561c6346b6332aa7578f25b8c19daea4b13",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/content.py",
+        "path": "offers31-package/samsara/content.py",
+        "sha256": "54bec339f5dc07291fb0bf09190dbb7ca347b352906c8bc2e0d1a33313ff77e0",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-026.base64",
+        "transport_bytes": 35100,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "8a8bc561c6346b6332aa7578f25b8c19daea4b13"
+          },
+          "isError": false
+        },
+        "sha": "8a8bc561c6346b6332aa7578f25b8c19daea4b13"
+      },
+      {
+        "bytes": 15603,
+        "encoding": "base64",
+        "git_sha1": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/console.py",
+        "path": "offers31-package/samsara/console.py",
+        "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-025.base64",
+        "transport_bytes": 20804,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4"
+          },
+          "isError": false
+        },
+        "sha": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4"
+      },
+      {
+        "bytes": 39135,
+        "encoding": "base64",
+        "git_sha1": "a7d62204cf58b68cab10040d3e61cf28b0684edd",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/contentsets.py",
+        "path": "offers31-package/samsara/contentsets.py",
+        "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-027.base64",
+        "transport_bytes": 52180,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "a7d62204cf58b68cab10040d3e61cf28b0684edd"
+          },
+          "isError": false
+        },
+        "sha": "a7d62204cf58b68cab10040d3e61cf28b0684edd"
+      },
+      {
+        "bytes": 143222,
+        "encoding": "base64",
+        "git_sha1": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/compatibility-policy-ps1.json",
+        "path": "offers31-package/samsara/data/compatibility-policy-ps1.json",
+        "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-028.base64",
+        "transport_bytes": 190964,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a"
+          },
+          "isError": false
+        },
+        "sha": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a"
+      },
+      {
+        "bytes": 55805,
+        "encoding": "base64",
+        "git_sha1": "45a9782db7a443084e5aebca43a25f6bff3bb042",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/compatibility-policy-r07a.json",
+        "path": "offers31-package/samsara/data/compatibility-policy-r07a.json",
+        "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-029.base64",
+        "transport_bytes": 74408,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "45a9782db7a443084e5aebca43a25f6bff3bb042"
+          },
+          "isError": false
+        },
+        "sha": "45a9782db7a443084e5aebca43a25f6bff3bb042"
+      },
+      {
+        "bytes": 113651,
+        "encoding": "base64",
+        "git_sha1": "7bc0eec693e02cb175af2acc230a12b05f29b9a8",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/compatibility-policy-r07b.json",
+        "path": "offers31-package/samsara/data/compatibility-policy-r07b.json",
+        "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-030.base64",
+        "transport_bytes": 151536,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "7bc0eec693e02cb175af2acc230a12b05f29b9a8"
+          },
+          "isError": false
+        },
+        "sha": "7bc0eec693e02cb175af2acc230a12b05f29b9a8"
+      },
+      {
+        "bytes": 172418,
+        "encoding": "base64",
+        "git_sha1": "d559187944d7413367ba329bb8d83592000516cf",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/compatibility-policy.json",
+        "path": "offers31-package/samsara/data/compatibility-policy.json",
+        "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-031.base64",
+        "transport_bytes": 229892,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "d559187944d7413367ba329bb8d83592000516cf"
+          },
+          "isError": false
+        },
+        "sha": "d559187944d7413367ba329bb8d83592000516cf"
+      },
+      {
+        "bytes": 124046,
+        "encoding": "base64",
+        "git_sha1": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/contract.json",
+        "path": "offers31-package/samsara/data/contract.json",
+        "sha256": "11950ecba7a73d92889d0605f29d5982018469c11f4da207976e8c9d07b0a436",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-032.base64",
+        "transport_bytes": 165396,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8"
+          },
+          "isError": false
+        },
+        "sha": "efc380603f63dab9ff5ebb35737f56ba3b99d2a8"
+      },
+      {
+        "bytes": 535,
+        "encoding": "base64",
+        "git_sha1": "498bab92eadd245fd1f5056105acfd756f63f05c",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/engine-lock.json",
+        "path": "offers31-package/samsara/data/engine-lock.json",
+        "sha256": "5de62427f9f4d77e9ea325733a6167155d5cbcf9a4790ecb62eec15debf00887",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-033.base64",
+        "transport_bytes": 716,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "498bab92eadd245fd1f5056105acfd756f63f05c"
+          },
+          "isError": false
+        },
+        "sha": "498bab92eadd245fd1f5056105acfd756f63f05c"
+      },
+      {
+        "bytes": 979,
+        "encoding": "base64",
+        "git_sha1": "bbe835f62093af2e26d62ad8f72a88583b37f2cb",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/work-record.json",
+        "path": "offers31-package/samsara/data/work-record.json",
+        "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-035.base64",
+        "transport_bytes": 1308,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "bbe835f62093af2e26d62ad8f72a88583b37f2cb"
+          },
+          "isError": false
+        },
+        "sha": "bbe835f62093af2e26d62ad8f72a88583b37f2cb"
+      },
+      {
+        "bytes": 572,
+        "encoding": "base64",
+        "git_sha1": "3bba2c6d899f9a4601cf1f710159702895441b00",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/data/initial-source.md",
+        "path": "offers31-package/samsara/data/initial-source.md",
+        "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-034.base64",
+        "transport_bytes": 764,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "3bba2c6d899f9a4601cf1f710159702895441b00"
+          },
+          "isError": false
+        },
+        "sha": "3bba2c6d899f9a4601cf1f710159702895441b00"
+      },
+      {
+        "bytes": 10788,
+        "encoding": "base64",
+        "git_sha1": "0e4a983930f29d23713754e884b17cd29d0bb76c",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/equipment.py",
+        "path": "offers31-package/samsara/equipment.py",
+        "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-036.base64",
+        "transport_bytes": 14384,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "0e4a983930f29d23713754e884b17cd29d0bb76c"
+          },
+          "isError": false
+        },
+        "sha": "0e4a983930f29d23713754e884b17cd29d0bb76c"
+      },
+      {
+        "bytes": 7158,
+        "encoding": "base64",
+        "git_sha1": "6125db205396d8dbca1289566d364c39dfc8e6f8",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/exhibition_admission.py",
+        "path": "offers31-package/samsara/exhibition_admission.py",
+        "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-037.base64",
+        "transport_bytes": 9544,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "6125db205396d8dbca1289566d364c39dfc8e6f8"
+          },
+          "isError": false
+        },
+        "sha": "6125db205396d8dbca1289566d364c39dfc8e6f8"
+      },
+      {
+        "bytes": 29499,
+        "encoding": "base64",
+        "git_sha1": "58255982b1e38d006afd8277b9df49e21ac6331d",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/exhibition_profiles.py",
+        "path": "offers31-package/samsara/exhibition_profiles.py",
+        "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-038.base64",
+        "transport_bytes": 39332,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "58255982b1e38d006afd8277b9df49e21ac6331d"
+          },
+          "isError": false
+        },
+        "sha": "58255982b1e38d006afd8277b9df49e21ac6331d"
+      },
+      {
+        "bytes": 17447,
+        "encoding": "base64",
+        "git_sha1": "6cb547dd2a5f7556a4759376570bf9f75c9676c3",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/exhibitions.py",
+        "path": "offers31-package/samsara/exhibitions.py",
+        "sha256": "983f39607192daaa4afa7b63eb634bf3c380d8e0a112fc489ea0af2d23248fb1",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-039.base64",
+        "transport_bytes": 23264,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "6cb547dd2a5f7556a4759376570bf9f75c9676c3"
+          },
+          "isError": false
+        },
+        "sha": "6cb547dd2a5f7556a4759376570bf9f75c9676c3"
+      },
+      {
+        "bytes": 10177,
+        "encoding": "base64",
+        "git_sha1": "a58369057b721e0816473c47376a63f1cc584913",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/exploration.py",
+        "path": "offers31-package/samsara/exploration.py",
+        "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-040.base64",
+        "transport_bytes": 13572,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "a58369057b721e0816473c47376a63f1cc584913"
+          },
+          "isError": false
+        },
+        "sha": "a58369057b721e0816473c47376a63f1cc584913"
+      },
+      {
+        "bytes": 16151,
+        "encoding": "base64",
+        "git_sha1": "421e30cda5be46b2cb2d094765815f0746221de5",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/extensions.py",
+        "path": "offers31-package/samsara/extensions.py",
+        "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-041.base64",
+        "transport_bytes": 21536,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "421e30cda5be46b2cb2d094765815f0746221de5"
+          },
+          "isError": false
+        },
+        "sha": "421e30cda5be46b2cb2d094765815f0746221de5"
+      },
+      {
+        "bytes": 11382,
+        "encoding": "base64",
+        "git_sha1": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/handlers.py",
+        "path": "offers31-package/samsara/handlers.py",
+        "sha256": "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-042.base64",
+        "transport_bytes": 15176,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "sha": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9"
+          },
+          "isError": false
+        },
+        "sha": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9"
+      },
+      {
+        "bytes": 10721,
+        "encoding": "base64",
+        "git_sha1": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+        "local": "/dev/shm/product31-checkpoint/package/samsara/intake.py",
+        "path": "offers31-package/samsara/intake.py",
+        "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297",
+        "transport": "/dev/shm/github-product31-offers/upload-text/critical-043.base64",
+        "transport_bytes": 14296,
+        "reply": {
+          "content": [
+            {
+              "type": "text",
+              "text": "RemoteProtocolError: Server disconnected without sending a response."
+            }
+          ],
+          "structuredContent": {
+            "error": "RemoteProtocolError: Server disconnected without sending a response.",
+            "error_code": "UNKNOWN"
+          },
+          "isError": true
+        }
+      }
+    ]
+  },
+  "unknown": {
+    "bytes": 10721,
+    "encoding": "base64",
+    "git_sha1": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+    "local": "/dev/shm/product31-checkpoint/package/samsara/intake.py",
+    "path": "offers31-package/samsara/intake.py",
+    "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297",
+    "transport": "/dev/shm/github-product31-offers/upload-text/critical-043.base64",
+    "transport_bytes": 14296,
+    "reply": {
+      "content": [
+        {
+          "type": "text",
+          "text": "RemoteProtocolError: Server disconnected without sending a response."
+        }
+      ],
+      "structuredContent": {
+        "error": "RemoteProtocolError: Server disconnected without sending a response.",
+        "error_code": "UNKNOWN"
+      },
+      "isError": true
+    }
+  },
+  "ref_effects": "NONE_ISSUED",
+  "policy": "Read exact expected immutable blob; do not retry unknown mutation."
+}
