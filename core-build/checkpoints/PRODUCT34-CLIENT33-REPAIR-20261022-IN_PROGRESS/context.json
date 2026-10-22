@@ -1,0 +1,81 @@
+{
+  "AI_recipient": "First0755copier privateguardUNAVAILABLE/Owner1 preserved. New0700copy repairedrootmetadata withoutguardchange; independentAI6normalreads16602B interpreted/choseleaveunchanged, no newacceptedartifact/continuationloop/human/mastery.",
+  "actual_scope": "SCRIPTED33contest->conservedaward->helperdecline/separateaccept->sameacceptedepisode->nativeaward0/incorporated1/repairedtarget achieved. OriginalwholetoolFAIL laterhistoricalreplay resetsClient21->18->19 causingnewSTALE, preserved. Narrow34Clientcachefix same16RED(3fail)/GREEN16; ACTUAL34Client->unchanged33Owner on33worldPASS keptcache21/replayedliteral18/19 thennewsettleexpected21 noallocation. NoOwner34oldworld/new34native-world claim.",
+  "all_original_failures_and_shared_immutable_inode_disclosures_retained": true,
+  "all_source_before_after_metadata_exact": true,
+  "budget": {
+    "allocated_after_providers": 56668160,
+    "entire_writer80MiB": 83886080,
+    "streaming18MiB_plus_final2MiB": true
+  },
+  "each_source_wheel_payloads": 244,
+  "file_bytes": 24217138,
+  "identities": {
+    "33": {
+      "runtime": "31a061ac9313a40f032b6803ed7fc0aa1f3197f444e389befae594a7e55bbf4d",
+      "versions": {
+        "kageyoni-engine": "11.1.0.dev18",
+        "samsara-world": "0.5.3.dev33"
+      },
+      "wheel_sha256": {
+        "engine": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+        "product": "ba8480dc1ed5b383d248dbcf6dd1848a2065bd196d7959555acfade11bad72b6"
+      }
+    },
+    "34": {
+      "runtime": "c4bcfc4b2e84a00cb91576042c875ca821b933b67211c25857fa435952d5a622",
+      "versions": {
+        "kageyoni-engine": "11.1.0.dev18",
+        "samsara-world": "0.5.3.dev34"
+      },
+      "wheel_sha256": {
+        "engine": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+        "product": "420de18fe516d49ef97e648d4017c8bb8c4d9fddbc68c483c2502802e1f55025"
+      }
+    }
+  },
+  "identity_limits": "Compact static byte/source/wheel/protected8JSON/sixstages only; currentfullsourceidentity intentionallynull/NOT_ASSEMBLED, oldcarrierfields historical. No genericfullverify_candidate/next_round/fullcontinuation/newLibrary/fullrelease. Source36outsidefreezeexcluded.",
+  "ledger_sha256": "2a1c0bea2df1f4d2f6d8e756040cdbcd7b65fe1c0cf1043480cf88e3b3c59dc9",
+  "manifest_files": 253,
+  "manifest_sha256": "a2d168b8c4e067b082c4aaa0c2bc6eae444b98e75d0ef18effabab779b059ecb",
+  "native18_manifest": 745,
+  "native18_source_anchor": {
+    "Kage": "1598555d04c3846a6ba4208b4b35dc701515474b",
+    "SAM": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+    "checkpoint": "F3A-NATIVE18-20261022-IN_PROGRESS"
+  },
+  "native_after": "Nativefinalverify/directregistry/FK0/changes0/world21/materials1/0/1 and original117entries unchanged retained, notrerun by writer.",
+  "nested_raw_inside_body_only_no_duplicate_raw_ASCII_provider": true,
+  "offline_dependency_wheels": 20,
+  "physical_files": 254,
+  "providers": {
+    "body": {
+      "bytes": 14620514,
+      "filename": "Product34_Client33_Repair_Complete_Compact_Packet_IN_PROGRESS.zip",
+      "sha256": "85bb5457c6b6700f3631a3aaa4c9415ead5eb565d82f2aabcaf0615bcd63914b",
+      "zip_entries": 280
+    },
+    "critical": {
+      "bytes": 9332925,
+      "filename": "Product34_Client33_Repair_Critical_IN_PROGRESS.zip",
+      "sha256": "c28c09485417f397222094202a06c17f16e8a292bd17c9aeaefe9fd13bdcd2a7",
+      "zip_entries": 279
+    }
+  },
+  "raw": {
+    "DBcapture": false,
+    "bytes": 5771925,
+    "complete_world_trees": 3,
+    "existingOwnerflocks": 3,
+    "file": "Product33_Complete_Actual_Repair_Failures_Recipient_Raw.zip",
+    "globalFDabsence_claim": false,
+    "members": 281,
+    "sha256": "3ae4cfeba05ad7d39a241a0ad8be7c71215aece7decdd87f53805d19df20cf74",
+    "source_entries": 280
+  },
+  "reconstructed33": 43,
+  "server33_explicit_override_files": 3,
+  "source34": 43,
+  "status": "COMPACT34_CLIENT_CACHE_FIX_UNCHANGED33_OWNER_REPAIR_EVIDENCE_IN_PROGRESS",
+  "writer": "Bytepackaging/Git only; no DB/Engine/Client/native/processprobe/build/test/world/source/Library/automation effects, nochildren"
+}

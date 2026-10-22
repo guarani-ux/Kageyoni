@@ -1,0 +1,13 @@
+{
+  "bytes": 5771925,
+  "sha256": "3ae4cfeba05ad7d39a241a0ad8be7c71215aece7decdd87f53805d19df20cf74",
+  "source_entries": 280,
+  "ZIP_members": 281,
+  "complete_world_trees": 3,
+  "actual_existingOwnerflocks": 3,
+  "allCRC_SHA_modes_sourcebeforeafter": true,
+  "DBopened_by_capture": false,
+  "globalFDabsence_claim": false,
+  "all_originals_retained": true,
+  "immutable_historical_backup_hardlinks_in_copies_disclosed": true
+}

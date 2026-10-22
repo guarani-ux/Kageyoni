@@ -1,0 +1,1546 @@
+{
+  "paths": [
+    {
+      "source": "/dev/shm/product34-build/package/pyproject.toml",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/pyproject.toml",
+      "sha256": "4bdbbb51024fdad23e172181408d764e8fde1be95b2288012c04bf1abe011b4f",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/__init__.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/__init__.py",
+      "sha256": "813e3391449664ff9222440617e04609df7dadc34d84fc814af64317d018794e",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/__main__.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/__main__.py",
+      "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/application.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/application.py",
+      "sha256": "14ab1353520df1da2c38efed4291360475ebfb0cc9f4a771e25ce0a9ad919833",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/atlas.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/atlas.py",
+      "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/causality.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/causality.py",
+      "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/cli.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/cli.py",
+      "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/client.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/client.py",
+      "sha256": "33360c38f556c7fac0bd69291734723639898dfac8f5859a4f2464f5ca739e99",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/compatibility.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/compatibility.py",
+      "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/console.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/console.py",
+      "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/content.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/content.py",
+      "sha256": "54bec339f5dc07291fb0bf09190dbb7ca347b352906c8bc2e0d1a33313ff77e0",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/contentsets.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/contentsets.py",
+      "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/data/compatibility-policy-ps1.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/data/compatibility-policy-ps1.json",
+      "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/data/compatibility-policy-r07a.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/data/compatibility-policy-r07a.json",
+      "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/data/compatibility-policy-r07b.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/data/compatibility-policy-r07b.json",
+      "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/data/compatibility-policy.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/data/compatibility-policy.json",
+      "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/data/contract.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/data/contract.json",
+      "sha256": "c85bc208cbd0de5cee5701f2d0841059a5621d7b8d420d847ad9abd1640abd57",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/data/engine-lock.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/data/engine-lock.json",
+      "sha256": "5de62427f9f4d77e9ea325733a6167155d5cbcf9a4790ecb62eec15debf00887",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/data/initial-source.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/data/initial-source.md",
+      "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/data/work-record.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/data/work-record.json",
+      "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/equipment.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/equipment.py",
+      "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/exhibition_admission.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/exhibition_admission.py",
+      "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/exhibition_profiles.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/exhibition_profiles.py",
+      "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/exhibition_repairs.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/exhibition_repairs.py",
+      "sha256": "f274362c4fadc9851e39ee76aae272e069fe2efbfcecae8235c85d666a5bc59c",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/exhibitions.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/exhibitions.py",
+      "sha256": "72e724bb944016c0c23344c0f5a73483cb9d7c684e9110ef02a321e6a9e78833",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/exploration.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/exploration.py",
+      "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/extensions.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/extensions.py",
+      "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/handlers.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/handlers.py",
+      "sha256": "4bbf7980da4648ca4df4d4982e6f7e7fd5da2c46bc8cc731491e904457ab3562",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/intake.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/intake.py",
+      "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/local_worker.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/local_worker.py",
+      "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/mediawork.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/mediawork.py",
+      "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/owner.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/owner.py",
+      "sha256": "74e405d8e230b412ebf65d02fa7a94f770da1802a01d67385353268a22b52145",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/practice.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/practice.py",
+      "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/practice_content.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/practice_content.py",
+      "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/process_custody.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/process_custody.py",
+      "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/properties.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/properties.py",
+      "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/protocol.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/protocol.py",
+      "sha256": "05b84ebb40349d5f83760fe0e0fb2ca283a2f1bd314883fbd62af421824d9fc6",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/runner.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/runner.py",
+      "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/situation.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/situation.py",
+      "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/sourcework.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/sourcework.py",
+      "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/terminal.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/terminal.py",
+      "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/samsara/travel_content.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/samsara/travel_content.py",
+      "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/package/tests/test_exhibition_profiles.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/package/tests/test_exhibition_profiles.py",
+      "sha256": "c9bdd0725de59ddc176e03f5bd6c86f087ce862c5a540a840e97b961b51eab63",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/live-client34-owner33.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/live-client34-owner33.log",
+      "sha256": "b6b428db97d91b2aee05afc8c646409d5b02ec336368bf0d67eb4dc18b40b0bc",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/live_client34_owner33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/live_client34_owner33.py",
+      "sha256": "a46371bbc636a6e78cd9a9a267e557f1211d4df6e514219c49190ad16b82688e",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/installed-regression-identity.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/installed-regression-identity.json",
+      "sha256": "c8460b2a10897ef5f07c6b8218076cca1fa08dbb62aa0a7ec6a9602fb7aa6e7f",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/installed-regression16.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/installed-regression16.json",
+      "sha256": "51d80773e41d0d249b0cf1848a24ee5ccfcd949831e541ec10e3bc58970e6323",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/installed-regression16.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/installed-regression16.log",
+      "sha256": "690cd1cf567c009d38475d4bdd6cb3a51f00eb7ad3c47db5aa6538125080ead5",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/run_installed_regression34.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/run_installed_regression34.py",
+      "sha256": "b5a46a009060ee66b6bfe6ae96363cd1c6f1eaa9c5ff55f8b3869d4449f419ab",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/identity-lock.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/identity-lock.json",
+      "sha256": "1aa961d89004b316b65c6d1619c384a24697c4e7bc2e58cd90e76eb04c2b0d13",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/installed-proof.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/installed-proof.log",
+      "sha256": "2bfa9bc7f28fd078d469b3ea89d43b48f0a6defcb95895e627aa03cbc95306ad",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/installed_proof34.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/installed_proof34.py",
+      "sha256": "18acf4d073c6ba0705e1237522a9858d55b3d73056a616232e835a8f0a7693b9",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/IMMUTABLE_DEPENDENCY_SHARING.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/IMMUTABLE_DEPENDENCY_SHARING.json",
+      "sha256": "55777bd913ae4b1fed612f7c6f056823131ab7e0378598cf44d4b5811e6acec9",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/ENV33_AFTER.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/ENV33_AFTER.json",
+      "sha256": "1a46b4db5829af818f06eceea1492852f5894b9997066fcd9daeefac906651d8",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/install.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/install.log",
+      "sha256": "06b1b607e1243ed695d81ff91ea339747e5b957dff5a3c8bbed4ec0fda5ec5bb",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/venv.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/venv.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/build.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/build.log",
+      "sha256": "8ed727eb5fcf0dcc941afa28185705bca28c1c903e41eaccfdd47c99c55d1188",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/ENV33_BEFORE.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/ENV33_BEFORE.json",
+      "sha256": "1a46b4db5829af818f06eceea1492852f5894b9997066fcd9daeefac906651d8",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/SOURCE_MANIFEST.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/SOURCE_MANIFEST.json",
+      "sha256": "d841b76ef06c619ce70f4e09d8d5a909b4a01c2d96f121a3de4778f1e6ae434f",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/ROOT-CONTRACT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34/ROOT-CONTRACT.md",
+      "sha256": "d237ea57da20133b692a711bd146ed9c14b7d3f72bc298a6a0e7d9e26de88529",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/distributions/kageyoni_engine-11.1.0.dev18-py3-none-any.whl",
+      "checkpoint": "/dev/shm/product34-checkpoint/distributions/kageyoni_engine-11.1.0.dev18-py3-none-any.whl",
+      "sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/distributions/samsara_world-0.5.3.dev34-py3-none-any.whl",
+      "checkpoint": "/dev/shm/product34-checkpoint/distributions/samsara_world-0.5.3.dev34-py3-none-any.whl",
+      "sha256": "420de18fe516d49ef97e648d4017c8bb8c4d9fddbc68c483c2502802e1f55025",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/package/pyproject.toml",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/package/pyproject.toml",
+      "sha256": "a4404ed4e68f4c9fb8df119471bb1b9a9da650ae6c4f6bc1f2573a1d82990af9",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/package/samsara/__init__.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/package/samsara/__init__.py",
+      "sha256": "e7b76ce32998f1588c52fcbfcf78719b62ed698d75c3705c7038e554a3b6222a",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/package/samsara/client.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/package/samsara/client.py",
+      "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/observe_final33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/observe_final33.py",
+      "sha256": "538c11789b233f267b197827fd4f372123145dfc801019606d141f333ff544fc",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/copy-root-diagnosis.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/copy-root-diagnosis.json",
+      "sha256": "8c25a12a937319004acb164e03d52edb57c1c35ea906ec6bd6c80358e088d3e8",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/diagnose_copy_root33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/diagnose_copy_root33.py",
+      "sha256": "0b1b253c548733614add5b07f695ff37260ba69f4021e48ee5bccb50ebc47c94",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/observe_following33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/observe_following33.py",
+      "sha256": "06c25b9d77d6f56e9a523c9cc47b7dd406bc978dc2d273d7a01fdad5f3d3580f",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/ORIGINAL_RAW_CAPTURE.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/ORIGINAL_RAW_CAPTURE.json",
+      "sha256": "1235f410f9f218c9de92cab56b24ba5d3303073f05302c9c4044568fc7408948",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/Product33_Original_Stopped_Client_STALE_Raw.zip",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/Product33_Original_Stopped_Client_STALE_Raw.zip",
+      "sha256": "6894763e4f3a4c9c3f396cd81751a28592cc07bfea8ca1d2e3baf92c9ddbff8d",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/play-r1.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/play-r1.log",
+      "sha256": "b6734523b222b54df1bd26fb3b3bf12dbecbbd024b7db37ce36bd41928a94d33",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/probe33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/probe33.py",
+      "sha256": "14c06be4d36c4422457ebce5dcda1f9379acb29268f87f1baf8926c564aa2b90",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/installed-pure-result.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/installed-pure-result.json",
+      "sha256": "84d14a300eac9191e0f8f0e19272e7bb3077d436fabe7b605df78fa5a5d45ad9",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/WIRE_SOURCE_RESULT.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/WIRE_SOURCE_RESULT.json",
+      "sha256": "57358412562aa203f7f87381112e0d652975f7055efe104f20a01e86f7897b66",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/installed-pure.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/installed-pure.log",
+      "sha256": "231ad00affc9d73a3d2d55081f8813cb1236e010e7329da72f7ac06922c678bb",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/run_installed_checks33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/run_installed_checks33.py",
+      "sha256": "71d8acc7332387c139fee7ea9623ee25b3cb8b227df35c7173cf971a9ca96814",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/installed_wire33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/installed_wire33.py",
+      "sha256": "c4f4b6e721c56daa5582a10c6ea24039d4468ffb17f84b86fa280d9591bedf23",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/test_installed_repair33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/test_installed_repair33.py",
+      "sha256": "f609321861104d4c0eaad69818a8a439ad10e4f16acc282d74ad22eeb0cd1f1e",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/identity-lock.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/identity-lock.json",
+      "sha256": "d0759299714c4a21b80132af3b7415038778c8b8384aed62aeae56b699fe3023",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/installed-proof.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/installed-proof.log",
+      "sha256": "c7ef7ab6e21389540be6e65d278bd7de11e453caec4c85a4358bb7ca8e573808",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/installed_proof33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/installed_proof33.py",
+      "sha256": "5d9b25e3bb4cc46be096aaedfef865107d54223638916dcaf804e09567c98310",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/install.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/install.log",
+      "sha256": "6084563559e40903cb0d1775db6f1df777253823fc8b66a151369ceb3545a5e9",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/venv.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/venv.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/build.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/build.log",
+      "sha256": "f460f05d0d068c228041062b447ac18abaa8c82ea1fb56747035ddaa5f990a10",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/ROOT-CONTRACT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/ROOT-CONTRACT.md",
+      "sha256": "a6cb1419910155fc93f384d3201a4e314cbc871009a82e999e34ff8077833488",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/SOURCE_MANIFEST.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/server33-antecedent/SOURCE_MANIFEST.json",
+      "sha256": "3e08e63e5e775c2a31939f6a0e444cff64101ad0436343e01848789facbae147",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-build/distributions/samsara_world-0.5.3.dev33-py3-none-any.whl",
+      "checkpoint": "/dev/shm/product34-checkpoint/distributions/samsara_world-0.5.3.dev33-py3-none-any.whl",
+      "sha256": "ba8480dc1ed5b383d248dbcf6dd1848a2065bd196d7959555acfade11bad72b6",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/client34-owner33/client-after.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34-owner33/client-after.json",
+      "sha256": "9b91b3656ad35c04d27068894a037c3ac95f102afb7563c33715dbb0cdc8e45e",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/client34-owner33/client-before.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34-owner33/client-before.json",
+      "sha256": "9b91b3656ad35c04d27068894a037c3ac95f102afb7563c33715dbb0cdc8e45e",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/client34-owner33/closed.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34-owner33/closed.json",
+      "sha256": "be6248ed9307c61328bbe2c139c794e78ba198e986457d33d38397abe091187d",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/client34-owner33/issued.jsonl",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34-owner33/issued.jsonl",
+      "sha256": "7a2ab3ecb9a36e71b739255fe2647ce5a91645ec8f2aa128bacba237939d72b4",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/client34-owner33/owner33-after.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34-owner33/owner33-after.json",
+      "sha256": "e993098e47f18dd32994ee585b0ca791e333378a1bdba1c66f88604eacf41402",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/client34-owner33/owner33-before.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34-owner33/owner33-before.json",
+      "sha256": "456cd36a4a9853caf313f9a5e890aa330f9eefb18e32af9a4ca13938df0880bd",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/client34-owner33/owner33.stderr",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34-owner33/owner33.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product34-build/client34-owner33/result.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/client34-owner33/result.json",
+      "sha256": "e15e3e8d7989a237a59f0b124270ddd518267f8de95c414cb4e2d7ff8a55a568",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/MANIFEST.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/MANIFEST.json",
+      "sha256": "03ce3f0005bf4f999fcd09fa724c65c883e137ba38c7d38517a0355bd161bbc5",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/REPORT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/REPORT.md",
+      "sha256": "3a01625e21a25337d9c9d6b694b660c187fb35bb6f5507355bbf2adccce3ba78",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/RESULT.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/RESULT.json",
+      "sha256": "e67e9e2dbb9a1833e257f54ffeb1b59be6064c618642ce11250bd8867a68a160",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/ROOT-CONTRACT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/ROOT-CONTRACT.md",
+      "sha256": "a6cb1419910155fc93f384d3201a4e314cbc871009a82e999e34ff8077833488",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/exhibition_repairs-r1.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/exhibition_repairs-r1.py",
+      "sha256": "0ec6c5912c232aad856c6f643792bbd7b879a54f261e9f20aef9bf7ea48c2888",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/exhibition_repairs-r2-before-scope-narrowing.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/exhibition_repairs-r2-before-scope-narrowing.py",
+      "sha256": "0ec6c5912c232aad856c6f643792bbd7b879a54f261e9f20aef9bf7ea48c2888",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/exhibition_repairs.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/exhibition_repairs.py",
+      "sha256": "c17c53ac91af7dcb607075c83c01634bfb941211457dcb9d9ea8813fb5df9632",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/pure-r1.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/pure-r1.log",
+      "sha256": "61761d39c7f6777452524f56d57e90af4ad2581bbb409bbaef6a1ac70091c6e2",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/pure-r2.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/pure-r2.log",
+      "sha256": "62deec2002b18b15e60350927b6e94099d7ba35815797aac4d126ee5a2488288",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/pure-r3.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/pure-r3.log",
+      "sha256": "4d65fff898e854d938a2d9bad8998a06dec5f7da81a9600effaff65c4d042b7b",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/source-index.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/source-index.json",
+      "sha256": "22721fb11ac5a9fda2d3d6c8efc662485d841883b7e48909f7ccda1f6973676f",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/test_exhibition_repairs-r1-missing-parent-projection.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/test_exhibition_repairs-r1-missing-parent-projection.py",
+      "sha256": "c95a2cbf369ffd32cd83411a3d995d496eca996829a2ec8f896c2a8e61ede4f1",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/test_exhibition_repairs-r2.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/test_exhibition_repairs-r2.py",
+      "sha256": "f18ac96f5783f62501bf2cb4f2cc58f3edd8db3a3b1cb047648bf7eddae2df75",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-leaf/test_exhibition_repairs.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repair-leaf/test_exhibition_repairs.py",
+      "sha256": "b51e91a8f4799bbde058104c56d68504368274b23703af7e1fc475200863fe14",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-review/AUTHOR_MANIFEST_VERIFIED.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-review/AUTHOR_MANIFEST_VERIFIED.json",
+      "sha256": "e493ef82a43f8500e8aa100cab6d01bf6db02620bc9d4d8d35d21497e2b15082",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-review/COUNTER_RESULTS.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-review/COUNTER_RESULTS.json",
+      "sha256": "92cdb87c318f29e8b6cbc42a76c1ecf0829ef47ca46d4f0941a7064d80508647",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-review/MANIFEST.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-review/MANIFEST.json",
+      "sha256": "5d4d7a31f06194ef88cf29b3c3d37e5c7b21054ce8a9e4825e1f360c8099318d",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-review/REPORT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-review/REPORT.md",
+      "sha256": "903e984a1da9d98e274db7328969991e1e4e81043cd2ddefbc5b0569b88bfd8b",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-review/RESULT.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-review/RESULT.json",
+      "sha256": "820e50f2f8048551609b5ff9505328c23007c80f62ca7d56e660bad7667750e8",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-review/SOURCE_IDENTITIES.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-review/SOURCE_IDENTITIES.json",
+      "sha256": "96ee81146fb84830b151c70ecb795dbe246a948c09d26bb3f36806c9afd5544d",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-review/countercases.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-review/countercases.py",
+      "sha256": "21ef69c10aaeb6e44f635f169badaf4002b627d07841169f83932d7ff397d451",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-review/pure-review.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-review/pure-review.log",
+      "sha256": "b5735e367008205e82bd0630a8ee8170294749f998766963b5e3905361a68c74",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/COUNTER_RESULTS.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/COUNTER_RESULTS.json",
+      "sha256": "37e7e993cf3566a7a8af0e032431c2674a26799fd4862d3805e9ac54d65d7412",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/EXACT_REPAIR.diff",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/EXACT_REPAIR.diff",
+      "sha256": "6836cf7030c599f260be5f6aa36752f25549422354035dca09093d0fc6760abb",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/MANIFEST.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/MANIFEST.json",
+      "sha256": "2dcd61728958da9be80c96c0ef9f9152c4028a23584370f72499e84c9540c8a7",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/PRIOR_REVIEW_SOURCE_CORRESPONDENCE.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/PRIOR_REVIEW_SOURCE_CORRESPONDENCE.json",
+      "sha256": "133d9a21f31d34446eabb34896306877534f3f08c807d39d68f5bd6fb3392f57",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/REPORT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/REPORT.md",
+      "sha256": "9fa6e72e0699896dee6eefc5962866536552b8a65b520f6cdcc4e381428850c4",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/RESULT.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/RESULT.json",
+      "sha256": "bcc653c17b0866eef904902c5bbaa8c5088944929f12e684b46215cb75a5f409",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/ROOT_HARNESS_EXACT.diff",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/ROOT_HARNESS_EXACT.diff",
+      "sha256": "27c4db7bda6783763e6fc9978f42c85c558eebb3a374953d3abbf87b94c0f9b8",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/SOURCE_IDENTITIES.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/SOURCE_IDENTITIES.json",
+      "sha256": "9fff23574fd2e1fcc9920dc63acb4906348bee25eec63a0e67abde9375b0571c",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/model_projection.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/model_projection.py",
+      "sha256": "a7b2279f01f8c3499ab29a298e30370927b5049948ab43257c16db11f2ba9062",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/probes.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/probes.py",
+      "sha256": "c9e283aef3c3131f0a5cf1bf04305190039a88d15616032e45610fe5f8f25ac5",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/pure-review-r1-broad-test-name.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/pure-review-r1-broad-test-name.log",
+      "sha256": "1f5ac9bac02fd800dc4312171a698910b63003c849b1de7510e31495381cc1ef",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repaired-independent-review/pure-review.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-repaired-independent-review/pure-review.log",
+      "sha256": "ec6e5bdfede11d1aacd518d4a9f1d67d5ddbb227d7fc5b34ec42349a5973da53",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-quantity-repair/REPAIR.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-quantity-repair/REPAIR.json",
+      "sha256": "dd58234a1cc382a82267af236ad5dc14f5379b341ce10f8ed1b217d76c5da111",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-quantity-repair/exhibition_repairs.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-quantity-repair/exhibition_repairs.py",
+      "sha256": "f274362c4fadc9851e39ee76aae272e069fe2efbfcecae8235c85d666a5bc59c",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-quantity-repair/exhibition_repairs_original.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-quantity-repair/exhibition_repairs_original.py",
+      "sha256": "c17c53ac91af7dcb607075c83c01634bfb941211457dcb9d9ea8813fb5df9632",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-quantity-repair/pure-real-shape-r2.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-quantity-repair/pure-real-shape-r2.log",
+      "sha256": "5230b80d26cabeb7f03ae65c34868bc5bc7b0bc51dde3e7f1b32165af17b03bd",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-quantity-repair/pure-real-shape.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-quantity-repair/pure-real-shape.log",
+      "sha256": "4b84edb7a08eef9b1d9188f2fff8446f47f63cd107a8a4cd624f648bfcb389d4",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-quantity-repair/test_exhibition_repairs.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-quantity-repair/test_exhibition_repairs.py",
+      "sha256": "ac3598c7754d9b7ae9b6d9fbf3d23ac995a2ebaa49e81706ef50643ff082780c",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/client34-replay-grounding/INDEPENDENT_REVIEW.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/client34-replay-grounding/INDEPENDENT_REVIEW.json",
+      "sha256": "8f41aefecf6ffb832996dc7679874bbfdc7361a471f3f30f355a64d152e43ff6",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/client34-replay-grounding/MANIFEST.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/client34-replay-grounding/MANIFEST.json",
+      "sha256": "62e9f88f6542ecff66a26e17b125077fadc3c73f101000fdf0d6951e06f2ed01",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/client34-replay-grounding/REPORT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/client34-replay-grounding/REPORT.md",
+      "sha256": "049822c0fb5af9ea6511c96b1165bf619611d4301be6f2584340c6384e1f43b1",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/client34-replay-grounding/SOURCE_INDEX.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/client34-replay-grounding/SOURCE_INDEX.json",
+      "sha256": "0b855fd522473d5263e8080e2f03c5e3ddd517888ed06c75d1bdde903478363a",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/client34-replay-grounding/captured_replies.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/client34-replay-grounding/captured_replies.json",
+      "sha256": "03c02c9afb6fa9019055fae4b79d3ae4caddc066c702ba3d3919427e2506a71b",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/client34-replay-grounding/green-source34.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/client34-replay-grounding/green-source34.json",
+      "sha256": "35a000d189850e79e88087969357dcfaa067a8dd7ab032bc77a866d599488ffa",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/client34-replay-grounding/red-exact33.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/client34-replay-grounding/red-exact33.json",
+      "sha256": "86218b94cd86beff66f18dc6b4d245cad823a0157ea91b0c03042bbfc84e79e7",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/client34-replay-grounding/test_replay_cache.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/client34-replay-grounding/test_replay_cache.py",
+      "sha256": "448deaa931fce5fa5d308f3d60d3691690113f0bf58c9e7d4ba02b1d2fc7dfd1",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current32-withdrawal-grounding/ADVERSE_PREDICATES.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current32-withdrawal-grounding/ADVERSE_PREDICATES.json",
+      "sha256": "5f22ce7dff304ae96ed9e738eb55025508e54fc0f587c9e8c1eae382a386db60",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current32-withdrawal-grounding/MANIFEST.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current32-withdrawal-grounding/MANIFEST.json",
+      "sha256": "585312b5003658eb7c0e1d458f8eff7310e5716df43d5bc398074ae525ecb88f",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current32-withdrawal-grounding/PROPOSED_CONTRACT.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current32-withdrawal-grounding/PROPOSED_CONTRACT.json",
+      "sha256": "599cfc735781fb50259aa86fe3dc2ccb9bafea02790981e79410beb2383038a3",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current32-withdrawal-grounding/REPORT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current32-withdrawal-grounding/REPORT.md",
+      "sha256": "ec3b3a0eb278b74ccd8c9f64c606bf5f9c9c3140158d408f9165939c5943caa5",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current32-withdrawal-grounding/SOURCE_INDEX.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current32-withdrawal-grounding/SOURCE_INDEX.json",
+      "sha256": "e0ad4372759da888cd4dac0169a7e8328cd884e504611add7c318ff3ad7add68",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/GUARD.diff",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/GUARD.diff",
+      "sha256": "5a2d32258ef99b530f3ac3c2765a5fff6c931d73922350681b5822fbe74eac89",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/MANIFEST.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/MANIFEST.json",
+      "sha256": "d8a45c6e7d3f2c69c52ee8cd85c423dd8abecfcd7d728bbaffd21a816b52a972",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/MODELED_RESULTS.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/MODELED_RESULTS.json",
+      "sha256": "84f7c418fb13e5b0751e13a00d87fb0bb6f0c9dbd4fb17a28d81791ce95097a1",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/REPORT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/REPORT.md",
+      "sha256": "02ebc6a93ffd904d69d1355b7dc8308b41ee8caa4a8cffdba870058f5ce37867",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/RESULT.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/RESULT.json",
+      "sha256": "d2bf7a55d29382009f09faa0bfd52fcc9da5f39691e41a24b163ebcf4861f9d0",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/SOURCE_IDENTITIES.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/SOURCE_IDENTITIES.json",
+      "sha256": "2c6b9a05b2f8f4d985faea636eaeacaf8f687ce46e6d7a8d8c6797b108b9b4fb",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/guarded_owner_kill_original.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/guarded_owner_kill_original.py",
+      "sha256": "4e2ee7fed184f4b87e7cf42ea67d3bd9cd6f6945292e11d15cd97a32532f10a6",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/guarded_owner_kill_proposed.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/guarded_owner_kill_proposed.py",
+      "sha256": "79e33377182249c5abd3403938a98f94c7918245c8b7ec927ecec35b890b95f6",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/modeled.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/modeled.log",
+      "sha256": "09edb6c9ae34fa007152dee2989fc796bfd90042742b38a54c5fa1aa333e14e0",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-guard-review/modeled_guard_cases.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-guard-review/modeled_guard_cases.py",
+      "sha256": "7b80323ed6bbce5d9c8366fbe5163cdb4bae79ffe95e522a8fb060af2acf5a78",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-probe/RESULT.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-probe/RESULT.json",
+      "sha256": "9e39c191dfd1d00c46f9226d98b469a75cc98f652922cfca565c84d009929e51",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-probe/actual-child-hello.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-probe/actual-child-hello.json",
+      "sha256": "9fa740fcbf982fab8806ee4daf02c383019b37fc9b9b5e154b8d08ab45a8d5ae",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-probe/before-owned-EOF.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-probe/before-owned-EOF.json",
+      "sha256": "71d828ade9d5db7d6158e70061f6d95eece9127bc87018fa6fe62b18060a37cd",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-probe/identity-after.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-probe/identity-after.json",
+      "sha256": "8ea5a4baa10876a206ac8c74a49a385acb285788101441b81edf73586ed155c5",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-probe/identity-before.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-probe/identity-before.json",
+      "sha256": "8ea5a4baa10876a206ac8c74a49a385acb285788101441b81edf73586ed155c5",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/current-owned-pidfd-probe/issued-before-launch.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/current-owned-pidfd-probe/issued-before-launch.json",
+      "sha256": "d5caec6b04c929967d1a79d03111c0358fc34a7d7162e756ec9bd9804c54255e",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient/FAILED",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient/FAILED",
+      "sha256": "e40df77daa9dadbd8f18103a5d79698a8a1e075922367fb6a92ea1063b2681ec",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient/calls.jsonl",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient/calls.jsonl",
+      "sha256": "31e31c16869bc4229ef3f74860eb1d40e40d87dbf71d01aa8a6b9bd84c255dcb",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient/proof-after.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient/proof-after.json",
+      "sha256": "bb79155826403a03550f2f808092f0b3d2f8dc3b1a1fb3016998f18ecc34c448",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient/proof-before.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient/proof-before.json",
+      "sha256": "bb79155826403a03550f2f808092f0b3d2f8dc3b1a1fb3016998f18ecc34c448",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient/read_normal.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient/read_normal.py",
+      "sha256": "3089488afe67744896b1ac43d818ee2de294b30f33d2058eb12e53ed9aeef60e",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient/report.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient/report.json",
+      "sha256": "111ad463e0815f9cb823dc9aa5857446e165fcdc6760c0a087f89ada462a9f0c",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/assessment.txt",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/assessment.txt",
+      "sha256": "2ab30bae09649d3139f451106e59fcb816489a087fe004d93ae7da834c88bf53",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/calls.jsonl",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/calls.jsonl",
+      "sha256": "ba6877078ce767e53e1fe3b410379ab6e37bf63b4140250e0ac6db93234bba53",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/current-view.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/current-view.json",
+      "sha256": "a339d2921cf74bd6ad427ff9782fb3ef146b0884d71333810d00e943ade7b4f3",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/normal-1.literal",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/normal-1.literal",
+      "sha256": "b6c2d92cb7b95e999e9dd2627d8842d671fff883a55ea386cd0faa0cef41cc3a",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/normal-2.literal",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/normal-2.literal",
+      "sha256": "48b4b92a8d36e544137fff4d20bf54b036cb29f22f8daaf31081a9748eb520cf",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/normal-3.literal",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/normal-3.literal",
+      "sha256": "3fb369f2c1f3e81e8e9714161f2870dd3aa468d7e97c12d9f0643cbc9702eb62",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/normal-4.literal",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/normal-4.literal",
+      "sha256": "e06288165619fee1342475e7b23897c448bc9bb7e07197a2a8360255413ae71b",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/normal-5.literal",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/normal-5.literal",
+      "sha256": "76e8eda1da6fc0ac9687cda9d37008ca3b0f98091f9825c963f45197397868d9",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/normal-6.literal",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/normal-6.literal",
+      "sha256": "d8bade9777690910483099f5fe7c558ffade6bfb7f0821316c6de42d3a0f5f6a",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/proof-after.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/proof-after.json",
+      "sha256": "bb79155826403a03550f2f808092f0b3d2f8dc3b1a1fb3016998f18ecc34c448",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/proof-before.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/proof-before.json",
+      "sha256": "bb79155826403a03550f2f808092f0b3d2f8dc3b1a1fb3016998f18ecc34c448",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/public-contract-inspection-error.txt",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/public-contract-inspection-error.txt",
+      "sha256": "ded80dccf98addd73cb4a5be2ab843ed753a804150fa366187185c3287ba5340",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/read_normal.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/read_normal.py",
+      "sha256": "0aab1c926ed36630dfcb8f989b22c8d96c7caf61e440008ce8a005bc372a960b",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/reads.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/reads.json",
+      "sha256": "17bbf564f0842efbdc7ec113174bf1834f48b70ae1062457579ee68b718948bf",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/report.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/report.json",
+      "sha256": "56432a05cafe06c95c356c290ab4efbe962062ab028bfa7c80adccf76da6ab96",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3/stderr-child-1.bin",
+      "checkpoint": "/dev/shm/product34-checkpoint/evidence/product33-independent-recipient-r3/stderr-child-1.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/integrate_repair33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/integrate_repair33.py",
+      "sha256": "d2505e5e9d131ee102676a418cbaa37be1f9f429d40c206ab9ccb2a3f16fd040",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/build_product33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/build_product33.py",
+      "sha256": "1e0dba62320088f5f7e634affa1fc36f8a1b9cab80e46d8c1161b91c930532aa",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/build-product33.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/build-product33.log",
+      "sha256": "619f75a6462f5857db4f03715ab0719c045837b310e95f2ff2f3ef46b6a06abc",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/author_product33_common.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/author_product33_common.py",
+      "sha256": "70cabb157a5b5aa980c343c9833cd3bac27164b98153edad885be1bdd75ebaf0",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/author_probe33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/author_probe33.py",
+      "sha256": "be6b920ad89e8d85740bf4094ce3a2154e879d029f7dc1dafd12274d1784d214",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/probe33-proposal.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/probe33-proposal.py",
+      "sha256": "14c06be4d36c4422457ebce5dcda1f9379acb29268f87f1baf8926c564aa2b90",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/prepare_installed33_checks.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/prepare_installed33_checks.py",
+      "sha256": "48460b8651cd2414138f188d4a0de125553e5aa998683d137f8277eb8665fe7d",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/capture33_original.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/capture33_original.py",
+      "sha256": "a692af588c8cd0bb964e138154cf0d853ccfb1c3414410b70f0ccdf2832a0eb8",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/copy33_following.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/copy33_following.py",
+      "sha256": "bd0af90c0c9cec8e5bb1f1fdab042320be0ae3fb2c5bc6cbe70886314345500c",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/copy33_following_r3.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/copy33_following_r3.py",
+      "sha256": "adca37d53bc57834ff30bb46a35964bc6917d2945e9a0807c178542c783abc6a",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/author_product34.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/author_product34.py",
+      "sha256": "eaec4e1bcd594b5afe1e7149ea18dfb68e66d8ca07c3a6419214990d7bed2661",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/build_product34.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/build_product34.py",
+      "sha256": "406bcbccc7b87b4f6f3617fd45c0fc9a5c9cec5bea363c89e8c2769d973cce50",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/build-product34.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/build-product34.log",
+      "sha256": "28348076dc1307c42d24ae665423df8bc7cc41df2c1cfc2dca7a38fe50fd0104",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/review_writer_duplicates.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/review_writer_duplicates.py",
+      "sha256": "08836450ccdea31d13fbcd341210ae8a71121e20b3233871e1d490436baa9a90",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/review_writer_duplicates-r1.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/review_writer_duplicates-r1.py",
+      "sha256": "c5e96148caa118e50c355c028f1bff884e980f49b3bf439191731dbae372c7fe",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/release_writer_duplicates.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/release_writer_duplicates.py",
+      "sha256": "8900c51824c52b46f75aaf22dbb63a7ff7d852ed61a78514cb0bda619542c900",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/writer-duplicate-root-review.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/writer-duplicate-root-review.json",
+      "sha256": "17ed9e27ffca9b4771cfd4455a740fd72134988855e49dbc55a577759c1446b1",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/writer-derived-duplicate-release-receipt.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/writer-derived-duplicate-release-receipt.json",
+      "sha256": "01cae389fd219fa82129bc354c3ce8d39f8be919e1975915cf4697983b37c4d7",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/probe_owned_waitid.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/probe_owned_waitid.py",
+      "sha256": "21a148f1f437d07ce4893a799bedbdd7a9641c780ebb92ce12cbb4b763309e12",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/probe-owned-waitid.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/probe-owned-waitid.log",
+      "sha256": "e2ddf0ba9a77b482d0cdb6218d8f11fb46434d4f9562014943585a09bdc90ebf",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/F3a-33-conserving-repair-root-contract.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/F3a-33-conserving-repair-root-contract.md",
+      "sha256": "a6cb1419910155fc93f384d3201a4e314cbc871009a82e999e34ff8077833488",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-brief.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/product33-independent-recipient-brief.json",
+      "sha256": "3bcc5466adc0d6b64486a50be67d382b102ffd8ea99b8d6c55b63c05ddeab298",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-independent-recipient-r3-brief.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/tools-and-context/product33-independent-recipient-r3-brief.json",
+      "sha256": "b729656be1e4ca4a4bd026a04feadcb22f70940b3702f56c519e8dc396a2e5de",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-integration/WIRE_SOURCE_RESULT.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/source33-common-antecedent/WIRE_SOURCE_RESULT.json",
+      "sha256": "bd1e0ec3d7227870a39df01c411c5ecfc392a2231ef942d48de714f8928a5e17",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-integration/wire-source.log",
+      "checkpoint": "/dev/shm/product34-checkpoint/source33-common-antecedent/wire-source.log",
+      "sha256": "6481f91629bac05e5b8ca3a63715e44fda34a9d97776fcb872f19a0a4e673e01",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-integration/test_wire33.py",
+      "checkpoint": "/dev/shm/product34-checkpoint/source33-common-antecedent/test_wire33.py",
+      "sha256": "96caa5b7c69ee607f3ace3a75dc512d7471ee043cf4ddfb714d067febfcf160b",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-integration/common-source-manifest.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/source33-common-antecedent/common-source-manifest.json",
+      "sha256": "8997f625f1f91e40dd88fb13f97109339037791d014228b1b0d9a62df4a82bdc",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-integration/SOURCE_STATUS.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/source33-common-antecedent/SOURCE_STATUS.json",
+      "sha256": "6ed6e33245035f01f0d5039bb712c2a876928d52b71eda2b38087463bca85e6b",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product33-repair-integration/ROOT-CONTRACT.md",
+      "checkpoint": "/dev/shm/product34-checkpoint/source33-common-antecedent/ROOT-CONTRACT.md",
+      "sha256": "a6cb1419910155fc93f384d3201a4e314cbc871009a82e999e34ff8077833488",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/github-native18-future/final-paired-push-receipt.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/native18-paired-dependency-receipt.json",
+      "sha256": "ed134b7a17780a1d134f15d5ba51fe6bb88100298ca26dacccdc5f49db2739e3",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/github-current28-reconstruction-kit/final-paired-push-receipt.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/complete28-reconstruction-kit-remote-receipt.json",
+      "sha256": "2a0330b222394cd6b764f1b1c8e7d94151d970253abf806967501d3912a67f7b",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/github-product32-attachment-award/critical-paired-push-receipt.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/product32-critical-parent-receipt.json",
+      "sha256": "530f211cc6b66964e4428852477c7648edca0b52299b45633692d5417e1ee4cf",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    },
+    {
+      "source": "/dev/shm/product32-checkpoint/BUILD_STATUS.json",
+      "checkpoint": "/dev/shm/product34-checkpoint/protected-parent-ledger.json",
+      "sha256": "560fab2cb3c8a7ea3a42e6b79b55f195a2513bbbe46a38645ea625bf8d18253f",
+      "immutable": true,
+      "link_nlink_ctime_change_disclosed": true
+    }
+  ],
+  "promise": "ALL source/evidence/wheels linked into this frozen checkpoint IMMUTABLE; future edits only new independentlycopied source/atomicreplacement. Nlink/ctimechanges disclosed, bytes/mode/uidgid/mtime/xattrs preserved.",
+  "no_live_source_writer": true
+}

@@ -1,0 +1,47 @@
+{
+  "actual_full_values": 151,
+  "archive": {
+    "actual_full_value_receipts": 151,
+    "archives": [
+      {
+        "ASCII_actual_remote_parts": 19,
+        "ZIP_members": 279,
+        "actual_remote_complete_coverage_equal_retained_carrier": true,
+        "all_CRC_memberSHA_mode_type_symlinktargets_exact": true,
+        "bytes": 9332925,
+        "kind": "critical",
+        "no_second_full_ZIP_written": true,
+        "retained_usable_carrier": {
+          "allocated_bytes": 9334784,
+          "bytes": 9332925,
+          "device": 26,
+          "inode": 95184,
+          "mode": 420,
+          "mtime_ns": 1792705158077563155,
+          "nlink": 1,
+          "path": "/dev/shm/github-product34-client33-repair/Product34_Client33_Repair_Critical_IN_PROGRESS.zip"
+        },
+        "sha256": "c28c09485417f397222094202a06c17f16e8a292bd17c9aeaefe9fd13bdcd2a7"
+      }
+    ],
+    "final2MiB_reserved": 2097152,
+    "nested_RAW": [],
+    "no_DB_native_Client_build_test_world_effects": true,
+    "own_new_phase_limit": 18874368,
+    "own_new_streaming_allocated": 1855488,
+    "status": "ACTUAL_REMOTE_COMPLETE_ARCHIVE_BYTES_EQUAL_RETAINED_USABLE_CARRIERS",
+    "whole_writer80MiB": 83886080,
+    "whole_writer_allocated_including_directories": 60407808
+  },
+  "branch_effects_yet": false,
+  "limits": "Compact34Client/unchanged33Owner evidence; noOwner34oldworld/new34native-world/fullcontinuation/fullrelease; Source36excluded.",
+  "packaging_safe_budget_stop_and_pre_effect_wrapper_error_retained": true,
+  "readback_plan_sha256": "958e5467b8d2ad78db0d295352c23104776cc06357b1e7579d00b6c1470ed30f",
+  "repo_counts": {
+    "Kageyoni": 66,
+    "SAMSARA": 85
+  },
+  "source_all254files_and25directories_all_before_after_metadata_exact": true,
+  "source_snapshot_sha256": "d74ce2e27a73ddae359644cc724a32be50cee9c18e79dfe87690aaac312a5920",
+  "status": "CRITICAL_FULL_ACTUAL_REMOTE_READBACK_COMPLETE_BEFORE_BRANCH_CHANGE"
+}

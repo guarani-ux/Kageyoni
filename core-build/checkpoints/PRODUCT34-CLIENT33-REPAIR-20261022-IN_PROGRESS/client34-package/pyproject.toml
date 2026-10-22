@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools==84.0.0", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "samsara-world"
+version = "0.5.3.dev34"
+description = "Samsara generation 5 local application candidate"
+requires-python = ">=3.12"
+dependencies = ["kageyoni-engine==11.1.0.dev18", "jsonschema==4.25.1", "textual==8.2.8"]
+
+[project.scripts]
+samsara = "samsara.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["samsara*"]
+
+[tool.setuptools.package-data]
+samsara = ["data/*.json", "data/*.md"]

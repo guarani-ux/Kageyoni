@@ -1,0 +1,20 @@
+{
+  "status": "COMPACT_CLIENT34_UNCHANGED_OWNER33_REPAIR_SOURCE_IN_PROGRESS",
+  "repository": "guarani-ux/SAMSARA",
+  "commit": "fddd8e270f43151183e128db65d1b202b41199d6",
+  "checkpoint": "core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS",
+  "recipe": "core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS/critical-recipe.json",
+  "reconstruct": "core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS/reconstruct.py",
+  "critical_bytes": 9332925,
+  "critical_sha256": "c28c09485417f397222094202a06c17f16e8a292bd17c9aeaefe9fd13bdcd2a7",
+  "ZIP_members": 279,
+  "parts": 19,
+  "full_packet_body_pending": true,
+  "source34": 43,
+  "reconstructed33": 43,
+  "native18_source_anchor": {
+    "SAM": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+    "Kage": "1598555d04c3846a6ba4208b4b35dc701515474b"
+  },
+  "limits": "Compact only. Actual34Client->unchanged33Owner on33world; noOwner34oldworld/new34native-world/fullcontinuation/fullrelease. Source36excluded."
+}

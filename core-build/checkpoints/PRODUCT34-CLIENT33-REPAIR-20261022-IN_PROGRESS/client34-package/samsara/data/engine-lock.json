@@ -1,0 +1,12 @@
+{
+  "version": "11.1.0.dev18",
+  "baseline_commit": "872973f091320f92e3276408090978084928d291",
+  "candidate": "F3a bounded exhibition admission/history candidate; IN_PROGRESS, not voluntary contest/award/repair or full release.",
+  "wheel": "kageyoni_engine-11.1.0.dev18-py3-none-any.whl",
+  "sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+  "reference": {
+    "id": "kageyoni-engine:11.1.0.dev18",
+    "version": 1,
+    "digest": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626"
+  }
+}

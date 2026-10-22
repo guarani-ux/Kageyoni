@@ -1,0 +1,40 @@
+{
+  "current34_source": 43,
+  "current_full_source_identity": null,
+  "current_full_source_identity_status": "NOT_ASSEMBLED",
+  "each_source_wheel_payloads": 244,
+  "identities": {
+    "33": {
+      "runtime": "31a061ac9313a40f032b6803ed7fc0aa1f3197f444e389befae594a7e55bbf4d",
+      "versions": {
+        "kageyoni-engine": "11.1.0.dev18",
+        "samsara-world": "0.5.3.dev33"
+      },
+      "wheel_sha256": {
+        "engine": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+        "product": "ba8480dc1ed5b383d248dbcf6dd1848a2065bd196d7959555acfade11bad72b6"
+      }
+    },
+    "34": {
+      "runtime": "c4bcfc4b2e84a00cb91576042c875ca821b933b67211c25857fa435952d5a622",
+      "versions": {
+        "kageyoni-engine": "11.1.0.dev18",
+        "samsara-world": "0.5.3.dev34"
+      },
+      "wheel_sha256": {
+        "engine": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+        "product": "420de18fe516d49ef97e648d4017c8bb8c4d9fddbc68c483c2502802e1f55025"
+      }
+    }
+  },
+  "native_manifest": 745,
+  "native_wheel_payloads": 203,
+  "offline_dependency_wheels": 20,
+  "old_fullcarrier_fields_historical_unchanged": true,
+  "physical_files": 254,
+  "protected8JSON_equal": true,
+  "reconstructed33_source": 43,
+  "sixstages_preserved": true,
+  "status": "BYTE_SOURCE_WHEEL_SCOPE_ONLY_NOT_FULL_CONTINUATION_OR_RUNTIME_QUALIFICATION",
+  "writer_native_runtime_execution": false
+}

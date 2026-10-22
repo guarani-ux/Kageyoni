@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ACTUAL_INSTALLED_CLIENT34_EXACT_OWNER33_HISTORICAL_REPLAY_CACHE_AND_NEXT_CURRENT_SETTLE_NO_REALLOCATION",
+  "client_runtime": "c4bcfc4b2e84a00cb91576042c875ca821b933b67211c25857fa435952d5a622",
+  "owner_runtime": "31a061ac9313a40f032b6803ed7fc0aa1f3197f444e389befae594a7e55bbf4d",
+  "server33_native18_unchanged": true,
+  "historical_result_revisions": [
+    18,
+    19
+  ],
+  "client_known_revision_remained": 21,
+  "new_settle_expected_revision": 21,
+  "new_settle_succeeded": true,
+  "current_world_revision": 21,
+  "new_gameplay": false,
+  "new_owner34_world": "NOT_RUN",
+  "new_product34_native_loop": "NOT_QUALIFIED",
+  "full_release": false,
+  "signals": 0,
+  "uncertain_effects": false
+}
