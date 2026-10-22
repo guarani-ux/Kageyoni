@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE_COMPACT34_CLIENT33_OWNER_REPAIR_BODY_CUSTODY_IN_PROGRESS",
+  "repository": "guarani-ux/SAMSARA",
+  "commit": "e72f14d1a972f839ba884567d89289d7a157f8f9",
+  "checkpoint": "core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS",
+  "recipe": "core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS/body-recipe.json",
+  "reconstruct": "core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS/reconstruct.py",
+  "bytes": 14620514,
+  "sha256": "85bb5457c6b6700f3631a3aaa4c9415ead5eb565d82f2aabcaf0615bcd63914b",
+  "members": 280,
+  "parts": 30,
+  "physical_frozen_files": 254,
+  "raw_inside": [
+    {
+      "path": "Product33_Complete_Actual_Repair_Failures_Recipient_Raw.zip",
+      "bytes": 5771925,
+      "sha256": "3ae4cfeba05ad7d39a241a0ad8be7c71215aece7decdd87f53805d19df20cf74",
+      "members": 281
+    },
+    {
+      "path": "server33-antecedent/Product33_Original_Stopped_Client_STALE_Raw.zip",
+      "bytes": 1999689,
+      "sha256": "6894763e4f3a4c9c3f396cd81751a28592cc07bfea8ca1d2e3baf92c9ddbff8d",
+      "members": 118
+    }
+  ],
+  "all_full_actual_remote_values_coverage_CRC_memberSHA_modes_types_verified": true,
+  "no_second_full_ZIP_or_extraction_materialized": true,
+  "scope": "Compact only: actual34Client->unchanged33Owner on33world; original33wholetoolSTALE/0755Owner1 failures retained; AI6reads16602B choseleaveunchanged/noacceptedartifact. No Owner34oldworld/new34native-world/fullcontinuation/fullrelease. Source36excluded."
+}

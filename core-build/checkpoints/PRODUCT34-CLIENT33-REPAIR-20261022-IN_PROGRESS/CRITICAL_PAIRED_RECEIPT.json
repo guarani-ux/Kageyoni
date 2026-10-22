@@ -1,0 +1,44 @@
+{
+  "status": "CRITICAL_PAIRED_COMPACT_SOURCE_DURABLE_FULL_BODY_PENDING",
+  "checkpoint": "core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS",
+  "heads": {
+    "SAMSARA": "fddd8e270f43151183e128db65d1b202b41199d6",
+    "Kageyoni": "a505c111020c5f6175209b119721e782f3d33a5c"
+  },
+  "parents": {
+    "SAMSARA": "913f625935c3af5bfebba92a0a19952f3c41a1be",
+    "Kageyoni": "8e22155a2b76d6b9c641822a6fd7287e7161a0e8"
+  },
+  "actual_full_remote_values": 154,
+  "tree_files": {
+    "SAMSARA": 86,
+    "Kageyoni": 68
+  },
+  "all_leaf_GitIDs_modes_types_and_prior_siblings_exact": true,
+  "independent_root_Git_tree_serialization": true,
+  "fresh_private_unarchived_and_pins_exact": true,
+  "CAS_force_false_and_heads_read_back": true,
+  "source_frozen254files_all_metadata_exact": true,
+  "critical": {
+    "bytes": 9332925,
+    "sha256": "c28c09485417f397222094202a06c17f16e8a292bd17c9aeaefe9fd13bdcd2a7",
+    "members": 279,
+    "actual_all19remote_parts_complete_bytecoverage_CRC_memberSHA_modes_types": true,
+    "usable_existing_carrier": "/dev/shm/github-product34-client33-repair/Product34_Client33_Repair_Critical_IN_PROGRESS.zip",
+    "no_second_carrier_copy": true
+  },
+  "body": {
+    "status": "PENDING_UPLOAD_READBACK",
+    "bytes": 14620514,
+    "sha256": "85bb5457c6b6700f3631a3aaa4c9415ead5eb565d82f2aabcaf0615bcd63914b",
+    "members": 280,
+    "includes_all254frozenfiles": true
+  },
+  "links": {
+    "SAMSARA": "https://github.com/guarani-ux/SAMSARA/tree/fddd8e270f43151183e128db65d1b202b41199d6/core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS",
+    "Kageyoni": "https://github.com/guarani-ux/Kageyoni/tree/a505c111020c5f6175209b119721e782f3d33a5c/core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS",
+    "critical_recipe": "https://github.com/guarani-ux/SAMSARA/blob/fddd8e270f43151183e128db65d1b202b41199d6/core-build/checkpoints/PRODUCT34-CLIENT33-REPAIR-20261022-IN_PROGRESS/critical-recipe.json"
+  },
+  "scope": "CompactClient34->unchangedOwner33 evidence only. No Owner34oldworld/new34native-world/fullcontinuation/fullrelease. Source36excluded. All original33failures/recipient0755failure retained; AI6reads16602B choseleaveunchanged/noacceptedartifact.",
+  "writer": "SOLE_WRITER_HELD_UNTIL_COMPLETE_BODY_AND_EXPLICIT_RELEASE"
+}

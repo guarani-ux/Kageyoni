@@ -1,0 +1,113 @@
+{
+  "actual_full_values_before_this_proof": 200,
+  "all254frozenfiles_and25directories_before_after_metadata_exact": true,
+  "all43current34_and43reconstructed33_source_pins_and244_each_source_wheel_payloads_preserved": true,
+  "all_original_failures_retained": true,
+  "body": {
+    "actual_full_value_receipts": 30,
+    "archives": [
+      {
+        "ASCII_actual_remote_parts": 30,
+        "ZIP_members": 280,
+        "actual_remote_complete_coverage_equal_retained_carrier": true,
+        "all_CRC_memberSHA_mode_type_symlinktargets_exact": true,
+        "bytes": 14620514,
+        "kind": "body",
+        "no_second_full_ZIP_written": true,
+        "retained_usable_carrier": {
+          "allocated_bytes": 14622720,
+          "bytes": 14620514,
+          "device": 26,
+          "inode": 95185,
+          "mode": 420,
+          "mtime_ns": 1792705158649574865,
+          "nlink": 1,
+          "path": "/dev/shm/github-product34-client33-repair/Product34_Client33_Repair_Complete_Compact_Packet_IN_PROGRESS.zip"
+        },
+        "sha256": "85bb5457c6b6700f3631a3aaa4c9415ead5eb565d82f2aabcaf0615bcd63914b"
+      }
+    ],
+    "final2MiB_reserved": 2097152,
+    "nested_RAW": [
+      {
+        "actual_remote_complete_outer_member_equal_retained_frozenZIP": true,
+        "all_CRC_memberSHA_mode_type_symlinktargets_exact": true,
+        "bytes": 5771925,
+        "members": 281,
+        "no_extracted_copy_written": true,
+        "path": "Product33_Complete_Actual_Repair_Failures_Recipient_Raw.zip",
+        "sha256": "3ae4cfeba05ad7d39a241a0ad8be7c71215aece7decdd87f53805d19df20cf74"
+      },
+      {
+        "actual_remote_complete_outer_member_equal_retained_frozenZIP": true,
+        "all_CRC_memberSHA_mode_type_symlinktargets_exact": true,
+        "bytes": 1999689,
+        "members": 118,
+        "no_extracted_copy_written": true,
+        "path": "server33-antecedent/Product33_Original_Stopped_Client_STALE_Raw.zip",
+        "sha256": "6894763e4f3a4c9c3f396cd81751a28592cc07bfea8ca1d2e3baf92c9ddbff8d"
+      }
+    ],
+    "no_DB_native_Client_build_test_world_effects": true,
+    "own_new_phase_limit": 18874368,
+    "own_new_streaming_allocated": 2265088,
+    "status": "ACTUAL_REMOTE_COMPLETE_ARCHIVE_BYTES_EQUAL_RETAINED_USABLE_CARRIERS",
+    "whole_writer80MiB": 83886080,
+    "whole_writer_allocated_including_directories": 61460480
+  },
+  "budget": {
+    "D_limit18MiB": 18874368,
+    "current_B_including_dirs": 63655936,
+    "current_D_including_dirs": 2465792,
+    "remaining_operational18_minus_D": 16408576,
+    "total_consumedD_plus_remaining18_minusD_plus_final2MiB": 20971520,
+    "untouched_final2MiB": 2097152,
+    "whole80MiB": 83886080
+  },
+  "critical": {
+    "actual_full_value_receipts": 151,
+    "archives": [
+      {
+        "ASCII_actual_remote_parts": 19,
+        "ZIP_members": 279,
+        "actual_remote_complete_coverage_equal_retained_carrier": true,
+        "all_CRC_memberSHA_mode_type_symlinktargets_exact": true,
+        "bytes": 9332925,
+        "kind": "critical",
+        "no_second_full_ZIP_written": true,
+        "retained_usable_carrier": {
+          "allocated_bytes": 9334784,
+          "bytes": 9332925,
+          "device": 26,
+          "inode": 95184,
+          "mode": 420,
+          "mtime_ns": 1792705158077563155,
+          "nlink": 1,
+          "path": "/dev/shm/github-product34-client33-repair/Product34_Client33_Repair_Critical_IN_PROGRESS.zip"
+        },
+        "sha256": "c28c09485417f397222094202a06c17f16e8a292bd17c9aeaefe9fd13bdcd2a7"
+      }
+    ],
+    "final2MiB_reserved": 2097152,
+    "nested_RAW": [],
+    "no_DB_native_Client_build_test_world_effects": true,
+    "own_new_phase_limit": 18874368,
+    "own_new_streaming_allocated": 1855488,
+    "status": "ACTUAL_REMOTE_COMPLETE_ARCHIVE_BYTES_EQUAL_RETAINED_USABLE_CARRIERS",
+    "whole_writer80MiB": 83886080,
+    "whole_writer_allocated_including_directories": 60407808
+  },
+  "metadata_actual_readback16_complete": true,
+  "no_extra_full_ZIP_or_extraction_materialized": true,
+  "offline_dependency_wheels20_preserved_inside_body": true,
+  "packaging_budget_stop_and_pre_effect_wrapper_error_preserved": true,
+  "repo_counts": {
+    "Kageyoni": 76,
+    "SAMSARA": 124
+  },
+  "scope": "Compact34Client->unchanged33Owner on33world only. SCRIPTED33conservedrepair achieved; originalwholetoolSTALE and recipient0755Owner1 failures preserved. AI6reads16602B choseleaveunchanged/noacceptedartifact. NoOwner34oldworld/new34native-world/fullcontinuation/fullrelease. Source36excluded.",
+  "source_after_sha256": "d74ce2e27a73ddae359644cc724a32be50cee9c18e79dfe87690aaac312a5920",
+  "source_before_sha256": "d74ce2e27a73ddae359644cc724a32be50cee9c18e79dfe87690aaac312a5920",
+  "status": "FULL_COMPACT_BODY_AND_METADATA_ACTUAL_REMOTE_READBACK_COMPLETE_BEFORE_FINAL_TREE_CAS",
+  "writer_effects": "Bytes/Git only; noDB/native/processprobe/Engine/Client/build/test/world/source/Library/automation/children"
+}
