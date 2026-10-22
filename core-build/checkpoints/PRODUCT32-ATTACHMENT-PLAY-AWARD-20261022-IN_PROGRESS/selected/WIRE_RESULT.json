@@ -1,0 +1,125 @@
+{
+  "status": "PASS_INSTALLED32_PARSER_ONLY",
+  "checks": [
+    {
+      "name": "contest.begin",
+      "valid": true
+    },
+    {
+      "name": "contest.begin-actor",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-winner",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-amount",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-effects",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-positive_inputs",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-encounter_id",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-binding",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-_exhibition",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-badid-old-canonical",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-badid-True",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-badid-{}",
+      "valid": false
+    },
+    {
+      "name": "contest.begin-badid-None",
+      "valid": false
+    },
+    {
+      "name": "contest.settle",
+      "valid": true
+    },
+    {
+      "name": "contest.settle-actor",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-winner",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-amount",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-effects",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-positive_inputs",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-encounter_id",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-binding",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-_exhibition",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-badid-old-canonical",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-badid-True",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-badid-{}",
+      "valid": false
+    },
+    {
+      "name": "contest.settle-badid-None",
+      "valid": false
+    },
+    {
+      "name": "begin-missing-activity",
+      "valid": false
+    },
+    {
+      "name": "begin-boolean-activity",
+      "valid": false
+    },
+    {
+      "name": "settle-injected-activity",
+      "valid": false
+    }
+  ],
+  "all_old_schema_JSON_exact_except_two_additions": true,
+  "blocked_effect_attempts": [],
+  "worlds": 0,
+  "installed": true
+}

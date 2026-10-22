@@ -1,0 +1,14 @@
+{
+  "bytes": 6225032,
+  "sha256": "4a384087c7fb2ac04cd694e428900a26747dee065628a6a08a249f03e58c061a",
+  "source_entries": 235,
+  "ZIP_members": 236,
+  "complete_world_trees": 3,
+  "allCRC_SHA_modes_sourcebeforeafter": true,
+  "original_failed_world_all_entries_unchanged_since_copy": true,
+  "actual_existingOwnerlocks": 3,
+  "DB_opened_by_capture": false,
+  "no_globalFDabsence_claim": true,
+  "all_originals_retained": true,
+  "negative_harness_original_not_relabelled_PASS": true
+}

@@ -1,0 +1,6 @@
+{
+  "first_failure": "builder env31 lacks setuptools.build_meta; no wheel/world/env32 was created",
+  "source42_beforeafter_equal": true,
+  "repair": "use observed primary Python setuptools84.0.0/wheel0.48.0; no source/assertion change",
+  "original_script_and_log_preserved": true
+}

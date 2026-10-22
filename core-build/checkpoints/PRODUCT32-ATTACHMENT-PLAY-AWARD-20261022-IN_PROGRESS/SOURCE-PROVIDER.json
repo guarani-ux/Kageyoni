@@ -1,0 +1,13 @@
+{
+  "status": "IMMUTABLE_PRODUCT32_BOUNDED_ATTACHMENT_PLAY_NATIVE_AWARD_CRITICAL_PROVIDER",
+  "repository": "guarani-ux/SAMSARA",
+  "commit": "312247057a54ba09363e8cc4b3f0a7827c528a8b",
+  "checkpoint": "core-build/checkpoints/PRODUCT32-ATTACHMENT-PLAY-AWARD-20261022-IN_PROGRESS",
+  "recipe": "critical-recipe.json",
+  "reconstruct": "reconstruct.py",
+  "bytes": 1723480,
+  "filename": "Product32_Attachment_Play_Award_Critical_IN_PROGRESS.zip",
+  "sha256": "82b42be9f8b3d5537db222a219789123315b9561af43a912de305915831fa02d",
+  "zip_entries": 161,
+  "scope": "Installed32/native18 bounded attachment/SCRIPTED play/nativeaward/currentwithdrawal preparation only. OriginalnegativeharnessFAIL retained, notoneclean suite. No helperrepair/season/fullF3/human/independentAIentrant/currentdualSIGKILL. Source33excluded; bodycustodypending."
+}

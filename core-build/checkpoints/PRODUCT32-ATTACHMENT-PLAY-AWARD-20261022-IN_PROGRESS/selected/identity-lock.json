@@ -1,0 +1,1484 @@
+{
+  "runtime": "84cc8c4c9e1d511a5aba7d724296c205a1b8eea8c48612b065a3e82035bd9a4b",
+  "versions": {
+    "samsara-world": "0.5.3.dev32",
+    "kageyoni-engine": "11.1.0.dev18"
+  },
+  "wheel_sha256": {
+    "product": "d5b9e10bf58aa5cbe2017a22dc42730564b76d68b7c3c25626a165d89fa5ac64",
+    "engine": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626"
+  },
+  "payloads": [
+    {
+      "path": "samsara/__init__.py",
+      "bytes": 105,
+      "sha256": "fd5b100bdf9428ae9cf6c7d1c9981fbd11f4d63827f2f156e58c7a152877ee63"
+    },
+    {
+      "path": "samsara/__main__.py",
+      "bytes": 29,
+      "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+    },
+    {
+      "path": "samsara/application.py",
+      "bytes": 76200,
+      "sha256": "970035145535a4925fb4d3035122d4787a20da1afe1f15222b6de7be92dc4963"
+    },
+    {
+      "path": "samsara/atlas.py",
+      "bytes": 20907,
+      "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b"
+    },
+    {
+      "path": "samsara/causality.py",
+      "bytes": 13613,
+      "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95"
+    },
+    {
+      "path": "samsara/cli.py",
+      "bytes": 9443,
+      "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd"
+    },
+    {
+      "path": "samsara/client.py",
+      "bytes": 19442,
+      "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040"
+    },
+    {
+      "path": "samsara/compatibility.py",
+      "bytes": 30288,
+      "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71"
+    },
+    {
+      "path": "samsara/console.py",
+      "bytes": 15603,
+      "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7"
+    },
+    {
+      "path": "samsara/content.py",
+      "bytes": 26324,
+      "sha256": "54bec339f5dc07291fb0bf09190dbb7ca347b352906c8bc2e0d1a33313ff77e0"
+    },
+    {
+      "path": "samsara/contentsets.py",
+      "bytes": 39135,
+      "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5"
+    },
+    {
+      "path": "samsara/equipment.py",
+      "bytes": 10788,
+      "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72"
+    },
+    {
+      "path": "samsara/exhibition_admission.py",
+      "bytes": 7158,
+      "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55"
+    },
+    {
+      "path": "samsara/exhibition_profiles.py",
+      "bytes": 29499,
+      "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc"
+    },
+    {
+      "path": "samsara/exhibitions.py",
+      "bytes": 25671,
+      "sha256": "72e724bb944016c0c23344c0f5a73483cb9d7c684e9110ef02a321e6a9e78833"
+    },
+    {
+      "path": "samsara/exploration.py",
+      "bytes": 10177,
+      "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96"
+    },
+    {
+      "path": "samsara/extensions.py",
+      "bytes": 16151,
+      "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca"
+    },
+    {
+      "path": "samsara/handlers.py",
+      "bytes": 11477,
+      "sha256": "a4f1990c39b5e196d5c60b47eea1482122a541659c83eb02b1891a6ec6837171"
+    },
+    {
+      "path": "samsara/intake.py",
+      "bytes": 10721,
+      "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297"
+    },
+    {
+      "path": "samsara/local_worker.py",
+      "bytes": 13009,
+      "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730"
+    },
+    {
+      "path": "samsara/mediawork.py",
+      "bytes": 20871,
+      "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e"
+    },
+    {
+      "path": "samsara/owner.py",
+      "bytes": 19337,
+      "sha256": "74e405d8e230b412ebf65d02fa7a94f770da1802a01d67385353268a22b52145"
+    },
+    {
+      "path": "samsara/practice.py",
+      "bytes": 25686,
+      "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444"
+    },
+    {
+      "path": "samsara/practice_content.py",
+      "bytes": 21975,
+      "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4"
+    },
+    {
+      "path": "samsara/process_custody.py",
+      "bytes": 12747,
+      "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+    },
+    {
+      "path": "samsara/properties.py",
+      "bytes": 37343,
+      "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883"
+    },
+    {
+      "path": "samsara/protocol.py",
+      "bytes": 4039,
+      "sha256": "5ed8767fd5135d96f45479446a2f986a20f08c7cc7704473ba48decb06285163"
+    },
+    {
+      "path": "samsara/runner.py",
+      "bytes": 51926,
+      "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832"
+    },
+    {
+      "path": "samsara/situation.py",
+      "bytes": 18184,
+      "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9"
+    },
+    {
+      "path": "samsara/sourcework.py",
+      "bytes": 16934,
+      "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa"
+    },
+    {
+      "path": "samsara/terminal.py",
+      "bytes": 2534,
+      "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800"
+    },
+    {
+      "path": "samsara/travel_content.py",
+      "bytes": 17730,
+      "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6"
+    },
+    {
+      "path": "samsara/data/compatibility-policy-ps1.json",
+      "bytes": 143222,
+      "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9"
+    },
+    {
+      "path": "samsara/data/compatibility-policy-r07a.json",
+      "bytes": 55805,
+      "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845"
+    },
+    {
+      "path": "samsara/data/compatibility-policy-r07b.json",
+      "bytes": 113651,
+      "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb"
+    },
+    {
+      "path": "samsara/data/compatibility-policy.json",
+      "bytes": 172418,
+      "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a"
+    },
+    {
+      "path": "samsara/data/contract.json",
+      "bytes": 125224,
+      "sha256": "ba64c6822b1c06ea86e074203d5d91c8f1bfa12afcae6d6266550bd0d311e916"
+    },
+    {
+      "path": "samsara/data/engine-lock.json",
+      "bytes": 535,
+      "sha256": "5de62427f9f4d77e9ea325733a6167155d5cbcf9a4790ecb62eec15debf00887"
+    },
+    {
+      "path": "samsara/data/initial-source.md",
+      "bytes": 572,
+      "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+    },
+    {
+      "path": "samsara/data/work-record.json",
+      "bytes": 979,
+      "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de"
+    },
+    {
+      "path": "contracts/epistemic_ledger.py",
+      "bytes": 6862,
+      "sha256": "4dba1e35e3eb3e97b4aee08e88db86e1ebeb8fa3ac3f4fbce4c37255a5e0fcba"
+    },
+    {
+      "path": "contracts/production_gates.py",
+      "bytes": 15431,
+      "sha256": "52836ca69b680f2a19719e7ddb30f74ca07df70f0fcbb1a781e42a1a96b90b6c"
+    },
+    {
+      "path": "kageyoni/__init__.py",
+      "bytes": 198,
+      "sha256": "959f37fbb90744dd0c949056c9781189addc4015066c1de28f7d67cb717ed98b"
+    },
+    {
+      "path": "kageyoni/__main__.py",
+      "bytes": 13877,
+      "sha256": "3747b46484c024f4aaea380b302cc0d0477dd23320e14843899a16b503dd48d2"
+    },
+    {
+      "path": "kageyoni/agency_workflows.py",
+      "bytes": 29699,
+      "sha256": "71a0153d32c66c0308fae555a547face2f4d14e1704c239734a94de4f200ad68"
+    },
+    {
+      "path": "kageyoni/application.py",
+      "bytes": 4702,
+      "sha256": "10f884441c7b8ba96ef8a540508e931825e8884164a4adca78f193d9b34c7e38"
+    },
+    {
+      "path": "kageyoni/celestial.py",
+      "bytes": 4429,
+      "sha256": "c64cc52270db494ba3fe7c0b4a9eeca464ac2a29a800981819e536639bd72b87"
+    },
+    {
+      "path": "kageyoni/characters.py",
+      "bytes": 17361,
+      "sha256": "13e7870ee7ce74ebe4cecbc7769d534ee71b5adb8c41572acb42072102aebd56"
+    },
+    {
+      "path": "kageyoni/checkpoint.py",
+      "bytes": 2126,
+      "sha256": "11f9aa4d645795ee4bc552e254159f539614097d60e19c77ab7dfc4179f71210"
+    },
+    {
+      "path": "kageyoni/coliseum.py",
+      "bytes": 5914,
+      "sha256": "7b6e2d80c888328fc2b90ad90364e9d227bce0f23867ce3e1a4b474a5637e293"
+    },
+    {
+      "path": "kageyoni/console.py",
+      "bytes": 5814,
+      "sha256": "1ffcfe57a322f2a5042442423b332dd6ba4342d288195a2763a72ce514a20568"
+    },
+    {
+      "path": "kageyoni/constellation.py",
+      "bytes": 12221,
+      "sha256": "0131519f5e6e85561a36200113e2bd5d8ef38f49737c360ee5498c4c03d72dd2"
+    },
+    {
+      "path": "kageyoni/contests.py",
+      "bytes": 58103,
+      "sha256": "d4e3f97f64873731e0ebbfc7d0221bdcfe61faef3ec2311051cee65f2eb7b293"
+    },
+    {
+      "path": "kageyoni/decisions.py",
+      "bytes": 27286,
+      "sha256": "d3cc11345beec13c9fd17bcd6b0882bdd48e53d351ce9b62ff53f90cb1f812c4"
+    },
+    {
+      "path": "kageyoni/engine.py",
+      "bytes": 203575,
+      "sha256": "aee4844c9ad4aa812f90cda232f2824fe262c1ae9fb622794bc73ebdabd89283"
+    },
+    {
+      "path": "kageyoni/gate.py",
+      "bytes": 5828,
+      "sha256": "7c3cd950c80fd042e3017db44e95ea125a27541fe5fb1404585a4d7ab9a17844"
+    },
+    {
+      "path": "kageyoni/gate_runner.py",
+      "bytes": 7767,
+      "sha256": "567f7fc7f029a42c74d216352e56cb1aa62f8a94185db308ce8fbdcc8ecbbd02"
+    },
+    {
+      "path": "kageyoni/gateway.py",
+      "bytes": 30864,
+      "sha256": "8540d7c4a8e5abebb0337bc1ef2c812328defcafbb98c4b0420a5f631c4d5465"
+    },
+    {
+      "path": "kageyoni/graph.py",
+      "bytes": 15060,
+      "sha256": "e1018cf70f723a2245638ec6473983c2d9f44f871d0f2fe053a579ef788dad1d"
+    },
+    {
+      "path": "kageyoni/ledger.py",
+      "bytes": 7839,
+      "sha256": "3d448bd0892054c6eafb147611fdbd0d18da6d502e8b29454243fcfea4d139c7"
+    },
+    {
+      "path": "kageyoni/magnet_delta.py",
+      "bytes": 7313,
+      "sha256": "fac98b6f8a81faa53a4486129ec5b4f51cf5a2c7d42a2ddee9cf434167f837f3"
+    },
+    {
+      "path": "kageyoni/migrate.py",
+      "bytes": 6049,
+      "sha256": "644924a723758c8a5f59cf079fbf2e01654bee6ff971d4f1a54cb9fdf7bd4fc0"
+    },
+    {
+      "path": "kageyoni/model.py",
+      "bytes": 26409,
+      "sha256": "9bda61e673a2148765096971312bf778af735cf99effda5ed63b84b613aacb61"
+    },
+    {
+      "path": "kageyoni/operations.py",
+      "bytes": 20426,
+      "sha256": "de8229c4bb72891f5384615eb65547cb37f78456aed9de1d675aa2c91f55ba66"
+    },
+    {
+      "path": "kageyoni/participant_kernel.py",
+      "bytes": 15730,
+      "sha256": "805ef1717de585b09706f63dde3a2fe17c849b8e93110de819b009dbb5715f8f"
+    },
+    {
+      "path": "kageyoni/personality.py",
+      "bytes": 32525,
+      "sha256": "17c5facdd81943ce8257b89c4ebf31b6a91549421eb435830f6eb8d4d72af897"
+    },
+    {
+      "path": "kageyoni/resources.py",
+      "bytes": 1491,
+      "sha256": "dbeb8d45dbb5ab875bb07ab842fb4b17769781f67c301472742e25ad57f07a8b"
+    },
+    {
+      "path": "kageyoni/scout.py",
+      "bytes": 7329,
+      "sha256": "8929ffc885cbc3e7a337d85848bb4f6a8f1391eca1493473452010eb443ae638"
+    },
+    {
+      "path": "kageyoni/seed.py",
+      "bytes": 14196,
+      "sha256": "0e96f49a27a86d952c6bfa459279b8b7cb63937e0600f8224c1f81df2ac90df5"
+    },
+    {
+      "path": "kageyoni/will.py",
+      "bytes": 23910,
+      "sha256": "be7027d3ae81b06b81807a302240c12b808fa4bc11c039d6f9d59daf1c07f52e"
+    },
+    {
+      "path": "kageyoni/workflows.py",
+      "bytes": 16052,
+      "sha256": "a0a7f7eea5c68466f95e362f17d221a17bf19e3a50c0a3a46c2bc8ff9309938a"
+    },
+    {
+      "path": "kageyoni/writing.py",
+      "bytes": 17234,
+      "sha256": "2258d4f0cc442671859c5b1da479f991d35412f7491297e46fca89977a59be97"
+    },
+    {
+      "path": "kageyoni/composition/__init__.py",
+      "bytes": 750,
+      "sha256": "45918ae354ce804d1046c907c2ee4baf27140ba15bdbefb17bbfd9ed35458ecc"
+    },
+    {
+      "path": "kageyoni/composition/adapter.py",
+      "bytes": 5993,
+      "sha256": "04205490812a3b91ecb32241d55b811ab0082b3213b387d9c52e4372010d6252"
+    },
+    {
+      "path": "kageyoni/composition/compiler.py",
+      "bytes": 18591,
+      "sha256": "ee965f241d481ab4fc8779147144157d37df2948cf4e86bf892b0c75dcf9252a"
+    },
+    {
+      "path": "kageyoni/composition/deficits.py",
+      "bytes": 2342,
+      "sha256": "c86b2ca8224171b82b4b9c9d2bc31aec7618e4c6ca009fe42a157070926e1853"
+    },
+    {
+      "path": "kageyoni/composition/effects.py",
+      "bytes": 7472,
+      "sha256": "cf6cb9b5b711a751e935c6d36f5d2a3831a952b6509eaf41bf127d25ebebcfe8"
+    },
+    {
+      "path": "kageyoni/composition/explanation.py",
+      "bytes": 2151,
+      "sha256": "631efa0ed5bd3a54862dec2005f8c8b1dfd56a6a771f4af7d94dc6abcf30e1e6"
+    },
+    {
+      "path": "kageyoni/composition/gates.py",
+      "bytes": 3484,
+      "sha256": "cb6593b8309ecbbf941fe48f127b41a945a8d50312fdbd8fda0b1cf24eb63c39"
+    },
+    {
+      "path": "kageyoni/composition/governor.py",
+      "bytes": 5800,
+      "sha256": "0a74d2cac1ee6064e936f0f1844fc4e3e7cd987aa38b2f0c358a4f1ca43da6f7"
+    },
+    {
+      "path": "kageyoni/composition/knowledge.py",
+      "bytes": 5141,
+      "sha256": "6de313bf527b50d6f63afbeb806ccfba54dafcfbf959019ac773e9fb6e45b94c"
+    },
+    {
+      "path": "kageyoni/composition/registry.py",
+      "bytes": 9669,
+      "sha256": "de75357b45192ca37407b34efcaa9f431d88a7fb6a6164ec43956dea11337405"
+    },
+    {
+      "path": "kageyoni/composition/service.py",
+      "bytes": 6984,
+      "sha256": "527bf32b3e776ad59947336c4976da7273a4a08084a1322cfda9279830f1a978"
+    },
+    {
+      "path": "kageyoni/composition/data/aspect_types.json",
+      "bytes": 31249,
+      "sha256": "63ed8e2d175366fae096e715454494dce87bd4ff901fe5767b88171112dc36fc"
+    },
+    {
+      "path": "kageyoni/composition/data/content_development.json",
+      "bytes": 3456,
+      "sha256": "2b9bfdf5286d5a0c70d1620dd421665730c43c4a36f40ad2821ae207a38c76b9"
+    },
+    {
+      "path": "kageyoni/composition/data/narrative_scene.json",
+      "bytes": 4173,
+      "sha256": "f7e6c51b1b812c4f20ed53ddaf1e002d63378fa136b4460d484b6df2ab6e06b2"
+    },
+    {
+      "path": "kageyoni/data/migration_002.sql",
+      "bytes": 3565,
+      "sha256": "a5442cd0616e46547fc00b7168c010629e7a889f616e93e46e89f59a26f2aa9b"
+    },
+    {
+      "path": "kageyoni/data/migration_003.sql",
+      "bytes": 6602,
+      "sha256": "bea3bd624745b39c94f589f0fa49944c8c11d80b1e822a796125ca62534dedac"
+    },
+    {
+      "path": "kageyoni/data/migration_004.sql",
+      "bytes": 5238,
+      "sha256": "8f20d2759a765f8c35556e527df982481db4292571e96a1189046347bdcfcc64"
+    },
+    {
+      "path": "kageyoni/data/migration_005.sql",
+      "bytes": 3910,
+      "sha256": "c9caa8dde7379caa38927b4125a0c732e3688447ae0d1204fe8a19f11692ae32"
+    },
+    {
+      "path": "kageyoni/data/migration_006.sql",
+      "bytes": 470,
+      "sha256": "43d505460110945cb96233ebeb21051e6e4070e95e8dac45cf929f29431ba4b8"
+    },
+    {
+      "path": "kageyoni/data/migration_007.sql",
+      "bytes": 3512,
+      "sha256": "43e8706e91d67ecd7349e847cc8beabdc0775265f43819e220879a881063cd7d"
+    },
+    {
+      "path": "kageyoni/data/migration_008.sql",
+      "bytes": 1507,
+      "sha256": "042ac97d44a494358ecacc382541ecf1c485001bd497ab93ba903966697e21e3"
+    },
+    {
+      "path": "kageyoni/data/migration_009.sql",
+      "bytes": 1461,
+      "sha256": "6e916198798a08bc62e41233be10e571b532b6d7eea5f52d038a30ede1c37074"
+    },
+    {
+      "path": "kageyoni/data/migration_010.sql",
+      "bytes": 3387,
+      "sha256": "fae161634775e261a0da650a8984c830c321307e99cfe3a5b5351d9880170f6a"
+    },
+    {
+      "path": "kageyoni/data/migration_011.sql",
+      "bytes": 929,
+      "sha256": "e4d543cf739396e217e7b0657854ea20c06fb0e9873dfb973904ec5828604f8c"
+    },
+    {
+      "path": "kageyoni/data/migration_012.sql",
+      "bytes": 4118,
+      "sha256": "681b27fa90de7c42c668a9ebd4b288ed51ac81b4feec095362d4fe9d1955e914"
+    },
+    {
+      "path": "kageyoni/data/migration_013.sql",
+      "bytes": 2750,
+      "sha256": "431b734af855058eec1576b74053155130dc9f2b6df04acaff58789e80baeb4a"
+    },
+    {
+      "path": "kageyoni/data/migration_014.sql",
+      "bytes": 3090,
+      "sha256": "5b54eb4a84d84bf15764308f03403aae58aefe02778cd7c61eda39d191a68fe8"
+    },
+    {
+      "path": "kageyoni/data/migration_015.sql",
+      "bytes": 2374,
+      "sha256": "8e39a9999b31f6b9cfe876411f1db38e184e64f4dc30c569a3f1d33b4f2d450d"
+    },
+    {
+      "path": "kageyoni/data/migration_016.sql",
+      "bytes": 1075,
+      "sha256": "267743fa93e5757e28d82e80c89e8952f7d9a4eb161776f3168f158b85a5de54"
+    },
+    {
+      "path": "kageyoni/data/migration_017.sql",
+      "bytes": 658,
+      "sha256": "e125ee0f074e8e7a9f9cb9f5077cb3e915c1dfe7b2ef9fbed7c67a0d050a5f8f"
+    },
+    {
+      "path": "kageyoni/data/migration_018.sql",
+      "bytes": 2740,
+      "sha256": "538e30ad6f817f599b5b68912d27157fcad6c0f9eb7f7467061c89408f47b216"
+    },
+    {
+      "path": "kageyoni/data/migration_019.sql",
+      "bytes": 2072,
+      "sha256": "3e1dedafcce9f794791c4f9d3f48b00c76aa84a28705f62a84852fe872ddb4e6"
+    },
+    {
+      "path": "kageyoni/data/migration_020.sql",
+      "bytes": 1170,
+      "sha256": "6ba2d95c2a0e1d2b0521e0a9022979a7cd80f548264dd2db26c599743e86cb5f"
+    },
+    {
+      "path": "kageyoni/data/migration_021.sql",
+      "bytes": 1020,
+      "sha256": "ebb8409cfd566a47b52b5772d21f9dca6293b79440bce334b495bb3d0c7f58a3"
+    },
+    {
+      "path": "kageyoni/data/migration_022.sql",
+      "bytes": 1728,
+      "sha256": "b501ba3a65e279b0917ba0a4b454433a8b25a855bfd022f4319170a1946bf7f0"
+    },
+    {
+      "path": "kageyoni/data/migration_023.sql",
+      "bytes": 470,
+      "sha256": "9bb9419c5f1d0e5050b77a5faa613d98e74467991d8d079fd186f3f2fdd5bd3e"
+    },
+    {
+      "path": "kageyoni/data/migration_024.sql",
+      "bytes": 3504,
+      "sha256": "5c2265517dd7432e99f6a8ac7f49dc74f4c8cf6b6a3b32e0f45801f1e77ec840"
+    },
+    {
+      "path": "kageyoni/data/migration_025.sql",
+      "bytes": 1049,
+      "sha256": "e95bdff174f0edaaa3f7afdfb0bb0085dff7970eb388c56fd5302ef1c23e3f81"
+    },
+    {
+      "path": "kageyoni/data/migration_026.sql",
+      "bytes": 4295,
+      "sha256": "223d4a36d6e9daf5c3913ce5acc1f52b5396befe3aacc38a58d51c7a4aa025a8"
+    },
+    {
+      "path": "kageyoni/data/migration_027.sql",
+      "bytes": 1892,
+      "sha256": "9ccd16d52214f0fcd3152c3289b34ea66f9be49039227a4eb4113dae85d9b798"
+    },
+    {
+      "path": "kageyoni/data/migration_028.sql",
+      "bytes": 3212,
+      "sha256": "5b827d032e966a675a414ef891a947fe05796c615c43c53f1cd6bd6989ac7c48"
+    },
+    {
+      "path": "kageyoni/data/migration_029.sql",
+      "bytes": 1572,
+      "sha256": "cb56fa6c1acbd9d86d1161db797e0d8acc67fd90d83928e8c1c90e05b8aa218c"
+    },
+    {
+      "path": "kageyoni/data/migration_030.sql",
+      "bytes": 1754,
+      "sha256": "9ddf4b4d944fc8fa19c12d6f8176cfc478b648dae238c7daa135cde2ba1d0296"
+    },
+    {
+      "path": "kageyoni/data/migration_031.sql",
+      "bytes": 1540,
+      "sha256": "d95644e14f3cc2539ca3cffd764dd4ca7e75bc8785fe658872ca43b4f8694596"
+    },
+    {
+      "path": "kageyoni/data/migration_032.sql",
+      "bytes": 791,
+      "sha256": "9ceec455837f4667fa30fb5730e36773a9eea95bf5590c714b1ba60bb1753e1b"
+    },
+    {
+      "path": "kageyoni/data/migration_033.sql",
+      "bytes": 3612,
+      "sha256": "ae7c588d694dbd2aa67a3b862277ab5badd483b7bf02a224070034a0a3dd67f0"
+    },
+    {
+      "path": "kageyoni/data/migration_034.sql",
+      "bytes": 3299,
+      "sha256": "d12bc9056d563d094cb0b5722fe5704647ced909a11c8e04427f04133d1291b1"
+    },
+    {
+      "path": "kageyoni/data/migration_035.sql",
+      "bytes": 4609,
+      "sha256": "96e00ccde50e4405a8cc88f18513a331dda42f658493daa60ede1fb6f9db564a"
+    },
+    {
+      "path": "kageyoni/data/schema.sql",
+      "bytes": 42066,
+      "sha256": "fa48e230a50c4fee9621d01b3d5f1f0c29d05f51df00593e0c63260e8f9e21eb"
+    },
+    {
+      "path": "kageyoni/developmental/__init__.py",
+      "bytes": 3764,
+      "sha256": "b3de425539310875b79bac1e6fb9ed268a693216444f6121a99458f4b8197599"
+    },
+    {
+      "path": "kageyoni/developmental/agent.py",
+      "bytes": 34277,
+      "sha256": "d7de89aa6761c6ab3a3cc4087ac1d24f32c72e1e2a5d6904dd7b783369bbbf7e"
+    },
+    {
+      "path": "kageyoni/developmental/apex.py",
+      "bytes": 36115,
+      "sha256": "eb2ccd3f027cf2316ab355fd81f69417397a0568c48a82bd8437b73f28ab562e"
+    },
+    {
+      "path": "kageyoni/developmental/closure.py",
+      "bytes": 51280,
+      "sha256": "ee72a00d79cf1884f21f0b195f2e2457f7c9a2a9b0047823226fea499ff14806"
+    },
+    {
+      "path": "kageyoni/developmental/compounding_agent.py",
+      "bytes": 10464,
+      "sha256": "78815839609883c676e7635c98d623e55d861cf7577e0f1763ef20666ff7c8d6"
+    },
+    {
+      "path": "kageyoni/developmental/contracts.py",
+      "bytes": 40080,
+      "sha256": "69b0ec67e84e751213e2245caff748642133f3431e48043305c6f6d2cdd494b8"
+    },
+    {
+      "path": "kageyoni/developmental/forge.py",
+      "bytes": 11080,
+      "sha256": "fc0823b2fcc33ec1e5ebd34f8397dc89c5eb954dacfce78b6c56d60356de64e7"
+    },
+    {
+      "path": "kageyoni/developmental/symbiogenesis.py",
+      "bytes": 25879,
+      "sha256": "e1b3e7905e702b1572d614f52cde79fa776ea41db1ed5923d900663dd4e183bd"
+    },
+    {
+      "path": "kageyoni/emergence/__init__.py",
+      "bytes": 1344,
+      "sha256": "97f59a667a881e9cbfe816cebaabe0ee48200240a17f4dfb09d8aea18653a49a"
+    },
+    {
+      "path": "kageyoni/emergence/action_dispatcher.py",
+      "bytes": 9369,
+      "sha256": "2052433e427edebe242494f058fe2ae5490a29aa90410870bcd06b3f86f76774"
+    },
+    {
+      "path": "kageyoni/emergence/affordances.py",
+      "bytes": 8801,
+      "sha256": "ee86941dfb4ddf52d3c379569ebf2f4aa6db6ca0f2d4e6327e0ab7780b56baea"
+    },
+    {
+      "path": "kageyoni/emergence/causal_encounter.py",
+      "bytes": 24782,
+      "sha256": "75b13efc7e3160f4a746025a2911d284951fa6f15fdaba31a67b4801d7d7626c"
+    },
+    {
+      "path": "kageyoni/emergence/cli.py",
+      "bytes": 18023,
+      "sha256": "d5ffdda7ec0873f5491c454ae95844d1bcb440a3953739f417898917d8dcb6b2"
+    },
+    {
+      "path": "kageyoni/emergence/cognition_trial.py",
+      "bytes": 10676,
+      "sha256": "d899e317024d9384703bd86ec5503ad9a766f5b1fc0009285cd9a921d01ec151"
+    },
+    {
+      "path": "kageyoni/emergence/dispatcher.py",
+      "bytes": 30495,
+      "sha256": "ef7978ab0ae1a97db0da469dc4a44e315f5011d5ce3b88c430f24986ce8c782d"
+    },
+    {
+      "path": "kageyoni/emergence/engine.py",
+      "bytes": 26948,
+      "sha256": "414bf71b9ba31380ae8bef12782959babf2d3651c152c962c49ab1e84fd3c02d"
+    },
+    {
+      "path": "kageyoni/emergence/evaluator.py",
+      "bytes": 7593,
+      "sha256": "31d96657289c719ae99f383f9bece04913c8c132064862f3c7c6823030e3f6b6"
+    },
+    {
+      "path": "kageyoni/emergence/hydration.py",
+      "bytes": 6374,
+      "sha256": "e7a6c74f0abbe69eacdbac47ea738b178a68493f8421a496458ded28c2f4be70"
+    },
+    {
+      "path": "kageyoni/emergence/models.py",
+      "bytes": 5552,
+      "sha256": "70341273bf0cb631c901a568a5e56d74f9ba9ce25021765036f9c9b12f7e5229"
+    },
+    {
+      "path": "kageyoni/emergence/preview.py",
+      "bytes": 8312,
+      "sha256": "b804da8e8d06d0bbd3473f99ddc0a3815738f51758886cbc139bc5f20de296d0"
+    },
+    {
+      "path": "kageyoni/emergence/store.py",
+      "bytes": 11002,
+      "sha256": "bf1627e68764ae8d8e90924860afd5e13dd7e247c2f9b338718a5c9975330b50"
+    },
+    {
+      "path": "kageyoni/emergence/technique.py",
+      "bytes": 5845,
+      "sha256": "f0a94f4b2e1f24cbfa51281eee931377c41c89c319e436d3ce395a2a097ae6bc"
+    },
+    {
+      "path": "kageyoni/emergence/workflow.py",
+      "bytes": 35594,
+      "sha256": "ec14eae8e66045c6287978c7e544829bc02ce0a325887a82bae5479d6aef6f13"
+    },
+    {
+      "path": "kageyoni/entity/__init__.py",
+      "bytes": 1427,
+      "sha256": "b0185bed773e94d637f6125c337084587714929ab7b34995c1d8dc1d6d6cb222"
+    },
+    {
+      "path": "kageyoni/entity/instance.py",
+      "bytes": 14864,
+      "sha256": "5ad4ebe3ad6270908de781578c65da74e38bf2fc6e94675b906203ce40faba6a"
+    },
+    {
+      "path": "kageyoni/entity/models.py",
+      "bytes": 12800,
+      "sha256": "a1a8d54eef57f1e276adb1cfcb04d697c7de365885d7b773d4b3e2a225cae054"
+    },
+    {
+      "path": "kageyoni/entity/specs.py",
+      "bytes": 10793,
+      "sha256": "ad4d1bb47f332c813800a481ddd9102c2a3ef4fc4663cfb7a57c94f92d0939e4"
+    },
+    {
+      "path": "kageyoni/entity/state.py",
+      "bytes": 16028,
+      "sha256": "d8b14a729074f64f3471ab1919ff5065731912e7656ca5b2df41fc8e65170198"
+    },
+    {
+      "path": "kageyoni/execution/__init__.py",
+      "bytes": 84,
+      "sha256": "9b889d8b121fb5956fcad58e52660f92db64e86253b23b2cc86cf1f3424a3edb"
+    },
+    {
+      "path": "kageyoni/execution/manual.py",
+      "bytes": 1243,
+      "sha256": "cbd6f70cab54588d5048d0552e9fa742cb53c02db381be3ac86b2325682f2695"
+    },
+    {
+      "path": "kageyoni/execution/operations.py",
+      "bytes": 10276,
+      "sha256": "c7bf4286ff67dd97674e4ea34f7997e912bd87406ea2b8cc2c00bea7e11fced6"
+    },
+    {
+      "path": "kageyoni/intelligence/__init__.py",
+      "bytes": 71,
+      "sha256": "eeb4b1dcbcb1801f287c385e18e601d3a7504ad2af6d93168a71f4785e84c965"
+    },
+    {
+      "path": "kageyoni/intelligence/contracts.py",
+      "bytes": 4184,
+      "sha256": "024be38f1abf32b9cc76732bd58cd5f92da795e5964caf315fc66069da6ef5b4"
+    },
+    {
+      "path": "kageyoni/intelligence/development.py",
+      "bytes": 8138,
+      "sha256": "ff82dd19ab3968f9e16f8a42e01037d86c0f67914fb95d18cdc1d71e263ed386"
+    },
+    {
+      "path": "kageyoni/intelligence/expression.py",
+      "bytes": 20370,
+      "sha256": "537b1e3ae7e99053e52f11bf102773a65a2189fb0214f7296464da5e380291ab"
+    },
+    {
+      "path": "kageyoni/intelligence/genesis.py",
+      "bytes": 12660,
+      "sha256": "f16ca1ec541f52ddcd987888c31f4d8fe7e67af8985e2bad736614ca10d11916"
+    },
+    {
+      "path": "kageyoni/intelligence/learning.py",
+      "bytes": 41666,
+      "sha256": "0f61f7c2ad969658b68c1253921f27b888fd72bf25dc57016ebce88a0b4e4e27"
+    },
+    {
+      "path": "kageyoni/intelligence/learning_contracts.py",
+      "bytes": 4753,
+      "sha256": "d17dfb4b682411a80dc7c05396729a9d203c1b63ceb9450976aa175beea59528"
+    },
+    {
+      "path": "kageyoni/intelligence/methods.py",
+      "bytes": 26574,
+      "sha256": "92bea48420f3bd2a1c80db1e22a8a75e44bbfd98d69f61efa30e735729e367be"
+    },
+    {
+      "path": "kageyoni/intelligence/network.py",
+      "bytes": 25304,
+      "sha256": "bc03d6970077520949c4e52ca06b7662f2f243927221b14974b16703c6b53342"
+    },
+    {
+      "path": "kageyoni/intelligence/nodes.py",
+      "bytes": 7425,
+      "sha256": "b713e58ef08c23b64f0d6ce10cc1c48f73f54fd22b74c811249f962568484fb2"
+    },
+    {
+      "path": "kageyoni/intelligence/transfer.py",
+      "bytes": 12710,
+      "sha256": "2ce3a18fc387561a8d40d4779b334aeb5c4c3ae24108832cb65247c46f8f9ed2"
+    },
+    {
+      "path": "kageyoni/nature/__init__.py",
+      "bytes": 3576,
+      "sha256": "23966c21f641d7539182740cc3a5bf2df4f0d96d3a543e9a38f45ef02a7c08f2"
+    },
+    {
+      "path": "kageyoni/nature/compounding.py",
+      "bytes": 7635,
+      "sha256": "f930c3144c3a6a15bc312090b93989d152c10c07ecf731d7d46667087d25dfe0"
+    },
+    {
+      "path": "kageyoni/nature/compression.py",
+      "bytes": 9337,
+      "sha256": "a9d9ac24e7eba0c58afbdc81bfff816338f044fd31bbf12bbdc5d7fd3b1cf206"
+    },
+    {
+      "path": "kageyoni/nature/continuity.py",
+      "bytes": 14323,
+      "sha256": "dc389f382831c05e2bedec0e371f742537a00b99b597b196d0cd217e24fcd73c"
+    },
+    {
+      "path": "kageyoni/nature/control.py",
+      "bytes": 12627,
+      "sha256": "0f277d306b13e0aad782632ef95fafa9cdfd658d836ce0def6ef1d1ed3bc32b9"
+    },
+    {
+      "path": "kageyoni/nature/core.py",
+      "bytes": 8031,
+      "sha256": "51a40aad02c5ab35c8cac09b969e06dbfafbec8cc443eaa7479ff8c26a7c049f"
+    },
+    {
+      "path": "kageyoni/nature/coupling.py",
+      "bytes": 11084,
+      "sha256": "35be4d02b2ee083c9f5af0c7b72aed63149cd84f776bb0be79f6d8fe9aface3f"
+    },
+    {
+      "path": "kageyoni/nature/expansion.py",
+      "bytes": 11541,
+      "sha256": "f88cf53d85f827995d83c879e2e9a0777503e09e2a8495a0b0a7c0009d959493"
+    },
+    {
+      "path": "kageyoni/nature/extraction.py",
+      "bytes": 12108,
+      "sha256": "88f767f687b8fc3cdd6b1be3047f2177e0983dc6fcbc0a99160544aa82eb3bc9"
+    },
+    {
+      "path": "kageyoni/nature/grounding.py",
+      "bytes": 9312,
+      "sha256": "548559345c8006a29199ef806f05050b3297c8ec994a320c89929d055e373a21"
+    },
+    {
+      "path": "kageyoni/nature/sovereign_incarnation.py",
+      "bytes": 16877,
+      "sha256": "127f79728c7a6707cddf3a2b2db72f4dc787bf159a00b7159286615d1d99012c"
+    },
+    {
+      "path": "kageyoni/nature/techniques.py",
+      "bytes": 9024,
+      "sha256": "7e6ac6929a2a60cf6ca385c1596f7da602afd92aa32742e53e32f6b81ed5b244"
+    },
+    {
+      "path": "kageyoni/persistence/__init__.py",
+      "bytes": 40,
+      "sha256": "b9b5a5913f0b91d43776b5f046a78da534a650307de7999eee88a7f99d7646da"
+    },
+    {
+      "path": "kageyoni/persistence/artifacts.py",
+      "bytes": 5692,
+      "sha256": "2eed677ee902e53ef9fe28dc327b98e98f33eb5c613637fb220aededa3dbdf57"
+    },
+    {
+      "path": "kageyoni/persistence/contributions.py",
+      "bytes": 9898,
+      "sha256": "a9322204b37cbe233d5099e59bb1716d3898b7cd51ea1fe135844bc707d86bba"
+    },
+    {
+      "path": "kageyoni/persistence/migration_034.py",
+      "bytes": 455,
+      "sha256": "d5fa61948202499cf749322ec8a61d2e6ced0fec6999c422d291f9082385076b"
+    },
+    {
+      "path": "kageyoni/persistence/migrations.py",
+      "bytes": 10106,
+      "sha256": "269e9503c159b0917cf3f366dc08a6ea9b2501f4995dc8f6e87b48dd7d4a4049"
+    },
+    {
+      "path": "kageyoni/persistence/unit_of_work.py",
+      "bytes": 1489,
+      "sha256": "bd33cdd102cc70c7f13988d19c9647f5e0bbfe46d7050f997060e4dc5943d531"
+    },
+    {
+      "path": "kageyoni/playable_world/__init__.py",
+      "bytes": 193,
+      "sha256": "54e06d03c6705ef451c8fdfa67dc9b02daee6dbc1aad3487fd3b79eba82f5ab8"
+    },
+    {
+      "path": "kageyoni/playable_world/kernel.py",
+      "bytes": 10899,
+      "sha256": "d479d9461492eda03a5da4b72047e9fffec4bb82a72762999e004b2d179b6c4b"
+    },
+    {
+      "path": "kageyoni/processes/__init__.py",
+      "bytes": 67,
+      "sha256": "58b2e037214d141be8e81702736aad10b7710d04af99b9747f3f1d57c03e9250"
+    },
+    {
+      "path": "kageyoni/processes/outcomes.py",
+      "bytes": 2245,
+      "sha256": "6ced51e091d58a7d7a455f1e3522eb3a75cadd5aad77a26b52a95224d7938d37"
+    },
+    {
+      "path": "kageyoni/research_compiler/__init__.py",
+      "bytes": 873,
+      "sha256": "505e2b9df84eca12b9e4673b303247aab4ac6bd6ced14c85c33c7a82689395b3"
+    },
+    {
+      "path": "kageyoni/research_compiler/adversarial.py",
+      "bytes": 5686,
+      "sha256": "081d94c4aed8d51e0c7b3c90d19882db7ed1f5ddaef8ffd7fd2e437c7c12dcee"
+    },
+    {
+      "path": "kageyoni/research_compiler/claims.py",
+      "bytes": 18483,
+      "sha256": "be66c1f04524334ce1347dac75197ed73b29246edb7c56e547a14f74237d6379"
+    },
+    {
+      "path": "kageyoni/research_compiler/invalidation_engine.py",
+      "bytes": 9240,
+      "sha256": "4659b839aa060953b0c9b12a5d947eb794b5c63df99c5a1f43fef1d7a5ff6e1d"
+    },
+    {
+      "path": "kageyoni/research_compiler/package_compiler.py",
+      "bytes": 7936,
+      "sha256": "dd0f52c84412dd5e8bf03b31f4426dfd158aeed0eb2edc211b58720da34f2fe8"
+    },
+    {
+      "path": "kageyoni/research_compiler/semantic_casting.py",
+      "bytes": 6092,
+      "sha256": "c7b6d5e503d07061c74f2204b9f65833b6af2f896ad2a82b4e1b4658c17ccb2c"
+    },
+    {
+      "path": "kageyoni/research_compiler/topic_modeler.py",
+      "bytes": 6795,
+      "sha256": "d56841a2ec2d56e8298190d0e76a25319b6decac2152a5e800e66a9f7cd6efa6"
+    },
+    {
+      "path": "kageyoni/research_compiler/treatment_generator.py",
+      "bytes": 13251,
+      "sha256": "36563c445bf34f8c2b14c212865d67a560e11f8aba2c936e02b82c33e4a44411"
+    },
+    {
+      "path": "kageyoni/situations/__init__.py",
+      "bytes": 327,
+      "sha256": "392578f86b718fe36ee099b7b02807628038e834ecd58df89ccb94c63a6c1bcf"
+    },
+    {
+      "path": "kageyoni/situations/catalog.py",
+      "bytes": 3595,
+      "sha256": "20ab3b5379e03d6c90ba964f069554a5e8c3e781a6ffabfafdab0ea324c5e474"
+    },
+    {
+      "path": "kageyoni/situations/comparative.py",
+      "bytes": 1008,
+      "sha256": "24792e5b1cc1230dc53a5ddb372f3b51c1543fad1ec266d1a9b58ff3185ae26a"
+    },
+    {
+      "path": "kageyoni/situations/comparative_runner.py",
+      "bytes": 2244,
+      "sha256": "e7fb31bb8dca1ba578843163e12d5666cb613f4e793be49ec8b18545c3dbf9d8"
+    },
+    {
+      "path": "kageyoni/situations/integration.py",
+      "bytes": 2918,
+      "sha256": "e9ed7cb17b834439b7b33169bff477841d5e79ce9f6a0576ce4444af472f208f"
+    },
+    {
+      "path": "kageyoni/situations/long_horizon.py",
+      "bytes": 4039,
+      "sha256": "76165c9860d4587de51d2af97c6afd1fab20041bd857590f6c1ea1cbc936af1f"
+    },
+    {
+      "path": "kageyoni/situations/memory.py",
+      "bytes": 6882,
+      "sha256": "7026e92b60c38a3266256a92ac9bdc892d1cf92f61f709fea252fd892d5b98f5"
+    },
+    {
+      "path": "kageyoni/situations/models.py",
+      "bytes": 1664,
+      "sha256": "b21564aaf48272a90f2a4d3f0c9e278071bbebf04e86f9a19b9aeeda6a9410f9"
+    },
+    {
+      "path": "kageyoni/situations/qualification.py",
+      "bytes": 1688,
+      "sha256": "7ef8b224cf25c0c23ffaa07733124855d5eb06d91204c6007b27d11435db5a29"
+    },
+    {
+      "path": "kageyoni/situations/runtime.py",
+      "bytes": 8615,
+      "sha256": "7bcfbc65b9643277e34a7e0bfbf2b4e76cdff55d90beef5a7171aaeee0ee52a6"
+    },
+    {
+      "path": "kageyoni/situations/scar.py",
+      "bytes": 3338,
+      "sha256": "c3400660c3126225b0c284653f7a87160c1e3bbf62d2cf0cbbbf245d43dccaa3"
+    },
+    {
+      "path": "kageyoni/situations/service.py",
+      "bytes": 5711,
+      "sha256": "484bcd261bda27f806f6128d7a9e93ea213d5491a53203b811397abb60c7afa6"
+    },
+    {
+      "path": "kageyoni/situations/storage.py",
+      "bytes": 4873,
+      "sha256": "408f54eaa7554961b0286003d9b2f3e042743f98d88a028dcd6285ec3fe3bc8e"
+    },
+    {
+      "path": "kageyoni/situations/studio.py",
+      "bytes": 2536,
+      "sha256": "3e6e81d7a1e65afdb80fd05c182dd4259602dd8676a99bcbc9492978f41555f6"
+    },
+    {
+      "path": "kageyoni/situations/v11_adapter.py",
+      "bytes": 1243,
+      "sha256": "42be706f212f4c2cbf8f1c920320da654caaea777d270cae5fddc72138efdc9d"
+    },
+    {
+      "path": "kageyoni/v11/__init__.py",
+      "bytes": 579,
+      "sha256": "25371fa1230d129852c962d8c45ae7a3d49ec3a1d295dab2098417dc2add43cb"
+    },
+    {
+      "path": "kageyoni/v11/adaptive.py",
+      "bytes": 9054,
+      "sha256": "caeaa34bcdd7c6035089a3e27f5a344880637a8474d882b30b60eb32b7c8bcca"
+    },
+    {
+      "path": "kageyoni/v11/context.py",
+      "bytes": 3547,
+      "sha256": "760af02d5b0ac93c7550fb46fcd24ca91137087545c6ce7a14b50bf9bd40ff4d"
+    },
+    {
+      "path": "kageyoni/v11/enforcement.py",
+      "bytes": 19018,
+      "sha256": "8381d447c57a75f1ce8a0328130c131f1541f5d8165095bed6b510ee1b7eebb4"
+    },
+    {
+      "path": "kageyoni/v11/frontier.py",
+      "bytes": 4876,
+      "sha256": "2b61b7ab33f5875924363e3d1b35b4f7396c442a30f9a462ce667dc155e7d2e9"
+    },
+    {
+      "path": "kageyoni/v11/integration.py",
+      "bytes": 3009,
+      "sha256": "74957ce5bf8c5650b53e8b5f48e83f6711fb0fb3580b47a359189f0f30917410"
+    },
+    {
+      "path": "kageyoni/v11/runtime.py",
+      "bytes": 12329,
+      "sha256": "35c55871cd26cbfe5c730df164561ca069f7ae5579916799faaa054eeddad05b"
+    },
+    {
+      "path": "kageyoni/vantage/__init__.py",
+      "bytes": 907,
+      "sha256": "6644c2c06d059b8b95231e18d8c2889cf54c23c89272638659f23bd04997cafc"
+    },
+    {
+      "path": "kageyoni/vantage/cli.py",
+      "bytes": 17494,
+      "sha256": "fce21192e3620184901b00c9f5db580d9be9cc5419b4ae302b4e6799381d47aa"
+    },
+    {
+      "path": "kageyoni/vantage/engine.py",
+      "bytes": 27218,
+      "sha256": "fbf14b3a5be99c40c1e741d1e708e0b3749702bb46bff6052056c0856efbe043"
+    },
+    {
+      "path": "kageyoni/vantage/graph.py",
+      "bytes": 12333,
+      "sha256": "e248587f8851c5e1a3915ba03ce2f540f96a6acf8759a6934a8f6fe19baa9eb9"
+    },
+    {
+      "path": "kageyoni/vantage/models.py",
+      "bytes": 14727,
+      "sha256": "60fb35bc5eba5cede66e794704b0d3af3debb15eb6ff8f2bbf586e62cbbf2176"
+    },
+    {
+      "path": "kageyoni/vantage/packaging.py",
+      "bytes": 10712,
+      "sha256": "c98bc5763f29e2bf1c050bc6c6c15104b9fe6b0d8e674f366e728a7480735bbd"
+    },
+    {
+      "path": "kageyoni/vantage/performance.py",
+      "bytes": 8016,
+      "sha256": "3663c5a1bd15991efde19f3331e06f53fa5bdcf4ceb06cc846496a3631839999"
+    },
+    {
+      "path": "kageyoni/vantage/production.py",
+      "bytes": 11922,
+      "sha256": "5b50030a3f68799a4e92f6a5251babaa06202ce04b39804dd5973588df1dc3d4"
+    },
+    {
+      "path": "kageyoni/vantage/proposal.py",
+      "bytes": 12324,
+      "sha256": "96b09ca8e275b8899ef8a23e5812a74af0c5956924355f3bedad261772825778"
+    },
+    {
+      "path": "kageyoni/vantage/qualification.py",
+      "bytes": 12075,
+      "sha256": "a94ee6976b5bdf6f22f4e3935d250b686fe809f9d4ab79f8de2c2d06161c0597"
+    },
+    {
+      "path": "kageyoni/vantage/rubric.py",
+      "bytes": 10393,
+      "sha256": "642a8a56aedcaa6b1bbd83dba3a2bedd79ed86375b3cecf0994f2a0e613d1a15"
+    },
+    {
+      "path": "kageyoni/workspaces/activities.py",
+      "bytes": 8826,
+      "sha256": "cc346edc3a75896491070b060b810c51a1a50c3b93490363f233deed378c40d0"
+    },
+    {
+      "path": "kageyoni/workspaces/causal_delivery.py",
+      "bytes": 1934,
+      "sha256": "bd017c2a51fd0edb6a686eaac2128738fa8d9ea6d670ace2d3baa3c805ccb629"
+    },
+    {
+      "path": "kageyoni/workspaces/contracts.py",
+      "bytes": 1389,
+      "sha256": "6fd1124befbe7a0ec9e2a144b69ecb374b4a6854867f51713f1849b59b74cca8"
+    },
+    {
+      "path": "kageyoni/workspaces/custody_schema.py",
+      "bytes": 12497,
+      "sha256": "2427bd87d9109dc43b79643e3e4214e06bcbe23816dbdd649783622ff8f2d9f4"
+    },
+    {
+      "path": "kageyoni/workspaces/documents.py",
+      "bytes": 20799,
+      "sha256": "3b9f43f925edb7c043f17ab5950e88329caaea935de27112191aabf7de162dae"
+    },
+    {
+      "path": "kageyoni/workspaces/extensions.py",
+      "bytes": 1971,
+      "sha256": "25e218aa9a38e25cbdc9ae09591091337003669e8b1edd495a68bc3c78cc72f9"
+    },
+    {
+      "path": "kageyoni/workspaces/job_queue.py",
+      "bytes": 17263,
+      "sha256": "186a8c930811a00d1dfa95ac4a8625f3a94a24d71f5c0169235aa0d41099df11"
+    },
+    {
+      "path": "kageyoni/workspaces/pipeline.py",
+      "bytes": 19655,
+      "sha256": "21feff616dd4ee46e745181c889d9354d22e87e84bb5a7f5c1fc4e8d628a6e24"
+    },
+    {
+      "path": "kageyoni/workspaces/property_changes.py",
+      "bytes": 4223,
+      "sha256": "1560ce31cc190725408ee7767ef577ad06075ef30ae095f72db6d58ba2044ef0"
+    },
+    {
+      "path": "kageyoni/workspaces/registry.py",
+      "bytes": 5589,
+      "sha256": "1afeeb0318e300f9cec018f28a078447b05591d257b139eb40d2aa0badec1df6"
+    },
+    {
+      "path": "kageyoni/workspaces/repository.py",
+      "bytes": 17930,
+      "sha256": "19eb29f307beb7aea89b948979ad388da859882008033464f22a265ea0ed7e44"
+    },
+    {
+      "path": "kageyoni/workspaces/resource_admission.py",
+      "bytes": 5307,
+      "sha256": "48c02fb37a588e56c4f0d13662648fb7e0238639274b78cad0cdf697637f75f6"
+    },
+    {
+      "path": "kageyoni/workspaces/resource_profiles.py",
+      "bytes": 7977,
+      "sha256": "55748676dcb97b18089847027ab55f431bc390512d8c05cf022d1e71c0d42b52"
+    },
+    {
+      "path": "kageyoni/workspaces/transitions.py",
+      "bytes": 3462,
+      "sha256": "9fbd18706dcd93fc62a39588430aa340a29c90a134f0ab801339c31f6d49750d"
+    },
+    {
+      "path": "kageyoni/workspaces/worker_custody.py",
+      "bytes": 22921,
+      "sha256": "73c561d90b415249a3374e7f79bb9b48660a22baaa0af0b11870bbbb1cdd4adc"
+    },
+    {
+      "path": "kageyoni/workspaces/worker_liveness.py",
+      "bytes": 25918,
+      "sha256": "4ebb4916ad048494e708d04547d4874d7ddb21281378b466aafb13283f449755"
+    },
+    {
+      "path": "kageyoni/workspaces/world.py",
+      "bytes": 46100,
+      "sha256": "562f82144b441fd2171450f795f8517dfc7ff3d96af64176518890802f05f4c0"
+    }
+  ],
+  "origins": [
+    {
+      "module": "kageyoni",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/__init__.py"
+    },
+    {
+      "module": "kageyoni.application",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/application.py"
+    },
+    {
+      "module": "kageyoni.characters",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/characters.py"
+    },
+    {
+      "module": "kageyoni.composition",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/composition/__init__.py"
+    },
+    {
+      "module": "kageyoni.composition.adapter",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/composition/adapter.py"
+    },
+    {
+      "module": "kageyoni.composition.compiler",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/composition/compiler.py"
+    },
+    {
+      "module": "kageyoni.composition.effects",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/composition/effects.py"
+    },
+    {
+      "module": "kageyoni.composition.gates",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/composition/gates.py"
+    },
+    {
+      "module": "kageyoni.composition.governor",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/composition/governor.py"
+    },
+    {
+      "module": "kageyoni.composition.knowledge",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/composition/knowledge.py"
+    },
+    {
+      "module": "kageyoni.composition.registry",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/composition/registry.py"
+    },
+    {
+      "module": "kageyoni.composition.service",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/composition/service.py"
+    },
+    {
+      "module": "kageyoni.constellation",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/constellation.py"
+    },
+    {
+      "module": "kageyoni.contests",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/contests.py"
+    },
+    {
+      "module": "kageyoni.emergence",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/emergence/__init__.py"
+    },
+    {
+      "module": "kageyoni.emergence.action_dispatcher",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/emergence/action_dispatcher.py"
+    },
+    {
+      "module": "kageyoni.emergence.affordances",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/emergence/affordances.py"
+    },
+    {
+      "module": "kageyoni.emergence.cli",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/emergence/cli.py"
+    },
+    {
+      "module": "kageyoni.emergence.dispatcher",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/emergence/dispatcher.py"
+    },
+    {
+      "module": "kageyoni.emergence.engine",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/emergence/engine.py"
+    },
+    {
+      "module": "kageyoni.emergence.models",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/emergence/models.py"
+    },
+    {
+      "module": "kageyoni.emergence.preview",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/emergence/preview.py"
+    },
+    {
+      "module": "kageyoni.emergence.store",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/emergence/store.py"
+    },
+    {
+      "module": "kageyoni.engine",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/engine.py"
+    },
+    {
+      "module": "kageyoni.gate",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/gate.py"
+    },
+    {
+      "module": "kageyoni.intelligence",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/intelligence/__init__.py"
+    },
+    {
+      "module": "kageyoni.intelligence.contracts",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/intelligence/contracts.py"
+    },
+    {
+      "module": "kageyoni.intelligence.nodes",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/intelligence/nodes.py"
+    },
+    {
+      "module": "kageyoni.ledger",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/ledger.py"
+    },
+    {
+      "module": "kageyoni.model",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/model.py"
+    },
+    {
+      "module": "kageyoni.persistence",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/persistence/__init__.py"
+    },
+    {
+      "module": "kageyoni.persistence.migrations",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/persistence/migrations.py"
+    },
+    {
+      "module": "kageyoni.persistence.unit_of_work",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/persistence/unit_of_work.py"
+    },
+    {
+      "module": "kageyoni.resources",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/resources.py"
+    },
+    {
+      "module": "kageyoni.will",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/will.py"
+    },
+    {
+      "module": "kageyoni.workflows",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/workflows.py"
+    },
+    {
+      "module": "kageyoni.workspaces",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/workspaces"
+    },
+    {
+      "module": "kageyoni.workspaces.resource_admission",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/workspaces/resource_admission.py"
+    },
+    {
+      "module": "kageyoni.workspaces.resource_profiles",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/workspaces/resource_profiles.py"
+    },
+    {
+      "module": "kageyoni.workspaces.world",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/workspaces/world.py"
+    },
+    {
+      "module": "kageyoni.writing",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/kageyoni/writing.py"
+    },
+    {
+      "module": "samsara",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/__init__.py"
+    },
+    {
+      "module": "samsara.application",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/application.py"
+    },
+    {
+      "module": "samsara.atlas",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/atlas.py"
+    },
+    {
+      "module": "samsara.causality",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/causality.py"
+    },
+    {
+      "module": "samsara.content",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/content.py"
+    },
+    {
+      "module": "samsara.contentsets",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/contentsets.py"
+    },
+    {
+      "module": "samsara.equipment",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/equipment.py"
+    },
+    {
+      "module": "samsara.exhibition_admission",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/exhibition_admission.py"
+    },
+    {
+      "module": "samsara.exhibition_profiles",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/exhibition_profiles.py"
+    },
+    {
+      "module": "samsara.exploration",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/exploration.py"
+    },
+    {
+      "module": "samsara.extensions",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/extensions.py"
+    },
+    {
+      "module": "samsara.handlers",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/handlers.py"
+    },
+    {
+      "module": "samsara.intake",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/intake.py"
+    },
+    {
+      "module": "samsara.mediawork",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/mediawork.py"
+    },
+    {
+      "module": "samsara.owner",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/owner.py"
+    },
+    {
+      "module": "samsara.practice",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/practice.py"
+    },
+    {
+      "module": "samsara.practice_content",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/practice_content.py"
+    },
+    {
+      "module": "samsara.properties",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/properties.py"
+    },
+    {
+      "module": "samsara.protocol",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/protocol.py"
+    },
+    {
+      "module": "samsara.situation",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/situation.py"
+    },
+    {
+      "module": "samsara.sourcework",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/sourcework.py"
+    },
+    {
+      "module": "samsara.travel_content",
+      "path": "/dev/shm/product32-build/env/lib/python3.12/site-packages/samsara/travel_content.py"
+    }
+  ],
+  "status": "ISOLATED_UNQUALIFIED_ADMISSION_BUILD",
+  "full_release": false
+}

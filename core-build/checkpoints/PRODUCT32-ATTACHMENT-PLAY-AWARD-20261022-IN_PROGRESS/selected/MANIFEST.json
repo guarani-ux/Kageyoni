@@ -1,0 +1,586 @@
+{
+  "BUILD_STATUS.json": {
+    "bytes": 641217,
+    "sha256": "560fab2cb3c8a7ea3a42e6b79b55f195a2513bbbe46a38645ea625bf8d18253f"
+  },
+  "CONTINUE.md": {
+    "bytes": 2619,
+    "sha256": "eedaf97fd62578d0b8db2159991e061b7578fadcae5fa1d9be22fb3765133674"
+  },
+  "Product32_Play_Award_Failure_Withdrawal_Raw.zip": {
+    "bytes": 6225032,
+    "sha256": "4a384087c7fb2ac04cd694e428900a26747dee065628a6a08a249f03e58c061a"
+  },
+  "RAW_CAPTURE.json": {
+    "bytes": 485,
+    "sha256": "9af5e477a0002c83464e91136728b4bea3298e5b675cdeccdf3c575ca75fa9a9"
+  },
+  "REPORT.json": {
+    "bytes": 52664,
+    "sha256": "04bc9052f270fdcff10cdd417210cbf66651f0cbcd318702cba9f52e667184b9"
+  },
+  "ROOT-CONTRACT.md": {
+    "bytes": 3442,
+    "sha256": "3c633c831f59788bf8ca1f3f1d0784ae193fc029e31fb7627f6f07d6b8a8e3bc"
+  },
+  "SOURCE_MANIFEST.json": {
+    "bytes": 5769,
+    "sha256": "68d956967e9268b378d0254cfc15186ed3deea66f608d10030bc05d511388eaf"
+  },
+  "STATUS-built-antecedent.json": {
+    "bytes": 280,
+    "sha256": "de72bd269907fd968ccba02b724dce01d77b23d1c8868b216b3c5402785adcfe"
+  },
+  "STATUS.json": {
+    "bytes": 1082,
+    "sha256": "1584e255e3a1147af0033ba28c2411357c6277dacdfb0866e0b1c364cf31821e"
+  },
+  "WIRE_RESULT.json": {
+    "bytes": 2373,
+    "sha256": "f7b65fbf6ae874ff08edcce99b89333bbb93b1d2800ba19f37ff455e12b6eddf"
+  },
+  "author_probe32.py": {
+    "bytes": 7105,
+    "sha256": "036b164a9541a9cb4f40c3ade007ec084cbb2241863c5bb370181a6a88780089"
+  },
+  "author_product32.py": {
+    "bytes": 13636,
+    "sha256": "5d3e5ad5cea3c75241f939736e7217b072d590f856044e2851e7566f0b114f6f"
+  },
+  "author_withdraw32.py": {
+    "bytes": 6401,
+    "sha256": "9775fd3e4275f5997a1ce8c29a33b50c30e96e3b6264735a00b6f25a17ce8813"
+  },
+  "author_withdraw32_following.py": {
+    "bytes": 4370,
+    "sha256": "17d3b7d7ed9e82f29701e747efad739a32e7d787834b3ca8fa700eb4419008a4"
+  },
+  "build-harness-repair.json": {
+    "bytes": 284,
+    "sha256": "c2b3b0b347b5a78a58c5c0255a113d22c2e96625b61c08135131b02934f06a01"
+  },
+  "build-product32.log": {
+    "bytes": 992,
+    "sha256": "955d97350b5ab263da72be86b2d0bebd07a7e999fc4b48757f2b1ffd97fae173"
+  },
+  "build-r2.log": {
+    "bytes": 708,
+    "sha256": "74f3fbc0c0ed3a69a01aff4e203ef817764060f72ed3031041092f3633eadb11"
+  },
+  "build.log": {
+    "bytes": 5045,
+    "sha256": "47ae5c16067daea42f4a1d70c51b7fa143ec7d0f268d25decbdd848b526957a3"
+  },
+  "build_product32.py": {
+    "bytes": 2993,
+    "sha256": "471ec4cc2d64950998c63d3e268470a10832ed35ca55769da57da43f2dc7909e"
+  },
+  "complete28-recovery-kit-local-receipt.json": {
+    "bytes": 2000,
+    "sha256": "0f6f250a044245ae7c80fce8800a060c5700db676a7a90bb2a176f4f5acde758"
+  },
+  "distributions/kageyoni_engine-11.1.0.dev18-py3-none-any.whl": {
+    "bytes": 624705,
+    "sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626"
+  },
+  "distributions/samsara_world-0.5.3.dev32-py3-none-any.whl": {
+    "bytes": 241114,
+    "sha256": "d5b9e10bf58aa5cbe2017a22dc42730564b76d68b7c3c25626a165d89fa5ac64"
+  },
+  "identity-lock.json": {
+    "bytes": 50238,
+    "sha256": "8b9b45cc9560670e0613f1e3e02f8691985d7b2e721c95d6cd571d5442edec45"
+  },
+  "install.log": {
+    "bytes": 3740,
+    "sha256": "d5dfd4c4d636f9d53dc373377322b25ecadbc5703f63439f5b51ed88c329e1ac"
+  },
+  "installed-proof.log": {
+    "bytes": 193,
+    "sha256": "41dfb51b26e739ad684c09ad258fc9649a9529aec7b27a0193090980495bd96a"
+  },
+  "installed_proof32.py": {
+    "bytes": 2766,
+    "sha256": "a7060946c38e5b723e0bb527c91fa751a3bea14e8b588e81ad0880e9d3faa21f"
+  },
+  "native18-canonical-source-manifest.json": {
+    "bytes": 111407,
+    "sha256": "2a391e08290fe554b97c597f491e6c1a875c7945827308e03a98079eba95ecf1"
+  },
+  "native18-paired-dependency-receipt.json": {
+    "bytes": 6541,
+    "sha256": "ed134b7a17780a1d134f15d5ba51fe6bb88100298ca26dacccdc5f49db2739e3"
+  },
+  "package/pyproject.toml": {
+    "bytes": 520,
+    "sha256": "cc409a0988c75421c3e1cf27165d56bc6a6bd7748d90f6cce3554b8af6793336"
+  },
+  "package/samsara/__init__.py": {
+    "bytes": 105,
+    "sha256": "fd5b100bdf9428ae9cf6c7d1c9981fbd11f4d63827f2f156e58c7a152877ee63"
+  },
+  "package/samsara/__main__.py": {
+    "bytes": 29,
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  "package/samsara/application.py": {
+    "bytes": 76200,
+    "sha256": "970035145535a4925fb4d3035122d4787a20da1afe1f15222b6de7be92dc4963"
+  },
+  "package/samsara/atlas.py": {
+    "bytes": 20907,
+    "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b"
+  },
+  "package/samsara/causality.py": {
+    "bytes": 13613,
+    "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95"
+  },
+  "package/samsara/cli.py": {
+    "bytes": 9443,
+    "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd"
+  },
+  "package/samsara/client.py": {
+    "bytes": 19442,
+    "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040"
+  },
+  "package/samsara/compatibility.py": {
+    "bytes": 30288,
+    "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71"
+  },
+  "package/samsara/console.py": {
+    "bytes": 15603,
+    "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7"
+  },
+  "package/samsara/content.py": {
+    "bytes": 26324,
+    "sha256": "54bec339f5dc07291fb0bf09190dbb7ca347b352906c8bc2e0d1a33313ff77e0"
+  },
+  "package/samsara/contentsets.py": {
+    "bytes": 39135,
+    "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5"
+  },
+  "package/samsara/data/compatibility-policy-ps1.json": {
+    "bytes": 143222,
+    "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9"
+  },
+  "package/samsara/data/compatibility-policy-r07a.json": {
+    "bytes": 55805,
+    "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845"
+  },
+  "package/samsara/data/compatibility-policy-r07b.json": {
+    "bytes": 113651,
+    "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb"
+  },
+  "package/samsara/data/compatibility-policy.json": {
+    "bytes": 172418,
+    "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a"
+  },
+  "package/samsara/data/contract.json": {
+    "bytes": 125224,
+    "sha256": "ba64c6822b1c06ea86e074203d5d91c8f1bfa12afcae6d6266550bd0d311e916"
+  },
+  "package/samsara/data/engine-lock.json": {
+    "bytes": 535,
+    "sha256": "5de62427f9f4d77e9ea325733a6167155d5cbcf9a4790ecb62eec15debf00887"
+  },
+  "package/samsara/data/initial-source.md": {
+    "bytes": 572,
+    "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+  },
+  "package/samsara/data/work-record.json": {
+    "bytes": 979,
+    "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de"
+  },
+  "package/samsara/equipment.py": {
+    "bytes": 10788,
+    "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72"
+  },
+  "package/samsara/exhibition_admission.py": {
+    "bytes": 7158,
+    "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55"
+  },
+  "package/samsara/exhibition_profiles.py": {
+    "bytes": 29499,
+    "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc"
+  },
+  "package/samsara/exhibitions.py": {
+    "bytes": 25671,
+    "sha256": "72e724bb944016c0c23344c0f5a73483cb9d7c684e9110ef02a321e6a9e78833"
+  },
+  "package/samsara/exploration.py": {
+    "bytes": 10177,
+    "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96"
+  },
+  "package/samsara/extensions.py": {
+    "bytes": 16151,
+    "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca"
+  },
+  "package/samsara/handlers.py": {
+    "bytes": 11477,
+    "sha256": "a4f1990c39b5e196d5c60b47eea1482122a541659c83eb02b1891a6ec6837171"
+  },
+  "package/samsara/intake.py": {
+    "bytes": 10721,
+    "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297"
+  },
+  "package/samsara/local_worker.py": {
+    "bytes": 13009,
+    "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730"
+  },
+  "package/samsara/mediawork.py": {
+    "bytes": 20871,
+    "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e"
+  },
+  "package/samsara/owner.py": {
+    "bytes": 19337,
+    "sha256": "74e405d8e230b412ebf65d02fa7a94f770da1802a01d67385353268a22b52145"
+  },
+  "package/samsara/practice.py": {
+    "bytes": 25686,
+    "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444"
+  },
+  "package/samsara/practice_content.py": {
+    "bytes": 21975,
+    "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4"
+  },
+  "package/samsara/process_custody.py": {
+    "bytes": 12747,
+    "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+  },
+  "package/samsara/properties.py": {
+    "bytes": 37343,
+    "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883"
+  },
+  "package/samsara/protocol.py": {
+    "bytes": 4039,
+    "sha256": "5ed8767fd5135d96f45479446a2f986a20f08c7cc7704473ba48decb06285163"
+  },
+  "package/samsara/runner.py": {
+    "bytes": 51926,
+    "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832"
+  },
+  "package/samsara/situation.py": {
+    "bytes": 18184,
+    "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9"
+  },
+  "package/samsara/sourcework.py": {
+    "bytes": 16934,
+    "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa"
+  },
+  "package/samsara/terminal.py": {
+    "bytes": 2534,
+    "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800"
+  },
+  "package/samsara/travel_content.py": {
+    "bytes": 17730,
+    "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6"
+  },
+  "package/tests/test_exhibition_profiles.py": {
+    "bytes": 26630,
+    "sha256": "c9bdd0725de59ddc176e03f5bd6c86f087ce862c5a540a840e97b961b51eab63"
+  },
+  "play-r1.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "probe32.py": {
+    "bytes": 10624,
+    "sha256": "c366d51f5d3c586d74755df90f09d9f26633bad1d895d256a004c393066497f3"
+  },
+  "product31-antecedent-manifest.json": {
+    "bytes": 15387,
+    "sha256": "c06a476d55c9252e70bcf7d539a8a1773b8c84b0600ded623584b46f6d048317"
+  },
+  "resume-build32.log": {
+    "bytes": 194,
+    "sha256": "f76a76bba259df2ba8947139adff803ba6fe251e0ed0beb2f83f8fc36779b101"
+  },
+  "resume_build32.py": {
+    "bytes": 2104,
+    "sha256": "2c99e1f740492106ddbde65b3d710a1abb92f142ef925e2d039ad0437c4bb2f6"
+  },
+  "run_wire32_installed.py": {
+    "bytes": 423,
+    "sha256": "b72c75d215eebf44cd66765b66d7d5b559376124dbfa0924f84955f46d73cb2f"
+  },
+  "source32-independent-review/RESULT.json": {
+    "bytes": 392,
+    "sha256": "429a23f8382646f64f5d28b42249a5857d3596f2cd05a97bc48e34d1826b413c"
+  },
+  "source32-independent-review/physical-manifest-check-r1-failure.json": {
+    "bytes": 3690,
+    "sha256": "53e32473a599a38d4ed79b0cec775c5cb03b5255c788b7935bb40611e6a68cdf"
+  },
+  "source32-independent-review/pure-r1.log": {
+    "bytes": 2097,
+    "sha256": "c05c56730bd5a085a0f30d3389cb322b1c67fb0c0af0dee5ccf7b36fcab729d7"
+  },
+  "source32-independent-review/report.md": {
+    "bytes": 6302,
+    "sha256": "04275af65cbda2e838e1e209ecd22ad2eede27d47b485a840ecc665a43b65a3b"
+  },
+  "source32-independent-review/reviewed-31-to-32.patch": {
+    "bytes": 20043,
+    "sha256": "8f427d1a15000f68d07c2c82d612904d331dff8a5144448ff0aefb9f5509bbc0"
+  },
+  "source32-independent-review/source-index.json": {
+    "bytes": 4717,
+    "sha256": "8e64bc171fcf4ab6c0141409ff7141289affe5969e00d0569e4385c18ab56230"
+  },
+  "source32-independent-review/test_source_projection.py": {
+    "bytes": 11387,
+    "sha256": "6e91286d1611a5e95832ae45748a87c526b1b82cc1d6963d63a3fc2a4dfc8295"
+  },
+  "source32-unbuilt-reviewed-antecedent/ROOT-CONTRACT.md": {
+    "bytes": 3442,
+    "sha256": "3c633c831f59788bf8ca1f3f1d0784ae193fc029e31fb7627f6f07d6b8a8e3bc"
+  },
+  "source32-unbuilt-reviewed-antecedent/SOURCE-STATUS.json": {
+    "bytes": 202,
+    "sha256": "3e0579fd0b27eeafa5af3c601580deb9a5adfc4c2f4b827d4a46593dd9360dd0"
+  },
+  "source32-unbuilt-reviewed-antecedent/WIRE_RESULT.json": {
+    "bytes": 2371,
+    "sha256": "8f436d51db179fb7724d352e298758deb1d707363223d6fcc9243f4267a3d722"
+  },
+  "source32-unbuilt-reviewed-antecedent/antecedent-authored-v1/application.py": {
+    "bytes": 76116,
+    "sha256": "064453de330f5b764361baeb05ce6f7e956bf73cce7738b034416990d06d9b78"
+  },
+  "source32-unbuilt-reviewed-antecedent/antecedent-authored-v1/data/contract.json": {
+    "bytes": 125224,
+    "sha256": "ba64c6822b1c06ea86e074203d5d91c8f1bfa12afcae6d6266550bd0d311e916"
+  },
+  "source32-unbuilt-reviewed-antecedent/antecedent-authored-v1/exhibitions.py": {
+    "bytes": 25797,
+    "sha256": "4972e98523c4ad981227e2e6c6e9bd6039d83a25d02c0d2d0792441004e17424"
+  },
+  "source32-unbuilt-reviewed-antecedent/antecedent-authored-v1/handlers.py": {
+    "bytes": 11477,
+    "sha256": "a4f1990c39b5e196d5c60b47eea1482122a541659c83eb02b1891a6ec6837171"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/pyproject.toml": {
+    "bytes": 520,
+    "sha256": "a409caadb8077281c5e0fc99d05f9d630450d0a128e49e421084cf4d4d96533c"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/__init__.py": {
+    "bytes": 105,
+    "sha256": "22bafa404b31d7c112d9f1b8afa62166ad87e31bd6a686a2c9a0f1a1eb4f8749"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/__main__.py": {
+    "bytes": 29,
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/application.py": {
+    "bytes": 76200,
+    "sha256": "970035145535a4925fb4d3035122d4787a20da1afe1f15222b6de7be92dc4963"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/atlas.py": {
+    "bytes": 20907,
+    "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/causality.py": {
+    "bytes": 13613,
+    "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/cli.py": {
+    "bytes": 9443,
+    "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/client.py": {
+    "bytes": 19442,
+    "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/compatibility.py": {
+    "bytes": 30288,
+    "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/console.py": {
+    "bytes": 15603,
+    "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/content.py": {
+    "bytes": 26324,
+    "sha256": "54bec339f5dc07291fb0bf09190dbb7ca347b352906c8bc2e0d1a33313ff77e0"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/contentsets.py": {
+    "bytes": 39135,
+    "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/data/compatibility-policy-ps1.json": {
+    "bytes": 143222,
+    "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/data/compatibility-policy-r07a.json": {
+    "bytes": 55805,
+    "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/data/compatibility-policy-r07b.json": {
+    "bytes": 113651,
+    "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/data/compatibility-policy.json": {
+    "bytes": 172418,
+    "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/data/contract.json": {
+    "bytes": 125224,
+    "sha256": "ba64c6822b1c06ea86e074203d5d91c8f1bfa12afcae6d6266550bd0d311e916"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/data/engine-lock.json": {
+    "bytes": 535,
+    "sha256": "5de62427f9f4d77e9ea325733a6167155d5cbcf9a4790ecb62eec15debf00887"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/data/initial-source.md": {
+    "bytes": 572,
+    "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/data/work-record.json": {
+    "bytes": 979,
+    "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/equipment.py": {
+    "bytes": 10788,
+    "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/exhibition_admission.py": {
+    "bytes": 7158,
+    "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/exhibition_profiles.py": {
+    "bytes": 29499,
+    "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/exhibitions.py": {
+    "bytes": 25671,
+    "sha256": "72e724bb944016c0c23344c0f5a73483cb9d7c684e9110ef02a321e6a9e78833"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/exploration.py": {
+    "bytes": 10177,
+    "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/extensions.py": {
+    "bytes": 16151,
+    "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/handlers.py": {
+    "bytes": 11477,
+    "sha256": "a4f1990c39b5e196d5c60b47eea1482122a541659c83eb02b1891a6ec6837171"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/intake.py": {
+    "bytes": 10721,
+    "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/local_worker.py": {
+    "bytes": 13009,
+    "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/mediawork.py": {
+    "bytes": 20871,
+    "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/owner.py": {
+    "bytes": 19337,
+    "sha256": "74e405d8e230b412ebf65d02fa7a94f770da1802a01d67385353268a22b52145"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/practice.py": {
+    "bytes": 25686,
+    "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/practice_content.py": {
+    "bytes": 21975,
+    "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/process_custody.py": {
+    "bytes": 12747,
+    "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/properties.py": {
+    "bytes": 37343,
+    "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/protocol.py": {
+    "bytes": 4039,
+    "sha256": "5ed8767fd5135d96f45479446a2f986a20f08c7cc7704473ba48decb06285163"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/runner.py": {
+    "bytes": 51926,
+    "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/situation.py": {
+    "bytes": 18184,
+    "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/sourcework.py": {
+    "bytes": 16934,
+    "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/terminal.py": {
+    "bytes": 2534,
+    "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/samsara/travel_content.py": {
+    "bytes": 17730,
+    "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6"
+  },
+  "source32-unbuilt-reviewed-antecedent/package/tests/test_exhibition_profiles.py": {
+    "bytes": 26630,
+    "sha256": "c9bdd0725de59ddc176e03f5bd6c86f087ce862c5a540a840e97b961b51eab63"
+  },
+  "source32-unbuilt-reviewed-antecedent/replay-inherited.log": {
+    "bytes": 1989,
+    "sha256": "4bce2558aa533d39d121789441f9bb873bbf1c91186e1a8ef606899068966d08"
+  },
+  "source32-unbuilt-reviewed-antecedent/source-manifest-before-review.json": {
+    "bytes": 5769,
+    "sha256": "e9b56d3b56076baafc6b732c4d2377207a9aed9370e968503f5124568fb9603b"
+  },
+  "source32-unbuilt-reviewed-antecedent/test_replay_projection_inherited.py": {
+    "bytes": 8358,
+    "sha256": "87ecb02811dd41d7166ebd7916ad29234fce54e8867df4081688d304d0f20500"
+  },
+  "source32-unbuilt-reviewed-antecedent/test_wire32.py": {
+    "bytes": 2774,
+    "sha256": "da6898caec1c074a6dbdb869f9c92a6a56b4ad89f0a33c6df237aea8a78421a8"
+  },
+  "source32-unbuilt-reviewed-antecedent/wire-source.log": {
+    "bytes": 80,
+    "sha256": "e5a24d1c0dd724d957fc26b2c9f2a2bf81debb5358602f0a183cafe6b936ed7c"
+  },
+  "test_wire32_installed.py": {
+    "bytes": 2749,
+    "sha256": "cf18481b5eb659f5527d1ef5e1a848fce8a2e422aca36630e73e826d08ec237a"
+  },
+  "venv.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "wire-identity-after.json": {
+    "bytes": 40747,
+    "sha256": "868f22d9f2cbab721cd957466448940e866f44f5ce8aa5191751d54396a466d0"
+  },
+  "wire-identity-before.json": {
+    "bytes": 40747,
+    "sha256": "868f22d9f2cbab721cd957466448940e866f44f5ce8aa5191751d54396a466d0"
+  },
+  "wire-installed.log": {
+    "bytes": 80,
+    "sha256": "e5a24d1c0dd724d957fc26b2c9f2a2bf81debb5358602f0a183cafe6b936ed7c"
+  },
+  "withdrawal-following-r2.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "withdrawal-r1.log": {
+    "bytes": 583,
+    "sha256": "5e5e9e97121b9c59a164ac8d7130ae53f00c430b7cf1a1286a4bb98b55125141"
+  },
+  "withdrawal32.py": {
+    "bytes": 10251,
+    "sha256": "24742d856c6fa34ff86a92be54b9e27c36300685da273be6321874a385b36153"
+  },
+  "withdrawal32_following.py": {
+    "bytes": 8942,
+    "sha256": "6d190a2edbd5647cd6354b05a4acfcdf2a904c79b881590bbe9ab89a04900883"
+  }
+}
