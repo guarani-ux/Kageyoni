@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE_FROZEN_KIT_ACTUAL_REMOTE_BYTE_CUSTODY_VERIFIED",
+  "carrier": {
+    "bytes": 7276594,
+    "filename": "Current28_Full_Continuation_Portable_Kit_IN_PROGRESS.zip",
+    "sha256": "f467e1b498489666bb149aa9f31350ebb4b965e4fde7bc2b3ca0d0dd7bdb4a9c",
+    "zip_entries": 75
+  },
+  "frozen_files": 65,
+  "external_receipt": 1,
+  "all181initial_payload_fullbody_readbacks": true,
+  "all_ASCII_raw_offsets_GitIDs_SHA_ZIPCRC_members_modes_types_symlinktargets_exact": true,
+  "all65frozenfiles_and_externalreceipt_remote_exact": true,
+  "nested_delta155member_CRC_SHA_mode_type_exact": true,
+  "sourcebeforeafter_metadata_exact": true,
+  "actual_full_recipe_anchors": 15,
+  "canonical_frozen_recipes_exact": 13,
+  "recursive_current26_base_recipe_exact": 2,
+  "full469MB_reconstruction_not_rerun": true,
+  "external14rawproviders_and_Library15_still_required": true,
+  "no_new_Library_version_or_fullrelease": true
+}

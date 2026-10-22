@@ -1,0 +1,94 @@
+{
+  "status": "ONLY_APPROVED_NEW_DERIVED_ARCHIVE_LINKS_RELEASED",
+  "observed_at_utc": "2026-10-22T20:45:45.456283+00:00",
+  "historical_output_paths_released": [
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip",
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip.partial"
+  ],
+  "historical_outputs_usable_at_retained_original": "/dev/shm/continuation-current28-lzma/Samsara_Core_Build_Continuation.zip",
+  "canonical_original_remains": true,
+  "original_before_sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+  "original_after_sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+  "original_before_metadata": {
+    "device": 26,
+    "inode": 65484,
+    "nlink": 2,
+    "mode": 33188,
+    "uid": 0,
+    "gid": 0,
+    "bytes": 469620062,
+    "blocks": 917232,
+    "mtime_ns": 1792699562221599268,
+    "ctime_ns": 1792699603214439050,
+    "xattrs": {}
+  },
+  "original_after_metadata": {
+    "device": 26,
+    "inode": 65484,
+    "nlink": 2,
+    "mode": 33188,
+    "uid": 0,
+    "gid": 0,
+    "bytes": 469620062,
+    "blocks": 917232,
+    "mtime_ns": 1792699562221599268,
+    "ctime_ns": 1792699603214439050,
+    "xattrs": {}
+  },
+  "derived_before_metadata": {
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip": {
+      "device": 26,
+      "inode": 80377,
+      "nlink": 2,
+      "mode": 33188,
+      "uid": 0,
+      "gid": 0,
+      "bytes": 469620062,
+      "blocks": 917232,
+      "mtime_ns": 1792701809951254342,
+      "ctime_ns": 1792701827068354457,
+      "xattrs": {}
+    },
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip.partial": {
+      "device": 26,
+      "inode": 80377,
+      "nlink": 2,
+      "mode": 33188,
+      "uid": 0,
+      "gid": 0,
+      "bytes": 469620062,
+      "blocks": 917232,
+      "mtime_ns": 1792701809951254342,
+      "ctime_ns": 1792701827068354457,
+      "xattrs": {}
+    }
+  },
+  "original_and_derived_distinct_inode": true,
+  "derived_hardlink_inode": 80377,
+  "locks": {
+    "kind": "Nonblocking exclusive advisory flock on one FD per distinct archive inode",
+    "original_inode": 65484,
+    "derived_inode": 80377,
+    "held_through_validation_and_both_unlinks": true,
+    "derived_descriptor_closed_only_after_postunlink_originalproof": true,
+    "original_descriptor_held_through_final_originalproof": true,
+    "scope": "Owned completed byte tasks and cooperating archive leases only; no global FD absence claim."
+  },
+  "owned_process_completion": {
+    "wrapper_session": 92692,
+    "wrapper_actual_exit_code": 0,
+    "independent_readback_session": 70184,
+    "independent_readback_actual_exit_code": 0,
+    "both_tools_observed_complete_before_release": true
+  },
+  "independent_readback_receipt_sha256": "3ab8dc6ef3adb21fac2c5140f0ca87e6c429752c50c7cb2d153abfa66f517a30",
+  "tmpfs_free_before": 1101848576,
+  "tmpfs_free_after_unlink_derived_fd_stillheld": 1101848576,
+  "tmpfs_free_after_derived_fd_closed": 1571471360,
+  "observed_free_delta": 469622784,
+  "proposal_sha256": "98bd5d5abdf863163fdfe1b7aaecdffdcbc9985eb0379b3eef180bd091c6b49f",
+  "unique_content_deleted": false,
+  "other_unlink_or_directory_removal": false,
+  "all_original_archives_reports_and_kit_preserved": true,
+  "native_DB_Client_Git_Library_effects": false
+}

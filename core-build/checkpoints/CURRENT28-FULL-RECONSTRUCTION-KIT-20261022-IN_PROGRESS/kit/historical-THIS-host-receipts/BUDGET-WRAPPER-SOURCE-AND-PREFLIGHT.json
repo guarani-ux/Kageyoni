@@ -1,0 +1,49 @@
+{
+  "status": "SOURCE_AUTHORED_SYNTAX_PASS_PREFLIGHT_TMPFS_GUARD_REJECTED",
+  "artifacts": [
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/reconstruct_budget_wrapper.py",
+      "bytes": 10526,
+      "sha256": "defff6358510478f246b3a6c86e04ba31973d13e26c3e8c85f5fce339d002549"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/reconstruct_continuation.py",
+      "bytes": 7876,
+      "sha256": "5db3d4d1bb40ddf95ebc5da2fb2e4129c921b1d82440bbf817ec99c69def3b27"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/continuation-reconstruction-recipe.json",
+      "bytes": 16128,
+      "sha256": "fd8587de1001c1a132e3a7adee8d10ffa2df36abca4dad605e45173c8644778c"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/continuation-delta.zip",
+      "bytes": 6563350,
+      "sha256": "72d043789401811d93eb4191affd2585576eb0f1d1405e2a4c58aded4e440d2a"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/preflight-budget-r1.stderr",
+      "bytes": 703,
+      "sha256": "cf53690c80c94d7a40d7796993ed64bf1ddfdf50fdf85ff29ac75b35da1cf8cd"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/preflight-budget-r1-failure.json",
+      "bytes": 4562,
+      "sha256": "4bc7158264be7c7876dd0d5b0368d5837a5354c49e2b45bdb32a88bfc6376ca7"
+    }
+  ],
+  "actual_preflight_exit_code": 1,
+  "full_reconstruction_executed": false,
+  "helper_main_executed": false,
+  "output_directory_created": false,
+  "automatic_retry": false,
+  "guard_difference_for_root_review": {
+    "current_tmpfs_formula": "remaining+TARGET+1GiB copied from old exporter",
+    "new_commission_wording": "remaining+1GiB",
+    "actual_free": 1574789120,
+    "current_required": 2012981948,
+    "remaining_plus_one_GiB": 1543361886,
+    "cgroup_required_unchanged": 1744546492
+  },
+  "native_DB_Client_Git_Library_effects": false
+}

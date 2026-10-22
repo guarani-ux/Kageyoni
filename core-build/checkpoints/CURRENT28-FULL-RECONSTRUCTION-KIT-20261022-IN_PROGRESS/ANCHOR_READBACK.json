@@ -1,0 +1,157 @@
+{
+  "status": "13CANONICAL_AND2RECURSIVE_BASE_ANCHORS_ACTUAL_FULL_BYTES_VERIFIED",
+  "anchors": [
+    {
+      "id": "current26",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "9e27e8dc1ae2ed9cf359ddc5cb7ba2d9331b2807",
+      "path": "core-build/checkpoints/D16-dev26-IN_PROGRESS/current-reconstruction-recipe.json",
+      "git_sha1": "715d7e8035a82047df68403b4c74433648b76088",
+      "bytes": 526525,
+      "sha256": "61e367d967ca086a7201fcc9791cda0d067f713b12f2803ea41dc6c369689588",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "native034",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "b3e470042f3b44926c4e127309fe8ce91c8356c9",
+      "path": "core-build/checkpoints/NATIVE034-R1-20261022-IN_PROGRESS/recipe.json",
+      "git_sha1": "9f9bfb791c7b5897a9b86860740729013ee23fa3",
+      "bytes": 5350,
+      "sha256": "dc8ade9f63c1c9802e9eb71dd0b3b547889848d8a173573b0d493bdecc082429",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "product27",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "7e6fcf72dc8f6a0673b4796311b806019310f4e8",
+      "path": "core-build/checkpoints/PRODUCT27-MEDIA-20261022-IN_PROGRESS/capsule-recipe.json",
+      "git_sha1": "9c6ef1de75d9d1dae5218234b24a426f02010796",
+      "bytes": 28087,
+      "sha256": "8bab3ed9eb0ac9d27b3292467801270ec7f9a84a32d17ad9395eae983c2ccb3c",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "media26",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "7e6fcf72dc8f6a0673b4796311b806019310f4e8",
+      "path": "core-build/checkpoints/PRODUCT27-MEDIA-20261022-IN_PROGRESS/media-recipe.json",
+      "git_sha1": "f041b32eb0057536b94094b2cb9ee230366d16c8",
+      "bytes": 235466,
+      "sha256": "68883c12d6a4379937dbbab635b0f8b61c271029d25070d8e95497bea61a9c37",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "product28-source",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+      "path": "core-build/checkpoints/PRODUCT28-R3-20261022-IN_PROGRESS/source-recipe.json",
+      "git_sha1": "506674b1cfba8da981e13760dcd255a00b7380e8",
+      "bytes": 32707,
+      "sha256": "f2dd1da70b5ad40069769ed28cfbc3ddd8e893c9b42420e744ff6abc1dfca483",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "product27-28-worlds",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+      "path": "core-build/checkpoints/PRODUCT28-R3-20261022-IN_PROGRESS/worlds-recipe.json",
+      "git_sha1": "921fe3b23f67609f5b0a1e27f085967346882741",
+      "bytes": 66065,
+      "sha256": "ba0e9ac8006928bc2953e21a54cfbfe2807610c325e5f9d548512ec283393a60",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "product27-r3",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+      "path": "core-build/checkpoints/PRODUCT28-R3-20261022-IN_PROGRESS/r3-recipe.json",
+      "git_sha1": "40a2276a5dc5199aa87d494f1ef997c65968ba21",
+      "bytes": 77687,
+      "sha256": "6e4bd7826f715e19231ade23f6aff7cd2a72e866bd86f3818d141a7239b751f2",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "product28-bounded",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "881890787a973a78c0a7ff5ca0e30896afd366c9",
+      "path": "core-build/checkpoints/PRODUCT28-BOUNDED-QUALIFIED-20261022-IN_PROGRESS/critical-recipe.json",
+      "git_sha1": "d4701c04a0625ca0a273da3265c99a11849e63f0",
+      "bytes": 11773,
+      "sha256": "3b50b80f9357a90b5c3d895323d21ddeded0b0c40d285f4d2ef76e9b52e50854",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "product28-29trees",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "881890787a973a78c0a7ff5ca0e30896afd366c9",
+      "path": "core-build/checkpoints/PRODUCT28-BOUNDED-QUALIFIED-20261022-IN_PROGRESS/body-recipe.json",
+      "git_sha1": "c898f1023e5476dae0dad0660d353bf818effeee",
+      "bytes": 455299,
+      "sha256": "e7c49c6a3e9c89949724e80fd033f46460479b90f5e23de79eb687963249e7c0",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "future18-source",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+      "path": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS/critical-recipe.json",
+      "git_sha1": "fa7166881144be2cf32def5c7e69b1a3892625de",
+      "bytes": 470499,
+      "sha256": "300dff16755fd4437dbb47a56416265c35ea73bb2f68967009dc319f6cf59c7a",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "native17-raw",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+      "path": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS/native17-recipe.json",
+      "git_sha1": "f0b302246388bf456b3150497929b984376de445",
+      "bytes": 548166,
+      "sha256": "c957e36f29b4782e307978635d6712e90cb8881b6d7b93d7b0d94c0d45548de4",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "native18-raw",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+      "path": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS/native18-recipe.json",
+      "git_sha1": "a63965654b99a1e28d1fd7a4ec0b19a50bd32fcf",
+      "bytes": 581006,
+      "sha256": "0384f5e71071ba52067331c74bb63b6b5f16c401af07fcaad10ed82407117fe9",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "native18-maintenance",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+      "path": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS/supplemental-recipe.json",
+      "git_sha1": "c8571376e2053018ff01a9177de07a8da561f2ea",
+      "bytes": 54804,
+      "sha256": "e4c5b487bb164ffabb1bce9fa0cd0317d559f3335471fe7bab4f7c75fb4db787",
+      "canonical_frozen_bootstrap_exact": true
+    },
+    {
+      "id": "current26-base-0",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "ee71da811f9acc76a1982e4055dd22240ae0b861",
+      "path": "core-build/checkpoints/D15-F1v9-FINAL-IN_PROGRESS/current-reconstruction-recipe.json",
+      "git_sha1": "440d038b816a16d89b4d7cedb141db74d992ab98",
+      "bytes": 397740,
+      "sha256": "71ffa2affcc2b014d13d56b2c72a38bf5245bb4c39f595239bde6c1d9ada19b8",
+      "canonical_frozen_bootstrap_exact": false
+    },
+    {
+      "id": "current26-base-1",
+      "repository": "guarani-ux/SAMSARA",
+      "commit": "9b9b097ff8631b968c6f8c725574374115ea23e1",
+      "path": "core-build/checkpoints/D15-dev25-IN_PROGRESS/capsule-recipe.json",
+      "git_sha1": "c1c9b36860148dcaef50fe50ce33c5120391de7c",
+      "bytes": 5686,
+      "sha256": "894b51e4bd284e933f2fad2e842cf8bf18c5f5f90bfef218ff92f882b01145b4",
+      "canonical_frozen_bootstrap_exact": false
+    }
+  ],
+  "raw_provider_bodies_not_downloaded": true,
+  "Library15_remains_pinned_external_required": true
+}

@@ -1,0 +1,21 @@
+{
+  "copies": [
+    {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/git/current-reconstruction-recipe.json",
+      "bytes": 526526,
+      "sha256": "8f85a99b54abfea3e014265f2b0820f83d5d0acbd1a098981bdcaf3c6233308d",
+      "git_blob_sha1": "65a4c987818aff129fb1a0338ec543de2999a31e"
+    },
+    {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/current26/current-reconstruction-recipe.json",
+      "bytes": 526525,
+      "sha256": "61e367d967ca086a7201fcc9791cda0d067f713b12f2803ea41dc6c369689588",
+      "git_blob_sha1": "715d7e8035a82047df68403b4c74433648b76088"
+    }
+  ],
+  "JSON_semantics_equal": true,
+  "old_local_bootstrap_is_canonical_plus_one_LF": true,
+  "canonical_source_is_retained_original_file": true,
+  "old_copy_not_canonical_Git_byte_identity": true,
+  "target_ZIP_and_entry_bodies_unchanged": true
+}

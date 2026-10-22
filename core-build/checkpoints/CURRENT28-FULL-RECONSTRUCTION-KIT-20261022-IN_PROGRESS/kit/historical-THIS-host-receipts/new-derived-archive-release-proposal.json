@@ -1,0 +1,220 @@
+{
+  "status": "PROPOSED_ONLY_NOT_RELEASED",
+  "observed_at_utc": "2026-10-22T20:45:04.566342+00:00",
+  "exact_release_candidates": [
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip",
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip.partial"
+  ],
+  "derived_directory": "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1",
+  "retained_canonical_original": "/dev/shm/continuation-current28-lzma/Samsara_Core_Build_Continuation.zip",
+  "target_bytes": 469620062,
+  "target_sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+  "source_before_sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+  "source_after_sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+  "inventory_before": {
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip": {
+      "device": 26,
+      "inode": 80377,
+      "nlink": 2,
+      "mode": 33188,
+      "uid": 0,
+      "gid": 0,
+      "bytes": 469620062,
+      "blocks": 917232,
+      "mtime_ns": 1792701809951254342,
+      "ctime_ns": 1792701827068354457,
+      "xattrs": {}
+    },
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip.partial": {
+      "device": 26,
+      "inode": 80377,
+      "nlink": 2,
+      "mode": 33188,
+      "uid": 0,
+      "gid": 0,
+      "bytes": 469620062,
+      "blocks": 917232,
+      "mtime_ns": 1792701809951254342,
+      "ctime_ns": 1792701827068354457,
+      "xattrs": {}
+    },
+    "/dev/shm/continuation-current28-lzma/Samsara_Core_Build_Continuation.zip": {
+      "device": 26,
+      "inode": 65484,
+      "nlink": 2,
+      "mode": 33188,
+      "uid": 0,
+      "gid": 0,
+      "bytes": 469620062,
+      "blocks": 917232,
+      "mtime_ns": 1792699562221599268,
+      "ctime_ns": 1792699603214439050,
+      "xattrs": {}
+    }
+  },
+  "inventory_after": {
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip": {
+      "device": 26,
+      "inode": 80377,
+      "nlink": 2,
+      "mode": 33188,
+      "uid": 0,
+      "gid": 0,
+      "bytes": 469620062,
+      "blocks": 917232,
+      "mtime_ns": 1792701809951254342,
+      "ctime_ns": 1792701827068354457,
+      "xattrs": {}
+    },
+    "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip.partial": {
+      "device": 26,
+      "inode": 80377,
+      "nlink": 2,
+      "mode": 33188,
+      "uid": 0,
+      "gid": 0,
+      "bytes": 469620062,
+      "blocks": 917232,
+      "mtime_ns": 1792701809951254342,
+      "ctime_ns": 1792701827068354457,
+      "xattrs": {}
+    },
+    "/dev/shm/continuation-current28-lzma/Samsara_Core_Build_Continuation.zip": {
+      "device": 26,
+      "inode": 65484,
+      "nlink": 2,
+      "mode": 33188,
+      "uid": 0,
+      "gid": 0,
+      "bytes": 469620062,
+      "blocks": 917232,
+      "mtime_ns": 1792699562221599268,
+      "ctime_ns": 1792699603214439050,
+      "xattrs": {}
+    }
+  },
+  "all_metadata_before_after_equal": true,
+  "derived_links_same_inode_and_nlink2": true,
+  "original_distinct_inode_retained": true,
+  "current_tmpfs_free": 1101860864,
+  "potential_reclaimed_allocated_bytes": 469622784,
+  "release_requires_both_derived_hardlinks_removed": true,
+  "original_and_all_reports_and_complete_kit_preserved": true,
+  "all_member_matching_proof": {
+    "readback_receipt": "/dev/shm/continuation-current28-reconstruction/independent-full-r1-readback.json",
+    "entries": 12688,
+    "files": 11330,
+    "directories": 1358,
+    "raw_file_bytes": 2790921522,
+    "decoded_SHA_CRC_metadata_modes_offsets_compressed_SHA": true,
+    "original_whole_SHA_equal": true,
+    "all14providerSHA_after_readback": true
+  },
+  "owned_readback_and_reconstruction_processes": {
+    "wrapper_session": 92692,
+    "wrapper_actual_exit_code": 0,
+    "readback_session": 70184,
+    "readback_actual_exit_code": 0,
+    "both_tools_reported_process_completion": true,
+    "subagent_byte_owner": "/root/recover_current26",
+    "scope": "Only this agent owned and completed reconstruction/readback; no global FD absence or other-process lease claim."
+  },
+  "execution_resource_limits": {
+    "hard_RLIMIT_AS": [
+      268435456,
+      268435456
+    ],
+    "output_reserve_bytes": 1073741824,
+    "monitored_checks": 36858,
+    "maxRSS": 175378432,
+    "OOM": {
+      "low": 0,
+      "high": 0,
+      "max": 733918,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    }
+  },
+  "retained_artifacts": [
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/reconstruct_continuation.py",
+      "bytes": 7876,
+      "sha256": "5db3d4d1bb40ddf95ebc5da2fb2e4129c921b1d82440bbf817ec99c69def3b27"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/reconstruct_budget_wrapper.py",
+      "bytes": 10478,
+      "sha256": "6222ff063eaffbb939ff8da926cf4ebd97ee35ca7729d88d035726e733c9a87f"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/continuation-reconstruction-recipe.json",
+      "bytes": 16128,
+      "sha256": "fd8587de1001c1a132e3a7adee8d10ffa2df36abca4dad605e45173c8644778c"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/continuation-delta.zip",
+      "bytes": 6563350,
+      "sha256": "72d043789401811d93eb4191affd2585576eb0f1d1405e2a4c58aded4e440d2a"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/execution-full-r1.json",
+      "bytes": 301722,
+      "sha256": "095a9842f2961cb569f0a35294fe378fc25d1130e296ebc4f6a9df55f7ba14bd"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/execution-full-r1.stdout",
+      "bytes": 542,
+      "sha256": "78a6bd13b3f89e84c84656344dab802de159d63ebeaa80fff3458a3dc90ffa7a"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/execution-full-r1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/verify_reconstructed_full_r1.py",
+      "bytes": 6063,
+      "sha256": "29f0d75b56eb4d4a26eebbd84364792e71fc2f9be8118ab241d1b86afa9bc86e"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/independent-full-r1-readback.json",
+      "bytes": 109003,
+      "sha256": "3ab8dc6ef3adb21fac2c5140f0ca87e6c429752c50c7cb2d153abfa66f517a30"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/independent-full-r1-readback.stdout",
+      "bytes": 82201,
+      "sha256": "582b44d653ea3d4dac739983a92514483fd70828d5705be0636b61d3a2383bdc"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/independent-full-r1-readback.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/budget-wrapper-antecedent-defff635.py",
+      "bytes": 10526,
+      "sha256": "defff6358510478f246b3a6c86e04ba31973d13e26c3e8c85f5fce339d002549"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/preflight-budget-r1-failure.json",
+      "bytes": 4562,
+      "sha256": "4bc7158264be7c7876dd0d5b0368d5837a5354c49e2b45bdb32a88bfc6376ca7"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/preflight-budget-r2.json",
+      "bytes": 11439,
+      "sha256": "9340604a39d347d533266df86d80c284e4ba5f50b9bf7d8756d692816ce42f3e"
+    }
+  ],
+  "reconstruction_recipe_can_reproduce_derived_bytes": true,
+  "known_limits": {
+    "new_remote_custody": false,
+    "new_Library_version": false,
+    "second_extraction": false,
+    "world_SQLite_or_native_open": false
+  },
+  "future_release_preconditions": "Root authorizes only these exact two newly derived archive paths; reacquire this bounded byte ownership, verify current inventories/hashes/readback receipt and retained original unchanged again, then unlink only final+partial. Preserve directory, all kit/report/source history and canonical original. No oldtree or journal deletion.",
+  "unlink_performed": false
+}

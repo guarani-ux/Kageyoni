@@ -1,0 +1,159 @@
+{
+  "filename": "Samsara_D15_Source_Offline_IN_PROGRESS.zip",
+  "bytes": 10078702,
+  "sha256": "fb3d046acb067405e4abe0d8ac7b05104f446dcde8a89a3990c0a207f76b758e",
+  "manifest_files": 1208,
+  "zip_entries": 1209,
+  "parts": [
+    {
+      "path": "capsule/part-000.bin",
+      "offset": 0,
+      "bytes": 500000,
+      "sha256": "31b45c40c2e80f68ba59e43b7b7bd5e4743be7b67f11404a3769f52ee22e88e4",
+      "git_sha1": "0276bf563b4694c3b852bfee1e81fb8befe5f95b"
+    },
+    {
+      "path": "capsule/part-001.bin",
+      "offset": 500000,
+      "bytes": 500000,
+      "sha256": "dfd21986707d934f0cc6a4c4c0bcd90cf611ceb992c63d9f918e65f30d3844ea",
+      "git_sha1": "96f641c261a70a61ab43f70a1d8346d9b17efefa"
+    },
+    {
+      "path": "capsule/part-002.bin",
+      "offset": 1000000,
+      "bytes": 500000,
+      "sha256": "60cdc778a0776f42fdec243887402f97f2349e027de1806906b7b11ad91e1899",
+      "git_sha1": "db72b0e10f25776ffa2952ac61a6fa67042a323e"
+    },
+    {
+      "path": "capsule/part-003.bin",
+      "offset": 1500000,
+      "bytes": 500000,
+      "sha256": "d0adb3430d486e9713d003e17ad19b2169c7d7e1abf8ea8d589f2857b9aef887",
+      "git_sha1": "c152c83fff4f88a6161e88338beddf6cb6ebc962"
+    },
+    {
+      "path": "capsule/part-004.bin",
+      "offset": 2000000,
+      "bytes": 500000,
+      "sha256": "83e640768ab62b6f771fc75a1c94f6cbbb5e868454c3f07c2215b2666555cd89",
+      "git_sha1": "1f6937236b274285fdf094651369b83b6a69876a"
+    },
+    {
+      "path": "capsule/part-005.bin",
+      "offset": 2500000,
+      "bytes": 500000,
+      "sha256": "da9fd3d9381310502f1ec3de13296a18a771fe6781d02e9d28ac9e7c2538f337",
+      "git_sha1": "e352bc3ed6c1d6212565ae5e9f5922aedd81fd4b"
+    },
+    {
+      "path": "capsule/part-006.bin",
+      "offset": 3000000,
+      "bytes": 500000,
+      "sha256": "1a3c9b0db1b0844dac5a4332f5500d950f152923e60c407c45aa832c2113d746",
+      "git_sha1": "d35acc691d3f9a8d353ae279e0a9e4bb36fb5139"
+    },
+    {
+      "path": "capsule/part-007.bin",
+      "offset": 3500000,
+      "bytes": 500000,
+      "sha256": "cdf9bcb7c23fbe5e8ade4f869b164aa065eb82e04f4c212a5d83ec0acac2f061",
+      "git_sha1": "da4db374445dcab52499e6251526352b41a384fd"
+    },
+    {
+      "path": "capsule/part-008.bin",
+      "offset": 4000000,
+      "bytes": 500000,
+      "sha256": "dad9cfa67bad349876ede97160603ef19bcef0bd28ad614b4b6e9873d7f1724c",
+      "git_sha1": "1a529554b41277bb8d97dd9bae5b5866b793a48e"
+    },
+    {
+      "path": "capsule/part-009.bin",
+      "offset": 4500000,
+      "bytes": 500000,
+      "sha256": "3839d2ec80e5e6536decef28f18c82cad6e469a6b5f572d66a5228a8c26aae10",
+      "git_sha1": "05623a60f922f046bc9038d3a17ab446abed4791"
+    },
+    {
+      "path": "capsule/part-010.bin",
+      "offset": 5000000,
+      "bytes": 500000,
+      "sha256": "016be3eeeeb22c32a5a86fff2d66b97835f83895420c5abd674614b66f1ad931",
+      "git_sha1": "0970feccba108ceb785f9626366cf493149fe95d"
+    },
+    {
+      "path": "capsule/part-011.bin",
+      "offset": 5500000,
+      "bytes": 500000,
+      "sha256": "907b042b3c3e1331f3d00f1892b8c33a723cd6ea8fc6beb27c0209e6629bda4c",
+      "git_sha1": "6f9ba645769fb240033b0920e0dfbe4bd7384def"
+    },
+    {
+      "path": "capsule/part-012.bin",
+      "offset": 6000000,
+      "bytes": 500000,
+      "sha256": "619bb8bfe6cd23b6cdedc98c4a47199e0f14c500e715dbded425cca534ff3ca4",
+      "git_sha1": "39a952c50d042267eb68782952daf8bf829c6284"
+    },
+    {
+      "path": "capsule/part-013.bin",
+      "offset": 6500000,
+      "bytes": 500000,
+      "sha256": "7f1bd443d4f0a4bc31dd59419a25bffb38760f8f6200c52ea881816643389fdb",
+      "git_sha1": "a91d359ab6c5366ed8275cd68ad28a4ada2f913f"
+    },
+    {
+      "path": "capsule/part-014.bin",
+      "offset": 7000000,
+      "bytes": 500000,
+      "sha256": "ec58aefd354b1e2c5a80f00a2cc5255e8a8906be64a84ed62529a0cc70ba4371",
+      "git_sha1": "946e359e88b7903244fef3095ca4e8509af55c68"
+    },
+    {
+      "path": "capsule/part-015.bin",
+      "offset": 7500000,
+      "bytes": 500000,
+      "sha256": "cbf34e913fbb5f3bcf270eba493025a32d0baf69ba460b98ab607a982c770297",
+      "git_sha1": "387ab5b13cbf43ce3ad52efd89ea3b05d8254080"
+    },
+    {
+      "path": "capsule/part-016.bin",
+      "offset": 8000000,
+      "bytes": 500000,
+      "sha256": "c1f3a5ab3611a95ab31396ae7559129ba3cec304d39db9efd1f9af136d6a6e06",
+      "git_sha1": "499e7e5cd84f81fb1764ef8ad961523846f8f2d4"
+    },
+    {
+      "path": "capsule/part-017.bin",
+      "offset": 8500000,
+      "bytes": 500000,
+      "sha256": "0a0f519c98caece84ace69029cc40012d4cec46791b6ceab2776cc64221ed0c4",
+      "git_sha1": "915c82ab5e48dd656b74b63ef575f4a699ad0189"
+    },
+    {
+      "path": "capsule/part-018.bin",
+      "offset": 9000000,
+      "bytes": 500000,
+      "sha256": "4c37d6cc7046ea919ef23bc376d3d48e1aa9c4867f290c1860dd7737f50df750",
+      "git_sha1": "e21657d5cf7e51fe4f0183e0a4ec472e88e245de"
+    },
+    {
+      "path": "capsule/part-019.bin",
+      "offset": 9500000,
+      "bytes": 500000,
+      "sha256": "325d60e8fd72e93302803754af505dff41e44e206eeb24dd34d6b362c3cbb067",
+      "git_sha1": "3b02fb20d53590202ffb2af9342a5d132d1eeea5"
+    },
+    {
+      "path": "capsule/part-020.bin",
+      "offset": 10000000,
+      "bytes": 78702,
+      "sha256": "0b944dddfa102c330150e72ec052fd532d66c26366e5cd42c0d271228cb36a25",
+      "git_sha1": "d9028693baf3b9285ed71b2f8c64988a1486be01"
+    }
+  ],
+  "not_full_historical_continuation": true,
+  "source_identity": "db2f6b96f46929b33d2331289ba413888c9acf89813f09e569e2ec9eca90add8",
+  "scope": "427 source identities/current offline wheelpair/small exact evidence; historical full sources and raw history need immutable prior refs plus Libraryv15. All F1-F5 open; no Library newversion."
+}

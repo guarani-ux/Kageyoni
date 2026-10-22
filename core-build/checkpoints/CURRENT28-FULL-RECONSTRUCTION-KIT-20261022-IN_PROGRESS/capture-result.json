@@ -1,0 +1,13 @@
+{
+  "DB_opened": false,
+  "delta_CRC155memberproof": true,
+  "external_receipt": 1,
+  "kit_physical_files": 65,
+  "provider": {
+    "bytes": 7276594,
+    "filename": "Current28_Full_Continuation_Portable_Kit_IN_PROGRESS.zip",
+    "sha256": "f467e1b498489666bb149aa9f31350ebb4b965e4fde7bc2b3ca0d0dd7bdb4a9c",
+    "zip_entries": 75
+  },
+  "source_before_after_metadata_exact": true
+}

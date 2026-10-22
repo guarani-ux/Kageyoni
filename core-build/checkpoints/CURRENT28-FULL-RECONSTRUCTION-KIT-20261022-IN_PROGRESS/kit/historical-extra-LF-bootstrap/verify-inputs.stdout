@@ -1,0 +1,1 @@
+{"status": "ALL_EXPLICIT_ENTRY_BODY_SOURCES_AND_CODEC_CALIBRATIONS_VERIFIED", "entries": 12688, "files": 11330, "raw_file_bytes": 2790921522, "codec_calibrations": ["samsara_core/.agents/agents/twin_acc_1/a0_snapshot.json", "samsara_core/engine/tests/v10/test_foundry_kernel_attack.py.tmp"], "full_archive_reconstruction_executed": false, "remote_custody_of_new_delta": false}

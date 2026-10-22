@@ -1,0 +1,41 @@
+{
+  "actual_historical_evidence": "Exact469620062B/b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04 fullreconstruction PASS plus independent all12688entry readback; all14providerSHA after exact. Newderivedduplicate hardlinknames released onlyafter retainedoriginal+readback proof. Receipts frozenhistorical; writer does not rerun full469MBreconstruction.",
+  "canonical_bootstrap_recipes": 13,
+  "carrier_source_files_including_external_receipt": 66,
+  "delta": {
+    "bytes": 6563350,
+    "members": 155,
+    "sha256": "72d043789401811d93eb4191affd2585576eb0f1d1405e2a4c58aded4e440d2a"
+  },
+  "external_root_receipt": "PORTABLE-KIT-RECEIPT.json",
+  "frozen_kit": "/dev/shm/continuation-current28-reconstruction/PORTABLE-KIT",
+  "frozen_manifest_sha256": "aa02af7ade3e8d4a3c28af8833f70453ab08d3ff87e17ff40e3de2ff8ffaf58a",
+  "helper_sha256": "5db3d4d1bb40ddf95ebc5da2fb2e4129c921b1d82440bbf817ec99c69def3b27",
+  "independent_readback_receipt_sha256": "3ab8dc6ef3adb21fac2c5140f0ca87e6c429752c50c7cb2d153abfa66f517a30",
+  "payload_files": 64,
+  "physical_file_bytes": 10430657,
+  "physical_files_including_manifest": 65,
+  "provider": {
+    "bytes": 7276594,
+    "filename": "Current28_Full_Continuation_Portable_Kit_IN_PROGRESS.zip",
+    "sha256": "f467e1b498489666bb149aa9f31350ebb4b965e4fde7bc2b3ca0d0dd7bdb4a9c",
+    "zip_entries": 75
+  },
+  "providers": 14,
+  "recipe_sha256": "fd8587de1001c1a132e3a7adee8d10ffa2df36abca4dad605e45173c8644778c",
+  "recursive_inputs": "All14complete rawproviders required,771515617B total. Library15 pinnedexternalinput remains required; Gitimmutableanchors+recursivecurrent26basechain retained. No suppliedoriginalrawdup or guessedhostpaths.",
+  "scope": "Complete historicalcurrent28/native16 snapshot, allLibrary15parentbytes/history preserved; native18 futurediagnosticevidence only. Current30/31/32 NOTinside; no fullrelease/allF1-F5/Librarynewversion.",
+  "source_before_after_metadata_exact": true,
+  "status": "EXACT_HISTORICAL_CURRENT28_FULL_CONTINUATION_RECOVERY_KIT_REMOTE_CUSTODY_IN_PROGRESS",
+  "target": {
+    "bytes": 469620062,
+    "directories": 1358,
+    "entries": 12688,
+    "filename": "Samsara_Core_Build_Continuation.zip",
+    "files": 11330,
+    "sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+    "uncompressed_file_bytes": 2790921522
+  },
+  "wrapper_sha256": "6222ff063eaffbb939ff8da926cf4ebd97ee35ca7729d88d035726e733c9a87f",
+  "writer_execution": "Bytepackaging/read-onlyGitanchor verification only; no DB/Engine/Client/native/processprobe/test/build/world/source/Library/automation effects; nochildren"
+}

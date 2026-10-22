@@ -1,0 +1,45 @@
+{
+  "status": "PORTABLE_KIT_FROZEN_LOCAL_FOR_ROOT_REVIEW",
+  "observed_at_utc": "2026-10-22T20:47:18.288205+00:00",
+  "kit": "/dev/shm/continuation-current28-reconstruction/PORTABLE-KIT",
+  "frozen_manifest_bytes": 13413,
+  "frozen_manifest_sha256": "aa02af7ade3e8d4a3c28af8833f70453ab08d3ff87e17ff40e3de2ff8ffaf58a",
+  "payload_file_count": 64,
+  "physical_file_count_including_manifest": 65,
+  "payload_file_bytes": 10417244,
+  "physical_file_bytes_including_manifest": 10430657,
+  "all_manifest_file_SHA_size_modes_readback": true,
+  "exact_recipe": {
+    "bytes": 16128,
+    "sha256": "fd8587de1001c1a132e3a7adee8d10ffa2df36abca4dad605e45173c8644778c"
+  },
+  "exact_delta": {
+    "filename": "continuation-delta.zip",
+    "bytes": 6563350,
+    "sha256": "72d043789401811d93eb4191affd2585576eb0f1d1405e2a4c58aded4e440d2a"
+  },
+  "helper_sha256": "5db3d4d1bb40ddf95ebc5da2fb2e4129c921b1d82440bbf817ec99c69def3b27",
+  "wrapper_sha256": "6222ff063eaffbb939ff8da926cf4ebd97ee35ca7729d88d035726e733c9a87f",
+  "providers": 14,
+  "provider_raw_total_bytes": 771515617,
+  "target": {
+    "filename": "Samsara_Core_Build_Continuation.zip",
+    "bytes": 469620062,
+    "sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+    "entries": 12688,
+    "files": 11330,
+    "directories": 1358,
+    "uncompressed_file_bytes": 2790921522
+  },
+  "actual_full_reconstruction_and_independent_readback_PASS": true,
+  "derived_reconstruction_output_paths_now_released": true,
+  "retained_usable_original": "/dev/shm/continuation-current28-lzma/Samsara_Core_Build_Continuation.zip",
+  "release_receipt_sha256": "6942e961ae8a529c705d6d011d10435a5302525e79637bbc51547e7f0e160dd0",
+  "canonical_current26_bootstrap_Git_byte_identity": true,
+  "host_path_authority_map_excluded": true,
+  "providers_example_is_placeholder_only": true,
+  "historical_receipts_and_scripts_clearly_labeled": true,
+  "no_new_remote_custody": true,
+  "no_new_Library_version": true,
+  "no_Git_or_Library_effects": true
+}

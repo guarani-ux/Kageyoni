@@ -1,0 +1,23 @@
+{
+  "target": {
+    "filename": "Samsara_Core_Build_Continuation.zip",
+    "bytes": 469620062,
+    "sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+    "entries": 12688,
+    "files": 11330,
+    "directories": 1358,
+    "uncompressed_file_bytes": 2790921522
+  },
+  "delta": {
+    "filename": "continuation-delta.zip",
+    "bytes": 6562723,
+    "sha256": "8232f66aa91f767ab6c8af72e348c896f46e46e7bce7d8289fe2bda3351f0a49"
+  },
+  "recipe_bytes": 15799,
+  "entry_map_bytes": 13856650,
+  "new_delta_unique_body_bytes": 19234449,
+  "raw_layout_bytes": 3817362,
+  "delta_members": 154,
+  "remote_custody_of_new_artifacts": false,
+  "full_reconstruction_executed": false
+}

@@ -1,0 +1,19 @@
+--- budget-wrapper-antecedent-defff635.py
++++ reconstruct_budget_wrapper.py
+@@ -77,14 +77,14 @@
+              observed_partial_bytes=observed_output, remaining_output_bytes=remaining,
+              tmpfs_free=free, output_reserve_bytes=DISK_RESERVE,
+              cgroup_reserve_bytes=CGROUP_RESERVE, process_budget_bytes=PROCESS_BYTES,
+-             required_tmpfs_remaining_output_readback_and_reserve=remaining + TARGET_BYTES + DISK_RESERVE,
++             required_tmpfs_remaining_output_and_reserve=remaining + DISK_RESERVE,
+              required_cgroup_remaining_output_readback_process_and_reserve=remaining + TARGET_BYTES + PROCESS_BYTES + CGROUP_RESERVE,
+              unchanged_initial_required_peak=INITIAL_REQUIRED)
+     LAST_BUDGET = p
+     assert 2 * TARGET_BYTES + PROCESS_BYTES + CGROUP_RESERVE == INITIAL_REQUIRED
+     assert minimum == low == 0, 'Nonzero cgroup protection requires root inspection'
+     assert resource.getrlimit(resource.RLIMIT_AS) == (PROCESS_BYTES, PROCESS_BYTES)
+-    assert free >= remaining + TARGET_BYTES + DISK_RESERVE, 'Tmpfs remaining output/readback/1GiB reserve insufficient'
++    assert free >= remaining + DISK_RESERVE, 'Tmpfs remaining output/1GiB reserve insufficient'
+     assert available >= remaining + TARGET_BYTES + PROCESS_BYTES + CGROUP_RESERVE, 'Host-bounded memory estimate insufficient'
+     assert peak <= PROCESS_BYTES, 'Process peak RSS exceeds 256MiB allowance'
+     assert oom == BASELINE_OOM, 'Cgroup OOM counters changed'

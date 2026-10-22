@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "archive": "Samsara_Native034_R1_Source_API_Durability_IN_PROGRESS.zip",
+  "bytes": 6288059,
+  "sha256": "6e86e32da1c07453a1f5f0fa316a7fd518093a121073b72535281cba9f912f2f",
+  "manifest_files": 853,
+  "entries": 854,
+  "CRC_every_member_SHA": true,
+  "source_before_after_equal": true,
+  "native_tests": 114,
+  "native_recovery": "FAILED_ON_SEPARATE_COPY_ORIGINAL_RETAINED",
+  "full_release_qualified": false,
+  "raw_custody_limit": "Selected complete failing fixture and complete failed recovery copy included. Other closed raw specimens remain inventoried locally pending full custody.",
+  "encoding": "base64 ASCII per part; decode and concatenate exact offsets",
+  "parts": [
+    {
+      "path": "part-000.base64",
+      "offset": 0,
+      "bytes": 500000,
+      "sha256": "7242bf15f5707c81d0668071b6845d18a4a55ee3537d6f429e176a1bdb4d1506",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "5f35cc83f45a4b86b76717b3f1dcd82dde8298984879ad59ffd3341a6909cbb5",
+      "git_sha1": "5d3668ac42572955ba8b36e55c93445dfb886bf6"
+    },
+    {
+      "path": "part-001.base64",
+      "offset": 500000,
+      "bytes": 500000,
+      "sha256": "6d7dce246eeaac342d4975ce64b2d94607e33a7d8a9856ebe30878595e3a28d8",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "e2f6c081f2fd25442b0b101c8068a77c07d99d1549eb1946a947c1103ba567dc",
+      "git_sha1": "3951a45dfa0f37f0f9b43ff93d4b4575ad6e6103"
+    },
+    {
+      "path": "part-002.base64",
+      "offset": 1000000,
+      "bytes": 500000,
+      "sha256": "b62cb4598bd5a2f3b96b9df6a40cf8a4d613e3948101c173cc2c8c413f768e89",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "2fe3af67c28a95d5fe558c6973d06924342b961944470703562cb45ad0b53da8",
+      "git_sha1": "4a04927d30269ddcf14d46c20bc2686ba81f0635"
+    },
+    {
+      "path": "part-003.base64",
+      "offset": 1500000,
+      "bytes": 500000,
+      "sha256": "3da73bc26c3a8a6c599d521f30cb785f0d4518ff744ec91a23afdff511183475",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "4dfcb85506684c602545adfc66b0d603402b60621f0c29b19f2ffa34f285e1b0",
+      "git_sha1": "54f89e4a56dc81b7c0c179d4472bf8f68d823e5d"
+    },
+    {
+      "path": "part-004.base64",
+      "offset": 2000000,
+      "bytes": 500000,
+      "sha256": "1ca0897d730423919c88fa3cb3fc786417188f4c24db2531da569db47864fb43",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "b9fc30538f982399089a857341a5e6bc04f178e293786986b9b75992939f50e1",
+      "git_sha1": "ef8b4b946b1eac26441dea8a8faa0c264a7eb139"
+    },
+    {
+      "path": "part-005.base64",
+      "offset": 2500000,
+      "bytes": 500000,
+      "sha256": "4ee39d56587b5cfb625933dc0c14fa0636049978d66caa36f48f7cfe08d922b0",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "27da5a0ec29be818d04454aabab5c85d695bb85467686ebd7c12934a49882a4f",
+      "git_sha1": "8f562c5fa97bd5439f2f857beb898157cec21e9e"
+    },
+    {
+      "path": "part-006.base64",
+      "offset": 3000000,
+      "bytes": 500000,
+      "sha256": "74ceba279d86109ac7668addc3904f65338014ea62401ca7543396a5b3c973af",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "18acf00ed5634bff4b411a4cfbbba395ede121f921b75988f223db4958ebe395",
+      "git_sha1": "4cb1a5063ee8314e620de08916975231c25a933e"
+    },
+    {
+      "path": "part-007.base64",
+      "offset": 3500000,
+      "bytes": 500000,
+      "sha256": "a687d9030bb3cea33c9360ab5f10d61ad9f7abb4e619a03233f46a69f89dc3c4",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "132a68b4fa455edc7189452dc71b770a3e132d1e0250f88d3573ed03d99191b2",
+      "git_sha1": "7028e802c05e8d805d7d6a72e130837c722e7da2"
+    },
+    {
+      "path": "part-008.base64",
+      "offset": 4000000,
+      "bytes": 500000,
+      "sha256": "6f26633c0774facf2ba351437be3f5487d9d05f72d58448340a6c71474c6747e",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "0fdf2a94148247958e7d4390ed8f5ec5698c57f327876783d11a244c468e73f9",
+      "git_sha1": "c11c3bee4a0b6c3927f7a8ce961885d57af78274"
+    },
+    {
+      "path": "part-009.base64",
+      "offset": 4500000,
+      "bytes": 500000,
+      "sha256": "ba364f9c14482c041756c5e479d997836edf41f23dac735128b433d7ef520f8f",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "fd51089d617922d9788724b5d6f8bbf2d97841aeeeaff2fd2a2e437a772f830f",
+      "git_sha1": "b102b444d7d555896b5e384fe5e8347d0daed6a6"
+    },
+    {
+      "path": "part-010.base64",
+      "offset": 5000000,
+      "bytes": 500000,
+      "sha256": "44f30b108d7aaa169dbd6ff0fcf73e883810e8e058116ae9a9b7a29ad791059d",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "e55e1a27612b7547c2b899aea98bb3ff4e75cfd3d40df0ca819fda47fd59555d",
+      "git_sha1": "2cf914727d77bb2342181af85b0a2f896369ff5f"
+    },
+    {
+      "path": "part-011.base64",
+      "offset": 5500000,
+      "bytes": 500000,
+      "sha256": "d8a3a6e92a20226b43f38f30c635f09203b1d2bf681972cfa9cebf5eb6b9970a",
+      "ASCII_bytes": 666668,
+      "ASCII_sha256": "7404490ce9ff437d9ecc5cc0162ea777777e1ec47e46a73ecacc292fd18eea6a",
+      "git_sha1": "269d9ab14d90ae3cbe82c9277181ad31aa851e30"
+    },
+    {
+      "path": "part-012.base64",
+      "offset": 6000000,
+      "bytes": 288059,
+      "sha256": "6f40a617059e39792cad16c2ba988a39264642cfdf6b95b56405fe746df6f0f7",
+      "ASCII_bytes": 384080,
+      "ASCII_sha256": "1a6c84c2d332c543ceb5ec08da1e20bbafae1f8efc0ffa9af461086f43346520",
+      "git_sha1": "8d68fbf39c678258c923b04bdf41925522a04a7a"
+    }
+  ]
+}

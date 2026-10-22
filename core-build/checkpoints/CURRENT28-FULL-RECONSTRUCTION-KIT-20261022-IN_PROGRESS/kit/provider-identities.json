@@ -1,0 +1,295 @@
+{
+  "target": {
+    "filename": "Samsara_Core_Build_Continuation.zip",
+    "bytes": 469620062,
+    "sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+    "entries": 12688,
+    "files": 11330,
+    "directories": 1358,
+    "uncompressed_file_bytes": 2790921522
+  },
+  "providers": [
+    {
+      "id": "library-v15",
+      "bytes": 462812341,
+      "sha256": "73738ee2b30962cf461e7c04c499524286b0a81715dbca7f12820618545690b4",
+      "retrieval": {
+        "service": "Library",
+        "library_file_id": "libfile_b4be79d59368819187fae7dceada0199",
+        "file_id": "file_00000000b96081f4b49990af6012adf8",
+        "version_id": "15",
+        "name": "Samsara_Core_Build_Continuation.zip"
+      },
+      "member_count": 7308,
+      "indexed_file_bodies": 7308,
+      "fallback_members_streamed": 1,
+      "suggested_local_filename": "library-v15.zip"
+    },
+    {
+      "id": "current26",
+      "bytes": 62419764,
+      "sha256": "73daef00e272cb6a842d267d2d4b5d4c0bc007b4edb99540960fbb38eccee195",
+      "member_count": 1534,
+      "indexed_file_bodies": 1534,
+      "fallback_members_streamed": 0,
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "9e27e8dc1ae2ed9cf359ddc5cb7ba2d9331b2807",
+        "recipe_path": "core-build/checkpoints/D16-dev26-IN_PROGRESS/current-reconstruction-recipe.json",
+        "recipe_git_blob_sha1": "715d7e8035a82047df68403b4c74433648b76088",
+        "recursive_base_and_provider_dependencies_required": true
+      },
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/current26.json",
+        "bytes": 526525,
+        "sha256": "61e367d967ca086a7201fcc9791cda0d067f713b12f2803ea41dc6c369689588",
+        "computed_git_blob_sha1": "715d7e8035a82047df68403b4c74433648b76088",
+        "canonical_Git_byte_identity": true,
+        "prior_local_copy_note": "526526-byte git/current-reconstruction-recipe.json had one added LF, parsed equivalently but Gitblob65a4c987..., not canonical715d7e8035... . Preserved in reviewed predecessor delta; current bootstrap uses exact526525-byte retained canonical file."
+      },
+      "suggested_local_filename": "current26.zip"
+    },
+    {
+      "id": "native034",
+      "bytes": 6288059,
+      "sha256": "6e86e32da1c07453a1f5f0fa316a7fd518093a121073b72535281cba9f912f2f",
+      "member_count": 854,
+      "indexed_file_bodies": 854,
+      "fallback_members_streamed": 1,
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "b3e470042f3b44926c4e127309fe8ce91c8356c9",
+        "recipe_path": "core-build/checkpoints/NATIVE034-R1-20261022-IN_PROGRESS/recipe.json"
+      },
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/native034.json",
+        "bytes": 5350,
+        "sha256": "dc8ade9f63c1c9802e9eb71dd0b3b547889848d8a173573b0d493bdecc082429",
+        "computed_git_blob_sha1": "9f9bfb791c7b5897a9b86860740729013ee23fa3"
+      },
+      "suggested_local_filename": "native034.zip"
+    },
+    {
+      "id": "product27",
+      "bytes": 2743984,
+      "sha256": "d6f3a9e4253b640fe9c549d20401dbc01a66c0ec847bc3f2d632237871be218d",
+      "member_count": 110,
+      "indexed_file_bodies": 110,
+      "fallback_members_streamed": 110,
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "7e6fcf72dc8f6a0673b4796311b806019310f4e8",
+        "recipe_path": "core-build/checkpoints/PRODUCT27-MEDIA-20261022-IN_PROGRESS/capsule-recipe.json"
+      },
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/product27.json",
+        "bytes": 28087,
+        "sha256": "8bab3ed9eb0ac9d27b3292467801270ec7f9a84a32d17ad9395eae983c2ccb3c",
+        "computed_git_blob_sha1": "9c6ef1de75d9d1dae5218234b24a426f02010796"
+      },
+      "suggested_local_filename": "product27.zip"
+    },
+    {
+      "id": "media26",
+      "bytes": 34631353,
+      "sha256": "d4dd0b4c1b93ec31f514fe283b9516101f1c5eeac5b16566161716a87081705e",
+      "member_count": 906,
+      "indexed_file_bodies": 906,
+      "fallback_members_streamed": 0,
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "7e6fcf72dc8f6a0673b4796311b806019310f4e8",
+        "recipe_path": "core-build/checkpoints/PRODUCT27-MEDIA-20261022-IN_PROGRESS/media-recipe.json"
+      },
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/media26.json",
+        "bytes": 235466,
+        "sha256": "68883c12d6a4379937dbbab635b0f8b61c271029d25070d8e95497bea61a9c37",
+        "computed_git_blob_sha1": "f041b32eb0057536b94094b2cb9ee230366d16c8"
+      },
+      "suggested_local_filename": "media26.zip"
+    },
+    {
+      "id": "product28-source",
+      "bytes": 1547537,
+      "sha256": "6fe85d3213687144b56dcbc2f2f69f1a4be5b61426bd86170f566ea1f39723f3",
+      "member_count": 137,
+      "indexed_file_bodies": 137,
+      "fallback_members_streamed": 0,
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+        "recipe_path": "core-build/checkpoints/PRODUCT28-R3-20261022-IN_PROGRESS/source-recipe.json"
+      },
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/product28-source.json",
+        "bytes": 32707,
+        "sha256": "f2dd1da70b5ad40069769ed28cfbc3ddd8e893c9b42420e744ff6abc1dfca483",
+        "computed_git_blob_sha1": "506674b1cfba8da981e13760dcd255a00b7380e8"
+      },
+      "suggested_local_filename": "product28-source.zip"
+    },
+    {
+      "id": "product27-28-worlds",
+      "bytes": 7441235,
+      "sha256": "6909ebb5d86e719b38e97da41982ecad57da4d45b1d026349038ba026ea554c8",
+      "member_count": 214,
+      "indexed_file_bodies": 214,
+      "fallback_members_streamed": 0,
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+        "recipe_path": "core-build/checkpoints/PRODUCT28-R3-20261022-IN_PROGRESS/worlds-recipe.json"
+      },
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/product27-28-worlds.json",
+        "bytes": 66065,
+        "sha256": "ba0e9ac8006928bc2953e21a54cfbfe2807610c325e5f9d548512ec283393a60",
+        "computed_git_blob_sha1": "921fe3b23f67609f5b0a1e27f085967346882741"
+      },
+      "suggested_local_filename": "product27-28-worlds.zip"
+    },
+    {
+      "id": "product27-r3",
+      "bytes": 7335302,
+      "sha256": "781ccf5cf6c315e3bb72e9ebe9920201f0c00d33960ce312e39c970fe22877ef",
+      "member_count": 291,
+      "indexed_file_bodies": 260,
+      "fallback_members_streamed": 0,
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+        "recipe_path": "core-build/checkpoints/PRODUCT28-R3-20261022-IN_PROGRESS/r3-recipe.json"
+      },
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/product27-r3.json",
+        "bytes": 77687,
+        "sha256": "6e4bd7826f715e19231ade23f6aff7cd2a72e866bd86f3818d141a7239b751f2",
+        "computed_git_blob_sha1": "40a2276a5dc5199aa87d494f1ef997c65968ba21"
+      },
+      "suggested_local_filename": "product27-r3.zip"
+    },
+    {
+      "id": "product28-bounded",
+      "bytes": 497263,
+      "sha256": "4f5521f4952a09567bd784da55df470a699306afad5fc7783810de8208314508",
+      "member_count": 49,
+      "indexed_file_bodies": 49,
+      "fallback_members_streamed": 0,
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "881890787a973a78c0a7ff5ca0e30896afd366c9",
+        "recipe_path": "core-build/checkpoints/PRODUCT28-BOUNDED-QUALIFIED-20261022-IN_PROGRESS/critical-recipe.json"
+      },
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/product28-bounded.json",
+        "bytes": 11773,
+        "sha256": "3b50b80f9357a90b5c3d895323d21ddeded0b0c40d285f4d2ef76e9b52e50854",
+        "computed_git_blob_sha1": "d4701c04a0625ca0a273da3265c99a11849e63f0"
+      },
+      "suggested_local_filename": "product28-bounded.zip"
+    },
+    {
+      "id": "product28-29trees",
+      "bytes": 43533983,
+      "sha256": "c085e73b10c714d2e98d493ea9acd0a6ad8f73c4bfaaf2fadbea860fd6714789",
+      "member_count": 1505,
+      "indexed_file_bodies": 1304,
+      "fallback_members_streamed": 0,
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "881890787a973a78c0a7ff5ca0e30896afd366c9",
+        "recipe_path": "core-build/checkpoints/PRODUCT28-BOUNDED-QUALIFIED-20261022-IN_PROGRESS/body-recipe.json"
+      },
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/product28-29trees.json",
+        "bytes": 455299,
+        "sha256": "e7c49c6a3e9c89949724e80fd033f46460479b90f5e23de79eb687963249e7c0",
+        "computed_git_blob_sha1": "c898f1023e5476dae0dad0660d353bf818effeee"
+      },
+      "suggested_local_filename": "product28-29trees.zip"
+    },
+    {
+      "id": "future18-source",
+      "bytes": 6107013,
+      "sha256": "a1543dcf29c24d40f5c7158564a4a5589d95ab94a9238d66a4501118834c409a",
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+        "recipe_path": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS/critical-recipe.json"
+      },
+      "member_count": 1574,
+      "indexed_file_bodies": 1574,
+      "fallback_members_streamed": 0,
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/future18-source.json",
+        "bytes": 470499,
+        "sha256": "300dff16755fd4437dbb47a56416265c35ea73bb2f68967009dc319f6cf59c7a",
+        "computed_git_blob_sha1": "fa7166881144be2cf32def5c7e69b1a3892625de"
+      },
+      "suggested_local_filename": "future18-source.zip"
+    },
+    {
+      "id": "native17-raw",
+      "bytes": 63842950,
+      "sha256": "deb9cf49b8ec4c642d63dd1629e9a76af91064c6f20f10ea2f3de9a60a14d45f",
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+        "recipe_path": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS/native17-recipe.json"
+      },
+      "member_count": 1468,
+      "indexed_file_bodies": 1423,
+      "fallback_members_streamed": 0,
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/native17-raw.json",
+        "bytes": 548166,
+        "sha256": "c957e36f29b4782e307978635d6712e90cb8881b6d7b93d7b0d94c0d45548de4",
+        "computed_git_blob_sha1": "f0b302246388bf456b3150497929b984376de445"
+      },
+      "suggested_local_filename": "native17-raw.zip"
+    },
+    {
+      "id": "native18-raw",
+      "bytes": 68360077,
+      "sha256": "9aad54982fd63273c30a9514d3a65b7d1878a8eeb77a7e7f4a6c2b11ebdcf3d9",
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+        "recipe_path": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS/native18-recipe.json"
+      },
+      "member_count": 1569,
+      "indexed_file_bodies": 1522,
+      "fallback_members_streamed": 0,
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/native18-raw.json",
+        "bytes": 581006,
+        "sha256": "0384f5e71071ba52067331c74bb63b6b5f16c401af07fcaad10ed82407117fe9",
+        "computed_git_blob_sha1": "a63965654b99a1e28d1fd7a4ec0b19a50bd32fcf"
+      },
+      "suggested_local_filename": "native18-raw.zip"
+    },
+    {
+      "id": "native18-maintenance",
+      "bytes": 3954756,
+      "sha256": "b33b55be1c381b201411032dcd5099bc83dd34d63f0fcf3dbca425d9956abb1e",
+      "retrieval": {
+        "repository": "guarani-ux/SAMSARA",
+        "immutable_commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+        "recipe_path": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS/supplemental-recipe.json"
+      },
+      "member_count": 161,
+      "indexed_file_bodies": 140,
+      "fallback_members_streamed": 0,
+      "recipe_bootstrap": {
+        "delta_member": "provisioning/recipes/native18-maintenance.json",
+        "bytes": 54804,
+        "sha256": "e4c5b487bb164ffabb1bce9fa0cd0317d559f3335471fe7bab4f7c75fb4db787",
+        "computed_git_blob_sha1": "c8571376e2053018ff01a9177de07a8da561f2ea"
+      },
+      "suggested_local_filename": "native18-maintenance.zip"
+    }
+  ],
+  "new_remote_custody": false,
+  "scope": "Exact historical current28/native16 full snapshot, every v15 parent byte and adopted scope retained. Unadopted native18 is future diagnostic evidence only. Current30/newer work excluded. F1-F5/fullrelease false."
+}

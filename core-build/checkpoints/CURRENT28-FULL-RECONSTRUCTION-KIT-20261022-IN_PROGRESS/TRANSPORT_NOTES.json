@@ -1,0 +1,8 @@
+{
+  "source_transport": "Original source/metadata base64; immutable ASCIIpart strictbase64/noBOM/noLF.",
+  "readback_transport": "apply_patch possibleoneLF adapter exactexpectedbytecount+empty/oneLFtail, then completeSHA256/GitID provesbytes.",
+  "initial_readonly_error": "Diagnostic expected dict.files but actualfrozenmanifest files list; .items AttributeError beforepackaging/remoteeffects. Originaltooltrace and initial-readonly-inspection-error.log retained; actual list shape used.",
+  "all_mutation_outcomes_known": true,
+  "all_byte_commands_closed_exit0_serial": true,
+  "no_DB_Engine_Client_native_processprobe_build_test_world_source_Library_automation_effects": true
+}

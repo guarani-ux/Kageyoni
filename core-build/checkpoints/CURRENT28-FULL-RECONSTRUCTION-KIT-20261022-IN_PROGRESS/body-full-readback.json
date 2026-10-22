@@ -1,0 +1,1450 @@
+[
+  {
+    "repo": "SAMSARA",
+    "path": "kit/frozen-manifest.json",
+    "bytes": 13413,
+    "sha256": "aa02af7ade3e8d4a3c28af8833f70453ab08d3ff87e17ff40e3de2ff8ffaf58a",
+    "git_sha1": "43d681ab6316c4c9ffa885e4ba1189e796155172",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/README.md",
+    "bytes": 7107,
+    "sha256": "76afcd25f5f5bb9c773174ade8d6ca8eb718d0fbe33af6ee98f850bae9db7b50",
+    "git_sha1": "95d26409be1ca57ee93d25d6f48c4b4bbd7fe51d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/continuation-reconstruction-recipe.json",
+    "bytes": 16128,
+    "sha256": "fd8587de1001c1a132e3a7adee8d10ffa2df36abca4dad605e45173c8644778c",
+    "git_sha1": "611cef9827d90ef38e9d0d5a2207d24ab823d1e5",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/BUDGET-WRAPPER-SOURCE-AND-PREFLIGHT.json",
+    "bytes": 1917,
+    "sha256": "149ee30a6dadd48ced25f2363a9b22c1be04258a2b00ba15fb1e6401949a1307",
+    "git_sha1": "2d2110f95739070dc10dee5122a5260e6c316620",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/budget-wrapper-disk-accounting-r2.diff",
+    "bytes": 1490,
+    "sha256": "6c871c5427b63a4967a4703465a80e3aebf0a91da9b5c40bfd549a5592de542d",
+    "git_sha1": "8a19da9236350f223e1b1b7720dc70043a240f5c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/current26-bootstrap-canonicality-proof.json",
+    "bytes": 854,
+    "sha256": "0e8e00f89c3cb66cea9ff76925d333ead346b93187839b0d781a69d62a19cae6",
+    "git_sha1": "9d14fc696f542f33d12e2d647a2deaad084078b6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/LOCAL-RECONSTRUCTION-INPUTS-RECEIPT.json",
+    "bytes": 4673,
+    "sha256": "2577d2d177f1d9bac17dde2e2e54dbf068cf424addedbb30f5c3942a999ef3f6",
+    "git_sha1": "6cb7a5f6a21fe6cae78ad330f9c8741f8332daad",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/budget-wrapper-disk-accounting-r2.json",
+    "bytes": 824,
+    "sha256": "c708f315aeda4c0d1bce691408e98aaddfef7fad736802d10463304fffc7d2b5",
+    "git_sha1": "0b49e8c0384f2ac3b243f6541e0cc48328875ca1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/execution-full-r1.stdout",
+    "bytes": 542,
+    "sha256": "78a6bd13b3f89e84c84656344dab802de159d63ebeaa80fff3458a3dc90ffa7a",
+    "git_sha1": "da77856866a4711a8efd1ddadca3abc71af06018",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/independent-full-r1-readback.json",
+    "bytes": 109003,
+    "sha256": "3ab8dc6ef3adb21fac2c5140f0ca87e6c429752c50c7cb2d153abfa66f517a30",
+    "git_sha1": "fd6b08f1dfcb89e7162b11b480295b16eb42fa8d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/execution-full-r1.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/execution-full-r1.json",
+    "bytes": 301722,
+    "sha256": "095a9842f2961cb569f0a35294fe378fc25d1130e296ebc4f6a9df55f7ba14bd",
+    "git_sha1": "3148e90efe6c69e58050366d5a5a393223525f4e",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/independent-full-r1-readback.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/independent-full-r1-readback.stdout",
+    "bytes": 82201,
+    "sha256": "582b44d653ea3d4dac739983a92514483fd70828d5705be0636b61d3a2383bdc",
+    "git_sha1": "4ed9120a376d65c656fb6477f697eb73deeaa5be",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/new-derived-archive-release-proposal.json",
+    "bytes": 8329,
+    "sha256": "98bd5d5abdf863163fdfe1b7aaecdffdcbc9985eb0379b3eef180bd091c6b49f",
+    "git_sha1": "f7671d64716fc614ef77fa35fc14cedd8419a30b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/new-derived-archive-release-receipt.json",
+    "bytes": 3504,
+    "sha256": "6942e961ae8a529c705d6d011d10435a5302525e79637bbc51547e7f0e160dd0",
+    "git_sha1": "ec4f6919bf0858008beb220f2330a24b13e78016",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r1-failure.json",
+    "bytes": 4562,
+    "sha256": "4bc7158264be7c7876dd0d5b0368d5837a5354c49e2b45bdb32a88bfc6376ca7",
+    "git_sha1": "1a18edaf2997d52e1061986f1593093211a53269",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/package-recipe-delta.stdout",
+    "bytes": 694,
+    "sha256": "d2400071462039ce29e23b2a36867b18cd8755a3a960ab12ce065930621c3012",
+    "git_sha1": "0b2d4c9f722c1aa83845aac72f1e072216ee988c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/partial-range-proof.json",
+    "bytes": 1544,
+    "sha256": "c1e14177febc237ad5f757d04ddc20b111d5e86f6ac960a2dafe9de4d60137bb",
+    "git_sha1": "50d8f44ab0cced27b90993e46d76ddcc7e3c684b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/package-recipe-delta.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r2.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r1.stdout",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r2.json",
+    "bytes": 11439,
+    "sha256": "9340604a39d347d533266df86d80c284e4ba5f50b9bf7d8756d692816ce42f3e",
+    "git_sha1": "0dac15c993d3e442a0c0f10c7c0991cd723f784d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r1.stderr",
+    "bytes": 703,
+    "sha256": "cf53690c80c94d7a40d7796993ed64bf1ddfdf50fdf85ff29ac75b35da1cf8cd",
+    "git_sha1": "dd9938890a472f39efdd6b53409f23ff1ca5751a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/verify-inputs.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/recipe-delta-package-receipt.json",
+    "bytes": 694,
+    "sha256": "d2400071462039ce29e23b2a36867b18cd8755a3a960ab12ce065930621c3012",
+    "git_sha1": "0b2d4c9f722c1aa83845aac72f1e072216ee988c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/unmapped-body-delta-index.json",
+    "bytes": 42993,
+    "sha256": "33954534ef2b0c1822512236f886fa2ac162d71321ee431df6b78288280942a2",
+    "git_sha1": "94a067a3626c629d9f7744210f30dc8d92f26a99",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r2.stdout",
+    "bytes": 159,
+    "sha256": "1b4c9290bc9e447d66ad2f9fde440a9990e2ab474ff04978b8145cb4f3cf72f3",
+    "git_sha1": "03cd2741abacf3976691f18ad5aea4df31838732",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-extra-LF-bootstrap/continuation-reconstruction-recipe.json",
+    "bytes": 15799,
+    "sha256": "668999bb78100d18538396c71d6d84726fd73caf5616ee5bfd7aaf056f7c86c6",
+    "git_sha1": "de4637b207e58fbcba01c43b398c834fa93bcbd9",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-extra-LF-bootstrap/package-recipe-delta.stdout",
+    "bytes": 694,
+    "sha256": "0ee854d64921e8a38a7644c546968a4a5656888c3c570475817a0745eb9f599e",
+    "git_sha1": "8a1fab4f45d66f89d4e4471ba2d180e10bb174d9",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-THIS-host-receipts/verify-inputs.stdout",
+    "bytes": 377,
+    "sha256": "941e561faf0793de665fdf14685211e65c83bfe92b5b1a7eeb7a2e1ee632301f",
+    "git_sha1": "5529a1ee5081d1b8f017cb356564ebdfd9d72254",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-extra-LF-bootstrap/package-recipe-delta.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-extra-LF-bootstrap/verify-inputs.stdout",
+    "bytes": 377,
+    "sha256": "941e561faf0793de665fdf14685211e65c83bfe92b5b1a7eeb7a2e1ee632301f",
+    "git_sha1": "5529a1ee5081d1b8f017cb356564ebdfd9d72254",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-tools/budget-wrapper-antecedent-defff635.py",
+    "bytes": 10526,
+    "sha256": "defff6358510478f246b3a6c86e04ba31973d13e26c3e8c85f5fce339d002549",
+    "git_sha1": "948347477ec59fe1c601d8efb731d69c4e615ceb",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-extra-LF-bootstrap/recipe-delta-package-receipt.json",
+    "bytes": 694,
+    "sha256": "0ee854d64921e8a38a7644c546968a4a5656888c3c570475817a0745eb9f599e",
+    "git_sha1": "8a1fab4f45d66f89d4e4471ba2d180e10bb174d9",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-extra-LF-bootstrap/verify-inputs.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provider-identities.json",
+    "bytes": 12626,
+    "sha256": "e712d73a572382751db6fe9a80fbf64f4ce7d06fa7b1bea80d43e7fe642e7fd0",
+    "git_sha1": "039e6179203132ace16b3a00618b117f0cc9b68f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/providers.example.json",
+    "bytes": 947,
+    "sha256": "4fad6fc25f61f07129b3b64ca1a11ca6bc90bbcac275be5dc517f5085d347042",
+    "git_sha1": "611487361741f33310c4e63efd48a3e06526c4f6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/historical-helpers/current26.py",
+    "bytes": 3065,
+    "sha256": "b6a6e9424fc9782d75718d667da21849c44b06aa0901ddd7208d8f93ef559bc4",
+    "git_sha1": "87004dfc85bd4211f334fe00d4db4bb869875bc0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/historical-tools/verify_reconstructed_full_r1.py",
+    "bytes": 6063,
+    "sha256": "29f0d75b56eb4d4a26eebbd84364792e71fc2f9be8118ab241d1b86afa9bc86e",
+    "git_sha1": "9592446204daff878310402fd3c13a2fb8b03c41",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/historical-helpers/product27-media.py",
+    "bytes": 1717,
+    "sha256": "23dc225faa3f5c6411fc1f0c83ae4dcfd91f36c17eb78e359ee0164ffcc078a4",
+    "git_sha1": "ccf4e4c2fbe54dd9b6946ef20a62e00f9c19e55a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/historical-helpers/product28-r3.py",
+    "bytes": 1587,
+    "sha256": "7081da65b98cf5bf7de817273fea8eca673cbe98948cfcd924656f7bb6c74c8d",
+    "git_sha1": "9056de2493af3ed30f63469bd3fe6abfa8752895",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/historical-helpers/native18-future.py",
+    "bytes": 1823,
+    "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5",
+    "git_sha1": "adb6f5548da9f8980cd07748e3c75818261e886f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/historical-helpers/product28-bounded.py",
+    "bytes": 1587,
+    "sha256": "7081da65b98cf5bf7de817273fea8eca673cbe98948cfcd924656f7bb6c74c8d",
+    "git_sha1": "9056de2493af3ed30f63469bd3fe6abfa8752895",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/receipts/native18.json",
+    "bytes": 6541,
+    "sha256": "ed134b7a17780a1d134f15d5ba51fe6bb88100298ca26dacccdc5f49db2739e3",
+    "git_sha1": "50bf952ff4957655d96e7358cc67a43f33933474",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/receipts/bounded.json",
+    "bytes": 27693,
+    "sha256": "57d00898617be7c1f25c7d354e89a25e4e58343ad17c55549abcf2640e5aff97",
+    "git_sha1": "dd8ffed1feea36b1c4b48c23859e019e52524395",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/receipts/native034.json",
+    "bytes": 12441,
+    "sha256": "a326350c061258e5c5ee5a54486694c9eb160a61e55b39ebb7b46b3705dceb0c",
+    "git_sha1": "9af92c9febc92d86e171e51403306ca43d0672ef",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/receipts/product27.json",
+    "bytes": 8796,
+    "sha256": "a0433d14590dfa7d9d0b46302af4f6cf010a1eb992b3b39b196a219857450cfe",
+    "git_sha1": "0887e3e7d9ab897c45672fc0567840feaeb03118",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/media26.json",
+    "bytes": 235466,
+    "sha256": "68883c12d6a4379937dbbab635b0f8b61c271029d25070d8e95497bea61a9c37",
+    "git_sha1": "f041b32eb0057536b94094b2cb9ee230366d16c8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/current26.json",
+    "bytes": 526525,
+    "sha256": "61e367d967ca086a7201fcc9791cda0d067f713b12f2803ea41dc6c369689588",
+    "git_sha1": "715d7e8035a82047df68403b4c74433648b76088",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/future18-source.json",
+    "bytes": 470499,
+    "sha256": "300dff16755fd4437dbb47a56416265c35ea73bb2f68967009dc319f6cf59c7a",
+    "git_sha1": "fa7166881144be2cf32def5c7e69b1a3892625de",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/receipts/product28.json",
+    "bytes": 27671,
+    "sha256": "d819c01af72fedc014039d6cef58b7a005d490a6a26542c6fe5a521dfa1e8c57",
+    "git_sha1": "78fc0f2042738bb94ee10fae3d5243fe5945dd63",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/native034.json",
+    "bytes": 5350,
+    "sha256": "dc8ade9f63c1c9802e9eb71dd0b3b547889848d8a173573b0d493bdecc082429",
+    "git_sha1": "9f9bfb791c7b5897a9b86860740729013ee23fa3",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/native18-raw.json",
+    "bytes": 581006,
+    "sha256": "0384f5e71071ba52067331c74bb63b6b5f16c401af07fcaad10ed82407117fe9",
+    "git_sha1": "a63965654b99a1e28d1fd7a4ec0b19a50bd32fcf",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/native18-maintenance.json",
+    "bytes": 54804,
+    "sha256": "e4c5b487bb164ffabb1bce9fa0cd0317d559f3335471fe7bab4f7c75fb4db787",
+    "git_sha1": "c8571376e2053018ff01a9177de07a8da561f2ea",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/native17-raw.json",
+    "bytes": 548166,
+    "sha256": "c957e36f29b4782e307978635d6712e90cb8881b6d7b93d7b0d94c0d45548de4",
+    "git_sha1": "f0b302246388bf456b3150497929b984376de445",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/product28-29trees.json",
+    "bytes": 455299,
+    "sha256": "e7c49c6a3e9c89949724e80fd033f46460479b90f5e23de79eb687963249e7c0",
+    "git_sha1": "c898f1023e5476dae0dad0660d353bf818effeee",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/product27-28-worlds.json",
+    "bytes": 66065,
+    "sha256": "ba0e9ac8006928bc2953e21a54cfbfe2807610c325e5f9d548512ec283393a60",
+    "git_sha1": "921fe3b23f67609f5b0a1e27f085967346882741",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/product27.json",
+    "bytes": 28087,
+    "sha256": "8bab3ed9eb0ac9d27b3292467801270ec7f9a84a32d17ad9395eae983c2ccb3c",
+    "git_sha1": "9c6ef1de75d9d1dae5218234b24a426f02010796",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/product27-r3.json",
+    "bytes": 77687,
+    "sha256": "6e4bd7826f715e19231ade23f6aff7cd2a72e866bd86f3818d141a7239b751f2",
+    "git_sha1": "40a2276a5dc5199aa87d494f1ef997c65968ba21",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/reconstruct_continuation.py",
+    "bytes": 7876,
+    "sha256": "5db3d4d1bb40ddf95ebc5da2fb2e4129c921b1d82440bbf817ec99c69def3b27",
+    "git_sha1": "87593eaf60ff8724235db759c18f82ee34dad7f6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/reconstruct_budget_wrapper.py",
+    "bytes": 10478,
+    "sha256": "6222ff063eaffbb939ff8da926cf4ebd97ee35ca7729d88d035726e733c9a87f",
+    "git_sha1": "7c7b5854c6a4d31bd48cd5f7f1ff39187768065f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/product28-source.json",
+    "bytes": 32707,
+    "sha256": "f2dd1da70b5ad40069769ed28cfbc3ddd8e893c9b42420e744ff6abc1dfca483",
+    "git_sha1": "506674b1cfba8da981e13760dcd255a00b7380e8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit/provisioning/recipes/product28-bounded.json",
+    "bytes": 11773,
+    "sha256": "3b50b80f9357a90b5c3d895323d21ddeded0b0c40d285f4d2ef76e9b52e50854",
+    "git_sha1": "d4701c04a0625ca0a273da3265c99a11849e63f0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-recipe.json",
+    "bytes": 28373,
+    "sha256": "ff79609878bcdac44def175a7bd91dc5586160dc1a72bf0f7b70ef55845b56fc",
+    "git_sha1": "0d6b7fd86ccaad873ba20568cde2fbbc5d514abf",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "reconstruct.py",
+    "bytes": 1823,
+    "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5",
+    "git_sha1": "adb6f5548da9f8980cd07748e3c75818261e886f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "PORTABLE-KIT-RECEIPT.json",
+    "bytes": 2000,
+    "sha256": "0f6f250a044245ae7c80fce8800a060c5700db676a7a90bb2a176f4f5acde758",
+    "git_sha1": "2d3397ee01e6c534e31572332963ba4cd880c783",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "context.json",
+    "bytes": 2616,
+    "sha256": "fb07a5914fb105bc8a096f90b2b7f164343721b9abe8c87f1201394bfcd884c8",
+    "git_sha1": "6811429cff4f9d68af5ff30454cb074fa1361df4",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-003.base64",
+    "bytes": 666668,
+    "sha256": "caaf3e3cd9d18959416fa6b967b5f6c30ac0a021cd1b8193a0b08b0b8fe6ff48",
+    "git_sha1": "985da06984e59df3b6c771e2a1554d68220f3d93",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-000.base64",
+    "bytes": 666668,
+    "sha256": "a7a92bb69a505a75366cf9d455ab053ef54c37ff58e274f547ca4ee8f5f367ac",
+    "git_sha1": "51dee3f876a1dea84227a134ffd5b3fa135e3048",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-002.base64",
+    "bytes": 666668,
+    "sha256": "2022e554bbce8be331ae75bb03b5585fd705180d26d8fe497f36e0591042d49d",
+    "git_sha1": "e18be89342f3d05d4ae4c3be4aefd52dc2f62c04",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-001.base64",
+    "bytes": 666668,
+    "sha256": "a8e3dfac777dbb58ca24dbaf00bfa1607e603890a217bd004d8572251a2e7e2c",
+    "git_sha1": "39b2f3dbb03e9c22e4ea5596094a76a0bce90b37",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-006.base64",
+    "bytes": 666668,
+    "sha256": "67ec235a4276b7c419edd9dee0b8d3b466f8a144dba8c209000979f20e141a26",
+    "git_sha1": "55efa63fb505e4361938320677c16ce17dd4f5cd",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-007.base64",
+    "bytes": 666668,
+    "sha256": "ee918d688cb947316bf07f4abe0e1ecffe11c4d9f82b6d6bb3e73b432184cf51",
+    "git_sha1": "644ac1c2c5bb1c62e6a8949040e8119d9f14e6b1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-004.base64",
+    "bytes": 666668,
+    "sha256": "7923ce727435279c2f9453af81af5de3480556f57bc44f13c83e9882b0698362",
+    "git_sha1": "ef4949d444de6c2bf5466d024f66bc768d242036",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-005.base64",
+    "bytes": 666668,
+    "sha256": "c66eb960be5aee11735d39477afec16945a91ebc36f7338886237d85beeeb4d1",
+    "git_sha1": "3487c83c90e4589acb638ea7db19862fd74fc038",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-010.base64",
+    "bytes": 666668,
+    "sha256": "ae19c8afcd4cbb88e8c57293889e197ea6bc2d8705649d1d46bbc45c856a94f9",
+    "git_sha1": "4b68c1d3b04c1f77e1bec99caa71f4c0fa94b455",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-008.base64",
+    "bytes": 666668,
+    "sha256": "3ec1a21044044331f37368e9e5202d86446c72e420638ed1d2782764d9f423a9",
+    "git_sha1": "434151c48bfa6c6db2611cd73e5fff519b662a37",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-009.base64",
+    "bytes": 666668,
+    "sha256": "30e0e1a7ae4a293ad492c75e9b578130d211bf492b8d12f9a34cda4d6d26eff2",
+    "git_sha1": "4617f8f3131e2b7c0a387aba114aec4991735411",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-011.base64",
+    "bytes": 666668,
+    "sha256": "2909951c0d58d475674398f5b6785cae489c7df79e703dcdd96129a76a1e9fdf",
+    "git_sha1": "64c07ce5bf1428e331fdf0fb470c2c146ebb7651",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "CUSTODY_README.md",
+    "bytes": 3062,
+    "sha256": "edad5083f44a7fd8dc4c906770c0a865123a0a1b56305e18159ab5e4fbb601c2",
+    "git_sha1": "0f3688cb476f9f60b70d918790283361cb228e3e",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-012.base64",
+    "bytes": 666668,
+    "sha256": "66a573df15ce1d530d786ee7345c209b4f04c18b3c5accffe46f1396724588d3",
+    "git_sha1": "0e375690a4148f3f6f11a0af91f1e6fc87b31ad2",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-013.base64",
+    "bytes": 666668,
+    "sha256": "5dfb8afb2d8c3edd3e198ed05336b9e699288323ca6380070ff5010b19014e69",
+    "git_sha1": "8320ea5d80644bdf6e73a23584ee0d7925142258",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "kit-parts/part-014.base64",
+    "bytes": 368792,
+    "sha256": "b0701b5fe407e104a44c033e9b52341efd8529723398454452e08d95ecd868dd",
+    "git_sha1": "831359e3f732bfd78753e66008e78ac9d1f7855a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "source-before.json",
+    "bytes": 30840,
+    "sha256": "2a5619926c73a7e83540bb3b7286d55d06e5c236e08075036cea875a680d68e0",
+    "git_sha1": "b4024ef3830a9ee7a8dd1402ccb1fe860cdd12d0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "capture-result.json",
+    "bytes": 382,
+    "sha256": "107d1bc13571f8ddb87fd9b6186646e4aaae3ddd7f7aa8338c9ebfe9c9d4b43d",
+    "git_sha1": "cb61329afc92f9c615c9bb08b68cff552ab76039",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "source-after.json",
+    "bytes": 30840,
+    "sha256": "2a5619926c73a7e83540bb3b7286d55d06e5c236e08075036cea875a680d68e0",
+    "git_sha1": "b4024ef3830a9ee7a8dd1402ccb1fe860cdd12d0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "delta-member-proof.json",
+    "bytes": 38536,
+    "sha256": "253fe37e772daa740845cb8b8132672065858219445e077465e1a6ff2f3758fe",
+    "git_sha1": "dce0992f44bf8348ea53e50b4978185b0f6d287b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "ANCHOR_READBACK.json",
+    "bytes": 7040,
+    "sha256": "4525c2c2e250ee9d1ee0e69b2c2cbd41f528b7070e7b6b1fde34777f6618ecc4",
+    "git_sha1": "dbd03a7fb2be1beb46c4463933360e7d4b898dbc",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "anchor-remote-proof-plan.json",
+    "bytes": 7668,
+    "sha256": "9315a3b0f2ef521ea8ccc8200dccdca077384cec82e46f31e64a26bcedbe96de",
+    "git_sha1": "81e7780aff511db978b6b44458a13f1a6a113109",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "anchor-tree-traversals.json",
+    "bytes": 198033,
+    "sha256": "4064ba39257aaa6e6ca9c5db6fdf670f62b66d2ca20831e0da2c04720648e00f",
+    "git_sha1": "bb424862ead42f981f404a8891f6192bb03d930d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "anchor-readback/current26-base-0.json",
+    "bytes": 397740,
+    "sha256": "71ffa2affcc2b014d13d56b2c72a38bf5245bb4c39f595239bde6c1d9ada19b8",
+    "git_sha1": "440d038b816a16d89b4d7cedb141db74d992ab98",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "anchor-readback/current26-base-1.json",
+    "bytes": 5686,
+    "sha256": "894b51e4bd284e933f2fad2e842cf8bf18c5f5f90bfef218ff92f882b01145b4",
+    "git_sha1": "c1c9b36860148dcaef50fe50ce33c5120391de7c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "verify_readback.py",
+    "bytes": 1199,
+    "sha256": "e9edbb9cc4a21789a04ae4988dabe4652bdf52d54164dc0302c2b35776c78e77",
+    "git_sha1": "83d29d88956b1c7b2205e7052b12575e1366abc0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "initial-readonly-inspection-error.log",
+    "bytes": 303,
+    "sha256": "42778ba21a295f21415c23301e0d4ff12631a9c030025516cf49cc49cb45af9b",
+    "git_sha1": "ec1c84af090eea68b8f440cbb44d1b1aa2bb0ff1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "prepare.py",
+    "bytes": 9008,
+    "sha256": "2ab1f4fa30bc5605a0d94064db1592a9852ea3a57618020cf19b805236b4264e",
+    "git_sha1": "dfed86e6446e2723542fc3e26bc058d0200eb147",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/README.md",
+    "bytes": 7107,
+    "sha256": "76afcd25f5f5bb9c773174ade8d6ca8eb718d0fbe33af6ee98f850bae9db7b50",
+    "git_sha1": "95d26409be1ca57ee93d25d6f48c4b4bbd7fe51d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "check_tree_hash.py",
+    "bytes": 872,
+    "sha256": "f7154a84eabe03cb6360ae475edfeaa2eed96e1ef964afff3047314fa1f8ce5d",
+    "git_sha1": "7cc220dafac693391a46b20edb482f8520f96be3",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "SAMSARA",
+    "path": "fresh-preflight.json",
+    "bytes": 23851,
+    "sha256": "691a13d05bc3ce22d3c88eb62fe47e6902ae79afcacd88e35a9ea7aa21a46d18",
+    "git_sha1": "7052113a0186bcc771c45a137c80a06e1b783b87",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/continuation-reconstruction-recipe.json",
+    "bytes": 16128,
+    "sha256": "fd8587de1001c1a132e3a7adee8d10ffa2df36abca4dad605e45173c8644778c",
+    "git_sha1": "611cef9827d90ef38e9d0d5a2207d24ab823d1e5",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/BUDGET-WRAPPER-SOURCE-AND-PREFLIGHT.json",
+    "bytes": 1917,
+    "sha256": "149ee30a6dadd48ced25f2363a9b22c1be04258a2b00ba15fb1e6401949a1307",
+    "git_sha1": "2d2110f95739070dc10dee5122a5260e6c316620",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/budget-wrapper-disk-accounting-r2.diff",
+    "bytes": 1490,
+    "sha256": "6c871c5427b63a4967a4703465a80e3aebf0a91da9b5c40bfd549a5592de542d",
+    "git_sha1": "8a19da9236350f223e1b1b7720dc70043a240f5c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/LOCAL-RECONSTRUCTION-INPUTS-RECEIPT.json",
+    "bytes": 4673,
+    "sha256": "2577d2d177f1d9bac17dde2e2e54dbf068cf424addedbb30f5c3942a999ef3f6",
+    "git_sha1": "6cb7a5f6a21fe6cae78ad330f9c8741f8332daad",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/frozen-manifest.json",
+    "bytes": 13413,
+    "sha256": "aa02af7ade3e8d4a3c28af8833f70453ab08d3ff87e17ff40e3de2ff8ffaf58a",
+    "git_sha1": "43d681ab6316c4c9ffa885e4ba1189e796155172",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/current26-bootstrap-canonicality-proof.json",
+    "bytes": 854,
+    "sha256": "0e8e00f89c3cb66cea9ff76925d333ead346b93187839b0d781a69d62a19cae6",
+    "git_sha1": "9d14fc696f542f33d12e2d647a2deaad084078b6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/budget-wrapper-disk-accounting-r2.json",
+    "bytes": 824,
+    "sha256": "c708f315aeda4c0d1bce691408e98aaddfef7fad736802d10463304fffc7d2b5",
+    "git_sha1": "0b49e8c0384f2ac3b243f6541e0cc48328875ca1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/execution-full-r1.stdout",
+    "bytes": 542,
+    "sha256": "78a6bd13b3f89e84c84656344dab802de159d63ebeaa80fff3458a3dc90ffa7a",
+    "git_sha1": "da77856866a4711a8efd1ddadca3abc71af06018",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/execution-full-r1.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/independent-full-r1-readback.json",
+    "bytes": 109003,
+    "sha256": "3ab8dc6ef3adb21fac2c5140f0ca87e6c429752c50c7cb2d153abfa66f517a30",
+    "git_sha1": "fd6b08f1dfcb89e7162b11b480295b16eb42fa8d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/execution-full-r1.json",
+    "bytes": 301722,
+    "sha256": "095a9842f2961cb569f0a35294fe378fc25d1130e296ebc4f6a9df55f7ba14bd",
+    "git_sha1": "3148e90efe6c69e58050366d5a5a393223525f4e",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/independent-full-r1-readback.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/new-derived-archive-release-proposal.json",
+    "bytes": 8329,
+    "sha256": "98bd5d5abdf863163fdfe1b7aaecdffdcbc9985eb0379b3eef180bd091c6b49f",
+    "git_sha1": "f7671d64716fc614ef77fa35fc14cedd8419a30b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/package-recipe-delta.stdout",
+    "bytes": 694,
+    "sha256": "d2400071462039ce29e23b2a36867b18cd8755a3a960ab12ce065930621c3012",
+    "git_sha1": "0b2d4c9f722c1aa83845aac72f1e072216ee988c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/new-derived-archive-release-receipt.json",
+    "bytes": 3504,
+    "sha256": "6942e961ae8a529c705d6d011d10435a5302525e79637bbc51547e7f0e160dd0",
+    "git_sha1": "ec4f6919bf0858008beb220f2330a24b13e78016",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/independent-full-r1-readback.stdout",
+    "bytes": 82201,
+    "sha256": "582b44d653ea3d4dac739983a92514483fd70828d5705be0636b61d3a2383bdc",
+    "git_sha1": "4ed9120a376d65c656fb6477f697eb73deeaa5be",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/package-recipe-delta.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r1-failure.json",
+    "bytes": 4562,
+    "sha256": "4bc7158264be7c7876dd0d5b0368d5837a5354c49e2b45bdb32a88bfc6376ca7",
+    "git_sha1": "1a18edaf2997d52e1061986f1593093211a53269",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/partial-range-proof.json",
+    "bytes": 1544,
+    "sha256": "c1e14177febc237ad5f757d04ddc20b111d5e86f6ac960a2dafe9de4d60137bb",
+    "git_sha1": "50d8f44ab0cced27b90993e46d76ddcc7e3c684b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r1.stdout",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r1.stderr",
+    "bytes": 703,
+    "sha256": "cf53690c80c94d7a40d7796993ed64bf1ddfdf50fdf85ff29ac75b35da1cf8cd",
+    "git_sha1": "dd9938890a472f39efdd6b53409f23ff1ca5751a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/recipe-delta-package-receipt.json",
+    "bytes": 694,
+    "sha256": "d2400071462039ce29e23b2a36867b18cd8755a3a960ab12ce065930621c3012",
+    "git_sha1": "0b2d4c9f722c1aa83845aac72f1e072216ee988c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r2.stdout",
+    "bytes": 159,
+    "sha256": "1b4c9290bc9e447d66ad2f9fde440a9990e2ab474ff04978b8145cb4f3cf72f3",
+    "git_sha1": "03cd2741abacf3976691f18ad5aea4df31838732",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r2.json",
+    "bytes": 11439,
+    "sha256": "9340604a39d347d533266df86d80c284e4ba5f50b9bf7d8756d692816ce42f3e",
+    "git_sha1": "0dac15c993d3e442a0c0f10c7c0991cd723f784d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/preflight-budget-r2.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/verify-inputs.stdout",
+    "bytes": 377,
+    "sha256": "941e561faf0793de665fdf14685211e65c83bfe92b5b1a7eeb7a2e1ee632301f",
+    "git_sha1": "5529a1ee5081d1b8f017cb356564ebdfd9d72254",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-extra-LF-bootstrap/continuation-reconstruction-recipe.json",
+    "bytes": 15799,
+    "sha256": "668999bb78100d18538396c71d6d84726fd73caf5616ee5bfd7aaf056f7c86c6",
+    "git_sha1": "de4637b207e58fbcba01c43b398c834fa93bcbd9",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/unmapped-body-delta-index.json",
+    "bytes": 42993,
+    "sha256": "33954534ef2b0c1822512236f886fa2ac162d71321ee431df6b78288280942a2",
+    "git_sha1": "94a067a3626c629d9f7744210f30dc8d92f26a99",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-THIS-host-receipts/verify-inputs.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-extra-LF-bootstrap/package-recipe-delta.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-extra-LF-bootstrap/verify-inputs.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "git_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-extra-LF-bootstrap/recipe-delta-package-receipt.json",
+    "bytes": 694,
+    "sha256": "0ee854d64921e8a38a7644c546968a4a5656888c3c570475817a0745eb9f599e",
+    "git_sha1": "8a1fab4f45d66f89d4e4471ba2d180e10bb174d9",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-extra-LF-bootstrap/package-recipe-delta.stdout",
+    "bytes": 694,
+    "sha256": "0ee854d64921e8a38a7644c546968a4a5656888c3c570475817a0745eb9f599e",
+    "git_sha1": "8a1fab4f45d66f89d4e4471ba2d180e10bb174d9",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-tools/budget-wrapper-antecedent-defff635.py",
+    "bytes": 10526,
+    "sha256": "defff6358510478f246b3a6c86e04ba31973d13e26c3e8c85f5fce339d002549",
+    "git_sha1": "948347477ec59fe1c601d8efb731d69c4e615ceb",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-tools/verify_reconstructed_full_r1.py",
+    "bytes": 6063,
+    "sha256": "29f0d75b56eb4d4a26eebbd84364792e71fc2f9be8118ab241d1b86afa9bc86e",
+    "git_sha1": "9592446204daff878310402fd3c13a2fb8b03c41",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provider-identities.json",
+    "bytes": 12626,
+    "sha256": "e712d73a572382751db6fe9a80fbf64f4ce7d06fa7b1bea80d43e7fe642e7fd0",
+    "git_sha1": "039e6179203132ace16b3a00618b117f0cc9b68f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/historical-extra-LF-bootstrap/verify-inputs.stdout",
+    "bytes": 377,
+    "sha256": "941e561faf0793de665fdf14685211e65c83bfe92b5b1a7eeb7a2e1ee632301f",
+    "git_sha1": "5529a1ee5081d1b8f017cb356564ebdfd9d72254",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/historical-helpers/current26.py",
+    "bytes": 3065,
+    "sha256": "b6a6e9424fc9782d75718d667da21849c44b06aa0901ddd7208d8f93ef559bc4",
+    "git_sha1": "87004dfc85bd4211f334fe00d4db4bb869875bc0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/historical-helpers/native18-future.py",
+    "bytes": 1823,
+    "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5",
+    "git_sha1": "adb6f5548da9f8980cd07748e3c75818261e886f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/historical-helpers/product27-media.py",
+    "bytes": 1717,
+    "sha256": "23dc225faa3f5c6411fc1f0c83ae4dcfd91f36c17eb78e359ee0164ffcc078a4",
+    "git_sha1": "ccf4e4c2fbe54dd9b6946ef20a62e00f9c19e55a",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/providers.example.json",
+    "bytes": 947,
+    "sha256": "4fad6fc25f61f07129b3b64ca1a11ca6bc90bbcac275be5dc517f5085d347042",
+    "git_sha1": "611487361741f33310c4e63efd48a3e06526c4f6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/historical-helpers/product28-r3.py",
+    "bytes": 1587,
+    "sha256": "7081da65b98cf5bf7de817273fea8eca673cbe98948cfcd924656f7bb6c74c8d",
+    "git_sha1": "9056de2493af3ed30f63469bd3fe6abfa8752895",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/historical-helpers/product28-bounded.py",
+    "bytes": 1587,
+    "sha256": "7081da65b98cf5bf7de817273fea8eca673cbe98948cfcd924656f7bb6c74c8d",
+    "git_sha1": "9056de2493af3ed30f63469bd3fe6abfa8752895",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/receipts/native034.json",
+    "bytes": 12441,
+    "sha256": "a326350c061258e5c5ee5a54486694c9eb160a61e55b39ebb7b46b3705dceb0c",
+    "git_sha1": "9af92c9febc92d86e171e51403306ca43d0672ef",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/receipts/bounded.json",
+    "bytes": 27693,
+    "sha256": "57d00898617be7c1f25c7d354e89a25e4e58343ad17c55549abcf2640e5aff97",
+    "git_sha1": "dd8ffed1feea36b1c4b48c23859e019e52524395",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/receipts/native18.json",
+    "bytes": 6541,
+    "sha256": "ed134b7a17780a1d134f15d5ba51fe6bb88100298ca26dacccdc5f49db2739e3",
+    "git_sha1": "50bf952ff4957655d96e7358cc67a43f33933474",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/receipts/product27.json",
+    "bytes": 8796,
+    "sha256": "a0433d14590dfa7d9d0b46302af4f6cf010a1eb992b3b39b196a219857450cfe",
+    "git_sha1": "0887e3e7d9ab897c45672fc0567840feaeb03118",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/current26.json",
+    "bytes": 526525,
+    "sha256": "61e367d967ca086a7201fcc9791cda0d067f713b12f2803ea41dc6c369689588",
+    "git_sha1": "715d7e8035a82047df68403b4c74433648b76088",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/receipts/product28.json",
+    "bytes": 27671,
+    "sha256": "d819c01af72fedc014039d6cef58b7a005d490a6a26542c6fe5a521dfa1e8c57",
+    "git_sha1": "78fc0f2042738bb94ee10fae3d5243fe5945dd63",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/native034.json",
+    "bytes": 5350,
+    "sha256": "dc8ade9f63c1c9802e9eb71dd0b3b547889848d8a173573b0d493bdecc082429",
+    "git_sha1": "9f9bfb791c7b5897a9b86860740729013ee23fa3",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/native17-raw.json",
+    "bytes": 548166,
+    "sha256": "c957e36f29b4782e307978635d6712e90cb8881b6d7b93d7b0d94c0d45548de4",
+    "git_sha1": "f0b302246388bf456b3150497929b984376de445",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/future18-source.json",
+    "bytes": 470499,
+    "sha256": "300dff16755fd4437dbb47a56416265c35ea73bb2f68967009dc319f6cf59c7a",
+    "git_sha1": "fa7166881144be2cf32def5c7e69b1a3892625de",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/media26.json",
+    "bytes": 235466,
+    "sha256": "68883c12d6a4379937dbbab635b0f8b61c271029d25070d8e95497bea61a9c37",
+    "git_sha1": "f041b32eb0057536b94094b2cb9ee230366d16c8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/product27-r3.json",
+    "bytes": 77687,
+    "sha256": "6e4bd7826f715e19231ade23f6aff7cd2a72e866bd86f3818d141a7239b751f2",
+    "git_sha1": "40a2276a5dc5199aa87d494f1ef997c65968ba21",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/product27-28-worlds.json",
+    "bytes": 66065,
+    "sha256": "ba0e9ac8006928bc2953e21a54cfbfe2807610c325e5f9d548512ec283393a60",
+    "git_sha1": "921fe3b23f67609f5b0a1e27f085967346882741",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/native18-maintenance.json",
+    "bytes": 54804,
+    "sha256": "e4c5b487bb164ffabb1bce9fa0cd0317d559f3335471fe7bab4f7c75fb4db787",
+    "git_sha1": "c8571376e2053018ff01a9177de07a8da561f2ea",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/native18-raw.json",
+    "bytes": 581006,
+    "sha256": "0384f5e71071ba52067331c74bb63b6b5f16c401af07fcaad10ed82407117fe9",
+    "git_sha1": "a63965654b99a1e28d1fd7a4ec0b19a50bd32fcf",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/product28-source.json",
+    "bytes": 32707,
+    "sha256": "f2dd1da70b5ad40069769ed28cfbc3ddd8e893c9b42420e744ff6abc1dfca483",
+    "git_sha1": "506674b1cfba8da981e13760dcd255a00b7380e8",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/product28-29trees.json",
+    "bytes": 455299,
+    "sha256": "e7c49c6a3e9c89949724e80fd033f46460479b90f5e23de79eb687963249e7c0",
+    "git_sha1": "c898f1023e5476dae0dad0660d353bf818effeee",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/product27.json",
+    "bytes": 28087,
+    "sha256": "8bab3ed9eb0ac9d27b3292467801270ec7f9a84a32d17ad9395eae983c2ccb3c",
+    "git_sha1": "9c6ef1de75d9d1dae5218234b24a426f02010796",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/provisioning/recipes/product28-bounded.json",
+    "bytes": 11773,
+    "sha256": "3b50b80f9357a90b5c3d895323d21ddeded0b0c40d285f4d2ef76e9b52e50854",
+    "git_sha1": "d4701c04a0625ca0a273da3265c99a11849e63f0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "PORTABLE-KIT-RECEIPT.json",
+    "bytes": 2000,
+    "sha256": "0f6f250a044245ae7c80fce8800a060c5700db676a7a90bb2a176f4f5acde758",
+    "git_sha1": "2d3397ee01e6c534e31572332963ba4cd880c783",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/reconstruct_budget_wrapper.py",
+    "bytes": 10478,
+    "sha256": "6222ff063eaffbb939ff8da926cf4ebd97ee35ca7729d88d035726e733c9a87f",
+    "git_sha1": "7c7b5854c6a4d31bd48cd5f7f1ff39187768065f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "context.json",
+    "bytes": 2616,
+    "sha256": "fb07a5914fb105bc8a096f90b2b7f164343721b9abe8c87f1201394bfcd884c8",
+    "git_sha1": "6811429cff4f9d68af5ff30454cb074fa1361df4",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit/reconstruct_continuation.py",
+    "bytes": 7876,
+    "sha256": "5db3d4d1bb40ddf95ebc5da2fb2e4129c921b1d82440bbf817ec99c69def3b27",
+    "git_sha1": "87593eaf60ff8724235db759c18f82ee34dad7f6",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "CUSTODY_README.md",
+    "bytes": 3062,
+    "sha256": "edad5083f44a7fd8dc4c906770c0a865123a0a1b56305e18159ab5e4fbb601c2",
+    "git_sha1": "0f3688cb476f9f60b70d918790283361cb228e3e",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "kit-recipe.json",
+    "bytes": 28373,
+    "sha256": "ff79609878bcdac44def175a7bd91dc5586160dc1a72bf0f7b70ef55845b56fc",
+    "git_sha1": "0d6b7fd86ccaad873ba20568cde2fbbc5d514abf",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "capture-result.json",
+    "bytes": 382,
+    "sha256": "107d1bc13571f8ddb87fd9b6186646e4aaae3ddd7f7aa8338c9ebfe9c9d4b43d",
+    "git_sha1": "cb61329afc92f9c615c9bb08b68cff552ab76039",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "reconstruct.py",
+    "bytes": 1823,
+    "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5",
+    "git_sha1": "adb6f5548da9f8980cd07748e3c75818261e886f",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "source-after.json",
+    "bytes": 30840,
+    "sha256": "2a5619926c73a7e83540bb3b7286d55d06e5c236e08075036cea875a680d68e0",
+    "git_sha1": "b4024ef3830a9ee7a8dd1402ccb1fe860cdd12d0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "source-before.json",
+    "bytes": 30840,
+    "sha256": "2a5619926c73a7e83540bb3b7286d55d06e5c236e08075036cea875a680d68e0",
+    "git_sha1": "b4024ef3830a9ee7a8dd1402ccb1fe860cdd12d0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "delta-member-proof.json",
+    "bytes": 38536,
+    "sha256": "253fe37e772daa740845cb8b8132672065858219445e077465e1a6ff2f3758fe",
+    "git_sha1": "dce0992f44bf8348ea53e50b4978185b0f6d287b",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "ANCHOR_READBACK.json",
+    "bytes": 7040,
+    "sha256": "4525c2c2e250ee9d1ee0e69b2c2cbd41f528b7070e7b6b1fde34777f6618ecc4",
+    "git_sha1": "dbd03a7fb2be1beb46c4463933360e7d4b898dbc",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "anchor-remote-proof-plan.json",
+    "bytes": 7668,
+    "sha256": "9315a3b0f2ef521ea8ccc8200dccdca077384cec82e46f31e64a26bcedbe96de",
+    "git_sha1": "81e7780aff511db978b6b44458a13f1a6a113109",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "anchor-readback/current26-base-1.json",
+    "bytes": 5686,
+    "sha256": "894b51e4bd284e933f2fad2e842cf8bf18c5f5f90bfef218ff92f882b01145b4",
+    "git_sha1": "c1c9b36860148dcaef50fe50ce33c5120391de7c",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "anchor-tree-traversals.json",
+    "bytes": 198033,
+    "sha256": "4064ba39257aaa6e6ca9c5db6fdf670f62b66d2ca20831e0da2c04720648e00f",
+    "git_sha1": "bb424862ead42f981f404a8891f6192bb03d930d",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "anchor-readback/current26-base-0.json",
+    "bytes": 397740,
+    "sha256": "71ffa2affcc2b014d13d56b2c72a38bf5245bb4c39f595239bde6c1d9ada19b8",
+    "git_sha1": "440d038b816a16d89b4d7cedb141db74d992ab98",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "verify_readback.py",
+    "bytes": 1199,
+    "sha256": "e9edbb9cc4a21789a04ae4988dabe4652bdf52d54164dc0302c2b35776c78e77",
+    "git_sha1": "83d29d88956b1c7b2205e7052b12575e1366abc0",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "check_tree_hash.py",
+    "bytes": 872,
+    "sha256": "f7154a84eabe03cb6360ae475edfeaa2eed96e1ef964afff3047314fa1f8ce5d",
+    "git_sha1": "7cc220dafac693391a46b20edb482f8520f96be3",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "initial-readonly-inspection-error.log",
+    "bytes": 303,
+    "sha256": "42778ba21a295f21415c23301e0d4ff12631a9c030025516cf49cc49cb45af9b",
+    "git_sha1": "ec1c84af090eea68b8f440cbb44d1b1aa2bb0ff1",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "prepare.py",
+    "bytes": 9008,
+    "sha256": "2ab1f4fa30bc5605a0d94064db1592a9852ea3a57618020cf19b805236b4264e",
+    "git_sha1": "dfed86e6446e2723542fc3e26bc058d0200eb147",
+    "transport_padding_bytes": 1
+  },
+  {
+    "repo": "Kageyoni",
+    "path": "fresh-preflight.json",
+    "bytes": 23851,
+    "sha256": "691a13d05bc3ce22d3c88eb62fe47e6902ae79afcacd88e35a9ea7aa21a46d18",
+    "git_sha1": "7052113a0186bcc771c45a137c80a06e1b783b87",
+    "transport_padding_bytes": 1
+  }
+]

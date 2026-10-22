@@ -1,0 +1,4 @@
+Read-only inspection exited1 before any packaging or remote effect.
+frozen-manifest.json files is a list; diagnostic print assumed a dict and called .items().
+AttributeError: 'list' object has no attribute 'items'
+Original tool output retained in session; correction reads advertised actual list shape.

@@ -1,0 +1,391 @@
+{
+  "status": "VERIFIED_PAIRED_IN_PROGRESS_NATIVE_SOURCE_AND_SELECTED_RAW_CUSTODY",
+  "heads": [
+    {
+      "repo": "SAMSARA",
+      "sha": "b3e470042f3b44926c4e127309fe8ce91c8356c9",
+      "parent": "ab4ab3b73883e783aefb23937fb7e1254d40ea51",
+      "tree": "ff76553d16dccf1d6127024bef103ef92c84a88e"
+    },
+    {
+      "repo": "Kageyoni",
+      "sha": "0fcb9050f6630c48f79a8e261a322e0d1b5199dc",
+      "parent": "d415f0c655ba9c342592fd15ab3a5641e71f1975",
+      "tree": "d034fe9a93ddfa45dcc43f1a7060041c1cad7702"
+    }
+  ],
+  "source_pair_current_product26": {
+    "SAMSARA": "a9f609dd88b5db76e3ad1ead37dbd97294a105cc",
+    "Kageyoni": "4558c548ad0a345dc237482d7c7a822ce9c9ab75"
+  },
+  "new_native_candidate_adopted": false,
+  "capsule": {
+    "bytes": 6288059,
+    "sha256": "6e86e32da1c07453a1f5f0fa316a7fd518093a121073b72535281cba9f912f2f",
+    "manifest_files": 853,
+    "zip_entries": 854,
+    "complete_remote_provider_reads": 13,
+    "allCRC_memberSHA": true,
+    "recipe_path": "core-build/checkpoints/NATIVE034-R1-20261022-IN_PROGRESS/recipe.json"
+  },
+  "staged_blob_identities": {
+    "SAMSARA": [
+      {
+        "path": "context.json",
+        "sha": "cee42c25858d21ad46fd228b28ddf5c00e0f0e75"
+      },
+      {
+        "path": "recipe.json",
+        "sha": "9f9bfb791c7b5897a9b86860740729013ee23fa3"
+      },
+      {
+        "path": "capsule-receipt.json",
+        "sha": "d22f6f5dd16e551487de4ea407174b19bbe1e75e"
+      },
+      {
+        "path": "BUILD_STATUS.json",
+        "sha": "754a9ece0d8732abf251018a2da007500a5d8357"
+      },
+      {
+        "path": "ledger-update-proof.json",
+        "sha": "7416f46f2ecd989143d5183e1d7a1269cbcb96a9"
+      },
+      {
+        "path": "CONTINUE.md",
+        "sha": "10a31d1624ec2033e59eeed447237b2821b851c7"
+      },
+      {
+        "path": "native-qualification.json",
+        "sha": "168241dcf7e7e4a13297dfdd2dda597aa3a75ae3"
+      },
+      {
+        "path": "native-full.patch",
+        "sha": "52a4d47c7349ff6abd40b37e204af6d99603bcdf"
+      },
+      {
+        "path": "native-installed.xml",
+        "sha": "3daa0d8c388252301c1f8ff5f9703059bc3d7ff6"
+      },
+      {
+        "path": "native-payload-manifest.json",
+        "sha": "bd023ef3de6d949d5bcef235a846a2d5428735b7"
+      },
+      {
+        "path": "native-forensic-receipt.json",
+        "sha": "410e73cc29746eecfb6dab2aec2b7d7d22452dba"
+      },
+      {
+        "path": "native-forensic-report.md",
+        "sha": "42897f23341d71ef8ef1819eae54f94526bb7b02"
+      },
+      {
+        "path": "root-product-seam.md",
+        "sha": "427fbe6e435071eaf192245f0e6a8c57c6709bee"
+      },
+      {
+        "path": "prompt-update-receipt.json",
+        "sha": "0688a0468fddecb0bb07a417840815c4001a0017"
+      },
+      {
+        "path": "media-native-receipt.json",
+        "sha": "8f43891d09e72dc64723814b639071d5c8806a29"
+      },
+      {
+        "path": "media-native-work-record.json",
+        "sha": "cd5d3778c48e09cb872478bc3f2f62b81cf9c29b"
+      },
+      {
+        "path": "media-phase-state.json",
+        "sha": "e3037e63abcab3a7b82085181e0d6baec9828b5b"
+      },
+      {
+        "path": "media-receiver-report.json",
+        "sha": "29a7f32b8c34789f7a98b559d1e5207418210b0f"
+      },
+      {
+        "path": "media-receiver-authored.md",
+        "sha": "2eb7906669b4040235f91e653e7f0b81345c5837"
+      },
+      {
+        "path": "engine/kageyoni/engine.py",
+        "sha": "40720b6cbea442f18b9742ebe2818d457e8bf7cf"
+      },
+      {
+        "path": "engine/kageyoni/persistence/migration_034.py",
+        "sha": "72b7d396a7d39e1ac939db67c3000d7f0326ffed"
+      },
+      {
+        "path": "engine/kageyoni/persistence/migrations.py",
+        "sha": "91b372f0d40a25ade5faf9d911aa4d494001d8d5"
+      },
+      {
+        "path": "engine/kageyoni/workspaces/custody_schema.py",
+        "sha": "9a4877d6de03cb8a3bae8a92bb983d10542edfdb"
+      },
+      {
+        "path": "engine/kageyoni/workspaces/job_queue.py",
+        "sha": "8af469677b199714a49205e43a5043d0f15137ae"
+      },
+      {
+        "path": "engine/kageyoni/workspaces/worker_custody.py",
+        "sha": "f04d19b51d7ceca20a56ef18821f6378d5db6ded"
+      },
+      {
+        "path": "engine/kageyoni/workspaces/worker_liveness.py",
+        "sha": "ca1651b777076c0da7ba5cf470143fec22d4285a"
+      },
+      {
+        "path": "engine/migration_034.sql",
+        "sha": "894dfd170825f5887066586c4dcd0a0b3aa91a7a"
+      },
+      {
+        "path": "engine/pyproject.toml",
+        "sha": "73f48159c9df6f19cb855bdff3aecea0e211b081"
+      },
+      {
+        "path": "engine/tests/native_custody_coupling_cases.py",
+        "sha": "37e8641a992354a92512df2aa1fe9436fadfd5e1"
+      },
+      {
+        "path": "engine/tests/native_worker_custody_cases.py",
+        "sha": "758e26e59a079f63c4d4d67525d189a29ab400a2"
+      },
+      {
+        "path": "engine/tests/test_known_exit_admission_guard.py",
+        "sha": "84afa8e21389a30a7322a035738fe24bc5788b71"
+      },
+      {
+        "path": "providers/part-000.base64",
+        "sha": "5d3668ac42572955ba8b36e55c93445dfb886bf6"
+      },
+      {
+        "path": "providers/part-001.base64",
+        "sha": "3951a45dfa0f37f0f9b43ff93d4b4575ad6e6103"
+      },
+      {
+        "path": "providers/part-002.base64",
+        "sha": "4a04927d30269ddcf14d46c20bc2686ba81f0635"
+      },
+      {
+        "path": "providers/part-003.base64",
+        "sha": "54f89e4a56dc81b7c0c179d4472bf8f68d823e5d"
+      },
+      {
+        "path": "providers/part-004.base64",
+        "sha": "ef8b4b946b1eac26441dea8a8faa0c264a7eb139"
+      },
+      {
+        "path": "providers/part-005.base64",
+        "sha": "8f562c5fa97bd5439f2f857beb898157cec21e9e"
+      },
+      {
+        "path": "providers/part-006.base64",
+        "sha": "4cb1a5063ee8314e620de08916975231c25a933e"
+      },
+      {
+        "path": "providers/part-007.base64",
+        "sha": "7028e802c05e8d805d7d6a72e130837c722e7da2"
+      },
+      {
+        "path": "providers/part-008.base64",
+        "sha": "c11c3bee4a0b6c3927f7a8ce961885d57af78274"
+      },
+      {
+        "path": "providers/part-009.base64",
+        "sha": "b102b444d7d555896b5e384fe5e8347d0daed6a6"
+      },
+      {
+        "path": "providers/part-010.base64",
+        "sha": "2cf914727d77bb2342181af85b0a2f896369ff5f"
+      },
+      {
+        "path": "providers/part-011.base64",
+        "sha": "269d9ab14d90ae3cbe82c9277181ad31aa851e30"
+      },
+      {
+        "path": "providers/part-012.base64",
+        "sha": "8d68fbf39c678258c923b04bdf41925522a04a7a"
+      }
+    ],
+    "Kageyoni": [
+      {
+        "path": "context.json",
+        "sha": "cee42c25858d21ad46fd228b28ddf5c00e0f0e75"
+      },
+      {
+        "path": "recipe.json",
+        "sha": "9f9bfb791c7b5897a9b86860740729013ee23fa3"
+      },
+      {
+        "path": "capsule-receipt.json",
+        "sha": "d22f6f5dd16e551487de4ea407174b19bbe1e75e"
+      },
+      {
+        "path": "BUILD_STATUS.json",
+        "sha": "754a9ece0d8732abf251018a2da007500a5d8357"
+      },
+      {
+        "path": "ledger-update-proof.json",
+        "sha": "7416f46f2ecd989143d5183e1d7a1269cbcb96a9"
+      },
+      {
+        "path": "CONTINUE.md",
+        "sha": "10a31d1624ec2033e59eeed447237b2821b851c7"
+      },
+      {
+        "path": "native-qualification.json",
+        "sha": "168241dcf7e7e4a13297dfdd2dda597aa3a75ae3"
+      },
+      {
+        "path": "native-full.patch",
+        "sha": "52a4d47c7349ff6abd40b37e204af6d99603bcdf"
+      },
+      {
+        "path": "native-installed.xml",
+        "sha": "3daa0d8c388252301c1f8ff5f9703059bc3d7ff6"
+      },
+      {
+        "path": "native-payload-manifest.json",
+        "sha": "bd023ef3de6d949d5bcef235a846a2d5428735b7"
+      },
+      {
+        "path": "native-forensic-receipt.json",
+        "sha": "410e73cc29746eecfb6dab2aec2b7d7d22452dba"
+      },
+      {
+        "path": "native-forensic-report.md",
+        "sha": "42897f23341d71ef8ef1819eae54f94526bb7b02"
+      },
+      {
+        "path": "root-product-seam.md",
+        "sha": "427fbe6e435071eaf192245f0e6a8c57c6709bee"
+      },
+      {
+        "path": "prompt-update-receipt.json",
+        "sha": "0688a0468fddecb0bb07a417840815c4001a0017"
+      },
+      {
+        "path": "media-native-receipt.json",
+        "sha": "8f43891d09e72dc64723814b639071d5c8806a29"
+      },
+      {
+        "path": "media-native-work-record.json",
+        "sha": "cd5d3778c48e09cb872478bc3f2f62b81cf9c29b"
+      },
+      {
+        "path": "media-phase-state.json",
+        "sha": "e3037e63abcab3a7b82085181e0d6baec9828b5b"
+      },
+      {
+        "path": "media-receiver-report.json",
+        "sha": "29a7f32b8c34789f7a98b559d1e5207418210b0f"
+      },
+      {
+        "path": "media-receiver-authored.md",
+        "sha": "2eb7906669b4040235f91e653e7f0b81345c5837"
+      },
+      {
+        "path": "engine/kageyoni/engine.py",
+        "sha": "40720b6cbea442f18b9742ebe2818d457e8bf7cf"
+      },
+      {
+        "path": "engine/kageyoni/persistence/migration_034.py",
+        "sha": "72b7d396a7d39e1ac939db67c3000d7f0326ffed"
+      },
+      {
+        "path": "engine/kageyoni/persistence/migrations.py",
+        "sha": "91b372f0d40a25ade5faf9d911aa4d494001d8d5"
+      },
+      {
+        "path": "engine/kageyoni/workspaces/custody_schema.py",
+        "sha": "9a4877d6de03cb8a3bae8a92bb983d10542edfdb"
+      },
+      {
+        "path": "engine/kageyoni/workspaces/job_queue.py",
+        "sha": "8af469677b199714a49205e43a5043d0f15137ae"
+      },
+      {
+        "path": "engine/kageyoni/workspaces/worker_custody.py",
+        "sha": "f04d19b51d7ceca20a56ef18821f6378d5db6ded"
+      },
+      {
+        "path": "engine/kageyoni/workspaces/worker_liveness.py",
+        "sha": "ca1651b777076c0da7ba5cf470143fec22d4285a"
+      },
+      {
+        "path": "engine/migration_034.sql",
+        "sha": "894dfd170825f5887066586c4dcd0a0b3aa91a7a"
+      },
+      {
+        "path": "engine/pyproject.toml",
+        "sha": "73f48159c9df6f19cb855bdff3aecea0e211b081"
+      },
+      {
+        "path": "engine/tests/native_custody_coupling_cases.py",
+        "sha": "37e8641a992354a92512df2aa1fe9436fadfd5e1"
+      },
+      {
+        "path": "engine/tests/native_worker_custody_cases.py",
+        "sha": "758e26e59a079f63c4d4d67525d189a29ab400a2"
+      },
+      {
+        "path": "engine/tests/test_known_exit_admission_guard.py",
+        "sha": "84afa8e21389a30a7322a035738fe24bc5788b71"
+      }
+    ]
+  },
+  "prior_leaf_preservation": {
+    "SAMSARA": [
+      {
+        "old": "79a6de3530e04238949c525a46239adf2ec22e4a",
+        "cur": "7092648048710e20abf93adf1708fbbac4698870",
+        "path": "core-build",
+        "retained": 16
+      },
+      {
+        "old": "6caecdaa690ba7db7bae701791a40a243036ac42",
+        "cur": "7c27f1545b70d029d54c99f86a83844270d7d7cd",
+        "path": "checkpoints",
+        "retained": 23
+      },
+      {
+        "old": "95bfbe6aacdd323d76eb8677e8f8936f63682e43",
+        "cur": "de46e7568ee4265b0edd85b4fd251fe02dc4fc4c",
+        "path": "NATIVE034-R1-20261022-IN_PROGRESS",
+        "retained": 21
+      }
+    ],
+    "Kageyoni": [
+      {
+        "old": "b1c7e069c947d8b7ff70dae5cd4b58c60f87d18c",
+        "cur": "d034fe9a93ddfa45dcc43f1a7060041c1cad7702",
+        "path": "core-build",
+        "retained": 90
+      },
+      {
+        "old": "2cf242e04ad4096c8d76795ce976ec2f25378401",
+        "cur": "6d49d74d3426f3e260cca13f95be9bd7897f29d4",
+        "path": "checkpoints",
+        "retained": 5
+      },
+      {
+        "old": "2ef89f8a512a697443a0a672af299f29e45387c7",
+        "cur": "36f44de420febf9f703a79dcf71320db6968d00e",
+        "path": "NATIVE034-R1-20261022-IN_PROGRESS",
+        "retained": 21
+      }
+    ]
+  },
+  "pair_manifest_exact_readback": true,
+  "CAS_expected_heads": true,
+  "force": false,
+  "uncertain_remote_effects": [],
+  "root_sole_writer": true,
+  "full_release_qualified": false,
+  "limits": [
+    "114 native in-process predicates pass; one retained original specimen and complete copy recovery fail with a stale earlier-schema journal; originals preserved.",
+    "Current product26/native15 remains authority. Product27 only source-reviewed work, no build/install/actualprocess qualification.",
+    "Only complete journalbearing native fixture and complete failed recovery copy included; other82 raw specimens inventoried locally pending full raw custody.",
+    "Media gen2/independent AI later use reflected in small checkpoint context; full new media rawbody snapshot/backup/relocation/interruption/withdrawal still pending."
+  ]
+}

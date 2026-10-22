@@ -1,0 +1,39 @@
+[
+  {
+    "target": "samsara_core/evidence/continuation-20261022/capsules/.current26__Samsara_D16_Current_Source_Offline_IN_PROGRESS.zip.4wmlaY",
+    "source": {
+      "kind": "provider-raw",
+      "provider": "current26"
+    },
+    "origin": "UNKNOWN; byte relationship only",
+    "proof": {
+      "status": "FULL_RANGE_AND_EXACT_OVERLAY_PROVEN",
+      "bytes": 33292288,
+      "base_slice_sha256": "b36829f86822e81b487bf5409c6201899abc3e603f3e1623bbdc6d119bfcda71",
+      "target_sha256": "b36829f86822e81b487bf5409c6201899abc3e603f3e1623bbdc6d119bfcda71",
+      "patches": [],
+      "patch_bytes": 0,
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "patch_file": "partial-overlay-0.bin"
+  },
+  {
+    "target": "samsara_core/evidence/round-r07b/final-world-archive/.actual-worlds.zip.AuZcwT",
+    "source": {
+      "kind": "provider-member",
+      "provider": "library-v15",
+      "member": "samsara_core/evidence/round-r07b/final-world-archive/actual-worlds.zip"
+    },
+    "origin": "UNKNOWN; byte relationship only",
+    "proof": {
+      "status": "FULL_RANGE_AND_EXACT_OVERLAY_PROVEN",
+      "bytes": 36438016,
+      "base_slice_sha256": "6b0c436ab276ee5093baa30286b713aa2a0b9a622c273f7b68c2025366accddd",
+      "target_sha256": "6b0c436ab276ee5093baa30286b713aa2a0b9a622c273f7b68c2025366accddd",
+      "patches": [],
+      "patch_bytes": 0,
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "patch_file": "partial-overlay-1.bin"
+  }
+]

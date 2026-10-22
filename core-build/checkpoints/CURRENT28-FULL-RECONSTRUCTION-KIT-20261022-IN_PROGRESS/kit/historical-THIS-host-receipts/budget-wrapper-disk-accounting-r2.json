@@ -1,0 +1,10 @@
+{
+  "antecedent_sha256": "defff6358510478f246b3a6c86e04ba31973d13e26c3e8c85f5fce339d002549",
+  "corrected_sha256": "6222ff063eaffbb939ff8da926cf4ebd97ee35ca7729d88d035726e733c9a87f",
+  "corrected_bytes": 10478,
+  "reason": "Root adopted narrow disk-accounting correction: unchanged helper creates one partial ZIP and hardlinks final output to same inode; streaming testzip readback allocates no second target disk file. Preserve remaining+1GiB disk reserve and unchanged cgroup remaining+TARGET+256MiB+512MiB.",
+  "initial_failure_preserved": "preflight-budget-r1-failure.json",
+  "helper_unchanged_sha256": "5db3d4d1bb40ddf95ebc5da2fb2e4129c921b1d82440bbf817ec99c69def3b27",
+  "source_diff": "/dev/shm/continuation-current28-reconstruction/budget-wrapper-disk-accounting-r2.diff",
+  "full_reconstruction_executed": false
+}

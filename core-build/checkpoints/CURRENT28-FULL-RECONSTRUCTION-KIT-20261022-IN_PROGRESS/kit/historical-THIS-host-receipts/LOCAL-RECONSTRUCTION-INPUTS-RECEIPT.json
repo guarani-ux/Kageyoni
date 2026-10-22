@@ -1,0 +1,113 @@
+{
+  "status": "LOCAL_RECONSTRUCTION_INPUTS_VERIFIED_FULL_TARGET_EXECUTION_HELD",
+  "observed_at_utc": "2026-10-22T20:30:31.074024+00:00",
+  "target": {
+    "filename": "Samsara_Core_Build_Continuation.zip",
+    "bytes": 469620062,
+    "sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+    "entries": 12688,
+    "files": 11330,
+    "directories": 1358,
+    "uncompressed_file_bytes": 2790921522
+  },
+  "artifacts": [
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/continuation-reconstruction-recipe.json",
+      "bytes": 16128,
+      "sha256": "fd8587de1001c1a132e3a7adee8d10ffa2df36abca4dad605e45173c8644778c"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/continuation-delta.zip",
+      "bytes": 6563350,
+      "sha256": "72d043789401811d93eb4191affd2585576eb0f1d1405e2a4c58aded4e440d2a"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/reconstruct_continuation.py",
+      "bytes": 7876,
+      "sha256": "5db3d4d1bb40ddf95ebc5da2fb2e4129c921b1d82440bbf817ec99c69def3b27"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/README.md",
+      "bytes": 5544,
+      "sha256": "5dff533b698bffec1e4518c1099ceb5308c77ff8cc563e84fc68d2494061a29c"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/entry-map.json",
+      "bytes": 13856650,
+      "sha256": "9f42e135b9532d00decff6375fd726f18cb3ebda0abc11dda81954de7f1becaa"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/container-layout.bin",
+      "bytes": 3817362,
+      "sha256": "d0d236fe4b57229f408cdb63fdd3613856edec8d14334bb0c9c20c9781f06cdb"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/current26-bootstrap-canonicality-proof.json",
+      "bytes": 854,
+      "sha256": "0e8e00f89c3cb66cea9ff76925d333ead346b93187839b0d781a69d62a19cae6"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/partial-range-proof.json",
+      "bytes": 1544,
+      "sha256": "c1e14177febc237ad5f757d04ddc20b111d5e86f6ac960a2dafe9de4d60137bb"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/unmapped-body-delta-index.json",
+      "bytes": 42993,
+      "sha256": "33954534ef2b0c1822512236f886fa2ac162d71321ee431df6b78288280942a2"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/verify-inputs.stdout",
+      "bytes": 377,
+      "sha256": "941e561faf0793de665fdf14685211e65c83bfe92b5b1a7eeb7a2e1ee632301f"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/verify-inputs.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/dev/shm/continuation-current28-reconstruction/recipe-delta-package-receipt.json",
+      "bytes": 694,
+      "sha256": "d2400071462039ce29e23b2a36867b18cd8755a3a960ab12ce065930621c3012"
+    }
+  ],
+  "input_verification": {
+    "exit_code": 0,
+    "result": {
+      "status": "ALL_EXPLICIT_ENTRY_BODY_SOURCES_AND_CODEC_CALIBRATIONS_VERIFIED",
+      "entries": 12688,
+      "files": 11330,
+      "raw_file_bytes": 2790921522,
+      "codec_calibrations": [
+        "samsara_core/.agents/agents/twin_acc_1/a0_snapshot.json",
+        "samsara_core/engine/tests/v10/test_foundry_kernel_attack.py.tmp"
+      ],
+      "full_archive_reconstruction_executed": false,
+      "remote_custody_of_new_delta": false
+    },
+    "stderr_empty": true
+  },
+  "entry_body_kinds": {
+    "directory": 1358,
+    "provider-member": 11184,
+    "delta-member": 133,
+    "provider-raw": 11,
+    "provider-slice": 2
+  },
+  "providers": 14,
+  "genuinely_unmapped": {
+    "entry_occurrences": 133,
+    "unique_bodies": 123,
+    "unique_raw_bytes": 19234449,
+    "preserved_byte_exact": true
+  },
+  "full_target_reconstruction_executed": false,
+  "full_target_execution_hold": "Root serial recipient Client lane and fresh resource GO pending; no automatic reconstruction.",
+  "new_remote_custody": false,
+  "new_Library_version": false,
+  "native_DB_world_build_effects": false,
+  "preserved_antecedent": "/dev/shm/continuation-current28-reconstruction/reviewed-extra-LF-bootstrap",
+  "scope": "Exact historical current28/native16 full snapshot, every v15 parent byte and adopted scope retained. Unadopted native18 is future diagnostic evidence only. Current30/newer work excluded. F1-F5/fullrelease false.",
+  "known_inspection_failures": "Earlier native034 recipe inspection assumed entries mapping but found integer; corrected read-only schema inspection. Broad search output truncated. Original tool results remain in session; no lost raw record invented."
+}

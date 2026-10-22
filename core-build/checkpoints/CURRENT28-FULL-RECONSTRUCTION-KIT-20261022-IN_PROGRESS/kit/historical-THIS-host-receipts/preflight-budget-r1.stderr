@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/dev/shm/continuation-current28-reconstruction/reconstruct_budget_wrapper.py", line 182, in <module>
+    main()
+  File "/dev/shm/continuation-current28-reconstruction/reconstruct_budget_wrapper.py", line 122, in main
+    initial = budget('initial-preflight')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/continuation-current28-reconstruction/reconstruct_budget_wrapper.py", line 87, in budget
+    assert free >= remaining + TARGET_BYTES + DISK_RESERVE, 'Tmpfs remaining output/readback/1GiB reserve insufficient'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tmpfs remaining output/readback/1GiB reserve insufficient

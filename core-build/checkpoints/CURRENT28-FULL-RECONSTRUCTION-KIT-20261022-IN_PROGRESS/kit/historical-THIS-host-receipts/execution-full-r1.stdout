@@ -1,0 +1,2 @@
+{"status": "EXACT_COMPLETE_ARCHIVE_RECONSTRUCTED", "output": "/dev/shm/continuation-current28-reconstruction/full-reconstruction-full-r1/Samsara_Core_Build_Continuation.zip", "bytes": 469620062, "sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04", "fullCRC": true, "all_per_entry_raw_and_compressed_SHA_verified": true, "source_or_DB_or_Git_or_Library_effects": false}
+{"status": "BOUNDED_EXACT_RECONSTRUCTION_HELPER_RETURNED_PASS", "receipt": "/dev/shm/continuation-current28-reconstruction/execution-full-r1.json"}

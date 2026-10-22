@@ -1,0 +1,13 @@
+{
+  "status": "FROZEN65KITFILES_EXTERNALRECEIPT_AND_NESTED155DELTAMEMBERS_REMOTE_EXACT",
+  "frozen_files": 65,
+  "external_receipt_files": 1,
+  "carrier_members": 75,
+  "frozen_manifest_sha256": "aa02af7ade3e8d4a3c28af8833f70453ab08d3ff87e17ff40e3de2ff8ffaf58a",
+  "all_source_before_after_inode_device_mtime_mode_SHA_exact": true,
+  "all_remote_kit_files_and_externalreceipt_exact": true,
+  "nested_delta155CRC_memberSHA_mode_type_exact": true,
+  "DB_opened": false,
+  "target469MB_not_regenerated": true,
+  "Library_not_accessed": true
+}

@@ -1,0 +1,30 @@
+{
+  "status": "EXACT_CURRENT28_PORTABLE_RECONSTRUCTION_KIT_FULL_REMOTE_CUSTODY_VERIFIED",
+  "repository": "guarani-ux/SAMSARA",
+  "commit": "f7d67a1cb01def718808e7b8bca65da50bcc39e5",
+  "checkpoint": "core-build/checkpoints/CURRENT28-FULL-RECONSTRUCTION-KIT-20261022-IN_PROGRESS",
+  "carrier": {
+    "bytes": 7276594,
+    "filename": "Current28_Full_Continuation_Portable_Kit_IN_PROGRESS.zip",
+    "sha256": "f467e1b498489666bb149aa9f31350ebb4b965e4fde7bc2b3ca0d0dd7bdb4a9c",
+    "zip_entries": 75
+  },
+  "recipe": "kit-recipe.json",
+  "helper": "reconstruct.py",
+  "instructions": "CUSTODY_README.md then frozen kit/README.md",
+  "frozen_manifest_sha256": "aa02af7ade3e8d4a3c28af8833f70453ab08d3ff87e17ff40e3de2ff8ffaf58a",
+  "target": {
+    "bytes": 469620062,
+    "directories": 1358,
+    "entries": 12688,
+    "filename": "Samsara_Core_Build_Continuation.zip",
+    "files": 11330,
+    "sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+    "uncompressed_file_bytes": 2790921522
+  },
+  "external_raw_providers_required": 14,
+  "canonical_Git_recipe_bootstraps": 13,
+  "additional_recursive_current26_bases": 2,
+  "proof": "BYTE_CUSTODY_READBACK.json",
+  "limits": "This carrier is the complete smallKIT65files+externalreceipt, not full469MBtargetbody. ExactpinnedLibrary15 input required; no Libraryaccess/version/fullrelease. Historicalcurrent28/native16 snapshot, later30/31/32 excluded; frozen oldpending-custody notes preserved. Rootactualfullreconstruction/all12688readback receipts retained, not rerun by writer."
+}
