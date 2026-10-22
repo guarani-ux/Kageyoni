@@ -1,0 +1,16 @@
+{
+  "before_sha256": "4887dbb8eff89e865ced6bd3bbeece1e75b4bd647882a9a41e851ca5d0df5f22",
+  "after_sha256": "0e68b6f3972c7839383d32d8584053210ad1dfc011ac1b71bb16b4518320d34b",
+  "all_protected_obligation_structures_unchanged": true,
+  "protected_keys": [
+    "core_loops",
+    "old_requirements",
+    "old_slices",
+    "increments",
+    "full_release_increments",
+    "full_release_breadth",
+    "load_scenarios",
+    "resource_policy"
+  ],
+  "all_full_release_false": true
+}

@@ -1,0 +1,33 @@
+{
+  "CRC_and_every_member_SHA_and_modes_verified": true,
+  "bytes": 7335302,
+  "output": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-r3-capture/Product27_R3_RAM_OneCase_Raw_Actual.zip",
+  "partial_retained": true,
+  "product_or_DB_imports_or_opens": false,
+  "scope": "One AI/scripted same-host RAM product27/native16 owner-loss and fresh receiving case only. Earlier native/journal/copied-recovery/overlay failures remain unresolved; no portablehost/human/fullD15b/F4/F5/fullrelease claim.",
+  "sha256": "781ccf5cf6c315e3bb72e9ebe9920201f0c00d33960ce312e39c970fe22877ef",
+  "source_before_after_bytes_kinds_modes_equal": true,
+  "source_bytes": 181905902,
+  "source_directories": 31,
+  "source_files": 259,
+  "status": "passed",
+  "unique_zip_entries": 291,
+  "worlds": {
+    "/dev/shm/owner-loss-r3-evidence/closed-world": {
+      "files": 44,
+      "source_lock_held": true
+    },
+    "/dev/shm/owner-loss-r3-evidence/final-closed-world": {
+      "files": 48,
+      "source_lock_held": true
+    },
+    "/dev/shm/owner-loss-r3-receiving/world": {
+      "files": 48,
+      "source_lock_held": true
+    },
+    "/dev/shm/t27-r3/samsara-runner-htuy0_0b/world": {
+      "files": 44,
+      "source_lock_held": true
+    }
+  }
+}

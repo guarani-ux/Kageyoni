@@ -1,0 +1,50 @@
+{
+  "status": "antecedent_pointers_not_requalified",
+  "excluded_large_original_trees": [
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-build/owner-loss-r2/closed-world",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1"
+  ],
+  "small_files": {
+    "product-r1-log": {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-build/owner-loss-r1.log",
+      "bytes": 2530,
+      "sha256": "6a018db0a396bfe8e5fec692f4bdc88d336dac354b9791928ed44d5e864c162f"
+    },
+    "product-r1-results": {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-build/owner-loss-r1/test-results.json",
+      "bytes": 2814,
+      "sha256": "f2acf22a59d292895ee22aabe368b6e086437ddeaf840a92f208ec5a69dcf894"
+    },
+    "product-r2-log": {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-build/owner-loss-r2.log",
+      "bytes": 213,
+      "sha256": "8f0d88acdb5c332772e9b4fe536c5d6526a4099d22933436940faad15730e19c"
+    },
+    "product-r2-results": {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-build/owner-loss-r2/test-results.json",
+      "bytes": 910,
+      "sha256": "cbe8e6fba52384fc59fe811f09e16d59a266a26156af6532a8912f016ce05605"
+    },
+    "product-r2-integrity": {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-build/owner-loss-r2/postrun-integrity-failure.json",
+      "bytes": 11229,
+      "sha256": "f2cad0ff9326e15a29a3227ebb288d42395431fc0517b6849bc1b81584ad2635"
+    },
+    "native-forensic-report": {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/forensics/REPORT.md",
+      "bytes": 2115,
+      "sha256": "029036ee9ed5a60b8fd6ca650ea34d831a4b6da104fd93ba6fd0a39ad6a504e8"
+    },
+    "native-forensic-receipt": {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/forensics/FORENSIC_RECEIPT.json",
+      "bytes": 11602,
+      "sha256": "42588e19a0e39022836a30d45e77f89ea44c98d1163d19185c96ae430308ec5a"
+    },
+    "native-forensic-freeze": {
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/forensics/FORENSIC_FREEZE.json",
+      "bytes": 1725,
+      "sha256": "4cb90f1c0fc3cd8cef8da392ca7eb1151311a6dde55b5984a6bcc38f1e8069fb"
+    }
+  },
+  "limits": "Earlier native journal, copied recovery and overlay postrun-integrity failures remain unresolved. New same-host RAM R3 result does not repair or invalidate them. Large antecedent trees remain untouched and are pointed to, not copied/deduplicated/deleted."
+}

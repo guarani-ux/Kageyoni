@@ -1,0 +1,1 @@
+Read context.json and selected/BUILD_STATUS.json. This is an IN_PROGRESS source and raw evidence checkpoint, with three separately reconstructable providers. Preserve every failure and not-run count. R3 belongs to product27, while the current candidate is product28/native16. Do not open included world databases during byte reconstruction. All F1-F5 remain false.

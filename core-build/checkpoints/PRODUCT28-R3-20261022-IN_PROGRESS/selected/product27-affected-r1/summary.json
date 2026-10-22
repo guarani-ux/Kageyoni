@@ -1,0 +1,54 @@
+{
+  "status": "STOPPED_ON_FIRST_REAL_ORIGINAL_TEST_FAILURE",
+  "runtime": "56e54d9f91bf266d61e5364fd014a3c46bd290681609c607888014939b00cb30",
+  "mandatory_predicates": {
+    "passed": 1,
+    "failed": 1,
+    "not_run": 18
+  },
+  "conditional_predicates": {
+    "passed": 0,
+    "failed": 0,
+    "not_run": 7
+  },
+  "calls": [
+    {
+      "nodeid": "tests/test_bounded_runner.py::QueueTests::test_exact_admission_retry_no_duplicate_and_clock_rollback",
+      "phase": "call",
+      "outcome": "passed",
+      "duration": 0.8287103639995621,
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/test_bounded_runner.py::QueueTests::test_failed_process_registration_stops_unfed_child_and_retains_reconciliation",
+      "phase": "call",
+      "outcome": "failed",
+      "duration": 0.7780975210007455,
+      "longrepr": "self = <tests.test_bounded_runner.QueueTests testMethod=test_failed_process_registration_stops_unfed_child_and_retains_reconciliation>\n\n    def test_failed_process_registration_stops_unfed_child_and_retains_reconciliation(self):\n        job=self.start('launch-failure');self.enqueue('launch-failure')\n        processes=[]\n        import subprocess\n        original=subprocess.Popen\n        def capture(*args,**kwargs):\n            proc=original(*args,**kwargs);processes.append(proc);return proc\n        with patch('samsara.runner.subprocess.Popen',side_effect=capture),patch.object(self.queue,'process',side_effect=RuntimeError('injected registration failure')):\n            self.app.runner.tick()\n>       self.assertTrue(processes);self.assertIsNotNone(processes[0].poll())\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       AssertionError: unexpectedly None\n\nrecovery-20261022/current26/extracted/samsara_core/product/tests/test_bounded_runner.py:126: AssertionError"
+    }
+  ],
+  "unchanged_installed_payloads": 238,
+  "unchanged_original_test_files": 32,
+  "all_tracked_owners_closed": true,
+  "started_client_sessions": 0,
+  "unknown_transport_effects": [],
+  "raw_event_count": 67,
+  "source_frame_trace_events": 19,
+  "postconditions": [
+    {
+      "world": "/dev/shm/p27aff-r1/t/samsara-queue-2_mnocdt/world",
+      "valid": true,
+      "unchanged": true,
+      "DB_total_changes": 0
+    },
+    {
+      "world": "/dev/shm/p27aff-r1/t/samsara-queue-ddo_ta6r/world",
+      "valid": true,
+      "unchanged": true,
+      "DB_total_changes": 0
+    }
+  ],
+  "uncertainty": "Original failed assertion observed owned child poll=None after tick; teardown completed but final independent child poll/reap was not logged. No process was probed/signalled afterward.",
+  "native_original_journal_failure_retained": true,
+  "next_action": "Root assesses the real failed-registration cleanup/timing regression and missing final child-observation evidence. No rerun, source/assertion fix or additional tests authorized by this stopped run."
+}

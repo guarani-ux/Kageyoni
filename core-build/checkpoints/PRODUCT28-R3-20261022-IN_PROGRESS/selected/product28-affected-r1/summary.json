@@ -1,0 +1,138 @@
+{
+  "status": "STOPPED_ON_FIRST_REAL_ORIGINAL_TEST_FAILURE",
+  "runtime": "1289b896d6de9194f286a0e9860e20ff65337b78a3efb536bae981cd90ebc858",
+  "mandatory_predicates": {
+    "passed": 2,
+    "failed": 1,
+    "not_run": 17
+  },
+  "conditional_predicates": {
+    "passed": 0,
+    "failed": 0,
+    "not_run": 7
+  },
+  "call_reports": [
+    {
+      "nodeid": "tests/test_bounded_runner.py::QueueTests::test_exact_admission_retry_no_duplicate_and_clock_rollback",
+      "phase": "call",
+      "outcome": "passed",
+      "duration": 0.9601409349997994,
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/test_bounded_runner.py::QueueTests::test_failed_process_registration_stops_unfed_child_and_retains_reconciliation",
+      "phase": "call",
+      "outcome": "passed",
+      "duration": 0.9935477720027848,
+      "longrepr": null
+    },
+    {
+      "nodeid": "tests/test_bounded_runner.py::QueueTests::test_fair_parent_selection_capacity_and_shared_budget",
+      "phase": "call",
+      "outcome": "failed",
+      "duration": 1.5251359400026558,
+      "longrepr": "self = <tests.test_bounded_runner.QueueTests testMethod=test_fair_parent_selection_capacity_and_shared_budget>\n\n    def test_fair_parent_selection_capacity_and_shared_budget(self):\n        self.start('root-a');self.start('root-b')\n        jobs=[self.start('a'+str(i),'root-a') for i in range(6)]\n        b=self.start('b','root-b')\n        for aid in ['a'+str(i) for i in range(6)]+['b']:self.assertNotIn('error',self.enqueue(aid))\n        first=self.queue.claim(time.time());second=self.queue.claim(time.time())\n        self.assertEqual((first['job_id'],second['job_id']),(jobs[0],b))\n        self.assertIsNone(self.queue.claim(time.time()))\n>       self.queue.transition(first['job_id'],'returned',clear_process=True)\n\nrecovery-20261022/current26/extracted/samsara_core/product/tests/test_bounded_runner.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nrecovery-20261022/product28-build/env/lib/python3.12/site-packages/kageyoni/workspaces/job_queue.py:205: in transition\n    require(state != 'returned' or normal_return, 'stopped worker cannot return')\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ncondition = False, message = 'stopped worker cannot return'\nrejection_class = None, details = None\n\n    def require(\n        condition: Any,\n        message: str,\n        rejection_class: str | None = None,\n        details: dict | None = None,\n    ) -> None:\n        if not condition:\n>           raise Rejected(message, rejection_class=rejection_class, details=details)\nE           kageyoni.engine.Rejected: stopped worker cannot return\n\nrecovery-20261022/product28-build/env/lib/python3.12/site-packages/kageyoni/engine.py:86: Rejected"
+    }
+  ],
+  "all_238_payloads_unchanged": true,
+  "all_32_original_test_sources_unchanged": true,
+  "all_tracked_owners_closed": true,
+  "started_client_sessions": 0,
+  "unknown_transport_effects": [],
+  "owned_processes": [
+    {
+      "pid": 8,
+      "kind": "builtin-worker",
+      "test": "tests/test_bounded_runner.py::QueueTests::test_failed_process_registration_stops_unfed_child_and_retains_reconciliation",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 21
+    }
+  ],
+  "process_events": [
+    {
+      "sequence": 59,
+      "wall": 1792694315.692551,
+      "event": "issued-owned-Popen.wait",
+      "pid": 8,
+      "args": [],
+      "kwargs": {
+        "timeout": 0.1
+      }
+    },
+    {
+      "sequence": 60,
+      "wall": 1792694315.6937659,
+      "event": "actual-owned-Popen.wait",
+      "pid": 8,
+      "returncode": 21
+    },
+    {
+      "sequence": 61,
+      "wall": 1792694315.6941369,
+      "event": "actual-owned-Popen.poll",
+      "pid": 8,
+      "returncode": 21
+    },
+    {
+      "sequence": 64,
+      "wall": 1792694315.695873,
+      "event": "actual-owned-Popen.poll",
+      "pid": 8,
+      "returncode": 21
+    },
+    {
+      "sequence": 75,
+      "wall": 1792694315.7075613,
+      "event": "actual-owned-Popen.poll",
+      "pid": 8,
+      "returncode": 21
+    },
+    {
+      "sequence": 79,
+      "wall": 1792694315.7080016,
+      "event": "actual-owned-Popen.poll",
+      "pid": 8,
+      "returncode": 21
+    },
+    {
+      "sequence": 161,
+      "wall": 1792694317.5345883,
+      "event": "actual-owned-Popen.poll",
+      "pid": 8,
+      "returncode": 21
+    },
+    {
+      "sequence": 162,
+      "wall": 1792694317.534604,
+      "event": "final-owned-Popen-status"
+    }
+  ],
+  "source_frame_trace_events": 50,
+  "raw_events": 164,
+  "postconditions": [
+    {
+      "world": "/dev/shm/p28aff-r1/t/samsara-queue-aowcwiam/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "world": "/dev/shm/p28aff-r1/t/samsara-queue-i904icyd/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "world": "/dev/shm/p28aff-r1/t/samsara-queue-wljd16p4/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    }
+  ],
+  "native_original_journal_failure_retained": true,
+  "next_action": "Root assesses unchanged fairness predicate calling returned transition without process registration; do not weaken native actual-process return guard, retry or edit original assertions under this stopped run."
+}

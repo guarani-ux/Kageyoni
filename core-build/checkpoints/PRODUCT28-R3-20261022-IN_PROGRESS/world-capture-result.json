@@ -1,0 +1,34 @@
+{
+  "DB_native_or_process_imports_or_opens": false,
+  "before_after_equal": true,
+  "bytes": 220669462,
+  "closed_worlds": [
+    {
+      "existing_readonly_exclusive_lock": true,
+      "owner_lock_inode": 1817,
+      "world": "/dev/shm/p27aff-r1/t/samsara-queue-2_mnocdt/world"
+    },
+    {
+      "existing_readonly_exclusive_lock": true,
+      "owner_lock_inode": 1292,
+      "world": "/dev/shm/p27aff-r1/t/samsara-queue-ddo_ta6r/world"
+    },
+    {
+      "existing_readonly_exclusive_lock": true,
+      "owner_lock_inode": 2354,
+      "world": "/dev/shm/p28aff-r1/t/samsara-queue-aowcwiam/world"
+    },
+    {
+      "existing_readonly_exclusive_lock": true,
+      "owner_lock_inode": 3408,
+      "world": "/dev/shm/p28aff-r1/t/samsara-queue-i904icyd/world"
+    },
+    {
+      "existing_readonly_exclusive_lock": true,
+      "owner_lock_inode": 2879,
+      "world": "/dev/shm/p28aff-r1/t/samsara-queue-wljd16p4/world"
+    }
+  ],
+  "prior_readonly_manifests_equal": true,
+  "source_files": 213
+}

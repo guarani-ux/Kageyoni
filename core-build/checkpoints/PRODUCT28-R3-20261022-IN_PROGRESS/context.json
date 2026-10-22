@@ -1,0 +1,44 @@
+{
+  "checkpoint": "PRODUCT28-R3-20261022-IN_PROGRESS",
+  "expected_parent_pair": [
+    "7e6fcf72dc8f6a0673b4796311b806019310f4e8",
+    "dbfe76bafe2623711bde1740ddd33cc1390f9d44"
+  ],
+  "governing_pins": [
+    "db9838371a1128124b77fac69677902a4b5820c6",
+    "872973f091320f92e3276408090978084928d291"
+  ],
+  "limits": [
+    "All F1-F5 false; IN_PROGRESS and unqualified.",
+    "Product27 original affected run 1 pass, 1 failure, 25 not run.",
+    "Product28 original affected run 2 pass, 1 fairness failure, 24 not run. Real wait and poll returned 21; five pure checks passed. Fairness fixture tries an unregistered fake return and is correctly rejected. Original 32 test source files unchanged.",
+    "Five closed RAM worlds preserved byte-only under existing owner locks; prior readonly results healthy 2 plus 3.",
+    "R3 is ONE healthy product27/native16 RAM owner-loss case with generations1,2 and fresh recipient output; does not erase earlier journal/copied/overlay failures.",
+    "Earlier native114 in-process pass coexists with unresolved native journal failure; other82 raw history remains pending custody.",
+    "Active f3a-native source and product28-actual-queue-fixture are excluded. No new DB/process/native/build/test execution."
+  ],
+  "native16_wheel_sha256": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3",
+  "prior_checkpoint": "core-build/checkpoints/PRODUCT27-MEDIA-20261022-IN_PROGRESS",
+  "product28_runtime": "1289b896d6de9194f286a0e9860e20ff65337b78a3efb536bae981cd90ebc858",
+  "product28_wheel_sha256": "7360f0b41ed2691abab83bbfaf245eb61215b09f8c4a39fe3ce8a857efff4d4b",
+  "providers": {
+    "r3": {
+      "bytes": 7335302,
+      "filename": "Product27_R3_RAM_OneCase_Raw_Actual.zip",
+      "sha256": "781ccf5cf6c315e3bb72e9ebe9920201f0c00d33960ce312e39c970fe22877ef",
+      "zip_entries": 291
+    },
+    "source": {
+      "bytes": 1547537,
+      "filename": "Product28_Source_Status_IN_PROGRESS.zip",
+      "sha256": "6fe85d3213687144b56dcbc2f2f69f1a4be5b61426bd86170f566ea1f39723f3",
+      "zip_entries": 137
+    },
+    "worlds": {
+      "bytes": 7441235,
+      "filename": "Product27_28_Five_Closed_RAM_Worlds_Raw_IN_PROGRESS.zip",
+      "sha256": "6909ebb5d86e719b38e97da41982ecad57da4d45b1d026349038ba026ea554c8",
+      "zip_entries": 214
+    }
+  }
+}
