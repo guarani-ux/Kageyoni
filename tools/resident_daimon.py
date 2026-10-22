@@ -74,6 +74,7 @@ class ResidentSSLDaimon:
         print(">> [STAGE 3] Fuzzing Adversarial Mutants (Truncation, Bit Flips, Header)...")
         mutants = AdversarialMutator.generate_adversarial_suite(minimal_wasm)
         rejected_cleanly = 0
+        total_mutants = len(mutants)
         for m in mutants:
             try:
                 WasmParser.parse_bytes(m.payload)
@@ -82,7 +83,9 @@ class ResidentSSLDaimon:
             except Exception as e:
                 print(f"   [!] UNHANDLED CRASH on mutant {m.mutation_type}: {e}")
 
-        print(f"   Mutants Evaluated: {len(mutants)} | Cleanly Rejected: {rejected_cleanly} (100% Fail-Closed)")
+        is_100_percent = (rejected_cleanly == total_mutants) and total_mutants > 0
+        rejection_label = "100% Fail-Closed" if is_100_percent else f"{rejected_cleanly}/{total_mutants} Partially Rejected"
+        print(f"   Mutants Evaluated: {total_mutants} | Cleanly Rejected: {rejected_cleanly} ({rejection_label})")
 
         # 4. PHYSICAL CONSOLE SHAPING: Route through SSL meter bridge
         print(">> [STAGE 4] Routing Telemetry Signal through SSL Channel Strip...")

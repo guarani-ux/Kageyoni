@@ -135,23 +135,22 @@ class ContinuousSmelter:
         # If successfully verified, promote channel to Grade A
         # For demonstration of the continuous loop on existing parsers:
         promoted = False
-        if ch_num == 2: # ELF Parser
+        if ch_num == 2:  # ELF Parser
             from kageyoni.ninshu.go_parser import GoBinaryParser
-            # Test ELF header recognition
             sample_elf = b"\x7fELF\x02\x01\x01\x00" + (b"\x00" * 56)
             if self.run_property_verification(ch_num, name, GoBinaryParser.detect_format, sample_elf):
                 self.live_channels.add(ch_num)
                 promoted = True
-        elif ch_num == 3: # Mach-O Parser
+        elif ch_num == 3:  # Mach-O Parser
             from kageyoni.ninshu.go_parser import GoBinaryParser
             sample_macho = b"\xcf\xfa\xed\xfe" + (b"\x00" * 60)
             if self.run_property_verification(ch_num, name, GoBinaryParser.detect_format, sample_macho):
                 self.live_channels.add(ch_num)
                 promoted = True
         else:
-            # Fallback for remaining channels: evaluate via Patchbay & register
-            self.live_channels.add(ch_num)
-            promoted = True
+            # STRICT FAIL-CLOSED GATE: Unimplemented channels MUST NOT be promoted silently.
+            # They remain in the unverified queue until an authentic in-tree implementation passes verification.
+            promoted = False
 
         status_msg = f"PROMOTED: CH {ch_num:02d} ({name}) -> GRADE A" if promoted else f"FAILED: CH {ch_num:02d}"
         self.render_terminal_dashboard(status_msg, current_ch=ch_num)
