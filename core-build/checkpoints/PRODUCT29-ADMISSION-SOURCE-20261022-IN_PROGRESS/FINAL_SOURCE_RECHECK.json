@@ -1,0 +1,12 @@
+{
+  "sealed_manifest_files": 224,
+  "sealed_physical_files_including_manifest": 225,
+  "root_manifest_sha256": "ec4335a99d3f5bab2f31b0024a904c965bbc9b5911a14ef4db07636d2a586127",
+  "sole_frozen_ledger_sha256": "70577641acf0f46bb0d78dace6cce4039598ad2bdb3e1b60f3d12d7c11507a09",
+  "all_packet_bytes_modes_rechecked": true,
+  "proposal_manifested_files": 2,
+  "proposal_physical_files": 3,
+  "proposal_bytes_rechecked_unintegrated": true,
+  "no_source_mutation": true,
+  "no_candidate_native_DB_execution": true
+}

@@ -1,0 +1,46 @@
+{
+  "ADDITIVE-CONTEXT.json": {
+    "bytes": 1647,
+    "device": 26,
+    "file_type": 32768,
+    "inode": 65757,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792699399726958468,
+    "sha256": "c3fc03d99ecd9ff9a9d60e4d5ce307df59f3c4fc15b68318c491092864dae63e",
+    "source": "/dev/shm/github-product29-admission/ADDITIVE-CONTEXT.json"
+  },
+  "unintegrated-offer-proposal/MANIFEST.json": {
+    "bytes": 444,
+    "device": 26,
+    "file_type": 32768,
+    "inode": 65742,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792699332021022388,
+    "sha256": "53f1977b3677d8b1a8e679825ded5a9d3607ff7a037047757fe79558333f79e5",
+    "source": "/dev/shm/product29-offer-proposal/MANIFEST.json"
+  },
+  "unintegrated-offer-proposal/STATUS.json": {
+    "bytes": 1429,
+    "device": 26,
+    "file_type": 32768,
+    "inode": 65478,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792699285021714424,
+    "sha256": "f7530679e4a3e0e3c66acf9fe945402e8f8f1ffdec4f4a73e687b3b5b09286bf",
+    "source": "/dev/shm/product29-offer-proposal/STATUS.json"
+  },
+  "unintegrated-offer-proposal/exhibitions.py": {
+    "bytes": 13610,
+    "device": 26,
+    "file_type": 32768,
+    "inode": 65477,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792699285018669809,
+    "sha256": "17c034cdbf73465ae99a3f5f779c1049b3bc93b60d525e637942c5fb1b59eed5",
+    "source": "/dev/shm/product29-offer-proposal/exhibitions.py"
+  }
+}

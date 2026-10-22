@@ -1,0 +1,27 @@
+{
+  "ZIP_providers": {
+    "body": {
+      "bytes": 6624673,
+      "filename": "Product29_Admission_Complete_Compact_Packet_IN_PROGRESS.zip",
+      "sha256": "1135ce9aef9dc6e6cc6622e4a7f3bedea65e7153bb99ad393a8513a2b3df801c",
+      "zip_entries": 249
+    },
+    "critical": {
+      "bytes": 577799,
+      "filename": "Product29_Admission_Source_Critical_IN_PROGRESS.zip",
+      "sha256": "a9e11e88d4b5061aff05437daaed5d9684bcdbfb61798cc3550833ab5d6a81f0",
+      "zip_entries": 99
+    }
+  },
+  "all_file_bytes": 188517575,
+  "native_DB_opened": false,
+  "packet_manifest_files": 224,
+  "packet_physical_files": 225,
+  "source_before_after_metadata_exact": true,
+  "world_directories": [
+    "admission-history-r1/closed-world",
+    "admission-history-r2/closed-world",
+    "conflict-r1/closed-world",
+    "conflict-r2/closed-world"
+  ]
+}

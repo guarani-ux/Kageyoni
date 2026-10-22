@@ -1,0 +1,39 @@
+{
+  "status": "COMPACT_SOURCE_ONLY_BODY_PENDING_FINAL_REMOTE_READBACK",
+  "critical_heads": [
+    "f8a98cc18acca1205abdf2fcea97e6f63efa158a",
+    "9b4a5b5e515bb6ec9ff009aa1c2c28c3b594b645"
+  ],
+  "sealed225_physical_files_all_preserved": true,
+  "manifested_files": 224,
+  "actual_closed_world_directories": 4,
+  "root_manifest_sha256": "ec4335a99d3f5bab2f31b0024a904c965bbc9b5911a14ef4db07636d2a586127",
+  "sole_current_frozen_ledger_sha256": "70577641acf0f46bb0d78dace6cce4039598ad2bdb3e1b60f3d12d7c11507a09",
+  "current28_native16_untouched": true,
+  "future29_source_only_not_built_installed_or_adopted": true,
+  "production_entries": 40,
+  "same11_native18_history_checks_rerun_not22distinct": true,
+  "actual20_pure_compiler_component_checks_only": true,
+  "r1_invalid_acceptance_and_leaf_RED_history_retained": true,
+  "r2_repaired_shared_original_D6_four_index_loop": "CONFLICT refusal and validdistinctproposal both zeroWrites; nativeguard unchanged",
+  "all_negative_worlds_healthy": false,
+  "additive_offer_proposal": "UNREVIEWED/UNWIRED/NOT_EXECUTED, outside sealed225tree and40productionentries; no begin/settle/repair/wire/version/build",
+  "withdrawal_boundary": "Current28 has no intake/source-withdrawal command or Documents.revoke; rev2stale and activity.cancel differ.",
+  "media_actual_harness_excluded": "Authoring-only, no effects; actualharness not frozen",
+  "Library": "Original frozenpacket context plus additiveGO pending/partial output context only. Completehistoricalcontinuation Product28-only; future29 excluded. No Library effects.",
+  "providers": {
+    "body": {
+      "filename": "Product29_Admission_Complete_Compact_Packet_IN_PROGRESS.zip",
+      "bytes": 6624673,
+      "sha256": "1135ce9aef9dc6e6cc6622e4a7f3bedea65e7153bb99ad393a8513a2b3df801c",
+      "zip_entries": 249
+    },
+    "additive": {
+      "filename": "Product29_Unintegrated_Offer_Proposal_Additive_IN_PROGRESS.zip",
+      "bytes": 6946,
+      "sha256": "c212b8a33c6d36ce3fbc314e3ab125d25e5c3577386c8e823ffb9f9ab109e1a5",
+      "zip_entries": 5
+    }
+  },
+  "full_product_F1_F5_F3_world_season_human_generalhost_qualification": false
+}

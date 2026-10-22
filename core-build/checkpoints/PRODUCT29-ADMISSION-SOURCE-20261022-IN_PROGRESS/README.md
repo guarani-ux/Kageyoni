@@ -1,0 +1,11 @@
+Compact repaired Product29 admission/history source checkpoint — IN_PROGRESS.
+
+Current product28/native16 remains untouched. Future29 is not versionbumped, built, installed or adopted. The frozen225-file packet (224manifest entries plus rootmanifest) is complete in body-recipe.json; it is not the full historical continuation. Its BUILD_STATUS.json SHA70577641...07a09 is the authoritative frozen ledger; workspaceec426 is a historical precursor. Production source40entries plus one authored test are preserved with versions/lock unchanged intentionally.
+
+Critical source/ledger commits are SAMSARA f8a98cc18acca1205abdf2fcea97e6f63efa158a and Kageyoni9b4a5b5e515bb6ec9ff009aa1c2c28c3b594b645. Previous native18 pair78f68/159855 and every prior repository path remain intact. Root reported20pure compiler checks with common source and the same11source/native18 history checks rerun, not22distinct predicates. The independentP2/r1bad acceptance, leafREDs and original AST/UNEXECUTED author notes remain historical; actualr2results supplement them. No one clean original fullsuite or installed29 claim follows. Four actual closed-world directories and all backups/results/raw errors are preserved without opening SQLite.
+
+Additive offer source is a separate provider: UNREVIEWED, UNWIRED, NOT_EXECUTED and not in the40production entries. No BEGIN/SETTLE/REPAIR/WIRE/version/build/runtime integration exists. ADDITIVE-CONTEXT.json records current28 source-withdrawal absence, media authoring-only boundary, and root-reported pendingLibrary15/partial-output status at additive GO. These do not rewrite the sealed225tree or critical identity.
+
+Obtain each recipe and every ASCII part from the immutable SAMSARA commit pinned by Kageyoni BODY-PROVIDER.json. Run the included stdlib-only byte helper, e.g.:
+python reconstruct.py --recipe body-recipe.json --parts-dir . --output Product29_Complete_Packet_REMOTE_READBACK.zip
+It checks full ASCII/raw SHA/GitIDs/offsets, wholearchive hash, CRC, exact member sets, every member hash/mode/type/symlink target. It reconstructs without extracting or opening databases. Full byte custody is independent of runtime/world health. This writer ran no candidate/native/test/build operation or process probe, made no automation/Library mutation, and changed no source. SOURCE_ONLY and all original scope obligations remain.

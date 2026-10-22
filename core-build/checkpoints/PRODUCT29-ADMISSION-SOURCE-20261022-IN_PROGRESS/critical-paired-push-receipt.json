@@ -1,0 +1,54 @@
+{
+  "status": "CRITICAL_SOURCE_ONLY_PAIRED_PUSH_VERIFIED",
+  "heads": [
+    "f8a98cc18acca1205abdf2fcea97e6f63efa158a",
+    "9b4a5b5e515bb6ec9ff009aa1c2c28c3b594b645"
+  ],
+  "parents": [
+    "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+    "1598555d04c3846a6ba4208b4b35dc701515474b"
+  ],
+  "checkpoint": "core-build/checkpoints/PRODUCT29-ADMISSION-SOURCE-20261022-IN_PROGRESS",
+  "updates": [
+    {
+      "repo": "SAMSARA",
+      "reply": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "success": true
+        },
+        "isError": false
+      }
+    },
+    {
+      "repo": "Kageyoni",
+      "reply": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "success": true
+        },
+        "isError": false
+      }
+    }
+  ],
+  "critical_provider": {
+    "bytes": 577799,
+    "sha256": "a9e11e88d4b5061aff05437daaed5d9684bcdbfb61798cc3550833ab5d6a81f0",
+    "ZIP_members": 99,
+    "ASCII_parts": 2
+  },
+  "source_authority": "future29SOURCE_ONLY; active28/native16 unchanged",
+  "frozen_ledger_sha256": "70577641acf0f46bb0d78dace6cce4039598ad2bdb3e1b60f3d12d7c11507a09",
+  "full_compact_body_pending": true,
+  "git_writer": "HELD"
+}

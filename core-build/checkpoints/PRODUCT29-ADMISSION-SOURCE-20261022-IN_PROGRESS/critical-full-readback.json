@@ -1,0 +1,702 @@
+{
+  "SAM": [
+    {
+      "path": "context.json",
+      "bytes": 3190,
+      "sha": "6d72e6677f778a2ee5dc36c36062cac9147a78bc",
+      "sha256": "14e594d6aa8b45da66c1d701bff2862f2c4af6ac010e04a30cddc1cd1add2b13"
+    },
+    {
+      "path": "critical-recipe.json",
+      "bytes": 28593,
+      "sha": "b15fe660a604f8f11a619c12db287436e2633004",
+      "sha256": "3dfdcbb1d2f17a679c8f5dabe5c250376a3f01df62aa91e8e599c6b57261874e"
+    },
+    {
+      "path": "reconstruct.py",
+      "bytes": 1823,
+      "sha": "adb6f5548da9f8980cd07748e3c75818261e886f",
+      "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5"
+    },
+    {
+      "path": "selected/BUILD_STATUS.json",
+      "bytes": 475044,
+      "sha": "ef19f3bd0d2efaae7f3769aed454b3277f074a2c",
+      "sha256": "70577641acf0f46bb0d78dace6cce4039598ad2bdb3e1b60f3d12d7c11507a09"
+    },
+    {
+      "path": "selected/MANIFEST.json",
+      "bytes": 46508,
+      "sha": "8f48dd7ec5b21f46402cb80b792e527e69c573ce",
+      "sha256": "ec4335a99d3f5bab2f31b0024a904c965bbc9b5911a14ef4db07636d2a586127"
+    },
+    {
+      "path": "selected/CURRENT_LEDGER_LOCATION.json",
+      "bytes": 416,
+      "sha": "1a3e7446588c379bedc439010dd36dc49505cb03",
+      "sha256": "416a07449ed80b84120d304b49091ced91023bc2af7825a980fcdad792d1ff46"
+    },
+    {
+      "path": "selected/IN_PROGRESS.json",
+      "bytes": 8596,
+      "sha": "83011a3c3081181e7f4145d621da10405772f3ef",
+      "sha256": "5b93be484a231f4dede020af9444657bea4f2e9ddbdfa0f73463dcf6331d57cf"
+    },
+    {
+      "path": "selected/REPORT.md",
+      "bytes": 1981,
+      "sha": "04171d618b43a2ae6104a956d3c7b9a8f9f5c15a",
+      "sha256": "05160627d1e25579f79f9ce14fcd8eaa7aa7d50561b35509184ed8c4c9a10cbd"
+    },
+    {
+      "path": "selected/BASELINE.json",
+      "bytes": 5709,
+      "sha": "6e66be99a8dc2794198ee4d6890ab12bc6eebe72",
+      "sha256": "3d2aee0da486a62a35ace6afd5e73580af018734d231251626eba3ae31094d59"
+    },
+    {
+      "path": "selected/shared-uniqueness-repair.json",
+      "bytes": 498,
+      "sha": "579c4b5a4397ebec28df168405c74d2bc4e04adf",
+      "sha256": "8771aade3d6afcbfd8c4a320725b60e7ae18e4909e25f50ea0db6c5c002d1b03"
+    },
+    {
+      "path": "selected/source-syntax-and-original-methods.json",
+      "bytes": 3252,
+      "sha": "4e6fc7e07e44eb1162d04cee95210fdcbf39871a",
+      "sha256": "682a553cce9d40c7caeee5ce6924fc56b34618892f6144e49994b9f1fec46aef"
+    },
+    {
+      "path": "selected/root-source-copy-proof.json",
+      "bytes": 13200,
+      "sha": "e71905ab38dd53aa7fbe2bcd124da865f326ae7b",
+      "sha256": "89196fd7115960e97fac8b5785e52824f157358817d758006d0a4b39a80480af"
+    },
+    {
+      "path": "selected/root-compiler20-repaired.log",
+      "bytes": 2893,
+      "sha": "2c07a08e4e760ff6044976d76cc8b443b09dd8de",
+      "sha256": "5609c98369d599cd57c0c0ae1a65347e26fef6c060594a65fd1c90a7789cacad"
+    },
+    {
+      "path": "selected/admission-history-r2.log",
+      "bytes": 47,
+      "sha": "18c65cf5df3886e9c688a71b8645f1479b883181",
+      "sha256": "f1abe337ef0defd9f452cd714763caffd9be415b3c8e3fd624c7eb410e8ae7dd"
+    },
+    {
+      "path": "selected/conflict-r1/closed-world/result.json",
+      "bytes": 493,
+      "sha": "ea3fbd08af7b998d5032287bd3881054e3ebd11f",
+      "sha256": "c46df5e7f3014d0275dbf1ff19e1968ae41e5a3ba06550fc3f8f4bb90813b590"
+    },
+    {
+      "path": "selected/conflict-r2/closed-world/result.json",
+      "bytes": 606,
+      "sha": "dae9ced3fc89300533ac90e4cef0aa88df3f66b7",
+      "sha256": "9f27cd74b81f6a3556d1981565020698341c56ec3b4944f85587031a0b86f250"
+    },
+    {
+      "path": "future-package/pyproject.toml",
+      "bytes": 520,
+      "sha": "eca35d25b70fb4474f451c8779e52243d6d66f53",
+      "sha256": "c1ce38f7672e326730ebd7f4ccfa70adf6d2596bd77da794957f2723af049939"
+    },
+    {
+      "path": "future-package/samsara/__init__.py",
+      "bytes": 105,
+      "sha": "8536d5ec61e66f2064ce3bb919bf80ad1facfe39",
+      "sha256": "2fd3c76004f7760403908eefead263dcb41ee3c79fe752d2169a31963da58a3b"
+    },
+    {
+      "path": "future-package/samsara/__main__.py",
+      "bytes": 29,
+      "sha": "130bc6375628dffcf81fd338a297adae47ac205c",
+      "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+    },
+    {
+      "path": "future-package/samsara/application.py",
+      "bytes": 74160,
+      "sha": "3c0853c8a1613f6098c1ef926895f8d5bdc021a3",
+      "sha256": "2f2aa36002a694fd46381ed5de2addfb11c2ad4248aabf6e054a1db754434b1c"
+    },
+    {
+      "path": "future-package/samsara/atlas.py",
+      "bytes": 20907,
+      "sha": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058",
+      "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b"
+    },
+    {
+      "path": "future-package/samsara/causality.py",
+      "bytes": 13613,
+      "sha": "9032d89355888dc8c5a4b91c8b44e510d3fb8728",
+      "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95"
+    },
+    {
+      "path": "future-package/samsara/cli.py",
+      "bytes": 9443,
+      "sha": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494",
+      "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd"
+    },
+    {
+      "path": "future-package/samsara/client.py",
+      "bytes": 19442,
+      "sha": "3639fc697e524bed5a52640d3046a55e3dfeb0a7",
+      "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040"
+    },
+    {
+      "path": "future-package/samsara/compatibility.py",
+      "bytes": 30288,
+      "sha": "9336136d859ae6cab6a128fa402e8b92029b1180",
+      "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71"
+    },
+    {
+      "path": "future-package/samsara/console.py",
+      "bytes": 15603,
+      "sha": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4",
+      "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7"
+    },
+    {
+      "path": "future-package/samsara/content.py",
+      "bytes": 26244,
+      "sha": "33e6d72c588efbf848a9298ea0b4ea1afaf77d6c",
+      "sha256": "9c25534e5246de8c322518fe60e918b35e7eb0b721dc9c61fcaf5cfb4b2869e0"
+    },
+    {
+      "path": "future-package/samsara/contentsets.py",
+      "bytes": 39135,
+      "sha": "a7d62204cf58b68cab10040d3e61cf28b0684edd",
+      "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5"
+    },
+    {
+      "path": "future-package/samsara/data/compatibility-policy-ps1.json",
+      "bytes": 143222,
+      "sha": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a",
+      "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9"
+    },
+    {
+      "path": "future-package/samsara/data/compatibility-policy-r07a.json",
+      "bytes": 55805,
+      "sha": "45a9782db7a443084e5aebca43a25f6bff3bb042",
+      "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845"
+    },
+    {
+      "path": "future-package/samsara/data/compatibility-policy-r07b.json",
+      "bytes": 113651,
+      "sha": "7bc0eec693e02cb175af2acc230a12b05f29b9a8",
+      "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb"
+    },
+    {
+      "path": "future-package/samsara/data/compatibility-policy.json",
+      "bytes": 172418,
+      "sha": "d559187944d7413367ba329bb8d83592000516cf",
+      "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a"
+    },
+    {
+      "path": "future-package/samsara/data/contract.json",
+      "bytes": 121739,
+      "sha": "53575c52c2446842296c5c2ae5f17054afc3f421",
+      "sha256": "9342d9558a01585c9844ddce95bb01df56184e0fce40a0f5864c4f5547168c06"
+    },
+    {
+      "path": "future-package/samsara/data/engine-lock.json",
+      "bytes": 587,
+      "sha": "0c8c57c85b761b44c55cfc8483aac26bd0410795",
+      "sha256": "100d042560e762a09d56774e80df43de74e6af689ac507b6f4d25029861bd078"
+    },
+    {
+      "path": "future-package/samsara/data/initial-source.md",
+      "bytes": 572,
+      "sha": "3bba2c6d899f9a4601cf1f710159702895441b00",
+      "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+    },
+    {
+      "path": "future-package/samsara/data/work-record.json",
+      "bytes": 979,
+      "sha": "bbe835f62093af2e26d62ad8f72a88583b37f2cb",
+      "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de"
+    },
+    {
+      "path": "future-package/samsara/equipment.py",
+      "bytes": 10788,
+      "sha": "0e4a983930f29d23713754e884b17cd29d0bb76c",
+      "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72"
+    },
+    {
+      "path": "future-package/samsara/exhibition_admission.py",
+      "bytes": 7158,
+      "sha": "6125db205396d8dbca1289566d364c39dfc8e6f8",
+      "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55"
+    },
+    {
+      "path": "future-package/samsara/exhibition_profiles.py",
+      "bytes": 29380,
+      "sha": "fa1a0d241e8d7c297558e71ab43fe47f44cffbfa",
+      "sha256": "550b5db49685571d15e225883c367a4884665d12b539b1cf47b7c9c461eb2eb9"
+    },
+    {
+      "path": "future-package/samsara/exploration.py",
+      "bytes": 10177,
+      "sha": "a58369057b721e0816473c47376a63f1cc584913",
+      "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96"
+    },
+    {
+      "path": "future-package/samsara/extensions.py",
+      "bytes": 16151,
+      "sha": "421e30cda5be46b2cb2d094765815f0746221de5",
+      "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca"
+    },
+    {
+      "path": "future-package/samsara/handlers.py",
+      "bytes": 11382,
+      "sha": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9",
+      "sha256": "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275"
+    },
+    {
+      "path": "future-package/samsara/intake.py",
+      "bytes": 10721,
+      "sha": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+      "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297"
+    },
+    {
+      "path": "future-package/samsara/local_worker.py",
+      "bytes": 13009,
+      "sha": "d7039883a3e73c3a219d36929590f65915e1cd85",
+      "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730"
+    },
+    {
+      "path": "future-package/samsara/mediawork.py",
+      "bytes": 20871,
+      "sha": "c6b960e1f9c3a2fb498653883c4d36a75744d3bb",
+      "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e"
+    },
+    {
+      "path": "future-package/samsara/owner.py",
+      "bytes": 19310,
+      "sha": "67920b4e90a9daf2756aaaca2754e6f3a2271c67",
+      "sha256": "1bbb65a52ec041bba4e5a03bb7409c505117e28acd446f22bee54a04cd532f57"
+    },
+    {
+      "path": "future-package/samsara/practice.py",
+      "bytes": 25686,
+      "sha": "bdef75ccf0493f2a67cf914725aa1ae08765a14a",
+      "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444"
+    },
+    {
+      "path": "future-package/samsara/practice_content.py",
+      "bytes": 21975,
+      "sha": "9a7696e3a3ba1325eaf036f421ec88cc6696f4e1",
+      "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4"
+    },
+    {
+      "path": "future-package/samsara/process_custody.py",
+      "bytes": 12747,
+      "sha": "f4d13803194d72e76882e5e5cf8735d4cbb8e8f8",
+      "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+    },
+    {
+      "path": "future-package/samsara/properties.py",
+      "bytes": 37343,
+      "sha": "4420cd5ffd1e1094b71d758c91b7457a6ecef4a6",
+      "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883"
+    },
+    {
+      "path": "future-package/samsara/protocol.py",
+      "bytes": 3971,
+      "sha": "c2996ba66e4a5426e0babfa67bee762302fcd45b",
+      "sha256": "60ac91ae0627860c4111132ce40d510bfc12430473b6a18bc960883d6fbf1f93"
+    },
+    {
+      "path": "future-package/samsara/runner.py",
+      "bytes": 51926,
+      "sha": "1de3cd2f6b5bb47ad8f591924c0feadf590ef30a",
+      "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832"
+    },
+    {
+      "path": "future-package/samsara/situation.py",
+      "bytes": 18184,
+      "sha": "07e0bc6ccdd3beef161fd8bbeb21df1e1719989f",
+      "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9"
+    },
+    {
+      "path": "future-package/samsara/sourcework.py",
+      "bytes": 16934,
+      "sha": "dcb71d8b8a343a99ea8ab00dcde03fc4324ee66b",
+      "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa"
+    },
+    {
+      "path": "future-package/samsara/terminal.py",
+      "bytes": 2534,
+      "sha": "c2089cbe140fb2608967e38947626e1da7a294ab",
+      "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800"
+    },
+    {
+      "path": "future-package/samsara/travel_content.py",
+      "bytes": 17730,
+      "sha": "055319f6a991483e731057575e5b4c7cc368fe19",
+      "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6"
+    },
+    {
+      "path": "future-package/tests/test_exhibition_profiles.py",
+      "bytes": 26630,
+      "sha": "272235da8dc0310c40f79a4e6139f11a45a3f08f",
+      "sha256": "c9bdd0725de59ddc176e03f5bd6c86f087ce862c5a540a840e97b961b51eab63"
+    },
+    {
+      "path": "critical-parts/part-000.base64",
+      "bytes": 666668,
+      "sha": "f47aa919c057e51931ec7e3df881ea784eef600f",
+      "sha256": "4d7a57e1413fa3e130cb6687499c26e89ea270c7775fb91a66b8f67731d0b14c"
+    },
+    {
+      "path": "critical-parts/part-001.base64",
+      "bytes": 103732,
+      "sha": "f19af971d9b461f9f0cd4a4b1d80b83984e8e996",
+      "sha256": "bd9bc67a1fdac7b68090fed8b70f7be68318256451aa442a730552974fa2f77c"
+    }
+  ],
+  "Kage": [
+    {
+      "path": "context.json",
+      "bytes": 3190,
+      "sha": "6d72e6677f778a2ee5dc36c36062cac9147a78bc",
+      "sha256": "14e594d6aa8b45da66c1d701bff2862f2c4af6ac010e04a30cddc1cd1add2b13"
+    },
+    {
+      "path": "critical-recipe.json",
+      "bytes": 28593,
+      "sha": "b15fe660a604f8f11a619c12db287436e2633004",
+      "sha256": "3dfdcbb1d2f17a679c8f5dabe5c250376a3f01df62aa91e8e599c6b57261874e"
+    },
+    {
+      "path": "reconstruct.py",
+      "bytes": 1823,
+      "sha": "adb6f5548da9f8980cd07748e3c75818261e886f",
+      "sha256": "9fbdf79a278f5b2e437718a88b670e9ace7d85c9b8a9d326166c9082ba65abe5"
+    },
+    {
+      "path": "selected/BUILD_STATUS.json",
+      "bytes": 475044,
+      "sha": "ef19f3bd0d2efaae7f3769aed454b3277f074a2c",
+      "sha256": "70577641acf0f46bb0d78dace6cce4039598ad2bdb3e1b60f3d12d7c11507a09"
+    },
+    {
+      "path": "selected/MANIFEST.json",
+      "bytes": 46508,
+      "sha": "8f48dd7ec5b21f46402cb80b792e527e69c573ce",
+      "sha256": "ec4335a99d3f5bab2f31b0024a904c965bbc9b5911a14ef4db07636d2a586127"
+    },
+    {
+      "path": "selected/CURRENT_LEDGER_LOCATION.json",
+      "bytes": 416,
+      "sha": "1a3e7446588c379bedc439010dd36dc49505cb03",
+      "sha256": "416a07449ed80b84120d304b49091ced91023bc2af7825a980fcdad792d1ff46"
+    },
+    {
+      "path": "selected/IN_PROGRESS.json",
+      "bytes": 8596,
+      "sha": "83011a3c3081181e7f4145d621da10405772f3ef",
+      "sha256": "5b93be484a231f4dede020af9444657bea4f2e9ddbdfa0f73463dcf6331d57cf"
+    },
+    {
+      "path": "selected/REPORT.md",
+      "bytes": 1981,
+      "sha": "04171d618b43a2ae6104a956d3c7b9a8f9f5c15a",
+      "sha256": "05160627d1e25579f79f9ce14fcd8eaa7aa7d50561b35509184ed8c4c9a10cbd"
+    },
+    {
+      "path": "selected/BASELINE.json",
+      "bytes": 5709,
+      "sha": "6e66be99a8dc2794198ee4d6890ab12bc6eebe72",
+      "sha256": "3d2aee0da486a62a35ace6afd5e73580af018734d231251626eba3ae31094d59"
+    },
+    {
+      "path": "selected/shared-uniqueness-repair.json",
+      "bytes": 498,
+      "sha": "579c4b5a4397ebec28df168405c74d2bc4e04adf",
+      "sha256": "8771aade3d6afcbfd8c4a320725b60e7ae18e4909e25f50ea0db6c5c002d1b03"
+    },
+    {
+      "path": "selected/source-syntax-and-original-methods.json",
+      "bytes": 3252,
+      "sha": "4e6fc7e07e44eb1162d04cee95210fdcbf39871a",
+      "sha256": "682a553cce9d40c7caeee5ce6924fc56b34618892f6144e49994b9f1fec46aef"
+    },
+    {
+      "path": "selected/root-source-copy-proof.json",
+      "bytes": 13200,
+      "sha": "e71905ab38dd53aa7fbe2bcd124da865f326ae7b",
+      "sha256": "89196fd7115960e97fac8b5785e52824f157358817d758006d0a4b39a80480af"
+    },
+    {
+      "path": "selected/root-compiler20-repaired.log",
+      "bytes": 2893,
+      "sha": "2c07a08e4e760ff6044976d76cc8b443b09dd8de",
+      "sha256": "5609c98369d599cd57c0c0ae1a65347e26fef6c060594a65fd1c90a7789cacad"
+    },
+    {
+      "path": "selected/admission-history-r2.log",
+      "bytes": 47,
+      "sha": "18c65cf5df3886e9c688a71b8645f1479b883181",
+      "sha256": "f1abe337ef0defd9f452cd714763caffd9be415b3c8e3fd624c7eb410e8ae7dd"
+    },
+    {
+      "path": "selected/conflict-r1/closed-world/result.json",
+      "bytes": 493,
+      "sha": "ea3fbd08af7b998d5032287bd3881054e3ebd11f",
+      "sha256": "c46df5e7f3014d0275dbf1ff19e1968ae41e5a3ba06550fc3f8f4bb90813b590"
+    },
+    {
+      "path": "selected/conflict-r2/closed-world/result.json",
+      "bytes": 606,
+      "sha": "dae9ced3fc89300533ac90e4cef0aa88df3f66b7",
+      "sha256": "9f27cd74b81f6a3556d1981565020698341c56ec3b4944f85587031a0b86f250"
+    },
+    {
+      "path": "future-package/pyproject.toml",
+      "bytes": 520,
+      "sha": "eca35d25b70fb4474f451c8779e52243d6d66f53",
+      "sha256": "c1ce38f7672e326730ebd7f4ccfa70adf6d2596bd77da794957f2723af049939"
+    },
+    {
+      "path": "future-package/samsara/__init__.py",
+      "bytes": 105,
+      "sha": "8536d5ec61e66f2064ce3bb919bf80ad1facfe39",
+      "sha256": "2fd3c76004f7760403908eefead263dcb41ee3c79fe752d2169a31963da58a3b"
+    },
+    {
+      "path": "future-package/samsara/__main__.py",
+      "bytes": 29,
+      "sha": "130bc6375628dffcf81fd338a297adae47ac205c",
+      "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+    },
+    {
+      "path": "future-package/samsara/application.py",
+      "bytes": 74160,
+      "sha": "3c0853c8a1613f6098c1ef926895f8d5bdc021a3",
+      "sha256": "2f2aa36002a694fd46381ed5de2addfb11c2ad4248aabf6e054a1db754434b1c"
+    },
+    {
+      "path": "future-package/samsara/atlas.py",
+      "bytes": 20907,
+      "sha": "ecd555137dba0fafae2e94bc2ce8ceaacb00e058",
+      "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b"
+    },
+    {
+      "path": "future-package/samsara/causality.py",
+      "bytes": 13613,
+      "sha": "9032d89355888dc8c5a4b91c8b44e510d3fb8728",
+      "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95"
+    },
+    {
+      "path": "future-package/samsara/cli.py",
+      "bytes": 9443,
+      "sha": "4d165dfbc68d6b256e64c1ee33d0ecdcbae16494",
+      "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd"
+    },
+    {
+      "path": "future-package/samsara/client.py",
+      "bytes": 19442,
+      "sha": "3639fc697e524bed5a52640d3046a55e3dfeb0a7",
+      "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040"
+    },
+    {
+      "path": "future-package/samsara/compatibility.py",
+      "bytes": 30288,
+      "sha": "9336136d859ae6cab6a128fa402e8b92029b1180",
+      "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71"
+    },
+    {
+      "path": "future-package/samsara/console.py",
+      "bytes": 15603,
+      "sha": "1c88536e506a3dbff0f5f1b1eea8027ea80580f4",
+      "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7"
+    },
+    {
+      "path": "future-package/samsara/content.py",
+      "bytes": 26244,
+      "sha": "33e6d72c588efbf848a9298ea0b4ea1afaf77d6c",
+      "sha256": "9c25534e5246de8c322518fe60e918b35e7eb0b721dc9c61fcaf5cfb4b2869e0"
+    },
+    {
+      "path": "future-package/samsara/contentsets.py",
+      "bytes": 39135,
+      "sha": "a7d62204cf58b68cab10040d3e61cf28b0684edd",
+      "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5"
+    },
+    {
+      "path": "future-package/samsara/data/compatibility-policy-ps1.json",
+      "bytes": 143222,
+      "sha": "835e0b0dd80ef65ac958fa7f37126af9ecefd07a",
+      "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9"
+    },
+    {
+      "path": "future-package/samsara/data/compatibility-policy-r07a.json",
+      "bytes": 55805,
+      "sha": "45a9782db7a443084e5aebca43a25f6bff3bb042",
+      "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845"
+    },
+    {
+      "path": "future-package/samsara/data/compatibility-policy-r07b.json",
+      "bytes": 113651,
+      "sha": "7bc0eec693e02cb175af2acc230a12b05f29b9a8",
+      "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb"
+    },
+    {
+      "path": "future-package/samsara/data/compatibility-policy.json",
+      "bytes": 172418,
+      "sha": "d559187944d7413367ba329bb8d83592000516cf",
+      "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a"
+    },
+    {
+      "path": "future-package/samsara/data/contract.json",
+      "bytes": 121739,
+      "sha": "53575c52c2446842296c5c2ae5f17054afc3f421",
+      "sha256": "9342d9558a01585c9844ddce95bb01df56184e0fce40a0f5864c4f5547168c06"
+    },
+    {
+      "path": "future-package/samsara/data/engine-lock.json",
+      "bytes": 587,
+      "sha": "0c8c57c85b761b44c55cfc8483aac26bd0410795",
+      "sha256": "100d042560e762a09d56774e80df43de74e6af689ac507b6f4d25029861bd078"
+    },
+    {
+      "path": "future-package/samsara/data/initial-source.md",
+      "bytes": 572,
+      "sha": "3bba2c6d899f9a4601cf1f710159702895441b00",
+      "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+    },
+    {
+      "path": "future-package/samsara/data/work-record.json",
+      "bytes": 979,
+      "sha": "bbe835f62093af2e26d62ad8f72a88583b37f2cb",
+      "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de"
+    },
+    {
+      "path": "future-package/samsara/equipment.py",
+      "bytes": 10788,
+      "sha": "0e4a983930f29d23713754e884b17cd29d0bb76c",
+      "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72"
+    },
+    {
+      "path": "future-package/samsara/exhibition_admission.py",
+      "bytes": 7158,
+      "sha": "6125db205396d8dbca1289566d364c39dfc8e6f8",
+      "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55"
+    },
+    {
+      "path": "future-package/samsara/exhibition_profiles.py",
+      "bytes": 29380,
+      "sha": "fa1a0d241e8d7c297558e71ab43fe47f44cffbfa",
+      "sha256": "550b5db49685571d15e225883c367a4884665d12b539b1cf47b7c9c461eb2eb9"
+    },
+    {
+      "path": "future-package/samsara/exploration.py",
+      "bytes": 10177,
+      "sha": "a58369057b721e0816473c47376a63f1cc584913",
+      "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96"
+    },
+    {
+      "path": "future-package/samsara/extensions.py",
+      "bytes": 16151,
+      "sha": "421e30cda5be46b2cb2d094765815f0746221de5",
+      "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca"
+    },
+    {
+      "path": "future-package/samsara/handlers.py",
+      "bytes": 11382,
+      "sha": "2079c8ffedc6e536898d9a4502a0c7d6354dc5a9",
+      "sha256": "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275"
+    },
+    {
+      "path": "future-package/samsara/intake.py",
+      "bytes": 10721,
+      "sha": "ccb495a5f9ccf5b4b0fb89cfee67340ab9d0a366",
+      "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297"
+    },
+    {
+      "path": "future-package/samsara/local_worker.py",
+      "bytes": 13009,
+      "sha": "d7039883a3e73c3a219d36929590f65915e1cd85",
+      "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730"
+    },
+    {
+      "path": "future-package/samsara/mediawork.py",
+      "bytes": 20871,
+      "sha": "c6b960e1f9c3a2fb498653883c4d36a75744d3bb",
+      "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e"
+    },
+    {
+      "path": "future-package/samsara/owner.py",
+      "bytes": 19310,
+      "sha": "67920b4e90a9daf2756aaaca2754e6f3a2271c67",
+      "sha256": "1bbb65a52ec041bba4e5a03bb7409c505117e28acd446f22bee54a04cd532f57"
+    },
+    {
+      "path": "future-package/samsara/practice.py",
+      "bytes": 25686,
+      "sha": "bdef75ccf0493f2a67cf914725aa1ae08765a14a",
+      "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444"
+    },
+    {
+      "path": "future-package/samsara/practice_content.py",
+      "bytes": 21975,
+      "sha": "9a7696e3a3ba1325eaf036f421ec88cc6696f4e1",
+      "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4"
+    },
+    {
+      "path": "future-package/samsara/process_custody.py",
+      "bytes": 12747,
+      "sha": "f4d13803194d72e76882e5e5cf8735d4cbb8e8f8",
+      "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+    },
+    {
+      "path": "future-package/samsara/properties.py",
+      "bytes": 37343,
+      "sha": "4420cd5ffd1e1094b71d758c91b7457a6ecef4a6",
+      "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883"
+    },
+    {
+      "path": "future-package/samsara/protocol.py",
+      "bytes": 3971,
+      "sha": "c2996ba66e4a5426e0babfa67bee762302fcd45b",
+      "sha256": "60ac91ae0627860c4111132ce40d510bfc12430473b6a18bc960883d6fbf1f93"
+    },
+    {
+      "path": "future-package/samsara/runner.py",
+      "bytes": 51926,
+      "sha": "1de3cd2f6b5bb47ad8f591924c0feadf590ef30a",
+      "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832"
+    },
+    {
+      "path": "future-package/samsara/situation.py",
+      "bytes": 18184,
+      "sha": "07e0bc6ccdd3beef161fd8bbeb21df1e1719989f",
+      "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9"
+    },
+    {
+      "path": "future-package/samsara/sourcework.py",
+      "bytes": 16934,
+      "sha": "dcb71d8b8a343a99ea8ab00dcde03fc4324ee66b",
+      "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa"
+    },
+    {
+      "path": "future-package/samsara/terminal.py",
+      "bytes": 2534,
+      "sha": "c2089cbe140fb2608967e38947626e1da7a294ab",
+      "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800"
+    },
+    {
+      "path": "future-package/samsara/travel_content.py",
+      "bytes": 17730,
+      "sha": "055319f6a991483e731057575e5b4c7cc368fe19",
+      "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6"
+    },
+    {
+      "path": "future-package/tests/test_exhibition_profiles.py",
+      "bytes": 26630,
+      "sha": "272235da8dc0310c40f79a4e6139f11a45a3f08f",
+      "sha256": "c9bdd0725de59ddc176e03f5bd6c86f087ce862c5a540a840e97b961b51eab63"
+    }
+  ]
+}

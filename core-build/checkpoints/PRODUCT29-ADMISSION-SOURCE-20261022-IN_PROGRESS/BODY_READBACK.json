@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE_FROZEN_PACKET_AND_SEPARATE_UNINTEGRATED_ADDITIVE_REMOTE_BYTES_VERIFIED",
+  "providers": {
+    "body": {
+      "output": "/dev/shm/github-product29-admission/Product29_Complete_Packet_REMOTE_READBACK.zip",
+      "bytes": 6624673,
+      "sha256": "1135ce9aef9dc6e6cc6622e4a7f3bedea65e7153bb99ad393a8513a2b3df801c",
+      "ZIP_members": 249,
+      "ASCII_parts": 14,
+      "full_ASCII_raw_Git_SHA_offsets_CRC_member_SHA_modes_types_symlinktargets": true
+    },
+    "additive": {
+      "output": "/dev/shm/github-product29-admission/Product29_Offer_Proposal_Additive_REMOTE_READBACK.zip",
+      "bytes": 6946,
+      "sha256": "c212b8a33c6d36ce3fbc314e3ab125d25e5c3577386c8e823ffb9f9ab109e1a5",
+      "ZIP_members": 5,
+      "ASCII_parts": 1,
+      "full_ASCII_raw_Git_SHA_offsets_CRC_member_SHA_modes_types_symlinktargets": true
+    }
+  },
+  "sealed225tree_critical_identity_unchanged": true,
+  "all_four_world_directories_retained": true,
+  "native_DB_opened": false,
+  "all_negative_worlds_healthy": false,
+  "runtime_qualification": false
+}

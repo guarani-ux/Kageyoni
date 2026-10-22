@@ -1,0 +1,67 @@
+{
+  "bytes": 6946,
+  "filename": "Product29_Unintegrated_Offer_Proposal_Additive_IN_PROGRESS.zip",
+  "format": "exact-ASCII500000-raw-provider/2",
+  "members": [
+    {
+      "bytes": 1647,
+      "dir": false,
+      "file_type": 32768,
+      "mode": 420,
+      "path": "ADDITIVE-CONTEXT.json",
+      "sha256": "c3fc03d99ecd9ff9a9d60e4d5ce307df59f3c4fc15b68318c491092864dae63e",
+      "symlink_target": null
+    },
+    {
+      "bytes": 444,
+      "dir": false,
+      "file_type": 32768,
+      "mode": 420,
+      "path": "unintegrated-offer-proposal/MANIFEST.json",
+      "sha256": "53f1977b3677d8b1a8e679825ded5a9d3607ff7a037047757fe79558333f79e5",
+      "symlink_target": null
+    },
+    {
+      "bytes": 1429,
+      "dir": false,
+      "file_type": 32768,
+      "mode": 420,
+      "path": "unintegrated-offer-proposal/STATUS.json",
+      "sha256": "f7530679e4a3e0e3c66acf9fe945402e8f8f1ffdec4f4a73e687b3b5b09286bf",
+      "symlink_target": null
+    },
+    {
+      "bytes": 13610,
+      "dir": false,
+      "file_type": 32768,
+      "mode": 420,
+      "path": "unintegrated-offer-proposal/exhibitions.py",
+      "sha256": "17c034cdbf73465ae99a3f5f779c1049b3bc93b60d525e637942c5fb1b59eed5",
+      "symlink_target": null
+    },
+    {
+      "bytes": 1411,
+      "dir": false,
+      "file_type": 32768,
+      "mode": 384,
+      "path": "CHECKPOINT-MANIFEST.json",
+      "sha256": "ef1c7ce23605bf9bdb5f724bc35cc0fc515f269dedf1776a718c571b903f97a4",
+      "symlink_target": null
+    }
+  ],
+  "parts": [
+    {
+      "ASCII_bytes": 9264,
+      "ASCII_sha256": "ecfd2f3ff44ab6ab15fb5ccc223d5cbebb2acf1819ac82e7c206eb94ed6e2f8a",
+      "bytes": 6946,
+      "git_sha1": "7501aa20ea88996ed406682211476cbfb1a15d4f",
+      "offset": 0,
+      "path": "additive-parts/part-000.base64",
+      "raw_git_sha1": "b65945f7fb631986a978c51c6180bedfe7f91485",
+      "sha256": "c212b8a33c6d36ce3fbc314e3ab125d25e5c3577386c8e823ffb9f9ab109e1a5"
+    }
+  ],
+  "scope": "Compact future product29 source-only packet; current28/native16 authority unchanged. No product29 build/install/full historical continuation or full-release qualification.",
+  "sha256": "c212b8a33c6d36ce3fbc314e3ab125d25e5c3577386c8e823ffb9f9ab109e1a5",
+  "zip_entries": 5
+}

@@ -1,0 +1,12 @@
+{
+  "status": "BYTE_TRANSPORT_LIMITS_ONLY",
+  "initial_critical_read_batch": "One read-only batch reported a rejected Error, but original reason/message/underlying APIreply were not serialized.17successfulSAMcaptures retained and independently byteverified; subsequent missing payload lookup succeeded.",
+  "retained_evidence": [
+    "critical-readback-recovery-plan.json",
+    "critical-full-readback.json"
+  ],
+  "resolution": "Completed59SAM+58Kage criticalfullpayload readback and fullcriticalZIP reconstruction before any criticalref update.32SAM+17Kage bodymetadata/providers readback and bothbody/additive ZIPs exact.",
+  "Git_mutation_retries": false,
+  "candidate_native_DB_or_source_effects": false,
+  "automatic_qualification_from_byte_custody": false
+}

@@ -1,0 +1,13 @@
+{
+  "manifested_source_files": 2,
+  "provider": {
+    "bytes": 6946,
+    "filename": "Product29_Unintegrated_Offer_Proposal_Additive_IN_PROGRESS.zip",
+    "sha256": "c212b8a33c6d36ce3fbc314e3ab125d25e5c3577386c8e823ffb9f9ab109e1a5",
+    "zip_entries": 5
+  },
+  "runtime_execution": false,
+  "sealed225_tree_not_modified": true,
+  "source_before_after_all_metadata_equal": true,
+  "source_files": 3
+}

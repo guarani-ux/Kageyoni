@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE_COMPACT_SOURCE_ONLY_REMOTE_BYTE_CUSTODY_IN_PROGRESS",
+  "provider_repository": "guarani-ux/SAMSARA",
+  "immutable_body_commit": "cc81bb3148ab9ac587dbf14332795202d13ca602",
+  "immutable_critical_commit": "f8a98cc18acca1205abdf2fcea97e6f63efa158a",
+  "checkpoint": "core-build/checkpoints/PRODUCT29-ADMISSION-SOURCE-20261022-IN_PROGRESS",
+  "recipes": [
+    "critical-recipe.json",
+    "body-recipe.json",
+    "additive-recipe.json"
+  ],
+  "sealed_packet_manifest_files": 224,
+  "sealed_packet_physical_files": 225,
+  "closed_world_directories": 4,
+  "root_manifest_sha256": "ec4335a99d3f5bab2f31b0024a904c965bbc9b5911a14ef4db07636d2a586127",
+  "sole_current_frozen_ledger_sha256": "70577641acf0f46bb0d78dace6cce4039598ad2bdb3e1b60f3d12d7c11507a09",
+  "body_zip_sha256": "1135ce9aef9dc6e6cc6622e4a7f3bedea65e7153bb99ad393a8513a2b3df801c",
+  "additive_zip_sha256": "c212b8a33c6d36ce3fbc314e3ab125d25e5c3577386c8e823ffb9f9ab109e1a5",
+  "offer_proposal": "UNREVIEWED_UNWIRED_NOT_EXECUTED_UNINTEGRATED; outside sealed225 and40production",
+  "current28_native16_authority_untouched": true,
+  "future29_built_installed_adopted": false,
+  "not_complete_historical_continuation": true,
+  "all_source_before_after_and_remote_CRC_member_SHA_modes_types_symlinktargets_verified": true,
+  "all_negative_worlds_healthy": false,
+  "full_runtime_product_world_F3_F1_F5_human_generalhost_qualification": false
+}
