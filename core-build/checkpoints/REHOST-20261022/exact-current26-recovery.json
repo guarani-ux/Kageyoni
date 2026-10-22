@@ -1,0 +1,88 @@
+{
+  "recovered_utc": "2026-10-22T17:46:23.347118+00:00",
+  "commission": "Read-only remote Git recovery and local exact-byte identity verification only",
+  "status": "PASS_EXACT_CURRENT26_RECOVERY_NOT_RELEASE_QUALIFICATION",
+  "archive": {
+    "filename": "Samsara_D16_Current_Source_Offline_IN_PROGRESS.zip",
+    "bytes": 62419764,
+    "sha256": "73daef00e272cb6a842d267d2d4b5d4c0bc007b4edb99540960fbb38eccee195",
+    "physical_files": 1534,
+    "declared_manifest_files": 1533,
+    "root_manifest_sha256": "de0952fca3e71a3999d8d518d75147c3dab297178d2c757fa2c6d832af8480bd"
+  },
+  "archive_path": "/workspace/scratch/5c7ed9200168/recovery-20261022/current26/Samsara_D16_Current_Source_Offline_IN_PROGRESS.zip",
+  "extracted_path": "/workspace/scratch/5c7ed9200168/recovery-20261022/current26/extracted/samsara_core",
+  "recipe": {
+    "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/current26/current-reconstruction-recipe.json",
+    "bytes": 526525,
+    "git_blob": "715d7e8035a82047df68403b4c74433648b76088",
+    "immutable_commit": "9e27e8dc1ae2ed9cf359ddc5cb7ba2d9331b2807"
+  },
+  "base25": {
+    "bytes": 31878784,
+    "sha256": "2ca16d8917772b69963cfba29f1de9a7ce1224bcb2034746a457ace1a20f1e36",
+    "physical_files": 1243,
+    "declared_manifest_files": 1242
+  },
+  "provider_report": "/workspace/scratch/5c7ed9200168/recovery-20261022/current26/provider-verification.json",
+  "base_provider_report": "/workspace/scratch/5c7ed9200168/recovery-20261022/current26/base25/provider-verification.json",
+  "fetch_log": "/workspace/scratch/5c7ed9200168/recovery-20261022/current26/fetch-log.json",
+  "fresh_checks": {
+    "all_current_provider_ASCII_raw_SHA_Git_ID_offsets": true,
+    "all_recursive_provider_raw_SHA_Git_ID_offsets": true,
+    "ASCII_parts_verified": 53,
+    "raw_binary_parts_verified": 22,
+    "canonical_zip_exact_SHA_bytes": true,
+    "CRC_every_current_and_base_member": true,
+    "every_current_and_base_recipe_member_SHA_bytes": true,
+    "safe_extraction_original_modes": true,
+    "VERIFY_CHECKPOINT_passed": true,
+    "manifest_files": 1533,
+    "wheel_payloads_byte_equal": 233,
+    "source_entries": 430,
+    "source_identity": "5fc016c696de34c8d86ca3b9485bda817085eeabc6af8fdc4175b09be85b9592"
+  },
+  "checkpoint_recorded_identity": {
+    "state": "IMPLEMENTED_INSTALLED_IN_PROGRESS_NOT_FEATURE_QUALIFIED",
+    "product": "0.5.3.dev26",
+    "engine": "11.1.0.dev15",
+    "runtime_digest": "26a07d047655cfc3fec7c431e13e64239d2e7707c3b73940fbd49f9c87eb02ef",
+    "source_identity": "5fc016c696de34c8d86ca3b9485bda817085eeabc6af8fdc4175b09be85b9592",
+    "payload_entries": 233,
+    "wheels": {
+      "product": "dcc81ae95ddd0eaee4e5ccd47a6e056be45fe5cc49342742e9898634c20ef06a",
+      "engine": "ed30ab970dfe198fe948b2a3b776b9dae864654dd5cd2b84d0f8ef453bfc843e"
+    },
+    "limits": [
+      "21 installed parser predicates and actual current private media job/first returned component only; no whole product/F4/release qualification.",
+      "Revision2 negative-envelope probe hit unchanged eight-stage-per-job guard before valid return; closed failed attempt retained.",
+      "No current media dual SIGKILL, independent recipient, offline relocation, withdrawal, all affected regression or old-world compatibility claim.",
+      "D15b/034 proposal source and OS observer experiments are not installed in this candidate.",
+      "Selected dev25 F1/D15 evidence remains exact historical parent, not silently rerun on dev26."
+    ]
+  },
+  "limits": [
+    "Runtime digest is historical checkpoint identity; no runtime installed or executed in this recovery commission.",
+    "No database opened; no dependency install, source edit, build, process probe, semantic, full historical verifier or full-release qualification performed.",
+    "Current26 is IMPLEMENTED_INSTALLED_IN_PROGRESS_NOT_FEATURE_QUALIFIED.",
+    "Original media revision2 quota failure retained exactly in stopped media provider; later gen2/native16 raw bytes were lost before checkpoint and are not manufactured.",
+    "Root owns full historical Library reconstruction; current26 compact carrier alone is not full historical continuation."
+  ],
+  "failed_tool_calls": [
+    {
+      "tool": "github_fetch_blob",
+      "repository": "guarani-ux/SAMSARA",
+      "blob_sha": "90d2922bdec4085976177205ab60515fd4729457",
+      "error": "UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 17-18: invalid continuation byte",
+      "resolution": "Official github_fetch_file encoding=base64 retrieved exact raw bytes; SHA256 and Git blob identity subsequently verified."
+    },
+    {
+      "operation": "Initial exact current recipe Git SHA check",
+      "status": "FAILED",
+      "observed_bytes": 526526,
+      "observed_git_blob": "65a4c987818aff129fb1a0338ec543de2999a31e",
+      "resolution": "One added terminal newline removed in current26-owned exact copy only, yielding526525B and expected715d7e8035a82047df68403b4c74433648b76088. Shared root-owned recipe untouched."
+    }
+  ],
+  "transport_note": "apply_patch-added terminal newline removed only after exact expected original Git blob SHA correspondence; original ASCII byte counts/hashes and recipe/helper Git IDs verified."
+}

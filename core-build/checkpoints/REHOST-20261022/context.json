@@ -1,0 +1,85 @@
+{
+  "active_operations": {
+    "media_resume_harness": "Source-only new recovery harness commission; no Client/render/DB GO yet.",
+    "recover_current26": "Recovery done; new native034-r1 isolated source repair/build/native API commission, source not frozen or included here.",
+    "root": "Fresh installed26 recovered, source/wheel233 correspondence checked. Owns integrated purpose, shared contracts, ledger and sole remote writer."
+  },
+  "current": {
+    "checkpoint_files": 1534,
+    "checkpoint_zip_bytes": 62419764,
+    "checkpoint_zip_sha256": "73daef00e272cb6a842d267d2d4b5d4c0bc007b4edb99540960fbb38eccee195",
+    "engine": "11.1.0.dev15",
+    "fresh_offline_installed_payloads": 233,
+    "product": "0.5.3.dev26",
+    "runtime": "26a07d047655cfc3fec7c431e13e64239d2e7707c3b73940fbd49f9c87eb02ef",
+    "scope": "Current exact recovered bytes and fresh installed imports only; media semantic qualification incomplete.",
+    "source_entries": 430,
+    "source_identity": "5fc016c696de34c8d86ca3b9485bda817085eeabc6af8fdc4175b09be85b9592",
+    "wheel_sha256": {
+      "engine": "ed30ab970dfe198fe948b2a3b776b9dae864654dd5cd2b84d0f8ef453bfc843e",
+      "product": "dcc81ae95ddd0eaee4e5ccd47a6e056be45fe5cc49342742e9898634c20ef06a"
+    }
+  },
+  "format": "Samsara-current-rehost-recovery-context/1",
+  "full_release_qualified": false,
+  "governing_pins": {
+    "Kageyoni": "872973f091320f92e3276408090978084928d291",
+    "SAMSARA": "db9838371a1128124b77fac69677902a4b5820c6"
+  },
+  "host": {
+    "RAM_temporary_storage_empty_at_entry": true,
+    "limits": "No old host PID/socket/storage/model assumptions. No canonical campaign mutation or historical process signal.",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "workspace_free_bytes": 22851624960
+  },
+  "library_parent": {
+    "bytes": 462812341,
+    "crc": "PASS",
+    "entries": 7308,
+    "sha256": "73738ee2b30962cf461e7c04c499524286b0a81715dbca7f12820618545690b4",
+    "xattrs": {
+      "user.library-file-id": "libfile_b4be79d59368819187fae7dceada0199",
+      "user.library-file-version": "15"
+    }
+  },
+  "lost_uncheckpointed_work": {
+    "media_gen2_positive_stale_and_closed_capture": "Prior conversation observations only; raw bodies did not survive before new Git checkpoint. Do not manufacture/relabel evidence. Resume from actually recovered stopped run in a new disposable copy.",
+    "native16_common_repair_future_product27_12_API_cases": "Prior conversation observations only; source/wheels/test bodies were not checkpointed. Reimplement from preserved prerequisite proposal and independently rerun.",
+    "old_jobs": "No old process or agent remains active."
+  },
+  "next": "Finish current media copy/isolated negative/pause-resume/new render/root frame inspection/5-stage return/stale source, actual recipient/later use and recovery checks; repair and execute native034 candidate before adoption. Preserve every raw failure and push next coherent source when frozen.",
+  "observed_date": "2026-10-22",
+  "recovery": {
+    "all_provider_member_SHA_and_CRC": true,
+    "all_provider_parts": 75,
+    "compact_verify_files": 1533,
+    "full_library_verify_files": 7307,
+    "library_next": "CONTINUE_FULL_RELEASE",
+    "new_Git_source_mutation": "None in this context-only checkpoint; new native034 source writer is isolated and not frozen.",
+    "old_scratch_RAM_processes_survived": false
+  },
+  "retained_scope": {
+    "PS1": "Historical qualified selected private-native-study parent retained; no requester agreement, mastery or human-result fiction.",
+    "canonical_designation_and_identity_maps": "UNRESOLVED; dependent claims only",
+    "core_loops": 13,
+    "full_release": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "general_workers_graphs_merges_timers_extensions_and_full_load_matrix": "OPEN",
+    "human_play": "NOT_RUN",
+    "increments": 14,
+    "old_requirements": 22,
+    "old_slices": 13
+  },
+  "source_pair": {
+    "Kageyoni": "4558c548ad0a345dc237482d7c7a822ce9c9ab75",
+    "SAMSARA": "a9f609dd88b5db76e3ad1ead37dbd97294a105cc"
+  },
+  "status": "IN_PROGRESS_RECOVERY_VERIFIED_NO_RELEASE_CLAIM",
+  "user_goal": "Complete all retained full-release F1-F5 and original requirements; representative core completion does not stop work."
+}
