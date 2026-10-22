@@ -1,0 +1,42 @@
+{
+  "evidence_pointers": {
+    "product28-genuine-affected-r1/evidence/test-results.json": {
+      "sha256": "694ea7611521cb45b8d285dc35ea6f5abcf4813adb9380f8f769fe4a30735fd3",
+      "matches_semantic_receipt": true
+    },
+    "product28-genuine-affected-r1/readonly-postconditions.json": {
+      "sha256": "51914c5a25b49b301e7fe00be229609d57a3615526ca72161f47653c38c30f51",
+      "matches_semantic_receipt": true
+    },
+    "product28-genuine-affected-r1/genuine-six-returns.json": {
+      "sha256": "abf2b5f72f97c2af282c8b15f155069e140ecd10b4d326a677a0f27c4ded9b45",
+      "matches_semantic_receipt": true
+    },
+    "product28-receiving-r1/fresh-receiving/result.json": {
+      "sha256": "f616c94051c7c1753cbde76ba59c26e5227f7b914a2af5a9a7505f74e2cff470",
+      "matches_semantic_receipt": true
+    },
+    "product28-receiving-r1/fresh-receiving/physical-relocation.json": {
+      "sha256": "5dc35d3e77931ae2773c3ca75d6a32181e08ba54a82b88f7803f48fd35bf5406",
+      "matches_semantic_receipt": true
+    },
+    "product28-affected-r1/summary.json": {
+      "sha256": "6b9f04a2baf121c47a46ea3be8204767ea017799448fc0d4364bfcd9aec86667",
+      "matches_semantic_receipt": true
+    },
+    "product28-actual-queue-fixture/root-assertion-review.json": {
+      "sha256": "05bd4d2bbfe0f53c42ad680bed12c73217b8cf234b532b7bd2f7d4ed09c181fc",
+      "matches_semantic_receipt": true
+    },
+    "product27-failed-registration-diagnosis/diagnosis-and-28-review.md": {
+      "sha256": "e2c78d1956a635db6f0cd08952dcfe52a6c2b1031c55d8c900d1c43492517cd4",
+      "matches_semantic_receipt": true
+    },
+    "product28-build/unfed-pure.log": {
+      "sha256": "d03ce458f2a6cd2b4f27522f3aacad03ce1872c028853507c3ad02ca621bdcad",
+      "matches_semantic_receipt": true
+    }
+  },
+  "checked_backup_bytes_match_frozen_final_native_report": true,
+  "DB_or_semantic_execution": false
+}

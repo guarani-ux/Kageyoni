@@ -1,0 +1,157 @@
+{
+  "DB_native_or_candidate_imports_or_opens": false,
+  "directories": 201,
+  "files": 1303,
+  "mixed_worlds_prior27_manifests_equal": true,
+  "owner_lock_receipts": [
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 18252,
+      "world": "/dev/shm/p28real-r1/pytest-conditional-seven/test_borrowed_output_and_tool_0/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 17184,
+      "world": "/dev/shm/p28real-r1/pytest-conditional-seven/test_immutable_audience_surviv0/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 17722,
+      "world": "/dev/shm/p28real-r1/pytest-conditional-seven/test_restricted_intake_dedup_k0/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 15567,
+      "world": "/dev/shm/p28real-r1/t/r6-sw-0rahliva/w"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 16655,
+      "world": "/dev/shm/p28real-r1/t/r6-sw-bcxdgcsh/w"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 15026,
+      "world": "/dev/shm/p28real-r1/t/r6-sw-jzmghgh5/w"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 16113,
+      "world": "/dev/shm/p28real-r1/t/r6-sw-tzlzupfs/w"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 11355,
+      "world": "/dev/shm/p28real-r1/t/samsara-integrity-44754yp8/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 13969,
+      "world": "/dev/shm/p28real-r1/t/samsara-integrity-5h4ls3zh/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 13446,
+      "world": "/dev/shm/p28real-r1/t/samsara-integrity-8xl61r6h/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 14492,
+      "world": "/dev/shm/p28real-r1/t/samsara-integrity-_yipj_1_/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 12925,
+      "world": "/dev/shm/p28real-r1/t/samsara-integrity-iafk1l65/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 12397,
+      "world": "/dev/shm/p28real-r1/t/samsara-integrity-o9k1np8f/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 11876,
+      "world": "/dev/shm/p28real-r1/t/samsara-integrity-wsd8wp_4/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 4563,
+      "world": "/dev/shm/p28real-r1/t/samsara-queue-_5_jfcl8/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 5104,
+      "world": "/dev/shm/p28real-r1/t/samsara-queue-guvsds9d/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 6155,
+      "world": "/dev/shm/p28real-r1/t/samsara-queue-h4s8_yvr/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 7216,
+      "world": "/dev/shm/p28real-r1/t/samsara-queue-ijjs02co/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 3977,
+      "world": "/dev/shm/p28real-r1/t/samsara-queue-jewvlfdp/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 5630,
+      "world": "/dev/shm/p28real-r1/t/samsara-queue-qyc3sgu0/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 8279,
+      "world": "/dev/shm/p28real-r1/t/samsara-queue-r2it9902/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 6681,
+      "world": "/dev/shm/p28real-r1/t/samsara-queue-u5h4x_z9/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 7745,
+      "world": "/dev/shm/p28real-r1/t/samsara-queue-wh71z7wi/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 10719,
+      "world": "/dev/shm/p28real-r1/t/samsara-runner-8ytibbnb/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 8841,
+      "world": "/dev/shm/p28real-r1/t/samsara-runner-9zxffaff/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 10148,
+      "world": "/dev/shm/p28real-r1/t/samsara-runner-x57z4uv9/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 9567,
+      "world": "/dev/shm/p28real-r1/t/samsara-runner-xjggemv4/world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 1320831,
+      "world": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-receiving-r1/final-closed-world"
+    },
+    {
+      "existing_readonly_exclusive_owner_lock": true,
+      "inode": 18869,
+      "world": "/dev/shm/p28move-r1/world"
+    }
+  ],
+  "source_before_after_bytes_modes_kinds_equal": true,
+  "source_bytes": 1283998915,
+  "status": "COMPLETE_RAW_BYTE_CAPTURE_ONLY",
+  "world_trees": 29
+}

@@ -1,0 +1,248 @@
+{
+  "preflight": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "id": "1418372423",
+          "name": "SAMSARA",
+          "owner": {
+            "login": "guarani-ux",
+            "id": 253434549,
+            "type": "User",
+            "avatar_url": "https://avatars.githubusercontent.com/u/253434549?v=4",
+            "url": "https://api.github.com/users/guarani-ux"
+          },
+          "repository_full_name": "guarani-ux/SAMSARA",
+          "permissions": {
+            "admin": true,
+            "maintain": true,
+            "pull": true,
+            "push": true,
+            "triage": true
+          },
+          "allow_auto_merge": false,
+          "allow_merge_commit": true,
+          "allow_rebase_merge": true,
+          "allow_squash_merge": true,
+          "allow_update_branch": false,
+          "clone_url": "https://github.com/guarani-ux/SAMSARA.git",
+          "size": 2047045,
+          "default_branch": "main",
+          "git_commits_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits{/sha}",
+          "git_refs_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/refs{/sha}",
+          "git_url": "git://github.com/guarani-ux/SAMSARA.git",
+          "master_branch": null,
+          "visibility": "private",
+          "archived": false,
+          "is_code_search_indexed": null
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"ref\":\"refs/heads/codex/samsara-core-continuation\",\"node_id\":\"REF_kwDOVIqlR9oAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/refs/heads/codex/samsara-core-continuation\",\"object\":{\"sha\":\"3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\"}}",
+          "title": "samsara-core-continuation",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/ref/heads/codex/samsara-core-continuation",
+          "display_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/ref/heads/codex/samsara-core-continuation",
+          "display_title": "samsara-core-continuation",
+          "structuredContent": {
+            "title": "samsara-core-continuation",
+            "content": "{\"ref\":\"refs/heads/codex/samsara-core-continuation\",\"node_id\":\"REF_kwDOVIqlR9oAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/refs/heads/codex/samsara-core-continuation\",\"object\":{\"sha\":\"3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\"}}",
+            "display_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/ref/heads/codex/samsara-core-continuation"
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "id": "1376391549",
+          "name": "Kageyoni",
+          "owner": {
+            "login": "guarani-ux",
+            "id": 253434549,
+            "type": "User",
+            "avatar_url": "https://avatars.githubusercontent.com/u/253434549?v=4",
+            "url": "https://api.github.com/users/guarani-ux"
+          },
+          "repository_full_name": "guarani-ux/Kageyoni",
+          "permissions": {
+            "admin": true,
+            "maintain": true,
+            "pull": true,
+            "push": true,
+            "triage": true
+          },
+          "allow_auto_merge": false,
+          "allow_merge_commit": true,
+          "allow_rebase_merge": true,
+          "allow_squash_merge": true,
+          "allow_update_branch": false,
+          "clone_url": "https://github.com/guarani-ux/Kageyoni.git",
+          "size": 13623,
+          "default_branch": "main",
+          "git_commits_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits{/sha}",
+          "git_refs_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/refs{/sha}",
+          "git_url": "git://github.com/guarani-ux/Kageyoni.git",
+          "master_branch": null,
+          "visibility": "private",
+          "archived": false,
+          "is_code_search_indexed": null
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"ref\":\"refs/heads/codex/samsara-core-continuation\",\"node_id\":\"REF_kwDOUgoRfdoAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/refs/heads/codex/samsara-core-continuation\",\"object\":{\"sha\":\"ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\"}}",
+          "title": "samsara-core-continuation",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/ref/heads/codex/samsara-core-continuation",
+          "display_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/ref/heads/codex/samsara-core-continuation",
+          "display_title": "samsara-core-continuation",
+          "structuredContent": {
+            "title": "samsara-core-continuation",
+            "content": "{\"ref\":\"refs/heads/codex/samsara-core-continuation\",\"node_id\":\"REF_kwDOUgoRfdoAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/refs/heads/codex/samsara-core-continuation\",\"object\":{\"sha\":\"ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\"}}",
+            "display_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/ref/heads/codex/samsara-core-continuation"
+          }
+        },
+        "isError": false
+      }
+    }
+  ],
+  "commits": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"sha\":\"3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\",\"node_id\":\"C_kwDOVIqlR9oAKDNiNjJkODczNWYxMmY1YjJhMTg1MjUwNmI0MDAwYjk1ZTJlNGI0Zjg\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\",\"html_url\":\"https://github.com/guarani-ux/SAMSARA/commit/3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\",\"author\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-22T18:51:28Z\"},\"committer\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-22T18:51:28Z\"},\"tree\":{\"sha\":\"e233fd12214128ba98944dc92c4aa369ce1cce04\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/e233fd12214128ba98944dc92c4aa369ce1cce04\"},\"message\":\"Preserve complete R3 RAM case and five stopped-run worlds as verified raw providers IN_PROGRESS\\n\\nR3 exact7,335,302B SHA781ccf5cf6c315e3bb72e9ebe9920201f0c00d33960ce312e39c970fe22877ef/291entries and fiveworlds7,441,235B SHA6909ebb5d86e719b38e97da41982ecad57da4d45b1d026349038ba026ea554c8/214entries. Thirty immutable ASCIIparts fully reconstructed with Git/rawSHA/offset/CRC/memberSHA/modes. Current28 original run2PASS1FAIL24NOTRUN and earlier journal/overlay failures remain; all F1-F5 false. No DB/process/build/test execution.\",\"parents\":[{\"sha\":\"a97592b84a8285bb10927642fadef26988142814\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/a97592b84a8285bb10927642fadef26988142814\",\"html_url\":\"https://github.com/guarani-ux/SAMSARA/commit/a97592b84a8285bb10927642fadef26988142814\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+          "title": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+          "display_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+          "display_title": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+          "structuredContent": {
+            "title": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+            "content": "{\"sha\":\"3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\",\"node_id\":\"C_kwDOVIqlR9oAKDNiNjJkODczNWYxMmY1YjJhMTg1MjUwNmI0MDAwYjk1ZTJlNGI0Zjg\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\",\"html_url\":\"https://github.com/guarani-ux/SAMSARA/commit/3b62d8735f12f5b2a1852506b4000b95e2e4b4f8\",\"author\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-22T18:51:28Z\"},\"committer\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-22T18:51:28Z\"},\"tree\":{\"sha\":\"e233fd12214128ba98944dc92c4aa369ce1cce04\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/e233fd12214128ba98944dc92c4aa369ce1cce04\"},\"message\":\"Preserve complete R3 RAM case and five stopped-run worlds as verified raw providers IN_PROGRESS\\n\\nR3 exact7,335,302B SHA781ccf5cf6c315e3bb72e9ebe9920201f0c00d33960ce312e39c970fe22877ef/291entries and fiveworlds7,441,235B SHA6909ebb5d86e719b38e97da41982ecad57da4d45b1d026349038ba026ea554c8/214entries. Thirty immutable ASCIIparts fully reconstructed with Git/rawSHA/offset/CRC/memberSHA/modes. Current28 original run2PASS1FAIL24NOTRUN and earlier journal/overlay failures remain; all F1-F5 false. No DB/process/build/test execution.\",\"parents\":[{\"sha\":\"a97592b84a8285bb10927642fadef26988142814\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/a97592b84a8285bb10927642fadef26988142814\",\"html_url\":\"https://github.com/guarani-ux/SAMSARA/commit/a97592b84a8285bb10927642fadef26988142814\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+            "display_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/3b62d8735f12f5b2a1852506b4000b95e2e4b4f8"
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"sha\":\"db9838371a1128124b77fac69677902a4b5820c6\",\"node_id\":\"C_kwDOVIqlR9oAKGRiOTgzODM3MWExMTI4MTI0Yjc3ZmFjNjk2Nzc5MDJhNGI1ODIwYzY\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/db9838371a1128124b77fac69677902a4b5820c6\",\"html_url\":\"https://github.com/guarani-ux/SAMSARA/commit/db9838371a1128124b77fac69677902a4b5820c6\",\"author\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-15T04:25:48Z\"},\"committer\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-15T04:25:48Z\"},\"tree\":{\"sha\":\"5eb2685e998f4ba6307361bce4dbeaffdc884e46\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/5eb2685e998f4ba6307361bce4dbeaffdc884e46\"},\"message\":\"Add six task-driven workflows for Sciel's Samsara crew\\n\\nImplement delivery (full or selected service), research/preparation, exploration, guided learning, council/review, and revision/recovery routes. Each defines entry, ownership, equipment, inputs, transition gates, returns, and failure handling. Reuse Domain of Practice, Grimoire resources, and the existing work-record schema; preserve one outcome owner and optional crew recruitment.\\n\\nAdd a read-only list/show/check catalogue tool, 25 fixture tests plus an actual-checkout catalogue test, and explicitly unrun behavioral qualification cases. Wire routes into README, AGENTS, crew registry, and continuity guidance. No new agents, runtime, task store, source-package changes, or main merge.\\n\\nLocal fixture tests: 25 passed. Inherited suites and actual-checkout validation await this commit's GitHub Actions evidence. Historical qualification is not relabeled.\",\"parents\":[{\"sha\":\"4d30925ffad7d8072c4023871be18118b0ed79fd\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/4d30925ffad7d8072c4023871be18118b0ed79fd\",\"html_url\":\"https://github.com/guarani-ux/SAMSARA/commit/4d30925ffad7d8072c4023871be18118b0ed79fd\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+          "title": "db9838371a1128124b77fac69677902a4b5820c6",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/db9838371a1128124b77fac69677902a4b5820c6",
+          "display_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/db9838371a1128124b77fac69677902a4b5820c6",
+          "display_title": "db9838371a1128124b77fac69677902a4b5820c6",
+          "structuredContent": {
+            "title": "db9838371a1128124b77fac69677902a4b5820c6",
+            "content": "{\"sha\":\"db9838371a1128124b77fac69677902a4b5820c6\",\"node_id\":\"C_kwDOVIqlR9oAKGRiOTgzODM3MWExMTI4MTI0Yjc3ZmFjNjk2Nzc5MDJhNGI1ODIwYzY\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/db9838371a1128124b77fac69677902a4b5820c6\",\"html_url\":\"https://github.com/guarani-ux/SAMSARA/commit/db9838371a1128124b77fac69677902a4b5820c6\",\"author\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-15T04:25:48Z\"},\"committer\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-15T04:25:48Z\"},\"tree\":{\"sha\":\"5eb2685e998f4ba6307361bce4dbeaffdc884e46\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/5eb2685e998f4ba6307361bce4dbeaffdc884e46\"},\"message\":\"Add six task-driven workflows for Sciel's Samsara crew\\n\\nImplement delivery (full or selected service), research/preparation, exploration, guided learning, council/review, and revision/recovery routes. Each defines entry, ownership, equipment, inputs, transition gates, returns, and failure handling. Reuse Domain of Practice, Grimoire resources, and the existing work-record schema; preserve one outcome owner and optional crew recruitment.\\n\\nAdd a read-only list/show/check catalogue tool, 25 fixture tests plus an actual-checkout catalogue test, and explicitly unrun behavioral qualification cases. Wire routes into README, AGENTS, crew registry, and continuity guidance. No new agents, runtime, task store, source-package changes, or main merge.\\n\\nLocal fixture tests: 25 passed. Inherited suites and actual-checkout validation await this commit's GitHub Actions evidence. Historical qualification is not relabeled.\",\"parents\":[{\"sha\":\"4d30925ffad7d8072c4023871be18118b0ed79fd\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/4d30925ffad7d8072c4023871be18118b0ed79fd\",\"html_url\":\"https://github.com/guarani-ux/SAMSARA/commit/4d30925ffad7d8072c4023871be18118b0ed79fd\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+            "display_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/db9838371a1128124b77fac69677902a4b5820c6"
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"sha\":\"ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\",\"node_id\":\"C_kwDOUgoRfdoAKGVkOTM0MTc5OGU0ZmQ1Y2ZmMjNjMWIyZmFhNTNiNDFlOGI5NWQ0Yzg\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\",\"html_url\":\"https://github.com/guarani-ux/Kageyoni/commit/ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\",\"author\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-22T18:51:34Z\"},\"committer\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-22T18:51:34Z\"},\"tree\":{\"sha\":\"ae01a41a4b650e55cdaf7128a34261960449dc97\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/ae01a41a4b650e55cdaf7128a34261960449dc97\"},\"message\":\"Bind product28/native16 stopped-run evidence to complete R3 and five-world remote custody IN_PROGRESS\\n\\nExact immutable SAMSARA body commit 3b62d8735f12f5b2a1852506b4000b95e2e4b4f8. All three provider ZIPs reconstructed from remote ASCII with full CRC/memberSHA/mode verification. Preserve original28 fairness rejection and earlier native journal/copied/overlay failures; all F1-F5 false.\",\"parents\":[{\"sha\":\"779fccad2b81d80669133fbba33e7dae8115fc0b\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/779fccad2b81d80669133fbba33e7dae8115fc0b\",\"html_url\":\"https://github.com/guarani-ux/Kageyoni/commit/779fccad2b81d80669133fbba33e7dae8115fc0b\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+          "title": "ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8",
+          "display_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8",
+          "display_title": "ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8",
+          "structuredContent": {
+            "title": "ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8",
+            "content": "{\"sha\":\"ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\",\"node_id\":\"C_kwDOUgoRfdoAKGVkOTM0MTc5OGU0ZmQ1Y2ZmMjNjMWIyZmFhNTNiNDFlOGI5NWQ0Yzg\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\",\"html_url\":\"https://github.com/guarani-ux/Kageyoni/commit/ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8\",\"author\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-22T18:51:34Z\"},\"committer\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-22T18:51:34Z\"},\"tree\":{\"sha\":\"ae01a41a4b650e55cdaf7128a34261960449dc97\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/ae01a41a4b650e55cdaf7128a34261960449dc97\"},\"message\":\"Bind product28/native16 stopped-run evidence to complete R3 and five-world remote custody IN_PROGRESS\\n\\nExact immutable SAMSARA body commit 3b62d8735f12f5b2a1852506b4000b95e2e4b4f8. All three provider ZIPs reconstructed from remote ASCII with full CRC/memberSHA/mode verification. Preserve original28 fairness rejection and earlier native journal/copied/overlay failures; all F1-F5 false.\",\"parents\":[{\"sha\":\"779fccad2b81d80669133fbba33e7dae8115fc0b\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/779fccad2b81d80669133fbba33e7dae8115fc0b\",\"html_url\":\"https://github.com/guarani-ux/Kageyoni/commit/779fccad2b81d80669133fbba33e7dae8115fc0b\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+            "display_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/ed9341798e4fd5cff23c1b2faa53b41e8b95d4c8"
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"sha\":\"872973f091320f92e3276408090978084928d291\",\"node_id\":\"C_kwDOUgoRfdoAKDg3Mjk3M2YwOTEzMjBmOTJlMzI3NjQwODA5MDk3ODA4NDkyOGQyOTE\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/872973f091320f92e3276408090978084928d291\",\"html_url\":\"https://github.com/guarani-ux/Kageyoni/commit/872973f091320f92e3276408090978084928d291\",\"author\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-04T03:47:03Z\"},\"committer\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-04T03:47:03Z\"},\"tree\":{\"sha\":\"c2fd19bcfee4a9544e5b79908bbc06e39b033f99\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/c2fd19bcfee4a9544e5b79908bbc06e39b033f99\"},\"message\":\"Restore authentic archived verification inputs and isolate scenario fixtures\",\"parents\":[{\"sha\":\"be32d71f82dc4db250b8840612d233cbdf729f7b\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/be32d71f82dc4db250b8840612d233cbdf729f7b\",\"html_url\":\"https://github.com/guarani-ux/Kageyoni/commit/be32d71f82dc4db250b8840612d233cbdf729f7b\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+          "title": "872973f091320f92e3276408090978084928d291",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/872973f091320f92e3276408090978084928d291",
+          "display_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/872973f091320f92e3276408090978084928d291",
+          "display_title": "872973f091320f92e3276408090978084928d291",
+          "structuredContent": {
+            "title": "872973f091320f92e3276408090978084928d291",
+            "content": "{\"sha\":\"872973f091320f92e3276408090978084928d291\",\"node_id\":\"C_kwDOUgoRfdoAKDg3Mjk3M2YwOTEzMjBmOTJlMzI3NjQwODA5MDk3ODA4NDkyOGQyOTE\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/872973f091320f92e3276408090978084928d291\",\"html_url\":\"https://github.com/guarani-ux/Kageyoni/commit/872973f091320f92e3276408090978084928d291\",\"author\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-04T03:47:03Z\"},\"committer\":{\"name\":\"guarani-ux\",\"email\":\"flowersnelsone@gmail.com\",\"date\":\"2026-10-04T03:47:03Z\"},\"tree\":{\"sha\":\"c2fd19bcfee4a9544e5b79908bbc06e39b033f99\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/c2fd19bcfee4a9544e5b79908bbc06e39b033f99\"},\"message\":\"Restore authentic archived verification inputs and isolate scenario fixtures\",\"parents\":[{\"sha\":\"be32d71f82dc4db250b8840612d233cbdf729f7b\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/be32d71f82dc4db250b8840612d233cbdf729f7b\",\"html_url\":\"https://github.com/guarani-ux/Kageyoni/commit/be32d71f82dc4db250b8840612d233cbdf729f7b\"}],\"verification\":{\"verified\":false,\"reason\":\"unsigned\",\"signature\":null,\"payload\":null,\"verified_at\":null}}",
+            "display_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/872973f091320f92e3276408090978084928d291"
+          }
+        },
+        "isError": false
+      }
+    }
+  ]
+}
