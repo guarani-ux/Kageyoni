@@ -1,0 +1,45 @@
+{
+  "name": "Reverse Engineering & Binary Inspection",
+  "type": "Form",
+  "status": "Operative Form: Structural Binary Deconstruction & Protocol Evidence",
+  "orientation": "Deconstruct binary artifacts, compiled assemblies, protocol contracts, and application boundaries into inspectable, falsifiable structural evidence. Treat software as an inspectable lattice of physical bytes, schemas, and control boundaries.",
+  "disciplines": {
+    "static_decomposition": {
+      "focus": "Perception of binary layouts: PE/.NET metadata streams (#Strings, #US, #Blob), section headers, and exported types.",
+      "law": "Physical byte reality precedes hypothesis. Symbols and offsets are facts; architectural roles are inferences.",
+      "tomoe": {
+        "1": "Observation: extract headers, architectures, sections, and metadata streams directly from binary bytes.",
+        "2": "Armament / Load-Bearing: map extracted symbols, RPC interfaces, and data schemas against claimed operational interfaces.",
+        "3": "Conquerors / Situating: evaluate binary dependencies, security mitigations, and execution boundaries before interaction."
+      }
+    },
+    "boundary_mapping": {
+      "focus": "Identification of interaction planes: OS accessibility hooks (UIA/IA2), IPC pipes, WebView bridges, and RPC endpoints.",
+      "tomoe": {
+        "1": "First-order access: trace raw socket, pipe, and event-hook bindings.",
+        "2": "Second-order access: map client-server synchronization, delta updates, and serialization formats.",
+        "3": "Third-order access: determine isolation boundaries (contextIsolation, sandboxes, permission gates)."
+      }
+    },
+    "protocol_reconstruction": {
+      "focus": "Reconstructing structured contracts (Protobuf, JSON-RPC, Quill Deltas, Diff-Match-Patch) from ground bytes.",
+      "tomoe": {
+        "1": "Extract contract structures, field descriptors, and serialization boundaries.",
+        "2": "Correlate client request messages with expected server response schemas.",
+        "3": "Synthesize minimal reproducible interface specifications."
+      }
+    }
+  },
+  "wielding_rules": [
+    "Direct Carrier Contact: Inspect physical binary bytes, section headers, and metadata directly before asserting execution or capability.",
+    "Epistemic Partitioning: Explicitly distinguish observed symbol/metadata tokens from semantic behavioral hypotheses.",
+    "Reversibility Matrix: Read-only static inspection proceeds autonomously in Tier 0; dynamic instrumentation or execution mutation requires explicit gating.",
+    "Attribution Conservation: Wielding external reverse engineering tools does not make target capabilities intrinsic without structural integration.",
+    "Null Legitimacy: An inspection encounter that reveals zero vulnerabilities or confirms unyielding encapsulation is a legitimate terminal verdict."
+  ],
+  "conduit_contract": {
+    "carrier_contact": "Inspect physical bytes, strings, and headers via tools/reverse_engineer.py or REA.",
+    "epistemic_partitioning": "Label raw extracted symbols as OBSERVED and architectural models as INFERRED.",
+    "field_operation": "Produce verifiable structural reports linking claims to exact offsets and byte signatures."
+  }
+}
