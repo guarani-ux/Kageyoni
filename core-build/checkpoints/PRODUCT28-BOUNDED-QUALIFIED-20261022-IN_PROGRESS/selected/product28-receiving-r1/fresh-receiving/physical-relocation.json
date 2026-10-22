@@ -1,0 +1,7 @@
+{
+  "old_private_path": "/dev/shm/p28receive-r1/world",
+  "old_private_absent": true,
+  "new_path": "/dev/shm/p28move-r1/world",
+  "all_bytes_equal": true,
+  "original_source_preserved": "/dev/shm/p28real-r1/t/samsara-runner-x57z4uv9/world"
+}

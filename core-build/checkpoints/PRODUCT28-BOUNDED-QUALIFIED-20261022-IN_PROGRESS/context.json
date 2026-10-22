@@ -1,0 +1,32 @@
+{
+  "body_status": "Pending full raw capture/upload. No body custody claimed until final BODY_READBACK receipt.",
+  "candidate": {
+    "engine": "11.1.0.dev16",
+    "native_wheel": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3",
+    "payloads": 238,
+    "product": "0.5.3.dev28",
+    "product_wheel": "7360f0b41ed2691abab83bbfaf245eb61215b09f8c4a39fe3ce8a857efff4d4b",
+    "runtime": "1289b896d6de9194f286a0e9860e20ff65337b78a3efb536bae981cd90ebc858"
+  },
+  "critical_provider": {
+    "bytes": 497263,
+    "filename": "Product28_Bounded_Qualification_Evidence_IN_PROGRESS.zip",
+    "sha256": "4f5521f4952a09567bd784da55df470a699306afad5fc7783810de8208314508",
+    "zip_entries": 49
+  },
+  "excluded": [
+    "active f3a-native source",
+    "product28-custody-control-proposal source"
+  ],
+  "fullF1_F5": false,
+  "historical_failures": "Original27 failed registration, original28 fake fairness return rejection, earlier native journal/copied-world/overlay failures remain unchanged.",
+  "observation_limits": "27 mixed predicates2genuine+18old+7private passed; NOT clean original20 suite. Source-frameobserver0;1246 actualAPI/wire/lifecycle events retained. One matching currenthost/trustedworker lane.",
+  "prompt_update": "CONTINUATION-AFTER-PRODUCT28.md and prompt28-update-receipt.json are historical actual update evidence, not a new automation mutation. New semantic receipt overrides prompt authoring status.",
+  "source_provider": "source-provider.json",
+  "status": "QUALIFIED_BOUNDED_UNFED_EOF_EXIT_FIX_ONLY",
+  "still_NOT_RUN": [
+    "historical unknown-absence RECOVER",
+    "new dual real SIGKILL custody transaction seams"
+  ],
+  "whole_D15b_or_full_release": false
+}

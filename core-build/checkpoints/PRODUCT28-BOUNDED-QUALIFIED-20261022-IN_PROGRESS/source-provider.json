@@ -1,0 +1,14 @@
+{
+  "checkpoint": "core-build/checkpoints/PRODUCT28-R3-20261022-IN_PROGRESS",
+  "current38_source_files_and_both_wheels_independently_rechecked": true,
+  "immutable_commit": "3b62d8735f12f5b2a1852506b4000b95e2e4b4f8",
+  "provider": {
+    "bytes": 1547537,
+    "filename": "Product28_Source_Status_IN_PROGRESS.zip",
+    "sha256": "6fe85d3213687144b56dcbc2f2f69f1a4be5b61426bd86170f566ea1f39723f3",
+    "zip_entries": 137
+  },
+  "recipe": "source-recipe.json",
+  "repository": "guarani-ux/SAMSARA",
+  "source_authoring_status_is_historical": "New bounded semantic receipt and current frozen BUILD_STATUS override prior authoring status only within explicit qualified EOF scope."
+}

@@ -1,0 +1,19 @@
+{
+  "new_source_sha256": "47f0ee27af28d606d5964d34a61b468eefe7276b13b254bf32525238b05a6a3f",
+  "original_source_sha256": "9a3a73ce521e9824d63600306349a76c49fea414bb178bebcac167c97af32abc",
+  "proof": [
+    {
+      "method": "test_fair_parent_selection_capacity_and_shared_budget",
+      "original_assertions": 7,
+      "exact_assert_AST_equal": true
+    },
+    {
+      "method": "test_parent_pause_and_cancellation_block_descendants_not_other_roots",
+      "original_assertions": 4,
+      "exact_assert_AST_equal": true
+    }
+  ],
+  "root_source_read": true,
+  "no_execution_yet": true,
+  "scope": "Only genuine-worker fixture substitutions; original failure retained; no product/native guard change."
+}

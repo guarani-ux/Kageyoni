@@ -1,0 +1,64 @@
+{
+  "status": "QUALIFIED_BOUNDED_UNFED_EOF_EXIT_FIX_ONLY",
+  "candidate": {
+    "product": "0.5.3.dev28",
+    "engine": "11.1.0.dev16",
+    "runtime": "1289b896d6de9194f286a0e9860e20ff65337b78a3efb536bae981cd90ebc858",
+    "product_wheel": "7360f0b41ed2691abab83bbfaf245eb61215b09f8c4a39fe3ce8a857efff4d4b",
+    "native_wheel": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3",
+    "payloads": 238
+  },
+  "changed_behavior": "An unfed owned child whose native registration fails receives EOF and at most100ms actual natural-exit observation. No signal/first-stop reset; timeout retains local charge.",
+  "actual_evidence": {
+    "original_failed_registration_now_passes": "Actual owned wait/poll21, initial stopped28run observation~1.2ms, final actual child reaped; original assertion unchanged.",
+    "pure_adverse_cases": 5,
+    "mixed_actual_predicates": [
+      2,
+      18,
+      7
+    ],
+    "genuine_fixture_workers": 6,
+    "actual_worker_exit_codes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_assertions_AST_preserved": [
+      7,
+      4
+    ],
+    "all_closed_worlds_native_RO_valid_unchanged": 27,
+    "fresh_operator_receiving": "553B actual returned component exact before/after reopen; physical copied-world relocation oldprivatepath absent; actual new native rest accepted/reopened; checkedbackup; source unchanged.",
+    "selected_real_owner_loss": "Unchanged original owner-kill/discard/newgeneration/returned-output predicate actually passed on28; no historical numeric exit fabricated."
+  },
+  "raw_failures_preserved": [
+    "Product27 original failed-registration pollNone, no demonstrated predecessor guarantee removed.",
+    "Product28 original fake-return fairness assertion FAIL; native rejected unregistered claim\u2192returned. No guard weakened.",
+    "Earlier native journal/copied SQLite recovery and product27overlay postrun integrity failures unresolved.",
+    "Initial fresh28env missingjsonschema before anyworld; offline dependency setup repaired."
+  ],
+  "fixture_decision": "Two invalid pure-queue completion fixture steps were replaced in EXPLICIT new counterparts by genuine registered process return. All7+4 original assert ASTs retained; original files/failure unchanged. Not a clean original20suite.",
+  "observation_limits": [
+    "Mixed-run per-line trace filter was shadowed;0source-frame events. Actual1246API/wire/Popen/lifecycle/postimageevents, JUnit and unchanged source retained; no reconstructed trace.",
+    "Single current host/trusted built-in worker lane.100ms is a maximum observation wait, not guaranteed OS scheduling.",
+    "No wholeD15b/fullproduct/generalhost/model/unknownworker/human/fullmatrix/compatibility/fullF1-F5 qualification.",
+    "New media26 results stay exact26/native15 history; not silently transferred to28.",
+    "Historical unknown-absence RECOVER and both new custody transaction SIGKILL seams still require actual execution."
+  ],
+  "next": "Root review source-only custody control helper; actual recover/unacceptedbytes/dual interruption/recipient/recovery on matching28. Review/integrate independentF3a native source without treating source/API as world.",
+  "full_release_qualified": false,
+  "evidence_sha256": {
+    "product28-genuine-affected-r1/evidence/test-results.json": "694ea7611521cb45b8d285dc35ea6f5abcf4813adb9380f8f769fe4a30735fd3",
+    "product28-genuine-affected-r1/readonly-postconditions.json": "51914c5a25b49b301e7fe00be229609d57a3615526ca72161f47653c38c30f51",
+    "product28-genuine-affected-r1/genuine-six-returns.json": "abf2b5f72f97c2af282c8b15f155069e140ecd10b4d326a677a0f27c4ded9b45",
+    "product28-receiving-r1/fresh-receiving/result.json": "f616c94051c7c1753cbde76ba59c26e5227f7b914a2af5a9a7505f74e2cff470",
+    "product28-receiving-r1/fresh-receiving/physical-relocation.json": "5dc35d3e77931ae2773c3ca75d6a32181e08ba54a82b88f7803f48fd35bf5406",
+    "product28-affected-r1/summary.json": "6b9f04a2baf121c47a46ea3be8204767ea017799448fc0d4364bfcd9aec86667",
+    "product28-actual-queue-fixture/root-assertion-review.json": "05bd4d2bbfe0f53c42ad680bed12c73217b8cf234b532b7bd2f7d4ed09c181fc",
+    "product27-failed-registration-diagnosis/diagnosis-and-28-review.md": "e2c78d1956a635db6f0cd08952dcfe52a6c2b1031c55d8c900d1c43492517cd4",
+    "product28-build/unfed-pure.log": "d03ce458f2a6cd2b4f27522f3aacad03ce1872c028853507c3ad02ca621bdcad"
+  }
+}

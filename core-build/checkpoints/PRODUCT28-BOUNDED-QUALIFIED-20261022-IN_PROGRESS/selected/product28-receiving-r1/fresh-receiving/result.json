@@ -1,0 +1,56 @@
+{
+  "status": "PASS_PRODUCT28_FRESH_RECIPIENT_RELOCATION_AND_LATER_NATIVE_REST_ONLY",
+  "job": {
+    "activity_id": "interrupted",
+    "charged_starts": 2,
+    "generation": 1,
+    "job_id": "samsara:be8f8a6e3b31a5f0d03f69bebf3148f4728e9cb9347ffad9dfbcbaa5719fae44",
+    "kind": "job",
+    "output_ref": {
+      "digest": "69d785ffe188a7ba4b49229a37b1f94f08aea5bafe05496271b981a3faba302f",
+      "id": "artifact:d3d141f71d8c4f7abc15cbb2e8b9b1ba",
+      "version": 1
+    },
+    "owner_epoch": 2,
+    "reason": "component returned; purpose unresolved",
+    "reserved_seconds": 20.0,
+    "state": "returned"
+  },
+  "output_bytes": 553,
+  "output_sha256": "69d785ffe188a7ba4b49229a37b1f94f08aea5bafe05496271b981a3faba302f",
+  "new_quiet": {
+    "activity_id": "owner-loss-28-later-rest",
+    "activity_version": 2,
+    "handler": {
+      "digest": "7b42c1ecd66221c189355d7bcf6d052fd259f6a6af663a4130ec11960ef3a3ec",
+      "id": "samsara:handler:travel",
+      "version": 1
+    },
+    "job_id": "samsara:f664a5a76dc2b4188131e1e4e2f2b8fee8aa59198459b9af0dcc82370885b525",
+    "job_version": 2,
+    "next": {
+      "actor": "recipient",
+      "condition": "A returned component does not automatically close its parent.",
+      "operation": "artifact.read"
+    },
+    "outcome": "not_applicable",
+    "parent_id": null,
+    "pending_effects": [],
+    "reservations": [],
+    "result_refs": [
+      {
+        "digest": "07d6971dfdf80226583a3cee7f51038a2284d78b350a3456fdc5757010a25560",
+        "id": "artifact:cafbd452d4be40bfa07ff0b07627d7a6",
+        "version": 1
+      }
+    ],
+    "resume_condition": "Explicit continuation is required.",
+    "state": "finished"
+  },
+  "source_original_unchanged": true,
+  "source_copy_after_equal": true,
+  "payloads": 238,
+  "native_version": "11.1.0.dev16",
+  "actual_unknown_absence_was_distinct_from_exit": true,
+  "scope": "Actual fresh operator recipient, AI/scripted, one product28 matching-runtime RAM source/copy. Earlier original/journal/corruptoverlay failures retained. No portablehost/human/fullD15b/fullF5/fullrelease claim."
+}

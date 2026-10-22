@@ -1,0 +1,443 @@
+{
+  "runtime": "1289b896d6de9194f286a0e9860e20ff65337b78a3efb536bae981cd90ebc858",
+  "stages": [
+    {
+      "stage": "genuine-two",
+      "exitstatus": 0,
+      "expected_predicates": 2,
+      "call_reports": 2,
+      "passed_calls": 2
+    },
+    {
+      "stage": "unchanged-eighteen",
+      "exitstatus": 0,
+      "expected_predicates": 18,
+      "call_reports": 18,
+      "passed_calls": 18
+    },
+    {
+      "stage": "conditional-seven",
+      "exitstatus": 0,
+      "expected_predicates": 7,
+      "call_reports": 7,
+      "passed_calls": 7
+    }
+  ],
+  "total_passed": 27,
+  "total_failed": 0,
+  "selection": "2 genuine-worker fixture counterparts + 18 unchanged originals + 7 conditional unchanged originals; NOT a clean original20 suite",
+  "historical_original_fairness_stays_failed": true,
+  "historical_original_parent_pause_not_run_preserved": true,
+  "all_238_payloads_unchanged": true,
+  "all_32_original_test_sources_unchanged": true,
+  "new_fixture_sha256": "47f0ee27af28d606d5964d34a61b468eefe7276b13b254bf32525238b05a6a3f",
+  "all_27_worlds_valid": true,
+  "all_world_bytes_unchanged": true,
+  "worlds": [
+    {
+      "path": "/dev/shm/p28real-r1/pytest-conditional-seven/test_borrowed_output_and_tool_0/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/pytest-conditional-seven/test_immutable_audience_surviv0/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/pytest-conditional-seven/test_restricted_intake_dedup_k0/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/r6-sw-0rahliva/w",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/r6-sw-bcxdgcsh/w",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/r6-sw-jzmghgh5/w",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/r6-sw-tzlzupfs/w",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-integrity-44754yp8/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-integrity-5h4ls3zh/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-integrity-8xl61r6h/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-integrity-_yipj_1_/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-integrity-iafk1l65/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-integrity-o9k1np8f/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-integrity-wsd8wp_4/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-queue-_5_jfcl8/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-queue-guvsds9d/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-queue-h4s8_yvr/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-queue-ijjs02co/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-queue-jewvlfdp/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-queue-qyc3sgu0/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-queue-r2it9902/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-queue-u5h4x_z9/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-queue-wh71z7wi/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-runner-8ytibbnb/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-runner-9zxffaff/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-runner-x57z4uv9/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    },
+    {
+      "path": "/dev/shm/p28real-r1/t/samsara-runner-xjggemv4/world",
+      "valid": true,
+      "unchanged": true,
+      "total_changes": 0
+    }
+  ],
+  "owned_popen_references": [
+    {
+      "pid": 8,
+      "kind": "builtin-worker",
+      "test": "recovery-20261022/product28-actual-queue-fixture/new_actual_queue_tests.py::ActualQueueFixtureTests::test_fair_parent_selection_capacity_and_shared_budget",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 9,
+      "kind": "builtin-worker",
+      "test": "recovery-20261022/product28-actual-queue-fixture/new_actual_queue_tests.py::ActualQueueFixtureTests::test_fair_parent_selection_capacity_and_shared_budget",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 10,
+      "kind": "builtin-worker",
+      "test": "recovery-20261022/product28-actual-queue-fixture/new_actual_queue_tests.py::ActualQueueFixtureTests::test_fair_parent_selection_capacity_and_shared_budget",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 11,
+      "kind": "builtin-worker",
+      "test": "recovery-20261022/product28-actual-queue-fixture/new_actual_queue_tests.py::ActualQueueFixtureTests::test_fair_parent_selection_capacity_and_shared_budget",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 12,
+      "kind": "builtin-worker",
+      "test": "recovery-20261022/product28-actual-queue-fixture/new_actual_queue_tests.py::ActualQueueFixtureTests::test_fair_parent_selection_capacity_and_shared_budget",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 13,
+      "kind": "builtin-worker",
+      "test": "recovery-20261022/product28-actual-queue-fixture/new_actual_queue_tests.py::ActualQueueFixtureTests::test_parent_pause_and_cancellation_block_descendants_not_other_roots",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 14,
+      "kind": "builtin-worker",
+      "test": "tests/test_bounded_runner.py::QueueTests::test_finished_output_survives_owner_loss_without_accepting_stale_lease",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 15,
+      "kind": "builtin-worker",
+      "test": "tests/test_bounded_runner.py::QueueTests::test_failed_process_registration_stops_unfed_child_and_retains_reconciliation",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 21
+    },
+    {
+      "pid": 16,
+      "kind": "builtin-worker",
+      "test": "tests/test_bounded_runner.py::QueueTests::test_managed_and_manual_returns_charge_shared_parent_once",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 17,
+      "kind": "builtin-worker",
+      "test": "tests/test_bounded_runner.py::QueueTests::test_managed_and_manual_returns_charge_shared_parent_once",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-I",
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/lib/python3.12/site-packages/samsara/local_worker.py"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 18,
+      "kind": "owned-stdio-owner",
+      "test": "tests/test_bounded_runner.py::ProcessRunnerTests::test_two_actual_jobs_overlap_and_pause_cancel_keep_owner_responsive",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-m",
+        "samsara",
+        "stdio",
+        "--workspace",
+        "/dev/shm/p28real-r1/t/samsara-runner-9zxffaff/world",
+        "--role",
+        "operator",
+        "--actor",
+        "visitor",
+        "--new-synthetic"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 22,
+      "kind": "owned-stdio-owner",
+      "test": "tests/test_bounded_runner.py::ProcessRunnerTests::test_actual_output_fresh_recipient_and_explicit_parent_continuation",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-m",
+        "samsara",
+        "stdio",
+        "--workspace",
+        "/dev/shm/p28real-r1/t/samsara-runner-xjggemv4/world",
+        "--role",
+        "operator",
+        "--actor",
+        "visitor",
+        "--new-synthetic"
+      ],
+      "final_actual_poll": -9
+    },
+    {
+      "pid": 24,
+      "kind": "owned-stdio-owner",
+      "test": "tests/test_bounded_runner.py::ProcessRunnerTests::test_actual_output_fresh_recipient_and_explicit_parent_continuation",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-m",
+        "samsara",
+        "stdio",
+        "--workspace",
+        "/dev/shm/p28real-r1/t/samsara-runner-xjggemv4/world",
+        "--role",
+        "player",
+        "--actor",
+        "visitor"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 25,
+      "kind": "owned-stdio-owner",
+      "test": "tests/test_bounded_runner.py::ProcessRunnerTests::test_owner_kill_requires_observed_reconciliation_and_new_generation",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-m",
+        "samsara",
+        "stdio",
+        "--workspace",
+        "/dev/shm/p28real-r1/t/samsara-runner-x57z4uv9/world",
+        "--role",
+        "operator",
+        "--actor",
+        "visitor",
+        "--new-synthetic"
+      ],
+      "final_actual_poll": -9
+    },
+    {
+      "pid": 27,
+      "kind": "owned-stdio-owner",
+      "test": "tests/test_bounded_runner.py::ProcessRunnerTests::test_owner_kill_requires_observed_reconciliation_and_new_generation",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-m",
+        "samsara",
+        "stdio",
+        "--workspace",
+        "/dev/shm/p28real-r1/t/samsara-runner-x57z4uv9/world",
+        "--role",
+        "operator",
+        "--actor",
+        "visitor"
+      ],
+      "final_actual_poll": 0
+    },
+    {
+      "pid": 29,
+      "kind": "owned-stdio-owner",
+      "test": "tests/test_bounded_runner.py::ProcessRunnerTests::test_strict_stale_result_preserves_bytes_without_rebase",
+      "command": [
+        "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-build/env/bin/python",
+        "-m",
+        "samsara",
+        "stdio",
+        "--workspace",
+        "/dev/shm/p28real-r1/t/samsara-runner-8ytibbnb/world",
+        "--role",
+        "operator",
+        "--actor",
+        "visitor",
+        "--new-synthetic"
+      ],
+      "final_actual_poll": 0
+    }
+  ],
+  "active_or_uncertain_owned_references": [],
+  "all_tracked_owners_closed": true,
+  "all_clients_closed": true,
+  "unknown_exchanges": [],
+  "raw_events": 1246,
+  "source_frame_events": 0,
+  "trace_limitation": "Source filename set was shadowed by the original-node-ID list; no per-line source frame events were captured. Actual API/wire/Popen/lifecycle logs and JUnit are retained; no reconstruction/rerun.",
+  "capacity_after": {
+    "reason": "all tests ended",
+    "tmpfs_free": 3586002944,
+    "new_owned_bytes": 1194074330,
+    "cgroup_current": 8576483328,
+    "cgroup_max": 8589934592,
+    "inactive_file": 4265254912,
+    "conservative_reclaim_headroom": 4278706176,
+    "memory_events": "low 0\nhigh 0\nmax 173183\noom 0\noom_kill 0\noom_group_kill 0\n"
+  },
+  "native_original_journal_failure_retained": true,
+  "full_release_qualified": false
+}

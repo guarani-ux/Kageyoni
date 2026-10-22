@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "automation_id": "6ad44f937dd48191a087ec9b629e7232",
+  "prompt_file": "CONTINUATION-AFTER-PRODUCT28.md",
+  "actual_prompt_equal": true,
+  "is_enabled": true,
+  "schedule": "BEGIN:VEVENT\nDTSTART:20261018T044919Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
+  "updated_at": "2026-10-22T18:43:52.998875+00:00"
+}
