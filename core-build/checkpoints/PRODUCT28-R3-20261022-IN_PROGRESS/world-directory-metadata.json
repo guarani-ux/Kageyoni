@@ -1,0 +1,157 @@
+{
+  "observation": "Additional closed readonly directory inventory after exact file ZIP capture; files reconfirmed equal to frozen file inventory",
+  "directories": {
+    "product27-affected-r1/samsara-queue-2_mnocdt/.": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-2_mnocdt/world",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-2_mnocdt/jobs": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-2_mnocdt/world/jobs",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-2_mnocdt/staging": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-2_mnocdt/world/staging",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-2_mnocdt/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-2_mnocdt/world/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-2_mnocdt/world.artifacts": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-2_mnocdt/world/world.artifacts",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-2_mnocdt/world.artifacts/objects": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-2_mnocdt/world/world.artifacts/objects",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-ddo_ta6r/.": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-ddo_ta6r/world",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-ddo_ta6r/jobs": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-ddo_ta6r/world/jobs",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-ddo_ta6r/staging": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-ddo_ta6r/world/staging",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-ddo_ta6r/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-ddo_ta6r/world/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-ddo_ta6r/world.artifacts": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-ddo_ta6r/world/world.artifacts",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product27-affected-r1/samsara-queue-ddo_ta6r/world.artifacts/objects": {
+      "source": "/dev/shm/p27aff-r1/t/samsara-queue-ddo_ta6r/world/world.artifacts/objects",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-aowcwiam/.": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-aowcwiam/world",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-aowcwiam/jobs": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-aowcwiam/world/jobs",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-aowcwiam/staging": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-aowcwiam/world/staging",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-aowcwiam/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-aowcwiam/world/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-aowcwiam/world.artifacts": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-aowcwiam/world/world.artifacts",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-aowcwiam/world.artifacts/objects": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-aowcwiam/world/world.artifacts/objects",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-i904icyd/.": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-i904icyd/world",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-i904icyd/jobs": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-i904icyd/world/jobs",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-i904icyd/staging": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-i904icyd/world/staging",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-i904icyd/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-i904icyd/world/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-i904icyd/world.artifacts": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-i904icyd/world/world.artifacts",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-i904icyd/world.artifacts/objects": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-i904icyd/world/world.artifacts/objects",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-wljd16p4/.": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-wljd16p4/world",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-wljd16p4/jobs": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-wljd16p4/world/jobs",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-wljd16p4/staging": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-wljd16p4/world/staging",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-wljd16p4/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-wljd16p4/world/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-wljd16p4/world.artifacts": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-wljd16p4/world/world.artifacts",
+      "mode": 448,
+      "kind": "directory"
+    },
+    "product28-affected-r1/samsara-queue-wljd16p4/world.artifacts/objects": {
+      "source": "/dev/shm/p28aff-r1/t/samsara-queue-wljd16p4/world/world.artifacts/objects",
+      "mode": 448,
+      "kind": "directory"
+    }
+  },
+  "file_inventory_unchanged": true,
+  "no_DB_or_native_opens": true
+}
