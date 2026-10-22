@@ -1,0 +1,64 @@
+{
+  "phase": "CRITICAL_PAIRED_PUSH_VERIFIED",
+  "checkpoint": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS",
+  "commits": [
+    "131af761a54765b6a7b5c4ecf8d2f36d73e76ec4",
+    "4919f70f35b797c925e5beaa754ab986e34be430"
+  ],
+  "expected_heads": [
+    "881890787a973a78c0a7ff5ca0e30896afd366c9",
+    "2e4120fe0e0070057bd222535c2ea31f06534b96"
+  ],
+  "force": false,
+  "all_staged_full_bodies_exact": [
+    34,
+    22
+  ],
+  "prior_paths_preserved": true,
+  "remote_reconstructed_zip": {
+    "bytes": 6107013,
+    "sha256": "a1543dcf29c24d40f5c7158564a4a5589d95ab94a9238d66a4501118834c409a",
+    "members": 1574
+  },
+  "active_product_native16_unchanged": true,
+  "full_raw_pending": true,
+  "updates": [
+    {
+      "repo": "SAMSARA",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "success": true
+        },
+        "isError": false
+      }
+    },
+    {
+      "repo": "Kageyoni",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "success": true
+        },
+        "isError": false
+      }
+    }
+  ],
+  "heads": [
+    "131af761a54765b6a7b5c4ecf8d2f36d73e76ec4",
+    "4919f70f35b797c925e5beaa754ab986e34be430"
+  ],
+  "source_provider_repository": "guarani-ux/SAMSARA",
+  "source_provider_immutable_commit": "131af761a54765b6a7b5c4ecf8d2f36d73e76ec4",
+  "git_writer": "HELD_FOR_BODY_CAPTURE"
+}

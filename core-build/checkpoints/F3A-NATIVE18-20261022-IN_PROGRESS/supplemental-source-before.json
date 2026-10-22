@@ -1,0 +1,1560 @@
+{
+  "fork-boundary-r1/": {
+    "device": 27,
+    "inode": 1447035,
+    "kind": "dir",
+    "mode": 493,
+    "mtime_ns": 1792696582579759960,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/fork-boundary-r1"
+  },
+  "fork-boundary-r2/": {
+    "device": 27,
+    "inode": 1447038,
+    "kind": "dir",
+    "mode": 493,
+    "mtime_ns": 1792696607212284344,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/fork-boundary-r2"
+  },
+  "fork-boundary-r2/result.json": {
+    "bytes": 422,
+    "device": 27,
+    "inode": 1447039,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696607217209026,
+    "sha256": "36ab59f8b713fd3a5a1498cb3cbc2433bda6fe95302b6384b5e89a48641e938a",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/fork-boundary-r2/result.json"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/capture_closed_native.py": {
+    "bytes": 5929,
+    "device": 27,
+    "inode": 1336208,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696637837987554,
+    "sha256": "845bf66aab30b2a7351021d899129025ef2f15765b9daa8c5f7d695966d48879",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/capture_closed_native.py"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/capture_closed_native_r2.py": {
+    "bytes": 5930,
+    "device": 27,
+    "inode": 1336225,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696658798841416,
+    "sha256": "621c099a246afc4176c4115c5f73c2e30860798c100029a700dc6c327a7484d6",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/capture_closed_native_r2.py"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/check_fork_boundary.py": {
+    "bytes": 3050,
+    "device": 27,
+    "inode": 1336220,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696582379755704,
+    "sha256": "2679c8670858eb1cfeb6a9f284a8ed5939a951e0b8accd08aa6402fb8f4f9033",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/check_fork_boundary.py"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/check_fork_boundary_r2.py": {
+    "bytes": 3073,
+    "device": 27,
+    "inode": 1336222,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696605696948352,
+    "sha256": "722618bbbb7032bfe9edb9c26d9a1affad6e8c2bed56623cd1db367fd5a0c704",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/check_fork_boundary_r2.py"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/fork-boundary-r1.log": {
+    "bytes": 990,
+    "device": 27,
+    "inode": 1336221,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696583335776035,
+    "sha256": "d86a82ae49883c87c63f102592e1ce87795b75c651976f823a4f9de3bca6ba2a",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/fork-boundary-r1.log"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/fork-boundary-r2.log": {
+    "bytes": 0,
+    "device": 27,
+    "inode": 1336223,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696605696948352,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/fork-boundary-r2.log"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/maintain_real_copy.py": {
+    "bytes": 6696,
+    "device": 27,
+    "inode": 1332527,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696484261689237,
+    "sha256": "5e571cd20b79926999eb7cc12ae965395bdada80183be08a37e67e2deb8420ca",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/maintain_real_copy.py"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/maintenance-predecessor.log": {
+    "bytes": 0,
+    "device": 27,
+    "inode": 1336211,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696484477693901,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/maintenance-predecessor.log"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/maintenance-successor.log": {
+    "bytes": 0,
+    "device": 27,
+    "inode": 1336213,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696490533823428,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/maintenance-successor.log"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/native18-capture-r2.log": {
+    "bytes": 900,
+    "device": 27,
+    "inode": 1336226,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696682461860509,
+    "sha256": "fd71025a09ed6419cc68adff23c0c9d61fd0c6e7e8897b54f5fb68d77d927014",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-capture-r2.log"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/native18-capture.log": {
+    "bytes": 282,
+    "device": 27,
+    "inode": 1336224,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696637860928794,
+    "sha256": "444907f904247db0373c4ac72e0c1050798405997459b43d4d08541454cc9432",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-capture.log"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/native18-closed-raw-r2/capture-before-release.json": {
+    "bytes": 824,
+    "device": 27,
+    "inode": 1447043,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696682385062900,
+    "sha256": "683abd32da172a7b9b8a2ff3f0c541dd0091b951d1606e2a2d98bb51e6fd6df1",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-closed-raw-r2/capture-before-release.json"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/native18-closed-raw-r2/release-receipt.json": {
+    "bytes": 900,
+    "device": 27,
+    "inode": 1447044,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696682389339339,
+    "sha256": "fd71025a09ed6419cc68adff23c0c9d61fd0c6e7e8897b54f5fb68d77d927014",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-closed-raw-r2/release-receipt.json"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration-r2/native18-closed-raw-r2/source-manifest.json": {
+    "bytes": 490077,
+    "device": 27,
+    "inode": 1447042,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696682384829349,
+    "sha256": "a3c8de8c7644f7fb89855a95c73091716418b7ccf5609cb2da4b6c04d6ebb108",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-closed-raw-r2/source-manifest.json"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration/native17-closed-raw/capture-before-release.json": {
+    "bytes": 788,
+    "device": 27,
+    "inode": 1323347,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696323641814842,
+    "sha256": "123f85028f72f311800131ca0014a393f999d64894b7c9bba6cfc3cbb5f822fb",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration/native17-closed-raw/capture-before-release.json"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration/native17-closed-raw/release-receipt.json": {
+    "bytes": 864,
+    "device": 27,
+    "inode": 1326140,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696323645773977,
+    "sha256": "99c7b89cac5a5bea13faf534882c6679f28903a6e6d3aacfb08c88423ec7142f",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration/native17-closed-raw/release-receipt.json"
+  },
+  "maintenance-harness-and-custody/f3a-root-integration/native17-closed-raw/source-manifest.json": {
+    "bytes": 462911,
+    "device": 27,
+    "inode": 1323251,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696323641593278,
+    "sha256": "2f3d1487a87c1eb437a8678d00a5b3fac814d6371b3305220c4d9782ea3778c7",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration/native17-closed-raw/source-manifest.json"
+  },
+  "native18-copy-maintenance/": {
+    "device": 27,
+    "inode": 1446973,
+    "kind": "dir",
+    "mode": 493,
+    "mtime_ns": 1792696494109900350,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance"
+  },
+  "native18-copy-maintenance/matching-native16-checked-backup.sqlite": {
+    "bytes": 2531328,
+    "device": 27,
+    "inode": 1446974,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792696484765700121,
+    "sha256": "47de84f23cf73a2250e602c98cc16545794ed82f2783d94d0316d08eb0ab17f7",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/matching-native16-checked-backup.sqlite"
+  },
+  "native18-copy-maintenance/native18-checked-backup.sqlite": {
+    "bytes": 2576384,
+    "device": 27,
+    "inode": 1447031,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792696491649847234,
+    "sha256": "c954a6d8d25ee5dbd43282115e668dbe343a7e579409ef2aec746b587ccb255d",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/native18-checked-backup.sqlite"
+  },
+  "native18-copy-maintenance/predecessor.json": {
+    "bytes": 10534,
+    "device": 27,
+    "inode": 1447029,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696485042610255,
+    "sha256": "faba1ca4ce779a232d7b74c8d89857fc9ed762b259f68c5933fe7b84860977e5",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/predecessor.json"
+  },
+  "native18-copy-maintenance/restored.sqlite": {
+    "bytes": 2576384,
+    "device": 27,
+    "inode": 1447032,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696491933853293,
+    "sha256": "c954a6d8d25ee5dbd43282115e668dbe343a7e579409ef2aec746b587ccb255d",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/restored.sqlite"
+  },
+  "native18-copy-maintenance/result.json": {
+    "bytes": 3449,
+    "device": 27,
+    "inode": 1447034,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696494112945864,
+    "sha256": "20af963272f9bcaa3cbc85809b6f200a9a7596655051bdd159a43a41bf20ae63",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/result.json"
+  },
+  "native18-copy-maintenance/world/": {
+    "device": 27,
+    "inode": 1446975,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792696491517844418,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world"
+  },
+  "native18-copy-maintenance/world/jobs/": {
+    "device": 27,
+    "inode": 1446977,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792694807454893021,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/jobs"
+  },
+  "native18-copy-maintenance/world/jobs/33be9822ef4d09af0d91019500a831fb4f46805afebdebb544b30102518a7749-1-1.json": {
+    "bytes": 0,
+    "device": 27,
+    "inode": 1446979,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806958205581,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/jobs/33be9822ef4d09af0d91019500a831fb4f46805afebdebb544b30102518a7749-1-1.json"
+  },
+  "native18-copy-maintenance/world/jobs/836f395ff7e7c71c345aa4f80990a871e6c537d29d48bc6f6a3d57f2f0d82052-2-1.json": {
+    "bytes": 851,
+    "device": 27,
+    "inode": 1446978,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694807488015319,
+    "sha256": "b118ecfc7cceb4af6f412dd35fa0df8e360c549c16c74326bc004d87986cb611",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/jobs/836f395ff7e7c71c345aa4f80990a871e6c537d29d48bc6f6a3d57f2f0d82052-2-1.json"
+  },
+  "native18-copy-maintenance/world/owner.lock": {
+    "bytes": 0,
+    "device": 27,
+    "inode": 1447028,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806122188366,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/owner.lock"
+  },
+  "native18-copy-maintenance/world/staging/": {
+    "device": 27,
+    "inode": 1446982,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792694806797374987,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/staging"
+  },
+  "native18-copy-maintenance/world/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77/": {
+    "device": 27,
+    "inode": 1446983,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792694985765850493,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77"
+  },
+  "native18-copy-maintenance/world/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77/reply-5a506511a0154045865edc87626024ec.json": {
+    "bytes": 252,
+    "device": 27,
+    "inode": 1446984,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792694985768041717,
+    "sha256": "5c73a5947f2f8c27e2fff2113c65e527033eba06a900a0af197bb2218ba96c42",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77/reply-5a506511a0154045865edc87626024ec.json"
+  },
+  "native18-copy-maintenance/world/workspace.json": {
+    "bytes": 186,
+    "device": 27,
+    "inode": 1447025,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806757536980,
+    "sha256": "6c4839e62ca01d695b368e51d4e26b50d5e53700b0258778b0fc81918aa858e3",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/workspace.json"
+  },
+  "native18-copy-maintenance/world/world.artifacts/": {
+    "device": 27,
+    "inode": 1446990,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792694806799132112,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/": {
+    "device": 27,
+    "inode": 1446991,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792694985797032415,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/00e8cfd5b59e7558ff1d3eebd2ead790fbdd424b434666b4db6a2b1126afdb1d": {
+    "bytes": 1714,
+    "device": 27,
+    "inode": 1446997,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806939264375,
+    "sha256": "00e8cfd5b59e7558ff1d3eebd2ead790fbdd424b434666b4db6a2b1126afdb1d",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/00e8cfd5b59e7558ff1d3eebd2ead790fbdd424b434666b4db6a2b1126afdb1d"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a": {
+    "bytes": 572,
+    "device": 27,
+    "inode": 1446999,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806799270801,
+    "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/07d6971dfdf80226583a3cee7f51038a2284d78b350a3456fdc5757010a25560": {
+    "bytes": 1801,
+    "device": 27,
+    "inode": 1446994,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694985797032415,
+    "sha256": "07d6971dfdf80226583a3cee7f51038a2284d78b350a3456fdc5757010a25560",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/07d6971dfdf80226583a3cee7f51038a2284d78b350a3456fdc5757010a25560"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/0fe3f2ac006fb456e9190b72537b3fa2aff34f661928059258b4f21125c1ccdd": {
+    "bytes": 2220,
+    "device": 27,
+    "inode": 1446996,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694807531926938,
+    "sha256": "0fe3f2ac006fb456e9190b72537b3fa2aff34f661928059258b4f21125c1ccdd",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/0fe3f2ac006fb456e9190b72537b3fa2aff34f661928059258b4f21125c1ccdd"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/16806988927e12b8f65c35e7218154b8af5792b075be9a1cdc6408ef9dc95827": {
+    "bytes": 1664,
+    "device": 27,
+    "inode": 1447000,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806803069569,
+    "sha256": "16806988927e12b8f65c35e7218154b8af5792b075be9a1cdc6408ef9dc95827",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/16806988927e12b8f65c35e7218154b8af5792b075be9a1cdc6408ef9dc95827"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/356a6d0ec7d3fa3a917eef8b2415ae3fb60f032d57f0022a95e7eb50687ac856": {
+    "bytes": 1627,
+    "device": 27,
+    "inode": 1447002,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806942165001,
+    "sha256": "356a6d0ec7d3fa3a917eef8b2415ae3fb60f032d57f0022a95e7eb50687ac856",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/356a6d0ec7d3fa3a917eef8b2415ae3fb60f032d57f0022a95e7eb50687ac856"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/5c73a5947f2f8c27e2fff2113c65e527033eba06a900a0af197bb2218ba96c42": {
+    "bytes": 252,
+    "device": 27,
+    "inode": 1446992,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694985774887756,
+    "sha256": "5c73a5947f2f8c27e2fff2113c65e527033eba06a900a0af197bb2218ba96c42",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/5c73a5947f2f8c27e2fff2113c65e527033eba06a900a0af197bb2218ba96c42"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/69d785ffe188a7ba4b49229a37b1f94f08aea5bafe05496271b981a3faba302f": {
+    "bytes": 553,
+    "device": 27,
+    "inode": 1447001,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694807526429894,
+    "sha256": "69d785ffe188a7ba4b49229a37b1f94f08aea5bafe05496271b981a3faba302f",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/69d785ffe188a7ba4b49229a37b1f94f08aea5bafe05496271b981a3faba302f"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/addc731cd18210df71a8c850334edff89fb6cbaaabaf48115858c11a76dcac8a": {
+    "bytes": 1627,
+    "device": 27,
+    "inode": 1446995,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694807423233170,
+    "sha256": "addc731cd18210df71a8c850334edff89fb6cbaaabaf48115858c11a76dcac8a",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/addc731cd18210df71a8c850334edff89fb6cbaaabaf48115858c11a76dcac8a"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/bb97f732a58bc221850790aee1b4edc376e7499a9c02170e606ebba14fc46a51": {
+    "bytes": 6344,
+    "device": 27,
+    "inode": 1446998,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694985732226698,
+    "sha256": "bb97f732a58bc221850790aee1b4edc376e7499a9c02170e606ebba14fc46a51",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/bb97f732a58bc221850790aee1b4edc376e7499a9c02170e606ebba14fc46a51"
+  },
+  "native18-copy-maintenance/world/world.artifacts/objects/e548c80fa2f6c080abe24d4cd3d836fed91ec5a10f55fda55fcc7d784de3bcea": {
+    "bytes": 1704,
+    "device": 27,
+    "inode": 1446993,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806802145779,
+    "sha256": "e548c80fa2f6c080abe24d4cd3d836fed91ec5a10f55fda55fcc7d784de3bcea",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.artifacts/objects/e548c80fa2f6c080abe24d4cd3d836fed91ec5a10f55fda55fcc7d784de3bcea"
+  },
+  "native18-copy-maintenance/world/world.sqlite": {
+    "bytes": 2576384,
+    "device": 27,
+    "inode": 1447020,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792696491517844418,
+    "sha256": "f41d9c550ffd244a275a52f3669fe164db9b67b8e058b5d7d80ecb5e8fdd0df6",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v10-66b59fdbc3404b6ebb7134f52b870726.bak": {
+    "bytes": 937984,
+    "device": 27,
+    "inode": 1447017,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806177682901,
+    "sha256": "e3a4894fead26ac1b65797983266c506c2e38dbae2ed86c29061114e9786839f",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v10-66b59fdbc3404b6ebb7134f52b870726.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v11-2221a9afca6a44d2bb1ed7f27f68502b.bak": {
+    "bytes": 987136,
+    "device": 27,
+    "inode": 1447004,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806186985955,
+    "sha256": "da7b24a0f31339071a8cdbb4751198377b298e4cde866cd01a14502e89668daf",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v11-2221a9afca6a44d2bb1ed7f27f68502b.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v12-65e7e7f1c47948d4b92b49b24341f039.bak": {
+    "bytes": 999424,
+    "device": 27,
+    "inode": 1447023,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806196904315,
+    "sha256": "6356121491fe3feb60642b238780bf88a0b60a32e1b8b45c0e9fde64d8cf259f",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v12-65e7e7f1c47948d4b92b49b24341f039.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v13-ae4ce75e4252446184610e49a459dddf.bak": {
+    "bytes": 1056768,
+    "device": 27,
+    "inode": 1446986,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806209817082,
+    "sha256": "92c3360dbed47c0b518c6e489e3f4b02dd7da4b276628ef2ccba8f6e06f91a11",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v13-ae4ce75e4252446184610e49a459dddf.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v14-a058825aec4145efb81774fc88279644.bak": {
+    "bytes": 1105920,
+    "device": 27,
+    "inode": 1447015,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806220330988,
+    "sha256": "3288adc777617ea21aeb9c99013b49af329e00cd39928afa3515d3de41242e90",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v14-a058825aec4145efb81774fc88279644.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v15-c8771e6e30f54e20a57670ddf2cba36d.bak": {
+    "bytes": 1224704,
+    "device": 27,
+    "inode": 1447003,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806238190755,
+    "sha256": "cd1e9b59d7d6b3ed3207e2c24452873a012f6c5e80407e1a7a270031b9c7ce5e",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v15-c8771e6e30f54e20a57670ddf2cba36d.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v16-d29ba82dd294444f8b3ca390ee9964b0.bak": {
+    "bytes": 1273856,
+    "device": 27,
+    "inode": 1447024,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806253032383,
+    "sha256": "6a74564127f7ce8f684b1c683aa8b98dade697ae966c7f470b94cfa3e420528e",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v16-d29ba82dd294444f8b3ca390ee9964b0.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v17-c8f7afbb0c4d4252a01610a163cefe4d.bak": {
+    "bytes": 1306624,
+    "device": 27,
+    "inode": 1446989,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806266590321,
+    "sha256": "997782fec4c345df80389f3c5a8b01ec6ae6469f4e869571a44c73509b582811",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v17-c8f7afbb0c4d4252a01610a163cefe4d.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v18-2b384384d6df4fdb81dfa4ea66770865.bak": {
+    "bytes": 1314816,
+    "device": 27,
+    "inode": 1447014,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806280684727,
+    "sha256": "b58af85c6c361f9a98882b3317f4a3d8008e4257dc1766b030bce5314ca0c55a",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v18-2b384384d6df4fdb81dfa4ea66770865.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v19-77f06d3a5e954c07a88baa504020b186.bak": {
+    "bytes": 1413120,
+    "device": 27,
+    "inode": 1447011,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806302391021,
+    "sha256": "302ee973511fa0f7dfa1faa8261125b6663b58918c8aba8d7a33c240aad28f3b",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v19-77f06d3a5e954c07a88baa504020b186.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v20-f9507880cc104e5ea07b879709841e65.bak": {
+    "bytes": 1445888,
+    "device": 27,
+    "inode": 1446980,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806322275763,
+    "sha256": "dcad73307916bfa715396d66626cb9492d9cf2bd0c45545f32da693cf3756a09",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v20-f9507880cc104e5ea07b879709841e65.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v21-04956c1fd8bb4e64be32ba639e430277.bak": {
+    "bytes": 1466368,
+    "device": 27,
+    "inode": 1447005,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806341983819,
+    "sha256": "f876206545f93580d7d21e174f83eb66060625db51bf8c22ac6090e5ab930761",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v21-04956c1fd8bb4e64be32ba639e430277.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v22-cbe477212f78441aa0b44136ce911088.bak": {
+    "bytes": 1486848,
+    "device": 27,
+    "inode": 1447018,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806360436866,
+    "sha256": "76b9f6395f2b334313facbb3831c414531e6b9b8432d5f64d40f67b7743f8fa1",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v22-cbe477212f78441aa0b44136ce911088.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v23-4912b1eff3a34445ac8d83fa0b8c10cc.bak": {
+    "bytes": 1523712,
+    "device": 27,
+    "inode": 1447016,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806380203941,
+    "sha256": "0a36ae0a69a687375ba6437d1901c0a9342080c0f6969796203464cab1d84a97",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v23-4912b1eff3a34445ac8d83fa0b8c10cc.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v24-f9bdc2d3712a438b986b331d34afedf9.bak": {
+    "bytes": 1531904,
+    "device": 27,
+    "inode": 1447022,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806400556642,
+    "sha256": "b95c765beb4eb359c082eca4e2ba9617279d08b4ecef00b6b9165e25e2d2587c",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v24-f9bdc2d3712a438b986b331d34afedf9.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v25-23efa394c8894b39aeb09240bb7670ff.bak": {
+    "bytes": 1568768,
+    "device": 27,
+    "inode": 1447026,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806420536507,
+    "sha256": "4c5d412dfe04f855561549640ab4aa8676c7d9ca04340cffe001ef6acc5f63d3",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v25-23efa394c8894b39aeb09240bb7670ff.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v26-659a887d5c944900bd2e744cf3002c1d.bak": {
+    "bytes": 1576960,
+    "device": 27,
+    "inode": 1447027,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806439241553,
+    "sha256": "dc34ce32e2a29b1695f25f6f98346d04fee9a3a82d7453d3129dc587bf6baf33",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v26-659a887d5c944900bd2e744cf3002c1d.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v27-0f68c84ccd1347b285b9c263a6f9fb21.bak": {
+    "bytes": 1650688,
+    "device": 27,
+    "inode": 1447012,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806461950927,
+    "sha256": "1029e3ea6e0f5e33daa056a030ff836a7d82a20242bfcfaedcd493c2e72ecc70",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v27-0f68c84ccd1347b285b9c263a6f9fb21.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v28-af2d4f8c78a441fd83f41bf9dbceafe2.bak": {
+    "bytes": 1687552,
+    "device": 27,
+    "inode": 1446985,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806483174574,
+    "sha256": "221daa52674cb6a94eeab36c6094e438d11de7f151fe73cfeae10bba4bb669c8",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v28-af2d4f8c78a441fd83f41bf9dbceafe2.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v29-81db4cee59164881b0d2cfa3f58cdff9.bak": {
+    "bytes": 1744896,
+    "device": 27,
+    "inode": 1447013,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806512730985,
+    "sha256": "90e3d38d11ea32276c923d1b7bb8f6e1b2b1bf9d6b20dead90335f534ecac1d8",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v29-81db4cee59164881b0d2cfa3f58cdff9.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v30-fce9c49f44604a1e8631a1b3ce9a2a09.bak": {
+    "bytes": 1773568,
+    "device": 27,
+    "inode": 1447008,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806542283615,
+    "sha256": "0bc6dfc550507ce686e1b8f5b36809bc40466f91b6642158696206fd72ffeab2",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v30-fce9c49f44604a1e8631a1b3ce9a2a09.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v31-8f309baa4e35493aaa8baf577ed56d86.bak": {
+    "bytes": 1806336,
+    "device": 27,
+    "inode": 1446988,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806575957443,
+    "sha256": "bd15c88c4846c1894d3574740daed1ef0a0820bb742950a7b9a7f6a953840bbe",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v31-8f309baa4e35493aaa8baf577ed56d86.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v32-38fe870886a74861aad9d639c336074a.bak": {
+    "bytes": 1822720,
+    "device": 27,
+    "inode": 1447019,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806610852084,
+    "sha256": "307de4d8732c452a76ceb0c4d376ad1b62ea60fbcac8d67a0cbb32a36f778a05",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v32-38fe870886a74861aad9d639c336074a.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v33-b49bb6c7dea542d5b6e1ab6a1c3802f4.bak": {
+    "bytes": 1839104,
+    "device": 27,
+    "inode": 1446981,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806641749934,
+    "sha256": "5ec3c7d13605104fb9f61d71ab63db31c7d42cad927dba50908c6559e70721ad",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v33-b49bb6c7dea542d5b6e1ab6a1c3802f4.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v34-a324747faca24b75a91e5b6415381450.bak": {
+    "bytes": 1880064,
+    "device": 27,
+    "inode": 1447010,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806673177266,
+    "sha256": "39e2f65e0c707e501a261f91a7773b0f6374cdc55be8a1e821d766e0dfc7b7b4",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v34-a324747faca24b75a91e5b6415381450.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v35-482cf8444c2d4cecb65e5b56b7c09464.bak": {
+    "bytes": 2531328,
+    "device": 27,
+    "inode": 1447030,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792696491117835886,
+    "sha256": "47de84f23cf73a2250e602c98cc16545794ed82f2783d94d0316d08eb0ab17f7",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v35-482cf8444c2d4cecb65e5b56b7c09464.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v4.bak": {
+    "bytes": 847872,
+    "device": 27,
+    "inode": 1447009,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806141122638,
+    "sha256": "c9ad6f4e7d7c0c1dfddb76d2a6716ccc8b5c86b69e15065ccd46f5dfca58be9c",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v4.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v5.bak": {
+    "bytes": 856064,
+    "device": 27,
+    "inode": 1446987,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806142410156,
+    "sha256": "e7b15aa0b021a0de4b7ed5f19447539156ea4546a40b9dec3b2bf752ef643582",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v5.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v6.bak": {
+    "bytes": 880640,
+    "device": 27,
+    "inode": 1447021,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806149976696,
+    "sha256": "20466bdf3ac9a303fdf91265de279be105d60fa4bb7041d90cc162a1a1ee9247",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v6.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v7.bak": {
+    "bytes": 888832,
+    "device": 27,
+    "inode": 1447006,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806151825549,
+    "sha256": "aca3e8c3d4ab55639e784ab1c3bf38b5241a09582359f3800bbad307cd4d9173",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v7.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v8.bak": {
+    "bytes": 901120,
+    "device": 27,
+    "inode": 1446976,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806160140315,
+    "sha256": "9fe35c13c7d91212735a28db67e800322e56814cc6d90c209452cbbfbbcda8b1",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v8.bak"
+  },
+  "native18-copy-maintenance/world/world.sqlite.pre-v9-e77ff8ed1237478a8b21a443b4828c03.bak": {
+    "bytes": 901120,
+    "device": 27,
+    "inode": 1447007,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792694806169639684,
+    "sha256": "4a60913adea22731cf0bf19c4d3ebd51bf68584fcedc5ac1f996da2aba5e363b",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v9-e77ff8ed1237478a8b21a443b4828c03.bak"
+  },
+  "stopped-control-complete/": {
+    "device": 27,
+    "inode": 1321162,
+    "kind": "dir",
+    "mode": 493,
+    "mtime_ns": 1792696040614751355,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal"
+  },
+  "stopped-control-complete/README.md": {
+    "bytes": 10187,
+    "device": 27,
+    "inode": 1321947,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792695686364143905,
+    "sha256": "c22530708a7210fb8ad79d2956cbd7063adac96f70f7f65ec103376cd3a24a55",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/README.md"
+  },
+  "stopped-control-complete/ast-review.json": {
+    "bytes": 800,
+    "device": 27,
+    "inode": 1322030,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792695782238318167,
+    "sha256": "21fbc258c6fd70ea9cbb86cd3c6d6879a0539b5059eadf0aa333d626e59c87b5",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/ast-review.json"
+  },
+  "stopped-control-complete/config.json": {
+    "bytes": 802,
+    "device": 27,
+    "inode": 1321163,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792695526628893579,
+    "sha256": "3207131fc04eafece428f649f1334dfa31c9632acb291e1ed82767d07b87de8c",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/config.json"
+  },
+  "stopped-control-complete/control_probe.py": {
+    "bytes": 41974,
+    "device": 27,
+    "inode": 1321167,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792695747641385658,
+    "sha256": "beb9312f90e57c5c121aad5c9f784e930d8d3056e36df57b9625cf1340f914ed",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/control_probe.py"
+  },
+  "stopped-control-complete/execution-report.md": {
+    "bytes": 4140,
+    "device": 27,
+    "inode": 1326128,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696040614904866,
+    "sha256": "e8b68e41262a23b56799382199dbca0a6319f4e53bed9ef452b25e23b235c82e",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution-report.md"
+  },
+  "stopped-control-complete/execution/": {
+    "device": 27,
+    "inode": 1322913,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792696040611351781,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution"
+  },
+  "stopped-control-complete/execution/actual-owner-stdout-after-exit.bin": {
+    "bytes": 0,
+    "device": 27,
+    "inode": 1322946,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695975786028057,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/actual-owner-stdout-after-exit.bin"
+  },
+  "stopped-control-complete/execution/boot-1/": {
+    "device": 27,
+    "inode": 1322919,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792695925245000043,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/boot-1"
+  },
+  "stopped-control-complete/execution/boot-1/boot-spec.json": {
+    "bytes": 1555,
+    "device": 27,
+    "inode": 1322921,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924527369984,
+    "sha256": "4ce67be2a67e019f9338432c230da0215bdbe787f5292dd48a449f0d133146fa",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/boot-1/boot-spec.json"
+  },
+  "stopped-control-complete/execution/boot-1/installed-before.json": {
+    "bytes": 40078,
+    "device": 27,
+    "inode": 1322922,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924659871053,
+    "sha256": "9a6d1ccfdc466f480da5217186a9ff37e66d62ea5a68461317e89abb77c1c8d3",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/boot-1/installed-before.json"
+  },
+  "stopped-control-complete/execution/boot-1/markers/": {
+    "device": 27,
+    "inode": 1322920,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792695925455758124,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/boot-1/markers"
+  },
+  "stopped-control-complete/execution/boot-1/markers/before-task.json": {
+    "bytes": 3307,
+    "device": 27,
+    "inode": 1322924,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925402169544,
+    "sha256": "385d80d7ea4ea5b5fa37394ea8c5b122753b21f86b386e91f50e6347c4ecb021",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/boot-1/markers/before-task.json"
+  },
+  "stopped-control-complete/execution/boot-1/markers/stdout-ready.json": {
+    "bytes": 1407,
+    "device": 27,
+    "inode": 1322925,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925455758124,
+    "sha256": "2953ba6f5c7a379d883345c940b6789182c84bddecd414e044d980d7a65f811f",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/boot-1/markers/stdout-ready.json"
+  },
+  "stopped-control-complete/execution/boot-1/owner.jsonl": {
+    "bytes": 47760,
+    "device": 27,
+    "inode": 1322923,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695927425044308,
+    "sha256": "f8f338fa1081e9dfd3bdee8c5046bf222646ff711ebd002f42bda36e33f08a74",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/boot-1/owner.jsonl"
+  },
+  "stopped-control-complete/execution/controller-original-traceback.txt": {
+    "bytes": 1438,
+    "device": 27,
+    "inode": 1322959,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695982293239445,
+    "sha256": "9c50e9e4e4de53374019d6c93fa894487f5729fda52aba4cf65c194d5ebc3c23",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/controller-original-traceback.txt"
+  },
+  "stopped-control-complete/execution/failure-readonly-process-inspection.json": {
+    "bytes": 5329,
+    "device": 27,
+    "inode": 1322945,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695975782027976,
+    "sha256": "12f4caf3f0975df26c0884a643319d794412316f683e768cb3bc83109af614c7",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/failure-readonly-process-inspection.json"
+  },
+  "stopped-control-complete/execution/final-owned-inventory.json": {
+    "bytes": 500,
+    "device": 27,
+    "inode": 1323010,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792696000330527532,
+    "sha256": "e4c4b9ceabc17cbd6b9344f410cdbecf8e0568d256821cedcb170c0c51711bcc",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/final-owned-inventory.json"
+  },
+  "stopped-control-complete/execution/installed-after-stopped.json": {
+    "bytes": 52722,
+    "device": 27,
+    "inode": 1323009,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792696000286912329,
+    "sha256": "33031b395e675aec92b291db6211d7de24567a65fe2e164b445ae7a5362be1ac",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/installed-after-stopped.json"
+  },
+  "stopped-control-complete/execution/installed-before.json": {
+    "bytes": 40440,
+    "device": 27,
+    "inode": 1322916,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924524096307,
+    "sha256": "23e51376265f8cabd40c2b4227b064b60332cbf3a7d9d377c6ab6924d2694bda",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/installed-before.json"
+  },
+  "stopped-control-complete/execution/issued.jsonl": {
+    "bytes": 32163,
+    "device": 27,
+    "inode": 1322918,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792696000158524031,
+    "sha256": "3df04b629699b1315ffca19e55c496c32b6be3cd003a7cdfd446742170852278",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/issued.jsonl"
+  },
+  "stopped-control-complete/execution/raw-preservation.json": {
+    "bytes": 28700,
+    "device": 27,
+    "inode": 1323008,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792696000238525659,
+    "sha256": "118a1fb39d0028a601c9ef977fd193b3054df2a61b6815d85be67bb0598a8ac7",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-preservation.json"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/": {
+    "device": 27,
+    "inode": 1322961,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792695927482866705,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/jobs/": {
+    "device": 27,
+    "inode": 1322972,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792695925375482230,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/jobs"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/jobs/b553a386a2e2ebba3be00ab6e94b91d3c312baa23a3975fa2bc180bab1c91ba4-1-1.json": {
+    "bytes": 856,
+    "device": 27,
+    "inode": 1322973,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925403973759,
+    "sha256": "8437cd389040e94d8ff37b99c4122caed643e9b1c31a443acf30184fd06f8a44",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/jobs/b553a386a2e2ebba3be00ab6e94b91d3c312baa23a3975fa2bc180bab1c91ba4-1-1.json"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/owner.lock": {
+    "bytes": 0,
+    "device": 27,
+    "inode": 1323007,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924688988752,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/owner.lock"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/staging/": {
+    "device": 27,
+    "inode": 1322970,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792695925239696634,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/staging"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77/": {
+    "device": 27,
+    "inode": 1322971,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792695925239696634,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/staging/8f4eb351a6bed0109d8789e016cd16954b949ebd702c73070821f88c0ce5ab77"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/workspace.json": {
+    "bytes": 186,
+    "device": 27,
+    "inode": 1322974,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925209928163,
+    "sha256": "45effd80ec596258cfd8ec5e4547b14c83d3cbf444aae51127bba8fc6c224ef0",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/workspace.json"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.artifacts/": {
+    "device": 27,
+    "inode": 1322962,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792695925241155730,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.artifacts"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.artifacts/objects/": {
+    "device": 27,
+    "inode": 1322963,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792695925350949818,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.artifacts/objects"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.artifacts/objects/0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a": {
+    "bytes": 572,
+    "device": 27,
+    "inode": 1322969,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925241282741,
+    "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.artifacts/objects/0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.artifacts/objects/3460fee6fb285a8924e1bcad083e698c54a1e10ccdebd10030f8b51417e43bd7": {
+    "bytes": 1704,
+    "device": 27,
+    "inode": 1322968,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925242995669,
+    "sha256": "3460fee6fb285a8924e1bcad083e698c54a1e10ccdebd10030f8b51417e43bd7",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.artifacts/objects/3460fee6fb285a8924e1bcad083e698c54a1e10ccdebd10030f8b51417e43bd7"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.artifacts/objects/394a584a7660c57c0fd0da79836410809426e381b62a3f96977b743b5e9d23bf": {
+    "bytes": 1750,
+    "device": 27,
+    "inode": 1322965,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925347758345,
+    "sha256": "394a584a7660c57c0fd0da79836410809426e381b62a3f96977b743b5e9d23bf",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.artifacts/objects/394a584a7660c57c0fd0da79836410809426e381b62a3f96977b743b5e9d23bf"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.artifacts/objects/399a706b7a0edc5a3528b82ee1ecdaad3c3c892c66db254e891311eb1a8eb152": {
+    "bytes": 1664,
+    "device": 27,
+    "inode": 1322967,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925243710064,
+    "sha256": "399a706b7a0edc5a3528b82ee1ecdaad3c3c892c66db254e891311eb1a8eb152",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.artifacts/objects/399a706b7a0edc5a3528b82ee1ecdaad3c3c892c66db254e891311eb1a8eb152"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.artifacts/objects/889d9437f88e7a4e5f45360051a9b664f56a7ae3f0361c1fd1b43b6068b1659d": {
+    "bytes": 6359,
+    "device": 27,
+    "inode": 1322966,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925324479261,
+    "sha256": "889d9437f88e7a4e5f45360051a9b664f56a7ae3f0361c1fd1b43b6068b1659d",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.artifacts/objects/889d9437f88e7a4e5f45360051a9b664f56a7ae3f0361c1fd1b43b6068b1659d"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.artifacts/objects/f0911f99c494a0b8df46c5ff629b228a2988f175867f389c1a4dd4dd61762770": {
+    "bytes": 1658,
+    "device": 27,
+    "inode": 1322964,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925350949818,
+    "sha256": "f0911f99c494a0b8df46c5ff629b228a2988f175867f389c1a4dd4dd61762770",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.artifacts/objects/f0911f99c494a0b8df46c5ff629b228a2988f175867f389c1a4dd4dd61762770"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite": {
+    "bytes": 2424832,
+    "device": 27,
+    "inode": 1323006,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695927482866705,
+    "sha256": "e18bebd86b78c2d44557ebe6989192dfee7a99ccf41488c7a540fe83c0ea0bd2",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v10-6a149bdd21234e829b40b392d8d5098e.bak": {
+    "bytes": 937984,
+    "device": 27,
+    "inode": 1322999,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924739113905,
+    "sha256": "82b78b4f9dc5fdaf5ef0c3c5da493ec5d2d8271d7cddadf02eed0026b71f063d",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v10-6a149bdd21234e829b40b392d8d5098e.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v11-7266af5a883f4de1a2a9b025f5a745db.bak": {
+    "bytes": 987136,
+    "device": 27,
+    "inode": 1322998,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924747840618,
+    "sha256": "7a13dae932d14fc74b1126594603646134229d40b5147c96c28528e72cf9bfaa",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v11-7266af5a883f4de1a2a9b025f5a745db.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v12-d1d561c993e245529b6e2e2fd6cea5d1.bak": {
+    "bytes": 999424,
+    "device": 27,
+    "inode": 1322997,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924755950262,
+    "sha256": "3f7ba2b52a7314d01605aeebe9c8fb248ee59be2f1b590d98c8125e6829bbc60",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v12-d1d561c993e245529b6e2e2fd6cea5d1.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v13-3c6e1fde77104a4e85d660e8c8f18d7c.bak": {
+    "bytes": 1056768,
+    "device": 27,
+    "inode": 1322996,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924767867353,
+    "sha256": "fcc2146981c5b8f5b78a3aecd0540249d924e08ef43f77379b7d3ce0659b3953",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v13-3c6e1fde77104a4e85d660e8c8f18d7c.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v14-bdc728648722452a849be0e283d2c5a2.bak": {
+    "bytes": 1105920,
+    "device": 27,
+    "inode": 1322995,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924778055451,
+    "sha256": "26cb9894551a09373661f5be82e16a921123fdadd309a29577fd1eadb0421a5d",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v14-bdc728648722452a849be0e283d2c5a2.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v15-0d2d6d51f9f841579069c7e4db1ae75a.bak": {
+    "bytes": 1224704,
+    "device": 27,
+    "inode": 1322994,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924789574372,
+    "sha256": "1ad53f3da708cd7b5db6b8ec800ae9cfc9c75cb335a19667e969c120bb0c6f60",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v15-0d2d6d51f9f841579069c7e4db1ae75a.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v16-31b828c850ad45dbab4074d30a586076.bak": {
+    "bytes": 1273856,
+    "device": 27,
+    "inode": 1322993,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924801457856,
+    "sha256": "7ef645be3edb49ebc232ac7810a563b165531103c6def22fc8105800f7ea58cb",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v16-31b828c850ad45dbab4074d30a586076.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v17-c1299e7340564ea6bd83b39439ffdf89.bak": {
+    "bytes": 1306624,
+    "device": 27,
+    "inode": 1322992,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924813860857,
+    "sha256": "3ddfcfdc147bdbbc2443672e55eb9257fb97d49b1106d81ade0c33edd6b957c4",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v17-c1299e7340564ea6bd83b39439ffdf89.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v18-30ab068a350c4f9087c046f2edd09e00.bak": {
+    "bytes": 1314816,
+    "device": 27,
+    "inode": 1322991,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924825288917,
+    "sha256": "a58e1097511302983b6787a0e0ec7fc3d1e6a4b587e4a8f93789aac37ead3cae",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v18-30ab068a350c4f9087c046f2edd09e00.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v19-cd10f5d652b14454ac4e1e07a1c362f1.bak": {
+    "bytes": 1413120,
+    "device": 27,
+    "inode": 1322990,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924845207674,
+    "sha256": "852114e28ecd70c92da7f2975f90b19d36fb1de7cba7cc8f271814ef52919046",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v19-cd10f5d652b14454ac4e1e07a1c362f1.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v20-ef76f09baacb4e46a461dc83baf8ceb1.bak": {
+    "bytes": 1445888,
+    "device": 27,
+    "inode": 1322989,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924867373824,
+    "sha256": "9172dc2aaa4aa4a5fd8b53ece0a7f572557aab2c241772b68e134bb9569a2eff",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v20-ef76f09baacb4e46a461dc83baf8ceb1.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v21-f8161e6ad12f46e589a3fe3092214c71.bak": {
+    "bytes": 1466368,
+    "device": 27,
+    "inode": 1322988,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924885511139,
+    "sha256": "a8f752a7f7623a9d4e4c7bd3ecb08fe85d308562610b606161e4750758cb2db8",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v21-f8161e6ad12f46e589a3fe3092214c71.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v22-7c42c37556894867b4e3d605232645dd.bak": {
+    "bytes": 1486848,
+    "device": 27,
+    "inode": 1322987,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924900895453,
+    "sha256": "104a226121b7ff2b2a2482a3147b5ef1234be10af0440610a22fa686adcf117c",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v22-7c42c37556894867b4e3d605232645dd.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v23-d7e9004d68564be7b8871002fcc1a1eb.bak": {
+    "bytes": 1523712,
+    "device": 27,
+    "inode": 1322986,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924917058107,
+    "sha256": "1bc7ddabab716083e391f0e0549d4a8e60f3ad1b8cfd1bc3ac56ea80b5fe3ec9",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v23-d7e9004d68564be7b8871002fcc1a1eb.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v24-063e4bd8837948cfbef7c923539e50b8.bak": {
+    "bytes": 1531904,
+    "device": 27,
+    "inode": 1322985,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924932465606,
+    "sha256": "0d30eb218f96425a9d205b4c2f24231ec689f581b3920da3686d8b2b51b8c4b3",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v24-063e4bd8837948cfbef7c923539e50b8.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v25-b58bf680d578427b9bce4c5c4fb30482.bak": {
+    "bytes": 1568768,
+    "device": 27,
+    "inode": 1322984,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924949152239,
+    "sha256": "e9a6dbf45c692c37319ca9056179daa6a3ff3bc9ae83f96819e168560e2fbd5b",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v25-b58bf680d578427b9bce4c5c4fb30482.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v26-0696d1b3ecd44c7c9e742e674b354703.bak": {
+    "bytes": 1576960,
+    "device": 27,
+    "inode": 1322983,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924968414729,
+    "sha256": "6cded77baf1d5ad9efa2ab0703a8c8f55fb0762a650945e54c1a455f2e8bbab1",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v26-0696d1b3ecd44c7c9e742e674b354703.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v27-37dd59d0795a4e8487f2203d05d8aa11.bak": {
+    "bytes": 1650688,
+    "device": 27,
+    "inode": 1322982,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924986530031,
+    "sha256": "cbffec807f346071f339d04cc321c103f50ee492584846da82f22d2a8f58a8a6",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v27-37dd59d0795a4e8487f2203d05d8aa11.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v28-74bc943e617f4316a6e4682acd92061a.bak": {
+    "bytes": 1687552,
+    "device": 27,
+    "inode": 1322981,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925004088046,
+    "sha256": "3c932b738002ad5cea3bb72c430e39f82a9387a15c4ca264e3e0615a4ab880d6",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v28-74bc943e617f4316a6e4682acd92061a.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v29-11b07adf99e74076b0695d87453f3e37.bak": {
+    "bytes": 1744896,
+    "device": 27,
+    "inode": 1322980,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925026276900,
+    "sha256": "0f444e633e05f14a7eaf092f916bcc0a535af666003d9c8092f3f197c6311725",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v29-11b07adf99e74076b0695d87453f3e37.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v30-625f1772ea954d4f84708c9ad2f55ac1.bak": {
+    "bytes": 1773568,
+    "device": 27,
+    "inode": 1322979,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925044995981,
+    "sha256": "dd64ffcc456eddb83c489f8239c6079e8e7fdbbe365d95e90bfc33061768b42b",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v30-625f1772ea954d4f84708c9ad2f55ac1.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v31-136c0ce3ca2f499e9b7247f3462a6a28.bak": {
+    "bytes": 1806336,
+    "device": 27,
+    "inode": 1322978,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925068568829,
+    "sha256": "469a6cc4cd988fd86d2a7014638c5eea21de3ea180cefcc81ef952016c29f413",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v31-136c0ce3ca2f499e9b7247f3462a6a28.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v32-080e6ef7b3da429cb645f715fb655e4a.bak": {
+    "bytes": 1822720,
+    "device": 27,
+    "inode": 1322977,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925093497416,
+    "sha256": "4d5cfea915f4d9f06a09995235ffb898b470c0c6a2d04cc166954c06ec087c32",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v32-080e6ef7b3da429cb645f715fb655e4a.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v33-b65ffdd8c3a341e0817f9cbe4335faf7.bak": {
+    "bytes": 1839104,
+    "device": 27,
+    "inode": 1322976,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925117398256,
+    "sha256": "f654d61855c9f1e6b8697ec2df4fded448e030099672d617b2ed732298f05749",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v33-b65ffdd8c3a341e0817f9cbe4335faf7.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v34-44eb91dbb6fe49deb0473e8156c36ad3.bak": {
+    "bytes": 1880064,
+    "device": 27,
+    "inode": 1322975,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925143275912,
+    "sha256": "2e218a1349d9d88a181b202bbbb1d72252489f49853edc1ab5bc277c5b8910a9",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v34-44eb91dbb6fe49deb0473e8156c36ad3.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v4.bak": {
+    "bytes": 847872,
+    "device": 27,
+    "inode": 1323005,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924706666421,
+    "sha256": "011441b99a5c617f4c41c1d839c56fb3b69c766b0f374dcaf2d3bd149805f423",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v4.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v5.bak": {
+    "bytes": 856064,
+    "device": 27,
+    "inode": 1323004,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924708086148,
+    "sha256": "5d03f6a1dc589c50cd149f62b81a56c362dbbbaa00f4724a9301e3b5736fc2db",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v5.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v6.bak": {
+    "bytes": 880640,
+    "device": 27,
+    "inode": 1323003,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924715149198,
+    "sha256": "b472452445a1ca17dfeb2d99c7629a722c6717a40a83b0374aacd638399472d6",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v6.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v7.bak": {
+    "bytes": 888832,
+    "device": 27,
+    "inode": 1323002,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924717327617,
+    "sha256": "92e8b7d6aad209c5400c2771487b23e9620796027611107226891e9c144e3e7e",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v7.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v8.bak": {
+    "bytes": 901120,
+    "device": 27,
+    "inode": 1323001,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924723311632,
+    "sha256": "569f9560677485185defe6a92e2c825f0ff9dc2f8a8638ba396e7ce142491626",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v8.bak"
+  },
+  "stopped-control-complete/execution/raw-world-preserved/world.sqlite.pre-v9-36d16505b8d44389b79f55d854dfd2b7.bak": {
+    "bytes": 901120,
+    "device": 27,
+    "inode": 1323000,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695924728627583,
+    "sha256": "61f0c60bc3c2d46ac67f8ab42814ea5b6b1326c4fe3adb3b85cd964a8190976c",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/world.sqlite.pre-v9-36d16505b8d44389b79f55d854dfd2b7.bak"
+  },
+  "stopped-control-complete/execution/recover/": {
+    "device": 27,
+    "inode": 1322917,
+    "kind": "dir",
+    "mode": 448,
+    "mtime_ns": 1792695925457019983,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/recover"
+  },
+  "stopped-control-complete/execution/recover/actual-unaccepted-stdout.md": {
+    "bytes": 558,
+    "device": 27,
+    "inode": 1322926,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695925458263154,
+    "sha256": "7b4e859d248a7cc2bb61488a894ec941a51f4535bb36ad15d0c82f89e1fd3aaa",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/recover/actual-unaccepted-stdout.md"
+  },
+  "stopped-control-complete/execution/stopped-owned-reference-observation.json": {
+    "bytes": 585,
+    "device": 27,
+    "inode": 1322960,
+    "kind": "file",
+    "mode": 384,
+    "mtime_ns": 1792695982341035124,
+    "sha256": "6492c429d6184e60cdde93de388c465f7625f7cb18a69bbd73b1a7df8f2c6cc4",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/stopped-owned-reference-observation.json"
+  },
+  "stopped-control-complete/execution/stopped-result.json": {
+    "bytes": 1783,
+    "device": 27,
+    "inode": 1326127,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696040614751355,
+    "sha256": "828330e5cd0907e2c99ad0dfd66bfe0706b25173df24a35136d8905182b0c46f",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/stopped-result.json"
+  },
+  "stopped-control-complete/pre-go/": {
+    "device": 27,
+    "inode": 1322907,
+    "kind": "dir",
+    "mode": 493,
+    "mtime_ns": 1792695915486442631,
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/pre-go"
+  },
+  "stopped-control-complete/pre-go/README.md": {
+    "bytes": 10187,
+    "device": 27,
+    "inode": 1322910,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792695915486307538,
+    "sha256": "c22530708a7210fb8ad79d2956cbd7063adac96f70f7f65ec103376cd3a24a55",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/pre-go/README.md"
+  },
+  "stopped-control-complete/pre-go/ast-review.json": {
+    "bytes": 800,
+    "device": 27,
+    "inode": 1322911,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792695915486442631,
+    "sha256": "21fbc258c6fd70ea9cbb86cd3c6d6879a0539b5059eadf0aa333d626e59c87b5",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/pre-go/ast-review.json"
+  },
+  "stopped-control-complete/pre-go/config.json": {
+    "bytes": 802,
+    "device": 27,
+    "inode": 1322909,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792695915486165654,
+    "sha256": "3207131fc04eafece428f649f1334dfa31c9632acb291e1ed82767d07b87de8c",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/pre-go/config.json"
+  },
+  "stopped-control-complete/pre-go/control_probe.py": {
+    "bytes": 41974,
+    "device": 27,
+    "inode": 1322908,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792695915486066735,
+    "sha256": "beb9312f90e57c5c121aad5c9f784e930d8d3056e36df57b9625cf1340f914ed",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/pre-go/control_probe.py"
+  },
+  "stopped-control-complete/pre-go/receipt.json": {
+    "bytes": 992,
+    "device": 27,
+    "inode": 1322912,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792695915486642682,
+    "sha256": "a0888c47a8e349594cb48657276b4c092b5abcc607e4f195d658da61bb927b03",
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/pre-go/receipt.json"
+  }
+}

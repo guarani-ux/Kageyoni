@@ -1,0 +1,10 @@
+{
+  "scope": "Source-entry and ZIP-member labels distinguished, archive/old capture receipts unchanged",
+  "archive_sha256": "9aad54982fd63273c30a9514d3a65b7d1878a8eeb77a7e7f4a6c2b11ebdcf3d9",
+  "source_entries": 1568,
+  "added_manifest_members": 1,
+  "zip_members": 1569,
+  "files_in_source": 1500,
+  "original_receipt_entries_means": "number of source filesystem entries, excludes added capture manifest",
+  "no_archive_or_source_change": true
+}

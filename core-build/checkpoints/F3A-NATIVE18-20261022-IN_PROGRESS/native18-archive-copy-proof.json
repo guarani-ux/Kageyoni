@@ -1,0 +1,33 @@
+{
+  "DB_opened": false,
+  "copy": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future/raw/Native18_43_API_2_Fork_and_Preserved_Harness_Failure_Raw.zip",
+  "copy_metadata": {
+    "bytes": 68360077,
+    "device": 27,
+    "inode": 1068063,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696669765600443,
+    "sha256": "9aad54982fd63273c30a9514d3a65b7d1878a8eeb77a7e7f4a6c2b11ebdcf3d9"
+  },
+  "exact_bytes_mode_mtime": true,
+  "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-closed-raw-r2/Native18_43_API_2_Fork_and_Preserved_Harness_Failure_Raw.zip",
+  "source_after": {
+    "bytes": 68360077,
+    "device": 27,
+    "inode": 1447041,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696669765600443,
+    "sha256": "9aad54982fd63273c30a9514d3a65b7d1878a8eeb77a7e7f4a6c2b11ebdcf3d9"
+  },
+  "source_before": {
+    "bytes": 68360077,
+    "device": 27,
+    "inode": 1447041,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696669765600443,
+    "sha256": "9aad54982fd63273c30a9514d3a65b7d1878a8eeb77a7e7f4a6c2b11ebdcf3d9"
+  }
+}

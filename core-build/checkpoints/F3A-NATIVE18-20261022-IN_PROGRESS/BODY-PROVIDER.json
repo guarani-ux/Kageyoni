@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE_REMOTE_BYTE_CUSTODY_ONLY_IN_PROGRESS",
+  "provider_repository": "guarani-ux/SAMSARA",
+  "immutable_body_commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+  "immutable_critical_commit": "131af761a54765b6a7b5c4ecf8d2f36d73e76ec4",
+  "checkpoint": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS",
+  "recipes": [
+    "critical-recipe.json",
+    "native17-recipe.json",
+    "native18-recipe.json",
+    "supplemental-recipe.json"
+  ],
+  "actual_body_full_payloads_verified": 304,
+  "actual_body_ASCII_parts": 273,
+  "complete_archive_Git_raw_SHA_offsets_CRC_member_SHA_modes_types_symlinktargets": true,
+  "native18_actual_ZIP_members": 1569,
+  "native18_original_source_entries": 1568,
+  "current_product": "dev28/native16 unchanged",
+  "native18": "future candidate only; not active product authority",
+  "negative_or_stopped_worlds_universally_healthy": false,
+  "full_product_F3_world_season_human_generalhost_qualification": false
+}

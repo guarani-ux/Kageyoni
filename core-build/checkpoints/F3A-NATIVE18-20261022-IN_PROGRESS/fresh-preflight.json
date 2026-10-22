@@ -1,0 +1,133 @@
+{
+  "branch": "codex/samsara-core-continuation",
+  "governing_pins": [
+    "db9838371a1128124b77fac69677902a4b5820c6",
+    "872973f091320f92e3276408090978084928d291"
+  ],
+  "repositories": [
+    {
+      "name": "guarani-ux/SAMSARA",
+      "visibility": "private",
+      "archived": false,
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "head": {
+        "ref": "refs/heads/codex/samsara-core-continuation",
+        "node_id": "REF_kwDOVIqlR9oAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg",
+        "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/refs/heads/codex/samsara-core-continuation",
+        "object": {
+          "sha": "881890787a973a78c0a7ff5ca0e30896afd366c9",
+          "type": "commit",
+          "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/881890787a973a78c0a7ff5ca0e30896afd366c9"
+        }
+      },
+      "commit": {
+        "sha": "881890787a973a78c0a7ff5ca0e30896afd366c9",
+        "node_id": "C_kwDOVIqlR9oAKDg4MTg5MDc4N2E5NzNhNzhjMGE3ZmY1Y2EwZTMwODk2YWZkMzY2Yzk",
+        "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/881890787a973a78c0a7ff5ca0e30896afd366c9",
+        "html_url": "https://github.com/guarani-ux/SAMSARA/commit/881890787a973a78c0a7ff5ca0e30896afd366c9",
+        "author": {
+          "name": "guarani-ux",
+          "email": "flowersnelsone@gmail.com",
+          "date": "2026-10-22T19:04:25Z"
+        },
+        "committer": {
+          "name": "guarani-ux",
+          "email": "flowersnelsone@gmail.com",
+          "date": "2026-10-22T19:04:25Z"
+        },
+        "tree": {
+          "sha": "a375800fe2a0fc8a5b2eb3defa424c196bce8422",
+          "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/trees/a375800fe2a0fc8a5b2eb3defa424c196bce8422"
+        },
+        "message": "Preserve all27 closed RAM worlds and complete relocated recipient for bounded product28 EOF qualification IN_PROGRESS\n\nComplete43,533,983B provider SHAc085e73b10c714d2e98d493ea9acd0a6ad8f73c4bfaaf2fadbea860fd6714789,1505entries,1303files+201directories/1,283,998,915sourceB.88ASCIIparts fully reconstructed with raw/Git/offset/CRC/memberSHA/modes.29world trees captured under existing readonly owner locks; all27 earlier manifests and before/after exact. EOF fix ONLY qualified per frozen root receipt; allF1-F5/wholeD15b false; earlier failures preserved.",
+        "parents": [
+          {
+            "sha": "d77d256efd3f8d44383b46a79ec1b1daed0e00a9",
+            "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/d77d256efd3f8d44383b46a79ec1b1daed0e00a9",
+            "html_url": "https://github.com/guarani-ux/SAMSARA/commit/d77d256efd3f8d44383b46a79ec1b1daed0e00a9"
+          }
+        ],
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "pin": {
+        "sha": "db9838371a1128124b77fac69677902a4b5820c6",
+        "message": "Add six task-driven workflows for Sciel's Samsara crew",
+        "url": "https://github.com/guarani-ux/SAMSARA/commit/db9838371a1128124b77fac69677902a4b5820c6"
+      }
+    },
+    {
+      "name": "guarani-ux/Kageyoni",
+      "visibility": "private",
+      "archived": false,
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "head": {
+        "ref": "refs/heads/codex/samsara-core-continuation",
+        "node_id": "REF_kwDOUgoRfdoAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg",
+        "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/refs/heads/codex/samsara-core-continuation",
+        "object": {
+          "sha": "2e4120fe0e0070057bd222535c2ea31f06534b96",
+          "type": "commit",
+          "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/2e4120fe0e0070057bd222535c2ea31f06534b96"
+        }
+      },
+      "commit": {
+        "sha": "2e4120fe0e0070057bd222535c2ea31f06534b96",
+        "node_id": "C_kwDOUgoRfdoAKDJlNDEyMGZlMGUwMDcwMDU3YmQyMjI1MzVjMmVhMzFmMDY1MzRiOTY",
+        "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/2e4120fe0e0070057bd222535c2ea31f06534b96",
+        "html_url": "https://github.com/guarani-ux/Kageyoni/commit/2e4120fe0e0070057bd222535c2ea31f06534b96",
+        "author": {
+          "name": "guarani-ux",
+          "email": "flowersnelsone@gmail.com",
+          "date": "2026-10-22T19:04:30Z"
+        },
+        "committer": {
+          "name": "guarani-ux",
+          "email": "flowersnelsone@gmail.com",
+          "date": "2026-10-22T19:04:30Z"
+        },
+        "tree": {
+          "sha": "74fa7100e8cd864ea8dbed2331fd44cb156a9861",
+          "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/trees/74fa7100e8cd864ea8dbed2331fd44cb156a9861"
+        },
+        "message": "Bind bounded product28 EOF qualification to complete29world-tree raw remote custody IN_PROGRESS\n\nExact immutable SAMSARA body commit 881890787a973a78c0a7ff5ca0e30896afd366c9. All88ASCIIparts reconstructed with1505CRC/memberSHA/mode-verified entries. All27 source manifests matched; full prior failures remain. EOF fix ONLY qualified; fullF1-F5 false. No new execution, DB effects, automation or source changes.",
+        "parents": [
+          {
+            "sha": "574bf08df7c4d53fd80defe19e09772251d1f049",
+            "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/574bf08df7c4d53fd80defe19e09772251d1f049",
+            "html_url": "https://github.com/guarani-ux/Kageyoni/commit/574bf08df7c4d53fd80defe19e09772251d1f049"
+          }
+        ],
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "pin": {
+        "sha": "872973f091320f92e3276408090978084928d291",
+        "message": "Restore authentic archived verification inputs and isolate scenario fixtures",
+        "url": "https://github.com/guarani-ux/Kageyoni/commit/872973f091320f92e3276408090978084928d291"
+      }
+    }
+  ]
+}

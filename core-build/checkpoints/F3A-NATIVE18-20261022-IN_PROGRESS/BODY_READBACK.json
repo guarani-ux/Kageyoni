@@ -1,0 +1,42 @@
+{
+  "status": "ALL_THREE_COMPLETE_RAW_PROVIDERS_REMOTE_BYTES_VERIFIED",
+  "providers": {
+    "native17": {
+      "output": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future/Native17_Closed_Raw_REMOTE_READBACK.zip",
+      "bytes": 63842950,
+      "sha256": "deb9cf49b8ec4c642d63dd1629e9a76af91064c6f20f10ea2f3de9a60a14d45f",
+      "ZIP_members": 1468,
+      "ASCII_parts": 128,
+      "full_Git_SHA_offsets_CRC_every_member_SHA_modes_types_symlinktargets": true,
+      "unspecified_file_type0_only_original_added_manifest": [
+        "CAPTURE-MANIFEST.json"
+      ],
+      "symlinks": 21
+    },
+    "native18": {
+      "output": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future/Native18_Closed_Raw_REMOTE_READBACK.zip",
+      "bytes": 68360077,
+      "sha256": "9aad54982fd63273c30a9514d3a65b7d1878a8eeb77a7e7f4a6c2b11ebdcf3d9",
+      "ZIP_members": 1569,
+      "ASCII_parts": 137,
+      "full_Git_SHA_offsets_CRC_every_member_SHA_modes_types_symlinktargets": true,
+      "unspecified_file_type0_only_original_added_manifest": [
+        "CAPTURE-MANIFEST.json"
+      ],
+      "symlinks": 21
+    },
+    "supplemental": {
+      "output": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future/Native18_Maintenance_Control_REMOTE_READBACK.zip",
+      "bytes": 3954756,
+      "sha256": "b33b55be1c381b201411032dcd5099bc83dd34d63f0fcf3dbca425d9956abb1e",
+      "ZIP_members": 161,
+      "ASCII_parts": 8,
+      "full_Git_SHA_offsets_CRC_every_member_SHA_modes_types_symlinktargets": true,
+      "unspecified_file_type0_only_original_added_manifest": [],
+      "symlinks": 0
+    }
+  },
+  "raw17_18_original_ZIPs_unchanged": true,
+  "negative_or_stopped_worlds_universally_healthy": false,
+  "DB_or_native_opened": false
+}

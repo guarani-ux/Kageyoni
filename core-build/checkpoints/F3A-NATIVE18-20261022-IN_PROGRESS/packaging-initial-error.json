@@ -1,0 +1,8 @@
+{
+  "status": "LOCAL_PACKAGING_DUPLICATE_ROSTER_ASSERTION_REPAIRED",
+  "initial_error": "prepare_critical.py add duplicate explicitly selected manifest and top-level metadata roster",
+  "candidate_source_or_Git_mutation": false,
+  "first_partial_snapshots_retained": true,
+  "fix": "identical duplicate selection checks existing metadata and returns; no omission or candidate fix",
+  "final_complete_source_files": 1573
+}

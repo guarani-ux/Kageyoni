@@ -1,0 +1,33 @@
+{
+  "DB_opened": false,
+  "copy": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future/raw/Native17_37_API_and_6_Review_Regression_Raw.zip",
+  "copy_metadata": {
+    "bytes": 63842950,
+    "device": 27,
+    "inode": 1067930,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696312033884384,
+    "sha256": "deb9cf49b8ec4c642d63dd1629e9a76af91064c6f20f10ea2f3de9a60a14d45f"
+  },
+  "exact_bytes_mode_mtime": true,
+  "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration/native17-closed-raw/Native17_37_API_and_6_Review_Regression_Raw.zip",
+  "source_after": {
+    "bytes": 63842950,
+    "device": 27,
+    "inode": 1323283,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696312033884384,
+    "sha256": "deb9cf49b8ec4c642d63dd1629e9a76af91064c6f20f10ea2f3de9a60a14d45f"
+  },
+  "source_before": {
+    "bytes": 63842950,
+    "device": 27,
+    "inode": 1323283,
+    "kind": "file",
+    "mode": 420,
+    "mtime_ns": 1792696312033884384,
+    "sha256": "deb9cf49b8ec4c642d63dd1629e9a76af91064c6f20f10ea2f3de9a60a14d45f"
+  }
+}

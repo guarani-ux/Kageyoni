@@ -1,0 +1,37 @@
+{
+  "status": "IN_PROGRESS_BYTE_CUSTODY_PENDING_FINAL_REMOTE_RECEIPT",
+  "critical_heads": [
+    "131af761a54765b6a7b5c4ecf8d2f36d73e76ec4",
+    "4919f70f35b797c925e5beaa754ab986e34be430"
+  ],
+  "current_product_authority": "dev28/native16 remains unchanged",
+  "future_native18_only": true,
+  "providers": {
+    "native17": {
+      "filename": "Native17_37_API_and_6_Review_Regression_Raw.zip",
+      "bytes": 63842950,
+      "sha256": "deb9cf49b8ec4c642d63dd1629e9a76af91064c6f20f10ea2f3de9a60a14d45f",
+      "zip_entries": 1468
+    },
+    "native18": {
+      "filename": "Native18_43_API_2_Fork_and_Preserved_Harness_Failure_Raw.zip",
+      "bytes": 68360077,
+      "sha256": "9aad54982fd63273c30a9514d3a65b7d1878a8eeb77a7e7f4a6c2b11ebdcf3d9",
+      "zip_entries": 1569
+    },
+    "supplemental": {
+      "filename": "Native18_Copy_Maintenance_and_Stopped_Control_Raw_IN_PROGRESS.zip",
+      "bytes": 3954756,
+      "sha256": "b33b55be1c381b201411032dcd5099bc83dd34d63f0fcf3dbca425d9956abb1e",
+      "zip_entries": 161
+    }
+  },
+  "correction": "Native18 exact68360077-byte archive contains1568 source entries plus1 capture manifest =1569 ZIPmembers. Originalarchive/receipt preserved.",
+  "negative_and_stopped_worlds_not_all_healthy": true,
+  "control": "0completedcases0signals; procchildren guardENOENT; actualOwnerexit1; workerUNKNOWN",
+  "new_root_contract": "F3a-product-root-contract.md is futureleaf interface, not implementation",
+  "prompt": "Actual existing-automation prompt readback evidence only; no automation mutation in this commission",
+  "fullrelease_F1_F5_product_F3_world_season_human_generalhost": false,
+  "prior_native_journal_failure_unresolved": true,
+  "metadata_freeze": "Original fe6fde09 rootledger remains frozen in criticalprovider; newer ledger and count correction are additive."
+}

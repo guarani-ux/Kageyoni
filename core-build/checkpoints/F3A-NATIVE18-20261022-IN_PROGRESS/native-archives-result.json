@@ -1,0 +1,16 @@
+{
+  "native17": {
+    "bytes": 63842950,
+    "filename": "Native17_37_API_and_6_Review_Regression_Raw.zip",
+    "parts": 128,
+    "sha256": "deb9cf49b8ec4c642d63dd1629e9a76af91064c6f20f10ea2f3de9a60a14d45f",
+    "zip_entries": 1468
+  },
+  "native18": {
+    "bytes": 68360077,
+    "filename": "Native18_43_API_2_Fork_and_Preserved_Harness_Failure_Raw.zip",
+    "parts": 137,
+    "sha256": "9aad54982fd63273c30a9514d3a65b7d1878a8eeb77a7e7f4a6c2b11ebdcf3d9",
+    "zip_entries": 1569
+  }
+}

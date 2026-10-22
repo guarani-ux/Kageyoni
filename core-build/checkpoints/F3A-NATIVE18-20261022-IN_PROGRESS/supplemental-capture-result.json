@@ -1,0 +1,45 @@
+{
+  "all_negative_worlds_healthy": false,
+  "locks": [
+    {
+      "existing_readonly_exclusive_nonblocking": true,
+      "inode": 1447028,
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/owner.lock"
+    },
+    {
+      "existing_readonly_exclusive_nonblocking": true,
+      "inode": 1323007,
+      "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved/owner.lock"
+    }
+  ],
+  "roots": {
+    "fork-boundary-r1": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/fork-boundary-r1",
+    "fork-boundary-r2": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/fork-boundary-r2",
+    "native18-copy-maintenance": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance",
+    "stopped-control-complete": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal"
+  },
+  "singles": [
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/maintain_real_copy.py",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/maintenance-predecessor.log",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/maintenance-successor.log",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/check_fork_boundary.py",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/check_fork_boundary_r2.py",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/fork-boundary-r1.log",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/fork-boundary-r2.log",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/capture_closed_native.py",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/capture_closed_native_r2.py",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-capture.log",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-capture-r2.log",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration/native17-closed-raw/capture-before-release.json",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration/native17-closed-raw/release-receipt.json",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration/native17-closed-raw/source-manifest.json",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-closed-raw-r2/capture-before-release.json",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-closed-raw-r2/release-receipt.json",
+    "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/native18-closed-raw-r2/source-manifest.json"
+  ],
+  "source_before_after_metadata_exact": true,
+  "source_bytes": 100024110,
+  "source_entries": 160,
+  "sqlite_or_native_opened": false,
+  "status": "COMPLETE_BYTE_CUSTODY_ONLY"
+}

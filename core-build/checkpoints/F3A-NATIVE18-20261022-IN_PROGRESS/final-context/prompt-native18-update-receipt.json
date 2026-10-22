@@ -1,0 +1,8 @@
+{
+  "id": "6ad44f937dd48191a087ec9b629e7232",
+  "enabled": true,
+  "schedule": "BEGIN:VEVENT\nDTSTART:20261018T044919Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
+  "prompt_equal": true,
+  "prompt_bytes": 21096,
+  "status": "ACTUAL_UPDATE_READBACK_VERIFIED"
+}

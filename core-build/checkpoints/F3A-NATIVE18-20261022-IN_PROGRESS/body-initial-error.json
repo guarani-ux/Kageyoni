@@ -1,0 +1,7 @@
+{
+  "stage": "local archive member metadata classification before any provider parts or Git body mutation",
+  "error": "native17 CAPTURE-MANIFEST.json has actual ZIP file_type0, original unspecified metadata",
+  "effect": "exact rawarchive unchanged; copied native17 bytes and proof retained",
+  "adapter": "record actual file_type0 exactly and verify it, without inventing regular-file mode/type",
+  "native_DB_execution": false
+}
