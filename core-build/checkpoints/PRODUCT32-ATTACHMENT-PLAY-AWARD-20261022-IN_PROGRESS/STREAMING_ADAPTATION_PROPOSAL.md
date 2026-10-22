@@ -1,0 +1,13 @@
+# Proposed bounded current32 body readback
+
+Authoring only until root reviews this adaptation. Existing frozen32, its initial carriers and all ASCII parts remain unchanged.
+
+The new phase lives under streaming-body/. It admits at most one incoming JSON envelope, at most2MiB, containing strictbase64 of the complete actual Git tool value. PureJS UTF8/base64 encoding preserves every scalar byte without text normalization; each request index binds a frozen canonical local/size/SHA256/GitID plan. The helper reads that actual value, compares every decoded byte with the retained canonical part/source plus full SHA256/GitID and lstat-before/after, then writes a small immutable proof. Only after complete success and retained-after proof does it release that new transport envelope. Every failure/different actual value stays intact and stops the phase. No decoded body file or full newZIP is created.
+
+Git readbacks run serially. Before each envelope, a preflight requires allocated new phase bytes plus the exact incoming estimate to remain under20MiB. All new bodymetadata/base64upload transports/plans/value receipts are inside this same directory. Finalcommit/ref receipts outside it are bounded below1MiB; operational phase cap will be18MiB to retain2MiB headroom. Every toolcommand must close actualexit0 before continuation. No retry after unknown effects.
+
+After every actual remote value is checked, archives action requires exact receipt coverage for every requested value and every actualSAM ASCIIpart. It rechecks every retained immutablepart against its actualreadback receipt, strictdecodes rawchunks, proves full orderedoffset coverage and compares each actual-equal rawchunk to the corresponding retained initialcarrier range. WholeSHA/ZIPCRC/everymemberSHA/mode/type/linktarget then prove that each complete actualremote archive equals the existing usable carrier. This is full remote byte custody with no secondfullZIP copy; localonly verification is insufficient and rejected without complete actualreceipts.
+
+Expected new footprint: one incoming envelope~0.9MiB max, allplans/metadata/transports~<3MiB, allsmallvalue/release receipts~<1MiB, finaltree/ref reports~<1MiB. Cap20MiB absolute, with operational18MiB. Retained usablebodyZIP remains7,465,974B; raw remains6,225,032B in frozen32. No oldwriter/unique source/world/history path is released. Root's557duplicate-release receipt and actual33revision21 context stay outside this32freeze, reserved for following33.
+
+No execution, upload or new bodymaterialization has occurred using this proposed adapter. Rootreview required before use.

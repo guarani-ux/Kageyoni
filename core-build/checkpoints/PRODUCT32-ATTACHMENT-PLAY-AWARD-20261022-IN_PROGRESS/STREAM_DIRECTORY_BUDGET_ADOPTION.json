@@ -1,0 +1,13 @@
+{
+  "status": "ROOT_APPROVED_DIRECTORY_ALLOCATION_ADOPTION",
+  "root_reviewed_helper_sha256": "2c6b7aedcb652228094bb515bd817e07d453801aadd17254a68815dd86a7cfcf",
+  "preserved_original": "stream_remote_readback-root-reviewed.py",
+  "adopted_helper_sha256": "91477b7c3b0f312322a3b8dd7066802352ecb0600b7bc51fac5cb2941d4b85f7",
+  "root_reviewed_JS_sha256": "a85297bc20c1b94338130aca050832d2b6f0e92dbe600aa44f418d98cd264d08",
+  "only_diff": {
+    "before": "return sum(p.lstat().st_blocks*512 for p in D.rglob('*') if p.is_file())",
+    "after": "return D.lstat().st_blocks*512+sum(p.lstat().st_blocks*512 for p in D.rglob('*'))"
+  },
+  "operational18MiB_plus_final2MiB_unchanged": true,
+  "original_proposal_unchanged": true
+}

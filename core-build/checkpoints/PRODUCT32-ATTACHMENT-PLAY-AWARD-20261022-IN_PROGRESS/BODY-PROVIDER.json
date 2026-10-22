@@ -1,0 +1,39 @@
+{
+  "status": "COMPLETE_PRODUCT32_BOUNDED_ATTACHMENT_PLAY_NATIVEAWARD_REMOTE_CUSTODY_VERIFIED",
+  "repository": "guarani-ux/SAMSARA",
+  "commit": "913f625935c3af5bfebba92a0a19952f3c41a1be",
+  "critical_commit": "312247057a54ba09363e8cc4b3f0a7827c528a8b",
+  "checkpoint": "core-build/checkpoints/PRODUCT32-ATTACHMENT-PLAY-AWARD-20261022-IN_PROGRESS",
+  "README": "README.md",
+  "reconstruct": "reconstruct.py",
+  "providers": [
+    {
+      "recipe": "body-recipe.json",
+      "bytes": 7465974,
+      "filename": "Product32_Attachment_Play_Award_Complete_Packet_IN_PROGRESS.zip",
+      "sha256": "09273bae276aeff5e0dae1432096964b79aa46fe62d908b5858e91c63c1c7685",
+      "zip_entries": 162
+    },
+    {
+      "recipe": "critical-recipe.json",
+      "bytes": 1723480,
+      "filename": "Product32_Attachment_Play_Award_Critical_IN_PROGRESS.zip",
+      "sha256": "82b42be9f8b3d5537db222a219789123315b9561af43a912de305915831fa02d",
+      "zip_entries": 161
+    },
+    {
+      "recipe": "raw-recipe.json",
+      "bytes": 6225032,
+      "filename": "Product32_Play_Award_Failure_Withdrawal_Raw.zip",
+      "sha256": "4a384087c7fb2ac04cd694e428900a26747dee065628a6a08a249f03e58c061a",
+      "zip_entries": 236
+    }
+  ],
+  "proof": "BODY_READBACK.json",
+  "actual_full_value_proofs": "BODY_FULL_VALUE_PROOFS.json",
+  "archive_coverage": "ARCHIVE_REMOTE_COVERAGE_PROOF.json",
+  "manifest_sha256": "45b54675f87ebee83520572c2acd1251a84b698dbecdffb4e2c5cce0b2fd78fb",
+  "ledger_sha256": "560fab2cb3c8a7ea3a42e6b79b55f195a2513bbbe46a38645ea625bf8d18253f",
+  "readback_method": "Fullactualremotevalues SHA/GitID/byteequality+beforeaftermetadata; everyASCIIpart/rawchunk/range coverage proves complete remoteZIPs equal retainedusablecarriers; wholeSHA/CRC/everymember exact, no secondphysicalfullbodyZIP/extraction.",
+  "scope": "Installed32/native18 boundedattachment/SCRIPTEDplay/nativeaward/currentwithdrawalpreparation only. OriginalharnessFAILretained, notonecleansuite. No helperrepair/season/fullF3/human/independentAIentrant/currentdualSIGKILL. Source33/34excluded; earlier31/KIT/history preserved."
+}

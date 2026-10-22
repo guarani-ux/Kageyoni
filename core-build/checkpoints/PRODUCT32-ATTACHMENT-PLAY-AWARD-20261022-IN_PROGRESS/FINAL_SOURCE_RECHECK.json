@@ -1,0 +1,14 @@
+{
+  "status": "ALL147FROZEN_FILES_AND_METADATA_EXACT_IN_ACTUAL_REMOTE_EQUAL_CARRIER",
+  "manifest_files": 146,
+  "physical_files": 147,
+  "manifest_sha256": "45b54675f87ebee83520572c2acd1251a84b698dbecdffb4e2c5cce0b2fd78fb",
+  "ledger_sha256": "560fab2cb3c8a7ea3a42e6b79b55f195a2513bbbe46a38645ea625bf8d18253f",
+  "sourcebeforeafter_inode_device_mtime_mode_SHA_exact": true,
+  "all147files_match_proven_remote_equal_retained_bodyZIP": true,
+  "originalraw_exact_standalone_and_inside_body": true,
+  "current32_and_native18_wheels_exact": true,
+  "proof": "ARCHIVE_REMOTE_COVERAGE_PROOF.json",
+  "no_secondfull_body_or_raw_ZIP_written": true,
+  "DB_opened": false
+}

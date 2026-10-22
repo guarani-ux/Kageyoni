@@ -1,0 +1,14 @@
+{
+  "status": "CAPACITY_BOUNDED_ROOT_APPROVED_STREAM_ADAPTATION",
+  "reviewed_helper_sha256": "2c6b7aedcb652228094bb515bd817e07d453801aadd17254a68815dd86a7cfcf",
+  "adopted_directory_counting_helper_sha256": "91477b7c3b0f312322a3b8dd7066802352ecb0600b7bc51fac5cb2941d4b85f7",
+  "reviewed_JS_sha256": "a85297bc20c1b94338130aca050832d2b6f0e92dbe600aa44f418d98cd264d08",
+  "actual_full_remote_values_strictUTF8_base64_no_textnormalization": true,
+  "whole_actual_remote_archive_equal_retained_carrier_by_complete_actual_part_coverage": true,
+  "originalreviewedhelper_and_adopteddiff_preserved": true,
+  "root20MiB_cap_obeyed": true,
+  "no_mismatch_or_uncertain_retry": true,
+  "all_bytecommands_closed_exit0": true,
+  "no_DB_Engine_Client_native_world_build_test_source_Library_automation_effects": true,
+  "later_root_capacityrelease_and33_34contexts": "Excluded from frozen32, reserved for followingcommission"
+}

@@ -1,0 +1,27 @@
+{
+  "DB_opened": false,
+  "bytes": 11036285,
+  "manifest_files": 146,
+  "physical_files": 147,
+  "providers": {
+    "body": {
+      "bytes": 7465974,
+      "filename": "Product32_Attachment_Play_Award_Complete_Packet_IN_PROGRESS.zip",
+      "sha256": "09273bae276aeff5e0dae1432096964b79aa46fe62d908b5858e91c63c1c7685",
+      "zip_entries": 162
+    },
+    "critical": {
+      "bytes": 1723480,
+      "filename": "Product32_Attachment_Play_Award_Critical_IN_PROGRESS.zip",
+      "sha256": "82b42be9f8b3d5537db222a219789123315b9561af43a912de305915831fa02d",
+      "zip_entries": 161
+    },
+    "raw": {
+      "bytes": 6225032,
+      "filename": "Product32_Play_Award_Failure_Withdrawal_Raw.zip",
+      "sha256": "4a384087c7fb2ac04cd694e428900a26747dee065628a6a08a249f03e58c061a",
+      "zip_entries": 236
+    }
+  },
+  "source_before_after_metadata_exact": true
+}

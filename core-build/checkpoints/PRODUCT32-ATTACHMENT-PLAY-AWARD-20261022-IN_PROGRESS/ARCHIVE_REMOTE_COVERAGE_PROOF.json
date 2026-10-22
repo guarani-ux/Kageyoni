@@ -1,0 +1,49 @@
+{
+  "actual_full_value_receipts": 62,
+  "archives": [
+    {
+      "ASCII_actual_remote_parts": 15,
+      "ZIP_members": 162,
+      "actual_remote_complete_coverage_equal_retained_carrier": true,
+      "all_CRC_memberSHA_mode_type_symlinktargets_exact": true,
+      "bytes": 7465974,
+      "kind": "body",
+      "no_second_full_ZIP_written": true,
+      "retained_usable_carrier": {
+        "allocated_bytes": 7467008,
+        "bytes": 7465974,
+        "device": 26,
+        "inode": 88011,
+        "mode": 420,
+        "mtime_ns": 1792703323395320567,
+        "nlink": 1,
+        "path": "/dev/shm/github-product32-attachment-award/Product32_Attachment_Play_Award_Complete_Packet_IN_PROGRESS.zip"
+      },
+      "sha256": "09273bae276aeff5e0dae1432096964b79aa46fe62d908b5858e91c63c1c7685"
+    },
+    {
+      "ASCII_actual_remote_parts": 13,
+      "ZIP_members": 236,
+      "actual_remote_complete_coverage_equal_retained_carrier": true,
+      "all_CRC_memberSHA_mode_type_symlinktargets_exact": true,
+      "bytes": 6225032,
+      "kind": "raw",
+      "no_second_full_ZIP_written": true,
+      "retained_usable_carrier": {
+        "allocated_bytes": 6225920,
+        "bytes": 6225032,
+        "device": 26,
+        "inode": 87165,
+        "mode": 420,
+        "mtime_ns": 1792702452481392908,
+        "nlink": 1,
+        "path": "/dev/shm/product32-checkpoint/Product32_Play_Award_Failure_Withdrawal_Raw.zip"
+      },
+      "sha256": "4a384087c7fb2ac04cd694e428900a26747dee065628a6a08a249f03e58c061a"
+    }
+  ],
+  "no_DB_native_Client_build_test_world_effects": true,
+  "own_new_phase_limit": 18874368,
+  "own_new_streaming_allocated": 1257472,
+  "status": "ACTUAL_REMOTE_COMPLETE_ARCHIVE_BYTES_EQUAL_RETAINED_USABLE_CARRIERS"
+}
