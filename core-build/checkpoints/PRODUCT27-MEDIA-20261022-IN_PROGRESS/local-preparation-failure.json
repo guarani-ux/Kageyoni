@@ -1,0 +1,9 @@
+{
+  "operation": "Local stage transport path construction",
+  "error": "TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'",
+  "remote_effects": false,
+  "capsule_already_generated": {
+    "bytes": 2743984,
+    "sha256": "d6f3a9e4253b640fe9c549d20401dbc01a66c0ec847bc3f2d632237871be218d"
+  }
+}

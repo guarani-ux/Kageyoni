@@ -1,0 +1,64 @@
+{
+  "status": "EXACT_FULL_MEDIA_AND_SELECTED_PRODUCT27_REMOTE_BYTE_CUSTODY_VERIFIED_IN_PROGRESS",
+  "pair_id": "product27-native16-media26-20261022-frozen109",
+  "critical_pair": [
+    {
+      "repo": "Kageyoni",
+      "parent": "0fcb9050f6630c48f79a8e261a322e0d1b5199dc",
+      "sha": "e1855ffd82fe83fae675cbb475218d6e5b2e9469",
+      "tree": "04c577356892246e3d03155b0f9e1f9edb56c2d3",
+      "CAS": true,
+      "force": false,
+      "observed_head": true
+    },
+    {
+      "repo": "SAMSARA",
+      "parent": "b3e470042f3b44926c4e127309fe8ce91c8356c9",
+      "sha": "8a083c74807c3beb16a06b188e139d6fd0bc2b20",
+      "tree": "ed4daa3e161fa1c1380d0eff3065676113669497",
+      "CAS": true,
+      "force": false,
+      "observed_head": true
+    }
+  ],
+  "checkpoint_path": "core-build/checkpoints/PRODUCT27-MEDIA-20261022-IN_PROGRESS",
+  "candidate": {
+    "product": "0.5.3.dev27",
+    "native": "11.1.0.dev16",
+    "runtime_digest": "56e54d9f91bf266d61e5364fd014a3c46bd290681609c607888014939b00cb30",
+    "product_wheel_sha256": "3913e0913629f3b6e5d0908b20b219f205d9e383bb42cfa07fbe42dafee5b0c9",
+    "native_wheel_sha256": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3",
+    "matched_installed_payloads_recorded": 238
+  },
+  "capsule": {
+    "filename": "Samsara_Product27_Selected_Source_Durability_IN_PROGRESS.zip",
+    "bytes": 2743984,
+    "sha256": "d6f3a9e4253b640fe9c549d20401dbc01a66c0ec847bc3f2d632237871be218d",
+    "selected_files": 109,
+    "selected_bytes": 46999353,
+    "zip_members": 110,
+    "remote_ASCII_parts": 6,
+    "complete_remote_reconstruction_CRC_every_member_SHA": true
+  },
+  "media": {
+    "filename": "Media_Recovery_AI_Local_Actual.zip",
+    "bytes": 34631353,
+    "sha256": "d4dd0b4c1b93ec31f514fe283b9516101f1c5eeac5b16566161716a87081705e",
+    "zip_members": 906,
+    "source_files": 905,
+    "remote_ASCII_parts": 70,
+    "ASCII_and_raw_SHA_Git_ID_offset_all_verified": true,
+    "complete_remote_reconstruction_CRC_every_member_SHA": true
+  },
+  "full_binary_direct_readbacks": 124,
+  "semantic_qualification": false,
+  "ownerloss_qualification": false,
+  "full_release_qualified": false,
+  "database_opened": false,
+  "preservation_limits": [
+    "Current26 authority/private media remains matching its own runtime; current27 is isolated installed candidate.",
+    "Native114 and product ownerloss1PASS reports coexist with original/copy durability failures. No meaningful child generation2 result established; issued-only reconcile wire evidence preserved.",
+    "Other82 native full raw specimens still pending custody; selected capsule and media do not claim all history or full Library continuation.",
+    "Root RAM experiments after freeze excluded; no source/evidence edits, DB/process/media execution, PR/merge/force/deploy/Library save."
+  ]
+}

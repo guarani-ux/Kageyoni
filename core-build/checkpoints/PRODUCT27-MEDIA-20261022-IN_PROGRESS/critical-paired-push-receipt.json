@@ -1,0 +1,85 @@
+{
+  "status": "VERIFIED_PAIRED_PRODUCT27_SOURCE_IN_PROGRESS_MEDIA_BODY_PENDING",
+  "heads": [
+    {
+      "repo": "Kageyoni",
+      "parent": "0fcb9050f6630c48f79a8e261a322e0d1b5199dc",
+      "sha": "e1855ffd82fe83fae675cbb475218d6e5b2e9469",
+      "tree": "04c577356892246e3d03155b0f9e1f9edb56c2d3",
+      "CAS": true,
+      "force": false,
+      "observed_head": true
+    },
+    {
+      "repo": "SAMSARA",
+      "parent": "b3e470042f3b44926c4e127309fe8ce91c8356c9",
+      "sha": "8a083c74807c3beb16a06b188e139d6fd0bc2b20",
+      "tree": "ed4daa3e161fa1c1380d0eff3065676113669497",
+      "CAS": true,
+      "force": false,
+      "observed_head": true
+    }
+  ],
+  "checkpoint_path": "core-build/checkpoints/PRODUCT27-MEDIA-20261022-IN_PROGRESS",
+  "capsule": {
+    "bytes": 2743984,
+    "sha256": "d6f3a9e4253b640fe9c549d20401dbc01a66c0ec847bc3f2d632237871be218d",
+    "source_files": 109,
+    "zip_entries": 110,
+    "complete_remote_readback": true
+  },
+  "direct_full_binary_readbacks": 124,
+  "all_prior_leaf_preservation": [
+    {
+      "repo": "SAMSARA",
+      "level": "root",
+      "old_tree": "ff76553d16dccf1d6127024bef103ef92c84a88e",
+      "new_tree": "ed4daa3e161fa1c1380d0eff3065676113669497",
+      "prior_entries": 17,
+      "all_unaffected_prior_leaves_equal": true
+    },
+    {
+      "repo": "SAMSARA",
+      "level": "core-build",
+      "old_tree": "559216bcc869e135a83b6be10d4f41ad5ad4b8f9",
+      "new_tree": "d9a2de69a8b035f158d7b86f780965d04060c87a",
+      "prior_entries": 24,
+      "all_unaffected_prior_leaves_equal": true
+    },
+    {
+      "repo": "SAMSARA",
+      "level": "checkpoints",
+      "old_tree": "7b3c4ebcfdd4caefa938a3bf5025e0ddf2fd174d",
+      "new_tree": "2c686e79e186c3d3b1072d2879f682b766e7fa11",
+      "prior_entries": 22,
+      "all_unaffected_prior_leaves_equal": true
+    },
+    {
+      "repo": "Kageyoni",
+      "level": "root",
+      "old_tree": "d034fe9a93ddfa45dcc43f1a7060041c1cad7702",
+      "new_tree": "04c577356892246e3d03155b0f9e1f9edb56c2d3",
+      "prior_entries": 91,
+      "all_unaffected_prior_leaves_equal": true
+    },
+    {
+      "repo": "Kageyoni",
+      "level": "core-build",
+      "old_tree": "6d49d74d3426f3e260cca13f95be9bd7897f29d4",
+      "new_tree": "e88fcf5019b953c3ebba8d2e02dcf4ae07ff118e",
+      "prior_entries": 6,
+      "all_unaffected_prior_leaves_equal": true
+    },
+    {
+      "repo": "Kageyoni",
+      "level": "checkpoints",
+      "old_tree": "36f44de420febf9f703a79dcf71320db6968d00e",
+      "new_tree": "48629785bbc5476dccade01b7e32767ca70769c4",
+      "prior_entries": 22,
+      "all_unaffected_prior_leaves_equal": true
+    }
+  ],
+  "full_release_qualified": false,
+  "ownerloss_qualified": false,
+  "media70parts_remote_body_pending": true
+}

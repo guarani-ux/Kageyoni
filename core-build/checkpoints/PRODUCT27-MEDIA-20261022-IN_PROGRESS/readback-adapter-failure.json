@@ -1,0 +1,12 @@
+{
+  "operation": "Read-only direct blob readback adapter",
+  "remote_mutation_uncertain": false,
+  "error": "github_fetch git/blob URL returned decoded raw UTF-8 content rather than REST blob metadata wrapper; JSON parsing treated context body as metadata and equality predicate failed.",
+  "resolution": "Create immutable staged commit objects without moving refs, then use github_fetch_file encoding=base64 for exact binary-safe readback by commit/path. No mutation retried.",
+  "failed_paths": [
+    "context.json",
+    "frozen-root-context.json",
+    "CONTINUE.md",
+    "MANIFEST.json"
+  ]
+}
