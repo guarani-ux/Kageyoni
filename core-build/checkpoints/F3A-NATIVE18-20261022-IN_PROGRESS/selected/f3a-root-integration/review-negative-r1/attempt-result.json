@@ -1,0 +1,7 @@
+{
+  "pytest_exit": 1,
+  "payloads": 203,
+  "exact_installed_origin": true,
+  "full_release": false,
+  "limit": "Explicit pre-repair reproduction of six independent new negative predicates; expected defects are not qualified."
+}

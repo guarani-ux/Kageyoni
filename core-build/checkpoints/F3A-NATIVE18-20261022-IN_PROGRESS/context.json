@@ -1,0 +1,74 @@
+{
+  "active_product_authority": {
+    "native": "dev16",
+    "native18_adopted_into_product": false,
+    "product": "dev28",
+    "runtime": "1289b896d6de9194f286a0e9860e20ff65337b78a3efb536bae981cd90ebc858"
+  },
+  "body_custody": "Pending complete raw remote providers; no full custody claim until final receipt",
+  "critical_provider": {
+    "bytes": 6107013,
+    "filename": "Future_Native18_Source_Antecedent_Wheels_and_Evidence_IN_PROGRESS.zip",
+    "sha256": "a1543dcf29c24d40f5c7158564a4a5589d95ab94a9238d66a4501118834c409a",
+    "zip_entries": 1574
+  },
+  "custody_control": "STOPPED0cases0signals: proc children ENOENT; actual Owner reaped1; worker UNKNOWN; raw41files44140957B; no guard bypass/retry",
+  "effects": "Snapshot/ZIP/Git only; no DB/native/test/build/process execution or source changes.",
+  "frozen_root_ledger_sha256": "fe6fde09c143bb4cc654a8b0a3d5d7416216e62e8cf159f972585581f089fb12",
+  "future_native18": {
+    "actual_copy_maintenance": {
+      "append_only": {
+        "engine_versions": 1,
+        "migration_checks": 1,
+        "registry_entries": 3
+      },
+      "checked_backup_restore": true,
+      "new_empty_tables": [
+        "contest_consent",
+        "contest_settlement",
+        "contest_terms"
+      ],
+      "old_rows": 586,
+      "old_tables": 180,
+      "product_owner_opened": false,
+      "source_allfiles_unchanged": true,
+      "unchanged_old_tables": 177,
+      "workspace_runtime_metadata_unchanged": true
+    },
+    "canonical_source_files": 745,
+    "limits": [
+      "future native candidate, not current product authority",
+      "no opposed product contest/participant consents/recipient repair yet",
+      "no newnative35 dualSIGKILL installedaward qualification",
+      "contest-fact branch fork unsupported and failsclosed beforemutation; inherited proof remains unfinished",
+      "current28 custody recover/dualinterruption attempt STOPPED0cases0signals; no bypass",
+      "earliernative034 andoverlay failures unresolved",
+      "allF1-F5/fullrelease false"
+    ],
+    "native17_antecedent": "37 API passes, independent6regressions5FAIL1PASS retained; never qualified",
+    "native_version": "11.1.0.dev18",
+    "payloads": 203,
+    "repaired_checks": "43 actual same-process installed checks PASS30.26s; unchanged six countercases",
+    "repairs": [
+      "case-insensitive SQLite related-object recognition; exact strictDDL retained",
+      "installed bidirectional projection/record domain coherence in sole collector"
+    ],
+    "status": "IMPLEMENTED_NATIVE18_API_AND_COPY_MAINTENANCE_VERIFIED_ONLY",
+    "wheel_sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626"
+  },
+  "native17": "Antecedent37PASS and independent5FAIL1PASS retained; both concrete findings repaired in independent native18 successor; negative worlds not universally healthy.",
+  "product_grounding": "27 sources; read-only proposal, no product implementation",
+  "qualification": {
+    "full_F1_F5": false,
+    "prior_failures_erased": false,
+    "product_or_F3_or_world_or_season_or_human_or_general_host": false
+  },
+  "raw_archive_count_correction": {
+    "native17_ZIP_members": 1468,
+    "native17_source_entries": 1467,
+    "native18_ZIP_members": 1569,
+    "native18_source_entries": 1568,
+    "original_archives_and_receipts_unchanged": true
+  },
+  "status": "IN_PROGRESS_FUTURE_NATIVE18_IMPLEMENTATION_EVIDENCE_ONLY"
+}

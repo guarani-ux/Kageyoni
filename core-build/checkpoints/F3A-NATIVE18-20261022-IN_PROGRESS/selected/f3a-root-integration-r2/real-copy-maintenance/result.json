@@ -1,0 +1,142 @@
+{
+  "status": "PASS_NATIVE_ONLY_EXPLICIT_COPY_MAINTENANCE",
+  "initial_native18_readonly": {
+    "global": {
+      "ok": true,
+      "schema_version": 2,
+      "runtime_schema": "4",
+      "branches": 1,
+      "events": 10,
+      "records": 34,
+      "properties": 2,
+      "processes": 2,
+      "will_attempts": 0
+    },
+    "registry": {
+      "ok": true,
+      "errors": [],
+      "entries": 100
+    },
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreign_keys": []
+  },
+  "install": {
+    "installed": true,
+    "interface": "1",
+    "counts": {
+      "contest_terms": 0,
+      "contest_consent": 0,
+      "contest_settlement": 0
+    },
+    "maintenance": {
+      "checked_backup": {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/world/world.sqlite.pre-v35-482cf8444c2d4cecb65e5b56b7c09464.bak",
+        "bytes": 2531328,
+        "sha256": "47de84f23cf73a2250e602c98cc16545794ed82f2783d94d0316d08eb0ab17f7",
+        "producer": "Engine.backup -> checkpoint.checked_backup; two fresh read-only Engine.verify passes"
+      },
+      "preflight_verification": {
+        "ok": true,
+        "schema_version": 2,
+        "runtime_schema": "4",
+        "branches": 1,
+        "events": 10,
+        "records": 34,
+        "properties": 2,
+        "processes": 2,
+        "will_attempts": 0
+      },
+      "preflight_registry": {
+        "ok": true,
+        "errors": [],
+        "entries": 100
+      }
+    }
+  },
+  "final": {
+    "global": {
+      "ok": true,
+      "schema_version": 2,
+      "runtime_schema": "4",
+      "branches": 1,
+      "events": 10,
+      "records": 34,
+      "properties": 2,
+      "processes": 2,
+      "will_attempts": 0
+    },
+    "registry": {
+      "ok": true,
+      "errors": [],
+      "entries": 103
+    },
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreign_keys": []
+  },
+  "restore": {
+    "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/native18-checked-backup.sqlite",
+    "destination": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/real-copy-maintenance/restored.sqlite",
+    "verification": {
+      "ok": true,
+      "schema_version": 2,
+      "runtime_schema": "4",
+      "branches": 1,
+      "events": 10,
+      "records": 34,
+      "properties": 2,
+      "processes": 2,
+      "will_attempts": 0
+    }
+  },
+  "restore_verify": {
+    "global": {
+      "ok": true,
+      "schema_version": 2,
+      "runtime_schema": "4",
+      "branches": 1,
+      "events": 10,
+      "records": 34,
+      "properties": 2,
+      "processes": 2,
+      "will_attempts": 0
+    },
+    "registry": {
+      "ok": true,
+      "errors": [],
+      "entries": 103
+    },
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreign_keys": []
+  },
+  "old_tables": 180,
+  "old_rows": 586,
+  "unchanged_old_tables": 177,
+  "append_only": {
+    "engine_versions": 1,
+    "migration_checks": 1,
+    "registry_entries": 3
+  },
+  "new_empty_tables": [
+    "contest_consent",
+    "contest_settlement",
+    "contest_terms"
+  ],
+  "all_original_files_unchanged": true,
+  "old_workspace_metadata_unchanged": true,
+  "all_copy_non_db_files_unchanged": true,
+  "fictional_maintenance_events": 0,
+  "product_owner_opened_migrated_world": false,
+  "limit": "Native-only copy maintenance; no current product, designated canon, contest or human qualification."
+}

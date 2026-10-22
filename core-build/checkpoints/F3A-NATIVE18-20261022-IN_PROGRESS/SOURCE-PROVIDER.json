@@ -1,0 +1,10 @@
+{
+  "provider_repository": "guarani-ux/SAMSARA",
+  "immutable_commit": "131af761a54765b6a7b5c4ecf8d2f36d73e76ec4",
+  "checkpoint": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS",
+  "recipe": "critical-recipe.json",
+  "critical_sha256": "a1543dcf29c24d40f5c7158564a4a5589d95ab94a9238d66a4501118834c409a",
+  "active_product": "dev28/native16 unchanged",
+  "future_native18_only": true,
+  "complete_raw_body_pending": true
+}

@@ -1,0 +1,7 @@
+{
+  "pytest_exit": 0,
+  "payloads": 203,
+  "exact_installed_origin": true,
+  "full_release": false,
+  "limit": "First actual attempt; raw failure/specimens retained, no automatic retry."
+}

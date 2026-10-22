@@ -1,0 +1,41 @@
+{
+  "status": "IMPLEMENTED_NATIVE18_API_AND_COPY_MAINTENANCE_VERIFIED_ONLY",
+  "native_version": "11.1.0.dev18",
+  "wheel_sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+  "payloads": 203,
+  "canonical_source_files": 745,
+  "native17_antecedent": "37 API passes, independent6regressions5FAIL1PASS retained; never qualified",
+  "repaired_checks": "43 actual same-process installed checks PASS30.26s; unchanged six countercases",
+  "repairs": [
+    "case-insensitive SQLite related-object recognition; exact strictDDL retained",
+    "installed bidirectional projection/record domain coherence in sole collector"
+  ],
+  "actual_copy_maintenance": {
+    "old_tables": 180,
+    "old_rows": 586,
+    "unchanged_old_tables": 177,
+    "append_only": {
+      "engine_versions": 1,
+      "migration_checks": 1,
+      "registry_entries": 3
+    },
+    "new_empty_tables": [
+      "contest_consent",
+      "contest_settlement",
+      "contest_terms"
+    ],
+    "source_allfiles_unchanged": true,
+    "workspace_runtime_metadata_unchanged": true,
+    "product_owner_opened": false,
+    "checked_backup_restore": true
+  },
+  "limits": [
+    "future native candidate, not current product authority",
+    "no opposed product contest/participant consents/recipient repair yet",
+    "no newnative35 dualSIGKILL installedaward qualification",
+    "contest-fact branch fork unsupported and failsclosed beforemutation; inherited proof remains unfinished",
+    "current28 custody recover/dualinterruption attempt STOPPED0cases0signals; no bypass",
+    "earliernative034 andoverlay failures unresolved",
+    "allF1-F5/fullrelease false"
+  ]
+}

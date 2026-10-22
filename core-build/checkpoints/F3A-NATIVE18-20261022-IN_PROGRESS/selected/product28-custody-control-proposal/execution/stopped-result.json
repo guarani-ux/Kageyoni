@@ -1,0 +1,57 @@
+{
+  "status": "STOPPED_FIRST_UNKNOWN_NOT_QUALIFIED",
+  "completed_cases": 0,
+  "recover": "STOPPED before any Owner signal or reconcile request: unsupported procfs children observable ENOENT",
+  "rollback": "NOT_RUN",
+  "committed": "NOT_RUN",
+  "signals_issued": 0,
+  "retries": 0,
+  "product_or_native_changes": 0,
+  "native_original_opened": false,
+  "source_world": "/dev/shm/p28ctl-r1/a/s/w",
+  "raw_copy": "/workspace/scratch/5c7ed9200168/recovery-20261022/product28-custody-control-proposal/execution/raw-world-preserved",
+  "raw_bytes": 44140957,
+  "raw_files": 41,
+  "raw_byte_modes_equal": true,
+  "raw_journal_present": false,
+  "all_clients_closed": true,
+  "owners": [
+    {
+      "local_pid": 5,
+      "actual_reaped_returncode": 1,
+      "stdin_closed": true,
+      "stdout_closed": true
+    }
+  ],
+  "worker_current_status": "UNKNOWN; no current worker Popen retained by controller; native postimage not opened",
+  "proof238_unchanged": true,
+  "frozen_source": [
+    {
+      "name": "control_probe.py",
+      "sha256": "beb9312f90e57c5c121aad5c9f784e930d8d3056e36df57b9625cf1340f914ed",
+      "bytes": 41974
+    },
+    {
+      "name": "config.json",
+      "sha256": "3207131fc04eafece428f649f1334dfa31c9632acb291e1ed82767d07b87de8c",
+      "bytes": 802
+    },
+    {
+      "name": "README.md",
+      "sha256": "c22530708a7210fb8ad79d2956cbd7063adac96f70f7f65ec103376cd3a24a55",
+      "bytes": 10187
+    },
+    {
+      "name": "ast-review.json",
+      "sha256": "21fbc258c6fd70ea9cbb86cd3c6d6879a0539b5059eadf0aa333d626e59c87b5",
+      "bytes": 800
+    }
+  ],
+  "interactive_session": {
+    "id": 52730,
+    "final_exit_code": 0,
+    "owner_closed_before_controller_exit": true
+  },
+  "DB_process_lane": "RELEASED",
+  "timestamp": "2026-10-22T19:07:20.614578+00:00"
+}
