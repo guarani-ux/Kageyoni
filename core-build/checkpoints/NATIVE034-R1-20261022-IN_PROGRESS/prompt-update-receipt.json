@@ -1,0 +1,10 @@
+{
+  "id": "6ad44f937dd48191a087ec9b629e7232",
+  "success": true,
+  "enabled": true,
+  "schedule": "BEGIN:VEVENT\nDTSTART:20261018T044919Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
+  "prior_schedule": "BEGIN:VEVENT\nDTSTART:20261018T044919Z\nRRULE:FREQ=HOURLY\nEND:VEVENT",
+  "prompt_equal": true,
+  "only_field_requested": "prompt",
+  "full_release_qualified": false
+}

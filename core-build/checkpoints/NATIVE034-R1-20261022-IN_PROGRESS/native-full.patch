@@ -1,0 +1,1263 @@
+--- a/kageyoni/engine.py
++++ b/kageyoni/engine.py
+@@ -2765,6 +2765,11 @@
+                 or self.db.execute("SELECT 1 FROM migration_checks WHERE version=33").fetchone()):
+             from .workspaces.worker_liveness import verify_worker_liveness
+             require(verify_worker_liveness(self).get('installed') is True, 'worker liveness interface not installed')
++        if (self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name IN ('activity_worker_registrations','activity_worker_absences')").fetchone()
++                or self.db.execute("SELECT 1 FROM engine_versions WHERE component='worker_custody_interface'").fetchone()
++                or self.db.execute("SELECT 1 FROM migration_checks WHERE version=34").fetchone()):
++            from .workspaces.worker_custody import verify_worker_custody
++            require(verify_worker_custody(self).get('installed') is True, 'worker custody interface not installed')
+         if self.db.execute("SELECT 1 FROM engine_versions WHERE component='activity_queue_interface'").fetchone():
+             from .workspaces.job_queue import verify_queue
+             verify_queue(self)
+--- /dev/null
++++ b/kageyoni/persistence/migration_034.py
+@@ -0,0 +1,10 @@
++"""Proposed new opt-in installer; root owns common migrations.py wiring."""
++from ..resources import schema_path
++from .migrations import install_worker_liveness, _install_component
++
++
++def install_worker_custody(engine):
++    install_worker_liveness(engine)
++    _install_component(engine, schema_path('migration_034.sql'), 34, 33, 'worker_custody_interface')
++    from ..workspaces.worker_custody import verify_worker_custody
++    verify_worker_custody(engine)
+--- a/kageyoni/persistence/migrations.py
++++ b/kageyoni/persistence/migrations.py
+@@ -204,3 +204,9 @@
+     _install_component(engine,schema_path('migration_033.sql'),33,32,'worker_liveness_interface')
+     from ..workspaces.worker_liveness import verify_worker_liveness
+     verify_worker_liveness(engine)
++
++
++def install_worker_custody(engine):
++    """Explicit034 companion history; never backfill old process observations."""
++    from .migration_034 import install_worker_custody as install
++    install(engine)
+--- /dev/null
++++ b/kageyoni/workspaces/custody_schema.py
+@@ -0,0 +1,292 @@
++"""Authoritative pure worker-custody schema2. No procfs reader or process control.
++
++Derived from root-accepted R4 provider 138ce899; product must import these validators
++rather than retaining a second schema implementation. Hashes identify bytes,
++not authenticity of owner-supplied observations.
++"""
++import hashlib
++import json
++import os
++import re
++import uuid
++
++SCHEMA_VERSION = 2
++
++
++REGISTRATION_LIMIT = 32768
++
++
++FIELD_LIMIT = 65536
++
++
++MOUNTINFO_LIMIT = 1048576
++
++
++MIN_INTERVAL_NS = 50_000_000
++
++
++_PROCESS_KEYS = {'pid', 'proc_pid', 'pid_namespace', 'start_ticks'}
++
++
++_DOMAIN_KEYS = {'boot_id', 'reader_pid_namespace', 'mount_namespace',
++                'proc_root_device', 'proc_root_inode', 'proc_mountinfo', 'proc_submounts'}
++
++
++_REGISTRATION_KEYS = {'schema_version', 'process', 'domain', 'domain_digest',
++                      'registration_digest'}
++
++
++_STATES = {'R', 'S', 'D', 'Z', 'T', 't', 'W', 'K', 'P', 'I'}
++
++
++_HASH = re.compile(r'[0-9a-f]{64}\Z')
++
++
++_POSITIVE = re.compile(r'[1-9][0-9]*\Z')
++
++
++_PID_NS = re.compile(r'pid:\[[1-9][0-9]*\]\Z')
++
++
++_MOUNT_NS = re.compile(r'mnt:\[[1-9][0-9]*\]\Z')
++
++
++_MOUNT_FLAGS = {'rw', 'ro', 'nosuid', 'nodev', 'noexec', 'relatime',
++                'noatime', 'strictatime', 'nodiratime', 'lazytime', 'hidepid=0'}
++
++
++_SUPER_FLAGS = {'rw', 'ro', 'hidepid=0'}
++
++
++class CustodySchemaError(ValueError):
++    """Registration could not obtain an authentic complete positive observation."""
++    def __init__(self, reason):
++        self.reason = reason
++        super().__init__(reason)
++
++
++def _fail(reason):
++    raise CustodySchemaError(reason)
++
++
++def _positive(value):
++    return type(value) is int and 0 < value <= 2**63 - 1
++
++
++def _canonical(value):
++    data = json.dumps(value, sort_keys=True, separators=(',', ':'),
++                      ensure_ascii=True, allow_nan=False).encode('ascii')
++    if len(data) > REGISTRATION_LIMIT:
++        _fail('registration_too_large')
++    return data
++
++
++def _digest(value):
++    return hashlib.sha256(_canonical(value)).hexdigest()
++
++
++def _validate_process(value):
++    if type(value) is not dict or set(value) != _PROCESS_KEYS:
++        _fail('invalid_process_shape')
++    if not _positive(value['pid']) or not _positive(value['proc_pid']):
++        _fail('invalid_process_pid')
++    if (type(value['pid_namespace']) is not str or
++            len(value['pid_namespace']) > 64 or not _PID_NS.fullmatch(value['pid_namespace'])):
++        _fail('invalid_process_namespace')
++    if (type(value['start_ticks']) is not str or
++            len(value['start_ticks']) > 24 or not _POSITIVE.fullmatch(value['start_ticks'])):
++        _fail('invalid_process_start_ticks')
++    return dict(value)
++
++
++def _parse_mount(line):
++    # Parse EVERY mount line, including unrelated filesystems, before selecting
++    # proc descendants. Escaped/ambiguous names cannot conceal a relevant path.
++    if (type(line) is not str or not line or len(line) > 8192 or
++            any(ord(c) < 32 or ord(c) == 127 for c in line) or chr(92) in line):
++        _fail('invalid_or_escaped_mountinfo')
++    fields = line.split(' ')
++    if '' in fields or fields.count('-') != 1:
++        _fail('invalid_mountinfo_fields')
++    sep = fields.index('-')
++    if sep < 6 or len(fields) != sep + 4:
++        _fail('unsupported_mountinfo_fields')
++    if not all(_POSITIVE.fullmatch(x) for x in fields[:2]):
++        _fail('invalid_mount_ids')
++    device = fields[2].split(':')
++    if len(device) != 2 or any(not re.fullmatch(r'0|[1-9][0-9]*', x) for x in device):
++        _fail('invalid_mount_device')
++    for path in fields[3:5]:
++        if (not path.startswith('/') or (path != '/' and
++                (path.endswith('/') or any(x in ('', '.', '..') for x in path.split('/')[1:])))):
++            _fail('ambiguous_mount_path')
++    if not re.fullmatch(r'[A-Za-z0-9_.+-]+', fields[sep+1]) or not fields[sep+2]:
++        _fail('invalid_mount_filesystem_or_source')
++    for options in (fields[5], fields[sep+3]):
++        opts = options.split(',')
++        if (not opts or '' in opts or len(set(opts)) != len(opts) or
++                len(set(opts) & {'rw', 'ro'}) != 1):
++            _fail('invalid_or_ambiguous_mount_options')
++    optional = fields[6:sep]
++    for item in optional:
++        if item != 'unbindable' and not re.fullmatch(r'(shared|master|propagate_from):[1-9][0-9]*', item):
++            _fail('unsupported_mount_optional')
++    if len({item.split(':', 1)[0] for item in optional}) != len(optional):
++        _fail('ambiguous_mount_optional')
++    return {'id': fields[0], 'parent': fields[1],
++            'device': os.makedev(int(device[0]), int(device[1])),
++            'root': fields[3], 'point': fields[4], 'mount_options': fields[5],
++            'fstype': fields[sep+1], 'source': fields[sep+2],
++            'super_options': fields[sep+3]}
++
++
++def _ordinary_proc(mount):
++    if mount['fstype'] != 'proc' or mount['source'] != 'proc':
++        _fail('unsupported_proc_filesystem')
++    for options, allowed in [(mount['mount_options'], _MOUNT_FLAGS),
++                             (mount['super_options'], _SUPER_FLAGS)]:
++        if not set(options.split(',')) <= allowed:
++            _fail('restricted_or_unsupported_proc_mount')
++
++
++def _validate_proc_view(root_line, submounts):
++    root = _parse_mount(root_line); _ordinary_proc(root)
++    if root['root'] != '/' or root['point'] != '/proc':
++        _fail('unsupported_proc_mount')
++    if type(submounts) is not list or any(type(x) is not str for x in submounts):
++        _fail('invalid_proc_submounts')
++    if len(submounts) > 6:
++        _fail('unsupported_proc_submount')
++    if submounts != sorted(submounts):
++        _fail('unsorted_proc_submounts')
++    ids = {root['id']}; points = {root['point']}; mask_device = None
++    for line in submounts:
++        mount = _parse_mount(line)
++        if mount['id'] in ids or mount['point'] in points:
++            _fail('ambiguous_proc_submount')
++        ids.add(mount['id']); points.add(mount['point'])
++        if mount['parent'] != root['id']:
++            _fail('unsupported_proc_submount_parent')
++        if mount['point'] in {'/proc/keys', '/proc/timer_list'}:
++            # These exact sibling file masks cannot cover a numeric PID,
++            # self mapping or the boot-id subtree. Pin every raw line anyway.
++            if (mount['root'] != '/null' or mount['fstype'] != 'tmpfs' or
++                    mount['source'] != 'tmpfs' or mount['device'] == root['device'] or
++                    not set(mount['mount_options'].split(',')) <= (_MOUNT_FLAGS - {'hidepid=0'})):
++                _fail('unsupported_noncritical_proc_mask')
++            if mask_device is not None and mask_device != mount['device']:
++                _fail('inconsistent_noncritical_proc_masks')
++            mask_device = mount['device']
++        else:
++            if (mount['point'] not in {'/proc/bus', '/proc/fs', '/proc/irq', '/proc/sys'} or
++                    mount['root'] != mount['point'][len('/proc'):] or
++                    mount['device'] != root['device'] or
++                    mount['fstype'] != 'proc' or mount['source'] != 'proc'):
++                _fail('unsupported_proc_submount')
++            _ordinary_proc(mount)
++    return root['device']
++
++
++def _validate_domain(value):
++    if type(value) is not dict or set(value) != _DOMAIN_KEYS:
++        _fail('invalid_domain_shape')
++    boot = value['boot_id']
++    if type(boot) is not str or len(boot) != 36:
++        _fail('invalid_boot_id')
++    try:
++        parsed = uuid.UUID(boot)
++    except ValueError:
++        _fail('invalid_boot_id')
++    if str(parsed) != boot or parsed.int == 0:
++        _fail('invalid_boot_id')
++    if type(value['reader_pid_namespace']) is not str or len(value['reader_pid_namespace']) > 64 or not _PID_NS.fullmatch(value['reader_pid_namespace']):
++        _fail('invalid_reader_namespace')
++    if type(value['mount_namespace']) is not str or len(value['mount_namespace']) > 64 or not _MOUNT_NS.fullmatch(value['mount_namespace']):
++        _fail('invalid_mount_namespace')
++    if (type(value['proc_root_device']) is not int or value['proc_root_device'] < 0 or
++            not _positive(value['proc_root_inode'])):
++        _fail('invalid_proc_root_stat')
++    if _validate_proc_view(value['proc_mountinfo'], value['proc_submounts']) != value['proc_root_device']:
++        _fail('proc_root_mount_device_mismatch')
++    _canonical(value)
++    return {**value, 'proc_submounts': list(value['proc_submounts'])}
++
++
++def _validated_registration(value):
++    if type(value) is not dict or set(value) != _REGISTRATION_KEYS or type(value['schema_version']) is not int or value['schema_version'] != SCHEMA_VERSION:
++        _fail('invalid_registration_shape')
++    process = _validate_process(value['process']); domain = _validate_domain(value['domain'])
++    if process['pid_namespace'] != domain['reader_pid_namespace']:
++        _fail('registration_namespace_mismatch')
++    for key in ('domain_digest', 'registration_digest'):
++        if type(value[key]) is not str or not _HASH.fullmatch(value[key]):
++            _fail('invalid_registration_digest')
++    if value['domain_digest'] != _digest(domain):
++        _fail('domain_digest_mismatch')
++    base = {'schema_version': SCHEMA_VERSION, 'process': process, 'domain': domain,
++            'domain_digest': value['domain_digest']}
++    if value['registration_digest'] != _digest(base):
++        _fail('registration_digest_mismatch')
++    return {**base, 'registration_digest': value['registration_digest']}
++
++
++def decode_registration(blob):
++    """Strict optional persistence decoder; duplicate keys never normalize away."""
++    if type(blob) is not bytes or len(blob) > REGISTRATION_LIMIT:
++        _fail('invalid_registration_encoding')
++    def pairs(items):
++        result = {}
++        for key, value in items:
++            if key in result:
++                _fail('duplicate_registration_key')
++            result[key] = value
++        return result
++    try:
++        value = json.loads(blob.decode('utf-8'), object_pairs_hook=pairs,
++                           parse_constant=lambda _value: _fail('nonfinite_registration'))
++    except (UnicodeError, json.JSONDecodeError, RecursionError):
++        _fail('invalid_registration_encoding')
++    return _validated_registration(value)
++
++PROVIDER = 'samsara.procfs-directory-v2'
++ABSENCE_KEYS = {'schema_version', 'provider', 'method', 'registration_digest',
++                'domain_digest', 'process', 'domain', 'returncode', 'samples'}
++
++
++def validate_registration(value):
++    """Return a detached exact record; public digests are not caller authentication."""
++    return _validated_registration(value)
++
++
++def validate_absence(value, registration):
++    """Validate only a trusted-owner fact envelope, never establish OS truth."""
++    registered = validate_registration(registration)
++    if type(value) is not dict or set(value) != ABSENCE_KEYS:
++        _fail('invalid_absence_shape')
++    if (any(type(value[key]) is not str for key in ('provider','method','registration_digest','domain_digest')) or
++            type(value['schema_version']) is not int or value['schema_version'] != 2 or
++            value['provider'] != PROVIDER or value['method'] != 'procfs_enoent_twice' or
++            value['returncode'] is not None):
++        _fail('invalid_absence_provider_or_method')
++    if (value['registration_digest'] != registered['registration_digest'] or
++            value['domain_digest'] != registered['domain_digest'] or
++            _validate_process(value['process']) != registered['process'] or
++            _validate_domain(value['domain']) != registered['domain']):
++        _fail('absence_registration_correspondence_mismatch')
++    samples = value['samples']
++    if type(samples) is not list or len(samples) != 2:
++        _fail('invalid_absence_samples')
++    result = []
++    for sample in samples:
++        if (type(sample) is not dict or set(sample) != {'status', 'observed_monotonic_ns'} or
++                type(sample['status']) is not str or sample['status'] != 'directory_enoent' or
++                type(sample['observed_monotonic_ns']) is not int or sample['observed_monotonic_ns'] < 0):
++            _fail('invalid_absence_sample')
++        result.append(dict(sample))
++    if result[1]['observed_monotonic_ns'] - result[0]['observed_monotonic_ns'] < MIN_INTERVAL_NS:
++        _fail('insufficient_local_sample_interval')
++    detached = {**value, 'process': dict(registered['process']),
++                'domain': {**registered['domain'], 'proc_submounts': list(registered['domain']['proc_submounts'])},
++                'samples': result}
++    _canonical(detached)
++    return detached
+--- a/kageyoni/workspaces/job_queue.py
++++ b/kageyoni/workspaces/job_queue.py
+@@ -7,7 +7,7 @@
+ import hashlib
+ import json
+ from uuid import uuid4
+-from ..engine import require, encoded
++from ..engine import require, encoded, Rejected
+ from ..persistence.unit_of_work import UnitOfWork
+ from ..resources import schema_path
+ from .resource_profiles import ResourceProfiles
+@@ -80,6 +80,41 @@
+                 self.db.execute('''INSERT INTO activity_queue(job_id,workspace_id,root_id,binding_id,authority_epoch,recipe,parameters_json,state,max_seconds)
+                     VALUES(?,?,?,?,?,?,?,'queued',?)''', (job_id,self.workspace_id,root,binding_id,authority_epoch,recipe,encoded(parameters),max_seconds))
+         return self.row(job_id)
++
++    def _prior_custody(self, row):
++        from .worker_custody import WorkerCustody, terminal_absence
++        # Also reject partial034 interfaces on a first generation admission.
++        WorkerCustody(self.engine, self.workspace_id).present()
++        require(row['process_json'] is None, 'observe stopped worker before new generation')
++        if row['generation'] == 0:
++            return
++        fence = self.fence(row)
++        absence = terminal_absence(self.engine, self.workspace_id, row['job_id'], fence)
++        from .worker_liveness import WorkerLiveness, verify_worker_liveness
++        if not WorkerLiveness(self.engine, self.workspace_id).present():
++            return
++        attempt = self.db.execute('SELECT * FROM activity_worker_liveness WHERE job_id=? AND owner_epoch=? AND generation=?',
++                                  (row['job_id'], fence['epoch'], fence['generation'])).fetchone()
++        if attempt is None:
++            return  # Pre033 legacy rows gain no invented terminal metadata.
++        require(attempt['workspace_id'] == self.workspace_id and attempt['lease_token'] == fence['token'],
++                'prior worker attempt correspondence mismatch')
++        if attempt['process_json'] is not None:
++            known = self.db.execute('SELECT receipt_json FROM activity_worker_exits WHERE job_id=? AND owner_epoch=? AND generation=?',
++                                    (row['job_id'], fence['epoch'], fence['generation'])).fetchone()
++            require(absence is not None or (known and known[0] == attempt['exit_json']),
++                    'observe stopped worker before new generation')
++            if known:
++                # Reuse the complete authoritative033 policy/clock/stop/exit
++                # verification before charging or advancing the new attempt.
++                try:
++                    verify_worker_liveness(self.engine)
++                except Rejected:
++                    raise  # Preserve the native verifier's precise reason.
++                except (KeyError, TypeError, json.JSONDecodeError, OverflowError) as error:
++                    require(False, 'malformed prior worker liveness: ' + str(error))
++        elif attempt['stop_requested_at'] is not None:
++            require(False, 'unregistered stopped worker cannot revive')
+ 
+     def claim(self, now):
+         with UnitOfWork(self.db):
+@@ -113,6 +148,7 @@
+                     if a['state'] in ('paused','cancelled','failed','finished'): blocked=True
+                     aid=a['parent_id']
+                 if blocked: continue
++                self._prior_custody(row)
+                 budget = self.db.execute('SELECT * FROM activity_queue_roots WHERE workspace_id=? AND root_id=?', (self.workspace_id,row['root_id'])).fetchone()
+                 if budget['starts']+self.manual_starts(row['root_id']) >= 4 or budget['reserved_seconds']+row['max_seconds']>900:
+                     self.db.execute("UPDATE activity_queue SET state='paused',reason='parent budget exhausted' WHERE job_id=?", (row['job_id'],));continue
+@@ -154,8 +190,12 @@
+             if live.present():
+                 attempt=self.db.execute('SELECT stop_requested_at,stop_disposition,process_json,exit_json FROM activity_worker_liveness WHERE job_id=? AND owner_epoch=? AND generation=?', (job_id,row['owner_epoch'],row['generation'])).fetchone()
+                 if attempt:
++                    from .worker_custody import terminal_absence
++                    absence = terminal_absence(self.engine, self.workspace_id, job_id, self.fence(row))
+                     normal_return = row['state'] == 'running' and attempt['stop_requested_at'] is None and state == 'returned' and clear_process and attempt['process_json'] is not None and row['process_json'] == attempt['process_json']
+-                    if attempt['exit_json'] is None and attempt['process_json'] is not None:
++                    if absence is not None:
++                        require(state != 'returned', 'identity absent worker cannot return')
++                    elif attempt['exit_json'] is None and attempt['process_json'] is not None:
+                         require(normal_return or (not clear_process and state == 'reconciling' and row['process_json'] == attempt['process_json']), 'observe stopped worker exit before clearing process or releasing slot')
+                     elif attempt['stop_requested_at'] is not None and attempt['process_json'] is None:
+                         allowed = {'reconciling'}
+--- /dev/null
++++ b/kageyoni/workspaces/worker_custody.py
+@@ -0,0 +1,347 @@
++"""Distinct native identity-absence receipts for NEW registered attempts only.
++
++Trusted-owner supplied facts follow the observe_exit trust boundary. Neither
++provider tags nor public hashes authenticate a caller or prove OS execution.
++No procfs reads, process control, fabricated exit status, output acceptance or
++budget refund occurs here. Product wire admission remains root-owned.
++"""
++import hashlib
++import json
++import math
++import re
++import sqlite3
++
++from ..engine import require, encoded
++from ..persistence.unit_of_work import UnitOfWork
++from ..resources import schema_path
++from .resource_profiles import ResourceProfiles
++from .worker_liveness import WorkerLiveness, POLICY, POLICY_DIGEST, DISPOSITIONS, _fence
++from .custody_schema import (CustodySchemaError, PROVIDER, validate_registration,
++                             validate_absence)
++
++_TABLES = {'activity_worker_registrations', 'activity_worker_absences'}
++_CURRENT_TERMINAL_STATES = {'queued', 'paused', 'cancelled', 'failed', 'reconciling'}
++_REG_RECEIPT_KEYS = {'kind', 'job_id', 'workspace_id', 'fence', 'registered_at',
++    'registration_digest', 'provider', 'owner_wall_before', 'owner_wall_after'}
++_ABS_RECEIPT_KEYS = {'kind', 'job_id', 'workspace_id', 'fence', 'registration_digest',
++    'observation', 'observed_at', 'disposition', 'state', 'returncode', 'provider',
++    'owner_wall_before', 'owner_wall_after', 'clock_rollback', 'time_status', 'policy_digest'}
++
++
++def _time(now):
++    require(type(now) in (int, float) and math.isfinite(now), 'invalid custody owner time')
++    return now
++
++
++def _schema(function, *values):
++    try:
++        return function(*values)
++    except (CustodySchemaError, TypeError, ValueError, OverflowError) as error:
++        require(False, 'invalid custody schema: ' + str(error))
++
++
++def _json(raw):
++    require(type(raw) is str and len(raw.encode('utf-8')) <= 131072, 'invalid custody stored JSON')
++    def pairs(items):
++        value = {}
++        for key, item in items:
++            require(key not in value, 'duplicate custody stored JSON key')
++            value[key] = item
++        return value
++    def bad(_value):
++        require(False, 'nonfinite custody stored JSON')
++    try:
++        value = json.loads(raw, object_pairs_hook=pairs, parse_constant=bad)
++        require(encoded(value) == raw, 'noncanonical custody stored JSON')
++        return value
++    except (TypeError, ValueError, RecursionError) as error:
++        require(False, 'malformed custody stored JSON: ' + str(error))
++
++
++def _object_statements(text):
++    statement = ''; result = {}
++    for line in text.splitlines(keepends=True):
++        if line.lstrip().startswith('--'):
++            continue
++        statement += line
++        if sqlite3.complete_statement(statement):
++            match = re.match(r'\s*CREATE\s+(TABLE|TRIGGER|INDEX)\s+(\w+)\b', statement, re.I)
++            if match:
++                result[(match[1].lower(), match[2])] = ' '.join(statement.strip().rstrip(';').split())
++            statement = ''
++    require(not statement.strip(), 'incomplete custody migration source')
++    return result
++
++
++def _interface(engine):
++    db = engine.db
++    present = {r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")} & _TABLES
++    interface = db.execute("SELECT version FROM engine_versions WHERE component='worker_custody_interface'").fetchone()
++    migration = db.execute('SELECT checksum FROM migration_checks WHERE version=34').fetchone()
++    if not present and not interface and not migration:
++        return False
++    require(present == _TABLES and interface and interface[0] == '1' and migration,
++            'incomplete worker custody interface')
++    source = schema_path('migration_034.sql').read_bytes()
++    require(migration[0] == hashlib.sha256(source).hexdigest(), 'worker custody migration checksum mismatch')
++    for (kind, name), expected in _object_statements(source.decode('utf-8')).items():
++        actual = db.execute('SELECT sql FROM sqlite_master WHERE type=? AND name=?', (kind, name)).fetchone()
++        require(actual and ' '.join(actual[0].strip().rstrip(';').split()) == expected,
++                'worker custody schema object mismatch: ' + name)
++    return True
++
++
++def _current_queue(db, workspace_id, job_id, fence):
++    row = db.execute('SELECT * FROM activity_queue WHERE workspace_id=? AND job_id=?', (workspace_id, job_id)).fetchone()
++    require(row and (row['owner_epoch'], row['generation'], row['lease_token']) ==
++            (fence['epoch'], fence['generation'], fence['token']), 'stale worker custody fence')
++    return dict(row)
++
++
++def _known_exit(db, attempt):
++    return attempt['exit_json'] is not None or db.execute(
++        'SELECT 1 FROM activity_worker_exits WHERE job_id=? AND owner_epoch=? AND generation=?',
++        (attempt['job_id'], attempt['owner_epoch'], attempt['generation'])).fetchone() is not None
++
++
++def _registration_record(engine, raw):
++    db = engine.db; row = dict(raw)
++    fence = {'epoch': row['owner_epoch'], 'generation': row['generation'], 'token': row['lease_token']}; _fence(fence)
++    record = _schema(validate_registration, _json(row['registration_json']))
++    require(row['registration_digest'] == record['registration_digest'], 'worker registration digest mismatch')
++    attempt = WorkerLiveness(engine, row['workspace_id']).row(row['job_id'], fence)
++    require(attempt['policy_json'] == encoded(POLICY) and attempt['policy_digest'] == POLICY_DIGEST,
++            'worker custody liveness policy mismatch')
++    for name in ('claimed_at','execution_until','lease_until'):
++        _time(attempt[name])
++    require(attempt['process_json'] is not None and _json(attempt['process_json']) == record['process'],
++            'worker registration historical process mismatch')
++    receipt = _json(row['receipt_json'])
++    require(type(receipt) is dict and set(receipt) == _REG_RECEIPT_KEYS and
++            receipt['kind'] == 'worker_process_registered' and receipt['provider'] == PROVIDER and
++            receipt['job_id'] == row['job_id'] and receipt['workspace_id'] == row['workspace_id'] and
++            receipt['fence'] == fence and receipt['registration_digest'] == record['registration_digest'] and
++            receipt['registered_at'] == row['registered_at'], 'invalid worker registration receipt')
++    _fence(receipt['fence'])
++    for key in ('registered_at', 'owner_wall_before', 'owner_wall_after'):
++        _time(receipt[key])
++    require(receipt['owner_wall_before'] >= attempt['claimed_at'] and
++            receipt['registered_at'] >= receipt['owner_wall_before'] and
++            receipt['owner_wall_after'] == receipt['registered_at'] and
++            attempt['claimed_at'] <= receipt['registered_at'] < attempt['execution_until'],
++            'worker registration clock correspondence mismatch')
++    owner = db.execute('SELECT last_wall FROM activity_queue_owners WHERE workspace_id=?', (row['workspace_id'],)).fetchone()
++    require(owner and owner[0] >= receipt['owner_wall_after'], 'worker registration owner highwater mismatch')
++    return row, record, receipt, attempt
++
++
++def _stop_summary(db, attempt, fence):
++    """Check links needed by absence; full033 stop-chain verification stays033."""
++    require(attempt['stop_requested_at'] is not None and attempt['stop_disposition'] in DISPOSITIONS,
++            'worker custody stop intent missing')
++    stops = list(db.execute('SELECT * FROM activity_worker_stops WHERE job_id=? AND owner_epoch=? AND generation=? ORDER BY ordinal',
++                 (attempt['job_id'], fence['epoch'], fence['generation'])))
++    require(bool(stops), 'worker custody stop receipt missing')
++    first = _json(stops[0]['receipt_json']); last = _json(stops[-1]['receipt_json'])
++    required = {'kind','job_id','fence','request_id','observed_at','disposition','owner_wall_after'}
++    require(type(first) is dict and type(last) is dict and required <= set(first) and required <= set(last),
++            'malformed worker custody stop receipt')
++    _fence(first['fence']); _fence(last['fence'])
++    _time(first['observed_at']); _time(last['observed_at']); _time(last['owner_wall_after'])
++    require(first['kind'] == last['kind'] == 'worker_stop' and
++            first['job_id'] == last['job_id'] == attempt['job_id'] and
++            first['fence'] == last['fence'] == fence and
++            first['request_id'] == attempt['stop_request_id'] == stops[0]['request_id'] and
++            first['observed_at'] == attempt['stop_requested_at'] and
++            attempt['stop_deadline'] == first['observed_at'] + 5 and
++            last['disposition'] == attempt['stop_disposition'], 'worker custody stop correspondence mismatch')
++    return last
++
++
++def _absence_record(engine, registration_row, record, registration_receipt, attempt, raw):
++    db = engine.db; row = dict(raw)
++    key = (attempt['job_id'], attempt['owner_epoch'], attempt['generation'])
++    fence = {'epoch': key[1], 'generation': key[2], 'token': attempt['lease_token']}
++    require((row['job_id'], row['owner_epoch'], row['generation'], row['workspace_id'], row['lease_token']) ==
++            (key[0], key[1], key[2], attempt['workspace_id'], attempt['lease_token']),
++            'worker absence attempt correspondence mismatch')
++    require(not _known_exit(db, attempt), 'worker absence conflicts with known exit')
++    observation = _schema(validate_absence, _json(row['observation_json']), record)
++    receipt = _json(row['receipt_json'])
++    stop = _stop_summary(db, attempt, fence)
++    disposition = attempt['stop_disposition']
++    selected = 'paused' if disposition == 'pause' else 'cancelled' if disposition == 'cancel' else 'reconciling'
++    require(type(receipt) is dict and set(receipt) == _ABS_RECEIPT_KEYS and
++            receipt['kind'] == 'worker_identity_absent' and receipt['provider'] == PROVIDER and
++            receipt['job_id'] == key[0] and receipt['workspace_id'] == attempt['workspace_id'] and
++            receipt['fence'] == fence and receipt['registration_digest'] == record['registration_digest'] and
++            receipt['observation'] == observation and receipt['returncode'] is None and
++            receipt['disposition'] == disposition and receipt['state'] == selected and
++            receipt['policy_digest'] == POLICY_DIGEST, 'invalid worker absence receipt')
++    _fence(receipt['fence'])
++    for name in ('observed_at', 'owner_wall_before', 'owner_wall_after'):
++        _time(receipt[name])
++    owner = db.execute('SELECT last_wall FROM activity_queue_owners WHERE workspace_id=?', (attempt['workspace_id'],)).fetchone()
++    floor = max(receipt['owner_wall_before'], attempt['claimed_at'],
++                attempt['last_heartbeat'] if attempt['last_heartbeat'] is not None else attempt['claimed_at'])
++    require(type(receipt['clock_rollback']) is bool and
++            receipt['owner_wall_before'] >= max(stop['owner_wall_after'], registration_receipt['owner_wall_after']) and
++            receipt['owner_wall_after'] == max(receipt['owner_wall_before'], receipt['observed_at']) and
++            owner and owner[0] >= receipt['owner_wall_after'] and
++            receipt['clock_rollback'] == (receipt['observed_at'] < floor) and
++            receipt['time_status'] == ('uncertain' if receipt['clock_rollback'] else 'owner_wall'),
++            'worker absence clock correspondence mismatch')
++    q = db.execute('SELECT * FROM activity_queue WHERE job_id=?', (key[0],)).fetchone()
++    require(q and q['workspace_id'] == attempt['workspace_id'], 'worker custody queue workspace mismatch')
++    current = (q['owner_epoch'], q['generation'], q['lease_token']) == (fence['epoch'], fence['generation'], fence['token'])
++    if current:
++        # Receipt records FIRST selected state. Later explicit controls may
++        # change state before the next claim advances the fence, just as033.
++        require(q['process_json'] is None and q['state'] in _CURRENT_TERMINAL_STATES,
++                'absent worker process still charged or returned')
++    return receipt
++
++
++class WorkerCustody:
++    def __init__(self, engine, workspace_id):
++        self.engine, self.db, self.workspace_id = engine, engine.db, workspace_id
++
++    def present(self):
++        return _interface(self.engine)
++
++    def row(self, job_id, fence):
++        _fence(fence); require(self.present(), 'worker custody interface not installed')
++        raw = self.db.execute('SELECT * FROM activity_worker_registrations WHERE workspace_id=? AND job_id=? AND owner_epoch=? AND generation=?',
++                (self.workspace_id, job_id, fence['epoch'], fence['generation'])).fetchone()
++        require(raw and raw['lease_token'] == fence['token'], 'worker custody registration unavailable')
++        _registration_record(self.engine, raw)
++        return dict(raw)
++
++    def _start_authority(self, job_id, fence, now):
++        q = _current_queue(self.db, self.workspace_id, job_id, fence)
++        attempt = WorkerLiveness(self.engine, self.workspace_id).row(job_id, fence)
++        owner = self.db.execute('SELECT * FROM activity_queue_owners WHERE workspace_id=?', (self.workspace_id,)).fetchone()
++        require(q['state'] == 'running' and owner and owner['epoch'] == fence['epoch'] and
++                attempt['stop_requested_at'] is None and not _known_exit(self.db, attempt),
++                'worker registration unavailable')
++        require(not self.db.execute('SELECT 1 FROM activity_worker_absences WHERE job_id=? AND owner_epoch=? AND generation=?',
++                (job_id, fence['epoch'], fence['generation'])).fetchone(), 'worker registration already absent')
++        require(attempt['process_json'] is not None and q['process_json'] == attempt['process_json'],
++                'worker registration process unavailable')
++        floor = max(owner['last_wall'], attempt['claimed_at'],
++                    attempt['last_heartbeat'] if attempt['last_heartbeat'] is not None else attempt['claimed_at'])
++        require(now >= floor and now < attempt['lease_until'] and now < attempt['execution_until'] and
++                q['lease_until'] == attempt['lease_until'], 'stale worker registration lease')
++        binding = self.db.execute('SELECT active,authority_epoch FROM activity_bindings WHERE binding_id=? AND workspace_id=?',
++                                 (q['binding_id'], self.workspace_id)).fetchone()
++        require(binding and binding['active'] and binding['authority_epoch'] == q['authority_epoch'], 'worker registration authority changed')
++        require(q['profile_digest'] == ResourceProfiles(self.engine, self.workspace_id).get()['digest'], 'worker registration resource profile changed')
++        job = self.db.execute('SELECT activity_id,state FROM activity_jobs WHERE job_id=? AND workspace_id=?', (job_id, self.workspace_id)).fetchone()
++        require(job and job['state'] == 'waiting', 'worker registration job unavailable')
++        aid = job['activity_id']; seen = set()
++        while aid:
++            require(aid not in seen, 'worker registration parent cycle'); seen.add(aid)
++            activity = self.db.execute('SELECT parent_id,state FROM activity_runs WHERE workspace_id=? AND activity_id=?', (self.workspace_id, aid)).fetchone()
++            require(activity and activity['state'] not in ('paused', 'cancelled', 'failed', 'finished'), 'worker registration ancestor stopped')
++            aid = activity['parent_id']
++        return q, attempt, dict(owner)
++
++    def register(self, job_id, fence, registration, now):
++        _time(now); _fence(fence); record = _schema(validate_registration, registration)
++        require(self.present(), 'worker custody interface not installed')
++        with UnitOfWork(self.db):
++            q, attempt, owner = self._start_authority(job_id, fence, now)
++            require(_json(attempt['process_json']) == record['process'], 'worker registration process mismatch')
++            old = self.db.execute('SELECT * FROM activity_worker_registrations WHERE job_id=? AND owner_epoch=? AND generation=?',
++                                 (job_id, fence['epoch'], fence['generation'])).fetchone()
++            if old:
++                self.row(job_id, fence)
++                require(old['registration_json'] == encoded(record), 'worker registration identity conflict')
++                return _json(old['receipt_json'])
++            receipt = {'kind': 'worker_process_registered', 'job_id': job_id, 'workspace_id': self.workspace_id,
++                       'fence': dict(fence), 'registered_at': now, 'registration_digest': record['registration_digest'],
++                       'provider': PROVIDER, 'owner_wall_before': owner['last_wall'], 'owner_wall_after': now}
++            self.db.execute('INSERT INTO activity_worker_registrations VALUES(?,?,?,?,?,?,?,?,?)',
++                (job_id, fence['epoch'], fence['generation'], self.workspace_id, fence['token'],
++                 encoded(record), record['registration_digest'], now, encoded(receipt)))
++            self.db.execute('UPDATE activity_queue_owners SET last_wall=max(last_wall,?) WHERE workspace_id=?', (now, self.workspace_id))
++            return receipt
++
++    def observe_absence(self, job_id, fence, observation, now):
++        _time(now); _fence(fence); require(self.present(), 'worker custody interface not installed')
++        with UnitOfWork(self.db):
++            q = _current_queue(self.db, self.workspace_id, job_id, fence)
++            registered = self.row(job_id, fence)
++            row, record, reg_receipt, attempt = _registration_record(self.engine, registered)
++            supplied = _schema(validate_absence, observation, record)
++            require(not _known_exit(self.db, attempt), 'worker absence conflicts with known exit')
++            old = self.db.execute('SELECT * FROM activity_worker_absences WHERE job_id=? AND owner_epoch=? AND generation=?',
++                                 (job_id, fence['epoch'], fence['generation'])).fetchone()
++            if old:
++                receipt = _absence_record(self.engine, row, record, reg_receipt, attempt, old)
++                require(old['observation_json'] == encoded(supplied), 'worker absence observation conflict')
++                return receipt
++            require(q['state'] == 'reconciling' and q['process_json'] == attempt['process_json'] and
++                    attempt['process_json'] is not None, 'worker absence requires current stopped custody')
++            _stop_summary(self.db, attempt, fence)
++            owner = self.db.execute('SELECT last_wall FROM activity_queue_owners WHERE workspace_id=?', (self.workspace_id,)).fetchone()
++            require(owner is not None, 'worker custody owner unavailable')
++            floor = max(owner[0], attempt['claimed_at'],
++                        attempt['last_heartbeat'] if attempt['last_heartbeat'] is not None else attempt['claimed_at'])
++            rollback = now < floor; disposition = attempt['stop_disposition']
++            state = 'paused' if disposition == 'pause' else 'cancelled' if disposition == 'cancel' else 'reconciling'
++            receipt = {'kind': 'worker_identity_absent', 'job_id': job_id, 'workspace_id': self.workspace_id,
++                       'fence': dict(fence), 'registration_digest': record['registration_digest'],
++                       'observation': supplied, 'observed_at': now, 'disposition': disposition, 'state': state,
++                       'returncode': None, 'provider': PROVIDER, 'clock_rollback': rollback,
++                       'time_status': 'uncertain' if rollback else 'owner_wall',
++                       'owner_wall_before': owner[0], 'owner_wall_after': max(owner[0], now), 'policy_digest': POLICY_DIGEST}
++            self.db.execute('INSERT INTO activity_worker_absences VALUES(?,?,?,?,?,?,?)',
++                            (job_id, fence['epoch'], fence['generation'], self.workspace_id, fence['token'], encoded(supplied), encoded(receipt)))
++            self.db.execute('UPDATE activity_queue SET state=?,reason=?,process_json=NULL WHERE job_id=?',
++                            (state, 'worker identity absent; explicit disposition required' if state == 'reconciling' else 'worker identity absent: ' + disposition, job_id))
++            self.db.execute('UPDATE activity_queue_owners SET last_wall=max(last_wall,?) WHERE workspace_id=?', (now, self.workspace_id))
++            return receipt
++
++
++def terminal_absence(engine, workspace_id, job_id, fence):
++    """Return only a fully validated exact companion receipt; never infer one."""
++    _fence(fence)
++    if not _interface(engine):
++        return None
++    db = engine.db
++    raw = db.execute('SELECT * FROM activity_worker_absences WHERE workspace_id=? AND job_id=? AND owner_epoch=? AND generation=?',
++                     (workspace_id, job_id, fence['epoch'], fence['generation'])).fetchone()
++    if raw is None:
++        return None
++    require(raw['lease_token'] == fence['token'], 'worker absence stale token')
++    registration = WorkerCustody(engine, workspace_id).row(job_id, fence)
++    row, record, reg_receipt, attempt = _registration_record(engine, registration)
++    return _absence_record(engine, row, record, reg_receipt, attempt, raw)
++
++
++def verify_worker_custody(engine):
++    """Read-only conditional034 verifier; never calls033 global verifier."""
++    if not _interface(engine):
++        return {'installed': False}
++    db = engine.db
++    require(not db.execute('PRAGMA foreign_key_check').fetchall(), 'worker custody foreign key failure')
++    registrations = absences = 0
++    for raw in db.execute('SELECT * FROM activity_worker_registrations'):
++        row, record, reg_receipt, attempt = _registration_record(engine, raw); registrations += 1
++        fence = reg_receipt['fence']
++        absent = db.execute('SELECT * FROM activity_worker_absences WHERE job_id=? AND owner_epoch=? AND generation=?',
++                            (row['job_id'], fence['epoch'], fence['generation'])).fetchone()
++        if absent:
++            _absence_record(engine, row, record, reg_receipt, attempt, absent); absences += 1
++        else:
++            q = db.execute('SELECT * FROM activity_queue WHERE job_id=?', (row['job_id'],)).fetchone()
++            require(q and q['workspace_id'] == row['workspace_id'], 'worker custody queue correspondence missing')
++            current = (q['owner_epoch'], q['generation'], q['lease_token']) == (fence['epoch'], fence['generation'], fence['token'])
++            if current and not _known_exit(db, attempt):
++                normal_return = q['state'] == 'returned' and attempt['stop_requested_at'] is None and q['process_json'] is None
++                require(normal_return or (q['state'] in ('running', 'reconciling') and q['process_json'] == attempt['process_json']),
++                        'registered worker process cleared without a terminal fact')
++    count = db.execute('SELECT count(*) FROM activity_worker_absences').fetchone()[0]
++    require(count == absences, 'worker absence registration coverage mismatch')
++    return {'installed': True, 'interface': '1', 'registrations': registrations, 'absences': absences}
+--- a/kageyoni/workspaces/worker_liveness.py
++++ b/kageyoni/workspaces/worker_liveness.py
+@@ -87,6 +87,12 @@
+              encoded(POLICY), POLICY_DIGEST, now, ceiling, lease))
+         self.db.execute('UPDATE activity_queue SET lease_until=? WHERE job_id=?', (lease, row['job_id']))
+ 
++    def _absence(self, job_id, fence):
++        # Local import avoids a module-load/global-verifier cycle. The central
++        # helper validates exact034 evidence; NULL process/exit is never proof.
++        from .worker_custody import terminal_absence
++        return terminal_absence(self.engine, self.workspace_id, job_id, fence)
++
+     def process(self, job_id, fence, observation):
+         if not self.present():
+             return
+@@ -97,6 +103,7 @@
+             return
+         _process(observation)
+         row = self.row(job_id, fence)
++        require(self._absence(job_id, fence) is None, 'worker identity already absent')
+         require(row['process_json'] is None or row['process_json'] == encoded(observation), 'worker process identity conflict')
+         self.db.execute('UPDATE activity_worker_liveness SET process_json=? WHERE job_id=? AND owner_epoch=? AND generation=?',
+                         (encoded(observation), job_id, fence['epoch'], fence['generation']))
+@@ -106,6 +113,7 @@
+         rollback = False
+         with UnitOfWork(self.db):
+             attempt = self.row(job_id, fence); q = self._queue(job_id, fence)
++            require(self._absence(job_id, fence) is None, 'worker identity already absent')
+             owner = self.db.execute('SELECT * FROM activity_queue_owners WHERE workspace_id=?', (self.workspace_id,)).fetchone()
+             require(q['state'] == 'running' and owner and owner['epoch'] == fence['epoch']
+                     and attempt['stop_requested_at'] is None and attempt['exit_json'] is None, 'stale worker heartbeat')
+@@ -149,11 +157,13 @@
+         require(disposition in DISPOSITIONS and isinstance(request_id, str) and 0 < len(request_id) <= 128, 'invalid worker stop request')
+         with UnitOfWork(self.db):
+             attempt = self.row(job_id, fence); q = self._queue(job_id, fence)
++            absence = self._absence(job_id, fence)
+             old = self.db.execute('SELECT * FROM activity_worker_stops WHERE job_id=? AND owner_epoch=? AND generation=? AND request_id=?',
+                                   (job_id, fence['epoch'], fence['generation'], request_id)).fetchone()
+             if old:
+                 require(old['disposition'] == disposition, 'worker stop request conflict')
+                 return json.loads(old['receipt_json'])
++            require(absence is None, 'worker identity already absent')
+             require(attempt['exit_json'] is None and q['state'] in ('running', 'reconciling'), 'worker stop unavailable')
+             owner = self.db.execute('SELECT last_wall FROM activity_queue_owners WHERE workspace_id=?', (self.workspace_id,)).fetchone()
+             requested = now if attempt['stop_requested_at'] is None else attempt['stop_requested_at']
+@@ -178,10 +188,12 @@
+         _time(now); _fence(fence); _observation(observation)
+         with UnitOfWork(self.db):
+             attempt = self.row(job_id, fence); q = self._queue(job_id, fence)
++            absence = self._absence(job_id, fence)
+             old = self.db.execute('SELECT receipt_json FROM activity_worker_exits WHERE job_id=? AND owner_epoch=? AND generation=?',
+                                   (job_id, fence['epoch'], fence['generation'])).fetchone()
+             if old:
+                 receipt = json.loads(old[0]); require(receipt['observation'] == observation, 'worker exit observation conflict'); return receipt
++            require(absence is None, 'worker identity already absent')
+             require(attempt['process_json'] is not None and q['process_json'] == attempt['process_json']
+                     and json.loads(attempt['process_json']) == observation['process'], 'worker exit process identity mismatch')
+             require(q['state'] in ('running', 'reconciling'), 'worker exit unavailable')
+@@ -215,6 +227,10 @@
+     require(present == tables and interface and interface[0] == '1' and migration, 'incomplete worker liveness interface')
+     require(migration[0] == hashlib.sha256(schema_path('migration_033.sql').read_bytes()).hexdigest(), 'worker liveness migration checksum mismatch')
+     require(not db.execute('PRAGMA foreign_key_check').fetchall(), 'worker liveness foreign key failure')
++    # Direct033 verification must not bless a partial/invalid034 companion
++    # even when there are zero033 attempts.034 never calls this global verifier.
++    from .worker_custody import verify_worker_custody
++    verify_worker_custody(engine)
+     count = 0
+     for raw in db.execute('SELECT * FROM activity_worker_liveness'):
+         a = dict(raw); count += 1
+@@ -279,6 +295,8 @@
+             require(receipt['observation']['method'] == 'exited_before_stop' or first is not None, 'worker exit stop intent missing')
+         # Older attempts remain immutable history; the queue corresponds only
+         # to its current exact attempt. No backfill of pre033 history is inferred.
++        from .worker_custody import terminal_absence
++        absence = terminal_absence(engine, a['workspace_id'], a['job_id'], fence)
+         current = (q['owner_epoch'], q['generation'], q['lease_token']) == (fence['epoch'], fence['generation'], fence['token'])
+         if current:
+             require(q['lease_until'] == a['lease_until'], 'current worker queue lease mismatch')
+@@ -294,6 +312,9 @@
+             if q['state'] == 'returned':
+                 require(first is None and x is None and a['process_json'] is not None and q['process_json'] is None, 'invalid unobserved normal worker return')
+             if x: require(q['process_json'] is None and q['state'] != 'running', 'exited worker process still charged')
++            elif absence is not None:
++                require(first is not None and q['process_json'] is None and q['state'] not in ('running', 'returned'),
++                        'identity absent worker revived or returned')
+             elif a['process_json'] is not None:
+                 normal_return = first is None and q['state'] == 'returned' and q['process_json'] is None
+                 require(normal_return or (q['state'] in ('running', 'reconciling') and q['process_json'] == a['process_json']), 'worker process cleared or slot released without observed exit')
+--- /dev/null
++++ b/migration_034.sql
+@@ -0,0 +1,45 @@
++-- Explicit companion custody history, owner-supplied facts; ZERO old-row backfill.
++CREATE TABLE activity_worker_registrations (
++ job_id TEXT NOT NULL,
++ owner_epoch INTEGER NOT NULL CHECK(owner_epoch>=1),
++ generation INTEGER NOT NULL CHECK(generation>=1),
++ workspace_id TEXT NOT NULL REFERENCES operational_workspaces(workspace_id),
++ lease_token TEXT NOT NULL,
++ registration_json TEXT NOT NULL CHECK(json_valid(registration_json)),
++ registration_digest TEXT NOT NULL CHECK(length(registration_digest)=64),
++ registered_at REAL NOT NULL,
++ receipt_json TEXT NOT NULL CHECK(json_valid(receipt_json)),
++ PRIMARY KEY(job_id,owner_epoch,generation),
++ UNIQUE(job_id,owner_epoch,generation,workspace_id,lease_token),
++ FOREIGN KEY(job_id,owner_epoch,generation) REFERENCES activity_worker_liveness(job_id,owner_epoch,generation)
++);
++CREATE TABLE activity_worker_absences (
++ job_id TEXT NOT NULL,
++ owner_epoch INTEGER NOT NULL CHECK(owner_epoch>=1),
++ generation INTEGER NOT NULL CHECK(generation>=1),
++ workspace_id TEXT NOT NULL REFERENCES operational_workspaces(workspace_id),
++ lease_token TEXT NOT NULL,
++ observation_json TEXT NOT NULL CHECK(json_valid(observation_json)),
++ receipt_json TEXT NOT NULL CHECK(json_valid(receipt_json)),
++ PRIMARY KEY(job_id,owner_epoch,generation),
++ FOREIGN KEY(job_id,owner_epoch,generation) REFERENCES activity_worker_liveness(job_id,owner_epoch,generation),
++ FOREIGN KEY(job_id,owner_epoch,generation,workspace_id,lease_token) REFERENCES activity_worker_registrations(job_id,owner_epoch,generation,workspace_id,lease_token)
++);
++CREATE TRIGGER worker_registrations_no_update BEFORE UPDATE ON activity_worker_registrations
++ BEGIN SELECT RAISE(ABORT,'worker registration history immutable'); END;
++CREATE TRIGGER worker_registrations_no_delete BEFORE DELETE ON activity_worker_registrations
++ BEGIN SELECT RAISE(ABORT,'worker registration history immutable'); END;
++CREATE TRIGGER worker_absences_no_update BEFORE UPDATE ON activity_worker_absences
++ BEGIN SELECT RAISE(ABORT,'worker absence history immutable'); END;
++CREATE TRIGGER worker_absences_no_delete BEFORE DELETE ON activity_worker_absences
++ BEGIN SELECT RAISE(ABORT,'worker absence history immutable'); END;
++CREATE TRIGGER worker_absence_excludes_exit BEFORE INSERT ON activity_worker_absences
++ WHEN EXISTS(SELECT 1 FROM activity_worker_exits WHERE job_id=NEW.job_id AND owner_epoch=NEW.owner_epoch AND generation=NEW.generation)
++ OR EXISTS(SELECT 1 FROM activity_worker_liveness WHERE job_id=NEW.job_id AND owner_epoch=NEW.owner_epoch AND generation=NEW.generation AND exit_json IS NOT NULL)
++ BEGIN SELECT RAISE(ABORT,'known exit and identity absence are distinct terminal facts'); END;
++CREATE TRIGGER worker_exit_excludes_absence BEFORE INSERT ON activity_worker_exits
++ WHEN EXISTS(SELECT 1 FROM activity_worker_absences WHERE job_id=NEW.job_id AND owner_epoch=NEW.owner_epoch AND generation=NEW.generation)
++ BEGIN SELECT RAISE(ABORT,'identity absence and known exit are distinct terminal facts'); END;
++CREATE INDEX worker_registration_workspace ON activity_worker_registrations(workspace_id,job_id,owner_epoch,generation);
++CREATE INDEX worker_absence_workspace ON activity_worker_absences(workspace_id,job_id,owner_epoch,generation);
++INSERT INTO engine_versions(component,version) VALUES('worker_custody_interface','1');
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -4,7 +4,7 @@
+ 
+ [project]
+ name = "kageyoni-engine"
+-version = "11.1.0.dev15"
++version = "11.1.0.dev16"
+ description = "Portable Kageyoni world and workspace engine; no model API required"
+ requires-python = ">=3.10"
+ dependencies = []
+--- /dev/null
++++ b/tests/native_custody_coupling_cases.py
+@@ -0,0 +1,128 @@
++"""AUTHOR_ONLY coupled API cases; explicit root DB-lane GO required.
++
++No OS facts are produced here; trusted-owner metadata is synthetic. No native
++terminal/process/registration/stop history is SQL-populated. Existing fixture's
++binding/job producer metadata remains the disclosed unchanged native033 fixture.
++"""
++import os
++if os.environ.get('SAMSARA_EXECUTE_CUSTODY_NATIVE_TESTS')!='1':
++    raise RuntimeError('native DB lane requires explicit root GO; AUTHOR_ONLY coupling cases')
++import importlib.util
++from pathlib import Path
++import copy
++import hashlib
++
++import pytest
++from kageyoni.engine import Engine,Rejected
++from kageyoni.persistence.unit_of_work import UnitOfWork
++from kageyoni.workspaces.worker_liveness import WorkerLiveness,verify_worker_liveness
++from kageyoni.workspaces.worker_custody import WorkerCustody,terminal_absence,verify_worker_custody
++
++spec=importlib.util.spec_from_file_location('exact_frozen034_api_fixture',Path(__file__).with_name('native_worker_custody_cases.py'))
++api=importlib.util.module_from_spec(spec);spec.loader.exec_module(api)
++fixture_factory=api.fixture_factory
++
++
++def tables(f):
++ names=['activity_queue','activity_queue_owners','activity_queue_roots','activity_worker_liveness',
++        'activity_worker_stops','activity_worker_exits','activity_worker_registrations','activity_worker_absences']
++ return {n:[dict(r) for r in f.engine.db.execute('SELECT * FROM '+n+' ORDER BY rowid')] for n in names}
++
++
++def test_absence_blocks_new_process_heartbeat_stop_exit_but_knownstop_replays(fixture_factory):
++ f=fixture_factory();j,k,w=api.start(f);r=api.reg();w.register(j,k,r,100)
++ original=f.q.request_stop(j,k,'shutdown','first-stop',101)
++ receipt=w.observe_absence(j,k,api.obs(r),101)
++ before=tables(f);changes=f.engine.db.total_changes
++ assert receipt['state']=='reconciling'
++ assert f.q.request_stop(j,k,'shutdown','first-stop',999)==original
++ assert tables(f)==before and f.engine.db.total_changes==changes
++ operations=[lambda:WorkerLiveness(f.engine,f.workspace).process(j,k,api.PROCESS),
++             lambda:f.q.process(j,k,api.PROCESS,102),
++             lambda:f.q.heartbeat(j,k,1,102),
++             lambda:f.q.request_stop(j,k,'cancel','new-cancel',102),
++             lambda:f.q.observe_exit(j,k,{'process':api.PROCESS,'exited':True,'returncode':0,'method':'cooperative'},102)]
++ for operation in operations:
++  with pytest.raises(Rejected):operation()
++  assert tables(f)==before and f.engine.db.total_changes==changes
++ assert terminal_absence(f.engine,f.workspace,j,k)==receipt
++ assert verify_worker_liveness(f.engine)['installed'] and verify_worker_custody(f.engine)['absences']==1
++ assert f.engine.verify()['ok'] and f.engine.validate_registry()['ok']
++
++
++def test_known_integer_exit_replay_still_exact_zerowrite_without_absence(fixture_factory):
++ f=fixture_factory();j,k,w=api.start(f);w.register(j,k,api.reg(),100)
++ f.q.request_stop(j,k,'pause','first-stop',101)
++ observation={'process':copy.deepcopy(api.PROCESS),'exited':True,'returncode':21,'method':'cooperative'}
++ receipt=f.q.observe_exit(j,k,observation,102)
++ before=tables(f);changes=f.engine.db.total_changes
++ assert f.q.observe_exit(j,k,observation,999)==receipt
++ assert tables(f)==before and f.engine.db.total_changes==changes
++ assert terminal_absence(f.engine,f.workspace,j,k) is None
++ assert f.engine.verify()['ok'] and f.engine.validate_registry()['ok']
++
++
++def test_registration_outer_rollback_preserves_native033_process_and_budgets(fixture_factory):
++ f=fixture_factory();j,k,w=api.start(f);before=tables(f)
++ with pytest.raises(RuntimeError,match='deliberate outer rollback'):
++  with UnitOfWork(f.engine.db):
++   w.register(j,k,api.reg(),101)
++   assert w.row(j,k)['registration_digest']==api.reg()['registration_digest']
++   raise RuntimeError('deliberate outer rollback')
++ assert tables(f)==before
++ assert f.engine.verify()['ok'] and f.engine.validate_registry()['ok']
++
++
++def test_absence_outer_rollback_keeps_process_slot_and_stopped_disposition(fixture_factory):
++ f=fixture_factory();j,k,w=api.start(f);r=api.reg();w.register(j,k,r,100)
++ f.q.request_stop(j,k,'pause','stop',101);before=tables(f)
++ with pytest.raises(RuntimeError,match='deliberate absence rollback'):
++  with UnitOfWork(f.engine.db):
++   w.observe_absence(j,k,api.obs(r),102)
++   assert f.q.row(j)['process_json'] is None
++   raise RuntimeError('deliberate absence rollback')
++ assert tables(f)==before and f.q.row(j)['process_json'] is not None
++ assert terminal_absence(f.engine,f.workspace,j,k) is None
++ assert f.engine.verify()['ok'] and f.engine.validate_registry()['ok']
++
++
++def test_explicit_requeue_then_charged_newgeneration_retains_old_absence(fixture_factory):
++ f=fixture_factory();j,k,w=api.start(f);receipt,_=api.stop_absent(f,j,k,w);budget=f.budget()
++ with pytest.raises(Rejected,match='cannot return'):f.q.transition(j,'returned','must not accept absence',clear_process=True)
++ f.q.transition(j,'queued','explicit metadata-only native operator discard',clear_process=True)
++ assert terminal_absence(f.engine,f.workspace,j,k)==receipt
++ assert f.engine.verify()['ok']
++ new=f.q.claim(102);newk=f.q.fence(new)
++ assert newk['generation']==k['generation']+1 and f.budget()[0]['starts']==budget[0]['starts']+1
++ assert f.budget()[0]['reserved_seconds']==budget[0]['reserved_seconds']+new['max_seconds']
++ assert terminal_absence(f.engine,f.workspace,j,k)==receipt
++ assert f.engine.verify()['ok'] and f.engine.validate_registry()['ok']
++
++
++def test_old033_missing_companion_stays_unresolved_and_cannot_requeue(fixture_factory):
++ f=fixture_factory();j,k,w=api.start(f);f.q.request_stop(j,k,'pause','stop',101);before=tables(f)
++ assert terminal_absence(f.engine,f.workspace,j,k) is None
++ with pytest.raises(Rejected):f.q.transition(j,'queued','no stop proof',clear_process=True)
++ with pytest.raises(Rejected):f.q.transition(j,'paused','no stop proof',clear_process=True)
++ assert tables(f)==before and f.q.row(j)['process_json'] is not None
++ assert f.engine.verify()['ok'] and f.engine.validate_registry()['ok']
++
++
++def test_readonly_reopen_verifies_absence_without_mutating_database(fixture_factory):
++ f=fixture_factory();j,k,w=api.start(f);receipt,_=api.stop_absent(f,j,k,w)
++ path=Path(f.engine.path);f.engine.close();before=hashlib.sha256(path.read_bytes()).hexdigest()
++ engine=Engine(path,read_only=True)
++ try:
++  assert verify_worker_liveness(engine)['installed']
++  assert verify_worker_custody(engine)['absences']==1
++  assert terminal_absence(engine,f.workspace,j,k)==receipt
++  assert engine.verify()['ok'] and engine.validate_registry()['ok']
++ finally:engine.close()
++ assert hashlib.sha256(path.read_bytes()).hexdigest()==before
++
++
++def test_global_verifier_rejects_partial034_even_when_no_attempts(fixture_factory):
++ f=fixture_factory()
++ # Deliberate empty-interface structural negative only, no fabricated history.
++ f.engine.db.execute('DROP TABLE activity_worker_absences')
++ with pytest.raises(Rejected,match='incomplete worker custody interface'):f.engine.verify()
+--- /dev/null
++++ b/tests/native_worker_custody_cases.py
+@@ -0,0 +1,175 @@
++"""AUTHOR_ONLY integration cases until root GO; modeled native metadata, no OS proof.
++
++No old fixture/assertions are rewritten. Existing fixture seeds binding/job
++producer metadata ONLY; every new process/stop/registration/absence is native API.
++"""
++import os
++if os.environ.get('SAMSARA_EXECUTE_CUSTODY_NATIVE_TESTS')!='1':
++    raise RuntimeError('native DB lane requires explicit root GO; this test file is AUTHOR_ONLY')
++import copy
++import importlib.util
++from pathlib import Path
++import sqlite3
++import hashlib
++
++import pytest
++from kageyoni.engine import Engine,Rejected
++from kageyoni.persistence.migration_034 import install_worker_custody
++from kageyoni.workspaces.worker_custody import WorkerCustody,terminal_absence,verify_worker_custody
++from kageyoni.workspaces.custody_schema import _digest,PROVIDER
++
++PROCESS={'pid':2,'proc_pid':100,'pid_namespace':'pid:[123]','start_ticks':'999'}
++DOMAIN={'boot_id':'6f0d0296-5225-41af-8e97-4ff2f05b26be','reader_pid_namespace':'pid:[123]',
++ 'mount_namespace':'mnt:[124]','proc_root_device':30,'proc_root_inode':1,
++ 'proc_mountinfo':'94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw','proc_submounts':[]}
++
++
++def reg(process=None):
++ b={'schema_version':2,'process':copy.deepcopy(process or PROCESS),'domain':copy.deepcopy(DOMAIN),'domain_digest':_digest(DOMAIN)}
++ return {**b,'registration_digest':_digest(b)}
++
++
++def obs(r):
++ return {'schema_version':2,'provider':PROVIDER,'method':'procfs_enoent_twice','registration_digest':r['registration_digest'],
++ 'domain_digest':r['domain_digest'],'process':copy.deepcopy(r['process']),'domain':copy.deepcopy(r['domain']),'returncode':None,
++ 'samples':[{'status':'directory_enoent','observed_monotonic_ns':0},{'status':'directory_enoent','observed_monotonic_ns':50_000_000}]}
++
++
++@pytest.fixture
++def fixture_factory(tmp_path):
++ path=Path(os.environ['SAMSARA_033_FIXTURE_SOURCE'])
++ expected=os.environ['SAMSARA_033_FIXTURE_SHA256']
++ assert hashlib.sha256(path.read_bytes()).hexdigest()==expected
++ spec=importlib.util.spec_from_file_location('unchanged_native033_metadata_fixture',path)
++ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
++ fixtures=[]
++ def make(install=True):
++  f=module.Fixture(tmp_path/('world-'+str(len(fixtures))+'.sqlite'));fixtures.append(f)
++  if install:install_worker_custody(f.engine)
++  return f
++ yield make
++ for f in fixtures:f.engine.close()
++ # Root harness must preserve this explicit basetemp/raw evidence directory.
++
++
++def start(f,aid='work',process=None):
++ j=f.job(aid=aid);q=f.q.claim(100);k=f.q.fence(q)
++ assert q['job_id']==j
++ f.q.process(j,k,copy.deepcopy(process or PROCESS),100)
++ return j,k,WorkerCustody(f.engine,f.workspace)
++
++
++def stop_absent(f,j,k,w,disposition='pause',at=101):
++ r=reg();w.register(j,k,r,100)
++ f.q.request_stop(j,k,disposition,'synthetic-current-stop',101)
++ return w.observe_absence(j,k,obs(r),at),r
++
++
++def test_new_registration_and_distinct_absence_exact_replay_noexit_norefund(fixture_factory):
++ f=fixture_factory();j,k,w=start(f);budget=f.budget();r=reg();first=w.register(j,k,r,100)
++ before=f.engine.db.total_changes;owner=f.q.owner()
++ assert w.register(j,k,r,100)==first
++ assert f.engine.db.total_changes==before and f.q.owner()==owner
++ f.q.request_stop(j,k,'pause','stop',101);receipt=w.observe_absence(j,k,obs(r),101)
++ assert receipt['kind']=='worker_identity_absent' and receipt['returncode'] is None and receipt['state']=='paused'
++ assert f.q.row(j)['process_json'] is None and f.q.row(j)['state']=='paused' and f.budget()==budget
++ a=f.engine.db.execute('SELECT * FROM activity_worker_liveness WHERE job_id=?',(j,)).fetchone()
++ assert a['process_json'] is not None and a['exit_json'] is None
++ assert not f.engine.db.execute('SELECT * FROM activity_worker_exits').fetchall()
++ before=f.engine.db.total_changes;owner=f.q.owner();row=f.q.row(j)
++ assert w.observe_absence(j,k,obs(r),999)==receipt and f.engine.db.total_changes==before
++ assert f.q.owner()==owner and f.q.row(j)==row
++ changed=obs(r);changed['samples'][1]['observed_monotonic_ns']+=1
++ with pytest.raises(Rejected,match='conflict'):w.observe_absence(j,k,changed,102)
++ assert terminal_absence(f.engine,f.workspace,j,k)==receipt
++ assert verify_worker_custody(f.engine)['absences']==1
++
++
++@pytest.mark.parametrize('disposition,state',[('pause','paused'),('cancel','cancelled'),('shutdown','reconciling')])
++def test_stop_selected_state_and_clockrollback_not_elapsed_grace(fixture_factory,disposition,state):
++ f=fixture_factory();j,k,w=start(f);receipt,_=stop_absent(f,j,k,w,disposition,at=99)
++ assert receipt['state']==state and f.q.row(j)['state']==state
++ assert receipt['clock_rollback'] is True and receipt['time_status']=='uncertain'
++ assert receipt['owner_wall_before']==receipt['owner_wall_after']==101
++ assert receipt['observed_at']==99 and receipt['returncode'] is None
++ assert verify_worker_custody(f.engine)['absences']==1
++
++
++def test_absence_needs_companion_stop_and_same_fence(fixture_factory):
++ f=fixture_factory();j,k,w=start(f);r=reg()
++ with pytest.raises(Rejected):w.observe_absence(j,k,obs(r),101)
++ assert terminal_absence(f.engine,f.workspace,j,k) is None
++ w.register(j,k,r,100)
++ with pytest.raises(Rejected):w.observe_absence(j,k,obs(r),101)
++ with pytest.raises(Rejected):w.register(j,{**k,'token':'wrong'},r,100)
++ f.q.request_stop(j,k,'pause','stop',101)
++ with pytest.raises(Rejected):w.observe_absence(j,{**k,'token':'wrong'},obs(r),101)
++ assert f.q.row(j)['process_json'] is not None
++
++
++@pytest.mark.parametrize('block',['owner','binding','ancestor','lease'])
++def test_registration_checks_current_authority_before_replay(fixture_factory,block):
++ f=fixture_factory();j,k,w=start(f);r=reg();w.register(j,k,r,100)
++ if block=='owner':f.q.boot(101)
++ elif block=='binding':f.engine.db.execute('UPDATE activity_bindings SET active=0')  # Explicit live authority-negative fixture.
++ elif block=='ancestor':f.activity_state('work','paused')
++ with pytest.raises(Rejected):w.register(j,k,r,130 if block=='lease' else 101)
++
++
++def test_owner_reboot_allows_oldattempt_stop_observation_not_reregistration(fixture_factory):
++ f=fixture_factory();j,k,w=start(f);r=reg();w.register(j,k,r,100);f.q.boot(101)
++ with pytest.raises(Rejected):w.register(j,k,r,101)
++ f.q.request_stop(j,k,'pause','new-owner-stop',102)
++ receipt=w.observe_absence(j,k,obs(r),102)
++ assert receipt['fence']==k and receipt['kind']=='worker_identity_absent'
++ assert f.q.owner()['epoch']!=k['epoch']
++
++
++def test_known_exit_and_absence_cannot_both_be_terminal(fixture_factory):
++ f=fixture_factory();j,k,w=start(f);r=reg();w.register(j,k,r,100);f.q.request_stop(j,k,'pause','stop',101)
++ f.q.observe_exit(j,k,{'process':PROCESS,'exited':True,'returncode':0,'method':'cooperative'},102)
++ with pytest.raises(Rejected):w.observe_absence(j,k,obs(r),102)
++ g=fixture_factory();j,k,w=start(g);stop_absent(g,j,k,w)
++ with pytest.raises(Rejected):g.q.observe_exit(j,k,{'process':PROCESS,'exited':True,'returncode':0,'method':'cooperative'},102)
++
++
++def test_queued_before_newclaim_and_historical_receipt_after_generation(fixture_factory):
++ f=fixture_factory();j,k,w=start(f);receipt,r=stop_absent(f,j,k,w)
++ f.q.transition(j,'queued','explicit synthetic native operator disposition',clear_process=True)
++ assert terminal_absence(f.engine,f.workspace,j,k)==receipt
++ new=f.q.claim(102);newk=f.q.fence(new)
++ assert newk['generation']==k['generation']+1
++ assert terminal_absence(f.engine,f.workspace,j,k)==receipt
++ with pytest.raises(Rejected):w.observe_absence(j,k,obs(r),102)
++ assert verify_worker_custody(f.engine)['registrations']==1
++
++
++def test_append_only_and_schema_tamper_readonly_verifier(fixture_factory):
++ f=fixture_factory();j,k,w=start(f);w.register(j,k,reg(),100)
++ for statement in ['UPDATE activity_worker_registrations SET registered_at=101','DELETE FROM activity_worker_registrations']:
++  with pytest.raises(sqlite3.IntegrityError):f.engine.db.execute(statement)
++ before=f.engine.db.total_changes
++ assert verify_worker_custody(f.engine)['registrations']==1 and f.engine.db.total_changes==before
++ # Explicit structural negative specimen, no forged process/history rows.
++ f.engine.db.execute('DROP TRIGGER worker_registrations_no_delete')
++ with pytest.raises(Rejected,match='schema object'):verify_worker_custody(f.engine)
++
++
++def test_genuine033_predecessor_migration_no_backfill_and_backup_reopen(fixture_factory,tmp_path):
++ f=fixture_factory(install=False);j,k,_=start(f);before=f.budget()
++ old=[dict(r) for r in f.engine.db.execute('SELECT * FROM activity_worker_liveness')]
++ assert terminal_absence(f.engine,f.workspace,j,k) is None
++ install_worker_custody(f.engine)
++ assert [dict(r) for r in f.engine.db.execute('SELECT * FROM activity_worker_liveness')]==old
++ assert verify_worker_custody(f.engine)=={'installed':True,'interface':'1','registrations':0,'absences':0}
++ assert f.budget()==before and f.q.row(j)['process_json'] is not None
++ backups=list(Path(f.engine.path).parent.glob(Path(f.engine.path).name+'.pre-v34-*.bak'))
++ assert len(backups)==1
++ oldengine=Engine(backups[0],read_only=True)
++ try:
++  assert oldengine.db.execute('SELECT max(version) FROM migration_checks').fetchone()[0]==33
++  assert verify_worker_custody(oldengine)=={'installed':False}
++ finally:oldengine.close()
++ current=Path(f.engine.path);f.engine.close();e=Engine(current,read_only=True)
++ try:assert verify_worker_custody(e)['registrations']==0
++ finally:e.close()
+--- /dev/null
++++ b/tests/test_known_exit_admission_guard.py
+@@ -0,0 +1,45 @@
++"""New corruption specimens for the complete033 pre-admission seam.
++
++All terminal history is first produced by the real native API. Direct SQL below
++is deliberate stored-receipt corruption after a checked backup, never OS proof.
++"""
++import copy
++import json
++import pytest
++from kageyoni.engine import Rejected, encoded
++from kageyoni.workspaces.worker_liveness import verify_worker_liveness
++from native_worker_custody_cases import fixture_factory, start, PROCESS
++
++
++@pytest.mark.parametrize('damage',['policy','state','disposition','extra','missing_observation','array','invalid_json','overflow'])
++def test_complete_known_exit_validation_precedes_new_charge_and_fence(fixture_factory,damage):
++    f=fixture_factory();j,k,_=start(f)
++    f.q.request_stop(j,k,'pause','stop',101)
++    receipt=f.q.observe_exit(j,k,{'process':copy.deepcopy(PROCESS),'exited':True,'returncode':21,'method':'cooperative'},102)
++    f.q.transition(j,'queued','explicit test requeue',clear_process=True)
++    assert f.engine.verify()['ok'] and f.engine.validate_registry()['ok']
++    f.engine.backup(str(f.engine.path)+'.checked-before-'+damage+'.sqlite')
++    corrupt=copy.deepcopy(receipt)
++    if damage=='policy':corrupt['policy_digest']='0'*64
++    elif damage=='state':corrupt['state']='cancelled'
++    elif damage=='disposition':corrupt['disposition']='cancel'
++    elif damage=='extra':corrupt['extra']=True
++    elif damage=='missing_observation':del corrupt['observation']
++    elif damage=='array':corrupt=[]
++    elif damage=='overflow':corrupt['observed_at']=10**400
++    raw='{' if damage=='invalid_json' else encoded(corrupt)
++    # Retain exact API-generated history plus backup before intentional damage.
++    f.engine.db.execute('DROP TRIGGER worker_exits_no_update')
++    if damage=='invalid_json':f.engine.db.execute('PRAGMA ignore_check_constraints=ON')
++    f.engine.db.execute('UPDATE activity_worker_exits SET receipt_json=?',(raw,))
++    f.engine.db.execute('UPDATE activity_worker_liveness SET exit_json=?',(raw,))
++    if damage=='invalid_json':f.engine.db.execute('PRAGMA ignore_check_constraints=OFF')
++    before=[dict(r) for r in f.engine.db.execute('SELECT * FROM activity_queue')]
++    owner=f.q.owner();budget=f.budget()
++    with pytest.raises((Rejected,KeyError,TypeError,json.JSONDecodeError,OverflowError)) as original:
++        verify_worker_liveness(f.engine)
++    with pytest.raises(Rejected) as rejected:f.q.claim(103)
++    if isinstance(original.value,Rejected):assert str(rejected.value)==str(original.value)
++    else:assert str(rejected.value).startswith('malformed prior worker liveness: ')
++    assert f.budget()==budget and f.q.owner()==owner
++    assert [dict(r) for r in f.engine.db.execute('SELECT * FROM activity_queue')]==before

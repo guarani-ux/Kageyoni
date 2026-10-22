@@ -1,0 +1,127 @@
+{
+  "candidate": "candidate26",
+  "runtime": "26a07d047655cfc3fec7c431e13e64239d2e7707c3b73940fbd49f9c87eb02ef",
+  "native_version": "11.1.0.dev15",
+  "proof_snapshots": 12,
+  "all_233_installed_payloads_stable": true,
+  "all_sessions_closed": true,
+  "closures": [
+    {
+      "phase": "return-raw",
+      "binding_id": "samsara:73e1cc8145b17c2c97e0282513f9e1e1385ccaec71047a59e06fe242c04e4a89"
+    },
+    {
+      "phase": "reopen-raw",
+      "binding_id": "samsara:73e1cc8145b17c2c97e0282513f9e1e1385ccaec71047a59e06fe242c04e4a89"
+    },
+    {
+      "phase": "discover-raw",
+      "binding_id": "samsara:73e1cc8145b17c2c97e0282513f9e1e1385ccaec71047a59e06fe242c04e4a89"
+    },
+    {
+      "phase": "inputs-raw",
+      "binding_id": "samsara:73e1cc8145b17c2c97e0282513f9e1e1385ccaec71047a59e06fe242c04e4a89"
+    },
+    {
+      "phase": "text-continuation-raw",
+      "binding_id": "samsara:73e1cc8145b17c2c97e0282513f9e1e1385ccaec71047a59e06fe242c04e4a89"
+    },
+    {
+      "phase": "retrieve-raw",
+      "binding_id": "samsara:73e1cc8145b17c2c97e0282513f9e1e1385ccaec71047a59e06fe242c04e4a89"
+    }
+  ],
+  "observed_errors": [
+    {
+      "log": "inputs-raw.jsonl",
+      "value": {
+        "error": "BUDGET",
+        "message": "The admitted resource budget is exhausted.",
+        "next": {
+          "actor": "recipient",
+          "condition": "The admitted resource budget is exhausted.",
+          "operation": "review"
+        },
+        "protocol": "samsara/5.1",
+        "request_id": "request:9ef70d512ca849c9bab59efb6e1728c7",
+        "retryable": false
+      }
+    },
+    {
+      "log": "text-continuation-raw.jsonl",
+      "value": {
+        "error": "UNAVAILABLE",
+        "message": "Unavailable.",
+        "next": {
+          "actor": "recipient",
+          "condition": "Unavailable.",
+          "operation": "review"
+        },
+        "protocol": "samsara/5.1",
+        "request_id": "request:a33023ecc28242718fdde96d6334022a",
+        "retryable": false
+      }
+    }
+  ],
+  "reopen": {
+    "activity_id": "media-text-continuation-20261022",
+    "checkpoint": {
+      "activity_id": "media-text-continuation-20261022",
+      "activity_version": 2,
+      "handler": {
+        "digest": "43e300c5e1ea3b1f586c517f8ca90bb3736720230aac128eec6482a2a1811591",
+        "id": "samsara:handler:real_work",
+        "version": 1
+      },
+      "job_id": "samsara:1645a66c4a00d69f7d9e20cb39952ff0f35a8b160be246842482fb59ec864576",
+      "job_version": 2,
+      "next": {
+        "actor": "recipient",
+        "condition": "A returned component does not automatically close its parent.",
+        "operation": "artifact.read"
+      },
+      "outcome": "unresolved",
+      "parent_id": null,
+      "pending_effects": [],
+      "reservations": [],
+      "result_refs": [
+        {
+          "digest": "94af70535b5ce0af51d200998e3a3826235cee5308fb8da0208661aed6faa746",
+          "id": "artifact:fbd2ca62823a47d681ce970251abbed8",
+          "version": 1
+        },
+        {
+          "digest": "9260963ed5f357a21d2bb269bbb53ec58e1ba9ac10d2cb97582606d28a85b0fc",
+          "id": "artifact:8f083170f7ff4ade89857aa3f5480c4b",
+          "version": 1
+        }
+      ],
+      "resume_condition": "Explicit continuation is required.",
+      "state": "finished"
+    },
+    "authored_reference": {
+      "digest": "94af70535b5ce0af51d200998e3a3826235cee5308fb8da0208661aed6faa746",
+      "id": "artifact:fbd2ca62823a47d681ce970251abbed8",
+      "version": 1
+    },
+    "bytes": 6054,
+    "exact_retrieval": true,
+    "new_binding_id": "samsara:73e1cc8145b17c2c97e0282513f9e1e1385ccaec71047a59e06fe242c04e4a89"
+  },
+  "authored_file": "private-continuation-handoff.md",
+  "raw_logs": [
+    "return-raw.jsonl",
+    "reopen-raw.jsonl",
+    "discover-raw.jsonl",
+    "inputs-raw.jsonl",
+    "text-continuation-raw.jsonl",
+    "retrieve-raw.jsonl"
+  ],
+  "limits": [
+    "Independent AI recipient; not a human reviewer.",
+    "Exact MP4 retrieved; no independent frame decoding or perception in this encounter.",
+    "Current source, manifest, envelope, transcript and captions inspected through ordinary Client.",
+    "Binary-inclusive activity start returned BUDGET; read-only status returned UNAVAILABLE; smaller text-envelope-bound activity succeeded. Exact exhausted resource not exposed.",
+    "No operator, source edits, backend/canon inspection, new source revision, publication, human comprehension, mastery, or whole-build closure."
+  ]
+}

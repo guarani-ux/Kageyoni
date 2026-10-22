@@ -1,0 +1,13 @@
+{
+  "archive": "Samsara_Native034_R1_Source_API_Durability_IN_PROGRESS.zip",
+  "bytes": 6288059,
+  "sha256": "6e86e32da1c07453a1f5f0fa316a7fd518093a121073b72535281cba9f912f2f",
+  "manifest_files": 853,
+  "entries": 854,
+  "CRC_every_member_SHA": true,
+  "source_before_after_equal": true,
+  "native_tests": 114,
+  "native_recovery": "FAILED_ON_SEPARATE_COPY_ORIGINAL_RETAINED",
+  "full_release_qualified": false,
+  "raw_custody_limit": "Selected complete failing fixture and complete failed recovery copy included. Other closed raw specimens remain inventoried locally pending full custody."
+}

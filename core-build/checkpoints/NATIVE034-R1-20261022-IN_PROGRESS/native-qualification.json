@@ -1,0 +1,104 @@
+{
+  "status": "114_EXECUTED_TESTS_PASS_POSTRUN_COPIED_SPECIMEN_RECOVERY_FAILED",
+  "new_implementation_not_recovery_of_lost_native16": true,
+  "source": {
+    "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/engine",
+    "files": 740,
+    "identity_sha256": "2d6e5fd09f9cd3c9d610fe2f023eaff593864a95e8f5fc1b3f225a2b30b27549",
+    "frozen_manifest": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/frozen-source.json",
+    "old_SQL_files_preserved": 33,
+    "all_old_tests_exact": true,
+    "native033_fixture_sha256": "68d723f3418c4234930eb67f9666f33cd9144ccf912b43d2ba52f91af4a61a83",
+    "delta_patch": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/new-native16-full.patch",
+    "delta_patch_sha256": "c7e9ee766a2869e8773a79c5554ea8aa6f0f9d74788dcff1d74a0819463aa113",
+    "source_changes_after_test_or_recovery_failure": false
+  },
+  "wheel": {
+    "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/dist/kageyoni_engine-11.1.0.dev16-py3-none-any.whl",
+    "bytes": 608719,
+    "sha256": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3",
+    "version": "11.1.0.dev16"
+  },
+  "env": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/env",
+  "test_execution": {
+    "test_instances": 114,
+    "native_API_test_instances": 72,
+    "public_API_call_count": "Not instrumented; test-instance counts reported separately.",
+    "by_driver": {
+      "pure/test_custody_schema.py": {
+        "passed": 42
+      },
+      "native_worker_custody_cases.py": {
+        "passed": 14
+      },
+      "native_custody_coupling_cases.py": {
+        "passed": 8
+      },
+      "test_known_exit_admission_guard.py": {
+        "passed": 8
+      },
+      "test_worker_liveness.py": {
+        "passed": 27
+      },
+      "test_liveness_review_countercases.py": {
+        "passed": 15
+      }
+    },
+    "all_call_outcomes": "passed",
+    "exitstatus": 0,
+    "duration_seconds_JUnit_summary": 114.88,
+    "junit": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/native-installed.xml",
+    "raw_log": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/native-installed.log",
+    "observations": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/test-observations.json",
+    "min_capacity_bytes": 17908555776
+  },
+  "installed_proof": {
+    "before": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/installed-before.json",
+    "after": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/installed-after.json",
+    "same_process": true,
+    "native_payloads": 201,
+    "source_wheel_installed_equal_before_after": true,
+    "payload_identity": "76d49b872178b6452c2b7db5bf7023bf67f32b5faa758b9ce548b8e32f0d5c7f",
+    "root_SQL_to_installed_kageyoni_data": true,
+    "contracts_namespace_path": [
+      "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/env/lib/python3.12/site-packages/contracts"
+    ]
+  },
+  "raw_specimens": {
+    "directory": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/raw-worlds",
+    "inventory": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/raw-world-inventory.json",
+    "files": 2343,
+    "world_files": 82,
+    "all_retained": true
+  },
+  "postrun_findings": [
+    {
+      "status": "FAILED",
+      "operation": "Read-only semantic specimen collector",
+      "error": "sqlite3.OperationalError: attempt to write a readonly database",
+      "receipt": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/collector-failure.json",
+      "semantic_DB_extraction_complete": false
+    },
+    {
+      "status": "FAILED",
+      "operation": "Root-authorized legitimate SQLite recovery of separately copied complete journal-bearing world",
+      "error": "sqlite3.DatabaseError: malformed database schema (v11_execution_receipts) - table v11_execution_receipts already exists",
+      "log": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/collector-copied-recovery.log",
+      "copy_barrier": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/collector-copy-barrier.json",
+      "after_failure_inventory": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/collector-copy-after-failure.json",
+      "original_unchanged": true,
+      "native_global_registry_and_backup_checks": "NOT_RUN: recovery SELECT failed first",
+      "cause": "UNDETERMINED; no host cause inferred"
+    }
+  ],
+  "limits": [
+    "Disposable native metadata fixtures only. Binding/job producer SQL seeding remains disclosed unchanged fixture code; all new process/registration/stop/exit/absence facts used native APIs.",
+    "Modeled PID/domain never establishes actual host absence; no OS process or media execution.",
+    "114 in-process test passes do not establish clean durable state for the journal-bearing failed recovery specimen.",
+    "Read-only reopen passed in its selected separately executed test; no blanket reopen/durability claim over all retained worlds.",
+    "No product native compatibility, host owner loss, canonical campaign, F1-F5, full release or recovered-lost-native16 claim.",
+    "No retries or source changes after the concrete copied-recovery failure."
+  ],
+  "DB_lane": "RELEASED; all processes and DB connections closed",
+  "remaining_free_bytes": 17781256192
+}

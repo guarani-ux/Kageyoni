@@ -1,0 +1,274 @@
+{
+  "status": "READ_ONLY_RAW_BYTE_FORENSICS_COMPLETED",
+  "scope": "Only raw O_RDONLY byte reads, independent file-format parsing, source/lifecycle review and local reports; no sqlite/native/DB execution, recovery, source edits, journal deletion or remote actions.",
+  "conclusion": "Journal preimages correspond to this fixture retained pre-v23/schema22 state, not its final native034 absence transaction.",
+  "support": {
+    "journal_nonce": 358155581,
+    "all_five_record_checksums_match_nonce": true,
+    "journal_original_pages": 372,
+    "journal_schema_cookie": 214,
+    "journal_change_counter": 402,
+    "current_pages": 467,
+    "current_schema_cookie": 292,
+    "current_change_counter": 428,
+    "journal_pages": [
+      1,
+      372,
+      156,
+      155,
+      188
+    ],
+    "journal_pages_identified": {
+      "1": "sqlite_schema interior root",
+      "372": "sqlite_schema leaf",
+      "155": "engine_versions table",
+      "156": "engine_versions unique index",
+      "188": "migration_checks table"
+    },
+    "same_fixture_pre23_all_nonheader_pages_exact": true,
+    "journal_page1_equal_to_same_backup_except_backup_header_counters": true,
+    "journal_migration_versions_from_INTEGER_PRIMARY_KEY_rowids": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "current_migration_versions_from_rowids": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "current_schema_object_count": 492,
+    "current_raw_schema_duplicate_names": {},
+    "current_raw034_registration_rows": 1,
+    "current_raw034_absence_rows": 1,
+    "unique_complete_four_nonheader_match": [
+      {
+        "path": "test_stop_selected_state_and_c0/world-0.sqlite.pre-v23-b4282cb010cb46c396a3808b0672b7b4.bak",
+        "matches": [
+          372,
+          156,
+          155,
+          188
+        ]
+      }
+    ],
+    "other_partial_pre23_matches": 73,
+    "raw_world_journal_inventory": [
+      "test_stop_selected_state_and_c0/world-0.sqlite-journal"
+    ]
+  },
+  "lifecycle_source_facts": [
+    "Unchanged Fixture first opens Engine and installs resource profiles through migration031, before the synthetic person/workspace is created; resource admission032 and liveness033 follow.",
+    "New fixture_factory constructs a path world-N.sqlite once for each growing fixtures list, installs034, yields, and closes every collected Engine at teardown.",
+    "Selected test creates a process registration, pause stop at101, absence observation at99 and verifies paused/clockrollback/highwater101; the recorded test call and teardown passed.",
+    "Pre-v23 backup has no workspace rows; current and pre-v34 images have the same workspace418e475178e24ea3a6c1fbee4072d94b.",
+    "migration023 source creates situation_records and its autoindex, writes engine_versions, then existing installer writes migration_checks; the five journal preimage roles correspond to these earlier schema-stage writes."
+  ],
+  "copied_recovery_failure_correspondence": {
+    "prior_failure_preserved": "/workspace/scratch/5c7ed9200168/recovery-20261022/native034-r1/evidence/collector-copied-recovery.log",
+    "journal_schema_row372_name": "v11_execution_receipts",
+    "journal_schema_row372_cell_page": 372,
+    "current_identical_schema_row372_cell_page": 356,
+    "current356_not_in_journal": true,
+    "bounded_inference": "Restoring the old372 leaf while retaining later356 exposes the same schema definition twice, consistent with the observed copied recovery duplicate-table error. This is a page-correspondence inference, not another recovery execution."
+  },
+  "preservation": {
+    "original_directory_file_count": 33,
+    "original_equal_to_pre_collector_copy_barrier": true,
+    "original_inventory_after_raw_forensics": {
+      "world-0.sqlite.pre-v19-69d376626f22404e86298a6000ada745.bak": {
+        "bytes": 1413120,
+        "sha256": "79a6205a8c0a30cbb1c7f8cf79458bc00717ed33d4fa1c30729bbb8df3a13fd8"
+      },
+      "world-0.sqlite.pre-v15-c71cb408e6c147be85b53b24ae503c5c.bak": {
+        "bytes": 1224704,
+        "sha256": "62061ceed9b3a16d81edc2e7ae8ce494b3f4316a5e82416e41449692f0598e61"
+      },
+      "world-0.sqlite.pre-v13-08dbbe041d424785b2956f128db4cbb3.bak": {
+        "bytes": 1056768,
+        "sha256": "f6e0f45d1bdf63f8b933e92dc1ffe84eed75129e85e75d90666361c5c6f79d0c"
+      },
+      "world-0.sqlite.pre-v17-2107cef73bcf43cc9c8e245df65794b0.bak": {
+        "bytes": 1306624,
+        "sha256": "7057f2646b5cd1941354cb54922ffc299567a54388a77d9fffd142521f7867cd"
+      },
+      "world-0.sqlite.pre-v8.bak": {
+        "bytes": 901120,
+        "sha256": "c5ead8a79058c07ed7ed9c9efc729e6aace5a72eb79fe0f710f68ccabe151d45"
+      },
+      "world-0.sqlite.pre-v32-1c3505243de24ead93d2d8364ab3cb8b.bak": {
+        "bytes": 1822720,
+        "sha256": "9569bc8c0036f579f0420066e45d4b2159fd16ce501e76699b7ec4b107fa71df"
+      },
+      "world-0.sqlite.pre-v5.bak": {
+        "bytes": 856064,
+        "sha256": "b6c70ac4c0d0c5ecbbb9d7f8471ffa76130211f16342d4aa38d8890a13b0b2be"
+      },
+      "world-0.sqlite.pre-v9-a80b87f1499e4befa006a041e2d3fb1d.bak": {
+        "bytes": 901120,
+        "sha256": "16896c9a64a95391528b33d7b43316cbc817cb527d8d252d10ca13f1d87e54b6"
+      },
+      "world-0.sqlite.pre-v34-fd4b8f72ffd64d3e98b76b527a809110.bak": {
+        "bytes": 1880064,
+        "sha256": "c7b9a9678c0f6178af2ade95a2baa60a5e03acfb7656955615027cae293c784f"
+      },
+      "world-0.sqlite.pre-v27-d46647874eb341d3a3409e128795bac0.bak": {
+        "bytes": 1650688,
+        "sha256": "307c75a6188a3433e4a4aa29e6582b636863929c4958b6412b9070986e56205d"
+      },
+      "world-0.sqlite.pre-v21-e4bae2046abc48f39fdc3b6e7cb9bc3a.bak": {
+        "bytes": 1466368,
+        "sha256": "379285b331cf2fd3e11d5e82eef24eb58395d1ba2f7e58dd55b27de7159f2922"
+      },
+      "world-0.sqlite.pre-v33-f17c831ad79a4999adab8f5751896c4a.bak": {
+        "bytes": 1839104,
+        "sha256": "af57dafdb97e33983101f4d93d069280b0e7e14d6947f74d04177d2956f10764"
+      },
+      "world-0.sqlite.pre-v25-b4b20c1971064796a752ca55a2a7c572.bak": {
+        "bytes": 1568768,
+        "sha256": "55c3a28c91c9ff59b64bf9a71e48a6f3ff326994c2885d7033cc6611ed5eff97"
+      },
+      "world-0.sqlite.pre-v4.bak": {
+        "bytes": 847872,
+        "sha256": "3e5cb6d3d8ffc730b3b0c7d573ff122e80e1069368466f602dceaae94c487a35"
+      },
+      "world-0.sqlite.pre-v30-66c22fd64ea94cd68a7bd21836423afa.bak": {
+        "bytes": 1773568,
+        "sha256": "0c5b567443915e017da7bd58e4fca379359f7dd044cb960bbc9e67b8d92e16e7"
+      },
+      "world-0.sqlite-journal": {
+        "bytes": 21032,
+        "sha256": "21731669a6a9ef3ebf90e6564c41743c30628b751423c7b2172c84134f519f73"
+      },
+      "world-0.sqlite.pre-v18-577d45d5a3214308bba7333d5dedac48.bak": {
+        "bytes": 1314816,
+        "sha256": "9dbdcec0549b8bcedcceb4fd24d2fbfad30bd4bd87931338950899d611abf27b"
+      },
+      "world-0.sqlite.pre-v10-be4006e998764f318cba4d8cd1ff2d58.bak": {
+        "bytes": 937984,
+        "sha256": "8dacdb64b396461d6ee7fc71351e6a0475acc4f054e0b455b42e4cbd0afebd89"
+      },
+      "world-0.sqlite.pre-v28-f897e6929a9548f5a3a8bdd210bf4d87.bak": {
+        "bytes": 1687552,
+        "sha256": "4da3f4880fe88d94d6893f628fce21abbd7202d0fed74045f2c2e417d4fb8ec4"
+      },
+      "world-0.sqlite.pre-v22-b026774455bf4cec8c68cfbe28b93a96.bak": {
+        "bytes": 1486848,
+        "sha256": "1104cef5095d99582ce58d4de9805362dea927fc52ab1587380acca10868e8fd"
+      },
+      "world-0.sqlite.pre-v29-62bc1c05fd9845cf850a7699df9b5980.bak": {
+        "bytes": 1744896,
+        "sha256": "9ef1ea68a4d03e5ccb1094cd800a42c85fef2b64417b296e78b34d5cd5cd5801"
+      },
+      "world-0.sqlite.pre-v14-4d60362802ec441e8f8cca402a9a1a09.bak": {
+        "bytes": 1105920,
+        "sha256": "0968cdc82d29a71399196587937ee63d53d55afee9fe468353c4b719de3ad179"
+      },
+      "world-0.sqlite.pre-v20-b96b22294c674d81a608f8438162afe6.bak": {
+        "bytes": 1445888,
+        "sha256": "b94362eb293cd5ec83a586510fc8781ffe685018476e2aabc2dfb6c8e25c4902"
+      },
+      "world-0.sqlite.pre-v12-68e09e3e88234eccb0cdfec6b6c6bf89.bak": {
+        "bytes": 999424,
+        "sha256": "80ef9791e212891a102f8b3d1f0c77c0e84099ecb4991b82e7decce4deb0877b"
+      },
+      "world-0.sqlite.pre-v24-e080d54ca04c4ba498e012279dd120b7.bak": {
+        "bytes": 1531904,
+        "sha256": "879f5f814007b50b79533412006bc9bccabf8251c292cdc8755d8c3ec51fd3ac"
+      },
+      "world-0.sqlite.pre-v23-b4282cb010cb46c396a3808b0672b7b4.bak": {
+        "bytes": 1523712,
+        "sha256": "321b6d9fccec7c9061a202fc649d3981aa6581246f82029f5720a25cd4167adc"
+      },
+      "world-0.sqlite.pre-v31-641b03f0e19f4a148cd40530e89ca27a.bak": {
+        "bytes": 1806336,
+        "sha256": "2bdd57de3471ce9a853e33b2348bccaa2c26f1f69cbd65268a3245d7c89a8c9c"
+      },
+      "world-0.sqlite.pre-v26-d6ab5d1b54c0437ca8c1485357a4a400.bak": {
+        "bytes": 1576960,
+        "sha256": "a942ef7a251de510b9cb38ae5d484de0bd3ea2f58b26f40e2b2164240de81aba"
+      },
+      "world-0.sqlite.pre-v11-4bb9b965527748d0a094ac345d4e7baf.bak": {
+        "bytes": 987136,
+        "sha256": "2c4b6dda466469349ac692d22476e1a7086783246064dd7076d76d4ed726c222"
+      },
+      "world-0.sqlite": {
+        "bytes": 1912832,
+        "sha256": "5cb0c4b60414f5c2486fe58f3f7de69f6d24bb0c7d44bf2cf784b7084f9ab217"
+      },
+      "world-0.sqlite.pre-v7.bak": {
+        "bytes": 888832,
+        "sha256": "1491e28e0254d886ea3f045ee0b7c47d1e85adf162705d4837fc494a324ee838"
+      },
+      "world-0.sqlite.pre-v16-8d5e87f97143424bad8fd77eda9f74d3.bak": {
+        "bytes": 1273856,
+        "sha256": "f227af130bbb1641f30b496ab3b6db0386af3aeb6c5473bb0fe7f92d7fd1f1ac"
+      },
+      "world-0.sqlite.pre-v6.bak": {
+        "bytes": 880640,
+        "sha256": "e7ef7f34e2ccd9a8a680e542dd95155ff99b4f7c7e315f405f3570739d1d8b46"
+      }
+    },
+    "failed_recovery_copy_equal_to_its_prior_failed_inventory": true,
+    "source_input_SHA256": {
+      "engine/tests/test_worker_liveness.py": "68d723f3418c4234930eb67f9666f33cd9144ccf912b43d2ba52f91af4a61a83",
+      "engine/tests/native_worker_custody_cases.py": "beba0e7cba6c4d6c8dad4e076e39e5d27ea60ccc8bf35196db1d993cecb4e657",
+      "engine/kageyoni/persistence/migrations.py": "17b99b959a1ea857677592f22d1204303321e789a70299446ee2aa74c70ccd88",
+      "engine/migration_023.sql": "9bb9419c5f1d0e5050b77a5faa613d98e74467991d8d079fd186f3f2fdd5bd3e",
+      "engine/kageyoni/workspaces/worker_custody.py": "73c561d90b415249a3374e7f79bb9b48660a22baaa0af0b11870bbbb1cdd4adc",
+      "drivers/run_installed_native.py": "bc0a4c89e34a48b4dd7ef83c7047a7b1d3385311ca6b34e8384592c3d771a9ce"
+    }
+  },
+  "limits": [
+    "This raw parser reports decoded record bytes and page correspondence; it is not SQLite integrity, native verification, migration qualification or clean-reopen evidence.",
+    "Byte correspondence identifies an earlier schema state within this fixture retained history. It cannot prove unrecorded file-incarnation chronology or why a hot-looking journal remains.",
+    "No host, filesystem, runtime, cache, SQLite or application causal hypothesis is asserted.",
+    "The prior114 in-process passes and failed read-only/copy recovery observations remain unchanged; no qualification receipt is overwritten."
+  ]
+}

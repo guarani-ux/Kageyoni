@@ -1,0 +1,16 @@
+{
+  "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/current26/extracted/samsara_core/BUILD_STATUS.json",
+  "source_sha256": "1441cceb1b4dcd3682748f2b2db6a0fdc7021a4e5e254b6688b924c92c7db945",
+  "current_sha256": "83b5c5c5e8b9f95685e7530c27968af032d59aa109c03726180c8a3cb894aa5f",
+  "retained_structures": [
+    "core_loops",
+    "old_requirements",
+    "old_slices",
+    "increments",
+    "full_release_increments",
+    "full_release_breadth",
+    "load_scenarios",
+    "resource_policy"
+  ],
+  "full_release_qualified": false
+}
