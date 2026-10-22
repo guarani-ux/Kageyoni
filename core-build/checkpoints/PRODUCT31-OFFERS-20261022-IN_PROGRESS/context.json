@@ -1,0 +1,53 @@
+{
+  "actual_evidence": "Unreserved operator offers and separately bound SCRIPTED own accepted/declined/withdrawn choices; exact accepted-message replay does not restore withdrawn consent; stale refusal and known/missing privacy. Fresh independent AI recipient read normalterms/currentchoices, changed no consent, authored4495B private assessment through ordinary real_work and retrieved exact acceptedoutput. Actual physicalrelocation+freshactor exactthree reads, nativeverify/directregistry/FK/checkedbackup and243sameprocess source/wheel/installedpayloads retained. Evidence not rerun by writer.",
+  "antecedents": "Original raw-kind failure, unrelated withdrawal dependency, cached-replay current-authority gap and exact prerepair sources retained. Source/parser/mock checks are bounded, not wholeworld qualification.",
+  "ledger_sha256": "b3a826c6cf36726362c8f7064968e5dff09de9790c4101007b0a7fd84b08d7a0",
+  "limits": [
+    "no actual contestplay/opposed choices/winner/award/helperrepair/season/fullF3",
+    "scripted own choices are not independent AI entrant choices/human agreement; recipient made no consent changes",
+    "no human/mastery/canon/allF1-F5/fullrelease/generalhost claim",
+    "prior28/current26 evidence remains exact-version-bound",
+    "source32 and reconstructionKIT excluded pending separate frozen commission",
+    "small compact checkpoint is not completehistoricalcontinuation or Librarysave; frozen CONTINUE pendingreconstruction note retained as historical freeze context"
+  ],
+  "manifest_files": 105,
+  "manifest_sha256": "c06a476d55c9252e70bcf7d539a8a1773b8c84b0600ded623584b46f6d048317",
+  "native18_wheel_sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+  "native_source_anchor": {
+    "Kage": "1598555d04c3846a6ba4208b4b35dc701515474b",
+    "SAM": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+    "checkpoint": "F3A-NATIVE18-20261022-IN_PROGRESS",
+    "source_files": 745
+  },
+  "packet": "/dev/shm/product31-checkpoint",
+  "physical_files": 106,
+  "product_wheel_sha256": "a17dac8ed4172b2cda1ccf50e0fd09f67d9f4b7ebd64a34ed81c26616c0fa1f4",
+  "production_entries": 41,
+  "providers": {
+    "body": {
+      "bytes": 3786333,
+      "filename": "Product31_Offers_Complete_Packet_IN_PROGRESS.zip",
+      "sha256": "23c4afcb1bd7742118f03dc8dc01e5dfdc0378236d94f488b8d6d54f6663a22e",
+      "zip_entries": 120
+    },
+    "critical": {
+      "bytes": 1456676,
+      "filename": "Product31_Offers_Critical_IN_PROGRESS.zip",
+      "sha256": "28f2324ae02f144d6543d7c76e3159ffa9fa66fda30b950987b0e22c5f679d01",
+      "zip_entries": 119
+    },
+    "raw": {
+      "bytes": 2522263,
+      "filename": "Product31_Offers_Recipient_Relocation_Raw.zip",
+      "sha256": "cca2d1e2a0cbd2ea5355308341efe73bc335b0049b82ee4b173be8955bc91eba",
+      "zip_entries": 138
+    }
+  },
+  "raw_capture": "Existing1actualOwnerlock capture,137sourceentries+CAPTUREmanifest138ZIPmembers, onecomplete movedworld. SourcebeforeafterCRC/SHA/modes. Thiswriter reads frozenpacket/ZIP only, opensnoDB/native/client. Original CAPTURE-MANIFEST actualtype0 preserved.",
+  "readonly_preflight_catalog_still_exact": true,
+  "runtime_sha256": "3cc6f3390a636b3e95d8520186d1994f1ba1440ed165dc2293b75fc34f6f29d3",
+  "source_before_after_metadata_exact": true,
+  "source_entries": 42,
+  "status": "BOUNDED_INSTALLED_UNRESERVED_OFFERS_OWN_CONSENT_AI_RECIPIENT_RELOCATION_ONLY_IN_PROGRESS",
+  "writer_execution": "byte packaging only; no DB/Engine/Client/build/test/source/Library/automation/native/processprobes; no children"
+}

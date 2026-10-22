@@ -1,0 +1,13 @@
+{
+  "status": "IMMUTABLE_PRODUCT31_BOUNDED_OFFERS_CRITICAL_PROVIDER",
+  "repository": "guarani-ux/SAMSARA",
+  "commit": "67828ebc2d79dbc494f232d88fd43d2b76fb6cea",
+  "checkpoint": "core-build/checkpoints/PRODUCT31-OFFERS-20261022-IN_PROGRESS",
+  "recipe": "critical-recipe.json",
+  "reconstruct": "reconstruct.py",
+  "bytes": 1456676,
+  "filename": "Product31_Offers_Critical_IN_PROGRESS.zip",
+  "sha256": "28f2324ae02f144d6543d7c76e3159ffa9fa66fda30b950987b0e22c5f679d01",
+  "zip_entries": 119,
+  "scope": "Installed31/native18 bounded unreserved offers/SCRIPTED ownchoices, independentAI later-use private4495B assessment with no consent changes, physicalrelocation. No actual contestplay/award/helperrepair/fullF3/human/fullrelease. Prior28/30 preserved;32/reconstructionKIT excluded."
+}

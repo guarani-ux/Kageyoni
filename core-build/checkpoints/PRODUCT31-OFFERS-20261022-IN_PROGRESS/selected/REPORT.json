@@ -1,0 +1,1423 @@
+{
+  "Library": {
+    "actual_latest_version": 15,
+    "bytes": 469620062,
+    "eligible_workspace_available": 0,
+    "local_complete_parent_successor_sha256": "b13c9619efc76e5d5f311755906df65e73c7b2ea9417cee50594b37007b54b04",
+    "saved": false
+  },
+  "candidate": {
+    "full_release": false,
+    "payloads": [
+      {
+        "bytes": 105,
+        "path": "samsara/__init__.py",
+        "sha256": "22bafa404b31d7c112d9f1b8afa62166ad87e31bd6a686a2c9a0f1a1eb4f8749"
+      },
+      {
+        "bytes": 29,
+        "path": "samsara/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "bytes": 75485,
+        "path": "samsara/application.py",
+        "sha256": "0e81fe3feb5523931ed1e77ecf3d590e3a6cd10b254b6c8ace8a96647d23bbd9"
+      },
+      {
+        "bytes": 20907,
+        "path": "samsara/atlas.py",
+        "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b"
+      },
+      {
+        "bytes": 13613,
+        "path": "samsara/causality.py",
+        "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95"
+      },
+      {
+        "bytes": 9443,
+        "path": "samsara/cli.py",
+        "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd"
+      },
+      {
+        "bytes": 19442,
+        "path": "samsara/client.py",
+        "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040"
+      },
+      {
+        "bytes": 30288,
+        "path": "samsara/compatibility.py",
+        "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71"
+      },
+      {
+        "bytes": 15603,
+        "path": "samsara/console.py",
+        "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7"
+      },
+      {
+        "bytes": 26324,
+        "path": "samsara/content.py",
+        "sha256": "54bec339f5dc07291fb0bf09190dbb7ca347b352906c8bc2e0d1a33313ff77e0"
+      },
+      {
+        "bytes": 39135,
+        "path": "samsara/contentsets.py",
+        "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5"
+      },
+      {
+        "bytes": 10788,
+        "path": "samsara/equipment.py",
+        "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72"
+      },
+      {
+        "bytes": 7158,
+        "path": "samsara/exhibition_admission.py",
+        "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55"
+      },
+      {
+        "bytes": 29499,
+        "path": "samsara/exhibition_profiles.py",
+        "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc"
+      },
+      {
+        "bytes": 17447,
+        "path": "samsara/exhibitions.py",
+        "sha256": "983f39607192daaa4afa7b63eb634bf3c380d8e0a112fc489ea0af2d23248fb1"
+      },
+      {
+        "bytes": 10177,
+        "path": "samsara/exploration.py",
+        "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96"
+      },
+      {
+        "bytes": 16151,
+        "path": "samsara/extensions.py",
+        "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca"
+      },
+      {
+        "bytes": 11382,
+        "path": "samsara/handlers.py",
+        "sha256": "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275"
+      },
+      {
+        "bytes": 10721,
+        "path": "samsara/intake.py",
+        "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297"
+      },
+      {
+        "bytes": 13009,
+        "path": "samsara/local_worker.py",
+        "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730"
+      },
+      {
+        "bytes": 20871,
+        "path": "samsara/mediawork.py",
+        "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e"
+      },
+      {
+        "bytes": 19337,
+        "path": "samsara/owner.py",
+        "sha256": "74e405d8e230b412ebf65d02fa7a94f770da1802a01d67385353268a22b52145"
+      },
+      {
+        "bytes": 25686,
+        "path": "samsara/practice.py",
+        "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444"
+      },
+      {
+        "bytes": 21975,
+        "path": "samsara/practice_content.py",
+        "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4"
+      },
+      {
+        "bytes": 12747,
+        "path": "samsara/process_custody.py",
+        "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+      },
+      {
+        "bytes": 37343,
+        "path": "samsara/properties.py",
+        "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883"
+      },
+      {
+        "bytes": 4039,
+        "path": "samsara/protocol.py",
+        "sha256": "5ed8767fd5135d96f45479446a2f986a20f08c7cc7704473ba48decb06285163"
+      },
+      {
+        "bytes": 51926,
+        "path": "samsara/runner.py",
+        "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832"
+      },
+      {
+        "bytes": 18184,
+        "path": "samsara/situation.py",
+        "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9"
+      },
+      {
+        "bytes": 16934,
+        "path": "samsara/sourcework.py",
+        "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa"
+      },
+      {
+        "bytes": 2534,
+        "path": "samsara/terminal.py",
+        "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800"
+      },
+      {
+        "bytes": 17730,
+        "path": "samsara/travel_content.py",
+        "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6"
+      },
+      {
+        "bytes": 143222,
+        "path": "samsara/data/compatibility-policy-ps1.json",
+        "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9"
+      },
+      {
+        "bytes": 55805,
+        "path": "samsara/data/compatibility-policy-r07a.json",
+        "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845"
+      },
+      {
+        "bytes": 113651,
+        "path": "samsara/data/compatibility-policy-r07b.json",
+        "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb"
+      },
+      {
+        "bytes": 172418,
+        "path": "samsara/data/compatibility-policy.json",
+        "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a"
+      },
+      {
+        "bytes": 124046,
+        "path": "samsara/data/contract.json",
+        "sha256": "11950ecba7a73d92889d0605f29d5982018469c11f4da207976e8c9d07b0a436"
+      },
+      {
+        "bytes": 535,
+        "path": "samsara/data/engine-lock.json",
+        "sha256": "5de62427f9f4d77e9ea325733a6167155d5cbcf9a4790ecb62eec15debf00887"
+      },
+      {
+        "bytes": 572,
+        "path": "samsara/data/initial-source.md",
+        "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+      },
+      {
+        "bytes": 979,
+        "path": "samsara/data/work-record.json",
+        "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de"
+      },
+      {
+        "bytes": 6862,
+        "path": "contracts/epistemic_ledger.py",
+        "sha256": "4dba1e35e3eb3e97b4aee08e88db86e1ebeb8fa3ac3f4fbce4c37255a5e0fcba"
+      },
+      {
+        "bytes": 15431,
+        "path": "contracts/production_gates.py",
+        "sha256": "52836ca69b680f2a19719e7ddb30f74ca07df70f0fcbb1a781e42a1a96b90b6c"
+      },
+      {
+        "bytes": 198,
+        "path": "kageyoni/__init__.py",
+        "sha256": "959f37fbb90744dd0c949056c9781189addc4015066c1de28f7d67cb717ed98b"
+      },
+      {
+        "bytes": 13877,
+        "path": "kageyoni/__main__.py",
+        "sha256": "3747b46484c024f4aaea380b302cc0d0477dd23320e14843899a16b503dd48d2"
+      },
+      {
+        "bytes": 29699,
+        "path": "kageyoni/agency_workflows.py",
+        "sha256": "71a0153d32c66c0308fae555a547face2f4d14e1704c239734a94de4f200ad68"
+      },
+      {
+        "bytes": 4702,
+        "path": "kageyoni/application.py",
+        "sha256": "10f884441c7b8ba96ef8a540508e931825e8884164a4adca78f193d9b34c7e38"
+      },
+      {
+        "bytes": 4429,
+        "path": "kageyoni/celestial.py",
+        "sha256": "c64cc52270db494ba3fe7c0b4a9eeca464ac2a29a800981819e536639bd72b87"
+      },
+      {
+        "bytes": 17361,
+        "path": "kageyoni/characters.py",
+        "sha256": "13e7870ee7ce74ebe4cecbc7769d534ee71b5adb8c41572acb42072102aebd56"
+      },
+      {
+        "bytes": 2126,
+        "path": "kageyoni/checkpoint.py",
+        "sha256": "11f9aa4d645795ee4bc552e254159f539614097d60e19c77ab7dfc4179f71210"
+      },
+      {
+        "bytes": 5914,
+        "path": "kageyoni/coliseum.py",
+        "sha256": "7b6e2d80c888328fc2b90ad90364e9d227bce0f23867ce3e1a4b474a5637e293"
+      },
+      {
+        "bytes": 5814,
+        "path": "kageyoni/console.py",
+        "sha256": "1ffcfe57a322f2a5042442423b332dd6ba4342d288195a2763a72ce514a20568"
+      },
+      {
+        "bytes": 12221,
+        "path": "kageyoni/constellation.py",
+        "sha256": "0131519f5e6e85561a36200113e2bd5d8ef38f49737c360ee5498c4c03d72dd2"
+      },
+      {
+        "bytes": 58103,
+        "path": "kageyoni/contests.py",
+        "sha256": "d4e3f97f64873731e0ebbfc7d0221bdcfe61faef3ec2311051cee65f2eb7b293"
+      },
+      {
+        "bytes": 27286,
+        "path": "kageyoni/decisions.py",
+        "sha256": "d3cc11345beec13c9fd17bcd6b0882bdd48e53d351ce9b62ff53f90cb1f812c4"
+      },
+      {
+        "bytes": 203575,
+        "path": "kageyoni/engine.py",
+        "sha256": "aee4844c9ad4aa812f90cda232f2824fe262c1ae9fb622794bc73ebdabd89283"
+      },
+      {
+        "bytes": 5828,
+        "path": "kageyoni/gate.py",
+        "sha256": "7c3cd950c80fd042e3017db44e95ea125a27541fe5fb1404585a4d7ab9a17844"
+      },
+      {
+        "bytes": 7767,
+        "path": "kageyoni/gate_runner.py",
+        "sha256": "567f7fc7f029a42c74d216352e56cb1aa62f8a94185db308ce8fbdcc8ecbbd02"
+      },
+      {
+        "bytes": 30864,
+        "path": "kageyoni/gateway.py",
+        "sha256": "8540d7c4a8e5abebb0337bc1ef2c812328defcafbb98c4b0420a5f631c4d5465"
+      },
+      {
+        "bytes": 15060,
+        "path": "kageyoni/graph.py",
+        "sha256": "e1018cf70f723a2245638ec6473983c2d9f44f871d0f2fe053a579ef788dad1d"
+      },
+      {
+        "bytes": 7839,
+        "path": "kageyoni/ledger.py",
+        "sha256": "3d448bd0892054c6eafb147611fdbd0d18da6d502e8b29454243fcfea4d139c7"
+      },
+      {
+        "bytes": 7313,
+        "path": "kageyoni/magnet_delta.py",
+        "sha256": "fac98b6f8a81faa53a4486129ec5b4f51cf5a2c7d42a2ddee9cf434167f837f3"
+      },
+      {
+        "bytes": 6049,
+        "path": "kageyoni/migrate.py",
+        "sha256": "644924a723758c8a5f59cf079fbf2e01654bee6ff971d4f1a54cb9fdf7bd4fc0"
+      },
+      {
+        "bytes": 26409,
+        "path": "kageyoni/model.py",
+        "sha256": "9bda61e673a2148765096971312bf778af735cf99effda5ed63b84b613aacb61"
+      },
+      {
+        "bytes": 20426,
+        "path": "kageyoni/operations.py",
+        "sha256": "de8229c4bb72891f5384615eb65547cb37f78456aed9de1d675aa2c91f55ba66"
+      },
+      {
+        "bytes": 15730,
+        "path": "kageyoni/participant_kernel.py",
+        "sha256": "805ef1717de585b09706f63dde3a2fe17c849b8e93110de819b009dbb5715f8f"
+      },
+      {
+        "bytes": 32525,
+        "path": "kageyoni/personality.py",
+        "sha256": "17c5facdd81943ce8257b89c4ebf31b6a91549421eb435830f6eb8d4d72af897"
+      },
+      {
+        "bytes": 1491,
+        "path": "kageyoni/resources.py",
+        "sha256": "dbeb8d45dbb5ab875bb07ab842fb4b17769781f67c301472742e25ad57f07a8b"
+      },
+      {
+        "bytes": 7329,
+        "path": "kageyoni/scout.py",
+        "sha256": "8929ffc885cbc3e7a337d85848bb4f6a8f1391eca1493473452010eb443ae638"
+      },
+      {
+        "bytes": 14196,
+        "path": "kageyoni/seed.py",
+        "sha256": "0e96f49a27a86d952c6bfa459279b8b7cb63937e0600f8224c1f81df2ac90df5"
+      },
+      {
+        "bytes": 23910,
+        "path": "kageyoni/will.py",
+        "sha256": "be7027d3ae81b06b81807a302240c12b808fa4bc11c039d6f9d59daf1c07f52e"
+      },
+      {
+        "bytes": 16052,
+        "path": "kageyoni/workflows.py",
+        "sha256": "a0a7f7eea5c68466f95e362f17d221a17bf19e3a50c0a3a46c2bc8ff9309938a"
+      },
+      {
+        "bytes": 17234,
+        "path": "kageyoni/writing.py",
+        "sha256": "2258d4f0cc442671859c5b1da479f991d35412f7491297e46fca89977a59be97"
+      },
+      {
+        "bytes": 750,
+        "path": "kageyoni/composition/__init__.py",
+        "sha256": "45918ae354ce804d1046c907c2ee4baf27140ba15bdbefb17bbfd9ed35458ecc"
+      },
+      {
+        "bytes": 5993,
+        "path": "kageyoni/composition/adapter.py",
+        "sha256": "04205490812a3b91ecb32241d55b811ab0082b3213b387d9c52e4372010d6252"
+      },
+      {
+        "bytes": 18591,
+        "path": "kageyoni/composition/compiler.py",
+        "sha256": "ee965f241d481ab4fc8779147144157d37df2948cf4e86bf892b0c75dcf9252a"
+      },
+      {
+        "bytes": 2342,
+        "path": "kageyoni/composition/deficits.py",
+        "sha256": "c86b2ca8224171b82b4b9c9d2bc31aec7618e4c6ca009fe42a157070926e1853"
+      },
+      {
+        "bytes": 7472,
+        "path": "kageyoni/composition/effects.py",
+        "sha256": "cf6cb9b5b711a751e935c6d36f5d2a3831a952b6509eaf41bf127d25ebebcfe8"
+      },
+      {
+        "bytes": 2151,
+        "path": "kageyoni/composition/explanation.py",
+        "sha256": "631efa0ed5bd3a54862dec2005f8c8b1dfd56a6a771f4af7d94dc6abcf30e1e6"
+      },
+      {
+        "bytes": 3484,
+        "path": "kageyoni/composition/gates.py",
+        "sha256": "cb6593b8309ecbbf941fe48f127b41a945a8d50312fdbd8fda0b1cf24eb63c39"
+      },
+      {
+        "bytes": 5800,
+        "path": "kageyoni/composition/governor.py",
+        "sha256": "0a74d2cac1ee6064e936f0f1844fc4e3e7cd987aa38b2f0c358a4f1ca43da6f7"
+      },
+      {
+        "bytes": 5141,
+        "path": "kageyoni/composition/knowledge.py",
+        "sha256": "6de313bf527b50d6f63afbeb806ccfba54dafcfbf959019ac773e9fb6e45b94c"
+      },
+      {
+        "bytes": 9669,
+        "path": "kageyoni/composition/registry.py",
+        "sha256": "de75357b45192ca37407b34efcaa9f431d88a7fb6a6164ec43956dea11337405"
+      },
+      {
+        "bytes": 6984,
+        "path": "kageyoni/composition/service.py",
+        "sha256": "527bf32b3e776ad59947336c4976da7273a4a08084a1322cfda9279830f1a978"
+      },
+      {
+        "bytes": 31249,
+        "path": "kageyoni/composition/data/aspect_types.json",
+        "sha256": "63ed8e2d175366fae096e715454494dce87bd4ff901fe5767b88171112dc36fc"
+      },
+      {
+        "bytes": 3456,
+        "path": "kageyoni/composition/data/content_development.json",
+        "sha256": "2b9bfdf5286d5a0c70d1620dd421665730c43c4a36f40ad2821ae207a38c76b9"
+      },
+      {
+        "bytes": 4173,
+        "path": "kageyoni/composition/data/narrative_scene.json",
+        "sha256": "f7e6c51b1b812c4f20ed53ddaf1e002d63378fa136b4460d484b6df2ab6e06b2"
+      },
+      {
+        "bytes": 3565,
+        "path": "kageyoni/data/migration_002.sql",
+        "sha256": "a5442cd0616e46547fc00b7168c010629e7a889f616e93e46e89f59a26f2aa9b"
+      },
+      {
+        "bytes": 6602,
+        "path": "kageyoni/data/migration_003.sql",
+        "sha256": "bea3bd624745b39c94f589f0fa49944c8c11d80b1e822a796125ca62534dedac"
+      },
+      {
+        "bytes": 5238,
+        "path": "kageyoni/data/migration_004.sql",
+        "sha256": "8f20d2759a765f8c35556e527df982481db4292571e96a1189046347bdcfcc64"
+      },
+      {
+        "bytes": 3910,
+        "path": "kageyoni/data/migration_005.sql",
+        "sha256": "c9caa8dde7379caa38927b4125a0c732e3688447ae0d1204fe8a19f11692ae32"
+      },
+      {
+        "bytes": 470,
+        "path": "kageyoni/data/migration_006.sql",
+        "sha256": "43d505460110945cb96233ebeb21051e6e4070e95e8dac45cf929f29431ba4b8"
+      },
+      {
+        "bytes": 3512,
+        "path": "kageyoni/data/migration_007.sql",
+        "sha256": "43e8706e91d67ecd7349e847cc8beabdc0775265f43819e220879a881063cd7d"
+      },
+      {
+        "bytes": 1507,
+        "path": "kageyoni/data/migration_008.sql",
+        "sha256": "042ac97d44a494358ecacc382541ecf1c485001bd497ab93ba903966697e21e3"
+      },
+      {
+        "bytes": 1461,
+        "path": "kageyoni/data/migration_009.sql",
+        "sha256": "6e916198798a08bc62e41233be10e571b532b6d7eea5f52d038a30ede1c37074"
+      },
+      {
+        "bytes": 3387,
+        "path": "kageyoni/data/migration_010.sql",
+        "sha256": "fae161634775e261a0da650a8984c830c321307e99cfe3a5b5351d9880170f6a"
+      },
+      {
+        "bytes": 929,
+        "path": "kageyoni/data/migration_011.sql",
+        "sha256": "e4d543cf739396e217e7b0657854ea20c06fb0e9873dfb973904ec5828604f8c"
+      },
+      {
+        "bytes": 4118,
+        "path": "kageyoni/data/migration_012.sql",
+        "sha256": "681b27fa90de7c42c668a9ebd4b288ed51ac81b4feec095362d4fe9d1955e914"
+      },
+      {
+        "bytes": 2750,
+        "path": "kageyoni/data/migration_013.sql",
+        "sha256": "431b734af855058eec1576b74053155130dc9f2b6df04acaff58789e80baeb4a"
+      },
+      {
+        "bytes": 3090,
+        "path": "kageyoni/data/migration_014.sql",
+        "sha256": "5b54eb4a84d84bf15764308f03403aae58aefe02778cd7c61eda39d191a68fe8"
+      },
+      {
+        "bytes": 2374,
+        "path": "kageyoni/data/migration_015.sql",
+        "sha256": "8e39a9999b31f6b9cfe876411f1db38e184e64f4dc30c569a3f1d33b4f2d450d"
+      },
+      {
+        "bytes": 1075,
+        "path": "kageyoni/data/migration_016.sql",
+        "sha256": "267743fa93e5757e28d82e80c89e8952f7d9a4eb161776f3168f158b85a5de54"
+      },
+      {
+        "bytes": 658,
+        "path": "kageyoni/data/migration_017.sql",
+        "sha256": "e125ee0f074e8e7a9f9cb9f5077cb3e915c1dfe7b2ef9fbed7c67a0d050a5f8f"
+      },
+      {
+        "bytes": 2740,
+        "path": "kageyoni/data/migration_018.sql",
+        "sha256": "538e30ad6f817f599b5b68912d27157fcad6c0f9eb7f7467061c89408f47b216"
+      },
+      {
+        "bytes": 2072,
+        "path": "kageyoni/data/migration_019.sql",
+        "sha256": "3e1dedafcce9f794791c4f9d3f48b00c76aa84a28705f62a84852fe872ddb4e6"
+      },
+      {
+        "bytes": 1170,
+        "path": "kageyoni/data/migration_020.sql",
+        "sha256": "6ba2d95c2a0e1d2b0521e0a9022979a7cd80f548264dd2db26c599743e86cb5f"
+      },
+      {
+        "bytes": 1020,
+        "path": "kageyoni/data/migration_021.sql",
+        "sha256": "ebb8409cfd566a47b52b5772d21f9dca6293b79440bce334b495bb3d0c7f58a3"
+      },
+      {
+        "bytes": 1728,
+        "path": "kageyoni/data/migration_022.sql",
+        "sha256": "b501ba3a65e279b0917ba0a4b454433a8b25a855bfd022f4319170a1946bf7f0"
+      },
+      {
+        "bytes": 470,
+        "path": "kageyoni/data/migration_023.sql",
+        "sha256": "9bb9419c5f1d0e5050b77a5faa613d98e74467991d8d079fd186f3f2fdd5bd3e"
+      },
+      {
+        "bytes": 3504,
+        "path": "kageyoni/data/migration_024.sql",
+        "sha256": "5c2265517dd7432e99f6a8ac7f49dc74f4c8cf6b6a3b32e0f45801f1e77ec840"
+      },
+      {
+        "bytes": 1049,
+        "path": "kageyoni/data/migration_025.sql",
+        "sha256": "e95bdff174f0edaaa3f7afdfb0bb0085dff7970eb388c56fd5302ef1c23e3f81"
+      },
+      {
+        "bytes": 4295,
+        "path": "kageyoni/data/migration_026.sql",
+        "sha256": "223d4a36d6e9daf5c3913ce5acc1f52b5396befe3aacc38a58d51c7a4aa025a8"
+      },
+      {
+        "bytes": 1892,
+        "path": "kageyoni/data/migration_027.sql",
+        "sha256": "9ccd16d52214f0fcd3152c3289b34ea66f9be49039227a4eb4113dae85d9b798"
+      },
+      {
+        "bytes": 3212,
+        "path": "kageyoni/data/migration_028.sql",
+        "sha256": "5b827d032e966a675a414ef891a947fe05796c615c43c53f1cd6bd6989ac7c48"
+      },
+      {
+        "bytes": 1572,
+        "path": "kageyoni/data/migration_029.sql",
+        "sha256": "cb56fa6c1acbd9d86d1161db797e0d8acc67fd90d83928e8c1c90e05b8aa218c"
+      },
+      {
+        "bytes": 1754,
+        "path": "kageyoni/data/migration_030.sql",
+        "sha256": "9ddf4b4d944fc8fa19c12d6f8176cfc478b648dae238c7daa135cde2ba1d0296"
+      },
+      {
+        "bytes": 1540,
+        "path": "kageyoni/data/migration_031.sql",
+        "sha256": "d95644e14f3cc2539ca3cffd764dd4ca7e75bc8785fe658872ca43b4f8694596"
+      },
+      {
+        "bytes": 791,
+        "path": "kageyoni/data/migration_032.sql",
+        "sha256": "9ceec455837f4667fa30fb5730e36773a9eea95bf5590c714b1ba60bb1753e1b"
+      },
+      {
+        "bytes": 3612,
+        "path": "kageyoni/data/migration_033.sql",
+        "sha256": "ae7c588d694dbd2aa67a3b862277ab5badd483b7bf02a224070034a0a3dd67f0"
+      },
+      {
+        "bytes": 3299,
+        "path": "kageyoni/data/migration_034.sql",
+        "sha256": "d12bc9056d563d094cb0b5722fe5704647ced909a11c8e04427f04133d1291b1"
+      },
+      {
+        "bytes": 4609,
+        "path": "kageyoni/data/migration_035.sql",
+        "sha256": "96e00ccde50e4405a8cc88f18513a331dda42f658493daa60ede1fb6f9db564a"
+      },
+      {
+        "bytes": 42066,
+        "path": "kageyoni/data/schema.sql",
+        "sha256": "fa48e230a50c4fee9621d01b3d5f1f0c29d05f51df00593e0c63260e8f9e21eb"
+      },
+      {
+        "bytes": 3764,
+        "path": "kageyoni/developmental/__init__.py",
+        "sha256": "b3de425539310875b79bac1e6fb9ed268a693216444f6121a99458f4b8197599"
+      },
+      {
+        "bytes": 34277,
+        "path": "kageyoni/developmental/agent.py",
+        "sha256": "d7de89aa6761c6ab3a3cc4087ac1d24f32c72e1e2a5d6904dd7b783369bbbf7e"
+      },
+      {
+        "bytes": 36115,
+        "path": "kageyoni/developmental/apex.py",
+        "sha256": "eb2ccd3f027cf2316ab355fd81f69417397a0568c48a82bd8437b73f28ab562e"
+      },
+      {
+        "bytes": 51280,
+        "path": "kageyoni/developmental/closure.py",
+        "sha256": "ee72a00d79cf1884f21f0b195f2e2457f7c9a2a9b0047823226fea499ff14806"
+      },
+      {
+        "bytes": 10464,
+        "path": "kageyoni/developmental/compounding_agent.py",
+        "sha256": "78815839609883c676e7635c98d623e55d861cf7577e0f1763ef20666ff7c8d6"
+      },
+      {
+        "bytes": 40080,
+        "path": "kageyoni/developmental/contracts.py",
+        "sha256": "69b0ec67e84e751213e2245caff748642133f3431e48043305c6f6d2cdd494b8"
+      },
+      {
+        "bytes": 11080,
+        "path": "kageyoni/developmental/forge.py",
+        "sha256": "fc0823b2fcc33ec1e5ebd34f8397dc89c5eb954dacfce78b6c56d60356de64e7"
+      },
+      {
+        "bytes": 25879,
+        "path": "kageyoni/developmental/symbiogenesis.py",
+        "sha256": "e1b3e7905e702b1572d614f52cde79fa776ea41db1ed5923d900663dd4e183bd"
+      },
+      {
+        "bytes": 1344,
+        "path": "kageyoni/emergence/__init__.py",
+        "sha256": "97f59a667a881e9cbfe816cebaabe0ee48200240a17f4dfb09d8aea18653a49a"
+      },
+      {
+        "bytes": 9369,
+        "path": "kageyoni/emergence/action_dispatcher.py",
+        "sha256": "2052433e427edebe242494f058fe2ae5490a29aa90410870bcd06b3f86f76774"
+      },
+      {
+        "bytes": 8801,
+        "path": "kageyoni/emergence/affordances.py",
+        "sha256": "ee86941dfb4ddf52d3c379569ebf2f4aa6db6ca0f2d4e6327e0ab7780b56baea"
+      },
+      {
+        "bytes": 24782,
+        "path": "kageyoni/emergence/causal_encounter.py",
+        "sha256": "75b13efc7e3160f4a746025a2911d284951fa6f15fdaba31a67b4801d7d7626c"
+      },
+      {
+        "bytes": 18023,
+        "path": "kageyoni/emergence/cli.py",
+        "sha256": "d5ffdda7ec0873f5491c454ae95844d1bcb440a3953739f417898917d8dcb6b2"
+      },
+      {
+        "bytes": 10676,
+        "path": "kageyoni/emergence/cognition_trial.py",
+        "sha256": "d899e317024d9384703bd86ec5503ad9a766f5b1fc0009285cd9a921d01ec151"
+      },
+      {
+        "bytes": 30495,
+        "path": "kageyoni/emergence/dispatcher.py",
+        "sha256": "ef7978ab0ae1a97db0da469dc4a44e315f5011d5ce3b88c430f24986ce8c782d"
+      },
+      {
+        "bytes": 26948,
+        "path": "kageyoni/emergence/engine.py",
+        "sha256": "414bf71b9ba31380ae8bef12782959babf2d3651c152c962c49ab1e84fd3c02d"
+      },
+      {
+        "bytes": 7593,
+        "path": "kageyoni/emergence/evaluator.py",
+        "sha256": "31d96657289c719ae99f383f9bece04913c8c132064862f3c7c6823030e3f6b6"
+      },
+      {
+        "bytes": 6374,
+        "path": "kageyoni/emergence/hydration.py",
+        "sha256": "e7a6c74f0abbe69eacdbac47ea738b178a68493f8421a496458ded28c2f4be70"
+      },
+      {
+        "bytes": 5552,
+        "path": "kageyoni/emergence/models.py",
+        "sha256": "70341273bf0cb631c901a568a5e56d74f9ba9ce25021765036f9c9b12f7e5229"
+      },
+      {
+        "bytes": 8312,
+        "path": "kageyoni/emergence/preview.py",
+        "sha256": "b804da8e8d06d0bbd3473f99ddc0a3815738f51758886cbc139bc5f20de296d0"
+      },
+      {
+        "bytes": 11002,
+        "path": "kageyoni/emergence/store.py",
+        "sha256": "bf1627e68764ae8d8e90924860afd5e13dd7e247c2f9b338718a5c9975330b50"
+      },
+      {
+        "bytes": 5845,
+        "path": "kageyoni/emergence/technique.py",
+        "sha256": "f0a94f4b2e1f24cbfa51281eee931377c41c89c319e436d3ce395a2a097ae6bc"
+      },
+      {
+        "bytes": 35594,
+        "path": "kageyoni/emergence/workflow.py",
+        "sha256": "ec14eae8e66045c6287978c7e544829bc02ce0a325887a82bae5479d6aef6f13"
+      },
+      {
+        "bytes": 1427,
+        "path": "kageyoni/entity/__init__.py",
+        "sha256": "b0185bed773e94d637f6125c337084587714929ab7b34995c1d8dc1d6d6cb222"
+      },
+      {
+        "bytes": 14864,
+        "path": "kageyoni/entity/instance.py",
+        "sha256": "5ad4ebe3ad6270908de781578c65da74e38bf2fc6e94675b906203ce40faba6a"
+      },
+      {
+        "bytes": 12800,
+        "path": "kageyoni/entity/models.py",
+        "sha256": "a1a8d54eef57f1e276adb1cfcb04d697c7de365885d7b773d4b3e2a225cae054"
+      },
+      {
+        "bytes": 10793,
+        "path": "kageyoni/entity/specs.py",
+        "sha256": "ad4d1bb47f332c813800a481ddd9102c2a3ef4fc4663cfb7a57c94f92d0939e4"
+      },
+      {
+        "bytes": 16028,
+        "path": "kageyoni/entity/state.py",
+        "sha256": "d8b14a729074f64f3471ab1919ff5065731912e7656ca5b2df41fc8e65170198"
+      },
+      {
+        "bytes": 84,
+        "path": "kageyoni/execution/__init__.py",
+        "sha256": "9b889d8b121fb5956fcad58e52660f92db64e86253b23b2cc86cf1f3424a3edb"
+      },
+      {
+        "bytes": 1243,
+        "path": "kageyoni/execution/manual.py",
+        "sha256": "cbd6f70cab54588d5048d0552e9fa742cb53c02db381be3ac86b2325682f2695"
+      },
+      {
+        "bytes": 10276,
+        "path": "kageyoni/execution/operations.py",
+        "sha256": "c7bf4286ff67dd97674e4ea34f7997e912bd87406ea2b8cc2c00bea7e11fced6"
+      },
+      {
+        "bytes": 71,
+        "path": "kageyoni/intelligence/__init__.py",
+        "sha256": "eeb4b1dcbcb1801f287c385e18e601d3a7504ad2af6d93168a71f4785e84c965"
+      },
+      {
+        "bytes": 4184,
+        "path": "kageyoni/intelligence/contracts.py",
+        "sha256": "024be38f1abf32b9cc76732bd58cd5f92da795e5964caf315fc66069da6ef5b4"
+      },
+      {
+        "bytes": 8138,
+        "path": "kageyoni/intelligence/development.py",
+        "sha256": "ff82dd19ab3968f9e16f8a42e01037d86c0f67914fb95d18cdc1d71e263ed386"
+      },
+      {
+        "bytes": 20370,
+        "path": "kageyoni/intelligence/expression.py",
+        "sha256": "537b1e3ae7e99053e52f11bf102773a65a2189fb0214f7296464da5e380291ab"
+      },
+      {
+        "bytes": 12660,
+        "path": "kageyoni/intelligence/genesis.py",
+        "sha256": "f16ca1ec541f52ddcd987888c31f4d8fe7e67af8985e2bad736614ca10d11916"
+      },
+      {
+        "bytes": 41666,
+        "path": "kageyoni/intelligence/learning.py",
+        "sha256": "0f61f7c2ad969658b68c1253921f27b888fd72bf25dc57016ebce88a0b4e4e27"
+      },
+      {
+        "bytes": 4753,
+        "path": "kageyoni/intelligence/learning_contracts.py",
+        "sha256": "d17dfb4b682411a80dc7c05396729a9d203c1b63ceb9450976aa175beea59528"
+      },
+      {
+        "bytes": 26574,
+        "path": "kageyoni/intelligence/methods.py",
+        "sha256": "92bea48420f3bd2a1c80db1e22a8a75e44bbfd98d69f61efa30e735729e367be"
+      },
+      {
+        "bytes": 25304,
+        "path": "kageyoni/intelligence/network.py",
+        "sha256": "bc03d6970077520949c4e52ca06b7662f2f243927221b14974b16703c6b53342"
+      },
+      {
+        "bytes": 7425,
+        "path": "kageyoni/intelligence/nodes.py",
+        "sha256": "b713e58ef08c23b64f0d6ce10cc1c48f73f54fd22b74c811249f962568484fb2"
+      },
+      {
+        "bytes": 12710,
+        "path": "kageyoni/intelligence/transfer.py",
+        "sha256": "2ce3a18fc387561a8d40d4779b334aeb5c4c3ae24108832cb65247c46f8f9ed2"
+      },
+      {
+        "bytes": 3576,
+        "path": "kageyoni/nature/__init__.py",
+        "sha256": "23966c21f641d7539182740cc3a5bf2df4f0d96d3a543e9a38f45ef02a7c08f2"
+      },
+      {
+        "bytes": 7635,
+        "path": "kageyoni/nature/compounding.py",
+        "sha256": "f930c3144c3a6a15bc312090b93989d152c10c07ecf731d7d46667087d25dfe0"
+      },
+      {
+        "bytes": 9337,
+        "path": "kageyoni/nature/compression.py",
+        "sha256": "a9d9ac24e7eba0c58afbdc81bfff816338f044fd31bbf12bbdc5d7fd3b1cf206"
+      },
+      {
+        "bytes": 14323,
+        "path": "kageyoni/nature/continuity.py",
+        "sha256": "dc389f382831c05e2bedec0e371f742537a00b99b597b196d0cd217e24fcd73c"
+      },
+      {
+        "bytes": 12627,
+        "path": "kageyoni/nature/control.py",
+        "sha256": "0f277d306b13e0aad782632ef95fafa9cdfd658d836ce0def6ef1d1ed3bc32b9"
+      },
+      {
+        "bytes": 8031,
+        "path": "kageyoni/nature/core.py",
+        "sha256": "51a40aad02c5ab35c8cac09b969e06dbfafbec8cc443eaa7479ff8c26a7c049f"
+      },
+      {
+        "bytes": 11084,
+        "path": "kageyoni/nature/coupling.py",
+        "sha256": "35be4d02b2ee083c9f5af0c7b72aed63149cd84f776bb0be79f6d8fe9aface3f"
+      },
+      {
+        "bytes": 11541,
+        "path": "kageyoni/nature/expansion.py",
+        "sha256": "f88cf53d85f827995d83c879e2e9a0777503e09e2a8495a0b0a7c0009d959493"
+      },
+      {
+        "bytes": 12108,
+        "path": "kageyoni/nature/extraction.py",
+        "sha256": "88f767f687b8fc3cdd6b1be3047f2177e0983dc6fcbc0a99160544aa82eb3bc9"
+      },
+      {
+        "bytes": 9312,
+        "path": "kageyoni/nature/grounding.py",
+        "sha256": "548559345c8006a29199ef806f05050b3297c8ec994a320c89929d055e373a21"
+      },
+      {
+        "bytes": 16877,
+        "path": "kageyoni/nature/sovereign_incarnation.py",
+        "sha256": "127f79728c7a6707cddf3a2b2db72f4dc787bf159a00b7159286615d1d99012c"
+      },
+      {
+        "bytes": 9024,
+        "path": "kageyoni/nature/techniques.py",
+        "sha256": "7e6ac6929a2a60cf6ca385c1596f7da602afd92aa32742e53e32f6b81ed5b244"
+      },
+      {
+        "bytes": 40,
+        "path": "kageyoni/persistence/__init__.py",
+        "sha256": "b9b5a5913f0b91d43776b5f046a78da534a650307de7999eee88a7f99d7646da"
+      },
+      {
+        "bytes": 5692,
+        "path": "kageyoni/persistence/artifacts.py",
+        "sha256": "2eed677ee902e53ef9fe28dc327b98e98f33eb5c613637fb220aededa3dbdf57"
+      },
+      {
+        "bytes": 9898,
+        "path": "kageyoni/persistence/contributions.py",
+        "sha256": "a9322204b37cbe233d5099e59bb1716d3898b7cd51ea1fe135844bc707d86bba"
+      },
+      {
+        "bytes": 455,
+        "path": "kageyoni/persistence/migration_034.py",
+        "sha256": "d5fa61948202499cf749322ec8a61d2e6ced0fec6999c422d291f9082385076b"
+      },
+      {
+        "bytes": 10106,
+        "path": "kageyoni/persistence/migrations.py",
+        "sha256": "269e9503c159b0917cf3f366dc08a6ea9b2501f4995dc8f6e87b48dd7d4a4049"
+      },
+      {
+        "bytes": 1489,
+        "path": "kageyoni/persistence/unit_of_work.py",
+        "sha256": "bd33cdd102cc70c7f13988d19c9647f5e0bbfe46d7050f997060e4dc5943d531"
+      },
+      {
+        "bytes": 193,
+        "path": "kageyoni/playable_world/__init__.py",
+        "sha256": "54e06d03c6705ef451c8fdfa67dc9b02daee6dbc1aad3487fd3b79eba82f5ab8"
+      },
+      {
+        "bytes": 10899,
+        "path": "kageyoni/playable_world/kernel.py",
+        "sha256": "d479d9461492eda03a5da4b72047e9fffec4bb82a72762999e004b2d179b6c4b"
+      },
+      {
+        "bytes": 67,
+        "path": "kageyoni/processes/__init__.py",
+        "sha256": "58b2e037214d141be8e81702736aad10b7710d04af99b9747f3f1d57c03e9250"
+      },
+      {
+        "bytes": 2245,
+        "path": "kageyoni/processes/outcomes.py",
+        "sha256": "6ced51e091d58a7d7a455f1e3522eb3a75cadd5aad77a26b52a95224d7938d37"
+      },
+      {
+        "bytes": 873,
+        "path": "kageyoni/research_compiler/__init__.py",
+        "sha256": "505e2b9df84eca12b9e4673b303247aab4ac6bd6ced14c85c33c7a82689395b3"
+      },
+      {
+        "bytes": 5686,
+        "path": "kageyoni/research_compiler/adversarial.py",
+        "sha256": "081d94c4aed8d51e0c7b3c90d19882db7ed1f5ddaef8ffd7fd2e437c7c12dcee"
+      },
+      {
+        "bytes": 18483,
+        "path": "kageyoni/research_compiler/claims.py",
+        "sha256": "be66c1f04524334ce1347dac75197ed73b29246edb7c56e547a14f74237d6379"
+      },
+      {
+        "bytes": 9240,
+        "path": "kageyoni/research_compiler/invalidation_engine.py",
+        "sha256": "4659b839aa060953b0c9b12a5d947eb794b5c63df99c5a1f43fef1d7a5ff6e1d"
+      },
+      {
+        "bytes": 7936,
+        "path": "kageyoni/research_compiler/package_compiler.py",
+        "sha256": "dd0f52c84412dd5e8bf03b31f4426dfd158aeed0eb2edc211b58720da34f2fe8"
+      },
+      {
+        "bytes": 6092,
+        "path": "kageyoni/research_compiler/semantic_casting.py",
+        "sha256": "c7b6d5e503d07061c74f2204b9f65833b6af2f896ad2a82b4e1b4658c17ccb2c"
+      },
+      {
+        "bytes": 6795,
+        "path": "kageyoni/research_compiler/topic_modeler.py",
+        "sha256": "d56841a2ec2d56e8298190d0e76a25319b6decac2152a5e800e66a9f7cd6efa6"
+      },
+      {
+        "bytes": 13251,
+        "path": "kageyoni/research_compiler/treatment_generator.py",
+        "sha256": "36563c445bf34f8c2b14c212865d67a560e11f8aba2c936e02b82c33e4a44411"
+      },
+      {
+        "bytes": 327,
+        "path": "kageyoni/situations/__init__.py",
+        "sha256": "392578f86b718fe36ee099b7b02807628038e834ecd58df89ccb94c63a6c1bcf"
+      },
+      {
+        "bytes": 3595,
+        "path": "kageyoni/situations/catalog.py",
+        "sha256": "20ab3b5379e03d6c90ba964f069554a5e8c3e781a6ffabfafdab0ea324c5e474"
+      },
+      {
+        "bytes": 1008,
+        "path": "kageyoni/situations/comparative.py",
+        "sha256": "24792e5b1cc1230dc53a5ddb372f3b51c1543fad1ec266d1a9b58ff3185ae26a"
+      },
+      {
+        "bytes": 2244,
+        "path": "kageyoni/situations/comparative_runner.py",
+        "sha256": "e7fb31bb8dca1ba578843163e12d5666cb613f4e793be49ec8b18545c3dbf9d8"
+      },
+      {
+        "bytes": 2918,
+        "path": "kageyoni/situations/integration.py",
+        "sha256": "e9ed7cb17b834439b7b33169bff477841d5e79ce9f6a0576ce4444af472f208f"
+      },
+      {
+        "bytes": 4039,
+        "path": "kageyoni/situations/long_horizon.py",
+        "sha256": "76165c9860d4587de51d2af97c6afd1fab20041bd857590f6c1ea1cbc936af1f"
+      },
+      {
+        "bytes": 6882,
+        "path": "kageyoni/situations/memory.py",
+        "sha256": "7026e92b60c38a3266256a92ac9bdc892d1cf92f61f709fea252fd892d5b98f5"
+      },
+      {
+        "bytes": 1664,
+        "path": "kageyoni/situations/models.py",
+        "sha256": "b21564aaf48272a90f2a4d3f0c9e278071bbebf04e86f9a19b9aeeda6a9410f9"
+      },
+      {
+        "bytes": 1688,
+        "path": "kageyoni/situations/qualification.py",
+        "sha256": "7ef8b224cf25c0c23ffaa07733124855d5eb06d91204c6007b27d11435db5a29"
+      },
+      {
+        "bytes": 8615,
+        "path": "kageyoni/situations/runtime.py",
+        "sha256": "7bcfbc65b9643277e34a7e0bfbf2b4e76cdff55d90beef5a7171aaeee0ee52a6"
+      },
+      {
+        "bytes": 3338,
+        "path": "kageyoni/situations/scar.py",
+        "sha256": "c3400660c3126225b0c284653f7a87160c1e3bbf62d2cf0cbbbf245d43dccaa3"
+      },
+      {
+        "bytes": 5711,
+        "path": "kageyoni/situations/service.py",
+        "sha256": "484bcd261bda27f806f6128d7a9e93ea213d5491a53203b811397abb60c7afa6"
+      },
+      {
+        "bytes": 4873,
+        "path": "kageyoni/situations/storage.py",
+        "sha256": "408f54eaa7554961b0286003d9b2f3e042743f98d88a028dcd6285ec3fe3bc8e"
+      },
+      {
+        "bytes": 2536,
+        "path": "kageyoni/situations/studio.py",
+        "sha256": "3e6e81d7a1e65afdb80fd05c182dd4259602dd8676a99bcbc9492978f41555f6"
+      },
+      {
+        "bytes": 1243,
+        "path": "kageyoni/situations/v11_adapter.py",
+        "sha256": "42be706f212f4c2cbf8f1c920320da654caaea777d270cae5fddc72138efdc9d"
+      },
+      {
+        "bytes": 579,
+        "path": "kageyoni/v11/__init__.py",
+        "sha256": "25371fa1230d129852c962d8c45ae7a3d49ec3a1d295dab2098417dc2add43cb"
+      },
+      {
+        "bytes": 9054,
+        "path": "kageyoni/v11/adaptive.py",
+        "sha256": "caeaa34bcdd7c6035089a3e27f5a344880637a8474d882b30b60eb32b7c8bcca"
+      },
+      {
+        "bytes": 3547,
+        "path": "kageyoni/v11/context.py",
+        "sha256": "760af02d5b0ac93c7550fb46fcd24ca91137087545c6ce7a14b50bf9bd40ff4d"
+      },
+      {
+        "bytes": 19018,
+        "path": "kageyoni/v11/enforcement.py",
+        "sha256": "8381d447c57a75f1ce8a0328130c131f1541f5d8165095bed6b510ee1b7eebb4"
+      },
+      {
+        "bytes": 4876,
+        "path": "kageyoni/v11/frontier.py",
+        "sha256": "2b61b7ab33f5875924363e3d1b35b4f7396c442a30f9a462ce667dc155e7d2e9"
+      },
+      {
+        "bytes": 3009,
+        "path": "kageyoni/v11/integration.py",
+        "sha256": "74957ce5bf8c5650b53e8b5f48e83f6711fb0fb3580b47a359189f0f30917410"
+      },
+      {
+        "bytes": 12329,
+        "path": "kageyoni/v11/runtime.py",
+        "sha256": "35c55871cd26cbfe5c730df164561ca069f7ae5579916799faaa054eeddad05b"
+      },
+      {
+        "bytes": 907,
+        "path": "kageyoni/vantage/__init__.py",
+        "sha256": "6644c2c06d059b8b95231e18d8c2889cf54c23c89272638659f23bd04997cafc"
+      },
+      {
+        "bytes": 17494,
+        "path": "kageyoni/vantage/cli.py",
+        "sha256": "fce21192e3620184901b00c9f5db580d9be9cc5419b4ae302b4e6799381d47aa"
+      },
+      {
+        "bytes": 27218,
+        "path": "kageyoni/vantage/engine.py",
+        "sha256": "fbf14b3a5be99c40c1e741d1e708e0b3749702bb46bff6052056c0856efbe043"
+      },
+      {
+        "bytes": 12333,
+        "path": "kageyoni/vantage/graph.py",
+        "sha256": "e248587f8851c5e1a3915ba03ce2f540f96a6acf8759a6934a8f6fe19baa9eb9"
+      },
+      {
+        "bytes": 14727,
+        "path": "kageyoni/vantage/models.py",
+        "sha256": "60fb35bc5eba5cede66e794704b0d3af3debb15eb6ff8f2bbf586e62cbbf2176"
+      },
+      {
+        "bytes": 10712,
+        "path": "kageyoni/vantage/packaging.py",
+        "sha256": "c98bc5763f29e2bf1c050bc6c6c15104b9fe6b0d8e674f366e728a7480735bbd"
+      },
+      {
+        "bytes": 8016,
+        "path": "kageyoni/vantage/performance.py",
+        "sha256": "3663c5a1bd15991efde19f3331e06f53fa5bdcf4ceb06cc846496a3631839999"
+      },
+      {
+        "bytes": 11922,
+        "path": "kageyoni/vantage/production.py",
+        "sha256": "5b50030a3f68799a4e92f6a5251babaa06202ce04b39804dd5973588df1dc3d4"
+      },
+      {
+        "bytes": 12324,
+        "path": "kageyoni/vantage/proposal.py",
+        "sha256": "96b09ca8e275b8899ef8a23e5812a74af0c5956924355f3bedad261772825778"
+      },
+      {
+        "bytes": 12075,
+        "path": "kageyoni/vantage/qualification.py",
+        "sha256": "a94ee6976b5bdf6f22f4e3935d250b686fe809f9d4ab79f8de2c2d06161c0597"
+      },
+      {
+        "bytes": 10393,
+        "path": "kageyoni/vantage/rubric.py",
+        "sha256": "642a8a56aedcaa6b1bbd83dba3a2bedd79ed86375b3cecf0994f2a0e613d1a15"
+      },
+      {
+        "bytes": 8826,
+        "path": "kageyoni/workspaces/activities.py",
+        "sha256": "cc346edc3a75896491070b060b810c51a1a50c3b93490363f233deed378c40d0"
+      },
+      {
+        "bytes": 1934,
+        "path": "kageyoni/workspaces/causal_delivery.py",
+        "sha256": "bd017c2a51fd0edb6a686eaac2128738fa8d9ea6d670ace2d3baa3c805ccb629"
+      },
+      {
+        "bytes": 1389,
+        "path": "kageyoni/workspaces/contracts.py",
+        "sha256": "6fd1124befbe7a0ec9e2a144b69ecb374b4a6854867f51713f1849b59b74cca8"
+      },
+      {
+        "bytes": 12497,
+        "path": "kageyoni/workspaces/custody_schema.py",
+        "sha256": "2427bd87d9109dc43b79643e3e4214e06bcbe23816dbdd649783622ff8f2d9f4"
+      },
+      {
+        "bytes": 20799,
+        "path": "kageyoni/workspaces/documents.py",
+        "sha256": "3b9f43f925edb7c043f17ab5950e88329caaea935de27112191aabf7de162dae"
+      },
+      {
+        "bytes": 1971,
+        "path": "kageyoni/workspaces/extensions.py",
+        "sha256": "25e218aa9a38e25cbdc9ae09591091337003669e8b1edd495a68bc3c78cc72f9"
+      },
+      {
+        "bytes": 17263,
+        "path": "kageyoni/workspaces/job_queue.py",
+        "sha256": "186a8c930811a00d1dfa95ac4a8625f3a94a24d71f5c0169235aa0d41099df11"
+      },
+      {
+        "bytes": 19655,
+        "path": "kageyoni/workspaces/pipeline.py",
+        "sha256": "21feff616dd4ee46e745181c889d9354d22e87e84bb5a7f5c1fc4e8d628a6e24"
+      },
+      {
+        "bytes": 4223,
+        "path": "kageyoni/workspaces/property_changes.py",
+        "sha256": "1560ce31cc190725408ee7767ef577ad06075ef30ae095f72db6d58ba2044ef0"
+      },
+      {
+        "bytes": 5589,
+        "path": "kageyoni/workspaces/registry.py",
+        "sha256": "1afeeb0318e300f9cec018f28a078447b05591d257b139eb40d2aa0badec1df6"
+      },
+      {
+        "bytes": 17930,
+        "path": "kageyoni/workspaces/repository.py",
+        "sha256": "19eb29f307beb7aea89b948979ad388da859882008033464f22a265ea0ed7e44"
+      },
+      {
+        "bytes": 5307,
+        "path": "kageyoni/workspaces/resource_admission.py",
+        "sha256": "48c02fb37a588e56c4f0d13662648fb7e0238639274b78cad0cdf697637f75f6"
+      },
+      {
+        "bytes": 7977,
+        "path": "kageyoni/workspaces/resource_profiles.py",
+        "sha256": "55748676dcb97b18089847027ab55f431bc390512d8c05cf022d1e71c0d42b52"
+      },
+      {
+        "bytes": 3462,
+        "path": "kageyoni/workspaces/transitions.py",
+        "sha256": "9fbd18706dcd93fc62a39588430aa340a29c90a134f0ab801339c31f6d49750d"
+      },
+      {
+        "bytes": 22921,
+        "path": "kageyoni/workspaces/worker_custody.py",
+        "sha256": "73c561d90b415249a3374e7f79bb9b48660a22baaa0af0b11870bbbb1cdd4adc"
+      },
+      {
+        "bytes": 25918,
+        "path": "kageyoni/workspaces/worker_liveness.py",
+        "sha256": "4ebb4916ad048494e708d04547d4874d7ddb21281378b466aafb13283f449755"
+      },
+      {
+        "bytes": 46100,
+        "path": "kageyoni/workspaces/world.py",
+        "sha256": "562f82144b441fd2171450f795f8517dfc7ff3d96af64176518890802f05f4c0"
+      }
+    ],
+    "runtime": "3cc6f3390a636b3e95d8520186d1994f1ba1440ed165dc2293b75fc34f6f29d3",
+    "status": "ISOLATED_UNQUALIFIED_ADMISSION_BUILD",
+    "versions": {
+      "kageyoni-engine": "11.1.0.dev18",
+      "samsara-world": "0.5.3.dev31"
+    },
+    "wheel_sha256": {
+      "engine": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+      "product": "a17dac8ed4172b2cda1ccf50e0fd09f67d9f4b7ebd64a34ed81c26616c0fa1f4"
+    }
+  },
+  "full_release": false,
+  "independent_AI_component": {
+    "activity_id": "synthetic:f3a:independent-left-assessment31",
+    "actor": "synthetic:f3a:left",
+    "api_errors": [],
+    "authored_bytes": 4495,
+    "checkpoint_outcome": "unresolved",
+    "checkpoint_state": "finished",
+    "choices_unchanged": true,
+    "consent_mutations": 0,
+    "exact_reopen_bytes_match": true,
+    "limits": [
+      "Private fallible AI assessment; no human use, agreement, mastery, award, full F3 or full-build qualification.",
+      "No contest begin/settlement or direct native-database verification was performed."
+    ],
+    "new_text_roots": 1,
+    "output_ref": {
+      "digest": "c52caf2d1b52d928ac8bf3acf9fe7c8251213b3d57459db776f68b3dada23c3b",
+      "id": "artifact:f8ef6a16bbff4ec1ac28d66b40a2f86d",
+      "version": 1
+    },
+    "outputs": 1,
+    "owner_closures": [
+      {
+        "client_close_after_exit": true,
+        "exit_code": 0,
+        "phase": "inspect",
+        "stdin_eof": true
+      },
+      {
+        "client_close_after_exit": true,
+        "exit_code": 0,
+        "phase": "terms",
+        "stdin_eof": true
+      },
+      {
+        "client_close_after_exit": true,
+        "exit_code": 0,
+        "phase": "prepare",
+        "stdin_eof": true
+      },
+      {
+        "client_close_after_exit": true,
+        "exit_code": 0,
+        "phase": "return",
+        "stdin_eof": true
+      },
+      {
+        "client_close_after_exit": true,
+        "exit_code": 0,
+        "phase": "reopen",
+        "stdin_eof": true
+      }
+    ],
+    "payloads": 243,
+    "pending_effects": [],
+    "proof_identity_unchanged": true,
+    "reservations": [],
+    "role": "player",
+    "runtime": "3cc6f3390a636b3e95d8520186d1994f1ba1440ed165dc2293b75fc34f6f29d3",
+    "source_refs": [
+      {
+        "digest": "0bb032814a3382071d0c21417adde3ea2801d74edb11e3b23aaa8892c12fbc36",
+        "id": "artifact:886576cda33c4deba81bc8c91a43bf18",
+        "version": 1
+      },
+      {
+        "digest": "43f763c9eaf7c8151918ec815f1f72e352f3d6a6d31f09b382bc18d4e603befe",
+        "id": "artifact:31b336bf6b314a61b5e4bfdc2325e8bd",
+        "version": 1
+      }
+    ],
+    "stages": 1,
+    "status": "PASSED_BOUNDED_AI_RECIPIENT_COMPONENT",
+    "uncertain_operations": [],
+    "versions": {
+      "kageyoni-engine": "11.1.0.dev18",
+      "samsara-world": "0.5.3.dev31"
+    },
+    "world": "/dev/shm/product31-offers/offers-r1/w1"
+  },
+  "initial_phase_only": "Before recipient activity: activity_runs/jobs0; no settlement/material changes. Later recipient legitimately adds one ordinary text activity; do not call current activity count0.",
+  "later_actual_materials": "post-recipient native verification: pool2/both award0/both incorporated0; settlement0; current left withdrawal preserved",
+  "limits": [
+    "SCRIPTED separate consent choices are not independent AI entrant choices or human agreement",
+    "Fresh AI recipient made no consent changes;4495B text assessment later use only; finished/unresolved component",
+    "No actual contest begin/opposed choices/winner/award/helper repair/season/fullF3",
+    "No all-product/oldworldplayablecompatibility/newOwner oldworld/hashrewrite/human/mastery/canon claims",
+    "All F1-F5/fullrelease false; earlier bounded Product28 and current26 media evidence remains version-bound",
+    "Current31 is outside complete current28 continuation ZIP; no new Library version; Library actual15",
+    "No active or uncertain Client operations; all actual Owners exited0; no signals"
+  ],
+  "native_dependency": {
+    "canonical_source_count": 745,
+    "checkpoint": "F3A-NATIVE18-20261022-IN_PROGRESS",
+    "full_verified_Kage_commit": "1598555d04c3846a6ba4208b4b35dc701515474b",
+    "full_verified_SAM_commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+    "unchanged_from_product30": true,
+    "version": "11.1.0.dev18"
+  },
+  "next": [
+    "Implement private provenance-bound existing-episode attachment after two current voluntary consents; fresh packet only then; guard every nonfree commit, preserve free exit/cancel",
+    "Actual native eligible event -> derived exactly-once conserved award -> separately willing helper repair -> fresh recipient/lateruse/dual interruption/recovery",
+    "Continue missing source-withdrawal/media/general F1-F5 breadth; canon/human block dependent claims only"
+  ],
+  "physical_relocation": {
+    "FK": 0,
+    "all_owner_actual_exits": [
+      0
+    ],
+    "changes": 0,
+    "checkedbackup": "/dev/shm/product31-offers/relocation-r1/checked-backup.sqlite",
+    "current_left_withdrawal_preserved": true,
+    "directregistry": {
+      "entries": 106,
+      "errors": [],
+      "ok": true
+    },
+    "fullrelease": false,
+    "nativeverify": {
+      "branches": 1,
+      "events": 16,
+      "ok": true,
+      "processes": 2,
+      "properties": 2,
+      "records": 57,
+      "runtime_schema": "4",
+      "schema_version": 2,
+      "will_attempts": 0
+    },
+    "no_new_gameplay_or_human_claim": true,
+    "old_path_absent": true,
+    "reads": [
+      {
+        "bytes": 2079,
+        "ref": {
+          "digest": "0bb032814a3382071d0c21417adde3ea2801d74edb11e3b23aaa8892c12fbc36",
+          "id": "artifact:886576cda33c4deba81bc8c91a43bf18",
+          "version": 1
+        }
+      },
+      {
+        "bytes": 2084,
+        "ref": {
+          "digest": "43f763c9eaf7c8151918ec815f1f72e352f3d6a6d31f09b382bc18d4e603befe",
+          "id": "artifact:31b336bf6b314a61b5e4bfdc2325e8bd",
+          "version": 1
+        }
+      },
+      {
+        "bytes": 4495,
+        "ref": {
+          "digest": "c52caf2d1b52d928ac8bf3acf9fe7c8251213b3d57459db776f68b3dada23c3b",
+          "id": "artifact:f8ef6a16bbff4ec1ac28d66b40a2f86d",
+          "version": 1
+        }
+      }
+    ],
+    "signals": 0,
+    "status": "PASS_PHYSICAL_RELOCATION_FRESH_ACTOR_EXACTREADS",
+    "terms_and4495Bassessment_equal": true,
+    "world": "/dev/shm/product31-offers/relocated-world/w1"
+  },
+  "privacy_after_recipient": {
+    "full_release": false,
+    "payloads": 243,
+    "runtime": "3cc6f3390a636b3e95d8520186d1994f1ba1440ed165dc2293b75fc34f6f29d3",
+    "status": "PASS_KNOWN_MISSING_TERMS_PRIVACY_AND_POST_AI_RECIPIENT_NATIVE_VERIFY"
+  },
+  "scope": "operator-opened unreserved offer; separately bound own accepted/declined/withdrawn choices; current authorized cached replay; no begin/settle/repair wire",
+  "scripted_offer_controls": {
+    "full_release": false,
+    "independent_AI_or_human": false,
+    "no_activity_job_material_award_or_repair": true,
+    "payloads": 243,
+    "runtime": "3cc6f3390a636b3e95d8520186d1994f1ba1440ed165dc2293b75fc34f6f29d3",
+    "separate_bound_actors": true,
+    "status": "PASS_SCRIPTED_INSTALLED_UNRESERVED_OFFERS_OWN_CONSENT_ONLY",
+    "uncertain_effects": false
+  },
+  "source_files": 42,
+  "source_reviews": "Original unintegrated offer raw-kind failure, unrelated visibility withdrawal dependency, cached replay current-authority gap and exact prerepair sources retained. Root narrow repairs;17 pure offer projection,17 pure replay projection, same13 wire predicates source then actual installed13. Mocks/parser checks are not whole-world qualification.",
+  "status": "BOUNDED_INSTALLED_UNRESERVED_OFFERS_OWN_CONSENT_AI_RECIPIENT_RELOCATION_ONLY",
+  "uncertain_operations": false
+}

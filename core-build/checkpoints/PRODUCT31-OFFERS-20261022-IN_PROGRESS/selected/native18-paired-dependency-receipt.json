@@ -1,0 +1,129 @@
+{
+  "status": "COMPLETE_PAIRED_FUTURE_NATIVE18_SOURCE_AND_RAW_BYTE_CUSTODY_IN_PROGRESS",
+  "timestamp": "2026-10-22T19:50:03.612312+00:00",
+  "repositories": [
+    "guarani-ux/SAMSARA",
+    "guarani-ux/Kageyoni"
+  ],
+  "branch": "codex/samsara-core-continuation",
+  "private_unarchived_freshly_verified": true,
+  "governing_pins": [
+    "db9838371a1128124b77fac69677902a4b5820c6",
+    "872973f091320f92e3276408090978084928d291"
+  ],
+  "initial_heads": [
+    "881890787a973a78c0a7ff5ca0e30896afd366c9",
+    "2e4120fe0e0070057bd222535c2ea31f06534b96"
+  ],
+  "critical_heads": [
+    "131af761a54765b6a7b5c4ecf8d2f36d73e76ec4",
+    "4919f70f35b797c925e5beaa754ab986e34be430"
+  ],
+  "final_heads": [
+    "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+    "1598555d04c3846a6ba4208b4b35dc701515474b"
+  ],
+  "force": false,
+  "CAS_expected_sha_exact": true,
+  "no_PR_merge_newbranch": true,
+  "checkpoint": "core-build/checkpoints/F3A-NATIVE18-20261022-IN_PROGRESS",
+  "immutable_provider_repository": "guarani-ux/SAMSARA",
+  "immutable_provider_body_commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+  "all_prior_unseen_paths_and_critical_payloads_preserved": true,
+  "actual_tree_exact_blob_paths": [
+    338,
+    54
+  ],
+  "all_full_payload_readbacks_exact": [
+    338,
+    54
+  ],
+  "providers": {
+    "critical": {
+      "output": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future/Future_Native18_Critical_REMOTE_READBACK.zip",
+      "bytes": 6107013,
+      "sha256": "a1543dcf29c24d40f5c7158564a4a5589d95ab94a9238d66a4501118834c409a",
+      "ZIP_members": 1574,
+      "ASCII_parts": 13,
+      "full_Git_SHA_offsets_CRC_every_member_SHA_modes_types_symlinktargets": true
+    },
+    "native17": {
+      "output": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future/Native17_Closed_Raw_REMOTE_READBACK.zip",
+      "bytes": 63842950,
+      "sha256": "deb9cf49b8ec4c642d63dd1629e9a76af91064c6f20f10ea2f3de9a60a14d45f",
+      "ZIP_members": 1468,
+      "ASCII_parts": 128,
+      "full_Git_SHA_offsets_CRC_every_member_SHA_modes_types_symlinktargets": true,
+      "unspecified_file_type0_only_original_added_manifest": [
+        "CAPTURE-MANIFEST.json"
+      ],
+      "symlinks": 21
+    },
+    "native18": {
+      "output": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future/Native18_Closed_Raw_REMOTE_READBACK.zip",
+      "bytes": 68360077,
+      "sha256": "9aad54982fd63273c30a9514d3a65b7d1878a8eeb77a7e7f4a6c2b11ebdcf3d9",
+      "ZIP_members": 1569,
+      "ASCII_parts": 137,
+      "full_Git_SHA_offsets_CRC_every_member_SHA_modes_types_symlinktargets": true,
+      "unspecified_file_type0_only_original_added_manifest": [
+        "CAPTURE-MANIFEST.json"
+      ],
+      "symlinks": 21
+    },
+    "supplemental": {
+      "output": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future/Native18_Maintenance_Control_REMOTE_READBACK.zip",
+      "bytes": 3954756,
+      "sha256": "b33b55be1c381b201411032dcd5099bc83dd34d63f0fcf3dbca425d9956abb1e",
+      "ZIP_members": 161,
+      "ASCII_parts": 8,
+      "full_Git_SHA_offsets_CRC_every_member_SHA_modes_types_symlinktargets": true,
+      "unspecified_file_type0_only_original_added_manifest": [],
+      "symlinks": 0
+    }
+  },
+  "native18_count_correction": {
+    "source_entries": 1568,
+    "ZIP_members": 1569,
+    "manifest_members": 1,
+    "original_archive_and_receipts_unchanged": true
+  },
+  "canonical_source_files_rechecked": 745,
+  "native18_wheel_sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+  "frozen_ledger_fe6_preserved": true,
+  "actual_product_authority": "product28/native16 unchanged",
+  "future_native18_only": true,
+  "native17_antecedent": "37PASS plus independent5FAIL1PASS retained; both concrete findings repaired only in successor18",
+  "native18_execution_scope": "Root actual43PASS203payload and actual-copy maintenance/nativebackuprestore; no new execution by this writer",
+  "stopped_control_scope": "0completedcases0signals; procguardENOENT; actualOwnerexit1; workerUNKNOWN; exactraw41files44140957bytes preserved",
+  "negative_stopped_worlds_universally_healthy": false,
+  "full_product_F3_world_season_human_generalhost_F1_F5_qualification": false,
+  "native_original_journal_failure_unresolved": true,
+  "source_before_after": "Critical byte/mode/type catalogs exact; supplemental full source byte/mode/type/link/inode/mtime metadata exact under existing Owner locks; original raw17/18 ZIPcopy source-before/after and target exact.",
+  "root_new_context_additive_only": [
+    "F3a-product-root-contract.md",
+    "CONTINUATION-AFTER-NATIVE18.md",
+    "prompt-native18-update-receipt.json",
+    "native18-capture-count-clarification.json",
+    "final-context/BUILD_STATUS.json"
+  ],
+  "excluded_following_work": [
+    "product29 source candidate",
+    "active revised compiler leaf",
+    "new Library size400 error/follow-up export beyond current frozen context"
+  ],
+  "transport_limits": [
+    "Initial local roster duplicate and resume-parent errors preserved.",
+    "Raw CAPTURE-MANIFEST has actual unspecified type0; only that added manifest, not original source members.",
+    "Two own byte packaging jobs briefly overlapped; both actualexit0, no native/test work overlapped; root notified.",
+    "Initial bulk304path tree unexpected reply raw payload not retained by wrapper; explicit capture gap, no branch movement.",
+    "Later137-entry tree actual ReadTimeout/UNKNOWN retained; exacttarget404 and unchangedhead inspected; four incremental40-entry content-addressed tree requests yielded identical expectedSHA.",
+    "Canonical negative tree reads remained404; independent commit-route root entries hashed to exactexpected tree and full recursive checkpoint read matched all338/54 payloads. Cause unestablished; no false absence inference."
+  ],
+  "RAM_receipt_root": "/dev/shm/github-native18-future",
+  "RAM_path_map": "/dev/shm/github-native18-future/RAM-PATH-MAP.json",
+  "workspace_artifact_root": "/workspace/scratch/5c7ed9200168/recovery-20261022/github-native18-future",
+  "commission_effects": "Snapshot, byte hashing, ZIP/provider reconstruction and authorized private Git checkpoint only. No DB/native API/test/build/install/process probe/signal/automation/Library/source changes.",
+  "git_writer": "RELEASED to root after final actual head readback",
+  "next_action": "Root may separately commission the following coherent SOURCE_ONLY product29/compiler/rootledger/Library-error checkpoint; do not fold it into this freeze."
+}

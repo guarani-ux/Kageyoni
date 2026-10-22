@@ -1,0 +1,217 @@
+{
+  "status": "FULL_PAIRED_PRODUCT30_ADMISSION_ONLY_CHECKPOINT_AND_REMOTE_CUSTODY_VERIFIED",
+  "checkpoint": "core-build/checkpoints/PRODUCT30-ADMISSION-20261022-IN_PROGRESS",
+  "branch": "codex/samsara-core-continuation",
+  "initial_heads": {
+    "SAMSARA": "cc81bb3148ab9ac587dbf14332795202d13ca602",
+    "Kageyoni": "86a1e04811837d731d78bb19e4bf99e448a39c24"
+  },
+  "critical_commits": {
+    "SAMSARA": {
+      "commit": "998779e5d24d5fc0b1b9ca47754c226371ec30ea",
+      "tree": "ff6faa3dac791e8832aca9c9b0341b4c0d2032d7",
+      "parent": "cc81bb3148ab9ac587dbf14332795202d13ca602"
+    },
+    "Kageyoni": {
+      "commit": "34c2fed8353b80a5bddb64c4226312aa7b3968da",
+      "tree": "91b62f8dd519cae2ccd467e5cf645b274cea8c1c",
+      "parent": "86a1e04811837d731d78bb19e4bf99e448a39c24"
+    }
+  },
+  "final_commits": {
+    "SAMSARA": {
+      "commit": "bd8f9b42a96cae748fa4b2dba5137448f44fe402",
+      "tree": "e117673d7a23eacc56b769f07472b12f78d4be77",
+      "parent": "998779e5d24d5fc0b1b9ca47754c226371ec30ea"
+    },
+    "Kageyoni": {
+      "commit": "2689d50a276203002a6f8568fcbd48ae3b74f1ca",
+      "tree": "6f7c23726cd87b67c7bef26ef4ad1cd6cfa6f818",
+      "parent": "34c2fed8353b80a5bddb64c4226312aa7b3968da"
+    }
+  },
+  "actual_updates": {
+    "SAMSARA": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "success": true
+      },
+      "isError": false
+    },
+    "Kageyoni": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "success": true
+      },
+      "isError": false
+    }
+  },
+  "actual_final_readbacks": {
+    "SAMSARA": {
+      "head": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"ref\":\"refs/heads/codex/samsara-core-continuation\",\"node_id\":\"REF_kwDOVIqlR9oAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/refs/heads/codex/samsara-core-continuation\",\"object\":{\"sha\":\"bd8f9b42a96cae748fa4b2dba5137448f44fe402\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/bd8f9b42a96cae748fa4b2dba5137448f44fe402\"}}",
+          "title": "samsara-core-continuation",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/ref/heads/codex/samsara-core-continuation",
+          "display_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/ref/heads/codex/samsara-core-continuation",
+          "display_title": "samsara-core-continuation",
+          "structuredContent": {
+            "title": "samsara-core-continuation",
+            "content": "{\"ref\":\"refs/heads/codex/samsara-core-continuation\",\"node_id\":\"REF_kwDOVIqlR9oAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/refs/heads/codex/samsara-core-continuation\",\"object\":{\"sha\":\"bd8f9b42a96cae748fa4b2dba5137448f44fe402\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/guarani-ux/SAMSARA/git/commits/bd8f9b42a96cae748fa4b2dba5137448f44fe402\"}}",
+            "display_url": "https://api.github.com/repos/guarani-ux/SAMSARA/git/ref/heads/codex/samsara-core-continuation"
+          }
+        },
+        "isError": false
+      },
+      "BODY_READBACK": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\n  \"status\": \"WHOLE_ARCHIVE_ACTUAL_REMOTE_READBACK_VERIFIED\",\n  \"providers\": {\n    \"critical\": {\n      \"filename\": \"Product30_Admission_Critical_IN_PROGRESS.zip\",\n      \"bytes\": 2553474,\n      \"sha256\": \"55a4b1310136d5cbec9958164da01e2476cfda8e8d4234f2d237aea8f81dae15\",\n      \"zip_entries\": 177\n    },\n    \"body\": {\n      \"filename\": \"Product30_Admission_Complete_Packet_IN_PROGRESS.zip\",\n      \"bytes\": 8636060,\n      \"sha256\": \"a63ffc2d911431414e12793e879209bb1c4c014ac3a7443acb33802ddb697e44\",\n      \"zip_entries\": 178\n    },\n    \"raw\": {\n      \"filename\": \"Product29_30_Actual_Admission_Raw.zip\",\n      \"bytes\": 6705819,\n      \"sha256\": \"791434d813efd8596bdd8498a6459d37fcf43847c30a568d7437c01540246d75\",\n      \"zip_entries\": 243\n    }\n  },\n  \"remote_reconstruction_checks\": [\n    \"all ASCII/raw partSHA256 and Git IDs\",\n    \"strict base64 and exact offsets\",\n    \"wholearchiveSHA256\",\n    \"ZIPCRC/unique paths\",\n    \"everymemberSHA256/mode/filetype/symlinktarget\",\n    \"all160frozenfiles exact inside remote packet\",\n    \"rawZIP exact standalone and inside recoveredpacket\"\n  ],\n  \"remote_payload_counts\": {\n    \"critical_SAM\": 63,\n    \"critical_Kage\": 57,\n    \"critical_Kage_pointer\": 1,\n    \"body_SAM\": 45,\n    \"body_Kage\": 13\n  },\n  \"raw_manifest_type0\": \"Exact original CAPTURE-MANIFEST.json only; not an original source entry; no invented S_IFREG\",\n  \"all_source_before_after_metadata_exact\": true,\n  \"semantic_claim\": \"Admission only; no opposedcontest/consent/award/repair/fullF3/human/fullrelease. Old failures preserved.\",\n  \"writer_DB_native_Client_test_build_source_Library_automation_effects\": false\n}\n"
+        },
+        "isError": false
+      }
+    },
+    "Kageyoni": {
+      "head": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\"ref\":\"refs/heads/codex/samsara-core-continuation\",\"node_id\":\"REF_kwDOUgoRfdoAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/refs/heads/codex/samsara-core-continuation\",\"object\":{\"sha\":\"2689d50a276203002a6f8568fcbd48ae3b74f1ca\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/2689d50a276203002a6f8568fcbd48ae3b74f1ca\"}}",
+          "title": "samsara-core-continuation",
+          "modified_date": null,
+          "url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/ref/heads/codex/samsara-core-continuation",
+          "display_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/ref/heads/codex/samsara-core-continuation",
+          "display_title": "samsara-core-continuation",
+          "structuredContent": {
+            "title": "samsara-core-continuation",
+            "content": "{\"ref\":\"refs/heads/codex/samsara-core-continuation\",\"node_id\":\"REF_kwDOUgoRfdoAKnJlZnMvaGVhZHMvY29kZXgvc2Ftc2FyYS1jb3JlLWNvbnRpbnVhdGlvbg\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/refs/heads/codex/samsara-core-continuation\",\"object\":{\"sha\":\"2689d50a276203002a6f8568fcbd48ae3b74f1ca\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/guarani-ux/Kageyoni/git/commits/2689d50a276203002a6f8568fcbd48ae3b74f1ca\"}}",
+            "display_url": "https://api.github.com/repos/guarani-ux/Kageyoni/git/ref/heads/codex/samsara-core-continuation"
+          }
+        },
+        "isError": false
+      },
+      "BODY_READBACK": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "{\n  \"status\": \"WHOLE_ARCHIVE_ACTUAL_REMOTE_READBACK_VERIFIED\",\n  \"providers\": {\n    \"critical\": {\n      \"filename\": \"Product30_Admission_Critical_IN_PROGRESS.zip\",\n      \"bytes\": 2553474,\n      \"sha256\": \"55a4b1310136d5cbec9958164da01e2476cfda8e8d4234f2d237aea8f81dae15\",\n      \"zip_entries\": 177\n    },\n    \"body\": {\n      \"filename\": \"Product30_Admission_Complete_Packet_IN_PROGRESS.zip\",\n      \"bytes\": 8636060,\n      \"sha256\": \"a63ffc2d911431414e12793e879209bb1c4c014ac3a7443acb33802ddb697e44\",\n      \"zip_entries\": 178\n    },\n    \"raw\": {\n      \"filename\": \"Product29_30_Actual_Admission_Raw.zip\",\n      \"bytes\": 6705819,\n      \"sha256\": \"791434d813efd8596bdd8498a6459d37fcf43847c30a568d7437c01540246d75\",\n      \"zip_entries\": 243\n    }\n  },\n  \"remote_reconstruction_checks\": [\n    \"all ASCII/raw partSHA256 and Git IDs\",\n    \"strict base64 and exact offsets\",\n    \"wholearchiveSHA256\",\n    \"ZIPCRC/unique paths\",\n    \"everymemberSHA256/mode/filetype/symlinktarget\",\n    \"all160frozenfiles exact inside remote packet\",\n    \"rawZIP exact standalone and inside recoveredpacket\"\n  ],\n  \"remote_payload_counts\": {\n    \"critical_SAM\": 63,\n    \"critical_Kage\": 57,\n    \"critical_Kage_pointer\": 1,\n    \"body_SAM\": 45,\n    \"body_Kage\": 13\n  },\n  \"raw_manifest_type0\": \"Exact original CAPTURE-MANIFEST.json only; not an original source entry; no invented S_IFREG\",\n  \"all_source_before_after_metadata_exact\": true,\n  \"semantic_claim\": \"Admission only; no opposedcontest/consent/award/repair/fullF3/human/fullrelease. Old failures preserved.\",\n  \"writer_DB_native_Client_test_build_source_Library_automation_effects\": false\n}\n"
+        },
+        "isError": false
+      }
+    }
+  },
+  "governing_pins": {
+    "SAMSARA": "db9838371a1128124b77fac69677902a4b5820c6",
+    "Kageyoni": "872973f091320f92e3276408090978084928d291"
+  },
+  "repositories": "Both private/unarchived, fresh before each CAS; forcefalse exact parents, no PR/merge/newbranch, all prior/unseen sibling paths preserved.",
+  "whole_payloads_full_actual_readback": {
+    "SAMSARA": 112,
+    "Kageyoni": 76
+  },
+  "proofs": [
+    "Every staged blob GitID independently computed from complete original bytes",
+    "Every original payload full body fetched and SHA256/GitID verified",
+    "Source text/binary transmitted as base64, immutable ASCII parts strict",
+    "All checkpoint leafpaths/modes/types/GitIDs exact, noextras",
+    "Root Git trees independently serialized to exact commit treeSHA",
+    "Actual branch ref readbacks exact after each CAS",
+    "Whole remote ZIPs reconstructed, allparts/offsets/CRC/members/modes/types/linktargets exact",
+    "All160frozenfiles exact inside remotely reconstructed packet; sourcebeforeafter inode/device/mtime/mode/hash identical",
+    "RawZIP exact standalone and inside packet; original CAPTURE-MANIFEST actualtype0 retained"
+  ],
+  "frozen_manifest": {
+    "sha256": "0842ec71cefe10ab70731e73b83df6f6678fd08619b51a988ac675343e8a8c62",
+    "manifest_files": 159,
+    "physical_files": 160,
+    "bytes": 12224263,
+    "ledger_sha256": "da8510c3075f2adcf13f50e05adef530f95efb930a7d1536fd3619c12fef3f31"
+  },
+  "installed_candidate": {
+    "runtime_sha256": "436ccf17e0be08159ac31dca14025958d1c9a407183eb2ff8ebe98df189bdd2b",
+    "product_wheel_sha256": "8562fa30d8f64fdcf61f1d5f646db7512b1911549f8a68af00f8371763294d17",
+    "native18_wheel_sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+    "payload_proof_count": 242,
+    "writer_reran_runtime_checks": false
+  },
+  "remote_ZIPs": [
+    {
+      "kind": "critical",
+      "local": "/dev/shm/github-product30-admission/Product30_Critical_REMOTE_READBACK.zip",
+      "bytes": 2553474,
+      "sha256": "55a4b1310136d5cbec9958164da01e2476cfda8e8d4234f2d237aea8f81dae15",
+      "members": 177,
+      "recipe": "critical-recipe.json",
+      "ASCII_parts": 6
+    },
+    {
+      "kind": "complete160file_packet",
+      "local": "/dev/shm/github-product30-admission/Product30_Complete_Packet_REMOTE_READBACK.zip",
+      "bytes": 8636060,
+      "sha256": "a63ffc2d911431414e12793e879209bb1c4c014ac3a7443acb33802ddb697e44",
+      "members": 178,
+      "recipe": "body-recipe.json",
+      "ASCII_parts": 18
+    },
+    {
+      "kind": "exact_original_raw",
+      "local": "/dev/shm/github-product30-admission/Product29_30_Actual_Admission_Raw_REMOTE_READBACK.zip",
+      "bytes": 6705819,
+      "sha256": "791434d813efd8596bdd8498a6459d37fcf43847c30a568d7437c01540246d75",
+      "members": 243,
+      "recipe": "raw-recipe.json",
+      "ASCII_parts": 14
+    }
+  ],
+  "remote_recovery": {
+    "SAMSARA_directory": "https://github.com/guarani-ux/SAMSARA/tree/bd8f9b42a96cae748fa4b2dba5137448f44fe402/core-build/checkpoints/PRODUCT30-ADMISSION-20261022-IN_PROGRESS",
+    "Kageyoni_provider": "https://github.com/guarani-ux/Kageyoni/blob/2689d50a276203002a6f8568fcbd48ae3b74f1ca/core-build/checkpoints/PRODUCT30-ADMISSION-20261022-IN_PROGRESS/BODY-PROVIDER.json",
+    "instructions": "Immutable SAM README.md plus reconstruct.py and exact recipes/partdirectories; complete downloaded directory, ordinary Python3; no DBopen/extraction."
+  },
+  "scope": "Installed product30/native18 ADMISSION ONLY IN_PROGRESS. Dev29 real DEPENDENCY failure/2diagnosticcopies, dev30 narrow default-preserving repair and sourceRED/GREEN20pure checks retained. Actual30 prepare/preview/activate/replay/reopen,3playernegativecontrols,registry/FK/nativeverify/checkedbackup and242proof retained, not reexecuted by writer. SOURCE_ONLY offer17pure and Media28harness21pure excluded from productiontrees. Current28bounded predecessor/priornative18source745anchor preserved.",
+  "not_qualified": [
+    "consent/opposedcontest/award/repair/fullF3",
+    "human/allF1-F5/fullrelease/generalhost",
+    "allnegativeworldshealthy",
+    "product31/excludedlaterwork",
+    "full469MBhistoricalcontinuation/Librarysave"
+  ],
+  "limits_and_errors": [
+    "Read-only preCAS harness firstchecked nonexistent get_repo.private; actual visibility private, stopped beforeeffects, corrected advertised visibility; originaltooltrace and note retained.",
+    "Rawverifier yielded tool session92830; read-only source/packet comparison started before collecting actual exit0. Possible brief byte-only overlap; both closed/passed, no DB/native/source/runtime activity; TRANSPORT_NOTES retains exactsequence.",
+    "Local packaging2931 and rawverifier92830 both actually collected exit0; no owned live tool/process jobs from this commission remain."
+  ],
+  "no_effects": "No DB/Engine/Client/native/test/build/source/Library/automation effects; no childdelegation or new source trees.",
+  "uncertain_remote_operations": false,
+  "writer": "EXPLICITLY RELEASED after this complete receipt; no further remote mutation authorized by current commission"
+}

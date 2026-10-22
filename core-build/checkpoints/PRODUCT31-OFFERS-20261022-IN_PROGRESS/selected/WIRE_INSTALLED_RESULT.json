@@ -1,0 +1,61 @@
+{
+  "status": "PASS_INSTALLED_CLOSED_WIRE_ONLY",
+  "checks": [
+    {
+      "name": "valid0",
+      "valid": true
+    },
+    {
+      "name": "valid1",
+      "valid": true
+    },
+    {
+      "name": "valid2",
+      "valid": true
+    },
+    {
+      "name": "valid3",
+      "valid": true
+    },
+    {
+      "name": "valid4",
+      "valid": true
+    },
+    {
+      "name": "unknown-actor",
+      "valid": false
+    },
+    {
+      "name": "unknown-winner",
+      "valid": false
+    },
+    {
+      "name": "unknown-amount",
+      "valid": false
+    },
+    {
+      "name": "unknown-effects",
+      "valid": false
+    },
+    {
+      "name": "unknown-positive_inputs",
+      "valid": false
+    },
+    {
+      "name": "unrecognized-choice",
+      "valid": false
+    },
+    {
+      "name": "oldcanonical-id",
+      "valid": false
+    },
+    {
+      "name": "boolean-reference-version",
+      "valid": false
+    }
+  ],
+  "old_schema_JSON_unchanged_except_exact_additive_alternatives": true,
+  "DB_process_attempts": [],
+  "Clients_worlds": 0,
+  "current31installed": true
+}
