@@ -1,0 +1,14 @@
+{
+  "status": "SOURCE_REPAIR_UNEXECUTED",
+  "preserved_prerepair": "/dev/shm/product29-admission-current",
+  "review_report": "independent-review-r1/report.md",
+  "root_actual_repro": "/dev/shm/f3a-admission-conflict-r1/result.json",
+  "changed_only": [
+    "samsara/contentsets.py",
+    "samsara/exhibition_admission.py"
+  ],
+  "D6_four_indexes_and_loop_AST_exact": true,
+  "five_old_methods_AST_exact": true,
+  "native_guards_unchanged": true,
+  "no_Product28_or_native18_source_changes": true
+}

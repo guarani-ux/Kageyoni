@@ -1,0 +1,54 @@
+{
+  "Library_at_freeze": "CompleteProduct28-only891MB historical continuation62a916... all7308parent conservation/gates passed; actual512MiB536870912 cap. Flat ZIP_LZMA469620062-byte measurement fits with12688entries; new output/save pending at this packet freeze. Future29 excluded. No Library mutation by this writer.",
+  "actual_closed_world_directories": [
+    "admission-history-r1/closed-world",
+    "admission-history-r2/closed-world",
+    "conflict-r1/closed-world",
+    "conflict-r2/closed-world"
+  ],
+  "additive_freeze_context": "InitialTypeError path expression beforeeffects and exact firsthelper/log plus correctedtool/r2log captured outside sealed tree",
+  "authoritative_ledger": {
+    "checkpoint_path": "selected/BUILD_STATUS.json",
+    "sha256": "70577641acf0f46bb0d78dace6cce4039598ad2bdb3e1b60f3d12d7c11507a09",
+    "workspace_ec426_precursor": "historical only, no competing current claim"
+  },
+  "body_remote_custody": "Pending until full body actual readback receipt",
+  "compiler_sha256": "550b5db49685571d15e225883c367a4884665d12b539b1cf47b7c9c461eb2eb9",
+  "current_authority": "Current product28/native16 untouched",
+  "failure_and_repair": "IndependentP2wholeworldslot preflight gap and actualrootinvalid r1 acceptance preserved. R2 reuses ONE originalD6four-index loop, conflictrefusal and validdistinctproposal both zeroWrites. Nativeguard unchanged.",
+  "full_product_F1_F5_F3_world_season_human_generalhost_qualification": false,
+  "future_candidate": "Product29 targets native18, not versionbumped/built/installed/adopted; current version/lock bytes retained intentionally",
+  "historical_notes": "InitialD6AST body-reuse syntax receipt and shared-uniqueness-repair.json UNEXECUTED author note remain historical; actualr2results supplement. No one clean original fullsuite claim.",
+  "native18_paired_dependency": [
+    "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+    "1598555d04c3846a6ba4208b4b35dc701515474b"
+  ],
+  "no_DB_native_test_build_source_automation_Library_effects": true,
+  "packet_not_complete_historical_continuation": true,
+  "packet_source": "/dev/shm/product29-admission-repaired",
+  "production_source_entries": 40,
+  "providers": {
+    "body": {
+      "bytes": 6624673,
+      "filename": "Product29_Admission_Complete_Compact_Packet_IN_PROGRESS.zip",
+      "sha256": "1135ce9aef9dc6e6cc6622e4a7f3bedea65e7153bb99ad393a8513a2b3df801c",
+      "zip_entries": 249
+    },
+    "critical": {
+      "bytes": 577799,
+      "filename": "Product29_Admission_Source_Critical_IN_PROGRESS.zip",
+      "sha256": "a9e11e88d4b5061aff05437daaed5d9684bcdbfb61798cc3550833ab5d6a81f0",
+      "zip_entries": 99
+    }
+  },
+  "raw_worlds_universally_healthy": false,
+  "reported_component_checks": "Actual20pure compiler PASS with rootcommon; same11source/native18-installed-history checks rerun, not22distinct",
+  "sealed_manifest": {
+    "manifest_files": 224,
+    "physical_files_including_manifest": 225,
+    "sha256": "ec4335a99d3f5bab2f31b0024a904c965bbc9b5911a14ef4db07636d2a586127"
+  },
+  "source_before_after_all_metadata_exact": true,
+  "source_entries_including_authored_test": 41,
+  "status": "SOURCE_ONLY_ADMISSION_HISTORY_REPAIRED_IN_PROGRESS"
+}

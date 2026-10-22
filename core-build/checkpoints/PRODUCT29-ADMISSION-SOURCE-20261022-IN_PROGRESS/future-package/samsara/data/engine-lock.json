@@ -1,0 +1,12 @@
+{
+  "version": "11.1.0.dev16",
+  "baseline_commit": "872973f091320f92e3276408090978084928d291",
+  "candidate": "D15b/034 new before-task custody and explicit absence reconciliation; IN_PROGRESS. Source/API checks only; earlier retained-journal recovery failure remains unresolved.",
+  "wheel": "kageyoni_engine-11.1.0.dev16-py3-none-any.whl",
+  "sha256": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3",
+  "reference": {
+    "id": "kageyoni-engine:11.1.0.dev16",
+    "version": 1,
+    "digest": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "SOURCE_ONLY_PRODUCT29_ADMISSION_REPAIRED_IN_PROGRESS",
+  "provider_repository": "guarani-ux/SAMSARA",
+  "immutable_critical_commit": "f8a98cc18acca1205abdf2fcea97e6f63efa158a",
+  "checkpoint": "core-build/checkpoints/PRODUCT29-ADMISSION-SOURCE-20261022-IN_PROGRESS",
+  "critical_recipe": "critical-recipe.json",
+  "critical_bytes": 577799,
+  "critical_sha256": "a9e11e88d4b5061aff05437daaed5d9684bcdbfb61798cc3550833ab5d6a81f0",
+  "frozen_root_manifest_sha256": "ec4335a99d3f5bab2f31b0024a904c965bbc9b5911a14ef4db07636d2a586127",
+  "sole_frozen_current_ledger_sha256": "70577641acf0f46bb0d78dace6cce4039598ad2bdb3e1b60f3d12d7c11507a09",
+  "active_product_authority": "current28/native16 unchanged",
+  "future29_built_installed_adopted": false,
+  "body_remote_custody_pending": true
+}

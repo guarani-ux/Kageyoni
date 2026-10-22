@@ -1,0 +1,13 @@
+{
+  "status": "PASS_REPAIRED_CONFLICT_REFUSAL_AND_DISTINCT_POSITIVE_PROPOSAL",
+  "error": "CONFLICT",
+  "actual_native_existing_slot": "left/hand equipped1",
+  "new_profile_slot": "left/hand equipped1",
+  "no_mutations_during_validate": true,
+  "source_only_product_not_installed": true,
+  "no_activation_issued": true,
+  "no_existing_gear_patch_or_release": true,
+  "positive_distinct_slot_proposal": true,
+  "world": "/dev/shm/f3a-admission-conflict-r2",
+  "native_origin": "/workspace/scratch/5c7ed9200168/recovery-20261022/f3a-root-integration-r2/env/lib/python3.12/site-packages/kageyoni/engine.py"
+}

@@ -1,0 +1,330 @@
+{
+  "compiler_sha256": "550b5db49685571d15e225883c367a4884665d12b539b1cf47b7c9c461eb2eb9",
+  "current28_untouched": true,
+  "files": {
+    "BASELINE.json": [
+      5709,
+      "3d2aee0da486a62a35ace6afd5e73580af018734d231251626eba3ae31094d59"
+    ],
+    "IN_PROGRESS.json": [
+      7191,
+      "6565fb4fe63fc1ee5a5cfe6f5c444827eb1b738efce2ca96e598bce01dbd4140"
+    ],
+    "admission-history-r1.log": [
+      47,
+      "f1abe337ef0defd9f452cd714763caffd9be415b3c8e3fd624c7eb410e8ae7dd"
+    ],
+    "admission-history-r1/closed-source-copy.json": [
+      6850,
+      "bf280b1226f962fd93ffb9252a689dc7e4415192dab970f01ef189a7842d0597"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite": [
+      1966080,
+      "c1595d838fcccc1c437e4bf80d240b38c3f3708d48a9f24a19e96593fdcf181c"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v10-42ed39c761774f72a57df529f58c3222.bak": [
+      966656,
+      "f2a7ae65c2f486e91516a852c1b471ee9272dfae8b091d56299ef7db64bc1821"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v11-c229f5c81f674c4fae9a897205d863c5.bak": [
+      1015808,
+      "163858400aea4c606c1e88f0f0a5d0397af5afb5bd2a7ad826859e79db857828"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v12-99a10870449f42d2a64996ac7c471aad.bak": [
+      1028096,
+      "b14d3cb3a4da9cf714d32df0cfa9a623f349515b3de064aa29bd5a7bb88144e6"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v13-393ddbb1caa542fcb27d74e92bd39188.bak": [
+      1085440,
+      "fe49d97a64dc5a8cff9363b61d29be80130e8b6bd5fd3d56726da9b4d6472336"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v14-5d1341fe227b464e98984619f1eab7e8.bak": [
+      1134592,
+      "57c6211cfbbb08750ca5e5f8ac7f21cc0d9270f94c1ab855a6978b6a9b96295b"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v15-35fa861fefbb410cb3fcbb607ccbc51e.bak": [
+      1253376,
+      "ce4fb98ab44a646761a825713012677d27c28e747eabba971b980b58811a8f32"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v16-9e675877ce40401192b677e9c59c0d47.bak": [
+      1302528,
+      "376ecb573198a256919ea922409efbccdc69553174d00f08f42bf48df76de6c0"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v17-ca637aa4c1584926b1e95489907bad9e.bak": [
+      1335296,
+      "5c0af41d8476c164aa5e81a85f04ad20269762ea51b1c03fd97fc2c5cd253672"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v18-77f98813a0e44503b9268e842ce633a4.bak": [
+      1343488,
+      "027ee6e9c7b329c528c61e10b2565fab9f2a2538a9e5eece172a284da782c77a"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v19-5f38fd9cbb234805a3b40a80a0b59788.bak": [
+      1441792,
+      "bee9c1347277cf3258a23eb100bd5f688dda0ec57f2c1bf036619116c84a2f81"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v20-15377b797cb549dabe314d59ac3a8b9d.bak": [
+      1474560,
+      "7a45cb471e8659dbbb9639f763f64633af6df02728b90b14b0306b4d366f505d"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v21-be9f586b14ad4ffaadd024f961d560d6.bak": [
+      1495040,
+      "906350e3db7929a94e0d82c8ce711b7d14723c040c48628b18d78c69fa8096cc"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v22-a8abeeab398c4715996f9268e3e1d82e.bak": [
+      1515520,
+      "e8645e5a86e9553e583879055e6235a0f81900b511f68903c4d613b3118c1312"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v23-2945788f178240248ef7d319d3469298.bak": [
+      1552384,
+      "37ac4175384f8f7952bc832560b3e2f183999bc3230632272b59b4be3794c33c"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v24-92a80233c89e4468b2faeb2803307f60.bak": [
+      1560576,
+      "45fc66db0869b1be32643fff9571fd840d009bdac5c5692749fdc4b0808b877a"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v25-9d6eb4e02ff84f5c900c15c8f89f4417.bak": [
+      1597440,
+      "6f6ee5fa8b661cc8fa1158f2731f1b4978a1302ba7bd6f077f4d32da2907d545"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v26-f0d906b2dd7541469e3d4e81db646988.bak": [
+      1605632,
+      "265d013b86afff2ecac9a7fce3462dcd79d9c095fb87526deee1d91dc789bee8"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v27-8c5968728f4a4f08a912b87ec7b7da64.bak": [
+      1679360,
+      "c4abfe2748e164f856b45fd5a7eef6369f6e9d08858d09490032156ff7b4b8af"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v28-2dcc027e8264464a90a324540bcfbfa3.bak": [
+      1716224,
+      "7673fce53ed12e7f98523ff5f3b3215c9a8a5cc8a48b074339e04b686a483c26"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v29-9ee253694c1e4872b9fdc7f5cf7e51c0.bak": [
+      1773568,
+      "a5cf020e0185060d077db15257eba8db61ae9dc1b0ab8a1fe6cebc7555dd6d0f"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v30-1bc5d9fa7d1d4cf3bf42e602e9486d87.bak": [
+      1802240,
+      "97215443d12c1d4c8b3663c6ed46f0e6d5e9e796823b420014b37cc3cf136025"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v31-fd852f38b27348a1be3d9de3df96a135.bak": [
+      1835008,
+      "1cbf25f424399baf22191299610241f39c8a23cad16d1faf1dda3efc851bcc70"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v32-a4ac39abbc41430288a24be1fdf5219f.bak": [
+      1851392,
+      "3f6a8910725db2e8c5ce4bb6a66548844801af4de391cbfbec86fd10a2a0a1e2"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v33-c18f76b49e9a4ea8809676141c10ffce.bak": [
+      1867776,
+      "e3dfb6e8b1879445450dd5619e40643f6de2c4c59dfb453a53aea82a76d178e8"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v34-4a831c528da74fcb9ceafd2cd24909d5.bak": [
+      1908736,
+      "b8bb4122fd3e8be11b9a83ff94b26ef571cf9de96c076d6637e5ef0c6417aa78"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v35-eb8f69737e3f434b9e9235a3a39d39d4.bak": [
+      1941504,
+      "2db90175582374168954cbb61df963d8871a2edddc88645b97881a5a3a0cb8ed"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v4.bak": [
+      876544,
+      "b2d595045cbeac7c7dd6ae90072bb0bd738a00015c761755583897c86af4ebe5"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v5.bak": [
+      884736,
+      "e07776294e27502b84d2f47073b3eb64bad451066acf03754b7e6eb92299240a"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v6.bak": [
+      909312,
+      "cd82d95ce2d34a0c700bfb554b669d5f4a380bcbd6abf3f9da003144541bbc1b"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v7.bak": [
+      917504,
+      "9344f04d074647bb778d6f5ea2ef7d31ccebd452cf168804c7afbf6f9d97784d"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v8.bak": [
+      929792,
+      "a24dfdc6a3c68b22df3edb884b91c64ec5ea7bfd364800f8fc98ce1558ad4bff"
+    ],
+    "admission-history-r1/closed-world/new-disposable.sqlite.pre-v9-91358e782f7a48f7b80ef69f3dbc494b.bak": [
+      929792,
+      "b150b911b85c1d697d56de63fbbc4a11237b9f4ca5cd883c6a1f8b0b7ed36f6f"
+    ],
+    "admission-history-r1/result.json": [
+      1289,
+      "2874114351b1b8ea5ed8ed7a8f0214eb159a1ebbd1d35ac6fb5405bdd036d4e2"
+    ],
+    "package/pyproject.toml": [
+      520,
+      "c1ce38f7672e326730ebd7f4ccfa70adf6d2596bd77da794957f2723af049939"
+    ],
+    "package/samsara/__init__.py": [
+      105,
+      "2fd3c76004f7760403908eefead263dcb41ee3c79fe752d2169a31963da58a3b"
+    ],
+    "package/samsara/__main__.py": [
+      29,
+      "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+    ],
+    "package/samsara/application.py": [
+      74160,
+      "2f2aa36002a694fd46381ed5de2addfb11c2ad4248aabf6e054a1db754434b1c"
+    ],
+    "package/samsara/atlas.py": [
+      20907,
+      "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b"
+    ],
+    "package/samsara/causality.py": [
+      13613,
+      "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95"
+    ],
+    "package/samsara/cli.py": [
+      9443,
+      "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd"
+    ],
+    "package/samsara/client.py": [
+      19442,
+      "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040"
+    ],
+    "package/samsara/compatibility.py": [
+      30288,
+      "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71"
+    ],
+    "package/samsara/console.py": [
+      15603,
+      "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7"
+    ],
+    "package/samsara/content.py": [
+      26244,
+      "9c25534e5246de8c322518fe60e918b35e7eb0b721dc9c61fcaf5cfb4b2869e0"
+    ],
+    "package/samsara/contentsets.py": [
+      39306,
+      "3805829266e134a2c419bf5eb000d54e9b7b64395dd59dc7e9f2cab3d67e90ca"
+    ],
+    "package/samsara/data/compatibility-policy-ps1.json": [
+      143222,
+      "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9"
+    ],
+    "package/samsara/data/compatibility-policy-r07a.json": [
+      55805,
+      "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845"
+    ],
+    "package/samsara/data/compatibility-policy-r07b.json": [
+      113651,
+      "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb"
+    ],
+    "package/samsara/data/compatibility-policy.json": [
+      172418,
+      "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a"
+    ],
+    "package/samsara/data/contract.json": [
+      121739,
+      "9342d9558a01585c9844ddce95bb01df56184e0fce40a0f5864c4f5547168c06"
+    ],
+    "package/samsara/data/engine-lock.json": [
+      587,
+      "100d042560e762a09d56774e80df43de74e6af689ac507b6f4d25029861bd078"
+    ],
+    "package/samsara/data/initial-source.md": [
+      572,
+      "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+    ],
+    "package/samsara/data/work-record.json": [
+      979,
+      "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de"
+    ],
+    "package/samsara/equipment.py": [
+      10788,
+      "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72"
+    ],
+    "package/samsara/exhibition_admission.py": [
+      6993,
+      "7e583b50873667506048ad3598f375708a9bee0f7702fdd59ff8e492cae2ffcc"
+    ],
+    "package/samsara/exploration.py": [
+      10177,
+      "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96"
+    ],
+    "package/samsara/extensions.py": [
+      16151,
+      "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca"
+    ],
+    "package/samsara/handlers.py": [
+      11382,
+      "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275"
+    ],
+    "package/samsara/intake.py": [
+      10721,
+      "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297"
+    ],
+    "package/samsara/local_worker.py": [
+      13009,
+      "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730"
+    ],
+    "package/samsara/mediawork.py": [
+      20871,
+      "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e"
+    ],
+    "package/samsara/owner.py": [
+      19310,
+      "1bbb65a52ec041bba4e5a03bb7409c505117e28acd446f22bee54a04cd532f57"
+    ],
+    "package/samsara/practice.py": [
+      25686,
+      "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444"
+    ],
+    "package/samsara/practice_content.py": [
+      21975,
+      "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4"
+    ],
+    "package/samsara/process_custody.py": [
+      12747,
+      "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+    ],
+    "package/samsara/properties.py": [
+      37343,
+      "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883"
+    ],
+    "package/samsara/protocol.py": [
+      3971,
+      "60ac91ae0627860c4111132ce40d510bfc12430473b6a18bc960883d6fbf1f93"
+    ],
+    "package/samsara/runner.py": [
+      51926,
+      "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832"
+    ],
+    "package/samsara/situation.py": [
+      18184,
+      "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9"
+    ],
+    "package/samsara/sourcework.py": [
+      16934,
+      "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa"
+    ],
+    "package/samsara/terminal.py": [
+      2534,
+      "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800"
+    ],
+    "package/samsara/travel_content.py": [
+      17730,
+      "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6"
+    ],
+    "root-admission-history.patch": [
+      20348,
+      "88eb7416400399297c0e900486178ffeb11f49135f00661e05c332fa2caed00c"
+    ],
+    "source-syntax-and-original-methods.json": [
+      3252,
+      "682a553cce9d40c7caeee5ce6924fc56b34618892f6144e49994b9f1fec46aef"
+    ],
+    "test_admission_history.py": [
+      6177,
+      "5c8fe7a021e06efd1568931c5f89132cc1f5b57ac78a2c1f2e6e8dd7391129e1"
+    ]
+  },
+  "leaf_manifest_sha256": "9b0a07dc7ffe43f6b84e015bc2f31354fe2c00f5f2f618a9bb2ec2f03863674a",
+  "not_built_or_installed": true,
+  "root_source_before_copy_after_equal": true,
+  "source": "/workspace/scratch/5c7ed9200168/recovery-20261022/product29-candidate"
+}

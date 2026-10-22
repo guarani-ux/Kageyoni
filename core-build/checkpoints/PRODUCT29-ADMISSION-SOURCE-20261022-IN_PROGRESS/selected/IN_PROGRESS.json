@@ -1,0 +1,237 @@
+{
+  "actual_check": "20 compiler methods PASS plus11 source/native history checks rerun and actual occupied-slot negative/validdistinctproposal; no installedproduct29 or worldcontest",
+  "changed_or_new_sources": [
+    "samsara/contentsets.py",
+    "samsara/exhibition_admission.py",
+    "samsara/application.py",
+    "samsara/atlas.py"
+  ],
+  "current_authoritative_ledger": "BUILD_STATUS.json in this frozen packet; workspaceec426precursor immutable historical input",
+  "current_product_authority": "product28/native16 remains exact, untouched",
+  "full_release": false,
+  "future_target": "product29/native18 (not versioned, built, installed or adopted)",
+  "guard": "Ordinary _start refuses new exhibition/repair IDs until consent/private attachment is integrated",
+  "known_source_failure": "P2 actualoccupiedslot accepted in r1, fixedbysharedD6preflight; source/world/log/review retained",
+  "native_test_world": "admission-history-r1/closed-world",
+  "no_Engine_or_DB_job_active": true,
+  "source_files": {
+    "pyproject.toml": {
+      "bytes": 520,
+      "mode": 420,
+      "sha256": "c1ce38f7672e326730ebd7f4ccfa70adf6d2596bd77da794957f2723af049939"
+    },
+    "samsara/__init__.py": {
+      "bytes": 105,
+      "mode": 420,
+      "sha256": "2fd3c76004f7760403908eefead263dcb41ee3c79fe752d2169a31963da58a3b"
+    },
+    "samsara/__main__.py": {
+      "bytes": 29,
+      "mode": 420,
+      "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+    },
+    "samsara/application.py": {
+      "bytes": 74160,
+      "mode": 420,
+      "sha256": "2f2aa36002a694fd46381ed5de2addfb11c2ad4248aabf6e054a1db754434b1c"
+    },
+    "samsara/atlas.py": {
+      "bytes": 20907,
+      "mode": 420,
+      "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b"
+    },
+    "samsara/causality.py": {
+      "bytes": 13613,
+      "mode": 420,
+      "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95"
+    },
+    "samsara/cli.py": {
+      "bytes": 9443,
+      "mode": 420,
+      "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd"
+    },
+    "samsara/client.py": {
+      "bytes": 19442,
+      "mode": 420,
+      "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040"
+    },
+    "samsara/compatibility.py": {
+      "bytes": 30288,
+      "mode": 420,
+      "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71"
+    },
+    "samsara/console.py": {
+      "bytes": 15603,
+      "mode": 420,
+      "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7"
+    },
+    "samsara/content.py": {
+      "bytes": 26244,
+      "mode": 420,
+      "sha256": "9c25534e5246de8c322518fe60e918b35e7eb0b721dc9c61fcaf5cfb4b2869e0"
+    },
+    "samsara/contentsets.py": {
+      "bytes": 39135,
+      "mode": 420,
+      "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5"
+    },
+    "samsara/data/compatibility-policy-ps1.json": {
+      "bytes": 143222,
+      "mode": 420,
+      "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9"
+    },
+    "samsara/data/compatibility-policy-r07a.json": {
+      "bytes": 55805,
+      "mode": 420,
+      "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845"
+    },
+    "samsara/data/compatibility-policy-r07b.json": {
+      "bytes": 113651,
+      "mode": 420,
+      "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb"
+    },
+    "samsara/data/compatibility-policy.json": {
+      "bytes": 172418,
+      "mode": 420,
+      "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a"
+    },
+    "samsara/data/contract.json": {
+      "bytes": 121739,
+      "mode": 420,
+      "sha256": "9342d9558a01585c9844ddce95bb01df56184e0fce40a0f5864c4f5547168c06"
+    },
+    "samsara/data/engine-lock.json": {
+      "bytes": 587,
+      "mode": 420,
+      "sha256": "100d042560e762a09d56774e80df43de74e6af689ac507b6f4d25029861bd078"
+    },
+    "samsara/data/initial-source.md": {
+      "bytes": 572,
+      "mode": 420,
+      "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+    },
+    "samsara/data/work-record.json": {
+      "bytes": 979,
+      "mode": 420,
+      "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de"
+    },
+    "samsara/equipment.py": {
+      "bytes": 10788,
+      "mode": 420,
+      "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72"
+    },
+    "samsara/exhibition_admission.py": {
+      "bytes": 7158,
+      "mode": 420,
+      "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55"
+    },
+    "samsara/exhibition_profiles.py": {
+      "bytes": 29380,
+      "mode": 420,
+      "sha256": "550b5db49685571d15e225883c367a4884665d12b539b1cf47b7c9c461eb2eb9"
+    },
+    "samsara/exploration.py": {
+      "bytes": 10177,
+      "mode": 420,
+      "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96"
+    },
+    "samsara/extensions.py": {
+      "bytes": 16151,
+      "mode": 420,
+      "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca"
+    },
+    "samsara/handlers.py": {
+      "bytes": 11382,
+      "mode": 420,
+      "sha256": "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275"
+    },
+    "samsara/intake.py": {
+      "bytes": 10721,
+      "mode": 420,
+      "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297"
+    },
+    "samsara/local_worker.py": {
+      "bytes": 13009,
+      "mode": 420,
+      "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730"
+    },
+    "samsara/mediawork.py": {
+      "bytes": 20871,
+      "mode": 420,
+      "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e"
+    },
+    "samsara/owner.py": {
+      "bytes": 19310,
+      "mode": 420,
+      "sha256": "1bbb65a52ec041bba4e5a03bb7409c505117e28acd446f22bee54a04cd532f57"
+    },
+    "samsara/practice.py": {
+      "bytes": 25686,
+      "mode": 420,
+      "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444"
+    },
+    "samsara/practice_content.py": {
+      "bytes": 21975,
+      "mode": 420,
+      "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4"
+    },
+    "samsara/process_custody.py": {
+      "bytes": 12747,
+      "mode": 420,
+      "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+    },
+    "samsara/properties.py": {
+      "bytes": 37343,
+      "mode": 420,
+      "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883"
+    },
+    "samsara/protocol.py": {
+      "bytes": 3971,
+      "mode": 420,
+      "sha256": "60ac91ae0627860c4111132ce40d510bfc12430473b6a18bc960883d6fbf1f93"
+    },
+    "samsara/runner.py": {
+      "bytes": 51926,
+      "mode": 420,
+      "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832"
+    },
+    "samsara/situation.py": {
+      "bytes": 18184,
+      "mode": 420,
+      "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9"
+    },
+    "samsara/sourcework.py": {
+      "bytes": 16934,
+      "mode": 420,
+      "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa"
+    },
+    "samsara/terminal.py": {
+      "bytes": 2534,
+      "mode": 420,
+      "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800"
+    },
+    "samsara/travel_content.py": {
+      "bytes": 17730,
+      "mode": 420,
+      "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6"
+    },
+    "tests/test_exhibition_profiles.py": {
+      "bytes": 26630,
+      "mode": 420,
+      "sha256": "c9bdd0725de59ddc176e03f5bd6c86f087ce862c5a540a840e97b961b51eab63"
+    }
+  },
+  "source_syntax_checks": "30 source files; five original methods and complete D6 region validator after parse AST unchanged",
+  "status": "SOURCE_ONLY_ADMISSION_HISTORY_REPAIRED",
+  "unfinished": [
+    "compiler review and exact freeze integration",
+    "full native combined-world admission and uniqueness/countercases",
+    "newworld explicit035 installer and Owner read-only preflight",
+    "version/native18 lock/build/exactwheel correspondence",
+    "contest wire/Exhibitions/voluntary offer/current player-only choices",
+    "proven existing-episode attachment and fresh prepare",
+    "settlement recipient artifact/retrieval and separately chosen helper repair",
+    "actual opposed Client loop/withdrawal/replay/negative/interrupt/restore/relocation",
+    "all F1-F5 and original breadth/human/canonical boundaries retained"
+  ]
+}

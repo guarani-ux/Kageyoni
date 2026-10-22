@@ -1,0 +1,8 @@
+{
+  "current": "/dev/shm/product29-admission-repaired/BUILD_STATUS.json",
+  "precursor": "/workspace/scratch/5c7ed9200168/recovery-20261022/BUILD_STATUS.json",
+  "precursor_sha256": "ec426e09d9a1857b9503805d621959ada696466a05c3c0983229a3d4be9e5aea",
+  "reason": "workspaceavailable0; currentRAMledger mustGitpersistbeforehostloss",
+  "protected_scope_JSON_equal": true,
+  "no_competing_current_ledger_claim": true
+}

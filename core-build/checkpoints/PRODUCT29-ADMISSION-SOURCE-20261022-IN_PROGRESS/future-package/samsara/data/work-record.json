@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "record_type": "work-template",
+  "project_id": null,
+  "objective": null,
+  "version": null,
+  "integrating_owner": null,
+  "authority": null,
+  "sources": [],
+  "tasks": [],
+  "decisions": [],
+  "outputs": [],
+  "unresolved": [],
+  "external_receipts": [],
+  "next_action": null,
+  "completion": {
+    "claim": null,
+    "evidence": []
+  },
+  "task_fields": [
+    "id",
+    "owner",
+    "purpose",
+    "input_versions",
+    "dependencies",
+    "allowed_actions",
+    "return",
+    "acceptance",
+    "state",
+    "output_refs",
+    "checks",
+    "next_action"
+  ],
+  "note": "Use an actual authoritative carrier. Return, acceptance, execution, and whole-project closure are separate states. Close a modular service against its own agreed scope; profiles are cognitive contributions, not automatically running workers.",
+  "service_scope": null,
+  "selected_services": [],
+  "document_types": [],
+  "active_profiles": [],
+  "recipient_context": null
+}
