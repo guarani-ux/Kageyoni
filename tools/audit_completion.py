@@ -101,6 +101,22 @@ def run_empirical_audit():
     except Exception:
         pass
 
+    # Probe Android APK / DEX (CH 28)
+    try:
+        from kageyoni.ninshu.apk_parser import DexParser
+        DexParser.parse_header(b"dex\n035\x00" + b"\x00" * 24 + b"\x70\x00\x00\x00\x70\x00\x00\x00\x78\x56\x34\x12" + b"\x00" * 68)
+        probes_passed += 1
+    except Exception:
+        pass
+
+    # Probe Apktool (CH 30)
+    try:
+        from kageyoni.ninshu.apktool_parser import ApktoolResourceReconstructor
+        ApktoolResourceReconstructor.parse_manifest_xml('<manifest package="a"></manifest>')
+        probes_passed += 1
+    except Exception:
+        pass
+
     # Probe ASAR (CH 25)
     try:
         from kageyoni.ninshu.asar_parser import AsarArchiveParser
