@@ -1,0 +1,27 @@
+{
+  "DB_opened": false,
+  "bytes": 12224263,
+  "manifest_files": 159,
+  "physical_files": 160,
+  "providers": {
+    "body": {
+      "bytes": 8636060,
+      "filename": "Product30_Admission_Complete_Packet_IN_PROGRESS.zip",
+      "sha256": "a63ffc2d911431414e12793e879209bb1c4c014ac3a7443acb33802ddb697e44",
+      "zip_entries": 178
+    },
+    "critical": {
+      "bytes": 2553474,
+      "filename": "Product30_Admission_Critical_IN_PROGRESS.zip",
+      "sha256": "55a4b1310136d5cbec9958164da01e2476cfda8e8d4234f2d237aea8f81dae15",
+      "zip_entries": 177
+    },
+    "raw": {
+      "bytes": 6705819,
+      "filename": "Product29_30_Actual_Admission_Raw.zip",
+      "sha256": "791434d813efd8596bdd8498a6459d37fcf43847c30a568d7437c01540246d75",
+      "zip_entries": 243
+    }
+  },
+  "source_before_after_metadata_exact": true
+}

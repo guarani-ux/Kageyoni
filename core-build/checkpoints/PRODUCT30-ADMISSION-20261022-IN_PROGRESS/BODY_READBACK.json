@@ -1,0 +1,43 @@
+{
+  "status": "WHOLE_ARCHIVE_ACTUAL_REMOTE_READBACK_VERIFIED",
+  "providers": {
+    "critical": {
+      "filename": "Product30_Admission_Critical_IN_PROGRESS.zip",
+      "bytes": 2553474,
+      "sha256": "55a4b1310136d5cbec9958164da01e2476cfda8e8d4234f2d237aea8f81dae15",
+      "zip_entries": 177
+    },
+    "body": {
+      "filename": "Product30_Admission_Complete_Packet_IN_PROGRESS.zip",
+      "bytes": 8636060,
+      "sha256": "a63ffc2d911431414e12793e879209bb1c4c014ac3a7443acb33802ddb697e44",
+      "zip_entries": 178
+    },
+    "raw": {
+      "filename": "Product29_30_Actual_Admission_Raw.zip",
+      "bytes": 6705819,
+      "sha256": "791434d813efd8596bdd8498a6459d37fcf43847c30a568d7437c01540246d75",
+      "zip_entries": 243
+    }
+  },
+  "remote_reconstruction_checks": [
+    "all ASCII/raw partSHA256 and Git IDs",
+    "strict base64 and exact offsets",
+    "wholearchiveSHA256",
+    "ZIPCRC/unique paths",
+    "everymemberSHA256/mode/filetype/symlinktarget",
+    "all160frozenfiles exact inside remote packet",
+    "rawZIP exact standalone and inside recoveredpacket"
+  ],
+  "remote_payload_counts": {
+    "critical_SAM": 63,
+    "critical_Kage": 57,
+    "critical_Kage_pointer": 1,
+    "body_SAM": 45,
+    "body_Kage": 13
+  },
+  "raw_manifest_type0": "Exact original CAPTURE-MANIFEST.json only; not an original source entry; no invented S_IFREG",
+  "all_source_before_after_metadata_exact": true,
+  "semantic_claim": "Admission only; no opposedcontest/consent/award/repair/fullF3/human/fullrelease. Old failures preserved.",
+  "writer_DB_native_Client_test_build_source_Library_automation_effects": false
+}

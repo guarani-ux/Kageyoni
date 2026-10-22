@@ -1,0 +1,8 @@
+{
+  "raw_UTF8_transport": "All original source/metadata blobs submitted as base64; ASCII providers strict base64 no BOM/no LF.",
+  "remote_text_capture": "apply_patch captures can add single LF; adapter strips only exact expectedbytecount and allows tail empty or one LF, then SHA256 and Gitblob ID prove full original bytes.",
+  "read_only_preCAS_harness_error": "First predicate checked nonexistent get_repo.private; actual response visibility private. Stopped before ref effects; corrected actual advertised visibility predicate. Original error retained in session trace and critical issued-before receipt.",
+  "sequencing_error": "Raw reconstruction returned tool session92830 after1000ms; subsequent read-only source/packet comparison launched before collecting session exit. Later actual poll closed exit0 and strict243member proof. Possible brief byte-only overlap, no DB/native/source/runtime process. Not repeated after discovery.",
+  "uncertain_remote_mutations": false,
+  "ref_updates": "Expected parent CAS, forcefalse; all prior paths preserved; no retries after unknown effects."
+}
