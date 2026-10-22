@@ -1,0 +1,25 @@
+test_award_exact_native_constraints (__main__.CompilerTests.test_award_exact_native_constraints) ... ok
+test_coherently_authored_nonlowering_ending_is_native_rejected (__main__.CompilerTests.test_coherently_authored_nonlowering_ending_is_native_rejected) ... ok
+test_competition_protected_writes_refunds_and_cost_types (__main__.CompilerTests.test_competition_protected_writes_refunds_and_cost_types) ... ok
+test_compile_rejects_non_event_unreachable_ambiguous_and_fake_geometry (__main__.CompilerTests.test_compile_rejects_non_event_unreachable_ambiguous_and_fake_geometry) ... ok
+test_create_only_no_native_contest_facts_or_external_policy (__main__.CompilerTests.test_create_only_no_native_contest_facts_or_external_policy) ... ok
+test_equipment_errors_are_not_success_or_masked_integrity (__main__.CompilerTests.test_equipment_errors_are_not_success_or_masked_integrity) ... ok
+test_exact_anchor_full_image_and_revision (__main__.CompilerTests.test_exact_anchor_full_image_and_revision) ... ok
+test_exact_shapes_namespace_and_no_recovery (__main__.CompilerTests.test_exact_shapes_namespace_and_no_recovery) ... ok
+test_future_created_native_field_reference_cannot_be_used_early (__main__.CompilerTests.test_future_created_native_field_reference_cannot_be_used_early) ... ok
+test_future_created_subject_cannot_be_observed_early (__main__.CompilerTests.test_future_created_subject_cannot_be_observed_early) ... ok
+test_helper_offer_exact_two_no_geometry_material_tool_observation_costs (__main__.CompilerTests.test_helper_offer_exact_two_no_geometry_material_tool_observation_costs) ... ok
+test_incorporated_holder_matches_target_legal_access (__main__.CompilerTests.test_incorporated_holder_matches_target_legal_access) ... ok
+test_material_dominated_by_helper_real_free_acceptance (__main__.CompilerTests.test_material_dominated_by_helper_real_free_acceptance) ... ok
+test_material_exact_atomic_conservation_and_tool_requirements (__main__.CompilerTests.test_material_exact_atomic_conservation_and_tool_requirements) ... ok
+test_positive_actual_source_equipment_and_deepcopy (__main__.CompilerTests.test_positive_actual_source_equipment_and_deepcopy) ... ok
+test_reference_closure_and_native_relational_constraints (__main__.CompilerTests.test_reference_closure_and_native_relational_constraints) ... ok
+test_strict_json (__main__.CompilerTests.test_strict_json) ... ok
+test_terminal_created_geometry_is_checked_as_postimage (__main__.CompilerTests.test_terminal_created_geometry_is_checked_as_postimage) ... ok
+test_terminal_same_event_geometry_cannot_survive (__main__.CompilerTests.test_terminal_same_event_geometry_cannot_survive) ... ok
+test_testimony_and_maintenance_cleanup_alone_cannot_award (__main__.CompilerTests.test_testimony_and_maintenance_cleanup_alone_cannot_award) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.561s
+
+OK

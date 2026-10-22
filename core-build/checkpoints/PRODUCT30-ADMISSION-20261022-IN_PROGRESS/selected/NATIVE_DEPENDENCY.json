@@ -1,0 +1,9 @@
+{
+  "version": "11.1.0.dev18",
+  "wheel_sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+  "native_source": "Exact unchanged745source native18 from immutable verified SAM78f68bde6496a3598d9059bf0e052b51ec494ca7 checkpointF3A-NATIVE18-20261022-IN_PROGRESS",
+  "separate_source_manifest": "native18-canonical-source-manifest.json",
+  "current_product28_qualified_parent_preserved": true,
+  "old_SQL1_34_unchanged": true,
+  "do_not_open_oldworld_with_newOwner": true
+}

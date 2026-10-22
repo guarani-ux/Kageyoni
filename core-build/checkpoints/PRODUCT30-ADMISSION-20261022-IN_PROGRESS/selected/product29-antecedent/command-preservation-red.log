@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/dev/shm/product29-build/test_authored_command_preservation.py", line 12, in <module>
+    assert validated['native_records']==raw['native_records'], 'Compiler inserted audience defaults into authored command; activation reload compares against raw bytes'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Compiler inserted audience defaults into authored command; activation reload compares against raw bytes

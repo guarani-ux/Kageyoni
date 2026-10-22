@@ -1,0 +1,1 @@
+{"reason":"Existing strict content wire wrapper is kind=content/details JSON, seen in actual29 preview; use that actual published shape. Original29 harness failed earlier at actual activation DEPENDENCY, so no invented wrapper assertion failure.","original_assert_intent_preserved":true,"original_world_not_reused":true}

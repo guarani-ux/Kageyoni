@@ -1,0 +1,12 @@
+{
+  "status": "IMMUTABLE_PRODUCT30_ADMISSION_ONLY_CRITICAL_PROVIDER",
+  "repository": "guarani-ux/SAMSARA",
+  "commit": "998779e5d24d5fc0b1b9ca47754c226371ec30ea",
+  "checkpoint": "core-build/checkpoints/PRODUCT30-ADMISSION-20261022-IN_PROGRESS",
+  "recipe": "critical-recipe.json",
+  "reconstruct": "reconstruct.py",
+  "sha256": "55a4b1310136d5cbec9958164da01e2476cfda8e8d4234f2d237aea8f81dae15",
+  "bytes": 2553474,
+  "zip_members": 177,
+  "scope": "Installed product30/native18 admission-only candidate; source/wheels/rootledger and dev29 failures retained. Current28 predecessor unchanged, no fullF3/fullrelease."
+}

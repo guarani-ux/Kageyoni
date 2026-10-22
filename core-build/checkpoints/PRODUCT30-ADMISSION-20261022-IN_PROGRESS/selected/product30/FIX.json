@@ -1,0 +1,8 @@
+{
+  "antecedent": "/dev/shm/product29-build",
+  "actual_FAILURE": "content.activate DEPENDENCY; actualreceipt equality true, command equality false only inserted audience defaults",
+  "fix": "compiler no longer injects optional audience into CREATE command; strict native history comparison unchanged",
+  "old_build_immutable": true,
+  "allF1_F5_fullrelease": false,
+  "status": "IMPLEMENTED_UNBUILT_UNINSTALLED"
+}

@@ -1,0 +1,12 @@
+{
+  "path": "/dev/shm/product30-checkpoint/Product29_30_Actual_Admission_Raw.zip",
+  "bytes": 6705819,
+  "sha256": "791434d813efd8596bdd8498a6459d37fcf43847c30a568d7437c01540246d75",
+  "source_entries": 242,
+  "ZIP_members": 243,
+  "allCRC_SHA_modes_sourcebeforeafter": true,
+  "actual_existingOwnerlocks": 4,
+  "DB_opened_by_capture": false,
+  "globalFDabsence": false,
+  "all_worlds_healthy_claim": false
+}

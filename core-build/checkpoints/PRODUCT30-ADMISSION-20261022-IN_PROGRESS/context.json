@@ -1,0 +1,54 @@
+{
+  "actual_evidence": "Installed30 ordinaryClientprepare/preview/activate/exact replay/reopen;3player negative controls; nativeverify/registry/FK/checkedbackup;242 matched source/wheel/install payloads. Evidence retained, not rerun by writer.",
+  "ledger_sha256": "da8510c3075f2adcf13f50e05adef530f95efb930a7d1536fd3619c12fef3f31",
+  "limits": [
+    "admission only, no opposedcontest/consent/award/repair/fullF3",
+    "no human/allF1-F5/fullrelease/generalhost claim",
+    "Current28 bounded predecessor untouched",
+    "Later31 work excluded",
+    "full469MB historical continuation not this compact packet; portable reconstruction active independently, Library15 latest at freeze"
+  ],
+  "manifest_files": 159,
+  "manifest_sha256": "0842ec71cefe10ab70731e73b83df6f6678fd08619b51a988ac675343e8a8c62",
+  "native18_wheel_sha256": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626",
+  "native_source_anchor": {
+    "Kage": "1598555d04c3846a6ba4208b4b35dc701515474b",
+    "SAM": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+    "checkpoint": "F3A-NATIVE18-20261022-IN_PROGRESS",
+    "source_files": 745
+  },
+  "packet": "/dev/shm/product30-checkpoint",
+  "physical_files": 160,
+  "product_wheel_sha256": "8562fa30d8f64fdcf61f1d5f646db7512b1911549f8a68af00f8371763294d17",
+  "providers": {
+    "body": {
+      "bytes": 8636060,
+      "filename": "Product30_Admission_Complete_Packet_IN_PROGRESS.zip",
+      "sha256": "a63ffc2d911431414e12793e879209bb1c4c014ac3a7443acb33802ddb697e44",
+      "zip_entries": 178
+    },
+    "critical": {
+      "bytes": 2553474,
+      "filename": "Product30_Admission_Critical_IN_PROGRESS.zip",
+      "sha256": "55a4b1310136d5cbec9958164da01e2476cfda8e8d4234f2d237aea8f81dae15",
+      "zip_entries": 177
+    },
+    "raw": {
+      "bytes": 6705819,
+      "filename": "Product29_30_Actual_Admission_Raw.zip",
+      "sha256": "791434d813efd8596bdd8498a6459d37fcf43847c30a568d7437c01540246d75",
+      "zip_entries": 243
+    }
+  },
+  "raw_capture": "Existing4actualOwnerlocks sourcebeforeafterCRC/SHA/modes; this writer only reads frozen packet/ZIP, opens no DB/native/client. Not all negative worlds healthy. CAPTURE-MANIFEST actual file_type0 retained exactly.",
+  "repair": "Compiler optional audience default mutation in29 caused real raw-reload mismatch DEPENDENCY;30 removes only mutating default, strict native/history guards unchanged. Original failure and two diagnostic copies preserved; exact regression RED/GREEN and20sourcepure methods retained.",
+  "runtime_sha256": "436ccf17e0be08159ac31dca14025958d1c9a407183eb2ff8ebe98df189bdd2b",
+  "source_before_after_metadata_exact": true,
+  "source_only": "Offer repair17pure and Media28harness21pure; neither integrated/runtime world proof.",
+  "source_trees": {
+    "product29-antecedent/package": 41,
+    "product30/package": 41
+  },
+  "status": "BOUNDED_INSTALLED_EXHIBITION_ADMISSION_ONLY_IN_PROGRESS",
+  "writer_execution": "byte packaging only; no DB/Engine/Client/build/test/source/Library/automation/native/process probes"
+}
