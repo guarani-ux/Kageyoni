@@ -86,12 +86,51 @@ CANONICAL_SCARS: List[ScarImpedanceTransformer] = [
 ]
 
 
+class ScarRegistry(dict):
+    """Active runtime registry of ScarImpedanceTransformers."""
+
+    def __init__(self, initial_scars: Optional[List[ScarImpedanceTransformer]] = None):
+        super().__init__()
+        for s in (initial_scars if initial_scars is not None else CANONICAL_SCARS):
+            self.register(s)
+
+    def register(self, scar: ScarImpedanceTransformer) -> ScarImpedanceTransformer:
+        """Register a scar impedance transformer into active circulation."""
+        self[scar.scar_id] = scar
+        return scar
+
+    def append(self, scar: ScarImpedanceTransformer) -> ScarImpedanceTransformer:
+        return self.register(scar)
+
+    def get_scar(self, scar_id: str) -> Optional[ScarImpedanceTransformer]:
+        return self.get(scar_id)
+
+    def list_all(self) -> List[ScarImpedanceTransformer]:
+        return list(self.values())
+
+
+# Global active registry for Ninshū operational scars
+SCAR_REGISTRY: ScarRegistry = ScarRegistry()
+
+
 class ScarFeedbackMatrix:
     """The active SSL console circuit that shapes streaming liquid metal using historical Scars."""
 
     def __init__(self, transformers: Optional[List[ScarImpedanceTransformer]] = None):
-        self.transformers = list(transformers or CANONICAL_SCARS)
+        self._custom_transformers: Optional[List[ScarImpedanceTransformer]] = (
+            list(transformers) if transformers is not None else None
+        )
         self.active_scars_engaged: List[Dict[str, Any]] = []
+
+    @property
+    def transformers(self) -> List[ScarImpedanceTransformer]:
+        if self._custom_transformers is not None:
+            return self._custom_transformers
+        return list(SCAR_REGISTRY.values())
+
+    @transformers.setter
+    def transformers(self, val: List[ScarImpedanceTransformer]) -> None:
+        self._custom_transformers = list(val)
 
     def transform_signal(
         self,
@@ -108,8 +147,8 @@ class ScarFeedbackMatrix:
         sig_text = json.dumps(signal).lower() + " " + declared_intent.lower()
 
         for scar in self.transformers:
-            # Check if signal matches trigger pattern
-            tokens = scar.trigger_pattern.split("|")
+            # Check if signal matches trigger pattern (case-insensitive)
+            tokens = [t.strip().lower() for t in scar.trigger_pattern.split("|") if t.strip()]
             if any(t in sig_text for t in tokens):
                 # Scar circuit engages: Apply damping & inject functional adaptation
                 self.active_scars_engaged.append({

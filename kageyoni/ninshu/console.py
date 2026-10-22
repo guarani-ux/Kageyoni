@@ -38,6 +38,8 @@ class ChannelStripConfig:
     hpf_cutoff_hz: Optional[float] = None # High-Pass Filter cutoff (scope limiter)
     thermal_ceiling: int = 0            # 0 = Tier 0 (Cold), 1 = Tier 1 (Hot Gate)
     noise_gate_threshold: float = 0.5   # Epistemic squelch (< 0.5 discards ungrounded claims)
+    max_memory_ceiling_bytes: int = 64 * 1024 # 64 KB default thermodynamic budget
+    thermodynamic_receipt: Optional[Dict[str, Any]] = None # Cached verification receipt
 
 
 @dataclass
@@ -54,6 +56,7 @@ class MasterTape:
     verified_evidence_records: List[Dict[str, Any]]
     reversibility_tier: int
     master_sha256: str = ""
+    thermodynamic_receipts: List[Dict[str, Any]] = field(default_factory=list)
 
     def freeze(self) -> MasterTape:
         """Calculates the cryptographic seal on the printed master."""
@@ -122,19 +125,110 @@ class ActiveConsole:
 
         return conditioned_signals
 
+    def audit_channel_adversarially(
+        self,
+        channel_number: int,
+        target_callable: Callable[[bytes], Any],
+        golden_vectors: Sequence[Any],
+        target_name: Optional[str] = None
+    ) -> Any:
+        """Audits a channel strip using the Adversarial Discriminator and streams findings."""
+        from .adversary import ConsoleAdversaryBridge
+        return ConsoleAdversaryBridge.audit_channel(
+            self,
+            channel_number=channel_number,
+            target_callable=target_callable,
+            golden_vectors=golden_vectors,
+            target_name=target_name,
+        )
+
+    def audit_channel_thermodynamics(
+        self,
+        channel_number: int,
+        target_callable: Optional[Callable[..., Any]] = None,
+        memory_ceiling_bytes: Optional[int] = None,
+        fail_closed: bool = True,
+    ) -> Any:
+        """Audits an SSL channel strip's execution footprint against physical memory budgets."""
+        from .thermodynamics import ConsoleThermodynamicsBridge
+        return ConsoleThermodynamicsBridge.audit_channel_thermodynamics(
+            self,
+            channel_number=channel_number,
+            target_callable=target_callable,
+            memory_ceiling_bytes=memory_ceiling_bytes,
+            fail_closed=fail_closed,
+        )
+
+    def verify_channel_artifact_cross_process(
+        self,
+        channel_number: int,
+        artifact_bytes: bytes,
+        mode: str = "wasm",
+        memory_ceiling_bytes: Optional[int] = None,
+        fail_closed: bool = True,
+    ) -> Any:
+        """Spawns a fresh OS subprocess to verify channel artifact with zero shared heap."""
+        from .thermodynamics import ConsoleThermodynamicsBridge
+        return ConsoleThermodynamicsBridge.verify_channel_artifact_cross_process(
+            self,
+            channel_number=channel_number,
+            artifact_bytes=artifact_bytes,
+            mode=mode,
+            memory_ceiling_bytes=memory_ceiling_bytes,
+            fail_closed=fail_closed,
+        )
+
     def print_master(
         self,
         session_id: str,
         active_signals: List[Dict[str, Any]],
-        compiled_aspects: List[Dict[str, Any]]
+        compiled_aspects: List[Dict[str, Any]],
+        thermodynamic_receipts: Optional[List[Any]] = None,
     ) -> MasterTape:
         """
         The Master Print Operation:
         Takes all active, playing tracks, runs them through the G-Master Bus Compressor
-        (Kageyōni EffectResolver), preserves opposing tensions, and freezes the final Master Tape.
+        (Kageyōni EffectResolver), preserves opposing tensions, attaches thermodynamic receipts,
+        and freezes the final Master Tape.
         """
         # Resolve opposing pressures and action gates across all aspects
         resolution = self.effect_resolver.resolve(compiled_aspects)
+
+        # Collect channel thermodynamic receipts and explicit receipts (deduplicated by digest)
+        collected_receipts: List[Dict[str, Any]] = []
+        seen_digests = set()
+
+        if thermodynamic_receipts:
+            for r in thermodynamic_receipts:
+                rec_dict = r.to_dict() if hasattr(r, "to_dict") else r
+                digest = rec_dict.get("receipt_digest")
+                if digest and digest not in seen_digests:
+                    seen_digests.add(digest)
+                    collected_receipts.append(rec_dict)
+                elif not digest:
+                    collected_receipts.append(rec_dict)
+
+        for ch in self.channels.values():
+            if ch.thermodynamic_receipt:
+                digest = ch.thermodynamic_receipt.get("receipt_digest")
+                if digest and digest not in seen_digests:
+                    seen_digests.add(digest)
+                    collected_receipts.append(ch.thermodynamic_receipt)
+                elif not digest:
+                    collected_receipts.append(ch.thermodynamic_receipt)
+
+        # Include thermodynamic receipts in verified evidence records
+        all_evidence = list(active_signals)
+        for tr in collected_receipts:
+            all_evidence.append({
+                "evidence_type": "THERMODYNAMIC_RECEIPT",
+                "candidate_id": tr.get("candidate_id"),
+                "peak_memory_bytes": tr.get("peak_memory_bytes"),
+                "ceiling_bytes": tr.get("memory_ceiling_bytes"),
+                "cross_process": tr.get("verified_cross_process"),
+                "receipt_digest": tr.get("receipt_digest"),
+                "confidence_score": 1.0 if tr.get("passed") else 0.0,
+            })
 
         master = MasterTape(
             session_id=session_id,
@@ -145,8 +239,9 @@ class ActiveConsole:
             opposing_pressures_preserved=resolution.get("conflicts", []),
             action_gates_enforced=resolution.get("action_gates", []),
             deficits_unplaced=resolution.get("unresolved_effects", []),
-            verified_evidence_records=active_signals,
-            reversibility_tier=self.reversibility_tier
+            verified_evidence_records=all_evidence,
+            reversibility_tier=self.reversibility_tier,
+            thermodynamic_receipts=collected_receipts,
         )
 
         return master.freeze()
