@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.430" timestamp="2026-10-22T13:17:13.257789-05:00" hostname="b898159f10be"><testcase classname="tests.test_bounded_runner.ProcessRunnerTests" name="test_owner_kill_requires_observed_reconciliation_and_new_generation" time="1.309"><failure message="TypeError: observed_exchange() missing 1 required positional argument: 'limit'">self = &lt;tests.test_bounded_runner.ProcessRunnerTests testMethod=test_owner_kill_requires_observed_reconciliation_and_new_generation&gt;
+
+    def setUp(self):
+        self.temp=tempfile.TemporaryDirectory(prefix='samsara-runner-')
+        self.root=Path(self.temp.name)/'world'
+&gt;       self.c=Client.session(self.root,role='operator',new=True);self.c.view()
+                                                                  ^^^^^^^^^^^^^
+
+recovery-20261022/current26/extracted/samsara_core/product/tests/test_bounded_runner.py:169: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+recovery-20261022/product27-build/env/lib/python3.12/site-packages/samsara/client.py:160: in view
+    return self.checked({'name': 'workspace.view', 'limit': 32, 'cursor': None})['return']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+recovery-20261022/product27-build/env/lib/python3.12/site-packages/samsara/client.py:154: in checked
+    result = self.command(operation, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+recovery-20261022/product27-build/env/lib/python3.12/site-packages/samsara/client.py:143: in command
+    return self.call(request)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;samsara.client.Client object at 0x7f2d8822cce0&gt;
+request = {'branch': 'main', 'expected_revision': 0, 'operation': {'cursor': None, 'limit': 32, 'name': 'workspace.view'}, 'protocol': 'samsara/5.1', ...}
+
+    def call(self, request):
+        validate(request, 'Command')
+&gt;       result = exchange(self.sock, request)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: observed_exchange() missing 1 required positional argument: 'limit'
+
+recovery-20261022/product27-build/env/lib/python3.12/site-packages/samsara/client.py:147: TypeError</failure></testcase></testsuite></testsuites>

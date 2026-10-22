@@ -1,0 +1,116 @@
+{
+  "operation": "Posttest copied-world readonly verification",
+  "native_verify_error": "integrity check failed",
+  "copy_path": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-build/owner-loss-r2/closed-world",
+  "copied_world_sha256": "4dd1b04fb4c9af9c2b0d0d62b4461c41dc6a208af75f704b92fd0924aa6a17b3",
+  "query_only": 1,
+  "integrity": [
+    [
+      "wrong # of entries in index sqlite_autoindex_artifacts_2"
+    ],
+    [
+      "wrong # of entries in index sqlite_autoindex_artifacts_1"
+    ],
+    [
+      "wrong # of entries in index sqlite_autoindex_activity_messages_1"
+    ],
+    [
+      "row 6 missing from index sqlite_autoindex_artifacts_2"
+    ],
+    [
+      "row 6 missing from index sqlite_autoindex_artifacts_1"
+    ],
+    [
+      "row 11 missing from index sqlite_autoindex_activity_messages_1"
+    ]
+  ],
+  "FK": [],
+  "queries": {
+    "activity_queue": [
+      {
+        "sequence": 1,
+        "job_id": "samsara:dd9c09f607819261cca8956036f7e1d8eaedff76a05fc8c0872ea09bb3d87bff",
+        "workspace_id": "workspace:c071e2cbd853400180a398b57418f462",
+        "root_id": "interrupted",
+        "binding_id": "samsara:d0dc9db8edafa724a4c6d4f43ea0337364a76e276c13b7d6e646aa74c293421b",
+        "authority_epoch": 1,
+        "recipe": "bounded_probe",
+        "parameters_json": "{\"cpu_iterations\":0,\"delay_seconds\":3}",
+        "state": "cancelled",
+        "reason": "explicitly reconciled: stopped pure local recipe; discard; no result acceptance or automatic retry",
+        "generation": 1,
+        "owner_epoch": 1,
+        "lease_token": "44e5510913da477a90cfe3859ebe7205",
+        "lease_until": 1792693131.256551,
+        "max_seconds": 10.0,
+        "process_json": null,
+        "output_ref_json": null,
+        "profile_digest": "15d0de5ddb8735e040ee1e71ad18aedb04d452ebb52e2168876aba62ee19800c"
+      }
+    ],
+    "activity_worker_liveness": [
+      {
+        "job_id": "samsara:dd9c09f607819261cca8956036f7e1d8eaedff76a05fc8c0872ea09bb3d87bff",
+        "owner_epoch": 1,
+        "generation": 1,
+        "workspace_id": "workspace:c071e2cbd853400180a398b57418f462",
+        "lease_token": "44e5510913da477a90cfe3859ebe7205",
+        "policy_json": "{\"heartbeat_seconds\":10,\"lease_seconds\":30,\"stop_grace_seconds\":5,\"version\":1}",
+        "policy_digest": "48b47343bb8227ca71b5292cc63f7ef3e40d534720467ce3e58e1ac3fabe2cc7",
+        "claimed_at": 1792693121.256551,
+        "execution_until": 1792693131.256551,
+        "lease_until": 1792693131.256551,
+        "last_sequence": 0,
+        "last_heartbeat": null,
+        "process_json": "{\"pid\":7,\"pid_namespace\":\"pid:[4026532277]\",\"proc_pid\":9026,\"start_ticks\":\"1866298\"}",
+        "stop_requested_at": 1792693121.5549417,
+        "stop_deadline": 1792693126.5549417,
+        "stop_disposition": "shutdown",
+        "stop_request_id": "runner-stop:cd76590adf381aa5fe05e97aa67a4b6148b085e8a09a7157a7102ff0d940833c",
+        "exit_json": null
+      }
+    ],
+    "activity_worker_registrations": [
+      {
+        "job_id": "samsara:dd9c09f607819261cca8956036f7e1d8eaedff76a05fc8c0872ea09bb3d87bff",
+        "owner_epoch": 1,
+        "generation": 1,
+        "workspace_id": "workspace:c071e2cbd853400180a398b57418f462",
+        "lease_token": "44e5510913da477a90cfe3859ebe7205",
+        "registration_json": "{\"domain\":{\"boot_id\":\"8143a977-c3cb-4dd0-a92d-1e1255434b88\",\"mount_namespace\":\"mnt:[4026532275]\",\"proc_mountinfo\":\"94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\",\"proc_root_device\":30,\"proc_root_inode\":1,\"proc_submounts\":[\"100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\",\"95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\",\"96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\",\"97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\",\"98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\",\"99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\"],\"reader_pid_namespace\":\"pid:[4026532277]\"},\"domain_digest\":\"014bf71efbdf894273e557f12720ee4f668757192d7eb984362b7e106020066f\",\"process\":{\"pid\":7,\"pid_namespace\":\"pid:[4026532277]\",\"proc_pid\":9026,\"start_ticks\":\"1866298\"},\"registration_digest\":\"285cab02ec5c3ccab9398c6f722b38e19109942bf13f9573149356cb86215231\",\"schema_version\":2}",
+        "registration_digest": "285cab02ec5c3ccab9398c6f722b38e19109942bf13f9573149356cb86215231",
+        "registered_at": 1792693121.2865195,
+        "receipt_json": "{\"fence\":{\"epoch\":1,\"generation\":1,\"token\":\"44e5510913da477a90cfe3859ebe7205\"},\"job_id\":\"samsara:dd9c09f607819261cca8956036f7e1d8eaedff76a05fc8c0872ea09bb3d87bff\",\"kind\":\"worker_process_registered\",\"owner_wall_after\":1792693121.2865195,\"owner_wall_before\":1792693121.256551,\"provider\":\"samsara.procfs-directory-v2\",\"registered_at\":1792693121.2865195,\"registration_digest\":\"285cab02ec5c3ccab9398c6f722b38e19109942bf13f9573149356cb86215231\",\"workspace_id\":\"workspace:c071e2cbd853400180a398b57418f462\"}"
+      }
+    ],
+    "activity_worker_absences": [
+      {
+        "job_id": "samsara:dd9c09f607819261cca8956036f7e1d8eaedff76a05fc8c0872ea09bb3d87bff",
+        "owner_epoch": 1,
+        "generation": 1,
+        "workspace_id": "workspace:c071e2cbd853400180a398b57418f462",
+        "lease_token": "44e5510913da477a90cfe3859ebe7205",
+        "observation_json": "{\"domain\":{\"boot_id\":\"8143a977-c3cb-4dd0-a92d-1e1255434b88\",\"mount_namespace\":\"mnt:[4026532275]\",\"proc_mountinfo\":\"94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\",\"proc_root_device\":30,\"proc_root_inode\":1,\"proc_submounts\":[\"100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\",\"95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\",\"96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\",\"97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\",\"98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\",\"99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\"],\"reader_pid_namespace\":\"pid:[4026532277]\"},\"domain_digest\":\"014bf71efbdf894273e557f12720ee4f668757192d7eb984362b7e106020066f\",\"method\":\"procfs_enoent_twice\",\"process\":{\"pid\":7,\"pid_namespace\":\"pid:[4026532277]\",\"proc_pid\":9026,\"start_ticks\":\"1866298\"},\"provider\":\"samsara.procfs-directory-v2\",\"registration_digest\":\"285cab02ec5c3ccab9398c6f722b38e19109942bf13f9573149356cb86215231\",\"returncode\":null,\"samples\":[{\"observed_monotonic_ns\":18663335971356,\"status\":\"directory_enoent\"},{\"observed_monotonic_ns\":18663387807931,\"status\":\"directory_enoent\"}],\"schema_version\":2}",
+        "receipt_json": "{\"clock_rollback\":false,\"disposition\":\"shutdown\",\"fence\":{\"epoch\":1,\"generation\":1,\"token\":\"44e5510913da477a90cfe3859ebe7205\"},\"job_id\":\"samsara:dd9c09f607819261cca8956036f7e1d8eaedff76a05fc8c0872ea09bb3d87bff\",\"kind\":\"worker_identity_absent\",\"observation\":{\"domain\":{\"boot_id\":\"8143a977-c3cb-4dd0-a92d-1e1255434b88\",\"mount_namespace\":\"mnt:[4026532275]\",\"proc_mountinfo\":\"94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\",\"proc_root_device\":30,\"proc_root_inode\":1,\"proc_submounts\":[\"100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\",\"95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\",\"96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\",\"97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\",\"98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\",\"99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\"],\"reader_pid_namespace\":\"pid:[4026532277]\"},\"domain_digest\":\"014bf71efbdf894273e557f12720ee4f668757192d7eb984362b7e106020066f\",\"method\":\"procfs_enoent_twice\",\"process\":{\"pid\":7,\"pid_namespace\":\"pid:[4026532277]\",\"proc_pid\":9026,\"start_ticks\":\"1866298\"},\"provider\":\"samsara.procfs-directory-v2\",\"registration_digest\":\"285cab02ec5c3ccab9398c6f722b38e19109942bf13f9573149356cb86215231\",\"returncode\":null,\"samples\":[{\"observed_monotonic_ns\":18663335971356,\"status\":\"directory_enoent\"},{\"observed_monotonic_ns\":18663387807931,\"status\":\"directory_enoent\"}],\"schema_version\":2},\"observed_at\":1792693121.6698773,\"owner_wall_after\":1792693121.6698773,\"owner_wall_before\":1792693121.6047196,\"policy_digest\":\"48b47343bb8227ca71b5292cc63f7ef3e40d534720467ce3e58e1ac3fabe2cc7\",\"provider\":\"samsara.procfs-directory-v2\",\"registration_digest\":\"285cab02ec5c3ccab9398c6f722b38e19109942bf13f9573149356cb86215231\",\"returncode\":null,\"state\":\"reconciling\",\"time_status\":\"owner_wall\",\"workspace_id\":\"workspace:c071e2cbd853400180a398b57418f462\"}"
+      }
+    ],
+    "activity_worker_exits": [],
+    "activity_runs": [
+      {
+        "workspace_id": "workspace:c071e2cbd853400180a398b57418f462",
+        "activity_id": "interrupted",
+        "branch": "main",
+        "parent_id": null,
+        "spec_json": "{\"acceptance_ref\":\"native:text_work/1\",\"activity_id\":\"interrupted\",\"definition\":{\"digest\":\"1115db286280cd1bf2345fc8b574ebe1c0932eebf421c5cd53d76ea7f035d975\",\"id\":\"synthetic:real_work\",\"version\":1},\"kind\":\"real_work\",\"parent_id\":null,\"participants\":[\"visitor\"],\"purpose\":\"Inventory admitted source identities for a receiving participant.\",\"source_refs\":[{\"digest\":\"0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a\",\"id\":\"artifact:9441f98d94d44bf189b5fd70ced6d474\",\"version\":1}]}",
+        "spec_digest": "75dc1078f6b7a6a7ad693575f437c65afe09976dcf3a09e0ef55dcd41380aa8d",
+        "version": 1,
+        "state": "waiting",
+        "outcome": "unresolved",
+        "checkpoint_json": "{\"activity_id\":\"interrupted\",\"activity_version\":1,\"handler\":{\"digest\":\"61a50e1798c2423d358d29541bbfc181d5574fd8dbf36ecd5d487629ca402c53\",\"id\":\"samsara:handler:real_work\",\"version\":1},\"job_id\":\"samsara:dd9c09f607819261cca8956036f7e1d8eaedff76a05fc8c0872ea09bb3d87bff\",\"job_version\":1,\"next\":{\"actor\":\"worker\",\"condition\":\"An equipped host supplies actual completed bytes and check evidence.\",\"operation\":\"activity.receive\"},\"outcome\":\"unresolved\",\"parent_id\":null,\"pending_effects\":[],\"reservations\":[],\"result_refs\":[],\"resume_condition\":\"An equipped host supplies actual completed bytes and check evidence.\",\"state\":\"waiting\"}",
+        "native_json": "{\"actor\":\"visitor\",\"generation\":1,\"input_ref\":{\"digest\":\"3cbe158dbefff009426ed9f1779f2bc846e4c5085ec7cfc74cf8a15fe6b1e80f\",\"id\":\"artifact:676f52b79dbe4774b5c046adacdb4d94\",\"version\":1},\"job_id\":\"samsara:dd9c09f607819261cca8956036f7e1d8eaedff76a05fc8c0872ea09bb3d87bff\",\"work_record_ref\":{\"digest\":\"8ed7875279a9d2abbea933b85dbec5b776c23444e441c5a2ef088958db21f4e2\",\"id\":\"artifact:1a00a9c615f248538750300a264d15d1\",\"version\":1}}"
+      }
+    ]
+  },
+  "cause": "UNKNOWN; no repair/retry/claim of qualification",
+  "total_changes": 0
+}

@@ -1,0 +1,8 @@
+{
+  "observed": "unittest setUp failed on first Client.view because root logging wrapper lacked optional fd=None",
+  "product_assertions_reached": false,
+  "old_test_source_or_product_source_changed": false,
+  "old_fixture_world_preserved": false,
+  "reason": "setUp failure skipped unittest tearDown; TemporaryDirectory weakref finalizer bypassed cleanup replacement and removed its temporary directory. Earlier test-results unique_worlds_preserved flag is incorrect for this failedsetup and is superseded by this correction. No failed-world bytes invented.",
+  "later_r2_change": "Correct optional fd signature and detach owned temp finalizer immediately at creation; log actual session/Popen IDs; use new distinct disposableworld."
+}

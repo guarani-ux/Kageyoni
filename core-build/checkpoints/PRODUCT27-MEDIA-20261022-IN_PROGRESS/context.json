@@ -1,0 +1,50 @@
+{
+  "status": "IN_PROGRESS_PRODUCT27_INSTALLED_UNQUALIFIED_POSTRUN_INTEGRITY_FAIL",
+  "root_remote_writer_released_for_next_named_writer": true,
+  "product27_runtime": "56e54d9f91bf266d61e5364fd014a3c46bd290681609c607888014939b00cb30",
+  "native16_pinned_commit": "0fcb9050f6630c48f79a8e261a322e0d1b5199dc",
+  "expected_parent_pair": {
+    "SAMSARA": "b3e470042f3b44926c4e127309fe8ce91c8356c9",
+    "Kageyoni": "0fcb9050f6630c48f79a8e261a322e0d1b5199dc"
+  },
+  "media26_full_raw_carrier": "/workspace/scratch/5c7ed9200168/recovery-20261022/media-recovery-check/carrier-proposal/Media_Recovery_AI_Local_Actual.zip",
+  "media26_carrier_sha256": "d4dd0b4c1b93ec31f514fe283b9516101f1c5eeac5b16566161716a87081705e",
+  "full_release_qualified": false,
+  "active_operations": "Root may author/execute NEW RAM ownerlossprobe with unchangedcandidate. It is EXCLUDED from thisfrozenmanifest/GO. No sourcewriter to product27package/native034. No otherremoteowner.",
+  "remaining_scope": "AllretainedF1-F5 and originalrequirements preserved in BUILD_STATUS, allhuman/canonicallimits retained; no fullrelease/ownerlossqualification.",
+  "checkpoint": "PRODUCT27-MEDIA-20261022-IN_PROGRESS",
+  "pair_id": "product27-native16-media26-20261022-frozen109",
+  "governing_pins": {
+    "SAMSARA": "db9838371a1128124b77fac69677902a4b5820c6",
+    "Kageyoni": "872973f091320f92e3276408090978084928d291"
+  },
+  "authority_current26_pair": {
+    "SAMSARA": "a9f609dd88b5db76e3ad1ead37dbd97294a105cc",
+    "Kageyoni": "4558c548ad0a345dc237482d7c7a822ce9c9ab75"
+  },
+  "native16_wheel_sha256": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3",
+  "product27_wheel_sha256": "3913e0913629f3b6e5d0908b20b219f205d9e383bb42cfa07fbe42dafee5b0c9",
+  "source_capsule": {
+    "filename": "Samsara_Product27_Selected_Source_Durability_IN_PROGRESS.zip",
+    "bytes": 2743984,
+    "sha256": "d6f3a9e4253b640fe9c549d20401dbc01a66c0ec847bc3f2d632237871be218d",
+    "zip_entries": 110,
+    "source_files": 109,
+    "source_bytes": 46999353
+  },
+  "media_carrier": {
+    "filename": "Media_Recovery_AI_Local_Actual.zip",
+    "bytes": 34631353,
+    "sha256": "d4dd0b4c1b93ec31f514fe283b9516101f1c5eeac5b16566161716a87081705e",
+    "zip_entries": 906,
+    "source_files": 905
+  },
+  "qualification_limits": [
+    "Native114 in-process tests pass; original journal-bearing native specimen and copied recovery fail; other82native full raw custody pending.",
+    "Product27 source author11 and independent8 checks pass; built installed238payload identity; not feature/owner-loss qualified.",
+    "Ownerlossr1 wrapper setup failed and unittest finalizer removed world; logs/JUnit preserved, no invented world.",
+    "Ownerlossr2 unchanged test reports1PASS but copied-world postrun integrity FAILED; wirelog ends at issued job.reconcile; retained queue cancelled generation1 only, no meaningful child generation2 result.",
+    "Full F1-F5/fullrelease false. New root RAM probe excluded from this109file freeze.",
+    "Current26/private media stays matching runtime; media carrier exact906members custody is not product27 qualification or full Library continuation."
+  ]
+}

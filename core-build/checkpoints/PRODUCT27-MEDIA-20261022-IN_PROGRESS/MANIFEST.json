@@ -1,0 +1,663 @@
+{
+  "format": "selected-product27-candidate-source-and-failed-world/1",
+  "files": [
+    {
+      "path": "BUILD_STATUS.json",
+      "bytes": 463075,
+      "sha256": "4887dbb8eff89e865ced6bd3bbeece1e75b4bd647882a9a41e851ca5d0df5f22",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/adopted-build-source.json",
+      "bytes": 5968,
+      "sha256": "b84ae686efae92f71ab0745460a713548564840877eb48df8b11609a19e73c9b",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/build.log",
+      "bytes": 725,
+      "sha256": "9efdc5e53e77f2b72a06c69cb9a27bf7bb17a167a28fdc40016f705b1822d761",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/distributions/kageyoni_engine-11.1.0.dev16-py3-none-any.whl",
+      "bytes": 608719,
+      "sha256": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/distributions/samsara_world-0.5.3.dev27-py3-none-any.whl",
+      "bytes": 223036,
+      "sha256": "3913e0913629f3b6e5d0908b20b219f205d9e383bb42cfa07fbe42dafee5b0c9",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/install.log",
+      "bytes": 3997,
+      "sha256": "fd34cbd469770751c0ef83127ae99dbaab73a4f575a264c8c4a2efcd6ee6de64",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/installed-before.json",
+      "bytes": 52542,
+      "sha256": "bbccbd524191fe0f02f091dd5723f3a0613e3dab128c195a68ef8d23136a184b",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/installed_proof27.py",
+      "bytes": 2551,
+      "sha256": "f8bf6507a44b8966b773286cef79715ed89387e5e3443c3d0a0d7fcdde5d7c1c",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r1.log",
+      "bytes": 2530,
+      "sha256": "6a018db0a396bfe8e5fec692f4bdc88d336dac354b9791928ed44d5e864c162f",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r1/closed-owner-observation.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r1/harness-failure-correction.json",
+      "bytes": 737,
+      "sha256": "374297c2c9f090c44e93b9938c87160f22dab517cef8d8f7f9e2fc85ed6ce89c",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r1/installed-after.json",
+      "bytes": 51650,
+      "sha256": "cf239cec9f25e990c3b526dac5d0fcb820b0190fb3b931a8df75f42a6fb85add",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r1/installed-before.json",
+      "bytes": 40440,
+      "sha256": "a5c5b45f2ba5453caba0edee880bf0c37e414118da41387741da9416c5ad4266",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r1/pytest.xml",
+      "bytes": 2415,
+      "sha256": "adce4447ff8d4fb6c7468617e0c00237e6f19e3be99ddc7d1a6142f308a2c273",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r1/test-results.json",
+      "bytes": 2814,
+      "sha256": "f2acf22a59d292895ee22aabe368b6e086437ddeaf840a92f208ec5a69dcf894",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r2.log",
+      "bytes": 213,
+      "sha256": "8f0d88acdb5c332772e9b4fe536c5d6526a4099d22933436940faad15730e19c",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/jobs/33be9822ef4d09af0d91019500a831fb4f46805afebdebb544b30102518a7749-1-1.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/jobs/836f395ff7e7c71c345aa4f80990a871e6c537d29d48bc6f6a3d57f2f0d82052-2-1.json",
+      "bytes": 851,
+      "sha256": "b181082c394e0aee6fecd697ca929be0621086d57f58f77d7f0356b9e3822eb6",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/owner.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/workspace.json",
+      "bytes": 186,
+      "sha256": "8a3305f14f823641094ac9f6dff053f0ecf6591743da1c7ad7fbd60a7cd61d04",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.artifacts/objects/0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+      "bytes": 572,
+      "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.artifacts/objects/0586dac47e5463eff008fa18ef0067d54da437d444f9da4a9053153387428b96",
+      "bytes": 553,
+      "sha256": "0586dac47e5463eff008fa18ef0067d54da437d444f9da4a9053153387428b96",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.artifacts/objects/3380b4058787260adfed1d736a5b219495f2e2da31daf339e298c11ff8794742",
+      "bytes": 1664,
+      "sha256": "3380b4058787260adfed1d736a5b219495f2e2da31daf339e298c11ff8794742",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.artifacts/objects/3b662e22ed1bc16e9a816a436acd632d7c1fd25b69655bd4ffcce9baa8aa70ff",
+      "bytes": 2220,
+      "sha256": "3b662e22ed1bc16e9a816a436acd632d7c1fd25b69655bd4ffcce9baa8aa70ff",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.artifacts/objects/3cbe158dbefff009426ed9f1779f2bc846e4c5085ec7cfc74cf8a15fe6b1e80f",
+      "bytes": 1627,
+      "sha256": "3cbe158dbefff009426ed9f1779f2bc846e4c5085ec7cfc74cf8a15fe6b1e80f",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.artifacts/objects/6e1e6d1b5901cf0211ba7a3a248e0313cae3adaf68b179712827fed681eaeac2",
+      "bytes": 1627,
+      "sha256": "6e1e6d1b5901cf0211ba7a3a248e0313cae3adaf68b179712827fed681eaeac2",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.artifacts/objects/8ed7875279a9d2abbea933b85dbec5b776c23444e441c5a2ef088958db21f4e2",
+      "bytes": 1714,
+      "sha256": "8ed7875279a9d2abbea933b85dbec5b776c23444e441c5a2ef088958db21f4e2",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.artifacts/objects/d80a7b679ea87d0d75a5e615bd17d8b90269dbbb1bc000d66af09a8d7a28f6c5",
+      "bytes": 1704,
+      "sha256": "d80a7b679ea87d0d75a5e615bd17d8b90269dbbb1bc000d66af09a8d7a28f6c5",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite",
+      "bytes": 2428928,
+      "sha256": "4dd1b04fb4c9af9c2b0d0d62b4461c41dc6a208af75f704b92fd0924aa6a17b3",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v10-a2466073be7f48da896e1bf868003120.bak",
+      "bytes": 937984,
+      "sha256": "591ccd7c15f8baa42a620bd7c9acd2b4708e36ecbc26756201c1d12c04f5ced8",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v11-d92906fa0a584103849003e0f07db9a4.bak",
+      "bytes": 987136,
+      "sha256": "0a7f6aef9c01bed60cc6288a3bd3f3e1f35088d734bd96e527f53241278308d0",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v12-daeb797a1b884a2496e981896ec6b7e3.bak",
+      "bytes": 999424,
+      "sha256": "157db719723a91f7c1b89be373ea35b61edaeb1644c7496abb98032863879168",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v13-0984a4f4dbeb439cb6c913ec364dc715.bak",
+      "bytes": 1056768,
+      "sha256": "bda4f75410912dbc12aa31673111f38068b44314bcae31eb6a66f2d46143f287",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v14-a844e0621d2948e4ab108bf21ae47677.bak",
+      "bytes": 1105920,
+      "sha256": "c1f758dc41c1e421412734e676e832a88459b632f4c1e6e1f1b4bbf85513799a",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v15-0e51609d9bc94d889b78040897ac920e.bak",
+      "bytes": 1224704,
+      "sha256": "239aac55f621b8b8a7f1684ee5931fdba9c8a11dddbcaf344b07ed5f623e84d6",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v16-a462164ced44472898263d865109432f.bak",
+      "bytes": 1273856,
+      "sha256": "a5ad54dd8e19d152c288d6204871c8cd7e992feaad4a43b07912516b751886ff",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v17-279ce9af88f549a9a328d0385c207d15.bak",
+      "bytes": 1306624,
+      "sha256": "efa863ee51bc401d207c2d85eb70fb01a4b38c6a4c5215440aeca26a574fdc8a",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v18-dde6340c4cc3451c9f7c5b9bf99691fa.bak",
+      "bytes": 1314816,
+      "sha256": "868917db996439c52d18453dde780dba8ec7f1fafa864e93ee0ee9c891f5728c",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v19-b2482fd87487441ab449da990f592aa0.bak",
+      "bytes": 1413120,
+      "sha256": "0d44c535d8c91885b5dc6cd343a2e2ef26e135a74820dc8349e4d7c1fa6a8c2d",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v20-4f3eecb4af7a44b5a4e449fc222d7a09.bak",
+      "bytes": 1445888,
+      "sha256": "924d043a55fe8d7dd6251b7d4657803c0e199c9b08b66219252460a1ed47ec49",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v21-d56fcb3d2a14415986f3e2a241cf08a2.bak",
+      "bytes": 1466368,
+      "sha256": "169727d3fb548c03badd1f535c81a51c0b71045a6d1da777ab4b29b98b962099",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v22-b5513f0955d0454f98c30f4d11698f96.bak",
+      "bytes": 1486848,
+      "sha256": "4843833a988f9c301e06349ea56782b77ee73508d8bf4cd89b3f9c9c6f4fbe03",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v23-0fe20026998c46168fab870f95ad6400.bak",
+      "bytes": 1523712,
+      "sha256": "d41a97754f2741d669f874aa59d3790f58f9be6a704b2204d6e30c35acfffafc",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v24-029b833ecd004f0e9fe63c65fdbfeae2.bak",
+      "bytes": 1531904,
+      "sha256": "bfbd213402996fc1de912e0dbd4b2a92f00e771effe5e344d3af38cce901f0da",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v25-cca4e0675a574c64b0186d144fae4531.bak",
+      "bytes": 1568768,
+      "sha256": "57f184021b029d4fdf569009f7a16709759a54e426999610cf11fb3b2ea03b75",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v26-1d772cfacb8b4521a10d162ec5be3d01.bak",
+      "bytes": 1576960,
+      "sha256": "9326f1f6092aa5578425c4b9ad28960ad882bc53006ad7758bf73d97dc505056",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v27-e9e2969577094bb99df96ff2856cfb06.bak",
+      "bytes": 1650688,
+      "sha256": "96c0f72485b24689d7dd44e4b4bbd11964cd0b6565181d08f048deca33051874",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v28-a49ba1a15cd34f929778aef7dd595d47.bak",
+      "bytes": 1687552,
+      "sha256": "f3db1ae26315d794c5c36b2b55df0e923e26e5f9734089ec3157ddcca4714978",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v29-fc1c3ebc4fda42ec9f9460b50b53656a.bak",
+      "bytes": 1744896,
+      "sha256": "13c7d51e14e12b41223d5b7a28206d94981bd14c9374bec7fb24ad9507e8a73e",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v30-aa03bbaff14c4fa3b11a7d0dc8403d3a.bak",
+      "bytes": 1773568,
+      "sha256": "ca07e081e281d39f733ce4224733da4db680b54f365b69317d4be1f87ce87c05",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v31-737aed9ac05c4522baa2a2e384a364a2.bak",
+      "bytes": 1806336,
+      "sha256": "dd04d920b1f87427067b10cbd1873e58afb87931d3c3b9398b38bca5e850ea35",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v32-f4a884c68ce84470a979b54eb4569c3d.bak",
+      "bytes": 1822720,
+      "sha256": "b83f7d7de67f4e7fdea1f6d3a08a57f4c80a8c985d8f17f2b210f8ec75d1718b",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v33-796d1350217943b2bab57ac34674469d.bak",
+      "bytes": 1839104,
+      "sha256": "31a9db541c6d7b202a198b0cfa0bb3622eeadf4566cf30e8437ddf2af6f2c7a4",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v34-996f052f51a740268ff96825557a7cf5.bak",
+      "bytes": 1880064,
+      "sha256": "0a61c74c5177d1ddc66594c1dd502a61f8d6497e3193d4390234bfee8030c1f4",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v4.bak",
+      "bytes": 847872,
+      "sha256": "994b984205853d175d6f6721d10982ff9a1aad1e844fde06215f5e2275335825",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v5.bak",
+      "bytes": 856064,
+      "sha256": "2810148fdbf718e6f0a9d4a2b76d085f803f0b70e299f58239fec59bbba3a455",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v6.bak",
+      "bytes": 880640,
+      "sha256": "8735a37c42a661bff12923ef07391603aa73441c94e4b49994deb61aca0566c5",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v7.bak",
+      "bytes": 888832,
+      "sha256": "cba12f2c34e224be9cdf58437a36ba3bd81aa53c0ad0fa38629569c489cc9944",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v8.bak",
+      "bytes": 901120,
+      "sha256": "f539983a8f655edc13657a7a3abcea12d240ef5855d1617d955e2e737a542eeb",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/closed-world/world.sqlite.pre-v9-c39709c2fa7f4d849066c57893493aba.bak",
+      "bytes": 901120,
+      "sha256": "c13714c5da8d750d17a7e625251fcac3d67d6904aa97eec03b0e92a088b480cd",
+      "unix_mode": 384
+    },
+    {
+      "path": "product27-build/owner-loss-r2/installed-after.json",
+      "bytes": 51650,
+      "sha256": "cf239cec9f25e990c3b526dac5d0fcb820b0190fb3b931a8df75f42a6fb85add",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r2/installed-before.json",
+      "bytes": 40440,
+      "sha256": "a5c5b45f2ba5453caba0edee880bf0c37e414118da41387741da9416c5ad4266",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r2/issued.jsonl",
+      "bytes": 38541,
+      "sha256": "ba37ff4b15b86b01b37ae78e63d9075da9857900f3d2fc29b018eb5a74844a2c",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r2/postrun-integrity-failure.json",
+      "bytes": 11229,
+      "sha256": "f2cad0ff9326e15a29a3227ebb288d42395431fc0517b6849bc1b81584ad2635",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r2/pytest.xml",
+      "bytes": 405,
+      "sha256": "70ab4c99e221b8f7bdb56af2616ea4d0a158b408fe250dc92811fe00b9fd38d8",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/owner-loss-r2/test-results.json",
+      "bytes": 910,
+      "sha256": "cbe8e6fba52384fc59fe811f09e16d59a266a26156af6532a8912f016ce05605",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/pyproject.toml",
+      "bytes": 520,
+      "sha256": "9c6cab5ea960da768438a3574713cedbd6b4da52d395ce15bf76375c4acf949c",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/__init__.py",
+      "bytes": 105,
+      "sha256": "8afd4a070fc51a643bb891f172ed6a8c2babd1113d9ca221dbf51e01f62aa67a",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/__main__.py",
+      "bytes": 29,
+      "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/application.py",
+      "bytes": 73871,
+      "sha256": "ec4a4ac6f381fbd8be9f4edc49842430ab09be333600a349c020ef88050fb6f8",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/atlas.py",
+      "bytes": 20551,
+      "sha256": "1cac3a9d352ea52c7a2ad9344af25fe5c39cb6b0562bec211a198970e02dee2e",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/causality.py",
+      "bytes": 13613,
+      "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/cli.py",
+      "bytes": 9443,
+      "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/client.py",
+      "bytes": 19442,
+      "sha256": "e9d521abffd75fb32c5a9d03d0ce88184685f21a3fba8b1f131f8a13e90c0040",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/compatibility.py",
+      "bytes": 30288,
+      "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/console.py",
+      "bytes": 15603,
+      "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/content.py",
+      "bytes": 26244,
+      "sha256": "9c25534e5246de8c322518fe60e918b35e7eb0b721dc9c61fcaf5cfb4b2869e0",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/contentsets.py",
+      "bytes": 35940,
+      "sha256": "1aae2e875336b24481858c245640ff07a41638e39953d524282e14f7078188d7",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/data/compatibility-policy-ps1.json",
+      "bytes": 143222,
+      "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/data/compatibility-policy-r07a.json",
+      "bytes": 55805,
+      "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/data/compatibility-policy-r07b.json",
+      "bytes": 113651,
+      "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/data/compatibility-policy.json",
+      "bytes": 172418,
+      "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/data/contract.json",
+      "bytes": 121739,
+      "sha256": "9342d9558a01585c9844ddce95bb01df56184e0fce40a0f5864c4f5547168c06",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/data/engine-lock.json",
+      "bytes": 587,
+      "sha256": "100d042560e762a09d56774e80df43de74e6af689ac507b6f4d25029861bd078",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/data/initial-source.md",
+      "bytes": 572,
+      "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/data/work-record.json",
+      "bytes": 979,
+      "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/equipment.py",
+      "bytes": 10788,
+      "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/exploration.py",
+      "bytes": 10177,
+      "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/extensions.py",
+      "bytes": 16151,
+      "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/handlers.py",
+      "bytes": 11382,
+      "sha256": "eea8c6c4daa47e17adc35f94c542c44afdd6c8d6ed7ff7a812499ed65c504275",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/intake.py",
+      "bytes": 10721,
+      "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/local_worker.py",
+      "bytes": 13009,
+      "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/mediawork.py",
+      "bytes": 20871,
+      "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/owner.py",
+      "bytes": 19310,
+      "sha256": "1bbb65a52ec041bba4e5a03bb7409c505117e28acd446f22bee54a04cd532f57",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/practice.py",
+      "bytes": 25686,
+      "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/practice_content.py",
+      "bytes": 21975,
+      "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/process_custody.py",
+      "bytes": 12747,
+      "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/properties.py",
+      "bytes": 37343,
+      "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/protocol.py",
+      "bytes": 3971,
+      "sha256": "60ac91ae0627860c4111132ce40d510bfc12430473b6a18bc960883d6fbf1f93",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/runner.py",
+      "bytes": 51252,
+      "sha256": "bc7facde3ea38912124840edf49bb394bcb23a452fd9701d0f618e1402eb13eb",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/situation.py",
+      "bytes": 18184,
+      "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/sourcework.py",
+      "bytes": 16934,
+      "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/terminal.py",
+      "bytes": 2534,
+      "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-build/package/samsara/travel_content.py",
+      "bytes": 17730,
+      "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-independent-review/review.md",
+      "bytes": 7313,
+      "sha256": "b563a5a0e06497df4fe34ed7a974606ee7bbade942eafadf43192f3285d7fa1e",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-independent-review/source-countercase-results.json",
+      "bytes": 2825,
+      "sha256": "a8c4052051cf3ed10ded0a0ea80b586bf0d4580c0ea2ae249571546753f24f67",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-independent-review/source_countercases.py",
+      "bytes": 9420,
+      "sha256": "ee6df312d87ccbc6c9d2a52b589f32da8808323edfc967b1c877156c1973a94b",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-source/evidence/custody27-source/SOURCE_FREEZE.json",
+      "bytes": 5042,
+      "sha256": "ba1fe1fb7437f9357a53d4a03ab39a61da8d562b85cb1ff8f1d43c509157a16f",
+      "unix_mode": 420
+    },
+    {
+      "path": "product27-source/evidence/custody27-source/product27-custody.patch",
+      "bytes": 51754,
+      "sha256": "1c294476ca5e0f446f2078b7a933a6a451adb6b291d4771d50703ed29d19ba2e",
+      "unix_mode": 420
+    }
+  ],
+  "source_files": 109,
+  "source_bytes": 46999353,
+  "not_full_historical_continuation": true,
+  "full_release_qualified": false
+}

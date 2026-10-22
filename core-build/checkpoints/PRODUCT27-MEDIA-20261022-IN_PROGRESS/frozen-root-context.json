@@ -1,0 +1,15 @@
+{
+  "status": "IN_PROGRESS_PRODUCT27_INSTALLED_UNQUALIFIED_POSTRUN_INTEGRITY_FAIL",
+  "root_remote_writer_released_for_next_named_writer": true,
+  "product27_runtime": "56e54d9f91bf266d61e5364fd014a3c46bd290681609c607888014939b00cb30",
+  "native16_pinned_commit": "0fcb9050f6630c48f79a8e261a322e0d1b5199dc",
+  "expected_parent_pair": {
+    "SAMSARA": "b3e470042f3b44926c4e127309fe8ce91c8356c9",
+    "Kageyoni": "0fcb9050f6630c48f79a8e261a322e0d1b5199dc"
+  },
+  "media26_full_raw_carrier": "/workspace/scratch/5c7ed9200168/recovery-20261022/media-recovery-check/carrier-proposal/Media_Recovery_AI_Local_Actual.zip",
+  "media26_carrier_sha256": "d4dd0b4c1b93ec31f514fe283b9516101f1c5eeac5b16566161716a87081705e",
+  "full_release_qualified": false,
+  "active_operations": "Root may author/execute NEW RAM ownerlossprobe with unchangedcandidate. It is EXCLUDED from thisfrozenmanifest/GO. No sourcewriter to product27package/native034. No otherremoteowner.",
+  "remaining_scope": "AllretainedF1-F5 and originalrequirements preserved in BUILD_STATUS, allhuman/canonicallimits retained; no fullrelease/ownerlossqualification."
+}

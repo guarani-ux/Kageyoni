@@ -1,0 +1,73 @@
+{
+  "status": "SOURCE_ONLY_IMPLEMENTED_11_FOCUSED_CHECKS_PASS_NOT_RUNTIME_QUALIFIED",
+  "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-source",
+  "baseline": "Exact recovered current26 product",
+  "source_files": 344,
+  "source_identity_sha256": "97f6195b870368854a1a9c682781c8109dc7f2ea33f07343945ef7a514ee8b55",
+  "manifest": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-source/evidence/custody27-source/frozen-source-manifest.json",
+  "changed_baseline_files": [
+    "samsara/protocol.py",
+    "samsara/owner.py",
+    "samsara/runner.py",
+    "samsara/application.py",
+    "samsara/content.py"
+  ],
+  "new_source_files": [
+    "samsara/process_custody.py",
+    "tests/test_custody27_source_only.py"
+  ],
+  "all_old_tests_byte_exact": true,
+  "old_test_file_count": 32,
+  "patch": {
+    "path": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-source/evidence/custody27-source/product27-custody.patch",
+    "bytes": 51754,
+    "sha256": "1c294476ca5e0f446f2078b7a933a6a451adb6b291d4771d50703ed29d19ba2e"
+  },
+  "provider": {
+    "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340",
+    "exact_preserved_provider": true,
+    "canonical_native_schema_imported": true,
+    "eleven_OS_facing_bodies_unmodified": true
+  },
+  "source_payload_identity": {
+    "expected_product_source_payloads": 37,
+    "identity_sha256": "fb8312a86d81842b03a1305bdf72a5e5dc7d032971851e18df846a947baa27cd",
+    "NOT_A_BUILT_OR_INSTALLED_WHEEL": true
+  },
+  "interface_changes": [
+    "Launch positively registers provider identity outside UoW; one current wall reading feeds atomic outer queue.process033 + WorkerCustody.register034; first task is after successful outer commit.",
+    "prepare_reconciliation(context,activity,disposition) creates a private bounded frozen owner-memory bundle; both wire dispositions prepare outside activity_messages UoW only when request absent.",
+    "prepare_recovery is retained as a trusted helper alias returning the new pinned bundle, not bare bytes.",
+    "reconcile requires command UoW and the exact private bundle; reauthorizes operator grant and pins workspace/activity version/job digest/current fence/producer binding/operator binding/registration digest.",
+    "New historical absence uses actual observe_registration + strict normalize_identity_absence outside UoW, then exact native stop-if-needed + observe_absence inside UoW.",
+    "Already absent, known exit and truthful no-registration routes avoid invented exits. terminal_absence participates in reconcilable/control/discard/stop guards; first absence disposition is not amended.",
+    "Recovery keeps strict _output bytes unaccepted with input source lineage and explicit continuation; discard never reads output.",
+    "Readonly Owner preflight and explicit synthetic initialization require034; provider bytes enter runtime fingerprint."
+  ],
+  "checks": {
+    "new_test_methods_passed": 11,
+    "log": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-source/evidence/custody27-source/source-pure-tests.log",
+    "scope": "AST/source preservation, exact pure schema/provider normalization, and explicit inert in-memory routing models only. Native/SQLite/process/OS/world behavior NOT exercised.",
+    "AST_parse_all_product_modules": true,
+    "old_protected_output_and_artifact_helpers_AST_exact": true,
+    "old_historical_signal_suppression_AST_exact": true,
+    "old_current_Popen_heartbeat_stop_exit_bodies_AST_exact_except_authorized_launch_registration_and_terminal_guards": true,
+    "new_observation_in_command_UoW": false,
+    "no_build_install_DB_OS_probe_signal_media_or_remote_effects": true,
+    "raw_test_failures": []
+  },
+  "metadata_adoption": {
+    "actual_product_version_dependency_and_engine_lock": "UNCHANGED current26/native15; root owns final adoption/build/freeze",
+    "exact_native16_lock_proposal": "/workspace/scratch/5c7ed9200168/recovery-20261022/product27-source/evidence/custody27-source/PROPOSED-engine-lock.json",
+    "native16_wheel_sha256": "845d7b4aaa3b81c66364eed09d34e91b57e5c0f99df6aaa654b470d4a1db4ff3",
+    "no_compatibility_policy_or_runtime_metadata_rewrite": true
+  },
+  "limits": [
+    "Native034-r1 retained-world journal/copy-recovery failure remains unresolved and preserved separately; no native paths edited.",
+    "This copy is source-only and is not included in the current authority or native checkpoint.",
+    "No claim of installed product, old-world compatibility, real registration-before-task, historical host absence, owner loss, process interruption, recipient use, media, human or full release qualification.",
+    "Existing generated build/lib and egg-info remain exact baseline artifacts, not new executable evidence. Root must build/freeze the adopted source independently.",
+    "Existing job.reconcile current-state eligibility remains reconciling; paused reprepare remains through discard_prepared. No compatibility/admission expansion introduced."
+  ],
+  "shared_seam_contradictions_found": []
+}

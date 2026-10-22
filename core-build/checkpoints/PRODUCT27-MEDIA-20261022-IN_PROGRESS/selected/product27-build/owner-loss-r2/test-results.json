@@ -1,0 +1,28 @@
+{
+  "reports": [
+    {
+      "test": "tests/test_bounded_runner.py::ProcessRunnerTests::test_owner_kill_requires_observed_reconciliation_and_new_generation",
+      "phase": "setup",
+      "outcome": "passed",
+      "longrepr": null,
+      "duration": 0.00022710300254402682
+    },
+    {
+      "test": "tests/test_bounded_runner.py::ProcessRunnerTests::test_owner_kill_requires_observed_reconciliation_and_new_generation",
+      "phase": "call",
+      "outcome": "passed",
+      "longrepr": null,
+      "duration": 2.436139823999838
+    },
+    {
+      "test": "tests/test_bounded_runner.py::ProcessRunnerTests::test_owner_kill_requires_observed_reconciliation_and_new_generation",
+      "phase": "teardown",
+      "outcome": "passed",
+      "longrepr": null,
+      "duration": 0.0004314990001148544
+    }
+  ],
+  "payloads_unchanged": 238,
+  "no_old_assertions_edited": true,
+  "unique_worlds_preserved": true
+}

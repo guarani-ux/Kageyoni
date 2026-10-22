@@ -1,0 +1,110 @@
+{
+  "scope": "Source and inert Python dictionaries only; no native/DB/OS provider/worker/build/install execution.",
+  "cases": [
+    {
+      "case": "frozen patch against exact product26",
+      "result": "PASS",
+      "detail": {
+        "sha256": "1c294476ca5e0f446f2078b7a933a6a451adb6b291d4771d50703ed29d19ba2e",
+        "paths": [
+          "samsara/application.py",
+          "samsara/content.py",
+          "samsara/owner.py",
+          "samsara/process_custody.py",
+          "samsara/protocol.py",
+          "samsara/runner.py",
+          "tests/test_custody27_source_only.py"
+        ]
+      }
+    },
+    {
+      "case": "32 original test files unchanged",
+      "result": "PASS",
+      "detail": 32
+    },
+    {
+      "case": "protected output, artifact and process bodies unchanged",
+      "result": "PASS",
+      "detail": {
+        "runner.py": [
+          "_output",
+          "_service_historical",
+          "_pump_input",
+          "_pump_events",
+          "_guarded_kill",
+          "_observe_terminal",
+          "_finish",
+          "_service_live",
+          "_cache_stop",
+          "_close_handles",
+          "_service",
+          "tick",
+          "close"
+        ],
+        "application.py": [
+          "artifact_bytes",
+          "artifact_bytes_for_actor",
+          "authorize_artifact"
+        ]
+      }
+    },
+    {
+      "case": "exact adopted provider bytes",
+      "result": "PASS",
+      "detail": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+    },
+    {
+      "case": "stored receipt replay: discard",
+      "result": "PASS",
+      "detail": {
+        "events": [
+          "stored-receipt-read",
+          "stored-receipt-read"
+        ],
+        "new_preflight": false,
+        "revision_change_check": false,
+        "protected_result_integrity_preserved": true
+      }
+    },
+    {
+      "case": "stored receipt replay: recover",
+      "result": "PASS",
+      "detail": {
+        "events": [
+          "stored-receipt-read",
+          "stored-receipt-read",
+          "protected-artifact-integrity-read"
+        ],
+        "new_preflight": false,
+        "revision_change_check": false,
+        "protected_result_integrity_preserved": true
+      }
+    },
+    {
+      "case": "exact private pin invalidation",
+      "result": "PASS",
+      "detail": {
+        "mutated_fields": [
+          "prepared_json",
+          "active",
+          "grants_json",
+          "registration_digest",
+          "version",
+          "owner_epoch",
+          "generation",
+          "lease_token",
+          "binding_id",
+          "authority_epoch",
+          "process_json",
+          "state"
+        ],
+        "cases": 12
+      }
+    },
+    {
+      "case": "private carrier rejects malformed untrusted-shaped payloads",
+      "result": "PASS",
+      "detail": 8
+    }
+  ]
+}
