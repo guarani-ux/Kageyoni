@@ -1,0 +1,9 @@
+{
+  "repository": "guarani-ux/SAMSARA",
+  "ref": "codex/samsara-core-continuation",
+  "commit": "82c379d35d7c902127155e87d0a818975152d9c1",
+  "checkpoint": "SOURCE36-NEW-COMMON-20261023-IN_PROGRESS",
+  "source_only_not_installed": true,
+  "full_release": false,
+  "complete_continuation": "Library16 coherent34 remains separate, no new save effect"
+}

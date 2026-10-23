@@ -1,0 +1,21 @@
+{
+  "base": "actual Foundation35/Native19 canonical745 source, not lost old36/37",
+  "base_source_files": 745,
+  "partial_source_files": 750,
+  "unchanged_original_files": 743,
+  "changed_original_files": [
+    "kageyoni/engine.py",
+    "kageyoni/model.py"
+  ],
+  "added_files": [
+    "kageyoni/workspaces/source_authority_history.py",
+    "kageyoni/workspaces/source_authority_installation.py",
+    "kageyoni/workspaces/source_authority_operations.py",
+    "kageyoni/workspaces/source_authority_schema.py",
+    "migration_036.sql"
+  ],
+  "all35_original_SQL_and143_tests_exact": true,
+  "full_source_identity": null,
+  "not_a_complete_continuation": true,
+  "no_Native20_version_wheel_install_build_or_Engine_GO": true
+}

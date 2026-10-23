@@ -1,0 +1,37 @@
+{
+  "bytes": 1681167,
+  "sha256": "3a68913e8f6d44b6432964919c5eecf282341972ecd26005be60956e77970585",
+  "zip_entries": 268,
+  "parts": [
+    {
+      "path": "core-build/checkpoints/SOURCE36-NEW-COMMON-20261023-IN_PROGRESS/providers/part-0000.b64",
+      "offset": 0,
+      "bytes": 500000,
+      "sha256": "4f484303accaea341cbfb8691ae31c7fd8ab4d5f32f07d01011577c254d0efc4",
+      "GitID": "5a79c00bb56b187d3f495580e3b45930104165f5"
+    },
+    {
+      "path": "core-build/checkpoints/SOURCE36-NEW-COMMON-20261023-IN_PROGRESS/providers/part-0001.b64",
+      "offset": 500000,
+      "bytes": 500000,
+      "sha256": "16becb4b2163207c8df7d3b1705000a699940c160926b3b0bb0bdd5418f4e7f7",
+      "GitID": "230ce9d1c1db0c8773638b2ad1665f6bfaf6c7b9"
+    },
+    {
+      "path": "core-build/checkpoints/SOURCE36-NEW-COMMON-20261023-IN_PROGRESS/providers/part-0002.b64",
+      "offset": 1000000,
+      "bytes": 500000,
+      "sha256": "13cc85a15354c202e05dec3d34c6691fd605e611d587c6fbcf6af7af1736bf88",
+      "GitID": "76d057a75f2097deaf42e16112b13357d7827e10"
+    },
+    {
+      "path": "core-build/checkpoints/SOURCE36-NEW-COMMON-20261023-IN_PROGRESS/providers/part-0003.b64",
+      "offset": 1500000,
+      "bytes": 181167,
+      "sha256": "51963d09c477ac8dde9126dc5b746ccb4fea8483be8a273b2fb88254a0267a18",
+      "GitID": "31414a0eb9a17e8aaa27b4a4bc26ac3e9ef4a9f8"
+    }
+  ],
+  "source_only_partial_not_runnable": true,
+  "full_release": false
+}
