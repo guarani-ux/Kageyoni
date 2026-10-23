@@ -88,6 +88,18 @@ from .raw_binary_parser import (
     BasicBlock,
     CFGEdge,
 )
+from .mission_runner import (
+    MissionCheckpointer,
+    MissionRunner,
+    CheckpointRecord,
+    MissionStep,
+    MissionDAG,
+    MissionError,
+    CheckpointIntegrityError,
+    CheckpointNotFoundError,
+    MissionExecutionError,
+    MissionAbortedError,
+)
 
 __all__ = [
     "Patchbay",
@@ -169,4 +181,14 @@ __all__ = [
     "DecodedInstruction",
     "BasicBlock",
     "CFGEdge",
+    "MissionCheckpointer",
+    "MissionRunner",
+    "CheckpointRecord",
+    "MissionStep",
+    "MissionDAG",
+    "MissionError",
+    "CheckpointIntegrityError",
+    "CheckpointNotFoundError",
+    "MissionExecutionError",
+    "MissionAbortedError",
 ]
