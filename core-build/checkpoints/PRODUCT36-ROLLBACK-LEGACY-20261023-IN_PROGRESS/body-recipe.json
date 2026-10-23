@@ -1,0 +1,64 @@
+{
+  "bytes": 3535343,
+  "sha256": "ca9721346354c3808eafcc69e3244a2c8c19b8320651524e36ce18587a7d3466",
+  "zip_entries": 19,
+  "parts": [
+    {
+      "path": "core-build/checkpoints/PRODUCT36-ROLLBACK-LEGACY-20261023-IN_PROGRESS/providers/part-0000.b64",
+      "offset": 0,
+      "bytes": 500000,
+      "sha256": "5823ff50f1bbc4f5060ef3dea8f6005e8dd436111d49aa44aad3d8fc7dc9fe8d",
+      "GitID": "51418abbd509c94c35cdc265421502b1e168a546"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-ROLLBACK-LEGACY-20261023-IN_PROGRESS/providers/part-0001.b64",
+      "offset": 500000,
+      "bytes": 500000,
+      "sha256": "8c1f8774ed06a05c12e6fd124e93c3eb2c3692760edd5bdd1d4d0c8e594ba248",
+      "GitID": "19e6774d8b7f0679fc5887f641586af61362249f"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-ROLLBACK-LEGACY-20261023-IN_PROGRESS/providers/part-0002.b64",
+      "offset": 1000000,
+      "bytes": 500000,
+      "sha256": "48388e3ca7be3502e55256e8cf1b16e915540c22c93e412c255de511b30b000d",
+      "GitID": "a1facf9b3fcc2fd5ca290ce797a9ce188dbe9e47"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-ROLLBACK-LEGACY-20261023-IN_PROGRESS/providers/part-0003.b64",
+      "offset": 1500000,
+      "bytes": 500000,
+      "sha256": "c5e11ae0f18c95ca69b6521b5779bc3ff905ae6ee2ad89690aba01a7ab37db30",
+      "GitID": "2b3e8c73bde720357361e79f280f6b7508b0bf83"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-ROLLBACK-LEGACY-20261023-IN_PROGRESS/providers/part-0004.b64",
+      "offset": 2000000,
+      "bytes": 500000,
+      "sha256": "469f98815d2a2d3e4c36d32d872c5e637f75c1ac6ec18e6e639cbd72c870eb78",
+      "GitID": "812421346beaf9680956a171e6068fe703426c1d"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-ROLLBACK-LEGACY-20261023-IN_PROGRESS/providers/part-0005.b64",
+      "offset": 2500000,
+      "bytes": 500000,
+      "sha256": "af4f46fe5eb3b7b1d6a99b398273f440179c93c8cc1d59b04f47a958486ce3ca",
+      "GitID": "af8c8ded5963e7411669b57388d13b45cd6c49f4"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-ROLLBACK-LEGACY-20261023-IN_PROGRESS/providers/part-0006.b64",
+      "offset": 3000000,
+      "bytes": 500000,
+      "sha256": "7611cecc74777363f28a34a0c302f9583d669c64aec720caa4e22ade4f722e43",
+      "GitID": "364151813f809085359e1639002a1d06c13bee9d"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-ROLLBACK-LEGACY-20261023-IN_PROGRESS/providers/part-0007.b64",
+      "offset": 3500000,
+      "bytes": 35343,
+      "sha256": "52de7d2935ec69db3de0886f4e2fd2d836833987eae8bba885f64f30060526fe",
+      "GitID": "9b22904192de374c1482ab073ae80b900f40d2a8"
+    }
+  ],
+  "full_release": false
+}

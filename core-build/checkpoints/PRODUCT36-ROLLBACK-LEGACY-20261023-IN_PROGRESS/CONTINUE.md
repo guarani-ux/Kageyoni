@@ -1,0 +1,7 @@
+# Product36 rollback and legacy qualification — IN_PROGRESS
+
+Same installed candidate and wheels, 252 sameprocess source/wheel/SITE payload proofs. Actual capture/finalizer followed by deliberate outer UoW rollback leaves SQL tables equal to their pre-operation logical digest, while an unaccepted materialized file remains and is preserved. This does not test a spontaneously failing finalizer or filesystem atomicity.
+
+Actual long 20000-character legacy source ID and SQLite int/bool aliases read successfully; float1.0 selects no row. The original R5 probe wrongly compared input-echo source_id to a string and failed; its world and accepted ingests remain intact. R6 uses a fresh independent copy and a comparison grounded in identical Native19/20 source-return AST. No production change. No Native fixture SQL fabricated, no human/AI recipient claim, no full release claim.
+
+NEXT finish targeted partial/history negatives then implement authentic immutable complete derived-input lineage and worker custody. Conservative refusal is not useful derived support. Full F1-F5/private-native scope remains. Use parent receipts for exact source/wheels and earlier direct/recovery evidence. Library16 remains complete34 and excludes36; never substitute this compact hash for full next_round identity. One writer; preserve every prior unseen leaf; same-item guarded full continuation only after coherent complete assembly. No new automation or ordinary recommissioning.
