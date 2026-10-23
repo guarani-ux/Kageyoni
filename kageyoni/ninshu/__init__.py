@@ -1,7 +1,20 @@
 """Ninshū Module Package Initialization."""
 from .patchbay import Patchbay
 from .console import ActiveConsole, ChannelStripConfig, MasterTape
-from .circuits import ChannelCircuit, WaveformMetric, SignalClippingError, PhaseCancellationFault
+from .circuits import (
+    ChannelCircuit,
+    WaveformMetric,
+    SignalClippingError,
+    PhaseCancellationFault,
+    IngressTrimExceededError,
+    PreampIngressTrim,
+    ScopeFilter,
+    FourBandEQ,
+    VCADynamicsCompressor,
+    PhaseComparisonResult,
+    compare_phase,
+    apply_phase_invert,
+)
 from .scars import ScarFeedbackMatrix, ScarImpedanceTransformer, CANONICAL_SCARS, SCAR_REGISTRY, ScarRegistry
 from .ageing import SSLBoardAgeingEngine, ChannelPatina
 from .shaper import SSLMixingSession, ChannelPotentiometers, ChannelMeterBridge
@@ -27,6 +40,54 @@ from .thermodynamics import (
     ProcessExitCodeError,
     DigestMismatchError,
 )
+from .power_system import (
+    NinshuKnobVector,
+    WillCarrier,
+    CANONICAL_WILL_CARRIERS,
+    ModulatedTechniquePackage,
+    NinshuPowerConsole,
+    NinshuPowerSystem,
+    execute_revision_167_painteress_encounter,
+)
+from .smelter import (
+    MoltenSmelter,
+    StructuralBlueprint,
+    CastArtifact,
+)
+from .js_ast_analyzer import (
+    JsAstAnalyzer,
+    JsAnalysisSummary,
+    DataflowSink,
+    BundlerRegistration,
+)
+from .adb_bridge import (
+    AdbBridge,
+    AdbOutputParser,
+    AdbDevicesResult,
+    AdbPackageDetails,
+    AdbProcessListResult,
+    AdbLogcatResult,
+)
+from .kuna_inspector import (
+    KunaInspector,
+    ChannelObservation,
+    AnalysisHypothesis,
+    ReconciliationReport,
+    ClaimEpistemicStatus,
+)
+from .provider_bridge import (
+    ProviderBridge,
+    ProviderExecutionReceipt,
+    ProviderAvailabilityDescriptor,
+)
+from .raw_binary_parser import (
+    RawBinaryDisassembler,
+    RawBinarySummary,
+    InstructionMarker,
+    DecodedInstruction,
+    BasicBlock,
+    CFGEdge,
+)
 
 __all__ = [
     "Patchbay",
@@ -37,6 +98,14 @@ __all__ = [
     "WaveformMetric",
     "SignalClippingError",
     "PhaseCancellationFault",
+    "IngressTrimExceededError",
+    "PreampIngressTrim",
+    "ScopeFilter",
+    "FourBandEQ",
+    "VCADynamicsCompressor",
+    "PhaseComparisonResult",
+    "compare_phase",
+    "apply_phase_invert",
     "ScarFeedbackMatrix",
     "ScarImpedanceTransformer",
     "CANONICAL_SCARS",
@@ -66,4 +135,38 @@ __all__ = [
     "MemoryCeilingExceededError",
     "ProcessExitCodeError",
     "DigestMismatchError",
+    "NinshuKnobVector",
+    "WillCarrier",
+    "CANONICAL_WILL_CARRIERS",
+    "ModulatedTechniquePackage",
+    "NinshuPowerConsole",
+    "NinshuPowerSystem",
+    "execute_revision_167_painteress_encounter",
+    "MoltenSmelter",
+    "StructuralBlueprint",
+    "CastArtifact",
+    "JsAstAnalyzer",
+    "JsAnalysisSummary",
+    "DataflowSink",
+    "BundlerRegistration",
+    "AdbBridge",
+    "AdbOutputParser",
+    "AdbDevicesResult",
+    "AdbPackageDetails",
+    "AdbProcessListResult",
+    "AdbLogcatResult",
+    "KunaInspector",
+    "ChannelObservation",
+    "AnalysisHypothesis",
+    "ReconciliationReport",
+    "ClaimEpistemicStatus",
+    "ProviderBridge",
+    "ProviderExecutionReceipt",
+    "ProviderAvailabilityDescriptor",
+    "RawBinaryDisassembler",
+    "RawBinarySummary",
+    "InstructionMarker",
+    "DecodedInstruction",
+    "BasicBlock",
+    "CFGEdge",
 ]

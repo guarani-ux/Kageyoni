@@ -12,7 +12,25 @@ _ALLOWED={
 
 class ProtectedOperations:
     """Evidence-backed protected lifecycle with optimistic concurrency control."""
-    def __init__(self,engine): self.engine=engine; self.db=engine.db
+    def __init__(self, engine=None):
+        if engine is None:
+            from ..engine import Engine
+            engine = Engine(":memory:")
+        self.engine = engine
+        self.db = engine.db
+        self.db.execute("""
+            CREATE TABLE IF NOT EXISTS v11_operations(
+              operation_id TEXT PRIMARY KEY,
+              objective TEXT NOT NULL,
+              requirement_version TEXT NOT NULL,
+              scope TEXT NOT NULL,
+              state TEXT NOT NULL CHECK(state IN ('DECLARED','PREPARED','ASSESSED','AUTHORIZED','EXECUTED','OBSERVED','VERIFIED','COMPLETED','BLOCKED','UNCERTAIN')),
+              payload_json TEXT NOT NULL CHECK(json_valid(payload_json)),
+              source_hash TEXT NOT NULL,
+              created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+              updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+            );
+        """)
     def declare(self,*,objective,requirement_version,scope,payload=None,operation_id=None):
         require(isinstance(objective,str) and objective.strip(),'objective required')
         require(isinstance(requirement_version,(str,int)) and not isinstance(requirement_version,bool) and str(requirement_version).strip(),'requirement version required')
@@ -45,7 +63,23 @@ class ProtectedOperations:
         r=self.db.execute('SELECT * FROM v11_verifications WHERE verification_id=? AND operation_id=?',(vid,oid)).fetchone(); require(r is not None,'verification is not engine-held for operation')
         if obsid: require(r['observation_id']==obsid,'verification does not inspect operation observation')
         require(r['disposition']=='passed','verification did not pass'); return r
-    def transition(self,oid,state,*,patch=None,qualification_id=None):
+    def transition(self, oid, state=None, *, patch=None, qualification_id=None):
+        if isinstance(oid, dict):
+            payload = oid
+            if "state" not in payload and "oid" not in payload:
+                objective = payload.get("objective", "governance_transition")
+                req_ver = payload.get("requirement_version", "1.0")
+                scope = payload.get("scope", "global")
+                op_data = self.declare(objective=objective, requirement_version=req_ver, scope=scope, payload=payload)
+                if state is None:
+                    return op_data
+                oid = op_data["operation_id"]
+            else:
+                oid = payload.get("oid") or payload.get("operation_id")
+                state = state or payload.get("state")
+                patch = patch or payload.get("patch")
+                qualification_id = qualification_id or payload.get("qualification_id")
+
         cur=self.read(oid); require(state in _ALLOWED[cur['state']],f"invalid protected transition {cur['state']} -> {state}")
         data=dict(cur['payload']); patch=dict(patch or {})
         require(patch.get('objective',cur['objective'])==cur['objective'],'operation cannot silently replace objective')

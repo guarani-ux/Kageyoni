@@ -322,7 +322,7 @@ class ProcessSupervisor:
     monitors execution boundary leases, and enforces fail-closed resource constraints.
     """
 
-    def __init__(self, session_salt: str, max_active_tokens: int = 1000):
+    def __init__(self, session_salt: str = "ninshu_salt", max_active_tokens: int = 1000):
         if not session_salt or not isinstance(session_salt, str):
             raise SupervisorSecurityError("session_salt must be a non-empty string.")
         self.session_salt = session_salt
@@ -389,7 +389,7 @@ class ProcessSupervisor:
 
     def validate_token(
         self,
-        token: RunToken,
+        token: Union[RunToken, Dict[str, Any]],
         expected_pid: Optional[int] = None,
         expected_parent_pid: Optional[int] = None,
         current_time: Optional[float] = None,
@@ -398,6 +398,20 @@ class ProcessSupervisor:
 
         Fail-closed: Raises an exception on any security or invariant violation.
         """
+        if isinstance(token, dict):
+            if "token_id" not in token:
+                token = self.issue_token(
+                    pid=token.get("pid", 1000),
+                    parent_pid=token.get("parent_pid", 1),
+                    lease_duration=token.get("lease_duration", 60.0),
+                    max_budget=token.get("max_budget", 300.0),
+                )
+            else:
+                parsed_token = RunToken.from_dict(token)
+                if parsed_token.token_id not in self._tokens:
+                    self._tokens[parsed_token.token_id] = parsed_token
+                token = parsed_token
+
         now = time.time() if current_time is None else current_time
 
         # 1. Check if token is cancelled

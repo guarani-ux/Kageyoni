@@ -71,7 +71,20 @@ class SaveState:
         )
 
     @classmethod
-    def from_file(cls, path: Union[str, Path]) -> SaveState:
+    def from_file(cls, path: Union[str, Path, Dict[str, Any], bytes]) -> SaveState:
+        if isinstance(path, dict):
+            return cls.from_dict(path)
+        if isinstance(path, (bytes, bytearray)):
+            return cls.from_dict(json.loads(path.decode("utf-8")))
+        if isinstance(path, str):
+            p = Path(path)
+            if p.exists() and p.is_file():
+                text = p.read_text(encoding="utf-8")
+                return cls.from_dict(json.loads(text))
+            try:
+                return cls.from_dict(json.loads(path))
+            except Exception:
+                pass
         text = Path(path).read_text(encoding="utf-8")
         return cls.from_dict(json.loads(text))
 

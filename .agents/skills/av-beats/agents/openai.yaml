@@ -1,0 +1,5 @@
+interface:
+  display_name: "AV Beats"
+  short_description: "Build a pre-shoot A/V script beat by beat using Visual-First Subtraction and Mouth-Shape Syntax"
+policy:
+  allow_implicit_invocation: false

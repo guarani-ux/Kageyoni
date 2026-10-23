@@ -118,6 +118,34 @@ class SymbiogenesisAgent(DevelopmentalAgent):
         self.niche_construction_candidates: dict[str, CandidateTechnique] = {}
         self.qualified_niche_techniques: dict[str, QualifiedTechnique] = {}
 
+    def recompose(self, payload: Any = None) -> Dict[str, Any]:
+        """Modulates environmental conditions to birth brand-new emergent capabilities (Ecology_t -> Ecology_{t+1})."""
+        if payload is None:
+            payload = {}
+        elif not isinstance(payload, dict):
+            payload = {"input": payload}
+
+        niche_id = payload.get("niche_id", f"niche_{int(time.time())}")
+        name = payload.get("name", "symbiogenesis_recomposition")
+        pressures = payload.get("pressures", ["epistemic_containment", "thermodynamic_budget"])
+        affordances = payload.get("affordances", ["channel_interop", "evidence_preservation"])
+
+        niche = self.construct_niche(
+            niche_id=niche_id,
+            name=name,
+            participants=[],
+            coexisting_pressures=pressures,
+            shared_affordances=affordances,
+        )
+        return {
+            "status": "recomposed",
+            "niche_id": niche.niche_id,
+            "name": niche.name,
+            "pressures": list(niche.coexisting_pressures),
+            "affordances": list(niche.shared_affordances),
+            "created_at": niche.created_at,
+        }
+
     # -------------------------------------------------------------------------
     # ORDER 5 — DIFFERENTIATION
     # -------------------------------------------------------------------------

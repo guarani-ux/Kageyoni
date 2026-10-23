@@ -1,0 +1,5 @@
+interface:
+  display_name: "AV Spine"
+  short_description: "Spawn 3 parallel sub-agents to design competing causal Story Spines"
+policy:
+  allow_implicit_invocation: false

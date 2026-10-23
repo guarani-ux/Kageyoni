@@ -5,6 +5,9 @@ import math
 from pathlib import Path
 from typing import Any, Iterable
 
+from .gates import run_gate
+from .deficits import DeficitPlanner
+
 RUNNABLE_STATUSES = {"FILLED", "DERIVED", "INFERRED", "NOT_APPLICABLE"}
 BLOCKING_STATUSES = {"UNKNOWN", "STALE", "UNPLACED", "INVALID"}
 
@@ -16,7 +19,11 @@ class Compiler:
     not perform semantic world resolution and it never mutates campaign state.
     """
 
-    def __init__(self, frame: dict[str, Any], aspects: Iterable[dict[str, Any]]):
+    def __init__(self, frame: dict[str, Any] | None = None, aspects: Iterable[dict[str, Any]] | None = None):
+        if frame is None:
+            frame = {"frame_id": "default", "slots": []}
+        if aspects is None:
+            aspects = []
         self.frame = frame
         self.init_issues=[]
         if not isinstance(aspects,(list,tuple)):
@@ -30,9 +37,21 @@ class Compiler:
         ids=[a["aspect_id"] for a in raw]
         if len(ids)!=len(set(ids)): self.init_issues.append({"slot_id":"input","status":"INVALID","reason":"duplicate aspect_id"})
         self.aspects = {a["aspect_id"]: a for a in raw}
-        self.slot_defs = {s["slot_id"]: s for s in frame["slots"]}
-        if len(self.slot_defs) != len(frame["slots"]):
+        self.slot_defs = {s["slot_id"]: s for s in frame.get("slots", [])}
+        if len(self.slot_defs) != len(frame.get("slots", [])):
             raise ValueError("duplicate slot_id in frame")
+
+    @classmethod
+    def compile_payload(cls, payload: dict[str, Any]) -> dict[str, Any]:
+        """Classmethod helper to compile a payload dict containing frame, aspects, and bindings."""
+        if not isinstance(payload, dict):
+            payload = {}
+        frame = payload.get("frame") or {"frame_id": "default", "slots": []}
+        aspects = payload.get("aspects") or []
+        bindings = payload.get("bindings") or {}
+        participant_count = payload.get("participant_count")
+        context = payload.get("context")
+        return cls(frame, aspects).compile(bindings, participant_count=participant_count, context=context)
 
     def _participant_count(self, bindings: dict[str, list[str]]) -> int:
         if not isinstance(bindings,dict): return 0
@@ -105,7 +124,11 @@ class Compiler:
             return f"authority {authority!r} requires provenance"
         return None
 
-    def compile(self, bindings: dict[str, list[str]], participant_count: int | None = None, context: dict[str, Any] | None = None) -> dict[str, Any]:
+    def compile(self, bindings: dict[str, Any] | None = None, participant_count: int | None = None, context: dict[str, Any] | None = None) -> dict[str, Any]:
+        if bindings is None:
+            bindings = {}
+        elif isinstance(bindings, dict) and ("frame" in bindings or "aspects" in bindings) and "bindings" in bindings:
+            return self.compile_payload(bindings)
         context = dict(context or {})
         # participant_count is accepted only for compatibility with the earlier
         # prototype. Bound participants are authoritative; a mismatching caller
@@ -281,7 +304,6 @@ class Compiler:
         blockers.extend(input_issues)
         preserved = [x for x in slots if x["status"] == "CONFLICTED"]
 
-        from .gates import run_gate
         candidate = {
             "frame_id": self.frame["frame_id"],
             "participant_count": bound_participants,
@@ -305,7 +327,6 @@ class Compiler:
             if slot.get("status") in {"FILLED","DERIVED","INFERRED"}: admitted.extend(slot.get("aspect_ids",[]) or [])
         candidate["admitted_aspect_ids"] = sorted(set(admitted))
         candidate["input_dispositions"] = {aid:("ADMITTED" if aid in candidate["admitted_aspect_ids"] else "REJECTED_OR_INACTIVE") for aid in self.aspects}
-        from .deficits import DeficitPlanner
         candidate["deficits"] = DeficitPlanner(self.frame).plan(candidate)
         return candidate
 

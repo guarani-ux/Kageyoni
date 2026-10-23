@@ -794,6 +794,16 @@ class CrashReplayEngine:
             details=details,
         )
 
+    @classmethod
+    def analyze_crash(
+        cls,
+        trace_input: Union[str, bytes, Dict[str, Any], CrashTrace],
+        mitigations: Optional[Union[bytes, Dict[str, Any], SecurityMitigations]] = None,
+        cyclic_stride: int = 4,
+    ) -> CrashAnalysis:
+        """Alias for analyze, conforming to Ninshū Channel 22 contract."""
+        return cls.analyze(trace_input, mitigations=mitigations, cyclic_stride=cyclic_stride)
+
 
 __all__ = [
     "DEFAULT_ALPHABET",

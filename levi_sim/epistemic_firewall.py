@@ -113,12 +113,26 @@ class EpistemicFirewall:
             source="user_interface",
         ))
 
-    def record_observation(self, observation: str, source_record_id: str):
-        self.entries.append(EpistemicEntry(
+    def record_observation(self, observation: Union[str, Dict[str, Any]], source_record_id: str = "kageyoni_gateway") -> Dict[str, Any]:
+        if isinstance(observation, dict):
+            source_record_id = observation.get("source_record_id") or observation.get("source") or source_record_id
+            statement = observation.get("observation") or observation.get("statement") or str(observation)
+        else:
+            statement = str(observation)
+
+        entry = EpistemicEntry(
             category=EpistemicCategory.KAGEYONI_OBSERVATION,
-            statement=observation,
+            statement=statement,
             source=source_record_id,
-        ))
+        )
+        self.entries.append(entry)
+        return {
+            "status": "recorded",
+            "category": EpistemicCategory.KAGEYONI_OBSERVATION.value,
+            "statement": statement,
+            "source": source_record_id,
+            "entry_count": len(self.entries),
+        }
 
     def record_verified_fact(self, fact: str, receipt_hash: str, source: str):
         if not receipt_hash or not isinstance(receipt_hash, str) or len(receipt_hash) != 64 or not all(c in "0123456789abcdefABCDEF" for c in receipt_hash):

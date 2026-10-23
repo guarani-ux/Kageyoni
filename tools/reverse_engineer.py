@@ -20,7 +20,7 @@ from typing import Any, Dict, List, Optional, Tuple
 class DotNetPEParser:
     """Zero-dependency parser for PE and .NET CLR metadata streams."""
 
-    def __init__(self, data: bytes):
+    def __init__(self, data: bytes = b""):
         self.data = data
         self.length = len(data)
 
@@ -30,7 +30,10 @@ class DotNetPEParser:
         pe_offset = struct.unpack("<I", self.data[0x3C:0x40])[0]
         return self.length > pe_offset + 4 and self.data[pe_offset:pe_offset+4] == b"PE\x00\x00"
 
-    def parse(self) -> Dict[str, Any]:
+    def parse(self, data: Optional[bytes] = None) -> Dict[str, Any]:
+        if data is not None:
+            self.data = data
+            self.length = len(data)
         if not self.is_pe():
             return {"error": "Not a valid PE binary"}
 

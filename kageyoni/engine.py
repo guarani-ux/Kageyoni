@@ -103,14 +103,15 @@ class Engine:
     def create(cls, path: str | Path, *, seed: Any = None, read_only: bool = False) -> Engine:
         return cls(path, read_only=read_only)
 
-    def __init__(self, path: str | Path, *, read_only: bool = False):
+    def __init__(self, path: str | Path = ":memory:", *, read_only: bool = False):
         self.path = str(path)
         if read_only:
             self.db = sqlite3.connect(Path(self.path).resolve().as_uri() + "?mode=ro", uri=True, isolation_level=None, timeout=10)
             self.db.row_factory = sqlite3.Row
             self.db.execute("PRAGMA query_only=ON")
             return
-        Path(self.path).parent.mkdir(parents=True, exist_ok=True)
+        if self.path not in (":memory:", ""):
+            Path(self.path).parent.mkdir(parents=True, exist_ok=True)
         self.db = sqlite3.connect(self.path, isolation_level=None, timeout=10)
         self.db.row_factory = sqlite3.Row
         self.db.execute("PRAGMA foreign_keys=ON")

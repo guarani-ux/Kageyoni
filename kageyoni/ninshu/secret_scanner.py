@@ -329,3 +329,7 @@ class SecretScanner:
                 seen_spans.add(span_key)
 
         return matches
+
+
+# Backward-compatible alias for Ninshū Channel 38
+SecretRadarScanner = SecretScanner

@@ -43,10 +43,17 @@ def tokenize(text):
     return {stem(w) for w in words if w not in STOPWORDS and stem(w) not in STOPWORDS}
 
 
-def scout_horizon(topic, task, search_roots=None):
+def scout_horizon(topic, task="", search_roots=None):
+    if isinstance(topic, dict):
+        payload = topic
+        task = payload.get("task", task) or ""
+        search_roots = payload.get("search_roots", search_roots)
+        topic = payload.get("topic", "") or ""
+    elif task is None:
+        task = ""
+
     if search_roots is None:
-        default_root = Path(__file__).resolve().parent
-        search_roots = [default_root]
+        search_roots = []
 
     task_tokens = tokenize(topic + ' ' + task)
     carriers = {}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "AV Quarry"
+  short_description: "Explore brief, research audience friction, and mine A/V fragments into quarry.md"
+policy:
+  allow_implicit_invocation: false

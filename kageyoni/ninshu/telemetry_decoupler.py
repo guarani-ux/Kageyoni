@@ -300,3 +300,55 @@ class TelemetryDecoupler:
         if expected_seq < 0:
             raise InvalidPacketFieldError(f"expected_seq must be non-negative: {expected_seq}")
         self._next_expected_seq[channel_id] = expected_seq
+
+    def inspect_frame(self, frame: Union[TelemetryPacket, Dict[str, Any], bytes, str]) -> Dict[str, Any]:
+        """Inspects, admits, and audits a telemetry frame, returning structured verification metrics."""
+        if isinstance(frame, bytes):
+            try:
+                frame = json.loads(frame.decode("utf-8"))
+            except Exception:
+                frame = {"channel_id": 1, "sequence_no": self._next_expected_seq.get(1, 0), "payload": frame}
+        elif isinstance(frame, str):
+            try:
+                frame = json.loads(frame)
+            except Exception:
+                frame = {"channel_id": 1, "sequence_no": self._next_expected_seq.get(1, 0), "payload": frame.encode("utf-8")}
+
+        if isinstance(frame, dict):
+            raw_payload = frame.get("payload", b"")
+            if isinstance(raw_payload, str):
+                p_bytes = raw_payload.encode("utf-8")
+            elif isinstance(raw_payload, bytes):
+                p_bytes = raw_payload
+            else:
+                p_bytes = json.dumps(raw_payload).encode("utf-8")
+            
+            ch_id = frame.get("channel_id", 1)
+            seq_no = frame.get("sequence_no", self._next_expected_seq.get(ch_id, 0))
+            ts = frame.get("timestamp_ns", int(time.time() * 1e9))
+            packet = TelemetryPacket.create(
+                channel_id=ch_id,
+                sequence_no=seq_no,
+                payload_bytes=p_bytes,
+                timestamp_ns=ts,
+            )
+        elif isinstance(frame, TelemetryPacket):
+            packet = frame
+        else:
+            raise DecouplerError(f"Unsupported frame type: {type(frame)}")
+
+        audit = self.push(packet)
+        return {
+            "channel_id": packet.channel_id,
+            "sequence_no": packet.sequence_no,
+            "payload_hash": packet.payload_hash,
+            "timestamp_ns": packet.timestamp_ns,
+            "backpressure_state": self.backpressure_state.value,
+            "queue_size": self.queue_size,
+            "audit": {
+                "is_duplicate": audit.is_duplicate if audit else False,
+                "is_out_of_order": audit.is_out_of_order if audit else False,
+                "is_gap": audit.is_gap if audit else False,
+                "gap_count": audit.gap_count if audit else 0,
+            } if audit else None,
+        }

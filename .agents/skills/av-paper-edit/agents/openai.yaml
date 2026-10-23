@@ -1,0 +1,5 @@
+interface:
+  display_name: "AV Paper Edit"
+  short_description: "Assemble a documentary Paper Edit from recorded interview transcripts"
+policy:
+  allow_implicit_invocation: false

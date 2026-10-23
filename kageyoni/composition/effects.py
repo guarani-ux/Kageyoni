@@ -15,6 +15,8 @@ def _conditions(effect):
 
 class EffectResolver:
     def resolve(self, aspects: Iterable[dict[str,Any]], *, active_aspects:set[str]|None=None):
+        if isinstance(aspects, dict):
+            aspects = aspects.get("aspects", [])
         aspects=[dict(a) for a in aspects]; contributions=[];claims=[];gates=[];invalid=[];unresolved=[]
         seen=set()
         for aspect in aspects:

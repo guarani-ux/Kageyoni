@@ -311,3 +311,44 @@ class DynamicMemoryInterceptor:
         for r in self._regions:
             hasher.update(r.digest().encode("ascii"))
         return hasher.hexdigest()
+
+    @classmethod
+    def inspect_payload(cls, payload: Union[Dict[str, Any], bytes, str]) -> Dict[str, Any]:
+        """Classmethod helper to instantiate interceptor and validate memory regions and access."""
+        if isinstance(payload, bytes):
+            payload = json.loads(payload.decode("utf-8"))
+        elif isinstance(payload, str):
+            payload = json.loads(payload)
+        elif not isinstance(payload, dict):
+            payload = {}
+
+        interceptor = cls()
+        regions_data = payload.get("regions", [])
+        registered = []
+        for r in regions_data:
+            base = r.get("base_address", 0)
+            if isinstance(base, str):
+                base = int(base, 16) if base.startswith("0x") else int(base)
+            size = r.get("size", 0)
+            perm = r.get("permissions", "r--")
+            name = r.get("segment_name", "segment")
+            reg = interceptor.register_region(base, size, perm, name)
+            registered.append(reg.to_dict())
+
+        access_result = None
+        access_req = payload.get("access")
+        if access_req:
+            addr = access_req.get("address", 0)
+            if isinstance(addr, str):
+                addr = int(addr, 16) if addr.startswith("0x") else int(addr)
+            sz = access_req.get("size", 1)
+            perm = access_req.get("permission", "r--")
+            matched = interceptor.validate_access(addr, sz, perm)
+            access_result = matched.to_dict()
+
+        return {
+            "region_count": interceptor.region_count(),
+            "regions": registered,
+            "digest": interceptor.digest(),
+            "validated_access": access_result,
+        }

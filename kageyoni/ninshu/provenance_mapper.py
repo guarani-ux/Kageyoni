@@ -376,3 +376,22 @@ class ProvenanceGraph:
         # Confirm DAG integrity
         graph.topological_sort()
         return graph
+
+    @classmethod
+    def from_dict(cls, manifest: Union[Dict[str, Any], bytes, str]) -> Dict[str, Any]:
+        """Classmethod helper to parse provenance manifest and return structured graph summary."""
+        if isinstance(manifest, bytes):
+            manifest = json.loads(manifest.decode("utf-8"))
+        elif isinstance(manifest, str):
+            manifest = json.loads(manifest)
+        elif not isinstance(manifest, dict):
+            manifest = {}
+
+        manifest_copy = dict(manifest)
+        if "nodes" not in manifest_copy:
+            manifest_copy["nodes"] = {}
+        if "edges" not in manifest_copy:
+            manifest_copy["edges"] = []
+
+        g = cls.import_provenance_manifest(manifest_copy)
+        return g.export_provenance_manifest()

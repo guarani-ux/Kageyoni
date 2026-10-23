@@ -451,3 +451,7 @@ class PcapParser:
             flows=flows,
             packets=packets,
         )
+
+
+# Backward-compatible alias for Ninshū Channel 33
+PcapCaptureParser = PcapParser

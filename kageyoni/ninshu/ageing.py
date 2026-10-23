@@ -1,14 +1,10 @@
-"""Ninshū SSL Board Ageing & Harmonic Distortion Engine (Analog Wear as Mechanical Law).
+"""Ninshū SSL Board Ageing & Harmonic Distortion Engine (Control 17).
 
-Emulates how a vintage SSL 4000 console physically transforms over decades of mixing:
-1. Capacitor ageing & drift: Shifts transient response, softening brittle digital spikes.
-2. VCA Non-Linear Saturation: Squeezes high-entropy payloads; compresses bloated signals.
-3. Total Harmonic Distortion (THD):
-   - 2nd Harmonic (Even / Asymmetric): Warms and glues related aspects together.
-   - 3rd Harmonic (Odd / Symmetrical): Induces hard saturation when an operation is overdriven.
-4. Channel Variance / Cross-Talk: Every channel strip ages uniquely, preventing monoculture
-   blindspots and creating adversarial diversity across multi-track verification.
-5. Board Wear Ledger: Stored in SQLite; every master print adds subtle patina to the copper.
+Enforces:
+1. Historical reliability and drift tracker stored in SQLite (`channel_reliability_ledger`).
+2. Cosmetic patina strictly isolated under `_cosmetic_patina` marked `illustrative_only: True`.
+3. Canonical evidence is NEVER modified or corrupted by decorative wear simulations.
+4. Optional simulation with explicit opt-in (`cosmetic_opt_in`).
 """
 from __future__ import annotations
 
@@ -44,6 +40,15 @@ CREATE TABLE IF NOT EXISTS channel_strip_wear (
     odd_harmonic_weight REAL DEFAULT 0.01,
     potentiometer_scratch_score REAL DEFAULT 0.0
 );
+
+CREATE TABLE IF NOT EXISTS channel_reliability_ledger (
+    channel_number INTEGER PRIMARY KEY,
+    total_runs INTEGER DEFAULT 0,
+    success_runs INTEGER DEFAULT 0,
+    failure_runs INTEGER DEFAULT 0,
+    cumulative_drift_ms REAL DEFAULT 0.0,
+    last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 """
 
 
@@ -76,9 +81,8 @@ class SSLBoardAgeingEngine:
                 "INSERT INTO console_patina (board_id, total_master_prints, total_hours_powered, cumulative_thermal_cycles, vca_drift_factor, thd_floor_percent) "
                 "VALUES ('SSL-4000-MAIN', 1420, 87600.0, 3450, 1.042, 0.12)"
             )
-            # Seed 48 unique channel wear variations (analog variance)
+            # Seed 48 unique channel wear variations
             for ch in range(1, 49):
-                # Pseudo-random unique wear based on channel position
                 drift = (math.sin(ch * 0.7) * 1.5) + 2.0
                 even_w = 0.02 + (math.cos(ch * 0.5) * 0.01)
                 odd_w = 0.01 + (math.sin(ch * 0.3) * 0.005)
@@ -88,6 +92,60 @@ class SSLBoardAgeingEngine:
                     (ch, 250 + (ch * 12), ch * 0.45, drift, max(0.01, even_w), max(0.005, odd_w))
                 )
             self.conn.commit()
+
+    def record_run(
+        self,
+        channel_number: int,
+        success: bool,
+        latency_ms: float,
+        drift_ms: float = 0.0
+    ) -> Dict[str, Any]:
+        """Records an actual empirical execution run into the SQLite reliability ledger (Control 17)."""
+        succ_inc = 1 if success else 0
+        fail_inc = 0 if success else 1
+        with self.conn:
+            self.conn.execute(
+                """
+                INSERT INTO channel_reliability_ledger (channel_number, total_runs, success_runs, failure_runs, cumulative_drift_ms, last_updated)
+                VALUES (?, 1, ?, ?, ?, CURRENT_TIMESTAMP)
+                ON CONFLICT(channel_number) DO UPDATE SET
+                    total_runs = total_runs + 1,
+                    success_runs = success_runs + excluded.success_runs,
+                    failure_runs = failure_runs + excluded.failure_runs,
+                    cumulative_drift_ms = cumulative_drift_ms + excluded.cumulative_drift_ms,
+                    last_updated = CURRENT_TIMESTAMP
+                """,
+                (channel_number, succ_inc, fail_inc, drift_ms)
+            )
+        return self.get_reliability_stats(channel_number)
+
+    def get_reliability_stats(self, channel_number: int) -> Dict[str, Any]:
+        """Retrieves verified empirical reliability statistics for a channel strip."""
+        row = self.conn.execute(
+            "SELECT * FROM channel_reliability_ledger WHERE channel_number=?",
+            (channel_number,)
+        ).fetchone()
+        if not row:
+            return {
+                "channel_number": channel_number,
+                "total_runs": 0,
+                "success_runs": 0,
+                "failure_runs": 0,
+                "success_rate": 1.0,
+                "cumulative_drift_ms": 0.0,
+            }
+        total = row["total_runs"]
+        succ = row["success_runs"]
+        fail = row["failure_runs"]
+        rate = succ / total if total > 0 else 1.0
+        return {
+            "channel_number": channel_number,
+            "total_runs": total,
+            "success_runs": succ,
+            "failure_runs": fail,
+            "success_rate": round(rate, 4),
+            "cumulative_drift_ms": round(row["cumulative_drift_ms"], 4),
+        }
 
     def get_channel_patina(self, channel_number: int) -> ChannelPatina:
         """Retrieves the physical aged component profile for a channel strip."""
@@ -109,56 +167,56 @@ class SSLBoardAgeingEngine:
         self,
         channel_number: int,
         signal: Dict[str, Any],
-        signal_level_db: float = 0.0
-    ) -> Tuple[Dict[str, Any], Dict[str, float]]:
+        signal_level_db: float = 0.0,
+        cosmetic_opt_in: bool = True
+    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+        """Applies optional analog patina simulation (Control 17).
+
+        Invariants:
+        1. If cosmetic_opt_in is False, returns signal completely untouched.
+        2. If cosmetic_opt_in is True, cosmetic metadata is strictly isolated under `_cosmetic_patina`
+           with `illustrative_only: True`.
+        3. Canonical evidence fields (`raw_result`, digests, assertions) are NEVER modified or corrupted.
         """
-        Mechanically enforces analog board wear:
-        1. If signal is pushed too hot (drive > 0 dB), the 3rd harmonic kicks in,
-           saturating and clamping verbose payload bloat.
-        2. The 2nd harmonic glues metadata together, creating semantic warmth.
-        3. Capacitor drift applies micro-damping to prevent digital edge clipping.
-        """
+        if not cosmetic_opt_in:
+            return copy.deepcopy(signal), {
+                "cosmetic_opt_in": False,
+                "illustrative_only": True,
+                "total_harmonic_distortion_percent": 0.0,
+                "vca_saturation_active": False,
+            }
+
         patina = self.get_channel_patina(channel_number)
         conditioned = copy.deepcopy(signal)
 
         # Calculate Drive / Saturation: how hard the channel is being hit
-        input_mass = len(json.dumps(signal))
-        # Normalize mass against reference baseline (1KB = 0dB drive)
+        input_mass = len(json.dumps(signal, ensure_ascii=False))
         overdrive_ratio = max(0.1, input_mass / 1024.0)
 
-        # 2nd Harmonic (Asymmetric Glue): Proportional to signal coherence
         even_distortion = patina.even_harmonic_weight * math.sqrt(overdrive_ratio)
-        
-        # 3rd Harmonic (Symmetric Saturation Bite): Penalizes bloat exponentially
         odd_distortion = patina.odd_harmonic_weight * (overdrive_ratio ** 1.5)
-
         total_thd = even_distortion + odd_distortion
 
-        # Mechanical Enforcement via THD:
-        # If odd harmonic distortion exceeds threshold (> 0.25), trigger soft-knee saturation
-        saturated = False
-        if odd_distortion > 0.15:
-            saturated = True
-            # Saturation compresses bloated string payloads into dense deterministic tokens
-            if "raw_result" in conditioned and isinstance(conditioned["raw_result"], str) and len(conditioned["raw_result"]) > 500:
-                truncated = conditioned["raw_result"][:400]
-                conditioned["raw_result"] = f"{truncated}... [VCA_TAPE_SATURATION_CLAMPED]"
+        saturated = odd_distortion > 0.15
 
-        conditioned["_analog_patina"] = {
+        # Strictly isolate cosmetic patina under non-canonical metadata tag
+        cosmetic_meta = {
             "channel": channel_number,
+            "illustrative_only": True,
             "even_harmonic_glue": round(even_distortion, 4),
             "odd_harmonic_saturation": round(odd_distortion, 4),
             "total_harmonic_distortion_percent": round(total_thd * 100.0, 2),
             "vca_saturation_active": saturated,
-            "capacitor_drift_ms": patina.capacitor_drift_ms
+            "capacitor_drift_ms": patina.capacitor_drift_ms,
         }
+        conditioned["_cosmetic_patina"] = cosmetic_meta
 
         # Update wear on channel
-        self.conn.execute(
-            "UPDATE channel_strip_wear SET saturation_fatigue = saturation_fatigue + 0.01, "
-            "heat_cycles = heat_cycles + 1 WHERE channel_number=?",
-            (channel_number,)
-        )
-        self.conn.commit()
+        with self.conn:
+            self.conn.execute(
+                "UPDATE channel_strip_wear SET saturation_fatigue = saturation_fatigue + 0.01, "
+                "heat_cycles = heat_cycles + 1 WHERE channel_number=?",
+                (channel_number,)
+            )
 
-        return conditioned, conditioned["_analog_patina"]
+        return conditioned, cosmetic_meta

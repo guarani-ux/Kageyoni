@@ -1,0 +1,5 @@
+interface:
+  display_name: "AV Retro"
+  short_description: "Turn manual script edits and session corrections into permanent skill upgrades"
+policy:
+  allow_implicit_invocation: false
