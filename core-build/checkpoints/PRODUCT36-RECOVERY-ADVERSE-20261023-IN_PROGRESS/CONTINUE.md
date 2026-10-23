@@ -1,0 +1,9 @@
+# Product36 recovery and adverse checkpoint — IN_PROGRESS
+
+Same installed36/Native20 exact source, wheels and252 payloads. Fresh R4 counterpart passed genuine checked backup restore, direct Native historical replay with new authorized lexical scopes, actor-only existing-command refusal, matching maintenance subscription refusal before materialization, controlled-history fork refusal, revoked-context refusal and a fresh actual recipient Owner read refusal after restore. No source or runtime repair was made.
+
+Original R3 whole probe FAILED in observation serialization of the Client after its Native checks. Its original Owner was not explicitly waited; exit code UNKNOWN. A later separate exclusive Owner lock and SQLite write barrier was acquired; this is not an exit-code or global-FD claim. R4 preserves the same17 asserts and fixes observation serialization and unconditional owned-Popen cleanup, on a new copy. R4 actual Owner EOF/wait0/all pipes and stderr closed/no signals. Preserve both complete worlds, both failures and source-original maps.
+
+Parent direct packet supplies Native752 full manifest/base745+13 delta, all44 Product sources, matching active wheels and full direct first run/counterpart. Saved Library16 remains complete34/Native18; no partial replacement or current full continuation identity.
+
+NEXT implement and qualify immutable complete derivation and worker input custody; also finish rollback/unaccepted-file, partial/legacy current-candidate controls. Do not turn first-profile conservative refusal into complete useful derived support. Continue all original F1-F5/private-native scope. Canon and human inputs block dependent claims only. No new automation or ordinary recommissioning. One remote writer, guarded paired CAS preserving all prior unseen leaves; verify uncertain operations before retry.

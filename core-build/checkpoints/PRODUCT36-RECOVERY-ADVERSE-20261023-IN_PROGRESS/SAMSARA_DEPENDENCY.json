@@ -1,0 +1,11 @@
+{
+  "repository": "guarani-ux/SAMSARA",
+  "branch": "codex/samsara-core-continuation",
+  "commit": "45101b0ebc1f0eaae8c1135264bd471f9127127b",
+  "tree": "35b377f675a3d427d0bc1f1d7394ad926790f831",
+  "checkpoint": "PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS",
+  "runtime": "fcd6067075ca5274555d02f5bd4dd14afcbae4bb9aabb3bedf11700bfc41d25d",
+  "source_wheels_unchanged_from_direct_parent": true,
+  "parent_direct_commit": "f9b91678ef96ddf3e8ce9b723a5b478f996cbd2b",
+  "full_release": false
+}

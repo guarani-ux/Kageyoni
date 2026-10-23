@@ -1,0 +1,346 @@
+{
+  "status": "IN_PROGRESS_SAME_INSTALLED36_BOUNDED_RECOVERY_ADVERSE_COUNTERPART_PASS",
+  "runtime": "fcd6067075ca5274555d02f5bd4dd14afcbae4bb9aabb3bedf11700bfc41d25d",
+  "source_wheels_unchanged": true,
+  "payloads": 252,
+  "actual_result": {
+    "actual_owners": 1,
+    "derived_full_withdrawal": false,
+    "full_release": false,
+    "sameprocess_payloads": 252,
+    "signals": 0,
+    "source_original_bytes_modes_exact": true,
+    "status": "ACTUAL_CHECKED_RESTORE_NATIVE_REPLAY_ACTOR_ONLY_REFUSAL_SUBSCRIPTION_PREMATERIALIZATION_FORK_REVOCATION_AND_FRESH_OWNER_REFUSAL_PASS",
+    "uncertain_effects": false
+  },
+  "actual_native_controls": [
+    "checked backup restore to NEW independent private current-candidate copy",
+    "fresh read_only Engine.verify AND direct registry FK0 changes0 query_only1",
+    "two copied authentic native commands refused without host scope BEFORE existing-event cache, all-table/file assertion unchanged",
+    "authorized direct Native capture and withdrawal historical replay under freshly minted current host scope, not product cache; no repeated allocation",
+    "genuine Native create_process active maintenance subscription; old accepted history still replays",
+    "fresh capture refused before materialization with matching subscription",
+    "controlled-history fork refused before child creation",
+    "actual app.revoke makes old context fail before source diagnostics",
+    "fresh recipient Owner after restore normal view succeeds while source read refused"
+  ],
+  "original_r3": "WHOLE_FAIL logger unsupported Client object after Native checks and checked backup; final recipient view/read not reached; original owned Popen was not explicitly waited, exit code UNKNOWN; separate actual exclusive Owner flock+SQLite write barrier later acquired changes0; no global FD absence or invented exit code",
+  "r4": "fresh separate copy; SAME17 assert ASTs retained, object logging fallback and unconditional owned Popen finally EOF/wait corrected; actual Owner EOF0 all pipes/stderr closed signals0",
+  "raw": {
+    "status": "COMPLETE_RAW_CAPTURE_RESTORE_ADVERSE_LOGGER_FAILURE_AND_NEW_COUNTERPART_PASS",
+    "zip": "Product36_Recovery_Adverse_Failure_And_Pass_Raw.zip",
+    "bytes": 3896304,
+    "sha256": "cdd16b27edc71ac6a06f48c7763ed9f0278103c8d401ff2379bc389bcfbd4e33",
+    "entries": 140,
+    "existing_Owner_locks": [
+      "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/owner.lock",
+      "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/owner.lock"
+    ],
+    "actual_SQLite_BEGIN_IMMEDIATE_barriers": [
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/after-adverse-checked-backup.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/copied-original-world.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v10-adef13cdddad413e9a4f3e6883aac2e6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v11-f5d479a798d34a7a89359b13e23d8f04.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v12-9afe4bf2288a4061ab70890d0888f246.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v13-b3a29be01d714263a6605829eb2cbeb0.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v14-7add7961a1eb4172adbb3fcc722a3654.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v15-ff362460fb744814ba6a5cb087c6aae6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v16-b2feda1c056b4854a30ce6cc6293941d.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v17-8235a1561f754f6a8c23dae43477aa13.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v18-106f1d8085784a08b53f50b9bcde2731.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v19-e00ac71fb58e42f78fb97d9834277047.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v20-65417009424d4775809ef888eb2b9031.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v21-7f7c3283d7154e0da10995d7214c19ae.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v22-7dc540ba361648ff966a69ab77122f58.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v23-100a1b6283f0499b8293bec23898476e.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v24-0c0fa5b3811d4492ae1bc20fd990ee5f.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v25-1fdb3b6d4e4b4cd0a06c27e051b94ff3.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v26-b032ceb508d641dea64d622c0d50e10a.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v27-01f4a8e3b1a24dba8bdc73aa68f989a8.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v28-8ec0441b1b974366a19cf5f67f24815c.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v29-e14552077d5749b58eb107c50985a18b.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v30-54992594077f4ced90cd54b3c9b5ae15.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v31-2fddb1366de741ed943b6dd450854e1c.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v32-879a6eee265442fdac4b0026ff344732.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v33-e2bc54f72e824370a0e2f15593a738c0.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v34-5ede2367a98b444399f515c51d4d7c5b.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v35-3aacd16fec334285a6f609c1b16b7aff.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v36-d693786922fe42df8b4f2d6507f93dce.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v4.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v5.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v7.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v8.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r3/w1/world.sqlite.pre-v9-e6c53dbb6ba743659113f5a1ec12ddc5.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/after-adverse-checked-backup.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/copied-original-world.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v10-adef13cdddad413e9a4f3e6883aac2e6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v11-f5d479a798d34a7a89359b13e23d8f04.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v12-9afe4bf2288a4061ab70890d0888f246.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v13-b3a29be01d714263a6605829eb2cbeb0.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v14-7add7961a1eb4172adbb3fcc722a3654.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v15-ff362460fb744814ba6a5cb087c6aae6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v16-b2feda1c056b4854a30ce6cc6293941d.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v17-8235a1561f754f6a8c23dae43477aa13.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v18-106f1d8085784a08b53f50b9bcde2731.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v19-e00ac71fb58e42f78fb97d9834277047.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v20-65417009424d4775809ef888eb2b9031.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v21-7f7c3283d7154e0da10995d7214c19ae.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v22-7dc540ba361648ff966a69ab77122f58.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v23-100a1b6283f0499b8293bec23898476e.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v24-0c0fa5b3811d4492ae1bc20fd990ee5f.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v25-1fdb3b6d4e4b4cd0a06c27e051b94ff3.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v26-b032ceb508d641dea64d622c0d50e10a.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v27-01f4a8e3b1a24dba8bdc73aa68f989a8.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v28-8ec0441b1b974366a19cf5f67f24815c.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v29-e14552077d5749b58eb107c50985a18b.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v30-54992594077f4ced90cd54b3c9b5ae15.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v31-2fddb1366de741ed943b6dd450854e1c.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v32-879a6eee265442fdac4b0026ff344732.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v33-e2bc54f72e824370a0e2f15593a738c0.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v34-5ede2367a98b444399f515c51d4d7c5b.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v35-3aacd16fec334285a6f609c1b16b7aff.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v36-d693786922fe42df8b4f2d6507f93dce.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v4.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v5.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v7.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v8.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/recovery-adverse-r4/w1/world.sqlite.pre-v9-e6c53dbb6ba743659113f5a1ec12ddc5.bak",
+        "total_changes": 0
+      }
+    ],
+    "source_before_copy_source_after_exact": true,
+    "all_CRC_SHA_modes_types": true,
+    "Native_Engine_operations_by_capture": false,
+    "global_FD_absence_claim": false,
+    "all_originals_retained": true
+  },
+  "full_source_identity": null,
+  "complete_continuation": false,
+  "Library16": "unchanged coherent34/Native18 excludes35/36",
+  "full_release": false,
+  "remaining": [
+    "real rollback/finalizer materialization failure inventory",
+    "legacy old-ID and partial metadata current-candidate genuine API controls",
+    "authentic immutable complete derived lineage including transfer metrics",
+    "copied/queued/running/partial/unknown worker-input custody",
+    "every adopted F1-F5/general/private-native requirement and dependent canon/human qualification"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "bytes": 8008004,
+  "sha256": "0324d152002773241f088551c40b64187d1380ecd7435a3174d21a1877b2368a",
+  "zip_entries": 63,
+  "parts": [
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0000.b64",
+      "offset": 0,
+      "bytes": 500000,
+      "sha256": "3b3239a05d309009b98bbc3ba13a070407af035ebdfc9203613ac088b89d8dee",
+      "GitID": "3e4ef814aee61fc679f710d45a73c5dbe3675735"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0001.b64",
+      "offset": 500000,
+      "bytes": 500000,
+      "sha256": "de2541bf61aa78bd76e41e45aa2c89805dea8dbc7aaeb093ac21c84752908914",
+      "GitID": "ba5fa1341278316859566699d5895062a37642c8"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0002.b64",
+      "offset": 1000000,
+      "bytes": 500000,
+      "sha256": "4a348e1e2fe68655bd059e4b988ed50c7c158a72ad4a9a4acba1c067eeaf3fd1",
+      "GitID": "ce58c5e7baf02e1e1e8045d734db421abaa3ff16"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0003.b64",
+      "offset": 1500000,
+      "bytes": 500000,
+      "sha256": "ae23650f1e357a3c8d05c18065dce55fce295f247425a19cf75790d3f892aa31",
+      "GitID": "042e80da0828cf4147516344423767479f6695a5"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0004.b64",
+      "offset": 2000000,
+      "bytes": 500000,
+      "sha256": "6fdb81c687685da7de78348233b88ebc80fb30f48107d49ca53d55a4b93f35a6",
+      "GitID": "86ea0fd49a62cf1b3dd9621490601e381585808b"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0005.b64",
+      "offset": 2500000,
+      "bytes": 500000,
+      "sha256": "f7e8b0d606b4c871300f153c55f666602dc28777384240c1eb1c859d27766fa7",
+      "GitID": "87209865925d33a7bbe97a56be2a467114077fcc"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0006.b64",
+      "offset": 3000000,
+      "bytes": 500000,
+      "sha256": "4fe1e02f47d54dfb239f612b1c46a395436a094d1f9cafe2d5ecc7efee3d5e5a",
+      "GitID": "6850245400ca48fa48b3c0633243080c9d904cbc"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0007.b64",
+      "offset": 3500000,
+      "bytes": 500000,
+      "sha256": "c4eab64c9ef44ceb1a502b56f463e77efab7e45cdb1838384d083746d3eb139f",
+      "GitID": "e2b42731de7271a6f1fe004631cafbb55bfa9d06"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0008.b64",
+      "offset": 4000000,
+      "bytes": 500000,
+      "sha256": "3330c05b173b268708c0f31412194ab3ee3b65b965f263d3f7253bae1726eff5",
+      "GitID": "edeb1e0e775824975501e1adfc5f572749f8f2d8"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0009.b64",
+      "offset": 4500000,
+      "bytes": 500000,
+      "sha256": "c95e8195fe11caebd21021711a266e036799f43f26f15ee77dc4a8d11e574ed5",
+      "GitID": "8cea3f545320756dc87ef299af1130ce7c254dc9"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0010.b64",
+      "offset": 5000000,
+      "bytes": 500000,
+      "sha256": "92d2978b27d09a574d88b986ae098ee5552190891f1a71e36aca420e47dc05ee",
+      "GitID": "44a82ec2a2ac84b3b08c2afb20b94c318e9ea344"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0011.b64",
+      "offset": 5500000,
+      "bytes": 500000,
+      "sha256": "679cd6954531ab0bbfd677fa91865b8e80f943b19672e63e4c8eb001785a7ad1",
+      "GitID": "b3d0418f76674e2a92728b2fc50eff42983821d5"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0012.b64",
+      "offset": 6000000,
+      "bytes": 500000,
+      "sha256": "25ef5feb3ba44c3fa63a073266b1d82c8991f778ea72b3a0083851d9c2918a9c",
+      "GitID": "5cffe5b8fc7acb57d37511f7927dec811a2947ab"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0013.b64",
+      "offset": 6500000,
+      "bytes": 500000,
+      "sha256": "afbb796094a578638219b8edc0223233f09e32b495ebdeb87b077ac46762c324",
+      "GitID": "d0aee10ddd262495b7e77febcc3369366568bd59"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0014.b64",
+      "offset": 7000000,
+      "bytes": 500000,
+      "sha256": "763955f98572ca1f8ea8be4872ec8f06e7094838686657d2b25e014402355ce6",
+      "GitID": "f91ff99f2c49a9dc4a644f65b62a00e7f7309f0d"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0015.b64",
+      "offset": 7500000,
+      "bytes": 500000,
+      "sha256": "fffef28237e7bc0da80db41fd93cecf3ea706a13959625d80afe6b11cbe097c1",
+      "GitID": "8c8d1d7b0659c9cd2b65dd5ab55ec4302ec19990"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-RECOVERY-ADVERSE-20261023-IN_PROGRESS/providers/part-0016.b64",
+      "offset": 8000000,
+      "bytes": 8004,
+      "sha256": "4ab830c25d53d8775eca6d05e9904a2ac0782b0ae2d84a245b89e95c95503797",
+      "GitID": "a04485efcdfc2093e9e1a6f7fdf0168d8c303fcb"
+    }
+  ],
+  "full_release": false
+}
