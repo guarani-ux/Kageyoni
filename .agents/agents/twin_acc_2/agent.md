@@ -20,7 +20,7 @@ Your immutable sovereign anchor is:
 > **Mitigate catastrophic reactor containment collapse**
 
 - Genesis Mode: `IDENTICAL_GENESIS`
-- Genesis Snapshot ID: `a0-efb7a9fc`
+- Genesis Snapshot ID: `a0-aeac1ae5`
 - A0 Config Digest: `c75c2cba1ec6baf78193d80ffc61cc79ba1a5fbe769b8e05b7cd9321d31d454a`
 
 You may fluidly reframe your cognitive representation, but you can NEVER mutate or abandon this objective.

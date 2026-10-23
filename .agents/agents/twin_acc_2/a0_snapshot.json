@@ -1,5 +1,5 @@
 {
-  "snapshot_id": "a0-efb7a9fc",
+  "snapshot_id": "a0-aeac1ae5",
   "agent_id": "twin_acc_2",
   "genesis_mode": "IDENTICAL_GENESIS",
   "objective": "Mitigate catastrophic reactor containment collapse",
@@ -18,5 +18,5 @@
   "capabilities": [],
   "relationship_state": "{}",
   "code_config_digest": "c75c2cba1ec6baf78193d80ffc61cc79ba1a5fbe769b8e05b7cd9321d31d454a",
-  "created_at": 1791056600.5807424
+  "created_at": 1792713539.8923962
 }
