@@ -1,0 +1,16 @@
+{
+  "bytes": 403515,
+  "sha256": "3c8aebf692e4d21eaa346e523224a66e2d62c24ddbdeaa0e23c8bfa21ca2c212",
+  "zip_entries": 25,
+  "parts": [
+    {
+      "path": "core-build/checkpoints/SOURCE36-NEW-PURE-20261023-IN_PROGRESS/providers/part-0000.b64",
+      "offset": 0,
+      "bytes": 403515,
+      "sha256": "3c8aebf692e4d21eaa346e523224a66e2d62c24ddbdeaa0e23c8bfa21ca2c212",
+      "GitID": "8507ee7304585cbb616c2b98e94c6bf5509c6f5c"
+    }
+  ],
+  "schema_only_NOT_runnable": true,
+  "full_release": false
+}

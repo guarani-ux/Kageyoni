@@ -1,0 +1,13 @@
+{
+  "status": "SOURCE_ONLY_NEW_SCHEMA_NOT_INSTALLED_NO_NATIVE20_ESTABLISHED",
+  "SAM_COMMIT": "b3f98fa6f117a07054adfbc7378fc4faa7422188",
+  "qualified_foundation35_pair": {
+    "SAM": "49364e5a68cae51c649194694e231e752d01ca05",
+    "Kage": "ca50d81aed07eaea7c5b06d3b25aaec37e0f172c"
+  },
+  "profile": "samsara-source-authority/20261023-1",
+  "schema_sha256": "782a0fdebcc9c4aa7203b0b75c099ce5fb1d467c48791ae2f163d8c250532508",
+  "shape_only": true,
+  "actual_authentication_withdrawal": "MISSING",
+  "full_release": false
+}

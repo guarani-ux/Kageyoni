@@ -1,0 +1,9 @@
+# Root acceptance, bounded pure scope only
+
+Accepted exact newly authored schema782a0fdebcc9c4aa7203b0b75c099ce5fb1d467c48791ae2f163d8c250532508. Author first34 pure methods passed; independent first19 methods passed separately. Root read the complete module, both reports and the integration review. This establishes controlled shape/transition/no-mutation/canonical routing-name behavior only. Correctly shaped nonexistent identities/pins intentionally pass. It does not authenticate controller/recipient or create/withdraw native facts.
+
+This independently copied future source is NOT RUNNABLE as a native interface and has NO BUILD/INSTALL GO. Current installed Foundation35/Native19 and saved complete34/Native18 are untouched. No optional036 SQL/model/Engine/facade/global history collector/intent/consumer/product integration exists in this leaf. No old lost Source36/37 source or test identity is recovered. Old Native SQL1–35 and tests remain exact. Root owns all common changes.
+
+Root contract and addendum freeze actual stored-row metadata hashing, operator-only operation policy, native wrapper, inside-UoW grants/workspace/branch/binding checks, actual lexical scope nonce and before-replay guard placement. Next actual code: an optional new authority domain/projection and explicit checked installer/global classifier, then tracked private authorized intent/fixed capture finalizer and same-snapshot direct guards. Refuse unsupported controlled derivations before materialization until authentic immutable complete input lineage exists; queued/running/partial worker custody remains separate. No user agreement, human result, canon, global recall or full-release claim.
+
+The former 35 API observer failure, complete raw, successful bounded probes/newOwner path, and exact Library16/readback remain immutable prior evidence. All F1–F5 remain open.
