@@ -1,0 +1,12 @@
+{
+  "repository": "guarani-ux/SAMSARA",
+  "branch": "codex/samsara-core-continuation",
+  "commit": "f9b91678ef96ddf3e8ce9b723a5b478f996cbd2b",
+  "tree": "87f57a670f5d1aafdf15935994ff8269d3dbc4ee",
+  "checkpoint": "PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS",
+  "runtime": "fcd6067075ca5274555d02f5bd4dd14afcbae4bb9aabb3bedf11700bfc41d25d",
+  "native_wheel_sha256": "921a30230afd911211217f8adfbf3544459be2a10d23de98e9c8c1e3e317b5c9",
+  "product_wheel_sha256": "1761ba003c9ff77d06a43b2643907e1e8b779f31d9959527cb3303da2a09cba1",
+  "bounded_direct_workflow_only": true,
+  "full_release": false
+}

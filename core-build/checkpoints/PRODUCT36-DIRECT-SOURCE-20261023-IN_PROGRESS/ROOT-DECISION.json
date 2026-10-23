@@ -1,0 +1,366 @@
+{
+  "status": "IN_PROGRESS_BOUNDED_INSTALLED_DIRECT_SOURCE_WORKFLOW_PASS",
+  "runtime": "fcd6067075ca5274555d02f5bd4dd14afcbae4bb9aabb3bedf11700bfc41d25d",
+  "versions": {
+    "samsara-world": "0.5.3.dev36",
+    "kageyoni-engine": "11.1.0.dev20"
+  },
+  "wheels": [
+    {
+      "name": "kageyoni_engine-11.1.0.dev20-py3-none-any.whl",
+      "bytes": 648614,
+      "sha256": "921a30230afd911211217f8adfbf3544459be2a10d23de98e9c8c1e3e317b5c9"
+    },
+    {
+      "name": "samsara_world-0.5.3.dev36-py3-none-any.whl",
+      "bytes": 250390,
+      "sha256": "1761ba003c9ff77d06a43b2643907e1e8b779f31d9959527cb3303da2a09cba1"
+    }
+  ],
+  "payloads": 252,
+  "Native20_source_files": 752,
+  "Product36_source_files": 44,
+  "native19_base": 745,
+  "native_changed_or_added": [
+    "pyproject.toml",
+    "migration_036.sql",
+    "kageyoni/engine.py",
+    "kageyoni/model.py",
+    "kageyoni/workspaces/source_authority_operations.py",
+    "kageyoni/workspaces/source_authority_scope.py",
+    "kageyoni/workspaces/documents.py",
+    "kageyoni/workspaces/source_authority_history.py",
+    "kageyoni/workspaces/source_authority_installation.py",
+    "kageyoni/workspaces/source_authorities.py",
+    "kageyoni/workspaces/source_authority_schema.py",
+    "kageyoni/persistence/unit_of_work.py",
+    "kageyoni/persistence/artifacts.py"
+  ],
+  "original_SQL35_tests143_exact": true,
+  "actual_result": {
+    "derived_worker_input_or_full_source_withdrawal": false,
+    "full_release": false,
+    "independent_AI_or_human": false,
+    "owners": 5,
+    "sameprocess_identity": true,
+    "signals": 0,
+    "sourcewheelinstalled_payloads": 252,
+    "status": "ACTUAL_SCRIPTED_NEW_CLIENT_DIRECT_CAPTURE_USE_WITHDRAW_REFUSE_REPLAY_PASS",
+    "synthetic_root_authored": true,
+    "uncertain_effects": false
+  },
+  "original_live_r1": "WHOLE_FAIL logger JSON bytes serialization after accepted capture; original retained; separate RO diagnosis is not sameprocess original final proof",
+  "r2_correction": "all22 assert ASTs preserved; only new world and observation base64 serialization changed",
+  "raw": {
+    "status": "COMPLETE_RAW_CAPTURE_ORIGINAL_LOGGER_FAILURE_AND_NEW_COUNTERPART_PASS",
+    "zip": "Product36_Direct_Source_Actual_Failure_And_Pass_Raw.zip",
+    "bytes": 3657549,
+    "sha256": "6fca013731f1769277f5746cc1a095ae3ade9ecaa9a3a30bc0f59d4035e36241",
+    "entries": 120,
+    "existing_Owner_locks": [
+      "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/owner.lock",
+      "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/owner.lock"
+    ],
+    "actual_SQLite_BEGIN_IMMEDIATE_barriers": [
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/diagnosis-checked.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v10-b497312017ef44cc9d531143c7310d3b.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v11-113afeed04be46b3a8d75828a4fdcd25.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v12-39546cb739424841add8ac93b664b231.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v13-2529428b76944e0c9ac0975a33911569.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v14-638bfe1ecb1c4e3b8146ac58385a87c6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v15-d029bf4cc7e847a5ab7af08e168d7043.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v16-35494608b37946f3a501c0b9874e3a79.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v17-eb589615371d455d851bdd27367b32fd.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v18-1aa36c7ed8f247378a89d92add86aca5.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v19-777f44b0638540c18e0ccf66d367c084.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v20-362adf4e925d4a41bbf299a5d1177d5e.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v21-a2d6a38369cb4c68904397da5359f4bd.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v22-5dc7160ab3d54c6eb54880299b70179f.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v23-36c9046453854a05a0258fdc77585ebf.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v24-38abdab0118e41f48a3c4efd4ee79637.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v25-29fc4e174902444db03e99b1683540a1.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v26-923fd6d5c3a34ffd847237a85e12fdf0.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v27-7b61bf197b6c494fac77a788c8420e2f.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v28-16b0d2a4058745e3826c419859478895.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v29-09f5dd7a4aca4c0d8c8d1003112d4a0e.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v30-58a64de6bbe343a1830476019f8fb38a.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v31-ef3c0355316149deb6bed96f4633b19c.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v32-74d0007630274990ac249320bfb57feb.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v33-1bae484d36654519a9a81ca1590c5fa5.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v34-6d3a7d578c0e4704903dc00ad4ad3fce.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v35-d108d6e17f2a4385b993ea08428831be.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v36-4b588282ce784ddbaa79bc847458fe92.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v4.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v5.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v7.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v8.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r1/w1/world.sqlite.pre-v9-f59250928a4c4b2d97975c2bbac6c4d9.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/checked-withdrawn-backup.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v10-adef13cdddad413e9a4f3e6883aac2e6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v11-f5d479a798d34a7a89359b13e23d8f04.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v12-9afe4bf2288a4061ab70890d0888f246.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v13-b3a29be01d714263a6605829eb2cbeb0.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v14-7add7961a1eb4172adbb3fcc722a3654.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v15-ff362460fb744814ba6a5cb087c6aae6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v16-b2feda1c056b4854a30ce6cc6293941d.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v17-8235a1561f754f6a8c23dae43477aa13.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v18-106f1d8085784a08b53f50b9bcde2731.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v19-e00ac71fb58e42f78fb97d9834277047.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v20-65417009424d4775809ef888eb2b9031.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v21-7f7c3283d7154e0da10995d7214c19ae.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v22-7dc540ba361648ff966a69ab77122f58.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v23-100a1b6283f0499b8293bec23898476e.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v24-0c0fa5b3811d4492ae1bc20fd990ee5f.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v25-1fdb3b6d4e4b4cd0a06c27e051b94ff3.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v26-b032ceb508d641dea64d622c0d50e10a.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v27-01f4a8e3b1a24dba8bdc73aa68f989a8.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v28-8ec0441b1b974366a19cf5f67f24815c.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v29-e14552077d5749b58eb107c50985a18b.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v30-54992594077f4ced90cd54b3c9b5ae15.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v31-2fddb1366de741ed943b6dd450854e1c.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v32-879a6eee265442fdac4b0026ff344732.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v33-e2bc54f72e824370a0e2f15593a738c0.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v34-5ede2367a98b444399f515c51d4d7c5b.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v35-3aacd16fec334285a6f609c1b16b7aff.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v36-d693786922fe42df8b4f2d6507f93dce.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v4.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v5.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v6.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v7.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v8.bak",
+        "total_changes": 0
+      },
+      {
+        "path": "/workspace/scratch/5c7ed9200168/recovery-20261023/product36-build/live-r2/w1/world.sqlite.pre-v9-e6c53dbb6ba743659113f5a1ec12ddc5.bak",
+        "total_changes": 0
+      }
+    ],
+    "source_before_copy_source_after_exact": true,
+    "all_CRC_SHA_modes_types": true,
+    "Native_Engine_operations_by_capture": false,
+    "global_FD_absence_claim": false,
+    "all_originals_retained": true
+  },
+  "scope": "new authored synthetic worlds; operator capture, recipient use, withdraw, both operator and recipient refusal, cached historical receipts, Native no-content refusal, checked backup",
+  "not_qualified": [
+    "complete copied derivation or worker input withdrawal",
+    "new Native direct historical replay under fresh scope",
+    "subscription, revocation, partial-history, fork and restore adverse controls for this candidate",
+    "independent AI/human, full F1-F5, full release"
+  ],
+  "full_source_identity": null,
+  "complete_continuation": false,
+  "Library16": "separate complete Product34/Native18, unchanged; this36 is excluded",
+  "all_originals_retained": true,
+  "unknown_effects": false,
+  "active_jobs": [],
+  "full_release": false
+}

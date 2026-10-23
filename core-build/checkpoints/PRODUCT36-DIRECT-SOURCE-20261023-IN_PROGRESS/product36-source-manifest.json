@@ -1,0 +1,266 @@
+[
+  {
+    "path": "pyproject.toml",
+    "bytes": 520,
+    "mode": 420,
+    "sha256": "a3f5969c8de9ec158f4a668917b7a348e84dee521cf687e4bd095fad6a82a57d"
+  },
+  {
+    "path": "samsara/__init__.py",
+    "bytes": 105,
+    "mode": 420,
+    "sha256": "648a440dc08f6f61233b639986de9265490dd9457bff33de613262319f8a73f4"
+  },
+  {
+    "path": "samsara/__main__.py",
+    "bytes": 29,
+    "mode": 420,
+    "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+  },
+  {
+    "path": "samsara/application.py",
+    "bytes": 80961,
+    "mode": 420,
+    "sha256": "69eb748a5285ba9eaf2a3de61167ed867a574810c07efadeac0ae0806ab136ad"
+  },
+  {
+    "path": "samsara/atlas.py",
+    "bytes": 20907,
+    "mode": 420,
+    "sha256": "590af9ea08b92b0f8a0867801ca72f97cf36f7e600321e8e7ece9e4fad50145b"
+  },
+  {
+    "path": "samsara/causality.py",
+    "bytes": 13613,
+    "mode": 420,
+    "sha256": "67c975a62433d23cfc7476c9cf143f39fb997d9e3039b02cf8c40f6c5d58ed95"
+  },
+  {
+    "path": "samsara/cli.py",
+    "bytes": 9443,
+    "mode": 420,
+    "sha256": "15bf6b5628f47d66675216e2f38e9fafc393d05730dbdadb4b8a1194ea777ebd"
+  },
+  {
+    "path": "samsara/client.py",
+    "bytes": 19616,
+    "mode": 420,
+    "sha256": "33360c38f556c7fac0bd69291734723639898dfac8f5859a4f2464f5ca739e99"
+  },
+  {
+    "path": "samsara/compatibility.py",
+    "bytes": 30288,
+    "mode": 420,
+    "sha256": "af935cfadeae5a912bac6c2a3c5b3fb45dd7949a125ae849f05faefa81f23f71"
+  },
+  {
+    "path": "samsara/console.py",
+    "bytes": 15603,
+    "mode": 420,
+    "sha256": "8d10bbb95dcb3ca75f3e5f60ca7b5e4abe3f41fe33077beddffc64e5b13122b7"
+  },
+  {
+    "path": "samsara/content.py",
+    "bytes": 26452,
+    "mode": 420,
+    "sha256": "7f6bbed9bf8cf01d375d013878050ee48f964ec43325ace369031656a159093e"
+  },
+  {
+    "path": "samsara/contentsets.py",
+    "bytes": 39135,
+    "mode": 420,
+    "sha256": "5e4e9bcf37e25173d052bcbe4bf959fe53b967a2c312f0ce133062bd8edffde5"
+  },
+  {
+    "path": "samsara/data/compatibility-policy-ps1.json",
+    "bytes": 143222,
+    "mode": 420,
+    "sha256": "fce0b6550ba626857632bcc1df3f250b095ffa27abd05dc9551aa4f24cc3aaf9"
+  },
+  {
+    "path": "samsara/data/compatibility-policy-r07a.json",
+    "bytes": 55805,
+    "mode": 420,
+    "sha256": "cef7cfcce4321573d739b0207738b9257be6a44d62b68e90344834bdfe700845"
+  },
+  {
+    "path": "samsara/data/compatibility-policy-r07b.json",
+    "bytes": 113651,
+    "mode": 420,
+    "sha256": "646edd7127fb02264ea600df00cb4bff40659c049374b97dd956dae83298ecfb"
+  },
+  {
+    "path": "samsara/data/compatibility-policy.json",
+    "bytes": 172418,
+    "mode": 420,
+    "sha256": "1d954808543276af6c50e5e9484bbd6198d2fee77c2a5e3c42197acc73bcf61a"
+  },
+  {
+    "path": "samsara/data/contract.json",
+    "bytes": 131650,
+    "mode": 420,
+    "sha256": "3e473a8964a432fe69730911db69a95efd7c63462140a85073205896b6f34bcd"
+  },
+  {
+    "path": "samsara/data/engine-lock.json",
+    "bytes": 538,
+    "mode": 420,
+    "sha256": "13aa78a9c07331f25a1bd9e1e08eaa032f35a01ccc033cb1714d344ac0f86dd7"
+  },
+  {
+    "path": "samsara/data/initial-source.md",
+    "bytes": 572,
+    "mode": 420,
+    "sha256": "0576fc3cb79f36c4cd574c409df1f8a3582b74e56fd406b4460a74d0866a492a"
+  },
+  {
+    "path": "samsara/data/work-record.json",
+    "bytes": 979,
+    "mode": 420,
+    "sha256": "d7fbcab14c664d9ee7f17923e00809662ccff1d9613d93ff833a9ff56899a5de"
+  },
+  {
+    "path": "samsara/equipment.py",
+    "bytes": 10788,
+    "mode": 420,
+    "sha256": "95fb7650e33a6a728612a94c15f667cf5784dd70a08b5b504e19a5c0599cca72"
+  },
+  {
+    "path": "samsara/exhibition_admission.py",
+    "bytes": 7158,
+    "mode": 420,
+    "sha256": "2076340fcc8f29d1cf0788e2be24a4a7d951cf1158873c37a20369c252738e55"
+  },
+  {
+    "path": "samsara/exhibition_profiles.py",
+    "bytes": 29499,
+    "mode": 420,
+    "sha256": "b1a247710e9f4b710f4204adc16e372b80fa7f6ba30d9acb50cead67972555cc"
+  },
+  {
+    "path": "samsara/exhibition_repairs.py",
+    "bytes": 30209,
+    "mode": 420,
+    "sha256": "f274362c4fadc9851e39ee76aae272e069fe2efbfcecae8235c85d666a5bc59c"
+  },
+  {
+    "path": "samsara/exhibitions.py",
+    "bytes": 25671,
+    "mode": 420,
+    "sha256": "72e724bb944016c0c23344c0f5a73483cb9d7c684e9110ef02a321e6a9e78833"
+  },
+  {
+    "path": "samsara/exploration.py",
+    "bytes": 10177,
+    "mode": 420,
+    "sha256": "059d9846a60f66cff4aa6d7aac6eb86c0fa5f58973f085ee6cd258c857791f96"
+  },
+  {
+    "path": "samsara/extensions.py",
+    "bytes": 16151,
+    "mode": 420,
+    "sha256": "0973025b4eb5db85a2b84e8a2f33a15d817f185c81794b3d70cac26a4b9e1dca"
+  },
+  {
+    "path": "samsara/handlers.py",
+    "bytes": 11586,
+    "mode": 420,
+    "sha256": "4bbf7980da4648ca4df4d4982e6f7e7fd5da2c46bc8cc731491e904457ab3562"
+  },
+  {
+    "path": "samsara/intake.py",
+    "bytes": 10721,
+    "mode": 420,
+    "sha256": "111748f86c03760f963721beb794fd49f9d98a0eca300b3d9912382346b74297"
+  },
+  {
+    "path": "samsara/local_worker.py",
+    "bytes": 13009,
+    "mode": 420,
+    "sha256": "bcc53609474fd65b15127287edeb2fc1089124ad3abc87933b811830c9e85730"
+  },
+  {
+    "path": "samsara/mediawork.py",
+    "bytes": 20871,
+    "mode": 420,
+    "sha256": "eee1b4ac06e432c8c859b05d5003e67b6de8dfe851d1f0e3fbaa61db0211b52e"
+  },
+  {
+    "path": "samsara/owner.py",
+    "bytes": 19373,
+    "mode": 420,
+    "sha256": "44cec3ae4ab66330dcbb445381f1a3394f061c5c4f0d546080833b05f3f922f6"
+  },
+  {
+    "path": "samsara/practice.py",
+    "bytes": 25686,
+    "mode": 420,
+    "sha256": "d9a090a8bff8b775d5675581f9272112fb9f8c5e8f330dfc18160c2562e0e444"
+  },
+  {
+    "path": "samsara/practice_content.py",
+    "bytes": 21975,
+    "mode": 420,
+    "sha256": "2c29b69285ac7c06aeb7aead4e851286804af5dc0e6e73a1c0524def9e1a1ec4"
+  },
+  {
+    "path": "samsara/process_custody.py",
+    "bytes": 12747,
+    "mode": 420,
+    "sha256": "0e3a51bb8c63e30dd4ab55242528052177c58afa4320f7f3ae1bc32f80387340"
+  },
+  {
+    "path": "samsara/properties.py",
+    "bytes": 37343,
+    "mode": 420,
+    "sha256": "c6ef65e0fae2db6558ac8e22d9c95cb4a39dd672e2914ced6aead20361cf1883"
+  },
+  {
+    "path": "samsara/protocol.py",
+    "bytes": 4091,
+    "mode": 420,
+    "sha256": "284e53d474997385f42e8315faab9b072d03608a40bf96bb4cc98d5a402866e6"
+  },
+  {
+    "path": "samsara/runner.py",
+    "bytes": 51926,
+    "mode": 420,
+    "sha256": "20cb96dda98daa42b0949f3bb6b7eda47eba20d24a2b80a179209dc272d55832"
+  },
+  {
+    "path": "samsara/situation.py",
+    "bytes": 18184,
+    "mode": 420,
+    "sha256": "a2742987d5881bbcc6afda4311ba1d6cde1a0a6e8074fdccfb5e0a836e61a5e9"
+  },
+  {
+    "path": "samsara/source_authority_host.py",
+    "bytes": 2946,
+    "mode": 420,
+    "sha256": "301b0cb21ceb4e6eef473024fb99e8f6b4ef1cd0fa22ec68283551e3a1dd58d7"
+  },
+  {
+    "path": "samsara/sourcework.py",
+    "bytes": 16934,
+    "mode": 420,
+    "sha256": "0d2deb3c4df5b4e1b85de23100b048ad8188056b7739e3a4220c8151cb2cb5aa"
+  },
+  {
+    "path": "samsara/terminal.py",
+    "bytes": 2534,
+    "mode": 420,
+    "sha256": "cc0a8c84e6836bfaf63cbcbb2144faac70bd377365314336151dfcfbbc3e1800"
+  },
+  {
+    "path": "samsara/travel_content.py",
+    "bytes": 17730,
+    "mode": 420,
+    "sha256": "b26e65af44db46ec09a804d3b34ab42429ebcd2c8e9f0b4cf70ddc90455ac1e6"
+  },
+  {
+    "path": "tests/test_exhibition_profiles.py",
+    "bytes": 26630,
+    "mode": 420,
+    "sha256": "c9bdd0725de59ddc176e03f5bd6c86f087ce862c5a540a840e97b961b51eab63"
+  }
+]

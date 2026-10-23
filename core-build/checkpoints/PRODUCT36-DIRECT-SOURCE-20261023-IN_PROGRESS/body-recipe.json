@@ -1,0 +1,100 @@
+{
+  "bytes": 6175346,
+  "sha256": "c13e49e8c0d9e61988e77b4d41c89b9aab32fea7b17069d0a4fe9740d96cd048",
+  "zip_entries": 269,
+  "parts": [
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0000.b64",
+      "offset": 0,
+      "bytes": 500000,
+      "sha256": "aff6cf9cc1e22041ffbf8a6c0a3b357fa8c5ecb42d8bb6ac9a22287fb14b44e7",
+      "GitID": "7e99178104ec393b5f29e74ba8689f29d28f86b6"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0001.b64",
+      "offset": 500000,
+      "bytes": 500000,
+      "sha256": "0dd3a9a53f6540983514b86013a43fdec1239cfc08e3c7fdf7c24b4335b7a52a",
+      "GitID": "93146454ee22efbef266cec1638e17958702be03"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0002.b64",
+      "offset": 1000000,
+      "bytes": 500000,
+      "sha256": "86cff01ac517398b519bee074901e5ca88421a6d10a5d28f2abc0f5e7680d5d9",
+      "GitID": "85b1ff267226b31fb6c0caa10c9fc4dbd81cfaac"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0003.b64",
+      "offset": 1500000,
+      "bytes": 500000,
+      "sha256": "f4c4f58d68e9a8940222e9442c6832fe5ce051e0e5a5a09941b681baa58b3f65",
+      "GitID": "62deec7c23be913a33f563e138a4ddf00130b767"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0004.b64",
+      "offset": 2000000,
+      "bytes": 500000,
+      "sha256": "7f23f677c2cbacb951ea7755be50bfe191760bb8c10bade54435d82aa9811e27",
+      "GitID": "d39f1f0c6cae2f379c868f7f119a6961533879a2"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0005.b64",
+      "offset": 2500000,
+      "bytes": 500000,
+      "sha256": "326cc4290e6ba65d30b37348674e3a5caa70b7bf3a973a1a2e510235be08114c",
+      "GitID": "48d9745afe99be4e3e7b185d2e7e8016af482423"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0006.b64",
+      "offset": 3000000,
+      "bytes": 500000,
+      "sha256": "39820f47996132cdba863f1ce08d69aa533b52193412b33ad1e4d99900f573c0",
+      "GitID": "68bd90374e6edee47238bff9f5d70daf2c8ad203"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0007.b64",
+      "offset": 3500000,
+      "bytes": 500000,
+      "sha256": "ab2c36fe2a9ffb398a4be2293ee707ee52d65d9cf96a93616e4799971ade17ac",
+      "GitID": "320fb91b699a5344d8e0b507b7d11a2d05d272a8"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0008.b64",
+      "offset": 4000000,
+      "bytes": 500000,
+      "sha256": "ebac0d77356cec8ced6b00f4827085d49660f53d3d5e3cd6a4cacbf634783262",
+      "GitID": "3f697baa7115e09c90def23b8b9c053d6e4b59b0"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0009.b64",
+      "offset": 4500000,
+      "bytes": 500000,
+      "sha256": "6119002068dba9ea320c3a75bf043a97bd9c0541a351d647716e029db9f891a0",
+      "GitID": "195e58d694acefedf1360f854a181982f1f98605"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0010.b64",
+      "offset": 5000000,
+      "bytes": 500000,
+      "sha256": "09ec8baf7ec490d26ac29a5f81e24f74b4b52bcfb27074e00dac73c33f9afacf",
+      "GitID": "bf62a04b937f1b50a74abef1b078ed5dc449f92e"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0011.b64",
+      "offset": 5500000,
+      "bytes": 500000,
+      "sha256": "d14b18e6bcafa1f643d6b9e1fc0c24505742bcdaa9016272cffe9b27f42f2286",
+      "GitID": "7d469585b2189d2472bf82420b18f0eb03887bc7"
+    },
+    {
+      "path": "core-build/checkpoints/PRODUCT36-DIRECT-SOURCE-20261023-IN_PROGRESS/providers/part-0012.b64",
+      "offset": 6000000,
+      "bytes": 175346,
+      "sha256": "c8d2d4f7780da46e1f486ff78d049654363f89b3fea0180e2f980ebaf1612b0b",
+      "GitID": "ea97d90aab4a4ae9573e0ddc01bf89f4555c7f04"
+    }
+  ],
+  "qualification": "bounded actual direct source only; all original fullrelease obligations remain",
+  "full_release": false
+}
