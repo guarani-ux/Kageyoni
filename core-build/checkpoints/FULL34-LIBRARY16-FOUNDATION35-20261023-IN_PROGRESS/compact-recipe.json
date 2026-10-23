@@ -1,0 +1,66 @@
+{
+  "filename": "Full34_Library16_Foundation35_Compact_IN_PROGRESS.zip",
+  "bytes": 3476044,
+  "sha256": "21ebb552d5361400fd00fb1197957264e22f8684a26f08148323e02f1bc86c1a",
+  "parts": [
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/compact-providers/part-0000.b64",
+      "offset": 0,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "8a13548f78e67a20b52e0b167aedc9097694ea1eb607206f6898b88775fb83a5",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "2d935bd490bf4db3699d5884c7334a84b29ea0fc"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/compact-providers/part-0001.b64",
+      "offset": 500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "9dd30a728b858682af8030c16a5dfbb836d685a34354717a87a1dfc342408c46",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "97f9f11623a72a4b78164831bca424651050160b"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/compact-providers/part-0002.b64",
+      "offset": 1000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "02ef832ab48afac8fd47e94fa610b6b5df34debc44e811b7c6aa78647052f09f",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "cfb81c3285792a01441400f7b0dcc22c91c2c0ab"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/compact-providers/part-0003.b64",
+      "offset": 1500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "148b94216251902489f28ac2dd024ec2ab87f455cbd159127ce5325d7e816282",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "565a9f92650253fe5aa474ce165f715910b5ea30"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/compact-providers/part-0004.b64",
+      "offset": 2000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "1beb7f497fa336e9aa02333cf2fa4a3a6a8478fc02a1b2b094738ef90b3c2582",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "f08c0c505bad9003d84b8012fc341391d5f333bf"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/compact-providers/part-0005.b64",
+      "offset": 2500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "0220b85ea9072a8356018b4252d880ff54b516f75d4ad2697e29b3402db09400",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "b6bd171e274a8679930d87567d9f96c152df3969"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/compact-providers/part-0006.b64",
+      "offset": 3000000,
+      "decoded_bytes": 476044,
+      "decoded_sha256": "2614c94544ec057426764d738166ef58c1afa5214b0ff38994371e83f2a2aafb",
+      "ASCII_bytes": 634728,
+      "ASCII_git_sha": "1c1750d78795e66ee42d32fb14f45cf1d317c836"
+    }
+  ],
+  "encoding": "concatenate decoded ASCII providers in explicit offset order",
+  "remote_whole_readback": "PENDING_UNTIL_ACTUAL_RECEIPT",
+  "full_release": false
+}

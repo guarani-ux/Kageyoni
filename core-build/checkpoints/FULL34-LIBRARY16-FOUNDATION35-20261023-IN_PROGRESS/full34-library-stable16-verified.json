@@ -1,0 +1,25 @@
+{
+  "status": "ACTUAL_SAME_STABLE_ID_VERSION16_FULL_BYTES_CRC_EVERY_MEMBER_SHA_MODE_TYPE_PASS",
+  "library_file_id": "libfile_b4be79d59368819187fae7dceada0199",
+  "file_id": "file_00000000aa8c82308b0a64a9995aa3ec",
+  "version": 16,
+  "bytes": 500634401,
+  "sha256": "07bb09985256a452a7a72c008e1bac3d8f96674a1ce19922c6346af972759f9e",
+  "entries": 12923,
+  "files": 11532,
+  "directories": 1391,
+  "raw_bytes": 2842293401,
+  "manifest_sha256": "a4091fb05224c0f118292d3cd03366e0559affb2dc999383ecc65ac0336cd871",
+  "complete34_source_identity": "784a2431ff7f329796d196c6b80f937a8d5d481fe1006113586615f82e3fa11c",
+  "same_bytes_as_independently_physical_extracted_full_gates": true,
+  "third_physical_extraction": false,
+  "xattrs": {
+    "user.library-file-version": "16",
+    "user.library-file-id": "libfile_b4be79d59368819187fae7dceada0199"
+  },
+  "elapsed_seconds": 23.95914156300023,
+  "peak_rss_bytes": 65892352,
+  "full_release": false,
+  "current_qualified_product": "34/native18",
+  "future35_19_excluded": true
+}

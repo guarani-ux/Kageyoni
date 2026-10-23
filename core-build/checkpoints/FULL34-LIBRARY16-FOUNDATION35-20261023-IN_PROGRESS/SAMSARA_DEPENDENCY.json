@@ -1,0 +1,14 @@
+{
+  "status": "IN_PROGRESS_BOUNDED_FOUNDATION35_NATIVE19_NOT_SOURCE_WITHDRAWAL_OR_FULL_RELEASE",
+  "SAM_COMMIT": "49364e5a68cae51c649194694e231e752d01ca05",
+  "SAM_REPOSITORY": "guarani-ux/SAMSARA",
+  "checkpoint": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS",
+  "Library16": "libfile_b4be79d59368819187fae7dceada0199/file_00000000aa8c82308b0a64a9995aa3ec",
+  "full34_archive_sha256": "07bb09985256a452a7a72c008e1bac3d8f96674a1ce19922c6346af972759f9e",
+  "future35_product_sha256": "6fe60e2a50998e3050f0f5537c929111c35d52f8f5a1ea73c3b506cbdadd56ef",
+  "native19_sha256": "1be5499d4e9cb0aa018c869ac0368b27f0a071207c6435b4eb3595a9c5c60c2a",
+  "raw_sha256": "929e551e9d70ac2803e8e9bf749fefa0d90f0e2e1f560ee0846c3a0ec6d004b5",
+  "runtime": "1aca3f8785301dab588963d32f5fead068a579e24823f7113aab114ab9561c2a",
+  "old_API_runner_FAIL_preserved": true,
+  "full_release": false
+}

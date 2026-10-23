@@ -1,0 +1,330 @@
+{
+  "filename": "Foundation35_Native19_Actual_Complete_Raw.zip",
+  "bytes": 19561468,
+  "sha256": "929e551e9d70ac2803e8e9bf749fefa0d90f0e2e1f560ee0846c3a0ec6d004b5",
+  "parts": [
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0000.b64",
+      "offset": 0,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "fd38e08f3ef54348f1f5964b647876c980d95895ef80ac21cbb65877e5afa68d",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "0d5a7715a8e6533336e4e1fbe4b7d43da51556b6"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0001.b64",
+      "offset": 500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "867dd8a12ea971e29b2b7adcd9ee03c0926d51331e84e7aae5f05af15eadd926",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "182c33d22bc6d8b529bff562c2d901d6ecb0feae"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0002.b64",
+      "offset": 1000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "2d9db65684335076c16fd800c268f239df9d1996e6daeb9afef910221fb0f9e1",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "b04f7e26388761800f20fbd6519231ddeffa1bc7"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0003.b64",
+      "offset": 1500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "faf4fa89d3867de10f5660677e75e27fc019112da143f1ccc25b94fca7dc0f5a",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "67d9b32d4d01fafbc4bd4c06357253a1d1df5de3"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0004.b64",
+      "offset": 2000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "b1a43d706daae92af2ec4e83b01787c177eb480f4a3f20fe9bfb3d1dbac5dabe",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "287965bb4bfa04a072b3b4397406f46afdb12bcf"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0005.b64",
+      "offset": 2500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "90e4e8df0ad7d4823fdd41aec9082f47a10f2b813d2308b5f3f20ddb70e57afb",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "9d5954808b3d09089f1adc597125e93e75d86f83"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0006.b64",
+      "offset": 3000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "fe1fecdb0ad26f5ddee2f79d9551df15991c76e213c74beb172ee41e1dcda5a6",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "83f15a82c0b894e4857c2d2be5673aa3a9243e17"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0007.b64",
+      "offset": 3500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "d1610c46d9e577aac6d8f7f99f42196f2e92fe5218d217aebb7fdc33da4985ee",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "0e95c34af61f92921d6aaf3fe439dc13c5d9e33e"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0008.b64",
+      "offset": 4000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "cf00c5da2f0a00460f0d1f63ee443ee673f3660f5cb1fbaed444cd46fa3f8597",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "1e8c9bf7aba710f9a6d16c721c6ee8c3a31f3ee1"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0009.b64",
+      "offset": 4500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "f38014908dafcc7ae36d4d0cf2b3929e23ea0aa4a7d29a458f0562ef125dc52a",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "2387ef91be2e8c86f1797ddd17433b17fca07b66"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0010.b64",
+      "offset": 5000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "51b45bd1dd3b0822e9faf63071f3fd7dc80591ac478390cb337e377628b7f7e2",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "57becc1c2262eb0862e3bf248c571987bb38fe97"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0011.b64",
+      "offset": 5500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "4770437d53eb937a03070376dbbaa6ea53faf3981b5a3c4d5b6fdae51b377991",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "a89022020a2bf7c2b0738e931dbe71332eabe84d"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0012.b64",
+      "offset": 6000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "a71641d8eff59b0ab683f70b3755f345b7b707a4826b63f50f30f894c60dd9a9",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "7da46655dfa3b8eaed84b6caed2554f56539b3a9"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0013.b64",
+      "offset": 6500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "3bc9b1146c50568b5c0e813b387700d3e52a845e533ec2546b3f9548263cf4bf",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "3a1c70bb8ec1e930d7c5a53d9f37f4fdf65344c8"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0014.b64",
+      "offset": 7000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "db49a62c7d32987fde23486b5f910728214bb55b2d707da7643a851737cf0ed2",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "60a15eeec4422f00a02b09102ee054b1cd7092b8"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0015.b64",
+      "offset": 7500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "0a34bbeec6ba0f96b4ab637acc9336a427e9e451eea280727b4627d89973de92",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "e705c3e1698f579dd0612fb9e8706d3a9ed7224b"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0016.b64",
+      "offset": 8000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "d0484550b3bf56a04acf8deae986d4f9f6fd54640cfb5aade3ec7f9f016b3b2f",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "afd89b41404d3d2f657c6e95cc16a714dc5807ea"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0017.b64",
+      "offset": 8500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "ff9022561ac5af111eb23295b01d4545f14763c0566da80ca3815e570a244a85",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "cc46a03e74781262ebee9ed1b0bc33a345ee3e30"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0018.b64",
+      "offset": 9000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "274556c57face0a6c2ad899a69d39563235e148c421da704ef59aa3bcb4e32ac",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "1c6e136a60e030ac2b7e3b9335590a5228c0210a"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0019.b64",
+      "offset": 9500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "57729a7052ea25e10a0e82df6afdcccf9ed291637a477b9ee17dd6fd91e6c362",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "36b69f0f118a0986639896c320ce2daaac106df2"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0020.b64",
+      "offset": 10000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "25f613254eefbc3d176856125a109e1efe4f9e2c29f171c87d36ab8fd3f3319f",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "4aa9b862679ab711adc1c339ac99fb0959f1cf42"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0021.b64",
+      "offset": 10500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "5f00f6748be0df5186ad9615c371d2fb89f3431a4f3ea6908d38f1c943e5fa38",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "175b983c6e9191490eaa4a5ab4d33ed9143b8276"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0022.b64",
+      "offset": 11000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "0aa74082e2f849fe2ffab72b17f34b560feff2c4c6ebb6681b764d22feb5227b",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "973aac7283236f844ebdf263bf4be0da78c1a413"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0023.b64",
+      "offset": 11500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "cd8428bc0b19465f3929aa9ac3e428befb70acb2584d8ae4bf4842fdf4b5a8f8",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "99f18cb1a5d1cc55aabc0f7393ec0199f3191dce"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0024.b64",
+      "offset": 12000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "ac46a48bea583e1c7b8e2b8af87c7bdc84c7eb27a85374f00aaad1198c2577a4",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "07d9b7922eef874f1347b395c3de9af33074fdc9"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0025.b64",
+      "offset": 12500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "84ff4142f62209b1fc67ba0e38e5b96bb89f14b27b1d8de59700f5db753afd2c",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "a067ccff6316023087b1ba98e06d60e40d90d341"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0026.b64",
+      "offset": 13000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "159c9ad3f72753df6f61111f6d8ff60fa9c882ee1c8cb1dbffd31cb1999d3f37",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "9db035dc541600f7dfd95e76fe00c108ba3bfc0d"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0027.b64",
+      "offset": 13500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "ebc15196adff89faff4c0eefb6ba5cd0fd2a24ec459a0c3d3be33b0ac8a3afac",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "ea168cd815f4162d875285cac3a4912fd4e120a3"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0028.b64",
+      "offset": 14000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "565dc620cc4740620f51b6bb1bfd2ead1a333a8085cc7ba8f7d05fa386cd0d84",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "6a58762fd2199715189014104809dc044fe0a6b9"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0029.b64",
+      "offset": 14500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "cc6faad3d44b769425fb31433f7d78d0c17338d95b15647513a45d4065167324",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "aefaaffe6aaf5281ab3e29518a25932363b3cbe4"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0030.b64",
+      "offset": 15000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "97c3b7234b180d5bb43ba741f37424f86cc7e613fe15c72e9d66e2a37493e9e4",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "a443cc66015b32c6259c90b9e8e7a95b18ba241e"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0031.b64",
+      "offset": 15500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "8aa5e6132be6825b172a963d0d6e40538e9ae2649e849b924bbe424bccf7db62",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "dad13fb75d2a5eadf4c785fb9e69f5b439249eb1"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0032.b64",
+      "offset": 16000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "4b613be0dde77e414b8985d64f15d2c262cef8138d21ac342fa8b856353f0460",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "37d3c26cf20c27598aa6aa0b67e7749784f9a658"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0033.b64",
+      "offset": 16500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "308f3273f0adc3c0b8a87097b4c311c32ddcefc292bab970a04ef80e88dc51f6",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "a2574b4a6553e98477f355d24863f1e6e148877b"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0034.b64",
+      "offset": 17000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "f5cbd7e525d27d58073ab1dbedd6ecf6ac19d9540dfb6fb5458abb19919f40f6",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "eb9a81ed54bfbb5e4cf16de3448d265504b0d3bd"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0035.b64",
+      "offset": 17500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "4b50724fe3769921924c2b84ebc3891b42050f773a0003cd2cabda258893506c",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "48788dc5bff29430219608722cebb3d20f090f72"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0036.b64",
+      "offset": 18000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "88b18b5b0e0333ef70514842a66411abf6fba0d56e61cb15405ec206bf0564a2",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "1d910a00bc23bc92ffa1071bbc0fb2006232732a"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0037.b64",
+      "offset": 18500000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "014e91271f6c41f4c0d338e80510919b99cbf5f26182126883d4da823fa4db6f",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "ec64640da0d9f1d757d76998b6d5ac83b7ba8bd6"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0038.b64",
+      "offset": 19000000,
+      "decoded_bytes": 500000,
+      "decoded_sha256": "cdfdc67fee0aacf9568ea9810ba65324b7a69309bf438c83ee1e599cef1d89a8",
+      "ASCII_bytes": 666668,
+      "ASCII_git_sha": "8ff592d284a2e37703f045aa363fafeb593a3bfb"
+    },
+    {
+      "path": "core-build/checkpoints/FULL34-LIBRARY16-FOUNDATION35-20261023-IN_PROGRESS/raw-providers/part-0039.b64",
+      "offset": 19500000,
+      "decoded_bytes": 61468,
+      "decoded_sha256": "602070e8185275c0e49ed3f7a2a58fca33d863526f14d20badedda2d8c4401b2",
+      "ASCII_bytes": 81960,
+      "ASCII_git_sha": "44ff55e203d134a72b266c0f19b631fc7257b8f7"
+    }
+  ],
+  "encoding": "concatenate decoded ASCII providers in explicit offset order",
+  "remote_whole_readback": "PENDING_UNTIL_ACTUAL_RECEIPT",
+  "full_release": false
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kageyoni-engine"
+version = "11.1.0.dev19"
+description = "Portable Kageyoni world and workspace engine; no model API required"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+kageyoni-operate = "kageyoni.console:main"
+
+[tool.setuptools.packages.find]
+include = ["kageyoni*", "contracts*"]
+
+[tool.setuptools.package-data]
+kageyoni = ["data/*.sql", "data/*.json", "composition/data/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
