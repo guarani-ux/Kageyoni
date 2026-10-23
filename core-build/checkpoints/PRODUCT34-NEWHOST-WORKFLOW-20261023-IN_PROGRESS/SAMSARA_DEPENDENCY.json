@@ -1,0 +1,26 @@
+{
+  "SAMSARA_COMMIT": "7acac4da86cd610dcdf533d8794eac3e5108d297",
+  "workflow_body_commit": "58359c11b85c42d25e86c3e8577a0d4d825b29f3",
+  "workflow_recipe": "core-build/checkpoints/PRODUCT34-NEWHOST-WORKFLOW-20261023-IN_PROGRESS/body-recipe.json",
+  "cancel_recipe": "core-build/checkpoints/PRODUCT34-NEWHOST-CANCEL-20261023-IN_PROGRESS/raw-recipe.json",
+  "source_native18_original_commit": "78f68bde6496a3598d9059bf0e052b51ec494ca7",
+  "current_candidate": {
+    "product": "0.5.3.dev34",
+    "native": "11.1.0.dev18",
+    "runtime": "c4bcfc4b2e84a00cb91576042c875ca821b933b67211c25857fa435952d5a622",
+    "payloads": 244,
+    "wheel_sha256": {
+      "product": "420de18fe516d49ef97e648d4017c8bb8c4d9fddbc68c483c2502802e1f55025",
+      "engine": "d2d6cbec7b404a451c13d20a61d1640bb7e2b639ae970f8f254b49a46c895626"
+    }
+  },
+  "native18_source_manifest_SHA256": "2a391e08290fe554b97c597f491e6c1a875c7945827308e03a98079eba95ecf1",
+  "unchanged_authoritative_native18_source_files": 745,
+  "native18_wheel_source_install_payloads": 203,
+  "new_runtime_results": "NEW34world scriptedcontest\u2192award\u2192helperchoice\u2192conservedrepair, independentAI8normalreads/textlateruse, checkedbackup+restore+physicalrelocation+9freshreads, separatecommoncancel/unspentaward/endingcoherence; originalr1FAIL preserved",
+  "current_source36_source37": "NOTINSTALLED, previousRAMonlyfragmentsnotrecovered, Native18no sourcewithdrawal producer; newsourceonlyauthoritygroundingindependent ongoing",
+  "full_F3": false,
+  "full_release": false,
+  "human": "NOT_RUN",
+  "remote_custody": "all32+22 fullvalues at exactSAMcommits; actual25+5remoteproviders physically reconstructed wholeZIPs/CRC/memberSHA/modes. This metadata is not fullcontinuation/Libraryversion."
+}

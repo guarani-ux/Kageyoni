@@ -1,0 +1,9 @@
+{
+  "failure": "AssertionError before independentphysicalremoteZIPproof; actual32remote filecontentsalreadyequal retainedsources",
+  "cause": "readback captures indexed by actual PUSH-ROSTER glob order, but reassembler assumed recipe numericorder",
+  "partial_bytes": 0,
+  "SAM_CAS_after_this_failed_supplementalcheck": "58359c11b85c42d25e86c3e8577a0d4d825b29f3",
+  "root_error": "orchestrator failed to gate CAS on shell exit_code; preserved. Full32staged payload equality and prior-subtree check had passed; no uncertainwrite/retry.",
+  "Kage": "not yet moved",
+  "repair": "map each actualremote capture index to its recordedpath, no provider/source/recipe changes"
+}

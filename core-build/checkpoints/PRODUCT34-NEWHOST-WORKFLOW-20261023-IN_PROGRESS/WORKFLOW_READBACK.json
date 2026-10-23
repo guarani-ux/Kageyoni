@@ -1,0 +1,11 @@
+{
+  "status": "ACTUAL_ALL25_REMOTE_ASCII_PROVIDER_RECONSTRUCTION_CRC_EVERY958MEMBER_SHA_MODE_TYPE_PASS_R2",
+  "commit": "58359c11b85c42d25e86c3e8577a0d4d825b29f3",
+  "bytes": 12258987,
+  "sha256": "04f613abd73f33a093288f2089da08ee004e64269f6afd483600d38d9353a57e",
+  "members": 958,
+  "all32_staged_file_readbacks_exact": true,
+  "independent_physical_extraction_NOT_RUN": true,
+  "r1_failure_and_partial_preserved": true,
+  "full_release": false
+}

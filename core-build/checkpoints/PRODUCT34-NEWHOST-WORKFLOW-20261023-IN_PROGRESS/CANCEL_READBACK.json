@@ -1,0 +1,9 @@
+{
+  "status": "PASS_ACTUAL5_REMOTE_PROVIDER_COMPLETE_RAW_SHA_CRC_EVERY119MEMBER_SHA_MODES",
+  "bytes": 2223978,
+  "sha256": "4225951fb9d0df5e4d2cf71fa3c1d0ff663c7abc40f27201ce7c19b53a3e9e80",
+  "all22following_files_full_remote_readbacks_exact": true,
+  "member_count": 119,
+  "full_F3": false,
+  "full_release": false
+}
