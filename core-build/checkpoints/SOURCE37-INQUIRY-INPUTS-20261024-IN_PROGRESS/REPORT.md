@@ -1,0 +1,5 @@
+# Source37 input closure foundation — IN_PROGRESS
+
+Implemented a pure citation-occurrence collector grounded in actual Native20 Documents.inquire. It preserves claims, counters, unavailable passages and duplicates, and rejects missing, invented or wrongly grouped occurrences. It detaches returned data and preserves selector types rather than inventing canonical family identity. Nine distinct authored pure methods pass for the current source, with positive and negative cases; the same nine were run twice, not eighteen distinct checks. No independent reviewer or Native execution is claimed. Initial and following stdout/stderr are retained.
+
+This is a dependency for authentic immutable derivation, not that implementation. The Native inquiry currently has no output artifact or typed creation fact. The supplied root contract identifies the required producer/collector/cache integration and current-permission boundary. Current installed36 remains unchanged and still refuses unsupported controlled derivation. No source authority, Native21 build, world, SQL migration, BLOB, worker, human or full-release claim follows from these pure checks.
