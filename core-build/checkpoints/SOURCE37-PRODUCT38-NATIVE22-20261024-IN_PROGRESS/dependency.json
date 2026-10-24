@@ -1,0 +1,11 @@
+{
+  "depends_on_repository": "guarani-ux/SAMSARA",
+  "branch": "codex/samsara-core-continuation",
+  "commit": "4e2ada468530e22f64cdf5957b685f01ddf21991",
+  "tree": "30403231f19362b339f244b48442b21c0e833f16",
+  "checkpoint": "core-build/checkpoints/SOURCE37-PRODUCT38-NATIVE22-20261024-IN_PROGRESS",
+  "qualification": "Actual installed Product38/Native22 bounded inquiry/withdrawal/restore/stdio Client. Whole raw failures and all source retained. Full release IN_PROGRESS.",
+  "runtime": "6296e03e20c91fc0a8865b773b6d5782b420f442f320c21b161f8c1d5c3512b9",
+  "full_source_identity": null,
+  "full_release": false
+}

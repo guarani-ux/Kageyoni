@@ -1,0 +1,50 @@
+{
+  "native": {
+    "old_files": 752,
+    "new_files": 762,
+    "added": [
+      "kageyoni/workspaces/source_derivation_bindings.py",
+      "kageyoni/workspaces/source_derivation_facts.py",
+      "kageyoni/workspaces/source_derivation_history.py",
+      "kageyoni/workspaces/source_derivation_inputs.py",
+      "kageyoni/workspaces/source_derivation_installation.py",
+      "kageyoni/workspaces/source_derivation_producer.py",
+      "kageyoni/workspaces/source_derivation_routing.py",
+      "kageyoni/workspaces/source_derivation_scope.py",
+      "kageyoni/workspaces/source_derivations.py",
+      "migration_037.sql"
+    ],
+    "changed": [
+      "kageyoni/engine.py",
+      "kageyoni/model.py",
+      "kageyoni/persistence/artifacts.py",
+      "kageyoni/persistence/unit_of_work.py",
+      "kageyoni/workspaces/documents.py",
+      "kageyoni/workspaces/source_authority_installation.py",
+      "kageyoni/workspaces/source_authority_scope.py",
+      "pyproject.toml"
+    ],
+    "removed": [],
+    "unchanged": 744
+  },
+  "product": {
+    "old_files": 44,
+    "new_files": 45,
+    "added": [
+      "samsara/source_derivation_host.py"
+    ],
+    "changed": [
+      "pyproject.toml",
+      "samsara/__init__.py",
+      "samsara/application.py",
+      "samsara/content.py",
+      "samsara/data/contract.json",
+      "samsara/data/engine-lock.json",
+      "samsara/owner.py",
+      "samsara/protocol.py",
+      "samsara/sourcework.py"
+    ],
+    "removed": [],
+    "unchanged": 35
+  }
+}
