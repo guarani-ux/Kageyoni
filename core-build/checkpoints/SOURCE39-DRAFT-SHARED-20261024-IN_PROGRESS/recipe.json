@@ -1,0 +1,525 @@
+{
+  "bytes": 34052254,
+  "entries": 825,
+  "full_release": false,
+  "full_source_identity": null,
+  "parts": [
+    {
+      "bytes": 400000,
+      "offset": 0,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-000.b64",
+      "sha256": "fbf83bc3405c0c644f4aa964f5bdd593231642c7ba5df7d4707eb9ecbdd8d60d"
+    },
+    {
+      "bytes": 400000,
+      "offset": 400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-001.b64",
+      "sha256": "661933bd40dcf4fcafd91246c7004612f4708ce03a7b744cc767ade640084b92"
+    },
+    {
+      "bytes": 400000,
+      "offset": 800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-002.b64",
+      "sha256": "2d72f976ca703b0638af61dbb83efdaeb2571eff8613bb1059e0efb1aa4ea49f"
+    },
+    {
+      "bytes": 400000,
+      "offset": 1200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-003.b64",
+      "sha256": "ce9a8056c54aea8182d3e6e2d30f2c1657ba31024cf4e05d7d613f0a0d5aec1c"
+    },
+    {
+      "bytes": 400000,
+      "offset": 1600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-004.b64",
+      "sha256": "1c93d496d242b1320be54ee90f7bc3ae792b07486c84ba15773b2078208786eb"
+    },
+    {
+      "bytes": 400000,
+      "offset": 2000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-005.b64",
+      "sha256": "445bc760dd0adc785bdec8ffcac533ca62b2b2ddf8b50ed8749c02be42ee06fc"
+    },
+    {
+      "bytes": 400000,
+      "offset": 2400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-006.b64",
+      "sha256": "bda9009014703a2930c7ccd9901526f159f4bffb618823b8698c7592a1dc14be"
+    },
+    {
+      "bytes": 400000,
+      "offset": 2800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-007.b64",
+      "sha256": "3a6221538740a746f51b14ebe4c3b1125da69278a4a03c3971058137b275f22d"
+    },
+    {
+      "bytes": 400000,
+      "offset": 3200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-008.b64",
+      "sha256": "c24cba4e124a1e65600491ee80bfe41468c41f58d2a84e606703bd2fb5d7467f"
+    },
+    {
+      "bytes": 400000,
+      "offset": 3600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-009.b64",
+      "sha256": "ec9086013fed9bfedeac1eaf72f980af46931c9e2a294718a0de985fd7214ae2"
+    },
+    {
+      "bytes": 400000,
+      "offset": 4000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-010.b64",
+      "sha256": "20b0ffe50fff034cc73772c3f75f4210711f0bbb365a6de0c423cfd3a65c6d95"
+    },
+    {
+      "bytes": 400000,
+      "offset": 4400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-011.b64",
+      "sha256": "d463946c842b098b0c474f951699cc25fec20b2e98a96357bbc1ade3b9760792"
+    },
+    {
+      "bytes": 400000,
+      "offset": 4800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-012.b64",
+      "sha256": "87bafcdac39752364f6480b85e3df534a33ed44b00ed920b6e61565b37003863"
+    },
+    {
+      "bytes": 400000,
+      "offset": 5200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-013.b64",
+      "sha256": "13d669e00dbe1204f6ed185db3474652bce43af7c4bb0f6812e9a37a44bf35be"
+    },
+    {
+      "bytes": 400000,
+      "offset": 5600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-014.b64",
+      "sha256": "fed380d96929f367ead8cd9dcf035e6c078cf919c2253f391053e16435f1145c"
+    },
+    {
+      "bytes": 400000,
+      "offset": 6000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-015.b64",
+      "sha256": "b1c9e25e1777da90386ccf46fe109028a23755956d6f5dd5e9536aef8ba52d64"
+    },
+    {
+      "bytes": 400000,
+      "offset": 6400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-016.b64",
+      "sha256": "7a1f710121340a5e54c10f43a99b3a3c720b29e80e263fd6f8a862f31b51f09a"
+    },
+    {
+      "bytes": 400000,
+      "offset": 6800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-017.b64",
+      "sha256": "0a2a7f0efa43fb79a689efb7b287365794e5d404499eb72dd481a84df6a31fd1"
+    },
+    {
+      "bytes": 400000,
+      "offset": 7200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-018.b64",
+      "sha256": "322223e91559b3ec9ac4f98c22dc159e2539f315ff3056bf06d550f0772e6224"
+    },
+    {
+      "bytes": 400000,
+      "offset": 7600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-019.b64",
+      "sha256": "0f95c1721eaa7c97ddc04a669b11cd32b57fcf8e899801b3514e3ceb4142c013"
+    },
+    {
+      "bytes": 400000,
+      "offset": 8000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-020.b64",
+      "sha256": "1411bd58b14aafbbaaf34d978908e1959d05f9bcea8bc266478a249c5c149c00"
+    },
+    {
+      "bytes": 400000,
+      "offset": 8400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-021.b64",
+      "sha256": "04f7d8d184c9e5243c0c9c02cd7c73eddbca299ec05b15f827565e4d421ab5fb"
+    },
+    {
+      "bytes": 400000,
+      "offset": 8800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-022.b64",
+      "sha256": "3ff02fb8e5e5f60445b87db0be0db1f2a7368928f5d439f8a8d06cd887e81eb6"
+    },
+    {
+      "bytes": 400000,
+      "offset": 9200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-023.b64",
+      "sha256": "89c1e454c10f86ee9268290c2571ca2cad22a6017ba83f9008a1a2f60c014cea"
+    },
+    {
+      "bytes": 400000,
+      "offset": 9600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-024.b64",
+      "sha256": "f1811231a015dc2897d1c55313d2822a3f466d1d40053e2a1fd7ab421e84c41c"
+    },
+    {
+      "bytes": 400000,
+      "offset": 10000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-025.b64",
+      "sha256": "9151a5f9d2478b2c6887808b4000f1e2610960f8a86256f7c1fe0a44ed53a47c"
+    },
+    {
+      "bytes": 400000,
+      "offset": 10400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-026.b64",
+      "sha256": "443b56fe4274be1fca1f4587c7730151e253411b85c91306a5f37db4a8adb14d"
+    },
+    {
+      "bytes": 400000,
+      "offset": 10800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-027.b64",
+      "sha256": "c6e27fa283e36d09042ee27f61d0e680e4c050e39cda7d5d03575e7b14c545f9"
+    },
+    {
+      "bytes": 400000,
+      "offset": 11200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-028.b64",
+      "sha256": "73bdb7f265d32d4788de66b87551b3029620a5d30a6a5517373d572ab681820a"
+    },
+    {
+      "bytes": 400000,
+      "offset": 11600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-029.b64",
+      "sha256": "f1998cce3438463fb103858465fa7828fc7cfe9c217a96e5e119b2a71de7677a"
+    },
+    {
+      "bytes": 400000,
+      "offset": 12000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-030.b64",
+      "sha256": "30df7a09a1f1fde8214295fea19fa9269c0d0441579d6a2b389c2030b5fa6f44"
+    },
+    {
+      "bytes": 400000,
+      "offset": 12400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-031.b64",
+      "sha256": "4ae6f95a17aa052d3d76e633e126afcf5b4280a0b5e865e6d2217849da4d8b80"
+    },
+    {
+      "bytes": 400000,
+      "offset": 12800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-032.b64",
+      "sha256": "b5482483deee071aa3c8d610ae37ea6d0939ef37b3ab09ab85975898a791a47e"
+    },
+    {
+      "bytes": 400000,
+      "offset": 13200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-033.b64",
+      "sha256": "d3100799b6cfc7de242bad2b3f8e61b0932bf03ab35808f53af8e7d6ea9e1e71"
+    },
+    {
+      "bytes": 400000,
+      "offset": 13600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-034.b64",
+      "sha256": "5fbb51fb39ccc7b43af237e6a2e98ac54bc947e61ac1908fbc3cbc3fed05f700"
+    },
+    {
+      "bytes": 400000,
+      "offset": 14000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-035.b64",
+      "sha256": "88b8344f87d67de73a3f8b09516889482679027d1703791dc3741f03f8b26802"
+    },
+    {
+      "bytes": 400000,
+      "offset": 14400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-036.b64",
+      "sha256": "430f07baea625d01b0ce4e274edadc1641ce8cb30c19be34fa8d8f42fdaa4b1f"
+    },
+    {
+      "bytes": 400000,
+      "offset": 14800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-037.b64",
+      "sha256": "2d259fbf171bf1e8c434e458a0691e518f184ae659181e60a7046b59a5f1dc18"
+    },
+    {
+      "bytes": 400000,
+      "offset": 15200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-038.b64",
+      "sha256": "b66d8a5824bd793f0bc854b8d75aadd05bb17cc29e0431883e078df2603b4d1e"
+    },
+    {
+      "bytes": 400000,
+      "offset": 15600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-039.b64",
+      "sha256": "9e7627f1ca13e793a1cd9cacf8e55c5f365889e046f383a176ed4d56f2930e86"
+    },
+    {
+      "bytes": 400000,
+      "offset": 16000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-040.b64",
+      "sha256": "7935b19e5445b4a62b34a42e2f06c2b4c6909c2a00e300858dd4e18cde269b0a"
+    },
+    {
+      "bytes": 400000,
+      "offset": 16400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-041.b64",
+      "sha256": "a53333ee4d81f02077c2d5a152cd49b524a222f71c8526525aa1e2b2dae25ce5"
+    },
+    {
+      "bytes": 400000,
+      "offset": 16800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-042.b64",
+      "sha256": "e3021499f551a94bfbe9fab649297eea74d9932720afba9eb3c0ef4a99cfd219"
+    },
+    {
+      "bytes": 400000,
+      "offset": 17200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-043.b64",
+      "sha256": "0cfb949155ad4e4b79766691e35533d0b6cba8b507a1965e8b306f74cd888707"
+    },
+    {
+      "bytes": 400000,
+      "offset": 17600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-044.b64",
+      "sha256": "a455522845780892c7f5aac3e9b832a1f1888b33f393121200f4963a50d9d130"
+    },
+    {
+      "bytes": 400000,
+      "offset": 18000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-045.b64",
+      "sha256": "e79d0a94d3db034998eebc51fa7643171d20ae8d1ae2f3fbd6d2233e311d9c93"
+    },
+    {
+      "bytes": 400000,
+      "offset": 18400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-046.b64",
+      "sha256": "8823aa7f8aa6c53980af5c8065c6187ce07d243c4bbeadaca76949aa4f2b2e2b"
+    },
+    {
+      "bytes": 400000,
+      "offset": 18800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-047.b64",
+      "sha256": "c599766dfbfb7d0d5618287c664f902fcde25c71db96c3458fc439eaf7d3e78d"
+    },
+    {
+      "bytes": 400000,
+      "offset": 19200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-048.b64",
+      "sha256": "af54a025a8defb4e1d79ffba273ea26839df7970ed3f38a4174101bfe529ef41"
+    },
+    {
+      "bytes": 400000,
+      "offset": 19600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-049.b64",
+      "sha256": "4b88e93b86f49df2f9b0563bc8fde682b60cb45a33e932583c60eae217a84f04"
+    },
+    {
+      "bytes": 400000,
+      "offset": 20000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-050.b64",
+      "sha256": "fa4bbde50f741505232f9ea3b6ee00702be03dd574eb343f249cbe170f835433"
+    },
+    {
+      "bytes": 400000,
+      "offset": 20400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-051.b64",
+      "sha256": "9b1ffa879989b3f95e0678297af1e0e7fc683c4df31e9d15cdc435ea17f40e17"
+    },
+    {
+      "bytes": 400000,
+      "offset": 20800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-052.b64",
+      "sha256": "1359c06c72705b2cee1e11b8d906f959793010af4f562e3f1543b9ca7f8542b8"
+    },
+    {
+      "bytes": 400000,
+      "offset": 21200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-053.b64",
+      "sha256": "7870b226e881bfa46f46676b1c0183ec2ec39dd49754b8f3bb1d77128d29d8ed"
+    },
+    {
+      "bytes": 400000,
+      "offset": 21600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-054.b64",
+      "sha256": "e7a1d4bab3c8e8c48215b68cd9c0bc7b77f48af6c52cca010639155a22152d1a"
+    },
+    {
+      "bytes": 400000,
+      "offset": 22000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-055.b64",
+      "sha256": "69a5bdb997eb89cb590e43bf70bc02ebd4a8a3f8c8e341c172f2c19cd0899be9"
+    },
+    {
+      "bytes": 400000,
+      "offset": 22400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-056.b64",
+      "sha256": "3a02a6c338418d35dc51c90f05a7a7adce2d72960316701e57b1990c71c4907b"
+    },
+    {
+      "bytes": 400000,
+      "offset": 22800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-057.b64",
+      "sha256": "b72ccdfdb421c5ff232479275f8c6c66e941618558f3d0e7c8a2b3bb70e48ff8"
+    },
+    {
+      "bytes": 400000,
+      "offset": 23200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-058.b64",
+      "sha256": "bbfe11f2af81b135a660b1673007308f5b441a10dc1db9c907af870735d3da4a"
+    },
+    {
+      "bytes": 400000,
+      "offset": 23600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-059.b64",
+      "sha256": "36f6507dad962ccab8b0467278175224f003b94f4d0328c5aec5b99196756d7c"
+    },
+    {
+      "bytes": 400000,
+      "offset": 24000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-060.b64",
+      "sha256": "31f3e1edc5d86ef531ad921181650abfc11242a4cafcd04d2c8991419cbd5e59"
+    },
+    {
+      "bytes": 400000,
+      "offset": 24400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-061.b64",
+      "sha256": "4337b49ceed881313a4019b8c9a990d98b8e0a2c7173ee2a375060b19bcadfb0"
+    },
+    {
+      "bytes": 400000,
+      "offset": 24800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-062.b64",
+      "sha256": "6254972a21ef9e338496616002552cec12cda7b0f0a8392be3117abb855e0105"
+    },
+    {
+      "bytes": 400000,
+      "offset": 25200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-063.b64",
+      "sha256": "37a4e0fdd8a86c8aaf5792387201b574607da3edeb2daac48884788bc8eedb2c"
+    },
+    {
+      "bytes": 400000,
+      "offset": 25600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-064.b64",
+      "sha256": "5c5ea1ec9a63f66c032ca8dd18913d7c5e7cbd559a4daf6927bf889092eee209"
+    },
+    {
+      "bytes": 400000,
+      "offset": 26000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-065.b64",
+      "sha256": "c6a717b308011fef259e21675afa814ced64860ab4cb6252dd34f5b71e6a8d0e"
+    },
+    {
+      "bytes": 400000,
+      "offset": 26400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-066.b64",
+      "sha256": "b498985f108faad49defe0f3b65b4f0c12a9d341f1cf9ebdc853a013544917d8"
+    },
+    {
+      "bytes": 400000,
+      "offset": 26800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-067.b64",
+      "sha256": "b343fbac14efec8b223fcae4ff50747f6624a86a6be23eb0188cd327e9c42b07"
+    },
+    {
+      "bytes": 400000,
+      "offset": 27200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-068.b64",
+      "sha256": "5d4a9ee04aefd12ee511b26166aa41e710511e4259ad22566a8e02767e571307"
+    },
+    {
+      "bytes": 400000,
+      "offset": 27600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-069.b64",
+      "sha256": "c557ad76bd470bf88dbbbcd639569442e8941326bbc724a639075db42b670836"
+    },
+    {
+      "bytes": 400000,
+      "offset": 28000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-070.b64",
+      "sha256": "4a863564a9ed9358783109bb5de195794f887c586f2af9b09e66ddfb51746384"
+    },
+    {
+      "bytes": 400000,
+      "offset": 28400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-071.b64",
+      "sha256": "877b6f2f46d90f68bc2ccc07092cee63177ff7d460fe33f5b0334c42a7987f60"
+    },
+    {
+      "bytes": 400000,
+      "offset": 28800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-072.b64",
+      "sha256": "73fc44ed12a861b914cc1c4c1ef8e1cc43344c93871aefcf321cfdd00dd7edcf"
+    },
+    {
+      "bytes": 400000,
+      "offset": 29200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-073.b64",
+      "sha256": "85c611fa16fc214b65d922672b5de3249b25aa33cbdff1c193b00f0da6911bba"
+    },
+    {
+      "bytes": 400000,
+      "offset": 29600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-074.b64",
+      "sha256": "d48011fa9d25ea7747c3f81e3e5aef4f4584c7e7e150171de7f7200c30c74025"
+    },
+    {
+      "bytes": 400000,
+      "offset": 30000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-075.b64",
+      "sha256": "d08250299e86fca0a855772d913de31546109e9811ec509153ebaecc17c73c89"
+    },
+    {
+      "bytes": 400000,
+      "offset": 30400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-076.b64",
+      "sha256": "4c31723cd3747b2079a68ae745d1d414df7e56c3daed481bc9c81c46dad09bc3"
+    },
+    {
+      "bytes": 400000,
+      "offset": 30800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-077.b64",
+      "sha256": "88bcb27bb1c8da9797304d2542ec3d7e6306bb2e382bcfa9492d9b1fb1eb45e0"
+    },
+    {
+      "bytes": 400000,
+      "offset": 31200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-078.b64",
+      "sha256": "df1c117a81c32ba046b0364446f3600fe73536e7ede5b3aa700cf1942bfdaf87"
+    },
+    {
+      "bytes": 400000,
+      "offset": 31600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-079.b64",
+      "sha256": "49d2d707f2265c40709017e12bae0f9e5061032ccc364ae82c370f58b156c220"
+    },
+    {
+      "bytes": 400000,
+      "offset": 32000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-080.b64",
+      "sha256": "5c11ab84de61028af8f2ebbf85cab8dc59751df5dad0ad31775e7ec562e6292e"
+    },
+    {
+      "bytes": 400000,
+      "offset": 32400000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-081.b64",
+      "sha256": "7e405f00e8fb25bb320b10bbc9153861d1cc16fb6dafc74406107c87ced11611"
+    },
+    {
+      "bytes": 400000,
+      "offset": 32800000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-082.b64",
+      "sha256": "15fad2688faceb85ae187694f25e296b8f991f0f0ad30cde1b5f9b16126b8b3b"
+    },
+    {
+      "bytes": 400000,
+      "offset": 33200000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-083.b64",
+      "sha256": "912736564bef6bde51319348f139144bb02b48dd8a850f3398f9585fa9426665"
+    },
+    {
+      "bytes": 400000,
+      "offset": 33600000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-084.b64",
+      "sha256": "6c333bb57be59864457e6b9843977efd7b4c4b359fe5266666808b25267dda3b"
+    },
+    {
+      "bytes": 52254,
+      "offset": 34000000,
+      "path": "core-build/checkpoints/SOURCE39-DRAFT-SHARED-20261024-IN_PROGRESS/body-085.b64",
+      "sha256": "82ed00f8c3122b7c299ee3a3850d0737ecb8843c04f55408d18963c746a72fd2"
+    }
+  ],
+  "sha256": "2b22b58810be8849d7d919ae1c86e2f2ff04e718beecb13a4035515f7c4ad8a8"
+}
