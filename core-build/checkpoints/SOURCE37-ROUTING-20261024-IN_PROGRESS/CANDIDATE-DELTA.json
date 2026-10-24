@@ -1,0 +1,24 @@
+{
+  "parent_files": 752,
+  "candidate_files": 760,
+  "changed": {
+    "kageyoni/engine.py": "d5af67005866d5a4252b794edc267b777cf9b56433e70b8d7577ac869a3a66e4",
+    "kageyoni/model.py": "4cd0fbaf5e9ba58721c2e6c57527f7b4723a82223b5fc9b830ff7c9814e4d179",
+    "kageyoni/workspaces/source_authority_scope.py": "28d33178f5858022cfaff5675636cc23af8f9be8354daaa308fc06232a281f80",
+    "kageyoni/workspaces/source_authority_installation.py": "0545386662eff99a0440bcd07f9f5afaa26d191f489e1ad50331b057ad1cce90",
+    "kageyoni/persistence/artifacts.py": "fd1b918bd8a789f9a6fa39ed71d57e69ff88b6fbff26342389acbeb03fd52e04"
+  },
+  "added": {
+    "migration_037.sql": "f73d2707696948bd0f4251392619c484c18120e46443154e4651b2048ddff28d",
+    "kageyoni/workspaces/source_derivations.py": "595dc9a522f485aeffca6e62a9e51b922fc1802a65d5562858d1a76b400104df",
+    "kageyoni/workspaces/source_derivation_history.py": "9d7dfb68310b93d9c6703fc758904576d4d35dce112e279fb429d132b70901aa",
+    "kageyoni/workspaces/source_derivation_routing.py": "b873cb3c3a23f327e29d6329d9a1bbe66d405ef5821628e5e413e00ac99d97e7",
+    "kageyoni/workspaces/source_derivation_bindings.py": "bc7c392e40d72f88338053571046de23bd00bd2842b964c3753cc36aae1ef287",
+    "kageyoni/workspaces/source_derivation_facts.py": "ff948d90c49d428a44a44e396bfc2b860fa91d0e7d1754c18878a151aee5b3de",
+    "kageyoni/workspaces/source_derivation_inputs.py": "6cfbbdce7ecb59f3387786fef1aeb22a80e8bfacee94fa8f3aff21e57828612e",
+    "kageyoni/workspaces/source_derivation_installation.py": "15505f25f5b2989756afc8612eb7e06da51c8afb054eed8efb89d146e4a396f0"
+  },
+  "all_other_parent_files_exact": true,
+  "allPython_AST_parse": true,
+  "installed": false
+}
