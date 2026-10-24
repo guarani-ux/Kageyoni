@@ -1,0 +1,17 @@
+{
+  "kind": "private paired checkpoint dependency",
+  "SAMSARA_commit": "a70f2d4efd8b4f7c9e6183605124e6de623903e4",
+  "SAMSARA_tree": "5d4a9d6a6ff1b7cd9859a33947e6f10bb9c05b09",
+  "checkpoint": "SOURCE39-PRODUCT39-NATIVE23-20261024-IN_PROGRESS",
+  "branch": "codex/samsara-core-continuation",
+  "runtime": "181858e25bc5d9d04f95a4a8a2858a6faee773bc68644cc136bbc38d37e194fe",
+  "versions": {
+    "product": "0.5.3.dev39",
+    "native": "11.1.0.dev23"
+  },
+  "qualification": "bounded installed no-transfer source.draft; transferred trial custody refused; all original PS1 F1-F5 remain IN_PROGRESS",
+  "whole_sha256": "c337afb594dfa7020a72aa8ed744a5ec48c21467f6e2c8868b7cdc0233a8a906",
+  "receipt": "Actual ref pair is externally confirmed in FINAL_PAIRED_RECEIPT; immutable commit is staged before ref CAS",
+  "full_release": false,
+  "full_source_identity": null
+}
