@@ -1,0 +1,16 @@
+{
+  "repository": "guarani-ux/SAMSARA",
+  "commit": "2c47c60a2de998d169e31f15c0f6bd31b6f3b239",
+  "tree": "264c072ef71eb43279f1dd8db19a768412d4421f",
+  "parent": "10a94720a93942f0902e214162062adea7f35e15",
+  "checkpoint": "core-build/checkpoints/SOURCE40-PRODUCT40-NATIVE24-20261024-IN_PROGRESS",
+  "whole": {
+    "bytes": 74438713,
+    "sha256": "7de69e703602ad879ae49179b760164938a80eca29e4764e1d8db8237dbdd36e",
+    "entries": 4646
+  },
+  "runtime": "12c6debb1eef5249b7c51ce78acee0957856f8f5de8013cef6cb31261a665c43",
+  "qualification": "Bounded installed operator trial; full release false; both transferred-draft gates closed",
+  "full_source_identity": null,
+  "full_release": false
+}
