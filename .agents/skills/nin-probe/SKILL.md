@@ -28,17 +28,16 @@ Inspects binary structures, symbol tables, runtime boundaries, and wire captures
 
 ## 2. Binary Format Inspection
 
-Execute target binaries directly through `ninshu_bridge.py`:
+Execute target binaries directly through the in-tree `Patchbay` API or CLI:
 
 ```bash
-# Inspect Linux ELF binary
-python domains/systems/scripts/ninshu_bridge.py execute --channel 2 --file /usr/bin/ls
+# Query the desk for channel details
+python -m kageyoni.ninshu.cli channel 2
 
-# Inspect Windows PE executable
-python domains/systems/scripts/ninshu_bridge.py execute --channel 1 --file C:/Windows/System32/notepad.exe
-
-# Disassemble raw instruction stream with basic block CFG edges
-python domains/systems/scripts/ninshu_bridge.py execute --channel 15 --file /path/to/firmware.bin
+# Inspect target binary via Python API:
+from kageyoni.ninshu.patchbay import Patchbay
+pb = Patchbay()
+result = pb.execute_channel(2, open("/usr/bin/ls", "rb").read())
 ```
 
 ---

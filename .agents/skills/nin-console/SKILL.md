@@ -41,11 +41,14 @@ The board routes signals across 6 dedicated busses:
 
 ## 3. Running a Mix Session
 
-Use `domains/systems/scripts/ninshu_bridge.py` to execute a single channel or patch:
+Execute a channel or patch via the in-tree CLI or Python API:
 
 ```bash
-# Execute CH 02 (ELF) against a binary
-python domains/systems/scripts/ninshu_bridge.py execute --channel 2 --file /path/to/binary
+# Query the desk and list channels
+python -m kageyoni.ninshu.cli channels
+
+# Route an intent to the optimal channel mix
+python -m kageyoni.ninshu.cli route "inspect elf binary header" --subject elf
 
 # Or run via Python API inside active scripts:
 from kageyoni.ninshu.patchbay import Patchbay

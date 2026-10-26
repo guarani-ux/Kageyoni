@@ -6,8 +6,15 @@ def schema_path(name):
     if not isinstance(name, str) or Path(name).name != name or not name.endswith('.sql'):
         raise ValueError('SQL resource name required')
     package = Path(__file__).resolve().parent
-    source = package.parent / name
-    return source if source.is_file() else package / 'data' / name
+    for candidate in (
+        package / 'database' / 'migrations' / name,
+        package / 'database' / name,
+        package / 'data' / name,
+        package.parent / name,
+    ):
+        if candidate.is_file():
+            return candidate
+    return package.parent / name
 
 
 def fixture_path(name: str) -> Path:

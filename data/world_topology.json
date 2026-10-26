@@ -1,0 +1,558 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KageyoniWorldTopology",
+  "version": "1.0.0",
+  "continental_dimensions": {
+    "width": 100,
+    "height": 100,
+    "chunk_size": 10,
+    "centroid": [
+      49.5,
+      49.5
+    ]
+  },
+  "zones": {
+    "zone_1_outer_rim": {
+      "radius_min": 37.0,
+      "radius_max": 70.71
+    },
+    "ring_1_barrier": {
+      "radius_min": 35.0,
+      "radius_max": 37.0,
+      "height": 4
+    },
+    "zone_2_marches": {
+      "radius_min": 20.0,
+      "radius_max": 35.0
+    },
+    "ring_2_barrier": {
+      "radius_min": 18.0,
+      "radius_max": 20.0,
+      "height": 4
+    },
+    "zone_3_core": {
+      "radius_max": 18.0,
+      "spire_bounds": [
+        48,
+        51,
+        48,
+        51
+      ]
+    }
+  },
+  "starter_provinces": [
+    {
+      "province_id": 1,
+      "name": "Frostfall Highlands",
+      "anchor_coord": [
+        50,
+        10
+      ],
+      "azimuth_range_deg": [
+        337.5,
+        22.5
+      ]
+    },
+    {
+      "province_id": 2,
+      "name": "Crescent Fen",
+      "anchor_coord": [
+        85,
+        15
+      ],
+      "azimuth_range_deg": [
+        22.5,
+        67.5
+      ]
+    },
+    {
+      "province_id": 3,
+      "name": "Sunforge Steppes",
+      "anchor_coord": [
+        90,
+        50
+      ],
+      "azimuth_range_deg": [
+        67.5,
+        112.5
+      ]
+    },
+    {
+      "province_id": 4,
+      "name": "Tidecrag Reach",
+      "anchor_coord": [
+        85,
+        85
+      ],
+      "azimuth_range_deg": [
+        112.5,
+        157.5
+      ]
+    },
+    {
+      "province_id": 5,
+      "name": "Verdant Delta",
+      "anchor_coord": [
+        50,
+        90
+      ],
+      "azimuth_range_deg": [
+        157.5,
+        202.5
+      ]
+    },
+    {
+      "province_id": 6,
+      "name": "Ironcliffs Mesa",
+      "anchor_coord": [
+        15,
+        85
+      ],
+      "azimuth_range_deg": [
+        202.5,
+        247.5
+      ]
+    },
+    {
+      "province_id": 7,
+      "name": "Whispering Wastes",
+      "anchor_coord": [
+        10,
+        50
+      ],
+      "azimuth_range_deg": [
+        247.5,
+        292.5
+      ]
+    },
+    {
+      "province_id": 8,
+      "name": "Shadowwood Ridge",
+      "anchor_coord": [
+        15,
+        15
+      ],
+      "azimuth_range_deg": [
+        292.5,
+        337.5
+      ]
+    }
+  ],
+  "pass_catalog": [
+    {
+      "pass_id": "pass_1_n",
+      "level": 1,
+      "name": "Frostfall Northern Gate",
+      "footprint": {
+        "x_min": 49,
+        "x_max": 50,
+        "y_min": 13,
+        "y_max": 14
+      },
+      "connects": [
+        "Frostfall Highlands",
+        "Silver Vale"
+      ],
+      "base_garrison_hp": 25000
+    },
+    {
+      "pass_id": "pass_1_ne",
+      "level": 1,
+      "name": "Crescent Northeast Defile",
+      "footprint": {
+        "x_min": 74,
+        "x_max": 75,
+        "y_min": 24,
+        "y_max": 25
+      },
+      "connects": [
+        "Crescent Fen",
+        "Silver Vale"
+      ],
+      "base_garrison_hp": 25000
+    },
+    {
+      "pass_id": "pass_1_e",
+      "level": 1,
+      "name": "Sunforge Eastern Portal",
+      "footprint": {
+        "x_min": 85,
+        "x_max": 86,
+        "y_min": 49,
+        "y_max": 50
+      },
+      "connects": [
+        "Sunforge Steppes",
+        "Obsidian Expanse"
+      ],
+      "base_garrison_hp": 25000
+    },
+    {
+      "pass_id": "pass_1_se",
+      "level": 1,
+      "name": "Tidecrag Southeast Breach",
+      "footprint": {
+        "x_min": 74,
+        "x_max": 75,
+        "y_min": 74,
+        "y_max": 75
+      },
+      "connects": [
+        "Tidecrag Reach",
+        "Obsidian Expanse"
+      ],
+      "base_garrison_hp": 25000
+    },
+    {
+      "pass_id": "pass_1_s",
+      "level": 1,
+      "name": "Verdant Southern Fortress",
+      "footprint": {
+        "x_min": 49,
+        "x_max": 50,
+        "y_min": 85,
+        "y_max": 86
+      },
+      "connects": [
+        "Verdant Delta",
+        "Azure Basin"
+      ],
+      "base_garrison_hp": 25000
+    },
+    {
+      "pass_id": "pass_1_sw",
+      "level": 1,
+      "name": "Ironcliffs Southwest Passage",
+      "footprint": {
+        "x_min": 24,
+        "x_max": 25,
+        "y_min": 74,
+        "y_max": 75
+      },
+      "connects": [
+        "Ironcliffs Mesa",
+        "Azure Basin"
+      ],
+      "base_garrison_hp": 25000
+    },
+    {
+      "pass_id": "pass_1_w",
+      "level": 1,
+      "name": "Whispering Western Gate",
+      "footprint": {
+        "x_min": 13,
+        "x_max": 14,
+        "y_min": 49,
+        "y_max": 50
+      },
+      "connects": [
+        "Whispering Wastes",
+        "Azure Basin"
+      ],
+      "base_garrison_hp": 25000
+    },
+    {
+      "pass_id": "pass_1_nw",
+      "level": 1,
+      "name": "Shadowwood Northwest Gorge",
+      "footprint": {
+        "x_min": 24,
+        "x_max": 25,
+        "y_min": 24,
+        "y_max": 25
+      },
+      "connects": [
+        "Shadowwood Ridge",
+        "Silver Vale"
+      ],
+      "base_garrison_hp": 25000
+    },
+    {
+      "pass_id": "pass_2_n",
+      "level": 2,
+      "name": "Mid-Ring Northern Bastion",
+      "footprint": {
+        "x_min": 49,
+        "x_max": 50,
+        "y_min": 30,
+        "y_max": 31
+      },
+      "connects": [
+        "Silver Vale",
+        "Imperial Sanctum"
+      ],
+      "base_garrison_hp": 50000
+    },
+    {
+      "pass_id": "pass_2_e",
+      "level": 2,
+      "name": "Mid-Ring Eastern Redoubt",
+      "footprint": {
+        "x_min": 68,
+        "x_max": 69,
+        "y_min": 49,
+        "y_max": 50
+      },
+      "connects": [
+        "Obsidian Expanse",
+        "Imperial Sanctum"
+      ],
+      "base_garrison_hp": 50000
+    },
+    {
+      "pass_id": "pass_2_s",
+      "level": 2,
+      "name": "Mid-Ring Southern Bulwark",
+      "footprint": {
+        "x_min": 49,
+        "x_max": 50,
+        "y_min": 68,
+        "y_max": 69
+      },
+      "connects": [
+        "Azure Basin",
+        "Imperial Sanctum"
+      ],
+      "base_garrison_hp": 50000
+    },
+    {
+      "pass_id": "pass_2_w",
+      "level": 2,
+      "name": "Mid-Ring Western Rampart",
+      "footprint": {
+        "x_min": 30,
+        "x_max": 31,
+        "y_min": 49,
+        "y_max": 50
+      },
+      "connects": [
+        "Azure Basin",
+        "Imperial Sanctum"
+      ],
+      "base_garrison_hp": 50000
+    },
+    {
+      "pass_id": "pass_3_n",
+      "level": 3,
+      "name": "Sanctum North Gateway",
+      "footprint": {
+        "x_min": 49,
+        "x_max": 50,
+        "y_min": 44,
+        "y_max": 45
+      },
+      "connects": [
+        "Imperial Sanctum",
+        "World Spire Dais"
+      ],
+      "base_garrison_hp": 100000
+    },
+    {
+      "pass_id": "pass_3_s",
+      "level": 3,
+      "name": "Sanctum South Gateway",
+      "footprint": {
+        "x_min": 49,
+        "x_max": 50,
+        "y_min": 54,
+        "y_max": 55
+      },
+      "connects": [
+        "Imperial Sanctum",
+        "World Spire Dais"
+      ],
+      "base_garrison_hp": 100000
+    }
+  ],
+  "terrain_matrix": [
+    {
+      "id": "plains",
+      "name": "Open Plains",
+      "height": 1,
+      "defense_bonus": 0.0,
+      "avoid_bonus": 0.0,
+      "blocks_los": false,
+      "canopy_height": 0,
+      "glyph": "."
+    },
+    {
+      "id": "forest",
+      "name": "Temperate Woodland",
+      "height": 1,
+      "defense_bonus": 0.2,
+      "avoid_bonus": 0.15,
+      "blocks_los": false,
+      "canopy_height": 1,
+      "glyph": "♣"
+    },
+    {
+      "id": "dense_forest",
+      "name": "Dense Ancient Canopy",
+      "height": 1,
+      "defense_bonus": 0.3,
+      "avoid_bonus": 0.25,
+      "blocks_los": true,
+      "canopy_height": 2,
+      "glyph": "♠"
+    },
+    {
+      "id": "hills",
+      "name": "Rolling Hills",
+      "height": 2,
+      "defense_bonus": 0.15,
+      "avoid_bonus": 0.1,
+      "blocks_los": false,
+      "canopy_height": 0,
+      "glyph": "∩"
+    },
+    {
+      "id": "high_mountain",
+      "name": "High Mountain Crag",
+      "height": 4,
+      "defense_bonus": 0.4,
+      "avoid_bonus": 0.2,
+      "blocks_los": true,
+      "canopy_height": 0,
+      "glyph": "▲"
+    },
+    {
+      "id": "swamp",
+      "name": "Mire Swamp",
+      "height": 0,
+      "defense_bonus": -0.05,
+      "avoid_bonus": -0.2,
+      "blocks_los": false,
+      "canopy_height": 0,
+      "glyph": "~"
+    },
+    {
+      "id": "shallow_water",
+      "name": "Shallow River",
+      "height": 0,
+      "defense_bonus": -0.1,
+      "avoid_bonus": -0.15,
+      "blocks_los": false,
+      "canopy_height": 0,
+      "glyph": "≈"
+    },
+    {
+      "id": "deep_water",
+      "name": "Deep Water Trench",
+      "height": 0,
+      "defense_bonus": 0.0,
+      "avoid_bonus": 0.0,
+      "blocks_los": false,
+      "canopy_height": 0,
+      "glyph": "▓"
+    },
+    {
+      "id": "road",
+      "name": "Paved Military Road",
+      "height": 1,
+      "defense_bonus": 0.0,
+      "avoid_bonus": -0.05,
+      "blocks_los": false,
+      "canopy_height": 0,
+      "glyph": "="
+    },
+    {
+      "id": "fortress_gate",
+      "name": "Fortified Mountain Pass",
+      "height": 3,
+      "defense_bonus": 0.4,
+      "avoid_bonus": 0.2,
+      "blocks_los": true,
+      "canopy_height": 0,
+      "glyph": "#"
+    },
+    {
+      "id": "citadel_walls",
+      "name": "Sanctum Citadel Wall",
+      "height": 4,
+      "defense_bonus": 0.5,
+      "avoid_bonus": 0.3,
+      "blocks_los": true,
+      "canopy_height": 0,
+      "glyph": "█"
+    },
+    {
+      "id": "ruin_void",
+      "name": "Enton Glassed Ruin",
+      "height": 0,
+      "defense_bonus": -0.15,
+      "avoid_bonus": -0.1,
+      "blocks_los": false,
+      "canopy_height": 0,
+      "glyph": "x"
+    }
+  ],
+  "unit_movement_costs": {
+    "infantry": {
+      "plains": 1.0,
+      "forest": 1.5,
+      "dense_forest": 2.0,
+      "hills": 1.5,
+      "high_mountain": 99.0,
+      "swamp": 2.0,
+      "shallow_water": 2.0,
+      "deep_water": 99.0,
+      "road": 0.8,
+      "fortress_gate": 1.0,
+      "citadel_walls": 99.0,
+      "ruin_void": 5.0
+    },
+    "cavalry": {
+      "plains": 1.0,
+      "forest": 3.0,
+      "dense_forest": 99.0,
+      "hills": 2.0,
+      "high_mountain": 99.0,
+      "swamp": 3.0,
+      "shallow_water": 3.0,
+      "deep_water": 99.0,
+      "road": 0.5,
+      "fortress_gate": 1.5,
+      "citadel_walls": 99.0,
+      "ruin_void": 5.0
+    },
+    "armored": {
+      "plains": 1.0,
+      "forest": 2.0,
+      "dense_forest": 3.0,
+      "hills": 2.0,
+      "high_mountain": 99.0,
+      "swamp": 3.0,
+      "shallow_water": 4.0,
+      "deep_water": 99.0,
+      "road": 0.8,
+      "fortress_gate": 1.0,
+      "citadel_walls": 99.0,
+      "ruin_void": 5.0
+    },
+    "flying": {
+      "plains": 1.0,
+      "forest": 1.0,
+      "dense_forest": 1.0,
+      "hills": 1.0,
+      "high_mountain": 1.5,
+      "swamp": 1.0,
+      "shallow_water": 1.0,
+      "deep_water": 1.0,
+      "road": 1.0,
+      "fortress_gate": 1.0,
+      "citadel_walls": 1.5,
+      "ruin_void": 1.5
+    }
+  },
+  "supply_rules": {
+    "decay_rate_per_turn": 0.15,
+    "recovery_rate_per_turn": 0.25,
+    "garrison_attrition_rate": 0.05
+  },
+  "kalpa_cycle": {
+    "total_tiles": 10000,
+    "pass_2_unseal_threshold": 0.5,
+    "pass_3_unseal_threshold": 0.8,
+    "reset_saturation_threshold": 1.0
+  }
+}

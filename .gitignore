@@ -26,3 +26,5 @@ cognitive-os/
 av-story-skills/
 ag_qualification_*.txt
 ag_shell_inside_*.txt
+node_modules/
+portfolio-site/

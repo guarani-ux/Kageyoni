@@ -1,0 +1,688 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KageyoniMartialGrammar",
+  "version": "1.0.0",
+  "stances": [
+    {
+      "id": "stance.mountain_root",
+      "name": "Iron Mountain",
+      "name_jp": "鉄山構え",
+      "kinetic_stability": 1.8,
+      "recovery_mod_frames": 4,
+      "primary_substrates": [
+        "stone",
+        "earth",
+        "bedrock"
+      ],
+      "description": "Immovable heavy base anchoring the warrior to earth; grants knockback immunity and +20 Rage per combat turn at the cost of mobility."
+    },
+    {
+      "id": "stance.shadow_pivot",
+      "name": "Shadow Step",
+      "name_jp": "影歩構え",
+      "kinetic_stability": 0.8,
+      "recovery_mod_frames": -3,
+      "primary_substrates": [
+        "structure_lattice",
+        "shadow",
+        "stone",
+        "open_ground"
+      ],
+      "description": "Ball-of-foot torsional mobility enabling instantaneous angular redirection and rapid flank repositioning."
+    },
+    {
+      "id": "stance.mist_step",
+      "name": "Whispering Wind",
+      "name_jp": "微風構え",
+      "kinetic_stability": 0.6,
+      "recovery_mod_frames": -5,
+      "primary_substrates": [
+        "air",
+        "boundary_seam",
+        "open_ground"
+      ],
+      "description": "De-weighted posture decoupling footprint from terrain; maximizes evasion and evasive flow."
+    },
+    {
+      "id": "stance.iron_crane",
+      "name": "Crane Perch",
+      "name_jp": "鶴止構え",
+      "kinetic_stability": 1.4,
+      "recovery_mod_frames": 2,
+      "primary_substrates": [
+        "underlying_value",
+        "stone",
+        "timber",
+        "elevated"
+      ],
+      "description": "Single-leg pre-tensioned spring storing explosive vertical and piercing torque for descending or aerial thrusts."
+    },
+    {
+      "id": "stance.dragon_coil",
+      "name": "Coiled Viper",
+      "name_jp": "盤蛇構え",
+      "kinetic_stability": 1.5,
+      "recovery_mod_frames": 1,
+      "primary_substrates": [
+        "earth",
+        "stone",
+        "avatar_vessel"
+      ],
+      "description": "Spiraled spinal torque loading heavy rotational momentum for sudden whip-like strikes at lateral expense."
+    },
+    {
+      "id": "stance.void_hollow",
+      "name": "Abyssal Root",
+      "name_jp": "淵根構え",
+      "kinetic_stability": 0.5,
+      "recovery_mod_frames": -4,
+      "primary_substrates": [
+        "causal_graph",
+        "void",
+        "open_ground"
+      ],
+      "description": "Concave chest and relaxed core posture; absorbs incoming shock by collapsing inward along target impact vector."
+    },
+    {
+      "id": "stance.earthen_strata",
+      "name": "Sundered Earth",
+      "name_jp": "裂地構え",
+      "kinetic_stability": 2.0,
+      "recovery_mod_frames": 6,
+      "primary_substrates": [
+        "bedrock",
+        "stone",
+        "earthen_conduit"
+      ],
+      "description": "Subterranean conduit sink coupling physical limbs into bedrock for tectonic remote energy projection."
+    },
+    {
+      "id": "stance.storm_crescent",
+      "name": "Rushing Torrent",
+      "name_jp": "奔流構え",
+      "kinetic_stability": 0.9,
+      "recovery_mod_frames": -2,
+      "primary_substrates": [
+        "air_conduit",
+        "water",
+        "open_ground"
+      ],
+      "description": "Circular continuous momentum channeling where unused kinetic velocity chains smoothly into successive actions."
+    },
+    {
+      "id": "stance.golden_lotus",
+      "name": "Mirror Lake",
+      "name_jp": "鑑湖構え",
+      "kinetic_stability": 1.2,
+      "recovery_mod_frames": 0,
+      "primary_substrates": [
+        "boundary_value",
+        "water",
+        "stone",
+        "flat_ground"
+      ],
+      "description": "Symmetrical center of gravity optimizing polyphonic Will resonance, parry dispersion, and neutral basic strike execution."
+    },
+    {
+      "id": "stance.thunder_stride",
+      "name": "Blazing Sun",
+      "name_jp": "烈日構え",
+      "kinetic_stability": 1.1,
+      "recovery_mod_frames": -4,
+      "primary_substrates": [
+        "air_lattice",
+        "open_ground",
+        "bedrock"
+      ],
+      "description": "Explosive forward sprint posture initiating sudden linear acceleration and blinding initial strike speed."
+    },
+    {
+      "id": "stance.tide_weaver",
+      "name": "Flowing Reeds",
+      "name_jp": "流葦構え",
+      "kinetic_stability": 1.0,
+      "recovery_mod_frames": -1,
+      "primary_substrates": [
+        "boundary_fluid",
+        "water",
+        "marsh",
+        "reeds"
+      ],
+      "description": "Wave-shifting fluid stance yielding with incoming force to deflect and redirect incoming lateral kinetic energy."
+    },
+    {
+      "id": "stance.adamantine_bastion",
+      "name": "Vajra Immovable",
+      "name_jp": "金剛不動構え",
+      "kinetic_stability": 2.2,
+      "recovery_mod_frames": 8,
+      "primary_substrates": [
+        "stone",
+        "dense_earth",
+        "bedrock"
+      ],
+      "description": "Dual-point locked brace maximizing structural stability and complete stagger prevention at the cost of zero mobility."
+    }
+  ],
+  "vectors": [
+    {
+      "id": "vector.linear_cleave",
+      "name": "Linear Cleave",
+      "name_jp": "直撃断ち",
+      "shape_envelope": "spear",
+      "base_reach_meters": 1.8,
+      "penetration_multiplier": 1.1,
+      "kinetic_impulse_multiplier": 1.6,
+      "description": "Straightforward downward or horizontal cleave with high kinetic mass delivery."
+    },
+    {
+      "id": "vector.axial_thrust",
+      "name": "Axial Thrust",
+      "name_jp": "軸線突き",
+      "shape_envelope": "senbon",
+      "base_reach_meters": 2.5,
+      "penetration_multiplier": 1.9,
+      "kinetic_impulse_multiplier": 1.2,
+      "description": "Concentrated linear point strike focusing maximum force along a singular piercing axis."
+    },
+    {
+      "id": "vector.helical_spiral",
+      "name": "Helical Spiral",
+      "name_jp": "螺旋穿孔",
+      "shape_envelope": "spear",
+      "base_reach_meters": 2.0,
+      "penetration_multiplier": 1.6,
+      "kinetic_impulse_multiplier": 1.8,
+      "description": "Rotational drilling vector boring through heavy structural shields and armor."
+    },
+    {
+      "id": "vector.centrifugal_sweep",
+      "name": "Centrifugal Sweep",
+      "name_jp": "遠心薙ぎ",
+      "shape_envelope": "current",
+      "base_reach_meters": 3.5,
+      "penetration_multiplier": 0.8,
+      "kinetic_impulse_multiplier": 1.4,
+      "description": "Wide rotational arc clearing surrounding opponents across a broad tactical arc."
+    },
+    {
+      "id": "vector.compression_burst",
+      "name": "Compression Burst",
+      "name_jp": "圧縮破裂",
+      "shape_envelope": "domain",
+      "base_reach_meters": 5.0,
+      "penetration_multiplier": 1.3,
+      "kinetic_impulse_multiplier": 2.2,
+      "description": "Spherical pressure compression detonating outward in a violent concussive shockwave."
+    },
+    {
+      "id": "vector.severing_wave",
+      "name": "Severing Wave",
+      "name_jp": "断空刃",
+      "shape_envelope": "spear",
+      "base_reach_meters": 12.0,
+      "penetration_multiplier": 1.2,
+      "kinetic_impulse_multiplier": 1.0,
+      "description": "Disjointed planar blade wave projected across distance to slice distant formations."
+    },
+    {
+      "id": "vector.orbital_lash",
+      "name": "Orbital Lash",
+      "name_jp": "軌道鞭",
+      "shape_envelope": "current",
+      "base_reach_meters": 4.0,
+      "penetration_multiplier": 0.9,
+      "kinetic_impulse_multiplier": 1.3,
+      "description": "Flexible arcing lash whipping around defensive guard positions."
+    },
+    {
+      "id": "vector.spatial_fold",
+      "name": "Spatial Fold",
+      "name_jp": "空間歪曲",
+      "shape_envelope": "unbounded_domain",
+      "base_reach_meters": 15.0,
+      "penetration_multiplier": 2.0,
+      "kinetic_impulse_multiplier": 0.5,
+      "description": "Warps local metric coordinates to manifest strike directly upon target coordinate."
+    },
+    {
+      "id": "vector.crescent_arc",
+      "name": "Crescent Arc",
+      "name_jp": "三日月斬",
+      "shape_envelope": "current",
+      "base_reach_meters": 2.2,
+      "penetration_multiplier": 1.2,
+      "kinetic_impulse_multiplier": 1.7,
+      "description": "Curving overhead slash descending like a sickle moon."
+    },
+    {
+      "id": "vector.falling_meteor",
+      "name": "Falling Meteor",
+      "name_jp": "隕石落とし",
+      "shape_envelope": "domain",
+      "base_reach_meters": 3.0,
+      "penetration_multiplier": 1.5,
+      "kinetic_impulse_multiplier": 2.4,
+      "description": "Devastating vertical drop slam crushing ground substrate and breaking stances."
+    },
+    {
+      "id": "vector.rising_geyser",
+      "name": "Rising Geyser",
+      "name_jp": "昇天撃",
+      "shape_envelope": "spear",
+      "base_reach_meters": 2.0,
+      "penetration_multiplier": 1.4,
+      "kinetic_impulse_multiplier": 1.9,
+      "description": "Explosive upward launch strike lofting target into vulnerable aerial recovery."
+    },
+    {
+      "id": "vector.twin_fang",
+      "name": "Twin Fang",
+      "name_jp": "双牙撃",
+      "shape_envelope": "senbon",
+      "base_reach_meters": 1.5,
+      "penetration_multiplier": 1.7,
+      "kinetic_impulse_multiplier": 1.1,
+      "description": "Dual synchronized precision puncture targeting bilateral pressure centers."
+    },
+    {
+      "id": "vector.needle_barrage",
+      "name": "Needle Barrage",
+      "name_jp": "千本連打",
+      "shape_envelope": "senbon",
+      "base_reach_meters": 6.0,
+      "penetration_multiplier": 1.3,
+      "kinetic_impulse_multiplier": 0.7,
+      "description": "Rapid-fire fusillade of needle-point thrusts saturating defensive gaps."
+    },
+    {
+      "id": "vector.disjointed_echo",
+      "name": "Disjointed Echo",
+      "name_jp": "残響撃",
+      "shape_envelope": "spear",
+      "base_reach_meters": 4.0,
+      "penetration_multiplier": 1.0,
+      "kinetic_impulse_multiplier": 1.3,
+      "description": "Delayed temporal resonance wave striking frames after physical movement completes."
+    },
+    {
+      "id": "vector.horizon_rend",
+      "name": "Horizon Rend",
+      "name_jp": "地平裂断",
+      "shape_envelope": "domain",
+      "base_reach_meters": 18.0,
+      "penetration_multiplier": 1.8,
+      "kinetic_impulse_multiplier": 1.5,
+      "description": "Massive linear boundary cleave slicing through battlefield formations."
+    },
+    {
+      "id": "vector.quake_stomp",
+      "name": "Quake Stomp",
+      "name_jp": "震脚崩破",
+      "shape_envelope": "domain",
+      "base_reach_meters": 4.5,
+      "penetration_multiplier": 0.7,
+      "kinetic_impulse_multiplier": 2.5,
+      "description": "Heavy shockwave stomping through ground substrate to shatter opponent balance."
+    }
+  ],
+  "infusions": [
+    {
+      "id": "infusion.twilight_pigment",
+      "origin_carrier": "sciel_painteress",
+      "thermal_tier": 1,
+      "base_density": 0.98,
+      "polarity": "polyphonic",
+      "description": "Twilight ink suspension transmuting physical strikes into reality-warping chromatic impressions."
+    },
+    {
+      "id": "infusion.structure_resonance",
+      "origin_carrier": "levi_structure",
+      "thermal_tier": 1,
+      "base_density": 0.94,
+      "polarity": "polyphonic",
+      "description": "Lattice-centering vibration reinforcing physical weapon integrity and dispersing incoming kinetic force."
+    },
+    {
+      "id": "infusion.avatar_conduit",
+      "origin_carrier": "voss_conduit",
+      "thermal_tier": 1,
+      "base_density": 0.35,
+      "polarity": "monophonic",
+      "description": "Flow conduit projecting avatar puppet energy across distance without physical mass."
+    },
+    {
+      "id": "infusion.topological_tomoe",
+      "origin_carrier": "sebastian_tomoe",
+      "thermal_tier": 1,
+      "base_density": 0.90,
+      "polarity": "polyphonic",
+      "description": "Higher-dimensional tomoe curvature bending technique trajectories and deflecting attacks."
+    },
+    {
+      "id": "infusion.sovereign_boundary",
+      "origin_carrier": "alexandra_booder",
+      "thermal_tier": 1,
+      "base_density": 0.91,
+      "polarity": "polyphonic",
+      "description": "Royal boundary aura establishing an absolute zone of voluntary personhood and command authority."
+    },
+    {
+      "id": "infusion.entropic_weather",
+      "origin_carrier": "kenway_erosion",
+      "thermal_tier": 1,
+      "base_density": 0.82,
+      "polarity": "monophonic",
+      "description": "Corrosive atmospheric rot accelerating material decay and emotional erosion on contact."
+    },
+    {
+      "id": "infusion.coherent_consequence",
+      "origin_carrier": "xandra_consequence",
+      "thermal_tier": 2,
+      "base_density": 0.95,
+      "polarity": "polyphonic",
+      "description": "Irreversible causal weight locking strike outcomes against temporal rollback or divine erasure."
+    },
+    {
+      "id": "infusion.lightning_chidori",
+      "origin_carrier": "ninshu_core",
+      "thermal_tier": 1,
+      "base_density": 0.70,
+      "polarity": "polyphonic",
+      "description": "High-frequency electromagnetic thrust cutting through heavy armor with piercing discharge."
+    },
+    {
+      "id": "infusion.void_silence",
+      "origin_carrier": "shinobi_horizon",
+      "thermal_tier": 0,
+      "base_density": 0.99,
+      "polarity": "polyphonic",
+      "description": "Absolute stillness zeroing all acoustic, thermal, and informational signatures."
+    },
+    {
+      "id": "infusion.enton_black_flame",
+      "origin_carrier": "uchiha_flame",
+      "thermal_tier": 2,
+      "base_density": 0.88,
+      "polarity": "monophonic",
+      "description": "Inextinguishable high-temperature black flames glassing substrate and consuming Will armor."
+    },
+    {
+      "id": "infusion.frost_glass",
+      "origin_carrier": "crystalline_glaze",
+      "thermal_tier": 1,
+      "base_density": 0.85,
+      "polarity": "polyphonic",
+      "description": "Sub-zero crystalline lattice freezing moisture on contact and shattering under subsequent impact."
+    },
+    {
+      "id": "infusion.solar_radiance",
+      "origin_carrier": "dawn_conduit",
+      "thermal_tier": 1,
+      "base_density": 0.75,
+      "polarity": "monophonic",
+      "description": "Blinding solar thermal energy searing retinas and burning unarmored flesh."
+    },
+    {
+      "id": "infusion.magnetic_flux",
+      "origin_carrier": "iron_sand",
+      "thermal_tier": 1,
+      "base_density": 0.89,
+      "polarity": "polyphonic",
+      "description": "Ferromagnetic particle current pulling and disrupting opponent metallic armaments."
+    },
+    {
+      "id": "infusion.gravity_well",
+      "origin_carrier": "heavy_particle",
+      "thermal_tier": 2,
+      "base_density": 0.96,
+      "polarity": "monophonic",
+      "description": "Localized gravitational compression pinning target to ground substrate."
+    },
+    {
+      "id": "infusion.blood_hum",
+      "origin_carrier": "somatic_pulse",
+      "thermal_tier": 0,
+      "base_density": 0.60,
+      "polarity": "monophonic",
+      "description": "Somatic blood pressure overdrive amplifying muscular impulse at the expense of arterial wear."
+    },
+    {
+      "id": "infusion.adamantine_fiber",
+      "origin_carrier": "unyielding_thread",
+      "thermal_tier": 1,
+      "base_density": 0.93,
+      "polarity": "polyphonic",
+      "description": "Dense tensile thread weaving invisible razor lines and structural reinforcement."
+    }
+  ],
+  "intents": [
+    {
+      "id": "intent.reaction_inversion",
+      "name": "Armor Inversion",
+      "name_jp": "逆理装甲",
+      "trigger_rule": "target_guard_active",
+      "branch_operation": "invert_target_defense_to_internal_shock",
+      "complexity_weight": 0.35,
+      "description": "Inverts target defensive armor into internal kinetic shock."
+    },
+    {
+      "id": "intent.blindspot_pursuit",
+      "name": "Blindspot Pursuit",
+      "name_jp": "死角追撃",
+      "trigger_rule": "target_evasion_frames",
+      "branch_operation": "intercept_evasion_with_accuracy_boost",
+      "complexity_weight": 0.25,
+      "description": "Intercepts evasion frames with +30% accuracy bonus."
+    },
+    {
+      "id": "intent.gaia_balance_recoil",
+      "name": "Gaia Polyphony",
+      "name_jp": "大地の反響",
+      "trigger_rule": "clash_detected",
+      "branch_operation": "absorb_opposing_force_into_counter",
+      "complexity_weight": 0.40,
+      "description": "Absorbs 50% opposing clash force into instant counter-strike."
+    },
+    {
+      "id": "intent.residue_detonation",
+      "name": "Residue Detonation",
+      "name_jp": "残滓爆破",
+      "trigger_rule": "target_has_pigment_or_stone_impression",
+      "branch_operation": "detonate_prior_impressions",
+      "complexity_weight": 0.30,
+      "description": "Detonates prior twilight or mineral impressions for secondary burst damage."
+    },
+    {
+      "id": "intent.conduit_severance",
+      "name": "Conduit Severance",
+      "name_jp": "導管切断",
+      "trigger_rule": "target_tethered_or_puppet",
+      "branch_operation": "sever_conduit_links_at_root",
+      "complexity_weight": 0.35,
+      "description": "Severs puppet, tether, and external conduit energy links at root."
+    },
+    {
+      "id": "intent.sacrificial_overdraw",
+      "name": "Blood Overdraw",
+      "name_jp": "血脈過給",
+      "trigger_rule": "user_hp_above_threshold",
+      "branch_operation": "boost_damage_at_hp_and_erosion_cost",
+      "complexity_weight": 0.45,
+      "description": "Grants +120% strike damage at the cost of 15% self-damage and +2 erosion."
+    },
+    {
+      "id": "intent.null_feint_shift",
+      "name": "Flow Feint",
+      "name_jp": "虚歩流転",
+      "trigger_rule": "strike_parried",
+      "branch_operation": "cancel_recovery_and_shift_stance",
+      "complexity_weight": 0.20,
+      "description": "Cancels attack recovery when parried and immediately slips into an adjacent stance."
+    },
+    {
+      "id": "intent.consequence_seal",
+      "name": "Consequence Seal",
+      "name_jp": "因果封縛",
+      "trigger_rule": "strike_hits_successfully",
+      "branch_operation": "lock_debuffs_against_cleansing",
+      "complexity_weight": 0.50,
+      "description": "Locks target debuffs against cleansing or reversal for 3 combat turns."
+    },
+    {
+      "id": "intent.stance_breaker",
+      "name": "Stance Shatter",
+      "name_jp": "構え崩し",
+      "trigger_rule": "target_braced_or_blocking",
+      "branch_operation": "force_recovery_frames_on_target",
+      "complexity_weight": 0.30,
+      "description": "Forces +6 recovery frames and posture stagger on braced target."
+    },
+    {
+      "id": "intent.kinetic_momentum_loop",
+      "name": "Momentum Carryover",
+      "name_jp": "慣性循環",
+      "trigger_rule": "technique_execution_complete",
+      "branch_operation": "transfer_unused_impulse_to_next_turn",
+      "complexity_weight": 0.25,
+      "description": "Transfers 40% unused kinetic impulse to next turn's attack."
+    },
+    {
+      "id": "intent.threat_intercept",
+      "name": "Vajra Guard",
+      "name_jp": "金剛挺身",
+      "trigger_rule": "ally_targeted_by_lethal_strike",
+      "branch_operation": "step_into_ally_line_of_fire",
+      "complexity_weight": 0.30,
+      "description": "Preemptively steps into ally's line of fire to absorb blow with stance armor."
+    },
+    {
+      "id": "intent.horizon_riposte",
+      "name": "Horizon Riposte",
+      "name_jp": "地平反撃",
+      "trigger_rule": "enemy_executes_disjointed_vector",
+      "branch_operation": "counter_ranged_vector_at_source",
+      "complexity_weight": 0.35,
+      "description": "Triggers an instantaneous counter if enemy attempts a disjointed ranged vector."
+    },
+    {
+      "id": "intent.memory_burn_ignition",
+      "name": "Lacuna Spark",
+      "name_jp": "空白点火",
+      "trigger_rule": "unstable_brink_active",
+      "branch_operation": "burn_quarantined_memory_for_armor_negation",
+      "complexity_weight": 0.60,
+      "description": "Burns 1 quarantined memory for 100% armor negation and guaranteed critical strike."
+    },
+    {
+      "id": "intent.boundary_mirror",
+      "name": "Boundary Mirror",
+      "name_jp": "結界反射",
+      "trigger_rule": "incoming_projectile_vector",
+      "branch_operation": "reflect_vector_along_incoming_trajectory",
+      "complexity_weight": 0.40,
+      "description": "Reflects projectile vector directly back along its incoming trajectory."
+    },
+    {
+      "id": "intent.posture_siphon",
+      "name": "Posture Drain",
+      "name_jp": "体勢奪取",
+      "trigger_rule": "physical_contact_made",
+      "branch_operation": "leech_stamina_and_destabilize_posture",
+      "complexity_weight": 0.25,
+      "description": "Leeches 15 stamina on contact while unsettling target's center of mass."
+    },
+    {
+      "id": "intent.unyielding_bastion",
+      "name": "Unshakable Root",
+      "name_jp": "不動の根",
+      "trigger_rule": "forced_displacement_or_stagger",
+      "branch_operation": "negate_displacement_and_maintain_tile",
+      "complexity_weight": 0.30,
+      "description": "Prevents all forced displacement, knockback, and stagger."
+    },
+    {
+      "id": "intent.echo_execution",
+      "name": "Delayed Cleave",
+      "name_jp": "時間差斬",
+      "trigger_rule": "strike_connects",
+      "branch_operation": "repeat_strike_impact_after_delay",
+      "complexity_weight": 0.35,
+      "description": "Repeats strike impact after 1 turn delay as temporal shock echoes."
+    },
+    {
+      "id": "intent.causal_tethering",
+      "name": "Fate Bond",
+      "name_jp": "因果緊縛",
+      "trigger_rule": "strike_hits_target",
+      "branch_operation": "bind_target_position_to_user",
+      "complexity_weight": 0.45,
+      "description": "Binds target's position relative to wielder's coordinate for 2 turns."
+    },
+    {
+      "id": "intent.terrain_fracture",
+      "name": "Strata Shock",
+      "name_jp": "地盤破断",
+      "trigger_rule": "ground_contact_made",
+      "branch_operation": "convert_tile_to_difficult_terrain",
+      "complexity_weight": 0.30,
+      "description": "Shatters substrate beneath target into difficult terrain, doubling movement cost."
+    },
+    {
+      "id": "intent.cull_the_broken",
+      "name": "Executioner's Mark",
+      "name_jp": "断頭の標",
+      "trigger_rule": "target_hp_below_thirty_percent",
+      "branch_operation": "amplify_damage_against_critical_target",
+      "complexity_weight": 0.25,
+      "description": "Grants +50% strike damage if target HP is below 30%."
+    }
+  ],
+  "talents": [
+    {
+      "id": "talent.originality",
+      "name": "Originality",
+      "name_jp": "独創性",
+      "martial_focus": "intent_synthesis",
+      "threshold_base": 100.0,
+      "awakening_perk": "Slot 4 Composite Intents (dual-intent clauses) into a single Kata; +100 Will stamina pool.",
+      "description": "Genius for unprecedented martial synthesis, permitting dual conditional intent clauses in compiled Katas."
+    },
+    {
+      "id": "talent.sense_of_density",
+      "name": "Sense of Density",
+      "name_jp": "密度の感覚",
+      "martial_focus": "infusion_compression",
+      "threshold_base": 120.0,
+      "awakening_perk": "Infusion compression up to 0.99 density; -40% self-damage from high-velocity kinetic strikes.",
+      "description": "Profound somatic feel for Will particle compression, minimizing energy bleed and kinetic backlash."
+    },
+    {
+      "id": "talent.rhythm_cadence",
+      "name": "Rhythm & Cadence",
+      "name_jp": "拍子・間合い",
+      "martial_focus": "recovery_flow",
+      "threshold_base": 110.0,
+      "awakening_perk": "Cancels recovery frame penalties between stance shifts; -3 global recovery frames; chain 2 vectors off 1 stance.",
+      "description": "Mastery of combat tempo and footwork pacing, unlocking continuous fluid vector chaining."
+    },
+    {
+      "id": "talent.structural_sight",
+      "name": "Structural Sight",
+      "name_jp": "構造視",
+      "martial_focus": "critical_analysis",
+      "threshold_base": 130.0,
+      "awakening_perk": "Reveals all enemy inherent limits upon contact; doubles critical strike probability.",
+      "description": "Ocular perception revealing stress fractures in enemy physical armor and Will boundaries."
+    },
+    {
+      "id": "talent.spatial_acuity",
+      "name": "Spatial Acuity",
+      "name_jp": "空間の鋭敏さ",
+      "martial_focus": "vector_curvature",
+      "threshold_base": 115.0,
+      "awakening_perk": "Vectors arc around obstacles, cover, and directional shields; +50% vector reach.",
+      "description": "Intuitive spatial mapping permitting non-linear vector paths around physical barriers."
+    }
+  ]
+}

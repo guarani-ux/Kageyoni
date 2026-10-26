@@ -1,0 +1,256 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "system": "kageyoni_combat_rules",
+  "two_rn_probability": {
+    "enabled": true,
+    "distribution": "piecewise_quadratic",
+    "formula_low": "(H * H + H) / 20000.0",
+    "formula_high": "1.0 - ((100 - H) * (100 - H) + (100 - H)) / 20000.0",
+    "crit_uses_two_rn": false,
+    "crit_multiplier": 2.5,
+    "true_hit_lookup_table": {
+      "0": 0.0,
+      "1": 0.0003,
+      "2": 0.001,
+      "3": 0.0021,
+      "4": 0.0036,
+      "5": 0.0055,
+      "6": 0.0078,
+      "7": 0.0105,
+      "8": 0.0136,
+      "9": 0.0171,
+      "10": 0.021,
+      "11": 0.0253,
+      "12": 0.03,
+      "13": 0.0351,
+      "14": 0.0406,
+      "15": 0.0465,
+      "16": 0.0528,
+      "17": 0.0595,
+      "18": 0.0666,
+      "19": 0.0741,
+      "20": 0.082,
+      "21": 0.0903,
+      "22": 0.099,
+      "23": 0.1081,
+      "24": 0.1176,
+      "25": 0.1275,
+      "26": 0.1378,
+      "27": 0.1485,
+      "28": 0.1596,
+      "29": 0.1711,
+      "30": 0.183,
+      "31": 0.1953,
+      "32": 0.208,
+      "33": 0.2211,
+      "34": 0.2346,
+      "35": 0.2485,
+      "36": 0.2628,
+      "37": 0.2775,
+      "38": 0.2926,
+      "39": 0.3081,
+      "40": 0.324,
+      "41": 0.3403,
+      "42": 0.357,
+      "43": 0.3741,
+      "44": 0.3916,
+      "45": 0.4095,
+      "46": 0.4278,
+      "47": 0.4465,
+      "48": 0.4656,
+      "49": 0.4851,
+      "50": 0.505,
+      "51": 0.5247,
+      "52": 0.544,
+      "53": 0.5629,
+      "54": 0.5814,
+      "55": 0.5995,
+      "56": 0.6172,
+      "57": 0.6345,
+      "58": 0.6514,
+      "59": 0.6679,
+      "60": 0.684,
+      "61": 0.6997,
+      "62": 0.715,
+      "63": 0.7299,
+      "64": 0.7444,
+      "65": 0.7585,
+      "66": 0.7722,
+      "67": 0.7855,
+      "68": 0.7984,
+      "69": 0.8109,
+      "70": 0.823,
+      "71": 0.8347,
+      "72": 0.846,
+      "73": 0.8569,
+      "74": 0.8674,
+      "75": 0.8775,
+      "76": 0.8872,
+      "77": 0.8965,
+      "78": 0.9054,
+      "79": 0.9139,
+      "80": 0.922,
+      "81": 0.9297,
+      "82": 0.937,
+      "83": 0.9439,
+      "84": 0.9504,
+      "85": 0.9565,
+      "86": 0.9622,
+      "87": 0.9675,
+      "88": 0.9724,
+      "89": 0.9769,
+      "90": 0.981,
+      "91": 0.9847,
+      "92": 0.988,
+      "93": 0.9909,
+      "94": 0.9934,
+      "95": 0.9955,
+      "96": 0.9972,
+      "97": 0.9985,
+      "98": 0.9994,
+      "99": 0.9999,
+      "100": 1.0
+    }
+  },
+  "dual_commanders": {
+    "max_rage": 1000,
+    "base_rage_per_turn": 100,
+    "max_rage_carryover": 200,
+    "secondary_turn_offset": 1,
+    "affection_tiers": {
+      "harmonic": {
+        "min_affection": 75,
+        "damage_multiplier": 1.25,
+        "recovery_latency_turns": 0,
+        "rage_refund": 150,
+        "defense_bonus_pct": 10
+      },
+      "cooperative": {
+        "min_affection": 50,
+        "damage_multiplier": 1.1,
+        "recovery_latency_turns": 0,
+        "rage_refund": 0,
+        "defense_bonus_pct": 0
+      },
+      "neutral": {
+        "min_affection": 25,
+        "damage_multiplier": 1.0,
+        "recovery_latency_turns": 1,
+        "rage_refund": 0,
+        "defense_bonus_pct": 0
+      },
+      "distrust": {
+        "min_affection": 0,
+        "damage_multiplier": 0.8,
+        "recovery_latency_turns": 2,
+        "friendly_fire_chance": 0.15,
+        "friendly_fire_recoil_pct": 15
+      },
+      "sovereign_veto": {
+        "min_affection": -100,
+        "rage_generation_multiplier": 0.5,
+        "mutiny_chance": 0.5,
+        "allowed_in_formation": false
+      }
+    },
+    "troop_count_scaling": {
+      "baseline_battalion": 10000,
+      "exponent": 0.5
+    }
+  },
+  "dmw_resonance": {
+    "max_token_pool": 5,
+    "token_decay_per_turn": 1,
+    "base_match_probabilities": {
+      "two_match": 0.25,
+      "three_match": 0.05
+    },
+    "relational_priming_boost": {
+      "intercept_target_bonus": 0.6,
+      "high_affection_bonus": 0.3
+    },
+    "tokens": {
+      "FOCUS": {
+        "description": "Cancels kinetic backlash and overdraw penalties on current attack",
+        "stamina_cost_refund": 0.2
+      },
+      "ECHO": {
+        "description": "Grants 1 instant stance transition without AP cost or recovery latency",
+        "action_point_cost": 0
+      },
+      "SURGE": {
+        "description": "Injects +25% Will density into attack vector",
+        "will_damage_boost_pct": 25
+      },
+      "CATHARSIS": {
+        "description": "Triggers synchronized Tag-Team Compound or cleanses 1 active scar",
+        "requires_three_match": true
+      }
+    }
+  },
+  "precognitive_gambits": {
+    "perception_thresholds": {
+      "clear_tell_min_info": 0.7,
+      "intuitive_tell_min_info": 0.4
+    },
+    "gambits": {
+      "VAJRA_READ": {
+        "stamina_cost": 0,
+        "success_negation_pct": 100,
+        "success_reflect_pct": 50,
+        "success_rage_gain": 150,
+        "failure_vulnerability_pct": 25,
+        "failure_stamina_drain": 10
+      },
+      "ROLL_AND_COUNTER": {
+        "stamina_cost": 15,
+        "agility_check_dc": 10,
+        "success_negation_pct": 100,
+        "success_counter_crit_bonus": 20,
+        "failure_negation_pct": 50
+      },
+      "BRACE_SHIELD": {
+        "stamina_cost": 30,
+        "guaranteed_negation_pct": 50,
+        "exhaustion_stun_on_overdraw": true
+      }
+    },
+    "cli_rhythm_bar": {
+      "enabled": true,
+      "beats": 3,
+      "active_beat": 3,
+      "success_tolerance_ms": 150,
+      "bonus_negation_pct": 10
+    }
+  },
+  "contact_split": {
+    "physical_somatic": {
+      "base_durability_wear": 1,
+      "critical_durability_wear": 3,
+      "thorn_reflection_supported": true,
+      "zenkai_scar_threshold_pct": 30
+    },
+    "special_projective": {
+      "durability_wear": 0,
+      "triggers_thorns": false,
+      "atmospheric_decay_lambda": 0.08,
+      "elevation_advantage_pct": 15,
+      "will_erosion_tick": 0.02
+    }
+  },
+  "casualty_economics": {
+    "distribution": {
+      "slight_wound_pct": 60,
+      "hospital_severe_pct": 35,
+      "kia_pct": 5
+    },
+    "stagnant_convalescence": {
+      "enabled": true,
+      "hp_floor": 1,
+      "ration_consumption_multiplier": 2.0,
+      "daily_tension_penalty": 0.02,
+      "starvation_death_rate_pct": 10
+    }
+  }
+}

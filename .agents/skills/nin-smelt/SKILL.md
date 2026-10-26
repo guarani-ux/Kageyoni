@@ -35,10 +35,14 @@ The Molten Metal Dynamic Smelter gives Ninshū the capacity to reconfigure itsel
 
 ## 2. Probing Specimen Grammar
 
-Run `ninshu_bridge.py probe` or use `MoltenSmelter`:
+Use `MoltenSmelter` to probe structural grammar:
 
-```bash
-python domains/systems/scripts/ninshu_bridge.py probe --file /path/to/specimen
+```python
+from kageyoni.ninshu.smelter import MoltenSmelter
+
+smelter = MoltenSmelter()
+specimen_bytes = open("/path/to/specimen", "rb").read()
+blueprint = smelter.probe_grammar(specimen_bytes)
 ```
 
 The probe analyzes byte entropy, magic markers, field widths, endianness, length-value prefixes, string tables, and structural invariants, returning a `StructuralBlueprint`.

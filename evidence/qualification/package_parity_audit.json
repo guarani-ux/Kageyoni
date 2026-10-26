@@ -1,16 +1,16 @@
 {
   "title": "Kageyoni v11 Package / Source Parity Audit",
   "agent": "Agent I (Release Reproducer)",
-  "git_sha": "ac5ec3ff9ef32c5f44ca8e4a00254c76bb18a26f",
+  "git_sha": "58f5c6a902c89614c341e3cc26f2a6ebee2cadd6",
   "timestamp": "2026-09-22T14:41:00Z",
   "wheel_file": "kageyoni_engine-11.0.0-py3-none-any.whl",
-  "wheel_sha256": "6d60dffa3215ad2ae020dff3fb616ab3071bbad15506f2f5209a1761ed107eb7",
-  "total_files_in_wheel": 120,
+  "wheel_sha256": "a4f4e112a82594f4d0dc5b70ff404ee6803bb4df0495b55a4ba813b796993921",
+  "total_files_in_wheel": 264,
   "total_audited_targets": 48,
   "missing_files_count": 0,
   "missing_files": [],
-  "hash_mismatch_count": 0,
-  "parity_audit_passed": true,
+  "hash_mismatch_count": 22,
+  "parity_audit_passed": false,
   "provenance": {
     "source_root": "C:\\Kageyoni",
     "python_executable": "C:\\Users\\flowe\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
@@ -22,176 +22,176 @@
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "a5442cd0616e46547fc00b7168c010629e7a889f616e93e46e89f59a26f2aa9b",
-      "source_sha256": "a5442cd0616e46547fc00b7168c010629e7a889f616e93e46e89f59a26f2aa9b",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_003.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "bea3bd624745b39c94f589f0fa49944c8c11d80b1e822a796125ca62534dedac",
-      "source_sha256": "bea3bd624745b39c94f589f0fa49944c8c11d80b1e822a796125ca62534dedac",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_004.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "8f20d2759a765f8c35556e527df982481db4292571e96a1189046347bdcfcc64",
-      "source_sha256": "8f20d2759a765f8c35556e527df982481db4292571e96a1189046347bdcfcc64",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_005.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "c9caa8dde7379caa38927b4125a0c732e3688447ae0d1204fe8a19f11692ae32",
-      "source_sha256": "c9caa8dde7379caa38927b4125a0c732e3688447ae0d1204fe8a19f11692ae32",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_006.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "43d505460110945cb96233ebeb21051e6e4070e95e8dac45cf929f29431ba4b8",
-      "source_sha256": "43d505460110945cb96233ebeb21051e6e4070e95e8dac45cf929f29431ba4b8",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_007.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "43e8706e91d67ecd7349e847cc8beabdc0775265f43819e220879a881063cd7d",
-      "source_sha256": "43e8706e91d67ecd7349e847cc8beabdc0775265f43819e220879a881063cd7d",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_008.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "042ac97d44a494358ecacc382541ecf1c485001bd497ab93ba903966697e21e3",
-      "source_sha256": "042ac97d44a494358ecacc382541ecf1c485001bd497ab93ba903966697e21e3",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_009.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "6e916198798a08bc62e41233be10e571b532b6d7eea5f52d038a30ede1c37074",
-      "source_sha256": "6e916198798a08bc62e41233be10e571b532b6d7eea5f52d038a30ede1c37074",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_010.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "fae161634775e261a0da650a8984c830c321307e99cfe3a5b5351d9880170f6a",
-      "source_sha256": "fae161634775e261a0da650a8984c830c321307e99cfe3a5b5351d9880170f6a",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_011.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "e4d543cf739396e217e7b0657854ea20c06fb0e9873dfb973904ec5828604f8c",
-      "source_sha256": "e4d543cf739396e217e7b0657854ea20c06fb0e9873dfb973904ec5828604f8c",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_012.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "681b27fa90de7c42c668a9ebd4b288ed51ac81b4feec095362d4fe9d1955e914",
-      "source_sha256": "681b27fa90de7c42c668a9ebd4b288ed51ac81b4feec095362d4fe9d1955e914",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_013.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "431b734af855058eec1576b74053155130dc9f2b6df04acaff58789e80baeb4a",
-      "source_sha256": "431b734af855058eec1576b74053155130dc9f2b6df04acaff58789e80baeb4a",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_014.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "5b54eb4a84d84bf15764308f03403aae58aefe02778cd7c61eda39d191a68fe8",
-      "source_sha256": "5b54eb4a84d84bf15764308f03403aae58aefe02778cd7c61eda39d191a68fe8",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_015.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "8e39a9999b31f6b9cfe876411f1db38e184e64f4dc30c569a3f1d33b4f2d450d",
-      "source_sha256": "8e39a9999b31f6b9cfe876411f1db38e184e64f4dc30c569a3f1d33b4f2d450d",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_016.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "267743fa93e5757e28d82e80c89e8952f7d9a4eb161776f3168f158b85a5de54",
-      "source_sha256": "267743fa93e5757e28d82e80c89e8952f7d9a4eb161776f3168f158b85a5de54",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_017.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "e125ee0f074e8e7a9f9cb9f5077cb3e915c1dfe7b2ef9fbed7c67a0d050a5f8f",
-      "source_sha256": "e125ee0f074e8e7a9f9cb9f5077cb3e915c1dfe7b2ef9fbed7c67a0d050a5f8f",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_018.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "538e30ad6f817f599b5b68912d27157fcad6c0f9eb7f7467061c89408f47b216",
-      "source_sha256": "538e30ad6f817f599b5b68912d27157fcad6c0f9eb7f7467061c89408f47b216",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_019.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "3e1dedafcce9f794791c4f9d3f48b00c76aa84a28705f62a84852fe872ddb4e6",
-      "source_sha256": "3e1dedafcce9f794791c4f9d3f48b00c76aa84a28705f62a84852fe872ddb4e6",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_020.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "6ba2d95c2a0e1d2b0521e0a9022979a7cd80f548264dd2db26c599743e86cb5f",
-      "source_sha256": "6ba2d95c2a0e1d2b0521e0a9022979a7cd80f548264dd2db26c599743e86cb5f",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_021.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "ebb8409cfd566a47b52b5772d21f9dca6293b79440bce334b495bb3d0c7f58a3",
-      "source_sha256": "ebb8409cfd566a47b52b5772d21f9dca6293b79440bce334b495bb3d0c7f58a3",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_022.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "b501ba3a65e279b0917ba0a4b454433a8b25a855bfd022f4319170a1946bf7f0",
-      "source_sha256": "b501ba3a65e279b0917ba0a4b454433a8b25a855bfd022f4319170a1946bf7f0",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/data/migration_023.sql",
       "category": "migrations",
       "in_wheel": true,
       "wheel_sha256": "9bb9419c5f1d0e5050b77a5faa613d98e74467991d8d079fd186f3f2fdd5bd3e",
-      "source_sha256": "9bb9419c5f1d0e5050b77a5faa613d98e74467991d8d079fd186f3f2fdd5bd3e",
-      "hash_parity": true
+      "source_sha256": null,
+      "hash_parity": false
     },
     {
       "path": "kageyoni/v11/__init__.py",
@@ -245,8 +245,8 @@
       "path": "kageyoni/v11/runtime.py",
       "category": "v11_modules",
       "in_wheel": true,
-      "wheel_sha256": "35c55871cd26cbfe5c730df164561ca069f7ae5579916799faaa054eeddad05b",
-      "source_sha256": "35c55871cd26cbfe5c730df164561ca069f7ae5579916799faaa054eeddad05b",
+      "wheel_sha256": "25551235b87276e612fa9e0e7b8c814c5657d350976afb9b33d87bce51332c03",
+      "source_sha256": "25551235b87276e612fa9e0e7b8c814c5657d350976afb9b33d87bce51332c03",
       "hash_parity": true
     },
     {
@@ -325,8 +325,8 @@
       "path": "kageyoni/situations/scar.py",
       "category": "situation_modules",
       "in_wheel": true,
-      "wheel_sha256": "e6a7b980e3340743b1deea0a05f3cf74d45cec1fd50ec87d55de3cf7240966bc",
-      "source_sha256": "e6a7b980e3340743b1deea0a05f3cf74d45cec1fd50ec87d55de3cf7240966bc",
+      "wheel_sha256": "c3400660c3126225b0c284653f7a87160c1e3bbf62d2cf0cbbbf245d43dccaa3",
+      "source_sha256": "c3400660c3126225b0c284653f7a87160c1e3bbf62d2cf0cbbbf245d43dccaa3",
       "hash_parity": true
     },
     {
@@ -373,8 +373,8 @@
       "path": "kageyoni/engine.py",
       "category": "core_modules",
       "in_wheel": true,
-      "wheel_sha256": "e98a230fe5cbc028ef331d573002096bc02013576dfc4e217995427500c952dd",
-      "source_sha256": "e98a230fe5cbc028ef331d573002096bc02013576dfc4e217995427500c952dd",
+      "wheel_sha256": "c1163e05c3bc619deb90a4d49424f13a5628187cfc54e0affb4bba84bc7bb31b",
+      "source_sha256": "c1163e05c3bc619deb90a4d49424f13a5628187cfc54e0affb4bba84bc7bb31b",
       "hash_parity": true
     },
     {

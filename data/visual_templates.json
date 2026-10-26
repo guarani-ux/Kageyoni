@@ -1,0 +1,73 @@
+{
+  "version": "11.0",
+  "craniofacial_diversity": {
+    "mandibular_shapes": [
+      {"id": "jaw_lantern_square", "prompt_token": "heavy square lantern jaw, prominent masseter muscles, broad flat chin"},
+      {"id": "jaw_recessed_angular", "prompt_token": "narrow recessed jawline, pointed sharp chin, lean jaw"},
+      {"id": "jaw_rounded_soft", "prompt_token": "soft rounded feminine jaw, gentle mandibular curve, fleshy chin"},
+      {"id": "jaw_cleft_weathered", "prompt_token": "deep cleft chin, rugged asymmetrical bone structure, weathered jaw"}
+    ],
+    "nasal_cartilage": [
+      {"id": "nose_broken_flat", "prompt_token": "crooked broken nose bridge set flat and wide from old brawls"},
+      {"id": "nose_hawk_hooked", "prompt_token": "prominent hooked thin hawk-nose, sharp arched dorsal cartilage"},
+      {"id": "nose_aquiline_aristocrat", "prompt_token": "straight aquiline bridge, narrow sculpted nostrils, high root"},
+      {"id": "nose_button_freckled", "prompt_token": "short upturned button nose, fleshy tip, sun-freckled bridge"}
+    ],
+    "zygomatic_arches": [
+      {"id": "cheek_high_slavic", "prompt_token": "razor-sharp high cheekbones cast in dramatic rim light"},
+      {"id": "cheek_hollow_gaunt", "prompt_token": "sunken hollow cheeks, visible skeletal zygomatic arches, famished contours"},
+      {"id": "cheek_apple_hearty", "prompt_token": "full apple cheeks, deep laugh lines, hearty vascular flush"}
+    ],
+    "ocular_morphology": [
+      {"id": "eyes_hooded_predatory", "prompt_token": "heavy hooded eyelids, cold calculating narrow gaze, low brow ridge"},
+      {"id": "eyes_sultry_lidded", "prompt_token": "sultry heavy-lidded dark eyes, thick eyelashes, knowing mocking gaze"},
+      {"id": "eyes_deepset_veteran", "prompt_token": "deep-set shadowed eyes beneath prominent weathered brow, crow's feet"},
+      {"id": "eyes_wide_feral", "prompt_token": "wide feral amber eyes, asymmetrical stare, high nervous tension"}
+    ]
+  },
+  "fullbody_silhouettes": {
+    "chubby_brawny": {
+      "proportions": "broad 50cm shoulders, thick vascular arms, soft thick waist over dense core muscle, heavy calves",
+      "posture": "wide planted power stance, relaxed heavy resting weight"
+    },
+    "gaunt_lanky": {
+      "proportions": "narrow bony shoulders, visible clavicles and rib ridges, slender elongated limbs, thin ankles",
+      "posture": "rigid ascetic vertical posture, arms pinned close to torso"
+    },
+    "curvy_voluptuous_slimthick": {
+      "proportions": "narrow cinched waist, flat toned abdomen, large bosom, dramatic wide flared hips, thick toned thighs",
+      "posture": "confident standing posture, weight cocked on one hip"
+    },
+    "curvy_voluptuous_bbw": {
+      "proportions": "full-figured plus-size silhouette, thick waist, heavy soft curves, very large bosom, massive fleshy thighs and glutes",
+      "posture": "relaxed sensual unapologetic stance, generous presence"
+    },
+    "heavyset_powerlifter": {
+      "proportions": "dense bull neck, barrel chest, square torso, thick forearms, columnar muscular legs",
+      "posture": "unyielding forward-leaning martial stance, hands resting on belt"
+    },
+    "gangly_urchin": {
+      "proportions": "scrawny adolescent frame, knobby knees, slender neck, loose limbs, wiry muscle tone",
+      "posture": "restless shifting weight, low center of gravity, ready to sprint"
+    }
+  },
+  "sartorial_codes": {
+    "provocative_carnal": "low-cut dark emerald silk blouse, cinched black leather underbust corset, skin-tight leather breeches, dagger strapped to thick thigh, tall boots",
+    "austere_modest": "charcoal-black wool habit buttoned tightly to the throat, layered coarse linen bandages, thick slate-gray scarf, zero exposed skin",
+    "utilitarian_workwear": "split-leather blacksmith apron over coarse unlaced linen tunic, iron tongs looped at hip, heavy rolled sleeves, soot smudges",
+    "military_officer": "double-breasted heavy navy wool greatcoat with brass buttons left open, unbuttoned henley, heavy leather cavalry sabre belt",
+    "scavenger_urchin": "oversized boiled-leather vest patched with wire, mismatched belts, frayed woolen trousers, wrapped foot-rags"
+  },
+  "ansi_terminal_palette": {
+    "half_block_glyph": "▄",
+    "colors_256": {
+      "skin_warm": 216,
+      "skin_pale": 254,
+      "skin_weathered": 173,
+      "shadow_deep": 236,
+      "highlight_gold": 220,
+      "blood_crimson": 160,
+      "void_black": 232
+    }
+  }
+}

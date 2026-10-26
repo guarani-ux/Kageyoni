@@ -1,0 +1,568 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0.0",
+  "roster": [
+    {
+      "id": "char_levi",
+      "canonical_name": "Levi (Flowe D. Levi)",
+      "seed": "0x5354525543545552",
+      "province_origin": "Imperial_Core",
+      "affinities_tensor": {
+        "agency": 0.88,
+        "substance": 0.72,
+        "information": 0.85,
+        "space": 0.65,
+        "time": 0.78,
+        "value": 0.90
+      },
+      "interiority_triangle": {
+        "drive": "Unseat all thrones and establish sovereign personhood",
+        "boundary": "Never exert unconsenting domination over another",
+        "conflict": "Absorbing structural collapse alone vs empowering collective autonomy"
+      },
+      "quad_vector": {
+        "moral_anchor": "Radical Anti-Domination",
+        "relational_gravity": "Structural Re-Centering",
+        "intimate_stakes": "Debt of Kenway Erosion Fruit & Consumed Legion",
+        "blind_spot": "Pathological Self-Sacrificial Solipsism"
+      },
+      "somatics": {
+        "life_stage": "mature_veteran",
+        "approx_age": 34,
+        "silhouette": "dense_muscle_cut",
+        "height_cm": 182,
+        "weight_kg": 84,
+        "craniofacial": {
+          "jaw": "squared_chiseled",
+          "nose": "straight_high_bridge",
+          "eyes": "observant_structural_lattice",
+          "hair": "black_short_tied"
+        },
+        "dress_code": "austere_functional",
+        "garments_desc": "Dark charcoal tailored coat over reinforced linen tunic, worn leather boots, utilitarian tool frog"
+      },
+      "memory_vault": [
+        {
+          "id": "mem_levi_01",
+          "label": "The first stone laid at the First Spire",
+          "lacuna": "He stares at the spire masonry with blank, hollow recognition."
+        },
+        {
+          "id": "mem_levi_02",
+          "label": "The taste of spring plum wine with Cloud",
+          "lacuna": "The cup touches his lips, but recalls no warmth or face."
+        }
+      ]
+    },
+    {
+      "id": "char_cloud",
+      "canonical_name": "Cloud (Drawn Cloud)",
+      "seed": "0x434c4f55445f4b49",
+      "province_origin": "Sunforge_Steppes",
+      "affinities_tensor": {
+        "agency": 0.60,
+        "substance": 0.95,
+        "information": 0.40,
+        "space": 0.55,
+        "time": 0.50,
+        "value": 0.70
+      },
+      "interiority_triangle": {
+        "drive": "Hold the line and bear the kinetic cost for comrades",
+        "boundary": "Never abandon a fallen ally while breath remains",
+        "conflict": "Protecting others through physical martyrdom vs recognizing his own humanity"
+      },
+      "quad_vector": {
+        "moral_anchor": "Physical Duty & Warrior Custody",
+        "relational_gravity": "Kinetic Foundation",
+        "intimate_stakes": "Ghost Debt of the Legion",
+        "blind_spot": "Mercenary Stoicism & Emotional Numbing"
+      },
+      "somatics": {
+        "life_stage": "mature_veteran",
+        "approx_age": 36,
+        "silhouette": "stocky_barrel",
+        "height_cm": 188,
+        "weight_kg": 98,
+        "craniofacial": {
+          "jaw": "wide_heavy_lantern",
+          "nose": "broken_calloused",
+          "eyes": "stoic_mercenary_flat",
+          "hair": "dusty_blonde_shorn"
+        },
+        "dress_code": "casual_slovenly",
+        "garments_desc": "Scuffed iron breastplate over unlaced henley, battered grieves, notched broadsword harness"
+      },
+      "memory_vault": [
+        {
+          "id": "mem_cloud_01",
+          "label": "The names of his 12 vanguard cohort recruits",
+          "lacuna": "Cloud counts his sword notches, unable to remember who carved the third."
+        },
+        {
+          "id": "mem_cloud_02",
+          "label": "Elowise handing him a canteen during the Siege of Red Bay",
+          "lacuna": "He sees her offering water, but the context and warmth are wiped."
+        }
+      ]
+    },
+    {
+      "id": "char_xandra",
+      "canonical_name": "Xandra of Gaia",
+      "seed": "0x58414e4452415f47",
+      "province_origin": "Frostfall_Expanse",
+      "affinities_tensor": {
+        "agency": 0.80,
+        "substance": 0.50,
+        "information": 0.92,
+        "space": 0.70,
+        "time": 0.85,
+        "value": 0.60
+      },
+      "interiority_triangle": {
+        "drive": "Force reality to honor every sacrifice and prevent temporal erasure",
+        "boundary": "Never permit a paid price or historical casualty to be rewritten",
+        "conflict": "Demanding absolute consequence accountability vs allowing healing and mercy"
+      },
+      "quad_vector": {
+        "moral_anchor": "Irreversible Consequence",
+        "relational_gravity": "The Uncompromising Mirror",
+        "intimate_stakes": "Weeks of Subjective Rewound Hell against Time Admiral",
+        "blind_spot": "Hyper-Vigilant Defense & Epistemic Vertigo"
+      },
+      "somatics": {
+        "life_stage": "young_adult",
+        "approx_age": 24,
+        "silhouette": "slim_lanky",
+        "height_cm": 170,
+        "weight_kg": 56,
+        "craniofacial": {
+          "jaw": "narrow_recessed_angular",
+          "nose": "sharp_hooked_aquiline",
+          "eyes": "piercing_pale_grey",
+          "hair": "silver_braided_tight"
+        },
+        "dress_code": "austere_functional",
+        "garments_desc": "Slate-grey high-collared gambeson, reinforced joint spats, twin daggers sheathed at lower spine"
+      },
+      "memory_vault": [
+        {
+          "id": "mem_xandra_01",
+          "label": "The morning sun on Frostfall fjord before the Time Admiral's siege",
+          "lacuna": "She remembers the cold air, but the light and laughter of the shore dissolve into white noise."
+        },
+        {
+          "id": "mem_xandra_02",
+          "label": "The cadence of Gaia's subterranean song during initiation",
+          "lacuna": "She tries to hum the resonance, but her throat produces only a hollow gasp."
+        }
+      ]
+    },
+    {
+      "id": "char_alexandra",
+      "canonical_name": "Queen Alexandra Booder",
+      "seed": "0x414c4558414e4452",
+      "province_origin": "Imperial_Core",
+      "affinities_tensor": {
+        "agency": 0.95,
+        "substance": 0.65,
+        "information": 0.80,
+        "space": 0.75,
+        "time": 0.70,
+        "value": 0.95
+      },
+      "interiority_triangle": {
+        "drive": "Forge an imperium founded solely upon voluntary personhood and mutual consent",
+        "boundary": "Never command or weaponize an unconsenting soul",
+        "conflict": "Preserving voluntary agency in subordinates vs demanding immediate obedience in lethal crisis"
+      },
+      "quad_vector": {
+        "moral_anchor": "Voluntary Personhood",
+        "relational_gravity": "Sovereign Field",
+        "intimate_stakes": "Severed Trail to Elijah & First World element",
+        "blind_spot": "Paralysis of the Uncoerced"
+      },
+      "somatics": {
+        "life_stage": "mature_veteran",
+        "approx_age": 38,
+        "silhouette": "curvy_voluptuous",
+        "height_cm": 176,
+        "weight_kg": 74,
+        "craniofacial": {
+          "jaw": "chiseled_regal_prominent",
+          "nose": "aquiline_aristocrat",
+          "eyes": "commanding_amethyst",
+          "hair": "raven_black_coiled_crown"
+        },
+        "dress_code": "flamboyant_ostentatious",
+        "garments_desc": "Crimson velvet split-skirt over gilded mail, high embroidered mandarin collar, ceremonial sovereign signet rings"
+      },
+      "memory_vault": [
+        {
+          "id": "mem_alexandra_01",
+          "label": "The voice of Elijah before the severance across the External Dark",
+          "lacuna": "She recalls his reach, but his parting words and tone are erased from her mind."
+        },
+        {
+          "id": "mem_alexandra_02",
+          "label": "The coronation vow spoken before the Booder parliament",
+          "lacuna": "The altar bells ring in memory, but the faces of her peers are blank masks."
+        }
+      ]
+    },
+    {
+      "id": "char_elowise",
+      "canonical_name": "The Environmental Admiral (Elowise)",
+      "seed": "0x454c4f574953455f",
+      "province_origin": "Tidecrag_Reach",
+      "affinities_tensor": {
+        "agency": 0.70,
+        "substance": 0.85,
+        "information": 0.82,
+        "space": 0.60,
+        "time": 0.55,
+        "value": 0.75
+      },
+      "interiority_triangle": {
+        "drive": "Anchor survival strictly in empirical thermodynamic reality and material physics",
+        "boundary": "Never bend knee to metaphysical dogma or religious promises of salvation",
+        "conflict": "Brutal material realism vs unhealed grief over her sister lost to oracle zealotry"
+      },
+      "quad_vector": {
+        "moral_anchor": "Material Honesty",
+        "relational_gravity": "Thermodynamic Friction",
+        "intimate_stakes": "Guilt over abandoning sister in Oracle furnace",
+        "blind_spot": "Cynical Fatalism"
+      },
+      "somatics": {
+        "life_stage": "mature_veteran",
+        "approx_age": 39,
+        "silhouette": "curvy_voluptuous",
+        "height_cm": 172,
+        "weight_kg": 78,
+        "craniofacial": {
+          "jaw": "weathered_broad",
+          "nose": "wide_salt_sprayed",
+          "eyes": "fatigued_sea_green",
+          "hair": "iron_streaked_unbound"
+        },
+        "dress_code": "casual_slovenly",
+        "garments_desc": "Salt-crusted naval greatcoat with tarnished brass buttons, unfastened neckcloth, oiled canvas breeches, heavy seaboots"
+      },
+      "memory_vault": [
+        {
+          "id": "mem_elowise_01",
+          "label": "Her younger sister's laughter before the Oracle temple conscription",
+          "lacuna": "She hears the surf crashing on Tidecrag reef, but her sister's face is obscured in steam."
+        },
+        {
+          "id": "mem_elowise_02",
+          "label": "The naval chart of the Southern Reaches before the Calamity",
+          "lacuna": "She traces the parchment lines, but the name of the home harbor is entirely gone."
+        }
+      ]
+    },
+    {
+      "id": "char_lucrecia",
+      "canonical_name": "Lucrecia (Velvet-Adder)",
+      "seed": "0x56454c5645544144",
+      "province_origin": "Crescent_Fen",
+      "affinities_tensor": {
+        "agency": 0.82,
+        "substance": 0.65,
+        "information": 0.88,
+        "space": 0.75,
+        "time": 0.45,
+        "value": 0.80
+      },
+      "interiority_triangle": {
+        "drive": "Secure unconditional somatic autonomy and break the Fen Cartel's lease",
+        "boundary": "Never allow another soul to hold unmitigated leverage over her",
+        "conflict": "Weaponizing intimacy to survive vs yearning for genuine uncoerced connection"
+      },
+      "quad_vector": {
+        "moral_anchor": "Absolute Autonomy of Desire & Somatic Sovereignty",
+        "relational_gravity": "Carnal & Psychological Disruptor",
+        "intimate_stakes": "Leased Life of the Fen Cartel",
+        "blind_spot": "Inability to Believe in Unconditional Care"
+      },
+      "somatics": {
+        "life_stage": "young_adult",
+        "approx_age": 27,
+        "silhouette": "curvy_voluptuous",
+        "height_cm": 168,
+        "weight_kg": 68,
+        "craniofacial": {
+          "jaw": "soft_sensual_taper",
+          "nose": "small_refined_straight",
+          "eyes": "lidded_dark_honey",
+          "hair": "dark_chestnut_tumbling_curls"
+        },
+        "dress_code": "provocative_carnal",
+        "garments_desc": "Off-shoulder deep emerald silk blouse, dark laced leather corset, skin-tight oiled breeches, concealed thigh dagger"
+      },
+      "memory_vault": [
+        {
+          "id": "mem_lucrecia_01",
+          "label": "The sound of her real surname spoken by her grandmother",
+          "lacuna": "She tries to sign her true lineage and her hand freezes in blank silence."
+        },
+        {
+          "id": "mem_lucrecia_02",
+          "label": "The taste of freshwater honey before the Fen Cartel contract",
+          "lacuna": "Sweetness in food registers only as chemical sugar; the emotional memory is dead."
+        }
+      ]
+    },
+    {
+      "id": "char_marta",
+      "canonical_name": "Marta Vorn (The Ox)",
+      "seed": "0x4d415254415f564f",
+      "province_origin": "Ironcliffs_Mesa",
+      "affinities_tensor": {
+        "agency": 0.70,
+        "substance": 0.92,
+        "information": 0.50,
+        "space": 0.40,
+        "time": 0.60,
+        "value": 0.85
+      },
+      "interiority_triangle": {
+        "drive": "Keep the camp alive, fed, and spiritually unbroken at any physical cost",
+        "boundary": "Never let an apprentice or wounded soldier starve in the ditch",
+        "conflict": "Relentless maternal toil vs acknowledging her own shattering grief and failing joints"
+      },
+      "quad_vector": {
+        "moral_anchor": "Material Nurturance & Collective Hearth Custody",
+        "relational_gravity": "The Earthbound Anchor",
+        "intimate_stakes": "Ash-Cemetery of Mesa Forge apprentice guild",
+        "blind_spot": "Denial of Structural Ruin & Chronic Over-Extension"
+      },
+      "somatics": {
+        "life_stage": "mature_veteran",
+        "approx_age": 42,
+        "silhouette": "chubby_brawny",
+        "height_cm": 175,
+        "weight_kg": 98,
+        "craniofacial": {
+          "jaw": "wide_fleshy_square",
+          "nose": "flat_broken_button",
+          "eyes": "warm_hearty_crow_feet",
+          "hair": "red_auburn_messy_bun"
+        },
+        "dress_code": "casual_slovenly",
+        "garments_desc": "Unlaced coarse red linen tunic showing freckled cleavage, lard-stained split forge apron, reinforced work boots"
+      },
+      "memory_vault": [
+        {
+          "id": "mem_marta_01",
+          "label": "The chorus of apprentices singing at the sunrise bellows",
+          "lacuna": "The forge sounds only like rushing fire; the voices of the boys are gone."
+        },
+        {
+          "id": "mem_marta_02",
+          "label": "Her wedding ring before the Mesa bombardment",
+          "lacuna": "She rubs her calloused ring finger without remembering the man who put it there."
+        }
+      ]
+    },
+    {
+      "id": "char_yeva",
+      "canonical_name": "Yeva (The Scavenger-Kite)",
+      "seed": "0x594556415f4b4954",
+      "province_origin": "Sunforge_Steppes",
+      "affinities_tensor": {
+        "agency": 0.75,
+        "substance": 0.35,
+        "information": 0.75,
+        "space": 0.92,
+        "time": 0.50,
+        "value": 0.65
+      },
+      "interiority_triangle": {
+        "drive": "Scavenge every scrap, outrun every patrol, and never be left behind to freeze",
+        "boundary": "Never be caught unarmed or trapped in an enclosed room",
+        "conflict": "Desperate longing for belonging vs compulsive theft and venomous posturing"
+      },
+      "quad_vector": {
+        "moral_anchor": "Scrappy Survivalist Primacy",
+        "relational_gravity": "Chaotic Catalyst",
+        "intimate_stakes": "The Steppe Orphan's Ledger",
+        "blind_spot": "Compulsive Kleptomania & Perverse Defensiveness"
+      },
+      "somatics": {
+        "life_stage": "adolescent",
+        "approx_age": 17,
+        "silhouette": "slim_lanky",
+        "height_cm": 155,
+        "weight_kg": 44,
+        "craniofacial": {
+          "jaw": "pointed_triangular_sharp",
+          "nose": "small_upturned_scratched",
+          "eyes": "wild_amber_alert",
+          "hair": "sun_bleached_tangled_short"
+        },
+        "dress_code": "casual_slovenly",
+        "garments_desc": "Oversized boiled-leather cavalry vest with mismatched brass buckles, frayed fur collar, patched steppe breeches"
+      },
+      "memory_vault": [
+        {
+          "id": "mem_yeva_01",
+          "label": "The face of her sister before the yurt burned",
+          "lacuna": "She tries to picture her family and sees only smoke over the snow."
+        },
+        {
+          "id": "mem_yeva_02",
+          "label": "The first pony she rode as a child on the plateau",
+          "lacuna": "The feeling of mane under her fingers vanishes into cold numbness."
+        }
+      ]
+    }
+  ],
+  "baseline_relational_network": [
+    {
+      "source_id": "char_levi",
+      "target_id": "char_cloud",
+      "trust": 85,
+      "lust": 0,
+      "contempt": 5,
+      "notes": "Hardened brotherhood and shared survivor burden"
+    },
+    {
+      "source_id": "char_cloud",
+      "target_id": "char_levi",
+      "trust": 90,
+      "lust": 0,
+      "contempt": 5,
+      "notes": "Unconditional battlefield custody and loyalty"
+    },
+    {
+      "source_id": "char_cloud",
+      "target_id": "char_elowise",
+      "trust": 65,
+      "lust": 45,
+      "contempt": 10,
+      "notes": "Simmering affection masked under stoic silence"
+    },
+    {
+      "source_id": "char_elowise",
+      "target_id": "char_cloud",
+      "trust": 70,
+      "lust": 55,
+      "contempt": 15,
+      "notes": "Material fondness frustrated by his self-disposable martyrdom"
+    },
+    {
+      "source_id": "char_lucrecia",
+      "target_id": "char_marta",
+      "trust": 40,
+      "lust": 10,
+      "contempt": 30,
+      "notes": "Wary of maternal smothering; secretly craves the hearth stew"
+    },
+    {
+      "source_id": "char_marta",
+      "target_id": "char_lucrecia",
+      "trust": 50,
+      "lust": 5,
+      "contempt": 20,
+      "notes": "Worried for the girl; scolds her revealing clothes and poison vials"
+    },
+    {
+      "source_id": "char_levi",
+      "target_id": "char_alexandra",
+      "trust": 75,
+      "lust": 30,
+      "contempt": 10,
+      "notes": "Mutual sovereign respect with subtle unspoken philosophical tension"
+    },
+    {
+      "source_id": "char_alexandra",
+      "target_id": "char_levi",
+      "trust": 80,
+      "lust": 35,
+      "contempt": 5,
+      "notes": "Recognizes the unthroned sovereign; intellectual and ethical resonance"
+    },
+    {
+      "source_id": "char_xandra",
+      "target_id": "char_levi",
+      "trust": 60,
+      "lust": 0,
+      "contempt": 25,
+      "notes": "Holds him accountable for Kenway's erosion fruit"
+    },
+    {
+      "source_id": "char_levi",
+      "target_id": "char_xandra",
+      "trust": 70,
+      "lust": 0,
+      "contempt": 10,
+      "notes": "Accepts her uncompromising mirror without defense"
+    },
+    {
+      "source_id": "char_yeva",
+      "target_id": "char_cloud",
+      "trust": 55,
+      "lust": 0,
+      "contempt": 15,
+      "notes": "Hides behind his bulk in danger; steals his rations"
+    },
+    {
+      "source_id": "char_cloud",
+      "target_id": "char_yeva",
+      "trust": 65,
+      "lust": 0,
+      "contempt": 10,
+      "notes": "Protective older-veteran forbearance"
+    },
+    {
+      "source_id": "char_lucrecia",
+      "target_id": "char_levi",
+      "trust": 45,
+      "lust": 60,
+      "contempt": 25,
+      "notes": "Tests his boundaries with carnal provocation to see if his ideals crack"
+    },
+    {
+      "source_id": "char_levi",
+      "target_id": "char_lucrecia",
+      "trust": 55,
+      "lust": 20,
+      "contempt": 10,
+      "notes": "Sees through the performance to her leased debt"
+    },
+    {
+      "source_id": "char_yeva",
+      "target_id": "char_lucrecia",
+      "trust": 40,
+      "lust": 15,
+      "contempt": 35,
+      "notes": "Envious of her silks; fascinated by her daggers"
+    },
+    {
+      "source_id": "char_lucrecia",
+      "target_id": "char_yeva",
+      "trust": 50,
+      "lust": 0,
+      "contempt": 15,
+      "notes": "Teaches her sleight of hand with sarcastic affection"
+    },
+    {
+      "source_id": "char_marta",
+      "target_id": "char_elowise",
+      "trust": 75,
+      "lust": 0,
+      "contempt": 10,
+      "notes": "Old veterans who drink bitter tea and roast salt fish together"
+    },
+    {
+      "source_id": "char_elowise",
+      "target_id": "char_marta",
+      "trust": 80,
+      "lust": 0,
+      "contempt": 5,
+      "notes": "Total material trust in Marta's supply ledger and hearth"
+    }
+  ]
+}

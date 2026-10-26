@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Kageyoni Deterministic Semantic Feature & Verification Map",
+  "features": {
+    "ninshu_console_cli": {
+      "subsystem": "ninshu",
+      "entry_point": "kageyoni/ninshu/cli.py",
+      "directory": "kageyoni/ninshu/",
+      "verification_spec": "python -m unittest tests.test_ssl_control_contract",
+      "cli_command": "python -m kageyoni.ninshu.cli channels",
+      "process_boundary": "cli",
+      "allowed_imports": ["kageyoni.ninshu.*"],
+      "banned_imports": ["tests.*", "tools.*"]
+    },
+    "ninshu_patchbay": {
+      "subsystem": "ninshu",
+      "entry_point": "kageyoni/ninshu/patchbay.py",
+      "directory": "kageyoni/ninshu/",
+      "verification_spec": "python -m unittest tests.test_ninshu_patchbay_wiring",
+      "process_boundary": "engine",
+      "allowed_imports": ["kageyoni.ninshu.*", "sqlite3"],
+      "banned_imports": ["tests.*", "tools.*"]
+    },
+    "ninshu_smelter": {
+      "subsystem": "ninshu",
+      "entry_point": "kageyoni/ninshu/smelter.py",
+      "directory": "kageyoni/ninshu/",
+      "verification_spec": "python -m unittest tests.test_ninshu_molten_smelter",
+      "process_boundary": "engine",
+      "allowed_imports": ["kageyoni.ninshu.*", "ast"],
+      "banned_imports": ["tests.*"]
+    },
+    "mechanical_audit_gate": {
+      "subsystem": "governance_tools",
+      "entry_point": "tools/mechanical_audit_gate.py",
+      "directory": "tools/",
+      "verification_spec": "python tools/mechanical_audit_gate.py --diff",
+      "process_boundary": "tooling",
+      "allowed_imports": ["ast", "subprocess", "unittest"],
+      "banned_imports": ["kageyoni.*"]
+    },
+    "ninshu_master_qualification": {
+      "subsystem": "governance_tools",
+      "entry_point": "tools/verify_ninshu_complete.py",
+      "directory": "tools/",
+      "verification_spec": "python tools/verify_ninshu_complete.py",
+      "process_boundary": "tooling",
+      "allowed_imports": ["subprocess", "sqlite3"],
+      "banned_imports": []
+    },
+    "kageyoni_code_graph": {
+      "subsystem": "static_analysis",
+      "entry_point": "C:/Users/flowe/.gemini/config/scripts/code_graph.py",
+      "directory": "C:/Users/flowe/.gemini/config/scripts/",
+      "verification_spec": "python C:/Users/flowe/.gemini/config/scripts/code_graph.py --root c:/Kageyoni --summary",
+      "process_boundary": "global_tooling",
+      "allowed_imports": ["ast", "os", "sys"],
+      "banned_imports": []
+    }
+  }
+}

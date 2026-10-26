@@ -1,0 +1,229 @@
+{
+  "version": "11.0",
+  "anti_slop_gate": {
+    "adjective_density_ceiling_default": 0.18,
+    "adjective_density_ceiling_tactical": 0.12,
+    "adjective_density_ceiling_camp": 0.20,
+    "required_physical_nouns_per_paragraph": 2,
+    "banned_stems": [
+      "destin",
+      "fate",
+      "darkness",
+      "beacon",
+      "hope",
+      "echoes of",
+      "testament",
+      "delve",
+      "intertwin",
+      "shiver down",
+      "unspoken",
+      "symphon",
+      "dance of",
+      "profound",
+      "tapestr",
+      "mosaic",
+      "threaded",
+      "converg",
+      "inevitab",
+      "weight of",
+      "valid",
+      "process",
+      "heal",
+      "holding space",
+      "vulnerab",
+      "journey",
+      "safe space",
+      "unpack",
+      "closure",
+      "toxic",
+      "boundar",
+      "trigger",
+      "emotional labor",
+      "trauma response",
+      "resonant",
+      "deep breath",
+      "whisper",
+      "caress",
+      "ethereal",
+      "palpab",
+      "tangible",
+      "kaleidoscop",
+      "cacophon",
+      "poignant",
+      "intricate",
+      "myriad",
+      "luminous",
+      "resplendent",
+      "shattered soul",
+      "sacred"
+    ],
+    "fallback_rewrite_prompt": "Rewrite in austere Anglo-Saxon prose under 40 words. Use active physical verbs. Zero emotional adjectives. Name at least two registered physical objects from the scene."
+  },
+  "social_friction_dce": {
+    "base_dc_tiers": {
+      "trivial": 8,
+      "standard": 12,
+      "strained": 15,
+      "severe": 18,
+      "apex": 22
+    },
+    "leverage_modifiers": {
+      "provenance_physical_receipt": 3,
+      "spatial_high_ground": 2,
+      "scar_historical_resonance": 3,
+      "readied_ally_perimeter": 2,
+      "ideological_hostility": -4,
+      "slop_violation_penalty": -5
+    },
+    "fail_forward_window": 4
+  },
+  "enton_rupture": {
+    "base_activation_barrier": 18,
+    "formula": "(Amb^2 + Pres^2) >= 18 + 12 * prior",
+    "scaling_factor_per_act_rupture": 12,
+    "glassing_duration_turns": 10,
+    "tile_scar_terrain": "RUIN_VOID",
+    "baseline_erosion_infliction": 0.15
+  },
+  "social_intent_tags": {
+    "FLIRT": {
+      "description": "Carnal weaponization, suggestive physical banter, transactional seduction, somatic intimacy.",
+      "requires_boundary_clearance": true,
+      "approval_risk": {
+        "puritan_commanders": -5,
+        "hedonist_commanders": 5
+      },
+      "mechanics": "Tests interpersonal boundary clearance; grants leverage on receptive targets but risks alienation on puritan interlocutors."
+    },
+    "PATRONIZE": {
+      "description": "Aristocratic condescension, infantalizing interlocutor, asserting institutional supremacy.",
+      "tactical_effect": "Lowers target morale on success; provokes rage berserk on failure.",
+      "mechanics": "Applies severe psychological pressure using class dominance; success reduces target composure by 2, failure triggers instant combat aggression."
+    },
+    "CRUEL": {
+      "description": "Visceral wartime leverage, twisting psychological knives, threatening somatic mutilation.",
+      "tactical_effect": "Forces immediate morale check; permanently damages neutral faction standing.",
+      "mechanics": "Demands raw Will check vs target; success extracts desperate compliance, failure cements implacable enmity and incurs negative faction delta."
+    },
+    "BRIBE": {
+      "description": "Cold transactional corruption using rations, captured narcotics, or First World coinage.",
+      "tactical_effect": "Bypasses ideological resistance at the cost of inventory wealth.",
+      "mechanics": "Substitutes wealth/supplies for persuasion DC; success transfers resource silently, failure forfeits offer and alerts commanding officers."
+    }
+  },
+  "visual_morphological_templates": {
+    "mandibular_shapes": [
+      {
+        "id": "jaw_lantern_square",
+        "prompt_token": "heavy square lantern jaw, prominent masseter muscles, broad flat chin"
+      },
+      {
+        "id": "jaw_recessed_angular",
+        "prompt_token": "narrow recessed jawline, pointed sharp chin, lean jaw"
+      },
+      {
+        "id": "jaw_rounded_soft",
+        "prompt_token": "soft rounded feminine jaw, gentle mandibular curve, fleshy chin"
+      },
+      {
+        "id": "jaw_cleft_weathered",
+        "prompt_token": "deep cleft chin, rugged asymmetrical bone structure, weathered jaw"
+      }
+    ],
+    "nasal_cartilage": [
+      {
+        "id": "nose_broken_flat",
+        "prompt_token": "crooked broken nose bridge set flat and wide from old brawls"
+      },
+      {
+        "id": "nose_hawk_hooked",
+        "prompt_token": "prominent hooked thin hawk-nose, sharp arched dorsal cartilage"
+      },
+      {
+        "id": "nose_aquiline_aristocrat",
+        "prompt_token": "straight aquiline bridge, narrow sculpted nostrils, high root"
+      },
+      {
+        "id": "nose_button_freckled",
+        "prompt_token": "short upturned button nose, fleshy tip, sun-freckled bridge"
+      }
+    ],
+    "zygomatic_arches": [
+      {
+        "id": "cheek_high_slavic",
+        "prompt_token": "razor-sharp high cheekbones cast in dramatic rim light"
+      },
+      {
+        "id": "cheek_hollow_gaunt",
+        "prompt_token": "sunken hollow cheeks, visible skeletal zygomatic arches, famished contours"
+      },
+      {
+        "id": "cheek_apple_hearty",
+        "prompt_token": "full apple cheeks, deep laugh lines, hearty vascular flush"
+      }
+    ],
+    "ocular_morphology": [
+      {
+        "id": "eyes_hooded_predatory",
+        "prompt_token": "heavy hooded eyelids, cold calculating narrow gaze, low brow ridge"
+      },
+      {
+        "id": "eyes_sultry_lidded",
+        "prompt_token": "sultry heavy-lidded dark eyes, thick eyelashes, knowing mocking gaze"
+      },
+      {
+        "id": "eyes_deepset_veteran",
+        "prompt_token": "deep-set shadowed eyes beneath prominent weathered brow, crow's feet"
+      },
+      {
+        "id": "eyes_wide_feral",
+        "prompt_token": "wide feral amber eyes, asymmetrical stare, high nervous tension"
+      }
+    ],
+    "somatic_silhouettes": {
+      "chubby_brawny": {
+        "proportions": "broad 50cm shoulders, thick vascular arms, soft thick waist over dense core muscle, heavy calves",
+        "posture": "wide planted power stance, relaxed heavy resting weight"
+      },
+      "gaunt_lanky": {
+        "proportions": "narrow bony shoulders, visible clavicles and rib ridges, slender elongated limbs, thin ankles",
+        "posture": "rigid ascetic vertical posture, arms pinned close to torso"
+      },
+      "curvy_voluptuous_slimthick": {
+        "proportions": "narrow cinched waist, flat toned abdomen, large bosom, dramatic wide flared hips, thick toned thighs",
+        "posture": "confident standing posture, weight cocked on one hip"
+      },
+      "curvy_voluptuous_bbw": {
+        "proportions": "full-figured plus-size silhouette, thick waist, heavy soft curves, very large bosom, massive fleshy thighs and glutes",
+        "posture": "relaxed sensual unapologetic stance, generous presence"
+      },
+      "heavyset_powerlifter": {
+        "proportions": "dense bull neck, barrel chest, square torso, thick forearms, columnar muscular legs",
+        "posture": "unyielding forward-leaning martial stance, hands resting on belt"
+      },
+      "gangly_urchin": {
+        "proportions": "scrawny adolescent frame, knobby knees, slender neck, loose limbs, wiry muscle tone",
+        "posture": "restless shifting weight, low center of gravity, ready to sprint"
+      }
+    },
+    "sartorial_codes": {
+      "provocative_carnal": "low-cut dark emerald silk blouse, cinched black leather underbust corset, skin-tight leather breeches, dagger strapped to thick thigh, tall boots",
+      "austere_modest": "charcoal-black wool habit buttoned tightly to the throat, layered coarse linen bandages, thick slate-gray scarf, zero exposed skin",
+      "utilitarian_workwear": "split-leather blacksmith apron over coarse unlaced linen tunic, iron tongs looped at hip, heavy rolled sleeves, soot smudges",
+      "military_officer": "double-breasted heavy navy wool greatcoat with brass buttons left open, unbuttoned henley, heavy leather cavalry sabre belt",
+      "scavenger_urchin": "oversized boiled-leather vest patched with wire, mismatched belts, frayed woolen trousers, wrapped foot-rags"
+    },
+    "ansi_terminal_palette": {
+      "half_block_glyph": "▄",
+      "colors_256": {
+        "skin_warm": 216,
+        "skin_pale": 254,
+        "skin_weathered": 173,
+        "shadow_deep": 236,
+        "highlight_gold": 220,
+        "blood_crimson": 160,
+        "void_black": 232
+      }
+    }
+  }
+}
