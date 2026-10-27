@@ -61,7 +61,7 @@ ENTRYPOINTS: Dict[str, str] = {
     "audit_gate.py": "main",
     "autonomous_builder_daemon.py": "main",
     "cadence.py": "main",
-    "cartographer.py": "main",
+    "cartographer.py": "check_domain_boundaries",
     "categorize_channels.py": "categorize_channels",
     "continuous_builder.py": "main",
     "generate_qualification_record.py": "main",
@@ -98,7 +98,10 @@ ENTRYPOINTS: Dict[str, str] = {
 # Canonical aliases mapping user-friendly names to script stems
 # ---------------------------------------------------------------------------
 ALIASES: Dict[str, str] = {
+    "health-receipt": "cadence",
+    "health_receipt": "cadence",
     "cadence": "cadence",
+    "health": "cadence",
     "cartographer": "cartographer",
     "check-boundaries": "cartographer",
     "verify-package-parity": "verify_package_source_parity",
@@ -130,6 +133,8 @@ TOOL_SUMMARIES: Dict[str, str] = {
     "audit_completion": "Run empirical completion audit across golden payloads.",
     "audit_gate": "Antigravity CLI (agy) Dual-Agent Adversarial Verification Gate.",
     "autonomous_builder_daemon": "Autonomous Dual-Agent Builder & Qualification Daemon.",
+    "cadence": "Generate living system cadence and health receipt (.state/system_health.json).",
+    "cartographer": "Mechanical AST Sovereign Domain Cartographer & Boundary Guard.",
     "categorize_channels": "Categorize Ninshu SSL channels by implementation grade (Grade A, B, C).",
     "continuous_builder": "Autonomous Continuous Smelter & Capability Builder for the SSL Estate.",
     "generate_qualification_record": "Physical Release Qualification Authority (Gate G1 Hardened).",

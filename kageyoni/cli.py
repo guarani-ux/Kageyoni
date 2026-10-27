@@ -45,7 +45,6 @@ class KageyoniCLI:
         if templates_path:
             candidates.append(Path(templates_path))
         candidates.extend([
-            Path("c:/Kageyoni/data/visual_templates.json"),
             Path(__file__).resolve().parent.parent / "data" / "visual_templates.json",
             Path("data/visual_templates.json"),
         ])

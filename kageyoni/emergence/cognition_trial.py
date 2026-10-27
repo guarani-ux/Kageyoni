@@ -37,7 +37,7 @@ try:
 except ImportError:
     from shinobi.shinobi import Participant, encode
 
-BASE_DIR = Path("C:/Kageyoni")
+BASE_DIR = Path(__file__).resolve().parents[2]
 CAUSAL_RUNS_DIR = BASE_DIR / "shinobi" / ".state" / "causal_runs"
 
 # =========================================================================

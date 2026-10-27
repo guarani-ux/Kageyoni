@@ -22,7 +22,7 @@ from .models import (
     ManipulationType,
 )
 
-DB_PATH = Path("C:/Kageyoni/shinobi/.state/emergence_store.sqlite")
+DB_PATH = Path(__file__).resolve().parents[2] / "shinobi" / ".state" / "emergence_store.sqlite"
 
 
 class EmergenceStore:

@@ -51,7 +51,7 @@ class EmergenceEngine:
         self.affordances = affordances
         self.horizon = horizon
         self.policy = policy
-        self.repo_root = repo_root or Path("C:/Kageyoni")
+        self.repo_root = repo_root or Path(__file__).resolve().parents[2]
         self.dispatcher = CarrierTestDispatcher(self.repo_root)
         self.rounds: List[RoundRecord] = []
         self.technique_bank: Dict[str, CandidateDescendant] = {}

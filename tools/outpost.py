@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import sys
 from typing import Any, Dict, List, Optional, Tuple
@@ -22,7 +23,9 @@ OUTPOSTS_REGISTRY_PATH = WORKSPACE_ROOT / "OUTPOSTS.md"
 
 
 def get_unc_base() -> Path:
-    """Resolve the Windows UNC path to the WSL outposts base directory."""
+    """Resolve the Windows UNC path to the WSL outposts base directory (or native path on non-Windows)."""
+    if sys.platform != "win32":
+        return Path(os.environ.get("KAGEYONI_OUTPOSTS_DIR", Path.home() / "outposts"))
     if PRIMARY_UNC_BASE.exists():
         return PRIMARY_UNC_BASE
     if FALLBACK_UNC_BASE.exists():
@@ -37,12 +40,18 @@ def get_outpost_unc_path(name: str) -> Path:
 
 
 def get_outpost_wsl_path(name: str) -> str:
-    """Return the POSIX WSL path for an outpost."""
+    """Return the POSIX WSL/native path for an outpost."""
+    if sys.platform != "win32":
+        return str(Path(os.environ.get("KAGEYONI_OUTPOSTS_DIR", Path.home() / "outposts")) / name) if "KAGEYONI_OUTPOSTS_DIR" in os.environ else f"{Path.home()}/outposts/{name}"
     return f"{WSL_BASE_DIR}/{name}"
 
 
 def check_wsl_available() -> Tuple[bool, str]:
-    """Verify that WSL2 and Ubuntu are available."""
+    """Verify that WSL2 and Ubuntu are available (or native POSIX on non-Windows)."""
+    if sys.platform != "win32":
+        if shutil.which("python3"):
+            return True, "Native POSIX environment with python3 is available."
+        return False, "python3 command not found in PATH."
     try:
         res = subprocess.run(
             ["wsl.exe", "-d", WSL_DISTRO, "-e", "bash", "-c", "echo WSL_READY"],
@@ -63,8 +72,17 @@ def run_wsl(
     capture_output: bool = True,
     timeout: Optional[int] = 180,
 ) -> subprocess.CompletedProcess:
-    """Execute a bash command inside WSL2 Ubuntu."""
+    """Execute a bash command inside WSL2 Ubuntu or native bash on POSIX."""
     full_cmd = f"cd {cwd} && {cmd}" if cwd else cmd
+    if sys.platform != "win32":
+        return subprocess.run(
+            ["bash", "-c", full_cmd],
+            capture_output=capture_output,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=timeout,
+        )
     args = ["wsl.exe", "-d", WSL_DISTRO, "-e", "bash", "-c", full_cmd]
     return subprocess.run(
         args,
@@ -806,8 +824,11 @@ def cmd_create(name: str, mandate: str, skip_smoke: bool = False) -> int:
     print(f"WSL Path:        {wsl_path}")
     print(f"Windows Path:    {unc_path}")
 
-    # Ensure parent outposts directory exists in WSL
-    run_wsl(f"mkdir -p {WSL_BASE_DIR}")
+    # Ensure parent outposts directory exists in WSL or native
+    if sys.platform != "win32":
+        get_unc_base().mkdir(parents=True, exist_ok=True)
+    else:
+        run_wsl(f"mkdir -p {WSL_BASE_DIR}")
 
     if unc_path.exists():
         print(f"[ERROR] Outpost '{name}' already exists at {unc_path}.", file=sys.stderr)
@@ -948,7 +969,8 @@ def cmd_list(as_json: bool = False) -> int:
     for op in all_outposts:
         print(f"  {op['name']:<20} {op['status']:<10} {op['tests']:<18} {op['mandate']:<30}")
     print("-" * 80)
-    print(f"Total: {len(all_outposts)} outpost(s) in {WSL_BASE_DIR}\n")
+    base_dir = str(get_unc_base()) if sys.platform != "win32" else WSL_BASE_DIR
+    print(f"Total: {len(all_outposts)} outpost(s) in {base_dir}\n")
     return 0
 
 

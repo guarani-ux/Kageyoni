@@ -43,7 +43,7 @@ from .cli import default_preflight
 
 class EmergenceFullWorkflow:
     def __init__(self, repo_root: Optional[Path] = None, store: Optional[EmergenceStore] = None):
-        self.repo_root = repo_root or Path("C:/Kageyoni")
+        self.repo_root = repo_root or Path(__file__).resolve().parents[2]
         self.store = store or EmergenceStore()
         self.preflight = default_preflight(full_roster=True)
 

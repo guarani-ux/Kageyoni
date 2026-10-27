@@ -10,7 +10,7 @@ def categorize_channels():
         ch_num = c['channel_number']
         name = c['name']
         carrier = c['carrier_path']
-        p = Path('c:/Kageyoni') / carrier
+        p = Path(__file__).resolve().parent.parent / carrier
         
         # Check if in-tree python stdlib exists
         is_live_stdlib = False

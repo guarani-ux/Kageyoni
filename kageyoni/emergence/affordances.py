@@ -8,12 +8,13 @@ from __future__ import annotations
 import ast
 import json
 import os
+import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from .models import EnvironmentAffordance, AvailabilitySetting
 
-REPO_ROOT = Path("C:/Kageyoni")
-WSL_ROOT = Path(r"\\wsl.localhost\Ubuntu\home\flowe\shinobi")
+REPO_ROOT = Path(__file__).resolve().parents[2]
+WSL_ROOT = Path(r"\\wsl.localhost\Ubuntu\home\flowe\shinobi") if sys.platform == "win32" else Path(os.environ.get("SHINOBI_ROOT", Path.home() / "shinobi"))
 LOCAL_SHINOBI_ROOT = REPO_ROOT / "shinobi"
 
 

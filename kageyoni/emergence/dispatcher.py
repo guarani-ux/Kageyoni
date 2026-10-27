@@ -44,7 +44,7 @@ class CarrierTestDispatcher:
     """Dispatches executable behavioral tests against live Kageyoni carriers."""
 
     def __init__(self, repo_root: Optional[Path] = None):
-        self.repo_root = repo_root or Path("C:/Kageyoni")
+        self.repo_root = repo_root or Path(__file__).resolve().parents[2]
 
     def execute_test(
         self,
