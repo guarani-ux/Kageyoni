@@ -9,6 +9,75 @@
 
 ---
 
+## 0. Sovereign Human Mandates (The "Why" Behind the Estate)
+
+> [!NOTE]
+> **The Sovereign Intent Alignment**: 
+> Code, modules, ASTs, and database migrations are machinery; they exist solely to serve the human creator's sovereign life goals. Kageyōni and its downstream outpost fleet are chartered to execute three non-negotiable human mandates derived from authentic priorities:
+
+```mermaid
+flowchart LR
+    subgraph Mandates["Real-World Human Mandates (The 'Why')"]
+        M1["Mandate 01: Career Sovereignty<br/>($85K+ CAD Job Hunter Radar)"]
+        M2["Mandate 02: Media Velocity<br/>(A/V Script & Visual Asset Craft)"]
+        M3["Mandate 03: Personal Sovereignty<br/>(Cognitive OS & Zero-Fatigue Vault)"]
+    end
+
+    subgraph ExecSubsystems["Executing Machinery (The 'Where')"]
+        E1["Outpost 01: job-radar (WSL2)<br/>+ cl-craft / cl-review"]
+        E2["Domain 5: av-story-skills / visual-asset-craft<br/>+ contracts/video_transduction/"]
+        E3["Domain 5: cognitive-os/<br/>+ Council Reversibility & Domain Expansion"]
+    end
+
+    subgraph Gates["Verification & Acceptance Gates"]
+        G1["$85K+ Floor + 2-Axis CL Gate (0 Slop)"]
+        G2["4-Point Visual Gate + 2-Axis A/V Pass"]
+        G3["3-Tier Matrix + Non-Coercive Invariant"]
+    end
+
+    M1 --> E1 --> G1
+    M2 --> E2 --> G2
+    M3 --> E3 --> G3
+```
+
+### Mandate 01: Job Hunter Radar & Career Sovereignty
+* **Real-World Target**: Secure engineering roles meeting or exceeding the **$85K+ CAD compensation floor** through high-signal market intelligence, automated scraping, algorithmic role matching, and tailored application dispatch—eliminating job board drudgery and recruiter fatigue.
+* **Responsible Subsystems**:
+  - Outpost 01: `outposts/job-radar/` (Sandboxed WSL2 Ubuntu fleet runtime).
+  - Application Craft: `cl-craft` (Hiring Manager 20-second triage mechanics, selection regime calibration, 4-sentence transduction).
+  - Review Gate: `cl-review` (2-axis parallel review: scan/slop audit + mandate/proof custody).
+  - Outpost Orchestration: `outpost-workflow` (Isolated WSL2 outpost execution without core pollution).
+* **Success Metric & Verification Gate**:
+  - **Compensation Gate**: Strict filter rejecting any listing `< $85K CAD` (or remote equivalent).
+  - **Craft Gate**: Cover letters scored against the 12 LLM anti-smells; zero generic AI boilerplate permitted.
+  - **Outpost Cleanliness**: Sandboxed in WSL2 virtualenv; probe verified via `wsl python3 -m job_radar.probe`.
+
+### Mandate 02: Visual Asset Craft & A/V Media Production
+* **Real-World Target**: Empower sovereign independent filmmaking and video essay velocity—from documentary pre-shoot treatments and paper edits to deterministic programmatic overlays (PNG/SVG graphics, title cards, motion overlays) and ArtCraft-style scene blocking, without LLM print-prose drift or visual slop.
+* **Responsible Subsystems**:
+  - Visual Craft: `visual-asset-craft` (Deterministic programmatic overlay rendering, diffusion scene direction, video frame extraction).
+  - A/V Screenwriting: `av-scriptwriting` (Dual-channel visual-first subtraction, print-to-speech mouth-shape pass, table structures).
+  - Media Review: `av-review` (2-axis parallel review: craft smells vs. quarry brief and fact custody).
+  - Media Contracts: `contracts/video_transduction/` and Domain 5 (`kageyoni/research_compiler/`).
+* **Success Metric & Verification Gate**:
+  - **Perceptual 4-Point Visual Gate**: Strict verification of Hierarchy/Contrast, Zero Clipping, Affordance, and Anti-Slop Craft (zero generic AI purple/blue gradients or floating card clichés).
+  - **Spoken-Ear Audio Pass**: Scripts must pass phonetic mouth-shape read-aloud testing; reject LLM print-prose syntax.
+  - **Deterministic Asset Custody**: Rendered graphic assets must compile to exact target aspect ratios and alpha-channel specifications with verified file hashes.
+
+### Mandate 03: Cognitive OS & Personal Sovereignty
+* **Real-World Target**: Maintain an authoritative, permanent personal knowledge vault and high-agency operational cockpit that protects the user's thermodynamic cognitive energy, eliminates authorization fatigue, preserves non-coercive agency, and enables continuous cross-agent reasoning.
+* **Responsible Subsystems**:
+  - Knowledge Architecture: `cognitive-os/` (Missions, vaults, collaborator-model authority tiers).
+  - Governance & Reversibility: `council-reversibility-agent` (3-Tier Reversibility Matrix: autonomous Tier 0, gated Tier 1/2).
+  - Domain Expansion: `domain-expansion` (Decoupled generative ideation from irreversible execution).
+  - Foundational Law: Core physical invariant from Gaia arc: *"No Will may completely suppress another Will."*
+* **Success Metric & Verification Gate**:
+  - **Authorization Fatigue Elimination**: 100% of non-destructive local actions (inspections, tests, worktree branches) execute without annoying confirmation prompts.
+  - **Sovereign Checkpoint Gate**: Irreversible actions (remote git pushes, external financial/cloud mutations, file deletions) strictly gate with explicit cryptographic/human approval.
+  - **Fresh-Process Continuity**: Knowledge artifacts and SQLite registries remain recoverable across reboots and fresh agent threads without semantic drift.
+
+---
+
 ## 1. Executive Topology: The 6 Sovereign Domains
 
 Kageyoni reconciles six distinct, interdependent architectural layers. Each domain possesses dedicated responsibilities, entry points, and strict boundary invariants:
@@ -186,6 +255,7 @@ When you receive a specific task, use this matrix to jump directly to the author
 | **Autonomous Shinobi participant state** | `shinobi/` | [`shinobi/shinobi.py`](file:///C:/Kageyoni/shinobi/shinobi.py), [`shinobi/.state/`](file:///C:/Kageyoni/shinobi/.state/) |
 | **Evaluating long-horizon learning under stress**| `benchmarks/collapsing_city/` | [`runner.py`](file:///C:/Kageyoni/benchmarks/collapsing_city/runner.py), [`evaluator.py`](file:///C:/Kageyoni/benchmarks/collapsing_city/evaluator.py) |
 | **Repo hygiene, code graphs, audit checks** | `tools/` | `python -m tools.runner check-hygiene`, [`code_graph.py`](file:///C:/Users/flowe/.gemini/config/scripts/code_graph.py) |
+| **Downstream Outpost Fleet (WSL2 Sandboxes)**| [`OUTPOSTS.md`](file:///c:/Kageyoni/OUTPOSTS.md), `tools/outpost.py`, `/home/flowe/outposts/` | `python -m tools.runner outpost list`, `python -m tools.runner outpost test <name>` |
 
 ---
 
@@ -333,6 +403,7 @@ These are the active, physical execution environments, runtime surfaces, and dat
 | **Levi Simulation** | [`levi_sim/operator.py`](file:///C:/Kageyoni/levi_sim/operator.py) | Bounded gateway interface to Gaia balance mechanics. | Direct Python API |
 | **Live Save File** | [`data/SAVE.json`](file:///C:/Kageyoni/data/SAVE.json) | Portable JSON game save (`levi-world-001` at `threshold`). | Read/written by `kageyoni.playable_world` |
 | **Participant States** | [`shinobi/.state/characters/`](file:///C:/Kageyoni/shinobi/.state/characters/) | Live databases for 9 active participants: `alexandra`, `sciel`, `sebastian`, `voss`, `arianne`, `maki`, `cl`, `elijah`, `second_queen_bleaklands`. | Direct SQLite read / Shinobi CLI |
+| **WSL2 Outpost Fleet** | `/home/flowe/outposts/` (`\\wsl$\Ubuntu\home\flowe\outposts\`) | Isolated downstream Linux sandboxes (`sample-probe`, `job-radar`) bypassing core mutation. | `python -m tools.runner outpost [list/test/run/status]` |
 
 ---
 
@@ -470,3 +541,114 @@ flowchart TD
 | [`cognitive-os/`](file:///C:/Kageyoni/cognitive-os/) | `mission_runner.run_mission()`<br/>`cos_cli.main()` | Cognitive OS CLI, collaborator agents | `cognitive-os/vault/`, `contracts/` | Executes structured missions across `creative`, `professional`, and `systems` domains; enforces 4-tier collaborator authority. |
 | [`contracts/`](file:///C:/Kageyoni/contracts/) | `EpistemicLedger.record_warrant()`<br/>`EpistemicLedger.verify_claim()` | `mission_runner.py`, `research_compiler` | `contracts/video_structure_intelligence_contract.yaml` | Separates raw observations from claims via formal Warrants; gates video and narrative claims against unverified leaks. |
 | [`tools/`](file:///C:/Kageyoni/tools/) | `runner.main()`<br/>`mechanical_audit_gate.audit_workspace()` | Developer CLI, CI test runners | 33 tool scripts in `tools/` | Dispatches dynamic tool executions; audits zero throwaway workspace scripts; checks package/source parity. |
+| [`tools/outpost.py`](file:///C:/Kageyoni/tools/outpost.py) | `cmd_create()`<br/>`cmd_list()`<br/>`cmd_test()`<br/>`cmd_run()`<br/>`cmd_status()` | `python -m tools.runner outpost`, host developer | WSL2 bash `/home/flowe/outposts/` | Manages lifecycle, isolation fences, Day-0 qualification, and UNC mirroring for downstream WSL2 outposts. |
+
+---
+
+## 9. The Downstream Outpost Fleet (WSL2 Ubuntu Sandboxes)
+
+The **Downstream Outpost Fleet** resolves the negative space between Kageyōni's frozen LTS core and downstream exploratory tools, operational pipelines, and user-facing micro-applications. While the Mother Ship repository (`c:\Kageyoni`) remains locked at **v11.0 LTS** under strict qualification invariants, all new downstream development, experimental tooling, and operational satellites live in isolated **WSL2 Ubuntu Sandboxes** under `/home/flowe/outposts/`.
+
+### 9.1 Topology: Mother Ship to Outpost Fleet
+
+The operational bridge links the Windows host orchestration environment to native Linux runtime environments without cross-contaminating source trees, dependencies, or git histories:
+
+```mermaid
+flowchart LR
+    subgraph MS["Mother Ship: Kageyoni Core (Windows Host)"]
+        CORE["c:/Kageyoni (v11.0 LTS Core)"]
+        ENG["kageyoni/engine.py (Causal Kernel)"]
+        GATE["kageyoni/gateway.py (Bounded Gateway)"]
+        RUNNER["tools/runner.py & mechanical_audit_gate.py"]
+        REGISTRY["OUTPOSTS.md (Canonical Fleet Registry)"]
+    end
+
+    subgraph BB["Bounded Bridge (Host-to-WSL Seam)"]
+        BRIDGE["tools/outpost.py Engine"]
+        UNC["Host UNC Path:<br/>\\\\wsl$\\Ubuntu\\home\\flowe\\outposts\\*"]
+        CLI["python -m tools.runner outpost [create|list|test|run|status]"]
+    end
+
+    subgraph OF["WSL2 Ubuntu Outpost Fleet (/home/flowe/outposts/)"]
+        subgraph OP1["Outpost: sample-probe"]
+            SP_RUN["runner.py (Single-Gate Entrypoint)"]
+            SP_VENV[".venv/ (Isolated Linux Python)"]
+            SP_SRC["src/ (ingest, filter, core, export)"]
+            SP_STATE[".state/ & out/"]
+        end
+
+        subgraph OP2["Outpost: job-radar"]
+            JR_RUN["runner.py (Single-Gate Entrypoint)"]
+            JR_VENV[".venv/ (Isolated Linux Python)"]
+            JR_SRC["src/ (ingest, filter, core, export)"]
+            JR_STATE[".state/ & out/"]
+        end
+    end
+
+    MS <--> BB
+    BB <--> OF
+```
+
+### 9.2 The Outpost Architectural Contracts & Fences
+
+Every outpost in the fleet is bounded by four structural invariants and a strict 3-tier reversibility contract:
+
+1. **Location & Path Topology**:
+   - **POSIX Path (Inside WSL2 Ubuntu)**: `/home/flowe/outposts/<name>/`
+   - **Windows UNC Access Path**: `\\wsl$\Ubuntu\home\flowe\outposts\<name>`
+2. **Strict Core Freeze & Isolation**:
+   - **Zero Upstream Contamination**: Outposts are downstream consumers and experimental satellites. They never mutate, reformat, or pollute core Kageyōni repository files (`c:\Kageyoni`).
+   - **Dedicated Linux Virtual Environments**: Each outpost contains its own `.venv/` inside WSL. Global `pip install` or workspace Python contamination is strictly forbidden.
+   - **Independent Git Histories**: Outposts maintain separate version control histories, branch topologies, and dependency manifests (`pyproject.toml`).
+3. **Single-Gate Entrypoint Invariant**:
+   Every outpost implements a unified `runner.py` with three mandatory subcommands:
+   - `python runner.py test` — Runs Day-0 smoke tests and unit test suites.
+   - `python runner.py run` — Executes the 4-stage pipeline (`ingest` $\to$ `filter` $\to$ `core` $\to$ `export`).
+   - `python runner.py status` — Reports runtime health, active parameters, `.state/` checkpoints, and `out/` deliverables.
+4. **Host Mirroring & Bounded Automation**:
+   - Host developers and CI tools interact with outposts through `tools/runner.py` without opening interactive shells:
+     ```powershell
+     python -m tools.runner outpost list
+     python -m tools.runner outpost create <name> --mandate "<mandate>"
+     python -m tools.runner outpost test <name>
+     python -m tools.runner outpost run <name>
+     python -m tools.runner outpost status <name>
+     ```
+5. **Reversibility Tiers within Outposts**:
+   - **Tier 0 (Autonomous Fast Loop)**: Editing files in `src/`, running tests, executing `runner.py run`, reading `out/` artifacts.
+   - **Tier 1 (Local Destructive Gate)**: Clearing `.state/` databases, purging `out/` exports, recreating `.venv/`.
+   - **Tier 2 (Irreversible External Gate)**: Remote git pushes, external network API mutations with real money/credentials, or promoting qualified modules to Kageyōni core.
+
+### 9.3 Standard Outpost Internal Directory Topology
+
+```
+/home/flowe/outposts/<name>/
+├── .state/              # Local runtime state, checkpoints, SQLite caches
+├── .venv/               # Isolated Linux Python virtual environment
+├── config/              # Configuration files
+│   └── settings.json    # Outpost runtime settings and parameters
+├── out/                 # Generated deliverables, exports, and reports
+│   └── .gitkeep
+├── src/                 # Outpost domain code
+│   ├── __init__.py      # Package root and version metadata
+│   ├── ingest.py        # Input data / telemetry ingestion
+│   ├── filter.py        # Boundary verification and filtering
+│   ├── core.py          # Primary domain computation
+│   └── export.py        # Deliverable and report serialization
+├── tests/               # Test suite
+│   ├── __init__.py
+│   └── test_smoke.py    # Day-0 verification smoke tests
+├── CHARTER.md           # Outpost system charter & operational contract
+├── pyproject.toml       # Linux Python project metadata
+└── runner.py            # Single-gate entrypoint CLI
+```
+
+### 9.4 Active Outpost Fleet Registry
+
+Synchronized with [`OUTPOSTS.md`](file:///c:/Kageyoni/OUTPOSTS.md):
+
+| Outpost Name | Created At | Primary Mandate | Status | Tests | Path (WSL) | Path (Host UNC) |
+|---|---|---|---|---|---|---|
+| `sample-probe` | 2026-10-27 03:44 UTC | Diagnostics & Verification (Telemetry probe and Day-0 qualification) | **ACTIVE** | **PASSED** | `/home/flowe/outposts/sample-probe` | `\\wsl$\Ubuntu\home\flowe\outposts\sample-probe` |
+| `job-radar` | 2026-10-27 04:23 UTC | High-Signal $85K+ CAD Job Hunting Radar (Signal extraction, filtering & alerts) | **ACTIVE** | **PASSED (Day-0)** | `/home/flowe/outposts/job-radar` | `\\wsl$\Ubuntu\home\flowe\outposts\job-radar` |
+

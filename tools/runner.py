@@ -60,6 +60,8 @@ ENTRYPOINTS: Dict[str, str] = {
     "audit_completion.py": "run_empirical_audit",
     "audit_gate.py": "main",
     "autonomous_builder_daemon.py": "main",
+    "cadence.py": "main",
+    "cartographer.py": "main",
     "categorize_channels.py": "categorize_channels",
     "continuous_builder.py": "main",
     "generate_qualification_record.py": "main",
@@ -96,6 +98,9 @@ ENTRYPOINTS: Dict[str, str] = {
 # Canonical aliases mapping user-friendly names to script stems
 # ---------------------------------------------------------------------------
 ALIASES: Dict[str, str] = {
+    "cadence": "cadence",
+    "cartographer": "cartographer",
+    "check-boundaries": "cartographer",
     "verify-package-parity": "verify_package_source_parity",
     "verify_package_parity": "verify_package_source_parity",
     "package-parity": "verify_package_source_parity",
