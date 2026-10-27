@@ -60,6 +60,7 @@ ENTRYPOINTS: Dict[str, str] = {
     "audit_completion.py": "run_empirical_audit",
     "audit_gate.py": "main",
     "autonomous_builder_daemon.py": "main",
+    "bootstrap.py": "main",
     "cadence.py": "main",
     "cartographer.py": "check_domain_boundaries",
     "categorize_channels.py": "categorize_channels",
@@ -98,6 +99,9 @@ ENTRYPOINTS: Dict[str, str] = {
 # Canonical aliases mapping user-friendly names to script stems
 # ---------------------------------------------------------------------------
 ALIASES: Dict[str, str] = {
+    "bootstrap": "bootstrap",
+    "setup": "bootstrap",
+    "init": "bootstrap",
     "health-receipt": "cadence",
     "health_receipt": "cadence",
     "cadence": "cadence",
@@ -133,6 +137,7 @@ TOOL_SUMMARIES: Dict[str, str] = {
     "audit_completion": "Run empirical completion audit across golden payloads.",
     "audit_gate": "Antigravity CLI (agy) Dual-Agent Adversarial Verification Gate.",
     "autonomous_builder_daemon": "Autonomous Dual-Agent Builder & Qualification Daemon.",
+    "bootstrap": "Automated host platform detection, environment provisioning, and health verification.",
     "cadence": "Generate living system cadence and health receipt (.state/system_health.json).",
     "cartographer": "Mechanical AST Sovereign Domain Cartographer & Boundary Guard.",
     "categorize_channels": "Categorize Ninshu SSL channels by implementation grade (Grade A, B, C).",

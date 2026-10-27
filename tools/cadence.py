@@ -300,6 +300,25 @@ def collect_system_cadence(
     return receipt
 
 
+def collect_health_receipt(
+    workspace_root: Optional[Path] = None,
+    suite: Optional[str] = None,
+    skip_tests: bool = False,
+    output_path: Optional[Path] = None,
+) -> Dict[str, Any]:
+    """Collect system cadence and optionally persist health receipt JSON."""
+    receipt = collect_system_cadence(
+        workspace_root=workspace_root,
+        suite=suite,
+        skip_tests=skip_tests,
+    )
+    if output_path is not None:
+        output_path = Path(output_path)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(json.dumps(receipt, indent=2), encoding="utf-8")
+    return receipt
+
+
 def render_terminal_table(receipt: Dict[str, Any], receipt_path: Path) -> None:
     """Render a clean, formatted ASCII/Unicode terminal table."""
     health = receipt["overall_health"]
