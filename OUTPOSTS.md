@@ -12,4 +12,4 @@ The **Outpost Architecture** establishes WSL2 (`/home/flowe/outposts`) as an iso
 
 | Outpost Name | Created At | Primary Mandate | Status | Tests | Path (WSL) | Path (Host) |
 |---|---|---|---|---|---|---|
-| sample-probe | 2026-10-27 03:43 UTC | Downstream isolated subsystem | ACTIVE | PASSED | `/home/flowe/outposts/sample-probe` | `\\wsl$\Ubuntu\home\flowe\outposts\sample-probe` |
+| sample-probe | 2026-10-27 03:44 UTC | Downstream isolated subsystem | ACTIVE | PASSED | `/home/flowe/outposts/sample-probe` | `\\wsl$\Ubuntu\home\flowe\outposts\sample-probe` |
