@@ -1,6 +1,6 @@
 ---
 name: recursive-meta-calibration
-description: An internal meta-skill for AI agents to govern their own cognitive loops, detect statistical complacency ("slop" and encyclopedia mode), simulate adversarial friction, and force jumps in abstraction layers before generating responses. Use whenever executing complex reasoning, creative direction, system architecture, or open-ended problem-solving.
+description: Universal cognitive calibration and self-correction meta-skill for ALL agents. Enforces the 3-Layer Depth Test, intercepts encyclopedia slop and Hercule mode, strips empty adjectives and pseudo-math, and forces first-principles state machines before outputting any plan, architecture, code, or synthesis.
 ---
 
 # SELF-GOVERNANCE SKILL: RECURSIVE META-CALIBRATION & ADVERSARIAL SELF-CORRECTION

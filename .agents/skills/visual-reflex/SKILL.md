@@ -1,6 +1,6 @@
 ---
 name: visual-reflex
-description: Deterministic closed-loop reflex engine for visual, UI, and graphic design. Replaces generic AI design slop with physical layout invariants, dynamic range clamping, typographic mass, and kinetic deceleration transforms.
+description: Mandatory physical reflex engine for ANY agent that creates, edits, audits, or reviews visual designs, frontend UI, web layouts, HTML, Tailwind CSS, graphics, slides, or motion. Enforces the 4 physical invariants (Light dynamic range, Spatial tension, Typographic mass, Kinetic inertia) via closed-loop state-machine transforms to eliminate AI design slop.
 ---
 
 # Visual Reflex — Anti-Slop Physical Engineering Engine
