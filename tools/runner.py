@@ -400,6 +400,60 @@ def check_hygiene(
                     )
                     break
 
+    # Check 3: The Living Atlas Invariant (ATLAS.md directory documentation)
+    atlas_path = root_dir / "ATLAS.md"
+    top_dirs_checked = 0
+    subpackages_checked = 0
+
+    if not atlas_path.is_file():
+        violations.append(
+            f"Directory 'ATLAS.md' is missing at workspace root ({atlas_path}). "
+            "The Living Atlas Invariant requires ATLAS.md to exist and document all system directories."
+        )
+    else:
+        atlas_content = atlas_path.read_text(encoding="utf-8", errors="replace")
+
+        # Top-level directory exclusions
+        atlas_excluded_dirs = {
+            ".git",
+            ".venv",
+            ".pytest_cache",
+            "__pycache__",
+            "kageyoni_engine.egg-info",
+        }
+
+        # Verify all top-level physical directories are documented
+        top_dirs = [
+            item for item in sorted(root_dir.iterdir())
+            if item.is_dir() and item.name not in atlas_excluded_dirs
+        ]
+        top_dirs_checked = len(top_dirs)
+        for d in top_dirs:
+            if f"{d.name}/" not in atlas_content and d.name not in atlas_content:
+                violations.append(
+                    f"Directory '{d.name}/' is not documented in ATLAS.md. "
+                    "The Living Atlas Invariant requires ATLAS.md to be updated whenever the system is updated."
+                )
+
+        # Verify all 21 subpackages inside kageyoni/ are documented
+        kageyoni_pkg_dir = root_dir / "kageyoni"
+        if kageyoni_pkg_dir.is_dir():
+            subpackages = [
+                item for item in sorted(kageyoni_pkg_dir.iterdir())
+                if item.is_dir() and item.name != "__pycache__"
+            ]
+            subpackages_checked = len(subpackages)
+            for sp in subpackages:
+                if (
+                    f"kageyoni/{sp.name}/" not in atlas_content
+                    and f"kageyoni/{sp.name}" not in atlas_content
+                    and f"{sp.name}/" not in atlas_content
+                ):
+                    violations.append(
+                        f"Directory 'kageyoni/{sp.name}/' is not documented in ATLAS.md. "
+                        "The Living Atlas Invariant requires ATLAS.md to be updated whenever the system is updated."
+                    )
+
     # Report results
     print("=" * 70)
     print("  KAGEYONI TOOL RUNNER: WORKSPACE HYGIENE AUDIT")

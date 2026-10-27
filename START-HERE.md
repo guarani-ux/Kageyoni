@@ -1,10 +1,16 @@
-# Start here — Kageyoni v10.0.0
+# Start here — Kageyoni System Estate
 
-Read `KAGEYONI.md` first.
+> [!IMPORTANT]
+> **READ `ATLAS.md` FIRST.**
+> The complete architectural map, domain boundaries, and 6-domain estate topology are canonically documented in [`ATLAS.md`](ATLAS.md). Any agent or engineer entering this repository must orient using `ATLAS.md` before initiating work.
 
-Verify the included state:
+For the core causal simulation engine and v10/v11 operations, read [`KAGEYONI.md`](KAGEYONI.md).
+
+Verify the available tools or causal state:
 
 ```sh
+python -m tools.runner --list
+# or verify the causal database state:
 python -m kageyoni --db build/kageyoni.sqlite verify
 ```
 

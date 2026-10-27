@@ -1,6 +1,9 @@
 * text=auto eol=lf
-*.sql text eol=lf
 *.py text eol=lf
-*.json text eol=lf
+*.sh text eol=lf
 *.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.html text eol=lf
+*.sql text eol=lf
 *.sqlite binary
