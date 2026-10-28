@@ -1,0 +1,25 @@
+{
+  "outpost": "role-failure-forensics",
+  "execution_timestamp": "2026-10-28T04:08:06.676848+00:00",
+  "metrics": {
+    "total_processed": 2,
+    "aggregate_metric": 141.5,
+    "average_metric": 70.75
+  },
+  "items": [
+    {
+      "record_id": "rec_001",
+      "processed_at": "2026-10-28T04:08:06.676676+00:00",
+      "status": "verified",
+      "score": 48.3,
+      "origin": "node_alpha"
+    },
+    {
+      "record_id": "rec_002",
+      "processed_at": "2026-10-28T04:08:06.676687+00:00",
+      "status": "verified",
+      "score": 114.425,
+      "origin": "node_beta"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "subagent_forge": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "invoke_subagent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -m tools.subagent hook pre",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

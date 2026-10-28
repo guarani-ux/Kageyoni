@@ -12,5 +12,6 @@ The **Outpost Architecture** establishes WSL2 (`/home/flowe/outposts`) as an iso
 
 | Outpost Name | Created At | Primary Mandate | Status | Tests | Path (WSL) | Path (Host) |
 |---|---|---|---|---|---|---|
+| role-failure-forensics | 2026-10-27 21:08 UTC | Downstream isolated subsystem | ACTIVE | PASSED | `/home/flowe/outposts/role-failure-forensics` | `\\wsl$\Ubuntu\home\flowe\outposts\role-failure-forensics` |
 | job-radar | 2026-10-27 04:23 UTC | High-Signal $85K+ CAD Job Hunting Radar | ACTIVE | PASSED (Day-0) | `/home/flowe/outposts/job-radar` | `\\wsl$\Ubuntu\home\flowe\outposts\job-radar` |
 | sample-probe | 2026-10-27 03:44 UTC | Diagnostics & Verification | ACTIVE | PASSED | `/home/flowe/outposts/sample-probe` | `\\wsl$\Ubuntu\home\flowe\outposts\sample-probe` |
