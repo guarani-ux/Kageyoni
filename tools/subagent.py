@@ -15,7 +15,6 @@ P-N-S-C Sections:
 from __future__ import annotations
 
 import argparse
-from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -27,6 +26,9 @@ import sys
 import time
 from typing import Any, Dict, List, Optional, Tuple, Union
 import uuid
+
+if __name__ not in sys.modules:
+    sys.modules[__name__] = sys.modules.get("__main__", sys.modules.get("_root_tools_subagent"))
 
 # Standardize stdout/stderr encoding across platforms
 if sys.stdout and hasattr(sys.stdout, "reconfigure"):
@@ -124,24 +126,40 @@ def _parse_receipt_arg(val: Optional[str]) -> Dict[str, Any]:
         return {"raw_receipt": val_s, "parse_error": str(exc)}
 
 
-@dataclass
 class SubagentTask:
     """Durable record of a subagent task and its execution state."""
 
-    task_id: str
-    name: str
-    role: str
-    task: str
-    status: str = "FORGED"
-    inputs: List[str] = field(default_factory=list)
-    forego: List[str] = field(default_factory=list)
-    success: List[str] = field(default_factory=list)
-    sinks: List[str] = field(default_factory=list)
-    prompt: str = ""
-    receipt: Dict[str, Any] = field(default_factory=dict)
-    created_at: str = field(default_factory=_utcnow_iso)
-    updated_at: str = field(default_factory=_utcnow_iso)
-    completed_at: Optional[str] = None
+    def __init__(
+        self,
+        task_id: str,
+        name: str,
+        role: str,
+        task: str,
+        status: str = "FORGED",
+        inputs: Optional[List[str]] = None,
+        forego: Optional[List[str]] = None,
+        success: Optional[List[str]] = None,
+        sinks: Optional[List[str]] = None,
+        prompt: str = "",
+        receipt: Optional[Dict[str, Any]] = None,
+        created_at: Optional[str] = None,
+        updated_at: Optional[str] = None,
+        completed_at: Optional[str] = None,
+    ) -> None:
+        self.task_id = task_id
+        self.name = name
+        self.role = role
+        self.task = task
+        self.status = status
+        self.inputs = list(inputs) if inputs is not None else []
+        self.forego = list(forego) if forego is not None else []
+        self.success = list(success) if success is not None else []
+        self.sinks = list(sinks) if sinks is not None else []
+        self.prompt = prompt
+        self.receipt = dict(receipt) if receipt is not None else {}
+        self.created_at = created_at if created_at is not None else _utcnow_iso()
+        self.updated_at = updated_at if updated_at is not None else _utcnow_iso()
+        self.completed_at = completed_at
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -161,19 +179,38 @@ class SubagentTask:
             "completed_at": self.completed_at,
         }
 
+    def __repr__(self) -> str:
+        return (
+            f"SubagentTask(task_id={self.task_id!r}, name={self.name!r}, role={self.role!r}, "
+            f"task={self.task!r}, status={self.status!r}, inputs={self.inputs!r}, "
+            f"forego={self.forego!r}, success={self.success!r}, sinks={self.sinks!r}, "
+            f"prompt={self.prompt!r}, receipt={self.receipt!r}, created_at={self.created_at!r}, "
+            f"updated_at={self.updated_at!r}, completed_at={self.completed_at!r})"
+        )
 
-@dataclass
+
 class SubagentEvent:
     """Immutable, cryptographically chained event in the subagent task ledger."""
 
-    sequence: int
-    event_id: str
-    task_id: str
-    event_type: str
-    payload: Dict[str, Any]
-    prev_hash: str
-    event_hash: str
-    created_at: str
+    def __init__(
+        self,
+        sequence: int,
+        event_id: str,
+        task_id: str,
+        event_type: str,
+        payload: Dict[str, Any],
+        prev_hash: str,
+        event_hash: str,
+        created_at: str,
+    ) -> None:
+        self.sequence = sequence
+        self.event_id = event_id
+        self.task_id = task_id
+        self.event_type = event_type
+        self.payload = dict(payload) if isinstance(payload, dict) else payload
+        self.prev_hash = prev_hash
+        self.event_hash = event_hash
+        self.created_at = created_at
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -186,6 +223,13 @@ class SubagentEvent:
             "event_hash": self.event_hash,
             "created_at": self.created_at,
         }
+
+    def __repr__(self) -> str:
+        return (
+            f"SubagentEvent(sequence={self.sequence!r}, event_id={self.event_id!r}, "
+            f"task_id={self.task_id!r}, event_type={self.event_type!r}, payload={self.payload!r}, "
+            f"prev_hash={self.prev_hash!r}, event_hash={self.event_hash!r}, created_at={self.created_at!r})"
+        )
 
 
 class SubagentLedger:

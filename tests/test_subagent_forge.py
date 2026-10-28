@@ -1,6 +1,6 @@
 """tests/test_subagent_forge.py
 Test suite for Subagent Forge: P-N-S-C compiler, validator, PreToolUse hook,
-sink verifier, SQLite append-only task ledger, and subagents.json mirror.
+sink verifier, SQLite append-only task ledger, and durable subagents.json mirror.
 """
 
 from __future__ import annotations
