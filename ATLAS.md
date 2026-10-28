@@ -25,7 +25,7 @@ flowchart LR
 
     subgraph ExecSubsystems["Executing Machinery (The 'Where')"]
         E1["Outpost 01: job-radar (WSL2)<br/>+ cl-craft / cl-review"]
-        E2["Domain 5: av-story-skills / visual-asset-craft<br/>+ contracts/video_transduction/"]
+        E2["Domain 5: av-story-skills / visual-asset-craft<br/>+ contracts/video_structure_intelligence_contract.yaml"]
         E3["Domain 5: cognitive-os/<br/>+ Council Reversibility & Domain Expansion"]
     end
 
@@ -58,7 +58,7 @@ flowchart LR
   - Visual Craft: `visual-asset-craft` (Deterministic programmatic overlay rendering, diffusion scene direction, video frame extraction).
   - A/V Screenwriting: `av-scriptwriting` (Dual-channel visual-first subtraction, print-to-speech mouth-shape pass, table structures).
   - Media Review: `av-review` (2-axis parallel review: craft smells vs. quarry brief and fact custody).
-  - Media Contracts: `contracts/video_transduction/` and Domain 5 (`kageyoni/research_compiler/`).
+  - Media Contracts: `contracts/video_structure_intelligence_contract.yaml` and Domain 5 (`kageyoni/research_compiler/`).
 * **Success Metric & Verification Gate**:
   - **Perceptual 4-Point Visual Gate**: Strict verification of Hierarchy/Contrast, Zero Clipping, Affordance, and Anti-Slop Craft (zero generic AI purple/blue gradients or floating card clichés).
   - **Spoken-Ear Audio Pass**: Scripts must pass phonetic mouth-shape read-aloud testing; reject LLM print-prose syntax.
@@ -107,7 +107,7 @@ flowchart TD
         ENG["kageyoni/engine.py (Engine.apply)"]
         COMP["kageyoni/composition/ (Frame/Slot/Aspect)"]
         V11["kageyoni/v11/ (Protected Ops & Trust Gates)"]
-        DB["kageyoni/database/migrations/ (001-024)"]
+        DB["kageyoni/database/migrations/ (002-024) + schema.sql"]
         GW["kageyoni/gateway.py (Bounded Gateway)"]
     end
 
@@ -145,7 +145,7 @@ flowchart TD
 
 ### Domain 1: Causal State Engine & Invariants (The Core Kernel)
 * **Location**: [`kageyoni/engine.py`](file:///C:/Kageyoni/kageyoni/engine.py), [`kageyoni/model.py`](file:///C:/Kageyoni/kageyoni/model.py), [`kageyoni/composition/`](file:///C:/Kageyoni/kageyoni/composition/), [`kageyoni/v11/`](file:///C:/Kageyoni/kageyoni/v11/), [`kageyoni/database/`](file:///C:/Kageyoni/kageyoni/database/), [`kageyoni/gateway.py`](file:///C:/Kageyoni/kageyoni/gateway.py)
-* **Purpose**: The immutable heartbeat of Kageyoni. Manages the cryptographically hashed event store, revision tracking, 24 numbered SQLite migrations, the Frame/Slot/Aspect qualitative composition compiler (V10 ontology), and V11 Protected Operations (`DECLARED` $\to$ `PREPARED` $\to$ `ASSESSED` $\to$ `AUTHORIZED` $\to$ `COMPLETED`).
+* **Purpose**: The immutable heartbeat of Kageyoni. Manages the cryptographically hashed event store, revision tracking, 23 numbered SQLite migrations (`002` through `024`) plus baseline `schema.sql`, the Frame/Slot/Aspect qualitative composition compiler (V10 ontology), and V11 Protected Operations (`DECLARED` $\to$ `PREPARED` $\to$ `ASSESSED` $\to$ `AUTHORIZED` $\to$ `COMPLETED`).
 * **Primary Entrypoints**:
   - Verification: `python -m tools.runner --list` or `python -m kageyoni verify`
   - Engine Operations: `python -m kageyoni operate --input command.json`
@@ -242,8 +242,8 @@ When you receive a specific task, use this matrix to jump directly to the author
 | **Character identity, backstory, canon** | `sources/`, `data/roster.json` | [`01-KAGEYONI_GAIA_ARC_CONTINUITY.md`](file:///C:/Kageyoni/sources/01-KAGEYONI_GAIA_ARC_CONTINUITY.md), [`roster.json`](file:///C:/Kageyoni/data/roster.json) |
 | **Gaia environmental physics or Levi** | `levi_sim/`, `sources/04-environment.md` | [`levi_sim/operator.py`](file:///C:/Kageyoni/levi_sim/operator.py), [`levi_sim/cognition.py`](file:///C:/Kageyoni/levi_sim/cognition.py) |
 | **Core causal state, transactions, DB events** | `kageyoni/engine.py`, `kageyoni/database/` | `Engine.apply()`, [`kageyoni/database/migrations/`](file:///C:/Kageyoni/kageyoni/database/migrations/) |
-| **V10 Frames, Slots, Aspect slottables** | `kageyoni/composition/` | [`compiler.py`](file:///C:/Kageyoni/kageyoni/composition/compiler.py), [`ontology.py`](file:///C:/Kageyoni/kageyoni/composition/ontology.py) |
-| **V11 Protected Operations & Trust Gates** | `kageyoni/v11/` | [`protected_operations.py`](file:///C:/Kageyoni/kageyoni/v11/protected_operations.py), [`trust_gate.py`](file:///C:/Kageyoni/kageyoni/v11/trust_gate.py) |
+| **V10 Frames, Slots, Aspect slottables** | `kageyoni/composition/` | [`compiler.py`](file:///C:/Kageyoni/kageyoni/composition/compiler.py), [`gates.py`](file:///C:/Kageyoni/kageyoni/composition/gates.py) |
+| **V11 Protected Operations & Trust Gates** | `kageyoni/v11/` | [`runtime.py`](file:///C:/Kageyoni/kageyoni/v11/runtime.py), [`enforcement.py`](file:///C:/Kageyoni/kageyoni/v11/enforcement.py) |
 | **Playing or testing the RPG / Chat** | `kageyoni/cli.py`, `kageyoni/chat_frame.py` | `python -m kageyoni.cli`, [`data/SAVE.json`](file:///C:/Kageyoni/data/SAVE.json) |
 | **Combat math, DMW roulette, Gambits** | `kageyoni/combat/`, `data/combat_rules.json` | [`resolver.py`](file:///C:/Kageyoni/kageyoni/combat/resolver.py), [`dmw.py`](file:///C:/Kageyoni/kageyoni/combat/dmw.py) |
 | **Martial Arts, Kata decks, Stances** | `kageyoni/martial/` | [`deck.py`](file:///C:/Kageyoni/kageyoni/martial/deck.py), [`compiler.py`](file:///C:/Kageyoni/kageyoni/martial/compiler.py) |
@@ -268,6 +268,8 @@ A definitive inventory of all top-level directories in `c:\Kageyoni`:
 |:---|:---:|:---|:---:|:---|
 | `.agents/` | D6 | Agent skill definitions and host configurations | Markdown/YAML | Read-only agent instructions |
 | `.github/` | D6 | CI workflows and automated test actions | YAML | Standard CI configuration |
+| `.ruff_cache/` | D6 | Linter cache directory | Cache | Ephemeral cache generated by ruff |
+| `.state/` | D6 | Living cadence telemetry, subagent registry & health state | JSON/SQLite | Runtime state; managed by tools/cadence.py |
 | `av-story-skills/` | D5 | Audio-Video documentary & scriptwriting craft skills | Markdown/Python | Craft guidelines & review rubrics |
 | `benchmarks/` | D6 | Empirical evaluation suites (`collapsing_city`) | Python | Zero deterministic mock rigging |
 | `build/` | D1 | Ephemeral database outputs (`kageyoni.sqlite`) | SQLite/Cache | Disposable; never commit to git |
@@ -290,6 +292,7 @@ A definitive inventory of all top-level directories in `c:\Kageyoni`:
 | `rea_forge/` | D4 | Universal Target Inspector & REA agent engine | TypeScript | Vitest covered; CLI + MCP server |
 | `recovery/` | D2 | Historical SQLite databases from earlier eras | SQLite | Read-only historical continuity |
 | `schemas/` | D1 | Schema definitions (will, events, frames) | JSON/SQL | Schema validation source |
+| `scratch/` | Cross | Transient workspace scratch directory (deprecated; prefer brain/<conversation-id>/scratch/) | Mixed | Local transient scratch files |
 | `scripts/` | D1/D6 | Operational maintenance and preflight scripts | Python | Scripted operational utilities |
 | `shinobi/` | D6 | Persistent participant runtime & encounter states | Python | Migration 024 anchored participant |
 | `shinobi_agent/` | D6 | Agent packaging and form representations | JSON/Python | Participant forms |
@@ -307,8 +310,8 @@ The core `kageyoni` Python library is organized into 21 specialized subpackages:
 | Subpackage | Primary Responsibility | Key Files |
 |:---|:---|:---|
 | [`kageyoni/combat/`](file:///C:/Kageyoni/kageyoni/combat/) | 2RN combat calculations, Crisis Core DMW roulette, Gambits priority AI | [`resolver.py`](file:///C:/Kageyoni/kageyoni/combat/resolver.py), [`dmw.py`](file:///C:/Kageyoni/kageyoni/combat/dmw.py), [`gambits.py`](file:///C:/Kageyoni/kageyoni/combat/gambits.py) |
-| [`kageyoni/composition/`](file:///C:/Kageyoni/kageyoni/composition/) | Frame/Slot/Aspect ontology, fail-closed qualitative compiler, explicit deficits | [`compiler.py`](file:///C:/Kageyoni/kageyoni/composition/compiler.py), [`ontology.py`](file:///C:/Kageyoni/kageyoni/composition/ontology.py) |
-| [`kageyoni/database/`](file:///C:/Kageyoni/kageyoni/database/) | Connection pool, schema initialization, 24 numbered migrations | [`connection.py`](file:///C:/Kageyoni/kageyoni/database/connection.py), [`migrations/`](file:///C:/Kageyoni/kageyoni/database/migrations/) |
+| [`kageyoni/composition/`](file:///C:/Kageyoni/kageyoni/composition/) | Frame/Slot/Aspect ontology, fail-closed qualitative compiler, explicit deficits | [`compiler.py`](file:///C:/Kageyoni/kageyoni/composition/compiler.py), [`gates.py`](file:///C:/Kageyoni/kageyoni/composition/gates.py) |
+| [`kageyoni/database/`](file:///C:/Kageyoni/kageyoni/database/) | Baseline schema initialization and 23 numbered migrations (002-024) | [`schema.sql`](file:///C:/Kageyoni/kageyoni/database/schema.sql), [`migrations/`](file:///C:/Kageyoni/kageyoni/database/migrations/) |
 | [`kageyoni/developmental/`](file:///C:/Kageyoni/kageyoni/developmental/) | Situated participant evolution, compounding agents, symbiogenesis | [`agent.py`](file:///C:/Kageyoni/kageyoni/developmental/agent.py), [`symbiogenesis.py`](file:///C:/Kageyoni/kageyoni/developmental/symbiogenesis.py) |
 | [`kageyoni/emergence/`](file:///C:/Kageyoni/kageyoni/emergence/) | Dynamic technique discovery, causal encounters, action dispatching | [`action_dispatcher.py`](file:///C:/Kageyoni/kageyoni/emergence/action_dispatcher.py), [`causal_encounter.py`](file:///C:/Kageyoni/kageyoni/emergence/causal_encounter.py) |
 | [`kageyoni/entity/`](file:///C:/Kageyoni/kageyoni/entity/) | Entity component instances, specifications, runtime state | [`instance.py`](file:///C:/Kageyoni/kageyoni/entity/instance.py), [`models.py`](file:///C:/Kageyoni/kageyoni/entity/models.py) |
@@ -324,9 +327,9 @@ The core `kageyoni` Python library is organized into 21 specialized subpackages:
 | [`kageyoni/research_compiler/`](file:///C:/Kageyoni/kageyoni/research_compiler/) | 9 story archetypes, adversarial claim invalidation, treatments | [`claims.py`](file:///C:/Kageyoni/kageyoni/research_compiler/claims.py), [`invalidation_engine.py`](file:///C:/Kageyoni/kageyoni/research_compiler/invalidation_engine.py) |
 | [`kageyoni/situations/`](file:///C:/Kageyoni/kageyoni/situations/) | Situation lifecycle, long-horizon evaluation, scars, comparative trials | [`service.py`](file:///C:/Kageyoni/kageyoni/situations/service.py), [`runtime.py`](file:///C:/Kageyoni/kageyoni/situations/runtime.py) |
 | [`kageyoni/spatial/`](file:///C:/Kageyoni/kageyoni/spatial/) | 100x100 continent grid, A* pathfinding, supply decay, kalpa cycle | [`grid.py`](file:///C:/Kageyoni/kageyoni/spatial/grid.py), [`pathfinding.py`](file:///C:/Kageyoni/kageyoni/spatial/pathfinding.py) |
-| [`kageyoni/v11/`](file:///C:/Kageyoni/kageyoni/v11/) | Causal invariants, Protected Operations, Warrants, Trust Gates | [`protected_operations.py`](file:///C:/Kageyoni/kageyoni/v11/protected_operations.py), [`trust_gate.py`](file:///C:/Kageyoni/kageyoni/v11/trust_gate.py) |
+| [`kageyoni/v11/`](file:///C:/Kageyoni/kageyoni/v11/) | Causal invariants, Protected Operations, Warrants, Trust Gates | [`runtime.py`](file:///C:/Kageyoni/kageyoni/v11/runtime.py), [`enforcement.py`](file:///C:/Kageyoni/kageyoni/v11/enforcement.py) |
 | [`kageyoni/vantage/`](file:///C:/Kageyoni/kageyoni/vantage/) | Observer perspective, qualification rubrics, fog-of-war | [`engine.py`](file:///C:/Kageyoni/kageyoni/vantage/engine.py), [`rubric.py`](file:///C:/Kageyoni/kageyoni/vantage/rubric.py) |
-| [`kageyoni/workspaces/`](file:///C:/Kageyoni/kageyoni/workspaces/) | Sandboxed subagent pipelines, workspace registries | [`pipeline.py`](file:///C:/Kageyoni/kageyoni/workspaces/pipeline.py), [`registry.py`](file:///C:/Kageyoni/kageyoni/workspaces/registry.py) |
+| [`kageyoni/workspaces/`](file:///C:/Kageyoni/kageyoni/workspaces/) | Sandboxed subagent pipelines, workspace registries | [`__init__.py`](file:///C:/Kageyoni/kageyoni/workspaces/__init__.py), [`pipeline.py`](file:///C:/Kageyoni/kageyoni/workspaces/pipeline.py), [`registry.py`](file:///C:/Kageyoni/kageyoni/workspaces/registry.py) |
 
 #### Core Root Modules in `kageyoni/`
 * [`kageyoni/engine.py`](file:///C:/Kageyoni/kageyoni/engine.py): Causal event application (`Engine.apply`), hash chains, revisions.
@@ -395,7 +398,7 @@ These are the active, physical execution environments, runtime surfaces, and dat
 
 | Operational Seam | Location / Path | Purpose & Access Status | Primary Tool / Command |
 |:---|:---|:---|:---|
-| **Unified Runner** | [`tools/runner.py`](file:///C:/Kageyoni/tools/runner.py) | Active master CLI entrypoint for 33 registered tools. | `python -m tools.runner --list` |
+| **Unified Runner** | [`tools/runner.py`](file:///C:/Kageyoni/tools/runner.py) | Active master CLI entrypoint for 38 registered tools. | `python -m tools.runner --list` |
 | **Tactical RPG CLI** | [`kageyoni/cli.py`](file:///C:/Kageyoni/kageyoni/cli.py) | Interactive tactical simulation & turn runner. | `python -m kageyoni.cli` |
 | **Causal State Engine** | [`kageyoni/engine.py`](file:///C:/Kageyoni/kageyoni/engine.py) | Authoritative event stream & transaction evaluator. | `python -m kageyoni verify` |
 | **Shinobi Runtime** | [`shinobi/shinobi.py`](file:///C:/Kageyoni/shinobi/shinobi.py) | Persistent participant execution loop (migration 024). | `python shinobi/shinobi.py --home <dir> inspect` |
@@ -404,7 +407,7 @@ These are the active, physical execution environments, runtime surfaces, and dat
 | **Levi Simulation** | [`levi_sim/operator.py`](file:///C:/Kageyoni/levi_sim/operator.py) | Bounded gateway interface to Gaia balance mechanics. | Direct Python API |
 | **Live Save File** | [`data/SAVE.json`](file:///C:/Kageyoni/data/SAVE.json) | Portable JSON game save (`levi-world-001` at `threshold`). | Read/written by `kageyoni.playable_world` |
 | **Participant States** | [`shinobi/.state/characters/`](file:///C:/Kageyoni/shinobi/.state/characters/) | Live databases for 9 active participants: `alexandra`, `sciel`, `sebastian`, `voss`, `arianne`, `maki`, `cl`, `elijah`, `second_queen_bleaklands`. | Direct SQLite read / Shinobi CLI |
-| **WSL2 Outpost Fleet** | `/home/flowe/outposts/` (`\\wsl$\Ubuntu\home\flowe\outposts\`) | Isolated downstream Linux sandboxes (`sample-probe`, `job-radar`) bypassing core mutation. | `python -m tools.runner outpost [list/test/run/status]` |
+| **WSL2 Outpost Fleet** | `/home/flowe/outposts/` (`\\wsl$\Ubuntu\home\flowe\outposts\`) | Isolated downstream Linux sandboxes (`sample-probe`, `job-radar`, `role-failure-forensics`) bypassing core mutation. | `python -m tools.runner outpost [list/test/run/status]` |
 
 ---
 
@@ -477,19 +480,19 @@ flowchart TD
     subgraph S_TACTICAL["kageyoni/combat/ & spatial/"]
         GRID["WorldGrid / get_tile()<br/><i>100x100 cartesian topology</i>"]
         PATH["AStarPathfinder.find_path()<br/><i>A* pathfinding with movement costs</i>"]
-        COMB["TrueHitResolver.calculate_true_hit()<br/><i>2RN combat math</i>"]
-        DMW["DMWTokenPool.spin()<br/><i>Crisis Core roulette</i>"]
+        COMB["TrueHitResolver.resolve_attack()<br/><i>2RN combat math</i>"]
+        DMW["DMWTokenPool.spin_reels()<br/><i>Crisis Core roulette</i>"]
         KATA["TechniqueCompiler / AttunedDeck<br/><i>Kata stance transitions</i>"]
     end
 
     subgraph S_RUNTIME["shinobi/ & levi_sim/"]
-        SHI["Participant.begin() / reply()<br/><i>Bounded turn execution</i>"]
+        SHI["Participant.begin() / propose_return()<br/><i>Bounded turn execution</i>"]
         LEVI["LeviCognitiveModel / operator.py<br/><i>Gaia balancing physics</i>"]
     end
 
     subgraph S_RE["rea_forge/ & ninshu/"]
-        UTI["UniversalTargetInspector.inspectTarget()<br/><i>Profile-driven binary analysis</i>"]
-        SSL["SSLConsole.route_channel()<br/><i>48-channel mixing desk</i>"]
+        UTI["UniversalTargetInspector.inspect()<br/><i>Profile-driven binary analysis</i>"]
+        SSL["ActiveConsole.route_bus_signal()<br/><i>48-channel mixing desk</i>"]
     end
 
     subgraph S_AGENCY["cognitive-os/ & research_compiler/"]
@@ -505,8 +508,8 @@ flowchart TD
     end
 
     %% Causal Edges
-    SHI -- "1. prepare_turn() -> perceive()" --> GW
-    LEVI -- "IntentContract -> perceive()" --> GW
+    SHI -- "1. begin() -> inspect_environment()" --> GW
+    LEVI -- "IntentContract -> inspect_environment()" --> GW
     GW -- "2. Check bounds -> Engine.apply()" --> ENG
     ENG -- "3. require() checks invariants" --> REQ
     ENG -- "4. Commit SQL row" --> DB
@@ -528,20 +531,20 @@ flowchart TD
 
 | Folder / Place | Core Functions & Classes | Inbound Edges ($\leftarrow$ Callers) | Outbound Edges ($\rightarrow$ Callees) | Causal Edge (Physical Mutation / Effect) |
 |:---|:---|:---|:---|:---|
-| [`kageyoni/`](file:///C:/Kageyoni/kageyoni/) | `Engine.apply()`<br/>`require()`<br/>`digest()` | `gateway.py`, `shinobi.py`, `v11/runtime.py`, `chat_frame.py` | `database/connection.py`, SQLite schema | Appends SHA-256 hashed row to `events`, increments revision counter, rejects invalid invariants fail-closed. |
-| [`kageyoni/gateway.py`](file:///C:/Kageyoni/kageyoni/gateway.py) | `BoundedKageyoniGateway.perceive()`<br/>`execute_action()`<br/>`query_record()` | `shinobi/shinobi.py`, `levi_sim/operator.py` | `kageyoni.engine.Engine.apply()`, `workflows.py` | Anti-omniscience boundary; filters records to avatar visibility scope; converts raw agent intent into audited `Engine.apply` events. |
-| [`kageyoni/v11/`](file:///C:/Kageyoni/kageyoni/v11/) | `ProtectedOperations.declare()`<br/>`authorize()`<br/>`complete()`<br/>`Warrant.bind()` | `tools/run_gated_repairs.py`, release gates | `kageyoni.engine.Engine`, `enforcement.py` | State machine governing protected transitions (`DECLARED` $\to$ `PREPARED` $\to$ `ASSESSED` $\to$ `AUTHORIZED` $\to$ `COMPLETED`). |
-| [`kageyoni/composition/`](file:///C:/Kageyoni/kageyoni/composition/) | `Compiler.compile()`<br/>`EffectResolver.resolve()` | `KAGEYONI.md` simulation commands, `service.py` | `engine_aspects.py`, `ontology.py` | Fail-closed Frame/Slot/Aspect compilation. Preserves opposing pressures in qualitative effects without averaging them away. |
-| [`kageyoni/spatial/`](file:///C:/Kageyoni/kageyoni/spatial/) | `WorldGrid.get_tile()`<br/>`AStarPathfinder.find_path()`<br/>`SupplyEngine.decay_supply()` | `kageyoni/cli.py`, `chat_frame.py` | `data/world_topology.json` | Computes Manhattan/Euclidean distances across 10,000 tiles; tests pass gate unseal status; tracks Kalpa saturation. |
-| [`kageyoni/combat/`](file:///C:/Kageyoni/kageyoni/combat/) | `TrueHitResolver.calculate_true_hit()`<br/>`DMWTokenPool.spin()`<br/>`PreCognitiveGambitEngine.evaluate()` | `kageyoni/cli.py`, encounter triggers | `data/combat_rules.json` | 2RN probability distribution ($(\text{roll}_1 + \text{roll}_2)/2$); evaluates Gambit priorities; mutates combatant HP and status. |
-| [`kageyoni/martial/`](file:///C:/Kageyoni/kageyoni/martial/) | `TechniqueCompiler.compile()`<br/>`KataForge.forge_deck()`<br/>`AttunedDeck.draw()` | `combat/resolver.py`, `cli.py` | `data/martial_grammar.json` | Compiles combinations of Stance, Intent, Vector, and Infusion primitives into executable martial actions. |
-| [`kageyoni/narrative/`](file:///C:/Kageyoni/kageyoni/narrative/) | `EntonRuptureEngine.evaluate()`<br/>`anti_slop.filter()` | `spatial/grid.py`, `chat_frame.py` | `spatial/grid.py` (`WorldTile.is_glassed_ruin`) | When stress exceeds $(18 + 12 \times \text{prior})$, triggers regional glassing lockout and mutates tile terrain to `RUIN_VOID`. |
-| [`shinobi/`](file:///C:/Kageyoni/shinobi/) | `Participant.init()`<br/>`begin()`<br/>`reply()`<br/>`inspect()` | Shinobi CLI, subagent runners | `kageyoni.gateway.BoundedKageyoniGateway`, `shinobi/.state/` | Bounded turn lifecycle; commits turns to `dialogue_turn`; anchors participant returns into `migration_024.sql`. |
-| [`rea_forge/`](file:///C:/Kageyoni/rea_forge/) | `UniversalTargetInspector.inspectTarget()`<br/>`loadTargetProfile()` | `scripts/rea.mjs`, MCP server | Target binary (ASAR, PE, ELF, Mach-O) | Non-invasive binary static analysis; extracts AST symbols, IPC channels, and metadata profiles into JSON receipts. |
-| [`kageyoni/ninshu/`](file:///C:/Kageyoni/ninshu/) | `SSLConsole.route_channel()`<br/>`Patchbay.patch()`<br/>`TelemetryDecoupler.decouple()` | `tools/run_ssl_audit.py`, `tools/runner.py` | `ninshu_codex.sqlite`, foreign processes | 48-channel mixing desk; intercepts and isolates foreign binary telemetry; routes extracted capabilities to Frame aspects. |
+| [`kageyoni/`](file:///C:/Kageyoni/kageyoni/) | `Engine.apply()`<br/>`require()`<br/>`digest()` | `gateway.py`, `shinobi.py`, `v11/runtime.py`, `chat_frame.py` | `kageyoni/persistence/unit_of_work.py`, SQLite schema | Appends SHA-256 hashed row to `events`, increments revision counter, rejects invalid invariants fail-closed. |
+| [`kageyoni/gateway.py`](file:///C:/Kageyoni/kageyoni/gateway.py) | `BoundedKageyoniGateway.enact()`<br/>`attempt_action()`<br/>`inspect_environment()`<br/>`query_records()` | `shinobi/shinobi.py`, `levi_sim/operator.py` | `kageyoni.engine.Engine.apply()`, `workflows.py` | Anti-omniscience boundary; filters records to avatar visibility scope; converts raw agent intent into audited `Engine.apply` events. |
+| [`kageyoni/v11/`](file:///C:/Kageyoni/kageyoni/v11/) | `ProtectedOperations.declare()`<br/>`observe()`<br/>`issue_execution()`<br/>`complete()`<br/>`Warrant.digest()` | `tools/run_gated_repairs.py`, release gates | `kageyoni.engine.Engine`, `enforcement.py` | State machine governing protected transitions (`DECLARED` $\to$ `PREPARED` $\to$ `ASSESSED` $\to$ `AUTHORIZED` $\to$ `COMPLETED`). |
+| [`kageyoni/composition/`](file:///C:/Kageyoni/kageyoni/composition/) | `Compiler.compile()`<br/>`EffectResolver.resolve()` | `KAGEYONI.md` simulation commands, `service.py` | `kageyoni/composition/adapter.py`, `gates.py` | Fail-closed Frame/Slot/Aspect compilation. Preserves opposing pressures in qualitative effects without averaging them away. |
+| [`kageyoni/spatial/`](file:///C:/Kageyoni/kageyoni/spatial/) | `WorldGrid.get_tile()`<br/>`AStarPathfinder.find_path()`<br/>`CorridorSupplyEngine.tick_turn()` | `kageyoni/cli.py`, `chat_frame.py` | `data/world_topology.json` | Computes Manhattan/Euclidean distances across 10,000 tiles; tests pass gate unseal status; tracks Kalpa saturation. |
+| [`kageyoni/combat/`](file:///C:/Kageyoni/kageyoni/combat/) | `TrueHitResolver.resolve_attack()`<br/>`DMWTokenPool.spin_reels()`<br/>`PreCognitiveGambitEngine.resolve_gambit()` | `kageyoni/cli.py`, encounter triggers | `data/combat_rules.json` | 2RN probability distribution ($(\text{roll}_1 + \text{roll}_2)/2$); evaluates Gambit priorities; mutates combatant HP and status. |
+| [`kageyoni/martial/`](file:///C:/Kageyoni/kageyoni/martial/) | `TechniqueCompiler.compile()`<br/>`KataForge.create_deck_with_defaults()`<br/>`AttunedDeck.validate_loadout()` | `combat/resolver.py`, `cli.py` | `data/martial_grammar.json` | Compiles combinations of Stance, Intent, Vector, and Infusion primitives into executable martial actions. |
+| [`kageyoni/narrative/`](file:///C:/Kageyoni/kageyoni/narrative/) | `EntonRuptureEngine.evaluate_rupture()`<br/>`AntiSlopGate.assert_prose_clean()` | `spatial/grid.py`, `chat_frame.py` | `spatial/grid.py` (`WorldTile.is_glassed_ruin`) | When stress exceeds $(18 + 12 \times \text{prior})$, triggers regional glassing lockout and mutates tile terrain to `RUIN_VOID`. |
+| [`shinobi/`](file:///C:/Kageyoni/shinobi/) | `Participant.initialize()`<br/>`begin()`<br/>`finish()`<br/>`inspect()`<br/>`propose_return()` | Shinobi CLI, subagent runners | `kageyoni.gateway.BoundedKageyoniGateway`, `shinobi/.state/` | Bounded turn lifecycle; commits turns to `dialogue_turn`; anchors participant returns into `migration_024.sql`. |
+| [`rea_forge/`](file:///C:/Kageyoni/rea_forge/) | `UniversalTargetInspector.inspect()`<br/>`inspectTargetBinary()`<br/>`validateAgainstProfile()` | `scripts/rea.mjs`, MCP server | Target binary (ASAR, PE, ELF, Mach-O) | Non-invasive binary static analysis; extracts AST symbols, IPC channels, and metadata profiles into JSON receipts. |
+| [`kageyoni/ninshu/`](file:///C:/Kageyoni/kageyoni/ninshu/) | `ActiveConsole.route_bus_signal()`<br/>`Patchbay.patch()`<br/>`TelemetryDecoupler.push() / drain()` | `tools/run_ssl_audit.py`, `tools/runner.py` | `kageyoni/ninshu/ninshu_codex.sqlite`, foreign processes | 48-channel mixing desk; intercepts and isolates foreign binary telemetry; routes extracted capabilities to Frame aspects. |
 | [`cognitive-os/`](file:///C:/Kageyoni/cognitive-os/) | `mission_runner.run_mission()`<br/>`cos_cli.main()` | Cognitive OS CLI, collaborator agents | `cognitive-os/vault/`, `contracts/` | Executes structured missions across `creative`, `professional`, and `systems` domains; enforces 4-tier collaborator authority. |
-| [`contracts/`](file:///C:/Kageyoni/contracts/) | `EpistemicLedger.record_warrant()`<br/>`EpistemicLedger.verify_claim()` | `mission_runner.py`, `research_compiler` | `contracts/video_structure_intelligence_contract.yaml` | Separates raw observations from claims via formal Warrants; gates video and narrative claims against unverified leaks. |
-| [`tools/`](file:///C:/Kageyoni/tools/) | `runner.main()`<br/>`mechanical_audit_gate.audit_workspace()` | Developer CLI, CI test runners | 33 tool scripts in `tools/` | Dispatches dynamic tool executions; audits zero throwaway workspace scripts; checks package/source parity. |
+| [`contracts/`](file:///C:/Kageyoni/contracts/) | `EpistemicLedger.record()`<br/>`EpistemicLedger.verify_no_laundering()` | `mission_runner.py`, `research_compiler` | `contracts/video_structure_intelligence_contract.yaml` | Separates raw observations from claims via formal Warrants; gates video and narrative claims against unverified leaks. |
+| [`tools/`](file:///C:/Kageyoni/tools/) | `runner.main()`<br/>`mechanical_audit_gate.audit_workspace()` | Developer CLI, CI test runners | 38 tool scripts in `tools/` | Dispatches dynamic tool executions; audits zero throwaway workspace scripts; checks package/source parity. |
 | [`tools/outpost.py`](file:///C:/Kageyoni/tools/outpost.py) | `cmd_create()`<br/>`cmd_list()`<br/>`cmd_test()`<br/>`cmd_run()`<br/>`cmd_status()` | `python -m tools.runner outpost`, host developer | WSL2 bash `/home/flowe/outposts/` | Manages lifecycle, isolation fences, Day-0 qualification, and UNC mirroring for downstream WSL2 outposts. |
 
 ---
@@ -652,4 +655,5 @@ Synchronized with [`OUTPOSTS.md`](file:///c:/Kageyoni/OUTPOSTS.md):
 |---|---|---|---|---|---|---|
 | `sample-probe` | 2026-10-27 03:44 UTC | Diagnostics & Verification (Telemetry probe and Day-0 qualification) | **ACTIVE** | **PASSED** | `/home/flowe/outposts/sample-probe` | `\\wsl$\Ubuntu\home\flowe\outposts\sample-probe` |
 | `job-radar` | 2026-10-27 04:23 UTC | High-Signal $85K+ CAD Job Hunting Radar (Signal extraction, filtering & alerts) | **ACTIVE** | **PASSED (Day-0)** | `/home/flowe/outposts/job-radar` | `\\wsl$\Ubuntu\home\flowe\outposts\job-radar` |
+| `role-failure-forensics` | 2026-10-27 21:08 UTC | Downstream isolated subsystem | **ACTIVE** | **PASSED** | `/home/flowe/outposts/role-failure-forensics` | `\\wsl$\Ubuntu\home\flowe\outposts\role-failure-forensics` |
 
